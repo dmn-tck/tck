@@ -1,0 +1,21 @@
+{
+  "outputs": {
+    "discount": {
+      "type": "integer",
+      "values": [
+        2
+      ]
+    }
+  },
+  "rules": [
+    {
+      "ruleId": "row-23632031-2",
+      "outputs": {
+        "discount": {
+          "type": "integer",
+          "value": 2
+        }
+      }
+    }
+  ]
+}

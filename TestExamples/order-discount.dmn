@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn11.xsd" id="definitions" name="definitions" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="order-discount" name="Order Discount">
+    <decisionTable id="decisionTable">
+      <input id="input1" label="Amount">
+        <inputExpression id="inputExpression1" typeRef="long">        <text>amount</text>
+</inputExpression>
+      </input>
+      <output id="output1" label="Discount" name="discount" typeRef="integer" />
+      <rule id="row-23632031-1">
+        <inputEntry id="UnaryTests_0b4auz4">        <text><![CDATA[< 500]]></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_0ksutcc">        <text>0</text>
+</outputEntry>
+      </rule>
+      <rule id="row-23632031-2">
+        <inputEntry id="UnaryTests_0h34apy">        <text>[500..999]</text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_0bqqi2f">        <text>2</text>
+</outputEntry>
+      </rule>
+      <rule id="row-23632031-3">
+        <inputEntry id="UnaryTests_1kb7b4b">        <text>[1000..1999]</text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_0e0xoae">        <text>3</text>
+</outputEntry>
+      </rule>
+      <rule id="row-23632031-4">
+        <inputEntry id="UnaryTests_0nva7ft">        <text>[2000..4999]</text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_1xvzhwq">        <text>5</text>
+</outputEntry>
+      </rule>
+      <rule id="row-23632031-5">
+        <inputEntry id="UnaryTests_0vrfj63">        <text><![CDATA[>= 5000]]></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_16gkb8h">        <text>8</text>
+</outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
