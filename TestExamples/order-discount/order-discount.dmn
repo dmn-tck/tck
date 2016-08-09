@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn11.xsd" id="definitions" name="definitions" namespace="http://camunda.org/schema/1.0/dmn">
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn11.xsd" id="definitions" name="definitions" namespace="http://camunda.org/schema/1.0/dmn" xmlns:feel="http://www.omg.org/spec/FEEL/20140401">
   <decision id="order-discount" name="Order Discount">
     <decisionTable id="decisionTable">
       <input id="input1" label="Amount">
-        <inputExpression id="inputExpression1" typeRef="long">        <text>amount</text>
+        <inputExpression id="inputExpression1" typeRef="feel:number">        <text>amount</text>
 </inputExpression>
       </input>
-      <output id="output1" label="Discount" name="discount" typeRef="integer" />
+      <output id="output1" label="Discount" name="discount" typeRef="feel:number" />
       <rule id="row-23632031-1">
         <inputEntry id="UnaryTests_0b4auz4">        <text><![CDATA[< 500]]></text>
 </inputEntry>
