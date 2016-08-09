@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="dmnexecute60803b.xslt"?>
+<TestCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../testCases.xsd">
+	<modelName>lending1.dmn</modelName>
+	<testCase id="001">
+		<inputNode name="Applicant Data">
+			<component name="Monthly">
+				<component name="Income">
+					<value>6000</value>
+				</component>
+				<component name="Expenses">
+					<value>2000</value>
+				</component>
+				<component name="Repayments">
+					<value>0</value>
+				</component>
+			</component>
+			<component name="Age">
+				<value>35</value>
+			</component>
+			<component name="Existing Customer">
+				<value>true</value>
+			</component>
+			<component name="Marital Status">
+				<value>M</value>
+			</component>
+			<component name="Employment Status">
+				<value>EMPLOYED</value>
+			</component>
+		</inputNode>
+		<inputNode name="Requested Product">
+			<component name="Product Type">
+				<value>STANDARD LOAN</value>
+			</component>
+			<component name="Amount">
+				<value>350000</value>
+			</component>
+			<component name="Rate">
+				<value>0.0395</value>
+			</component>
+			<component name="Term">
+				<value>360</value>
+			</component>
+		</inputNode>
+		<inputNode name="Bureau Data">
+			<component name="Credit Score">
+				<value>649</value>
+			</component>
+			<component name="Bankrupt">
+				<value>false</value>
+			</component>
+		</inputNode>
+	</testCase>
+</TestCases>
