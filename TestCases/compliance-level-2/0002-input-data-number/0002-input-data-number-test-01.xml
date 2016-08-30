@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../../testCases.xsd">
+	<modelName>0002-input-data-number.dmn</modelName>
+	<labels>
+		<label>base</label>
+		<label>simple type</label>
+	</labels>
+	<testCase id="001"> 
+		<description>Testing valid input</description>
+		<inputNode name="Monthly Salary">
+			<value>10000</value>
+		</inputNode>
+		<resultNode name="Yearly Salary" type="decision">
+			<computed>
+				<value>120000</value>
+			</computed>
+		</resultNode>
+	</testCase>
+	<testCase id="002">
+		<description>Testing invalid input</description>
+		<!-- is the following number type override valid? -->
+		<inputNode name="Monthly Salary" type="feel:string">
+			<value>foo</value>
+		</inputNode>
+		<!-- how do we test for invalid result? -->
+	</testCase>
+</testCases>

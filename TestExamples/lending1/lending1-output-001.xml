@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TestCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../testCases.xsd">
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../../TestCases/testCases.xsd">
 	<modelName>lending1.dmn</modelName>
 	<testCase id="001">
 		<inputNode name="Applicant Data">
@@ -100,4 +102,4 @@
 			</computed>
 		</resultNode>
 	</testCase>
-</TestCases>
+</testCases>
