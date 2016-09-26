@@ -1,0 +1,38 @@
+{
+  "modelName" : "0001-input-data-string.dmn",
+  "labels" : {
+    "label" : [ "base", "simple type" ]
+  },
+  "testCase" : [ {
+    "description" : "Testing valid input",
+    "inputNode" : [ {
+      "value" : "John Doe",
+      "component" : [ ],
+      "list" : null,
+      "name" : "Full Name",
+      "type" : null
+    } ],
+    "resultNode" : [ {
+      "computed" : {
+        "value" : "Hello John Doe",
+        "component" : [ ],
+        "list" : null
+      },
+      "expected" : null,
+      "name" : "Greeting Message",
+      "type" : "decision"
+    } ],
+    "id" : "001"
+  }, {
+    "description" : "Testing invalid input",
+    "inputNode" : [ {
+      "value" : "10",
+      "component" : [ ],
+      "list" : null,
+      "name" : "Full Name",
+      "type" : "feel:number"
+    } ],
+    "resultNode" : [ ],
+    "id" : "002"
+  } ]
+}
