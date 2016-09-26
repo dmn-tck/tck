@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions namespace="http://onedecision.io/examples/" name="Calculate Price Decision Model" id="A.2" xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd">
+    <description>Implements the pricing model</description>
+    <inputData name="age">
+        <variable typeRef="ns2:number" name="age" xmlns:ns2="http://www.omg.org/spec/FEEL/20140401">
+            <description>The age of the applicant</description>
+        </variable>
+    </inputData>
+    <inputData name="priority">
+        <variable typeRef="ns2:boolean" name="priority" xmlns:ns2="http://www.omg.org/spec/FEEL/20140401">
+            <description>Whether priority service was requested</description>
+        </variable>
+    </inputData>
+    <decision name="Calculate Price Decision" id="calcPrice_d">
+        <description>Determine price based on age of applicant and whether priority service requested</description>
+        <decisionTable hitPolicy="COLLECT" aggregation="SUM" preferredOrientation="Rule-as-Row">
+            <input>
+                <inputExpression>
+                    <text>age</text>
+                </inputExpression>
+            </input>
+            <input>
+                <inputExpression>
+                    <text>priority</text>
+                </inputExpression>
+            </input>
+            <output name="price"/>
+            <rule>
+                <inputEntry>
+                    <text>&lt;2</text>
+                </inputEntry>
+                <inputEntry>
+                    <text>-</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>0</text>
+                </outputEntry>
+            </rule>
+            <rule>
+                <inputEntry>
+                    <text>[3..16]</text>
+                </inputEntry>
+                <inputEntry>
+                    <text>-</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>20</text>
+                </outputEntry>
+            </rule>
+            <rule>
+                <inputEntry>
+                    <text>&gt;=16</text>
+                </inputEntry>
+                <inputEntry>
+                    <text>-</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>40</text>
+                </outputEntry>
+            </rule>
+            <rule>
+                <inputEntry>
+                    <text>-</text>
+                </inputEntry>
+                <inputEntry>
+                    <text>true</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>10</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+</definitions>
