@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<semantic:definitions xmlns:semantic="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:trisofeed="http://trisotech.com/feed" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.trisotech.com/definitions/_c2dc9bd5-010e-4351-b375-7db74d8ba69d" id="_c2dc9bd5-010e-4351-b375-7db74d8ba69d" namespace="http://www.trisotech.com/definitions/_c2dc9bd5-010e-4351-b375-7db74d8ba69d" exporter="DMN Modeler" exporterVersion="5.0.32.2" name="stringFunctions" triso:logoChoice="Default" xsi:schemaLocation="http://www.omg.org/spec/DMN/20151101/dmn.xsd file:///C:/Users/Bruce/Documents/DMN/DMN1.1%20final/dmn.xsd">
+	<semantic:extensionElements>
+		<rss xmlns="http://purl.org/rss/2.0/" xmlns:trisofeed="http://trisotech.com/feed" version="2.0">
+			<channel/>
+		</rss>
+	</semantic:extensionElements>
+	<semantic:itemDefinition id="tBasic" name="tBasic">
+		<semantic:itemComponent id="_5d7320fd-aa96-4319-a4da-593ec491d0b0" name="startsWithX">
+			<semantic:typeRef>feel:boolean</semantic:typeRef>
+		</semantic:itemComponent>
+		<semantic:itemComponent id="_bc690f14-ecc7-402b-904d-ca2eeec91881" name="startsWithB">
+			<semantic:typeRef>feel:boolean</semantic:typeRef>
+		</semantic:itemComponent>
+		<semantic:itemComponent id="_9a4db404-cd4b-4de3-8dc6-f06a7c538dae" name="endsWithX">
+			<semantic:typeRef>feel:boolean</semantic:typeRef>
+		</semantic:itemComponent>
+		<semantic:itemComponent id="_1e0cc65d-a319-453e-b55b-e1eff815521c" name="endsWithB">
+			<semantic:typeRef>feel:boolean</semantic:typeRef>
+		</semantic:itemComponent>
+		<semantic:itemComponent id="_558c199a-17d9-46f4-8661-ec76fc67374d" name="containsX">
+			<semantic:typeRef>feel:boolean</semantic:typeRef>
+		</semantic:itemComponent>
+		<semantic:itemComponent id="_ca9df9fb-61f1-4f43-93ca-d9600b87285d" name="containsB">
+			<semantic:typeRef>feel:boolean</semantic:typeRef>
+		</semantic:itemComponent>
+		<semantic:itemComponent id="_82968175-bbd2-4541-8461-2898e9d9b86d" name="substringC1">
+			<semantic:typeRef>feel:string</semantic:typeRef>
+		</semantic:itemComponent>
+		<semantic:itemComponent id="_e87917e4-37ae-44a9-b156-d490292a036e" name="stringlength">
+			<semantic:typeRef>feel:number</semantic:typeRef>
+		</semantic:itemComponent>
+		<semantic:itemComponent id="_cf4985ae-5244-4b32-9abb-bf9f012233b7" name="uppercase">
+			<semantic:typeRef>feel:string</semantic:typeRef>
+		</semantic:itemComponent>
+		<semantic:itemComponent id="_38e20849-e3ab-4eff-847e-f7a017e89778" name="lowercase">
+			<semantic:typeRef>feel:string</semantic:typeRef>
+		</semantic:itemComponent>
+		<semantic:itemComponent id="_814080bc-e9cd-4a79-aff0-ce64d6fef8df" name="substringBeforeB">
+			<semantic:typeRef>feel:string</semantic:typeRef>
+		</semantic:itemComponent>
+		<semantic:itemComponent id="_b11a7ed7-6bad-4c8a-8edb-c768f2604ed8" name="substringAfterB">
+			<semantic:typeRef>feel:string</semantic:typeRef>
+		</semantic:itemComponent>
+	</semantic:itemDefinition>
+	<semantic:itemDefinition id="tReplace" name="tReplace">
+		<semantic:itemComponent id="_1d5254b9-0a5f-42d2-be18-338518f861cc" name="Aao">
+			<semantic:typeRef>feel:string</semantic:typeRef>
+		</semantic:itemComponent>
+		<semantic:itemComponent id="_71470763-6dbe-43a4-b5e3-eca10bab1814" name="AanplusStarstar">
+			<semantic:typeRef>feel:string</semantic:typeRef>
+		</semantic:itemComponent>
+		<semantic:itemComponent id="_afe9608a-b74a-4a66-80f1-6de501eb8d9b" name="encloseVowels">
+			<semantic:typeRef>feel:string</semantic:typeRef>
+		</semantic:itemComponent>
+	</semantic:itemDefinition>
+	<semantic:inputData id="_0923ed0c-3674-4476-b84c-f9ad5e5e8048" name="A">
+		<semantic:variable name="A" typeRef="feel:string"/>
+	</semantic:inputData>
+	<semantic:inputData id="_1df2ad51-3334-4098-b55f-df885fb0e412" name="B">
+		<semantic:variable name="B" typeRef="feel:string"/>
+	</semantic:inputData>
+	<semantic:inputData id="_6a75944d-7013-4fc3-8770-ab8eaa0e0560" name="NumC">
+		<semantic:variable name="NumC" typeRef="feel:number"/>
+	</semantic:inputData>
+	<semantic:decision id="_de5529b1-ed4c-4b39-9e36-e0e056aec20c" name="Basic">
+		<semantic:variable name="Basic" typeRef="tBasic"/>
+		<semantic:informationRequirement>
+			<semantic:requiredInput href="#_0923ed0c-3674-4476-b84c-f9ad5e5e8048"/>
+		</semantic:informationRequirement>
+		<semantic:informationRequirement>
+			<semantic:requiredInput href="#_1df2ad51-3334-4098-b55f-df885fb0e412"/>
+		</semantic:informationRequirement>
+		<semantic:informationRequirement>
+			<semantic:requiredInput href="#_6a75944d-7013-4fc3-8770-ab8eaa0e0560"/>
+		</semantic:informationRequirement>
+		<semantic:context>
+			<semantic:contextEntry>
+				<semantic:variable id="_0d6779da-522e-4f75-9507-6faa049a50d8" name="startsWithX" typeRef="feel:boolean"/>
+				<semantic:literalExpression>
+					<semantic:text>starts with(A,"x")</semantic:text>
+				</semantic:literalExpression>
+			</semantic:contextEntry>
+			<semantic:contextEntry>
+				<semantic:variable id="_f6d21707-dd01-49a7-aa53-f012c0304ec8" name="startsWithB" typeRef="feel:boolean"/>
+				<semantic:literalExpression>
+					<semantic:text>starts with(A,B)</semantic:text>
+				</semantic:literalExpression>
+			</semantic:contextEntry>
+			<semantic:contextEntry>
+				<semantic:variable id="_d3d2e2aa-445b-4597-af65-fb4d3cc2167d" name="endsWithX" typeRef="feel:boolean"/>
+				<semantic:literalExpression>
+					<semantic:text>ends with(A,"x")</semantic:text>
+				</semantic:literalExpression>
+			</semantic:contextEntry>
+			<semantic:contextEntry>
+				<semantic:variable id="_0ca7fe87-63e2-4b74-b282-0c8965c44e09" name="endsWithB" typeRef="feel:boolean"/>
+				<semantic:literalExpression>
+					<semantic:text>ends with(A,B)</semantic:text>
+				</semantic:literalExpression>
+			</semantic:contextEntry>
+			<semantic:contextEntry>
+				<semantic:variable id="_055bfefd-4ee1-4d74-9aed-3176f5469115" name="containsX" typeRef="feel:boolean"/>
+				<semantic:literalExpression>
+					<semantic:text>contains(A,"x")</semantic:text>
+				</semantic:literalExpression>
+			</semantic:contextEntry>
+			<semantic:contextEntry>
+				<semantic:variable id="_969fe40e-b929-461b-9207-fd94aa6fa03f" name="containsB" typeRef="feel:boolean"/>
+				<semantic:literalExpression>
+					<semantic:text>contains(A,B)</semantic:text>
+				</semantic:literalExpression>
+			</semantic:contextEntry>
+			<semantic:contextEntry>
+				<semantic:variable id="_af245f51-b852-4edb-bcbe-280c98d998d3" name="substringC1" typeRef="feel:string"/>
+				<semantic:literalExpression>
+					<semantic:text>substring(A,NumC,1)</semantic:text>
+				</semantic:literalExpression>
+			</semantic:contextEntry>
+			<semantic:contextEntry>
+				<semantic:variable id="_3a7c5d81-e046-40d5-b4e0-6d3f1a919d50" name="stringlength" typeRef="feel:number"/>
+				<semantic:literalExpression>
+					<semantic:text>string length(A)</semantic:text>
+				</semantic:literalExpression>
+			</semantic:contextEntry>
+			<semantic:contextEntry>
+				<semantic:variable id="_a4133595-ff79-443c-957a-3b39f4568ceb" name="uppercase" typeRef="feel:string"/>
+				<semantic:literalExpression>
+					<semantic:text>upper case(A)</semantic:text>
+				</semantic:literalExpression>
+			</semantic:contextEntry>
+			<semantic:contextEntry>
+				<semantic:variable id="_915f3599-a7b2-4a58-8dcb-ea25157a493c" name="lowercase" typeRef="feel:string"/>
+				<semantic:literalExpression>
+					<semantic:text>lower case(B)</semantic:text>
+				</semantic:literalExpression>
+			</semantic:contextEntry>
+			<semantic:contextEntry>
+				<semantic:variable id="_545ff2ba-7f20-4b30-acab-67705df4d586" name="substringBeforeB" typeRef="feel:string"/>
+				<semantic:literalExpression>
+					<semantic:text>substring before(A,B)</semantic:text>
+				</semantic:literalExpression>
+			</semantic:contextEntry>
+			<semantic:contextEntry>
+				<semantic:variable id="_ba53a166-0df4-43c3-bf21-c1c1b75d0b8d" name="substringAfterB" typeRef="feel:string"/>
+				<semantic:literalExpression>
+					<semantic:text>substring after(A,B)</semantic:text>
+				</semantic:literalExpression>
+			</semantic:contextEntry>
+		</semantic:context>
+	</semantic:decision>
+	<semantic:decision id="_93059496-257a-482b-b966-fcafe28cc84b" name="Matches">
+		<semantic:variable name="Matches" typeRef="feel:boolean"/>
+		<semantic:informationRequirement>
+			<semantic:requiredInput href="#_0923ed0c-3674-4476-b84c-f9ad5e5e8048"/>
+		</semantic:informationRequirement>
+		<semantic:informationRequirement>
+			<semantic:requiredInput href="#_1df2ad51-3334-4098-b55f-df885fb0e412"/>
+		</semantic:informationRequirement>
+		<semantic:literalExpression>
+			<semantic:text>matches(A,"[a-z]{3}")</semantic:text>
+		</semantic:literalExpression>
+	</semantic:decision>
+	<semantic:decision id="_cc368e53-961d-4399-ad91-df00446b49d8" name="Replace">
+		<semantic:variable name="Replace" typeRef="tReplace"/>
+		<semantic:informationRequirement>
+			<semantic:requiredInput href="#_0923ed0c-3674-4476-b84c-f9ad5e5e8048"/>
+		</semantic:informationRequirement>
+		<semantic:informationRequirement>
+			<semantic:requiredInput href="#_1df2ad51-3334-4098-b55f-df885fb0e412"/>
+		</semantic:informationRequirement>
+		<semantic:context>
+			<semantic:contextEntry>
+				<semantic:variable id="_da8324b1-a644-453d-9883-f849e46ea70e" name="Aao" typeRef="feel:string"/>
+				<semantic:literalExpression>
+					<semantic:text>replace(A,"a","o")</semantic:text>
+				</semantic:literalExpression>
+			</semantic:contextEntry>
+			<semantic:contextEntry>
+				<semantic:variable id="_a4d3d550-b5a7-4819-bb6b-e5eb8b3df5fb" name="AanplusStarstar" typeRef="feel:string"/>
+				<semantic:literalExpression>
+					<semantic:text>replace(A,"(an)+", "**")</semantic:text>
+				</semantic:literalExpression>
+			</semantic:contextEntry>
+			<semantic:contextEntry>
+				<semantic:variable id="_80a29859-7c40-4035-b996-115f1c7c231a" name="encloseVowels" typeRef="feel:string"/>
+				<semantic:literalExpression>
+					<semantic:text>replace(A,"[aeiouy]","[$0]")</semantic:text>
+				</semantic:literalExpression>
+			</semantic:contextEntry>
+		</semantic:context>
+	</semantic:decision>
+	<semantic:decision id="_255687db-652a-44c5-b4ca-9b3de659fd31" name="Constructor">
+		<semantic:variable name="Constructor" typeRef="feel:string"/>
+		<semantic:informationRequirement>
+			<semantic:requiredInput href="#_6a75944d-7013-4fc3-8770-ab8eaa0e0560"/>
+		</semantic:informationRequirement>
+		<semantic:literalExpression>
+			<semantic:text>string(NumC)</semantic:text>
+		</semantic:literalExpression>
+	</semantic:decision>
+</semantic:definitions>

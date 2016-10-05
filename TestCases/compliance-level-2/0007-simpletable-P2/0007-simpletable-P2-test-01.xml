@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../testCases.xsd">
+	<modelName>simple P table 2.dmn</modelName>
+	<testCase id="001">
+		<inputNode name="Age">
+			<value>18</value>
+		</inputNode>
+		<inputNode name="RiskCategory">
+			<value>Medium</value>
+		</inputNode>
+		<inputNode name="isAffordable">
+			<value>true</value>
+		</inputNode>
+		<resultNode name="Approval Status" type="decision">
+			<computed>
+				<value>Approved</value>
+			</computed>
+		</resultNode>
+	</testCase>
+	<testCase id="002">
+		<inputNode name="Age">
+			<value>17</value>
+		</inputNode>
+		<inputNode name="RiskCategory">
+			<value>Medium</value>
+		</inputNode>
+		<inputNode name="isAffordable">
+			<value>true</value>
+		</inputNode>
+		<resultNode name="Approval Status" type="decision">
+			<computed>
+				<value>Declined</value>
+			</computed>
+		</resultNode>
+	</testCase>
+	<testCase id="003">
+		<inputNode name="Age">
+			<value>18</value>
+		</inputNode>
+		<inputNode name="RiskCategory">
+			<value>High</value>
+		</inputNode>
+		<inputNode name="isAffordable">
+			<value>true</value>
+		</inputNode>
+		<resultNode name="Approval Status" type="decision">
+			<computed>
+				<value>Declined</value>
+			</computed>
+		</resultNode>
+	</testCase>
+</testCases>
