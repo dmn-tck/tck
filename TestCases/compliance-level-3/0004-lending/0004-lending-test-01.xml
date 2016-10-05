@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../testCases.xsd">
+	<modelName>Lending1.dmn</modelName>
+	<testCase id="001">
+		<inputNode name="ApplicantData">
+			<component name="Monthly">
+				<component name="Income">
+					<value>6000</value>
+				</component>
+				<component name="Expenses">
+					<value>2000</value>
+				</component>
+				<component name="Repayments">
+					<value>0</value>
+				</component>
+			</component>
+			<component name="Age">
+				<value>35</value>
+			</component>
+			<component name="ExistingCustomer">
+				<value>true</value>
+			</component>
+			<component name="MaritalStatus">
+				<value>M</value>
+			</component>
+			<component name="EmploymentStatus">
+				<value>EMPLOYED</value>
+			</component>
+		</inputNode>
+		<inputNode name="RequestedProduct">
+			<component name="ProductType">
+				<value>STANDARD LOAN</value>
+			</component>
+			<component name="Amount">
+				<value>350000</value>
+			</component>
+			<component name="Rate">
+				<value>0.0395</value>
+			</component>
+			<component name="Term">
+				<value>360</value>
+			</component>
+		</inputNode>
+		<inputNode name="BureauData">
+			<component name="CreditScore">
+				<value>649</value>
+			</component>
+			<component name="Bankrupt">
+				<value>false</value>
+			</component>
+		</inputNode>
+		<resultNode name="ApplicationRiskScore" type="decision">
+			<computed>
+				<value>130</value>
+			</computed>
+		</resultNode>
+		<resultNode name="Pre-bureauRiskCategory" type="decision">
+			<computed>
+				<value>LOW</value>
+			</computed>
+		</resultNode>
+		<resultNode name="BureauCallType" type="decision">
+			<computed>
+				<value>MINI</value>
+			</computed>
+		</resultNode>
+		<resultNode name="Post-bureauRiskCategory" type="decision">
+			<computed>
+				<value>LOW</value>
+			</computed>
+		</resultNode>
+		<resultNode name="RequiredMonthlyInstallment" type="decision">
+			<computed>
+				<value>1680.880325608555</value>
+			</computed>
+		</resultNode>
+		<resultNode name="Pre-bureauAffordability" type="decision">
+			<computed>
+				<value>true</value>
+			</computed>
+		</resultNode>
+		<resultNode name="Eligibility" type="decision">
+			<computed>
+				<value>ELIGIBLE</value>
+			</computed>
+		</resultNode>
+		<resultNode name="Strategy" type="decision">
+			<computed>
+				<value>BUREAU</value>
+			</computed>
+		</resultNode>
+		<resultNode name="Post-bureauAffordability" type="decision">
+			<computed>
+				<value>true</value>
+			</computed>
+		</resultNode>
+		<resultNode name="Routing" type="decision">
+			<computed>
+				<value>ACCEPT</value>
+			</computed>
+		</resultNode>
+	</testCase>
+</testCases>
