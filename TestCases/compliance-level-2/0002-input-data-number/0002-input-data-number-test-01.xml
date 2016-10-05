@@ -18,12 +18,4 @@
 			</computed>
 		</resultNode>
 	</testCase>
-	<testCase id="002">
-		<description>Testing invalid input</description>
-		<!-- is the following number type override valid? -->
-		<inputNode name="Monthly Salary" type="feel:string">
-			<value>foo</value>
-		</inputNode>
-		<!-- how do we test for invalid result? -->
-	</testCase>
 </testCases>

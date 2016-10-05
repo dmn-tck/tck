@@ -17,21 +17,5 @@
 				<value>You are EMPLOYED</value>
 			</computed>
 		</resultNode>
-	</testCase>
-	<testCase id="002">
-		<description>Testing invalid input</description>
-		<!-- is the following number type override valid? -->
-		<inputNode name="Employment Status" type="feel:number">
-			<value>10</value>
-		</inputNode>
-		<!-- how do we test for invalid result? -->
-	</testCase>
-	<testCase id="003">
-		<description>Testing value that is not in the allowed values list</description>
-		<inputNode name="Employment Status">
-			<value>FOO</value>
-		</inputNode>
-		<!-- how do we test for invalid result? -->
-	</testCase>
-	
+	</testCase>	
 </testCases>
