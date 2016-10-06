@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../../testCases.xsd">
-	<modelName>0004-simpletable-U.dmn</modelName>
+	<modelName>0010-multi-output-U.dmn</modelName>
 	<testCase id="001">
 		<inputNode name="Age">
 			<value>18</value>
@@ -11,9 +11,14 @@
 		<inputNode name="isAffordable">
 			<value>true</value>
 		</inputNode>
-		<resultNode name="Approval Status" type="decision">
+		<resultNode name="Approval" type="decision">
 			<computed>
-				<value>Approved</value>
+				<component name="Status">
+					<value>Approved</value>
+				</component>
+				<component name="Rate">
+					<value>Standard</value>
+				</component>
 			</computed>
 		</resultNode>
 	</testCase>
@@ -27,9 +32,14 @@
 		<inputNode name="isAffordable">
 			<value>true</value>
 		</inputNode>
-		<resultNode name="Approval Status" type="decision">
+		<resultNode name="Approval" type="decision">
 			<computed>
-				<value>Declined</value>
+				<component name="Status">
+					<value>Declined</value>
+				</component>
+				<component name="Rate">
+					<value>Standard</value>
+				</component>
 			</computed>
 		</resultNode>
 	</testCase>
@@ -43,9 +53,14 @@
 		<inputNode name="isAffordable">
 			<value>true</value>
 		</inputNode>
-		<resultNode name="Approval Status" type="decision">
+		<resultNode name="Approval" type="decision">
 			<computed>
-				<value>Declined</value>
+				<component name="Status">
+					<value>Declined</value>
+				</component>
+				<component name="Rate">
+					<value>Standard</value>
+				</component>
 			</computed>
 		</resultNode>
 	</testCase>
