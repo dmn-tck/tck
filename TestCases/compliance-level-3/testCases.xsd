@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 rel. 2 sp2 (x64) (http://www.altova.com) by Bruce Silver (private) -->
+<xs:schema xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.omg.org/spec/DMN/20160719/testcase" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="testCases">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="modelName" type="xs:string" minOccurs="0"/>
+				<xs:element name="labels" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="label" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="testCase" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string"/>
+							<xs:element name="inputNode" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="valueType">
+											<xs:attribute name="name" use="required"/>
+											<xs:attribute name="type" type="xs:string"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="resultNode" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="computed" type="valueType" minOccurs="0"/>
+										<xs:element name="expected" type="valueType" minOccurs="0"/>
+									</xs:sequence>
+									<xs:attribute name="name" use="required"/>
+									<xs:attribute name="type" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="id" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="valueType">
+		<xs:choice>
+			<xs:element name="value" type="xs:anySimpleType"/>
+			<xs:element name="component" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="valueType">
+							<xs:attribute name="name" use="required"/>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="list">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="item" type="valueType" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+</xs:schema>

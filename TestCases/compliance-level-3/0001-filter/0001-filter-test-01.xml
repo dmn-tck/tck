@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../testCases.xsd">
-	<modelName>filter01.dmn</modelName>
+	<modelName>0001-filter.dmn</modelName>
 	<testCase>
 		<inputNode name="Employee">
 			<list>
@@ -12,7 +12,7 @@
 						<value>10</value>
 					</component>
 					<component name="name">
-						<value>"Clark"</value>
+						<value>Clark</value>
 					</component>
 				</item>
 				<item>
@@ -23,7 +23,7 @@
 						<value>10</value>
 					</component>
 					<component name="name">
-						<value>"Miller"</value>
+						<value>Miller</value>
 					</component>
 				</item>
 				<item>
@@ -34,7 +34,7 @@
 						<value>20</value>
 					</component>
 					<component name="name">
-						<value>"Adams"</value>
+						<value>Adams</value>
 					</component>
 				</item>
 				<item>
@@ -45,7 +45,7 @@
 						<value>20</value>
 					</component>
 					<component name="name">
-						<value>"Ford"</value>
+						<value>Ford</value>
 					</component>
 				</item>
 				<item>
@@ -56,7 +56,7 @@
 						<value>30</value>
 					</component>
 					<component name="name">
-						<value>"James"</value>
+						<value>James</value>
 					</component>
 				</item>
 			</list>
@@ -65,10 +65,10 @@
 			<computed>
 				<list>
 					<item>
-						<value>"Adams"</value>
+						<value>Adams</value>
 					</item>
 					<item>
-						<value>"Ford"</value>
+						<value>Ford</value>
 					</item>
 				</list>
 			</computed>
