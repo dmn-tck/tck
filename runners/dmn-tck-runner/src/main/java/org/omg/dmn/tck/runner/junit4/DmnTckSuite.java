@@ -24,6 +24,8 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -51,11 +53,16 @@ public class DmnTckSuite
             logger.error( "Error instantiating test suite.", e );
             throw new InitializationError( e );
         }
-        List<URI> uris = ntsuite.getTestCases();
+        List<URL> urls = ntsuite.getTestCases();
         this.descr = Description.createSuiteDescription( "DMN TCK test suite" );
 
-        for ( URI uri : uris ) {
-            File tcFolder = new File( uri );
+        for ( URL url : urls ) {
+            File tcFolder = null;
+            try {
+                tcFolder = new File( url.toURI() );
+            } catch ( URISyntaxException e ) {
+                throw new InitializationError( e );
+            }
             final String tcName = tcFolder.getName();
 
             final File model = new File( tcFolder + "/" + tcName + ".dmn" );

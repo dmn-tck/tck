@@ -28,7 +28,8 @@ import javax.xml.bind.JAXBException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.net.URI;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
@@ -45,7 +46,7 @@ public class DmnTckRunner
     private       Description           descr;
     private       TestSuiteContext      context;
     private       TestCases             tcd;
-    private       URI                   modelURI;
+    private       URL                   modelURL;
 
     public DmnTckRunner(DmnTckVendorTestSuite vendorSuite, File tcfile)
             throws InitializationError {
@@ -54,7 +55,7 @@ public class DmnTckRunner
         try {
             tcd = TckMarshallingHelper.load( new FileInputStream( tcfile ) );
             String parent = tcfile.getParent();
-            modelURI = new File( parent != null ? parent + "/" + tcd.getModelName() : tcd.getModelName() ).toURI();
+            modelURL = new File( parent != null ? parent + "/" + tcd.getModelName() : tcd.getModelName() ).toURI().toURL();
             String tcdname = tcfile.getName();
             tcdname = tcdname.substring( 0, tcdname.lastIndexOf( '.' ) ).replaceAll( "\\.", "/" );
             this.descr = Description.createSuiteDescription( tcdname );
@@ -66,6 +67,8 @@ public class DmnTckRunner
         } catch ( FileNotFoundException e ) {
             e.printStackTrace();
         } catch ( JAXBException e ) {
+            e.printStackTrace();
+        } catch ( MalformedURLException e ) {
             e.printStackTrace();
         }
     }
@@ -83,7 +86,7 @@ public class DmnTckRunner
     @Override
     public void run(RunNotifier notifier) {
         TestSuiteContext context = vendorSuite.createContext();
-        vendorSuite.beforeTestCases( context, tcd, modelURI );
+        vendorSuite.beforeTestCases( context, tcd, modelURL );
         super.run( notifier );
         vendorSuite.afterTestCase( context, tcd );
     }

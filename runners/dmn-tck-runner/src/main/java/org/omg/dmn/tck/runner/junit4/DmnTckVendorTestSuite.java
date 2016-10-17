@@ -17,6 +17,7 @@ package org.omg.dmn.tck.runner.junit4;
 import org.omg.dmn.tck.marshaller._20160719.TestCases;
 
 import java.net.URI;
+import java.net.URL;
 import java.util.List;
 
 /**
@@ -40,7 +41,7 @@ public interface DmnTckVendorTestSuite {
      *
      * @return
      */
-    List<URI> getTestCases();
+    List<URL> getTestCases();
 
     /**
      * Creates a context object to share vendor specific
@@ -65,7 +66,7 @@ public interface DmnTckVendorTestSuite {
      *
      * @param modelURI the resolved URI to the DMN model file.
      */
-    void beforeTestCases(TestSuiteContext context, TestCases testCases, URI modelURI );
+    void beforeTestCases(TestSuiteContext context, TestCases testCases, URL modelURL );
 
     /**
      * A callback to give vendors an opportunity to prepare for a

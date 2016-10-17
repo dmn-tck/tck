@@ -23,7 +23,8 @@ import org.omg.dmn.tck.runner.junit4.TestSuiteContext;
 
 import java.io.File;
 import java.io.FilenameFilter;
-import java.net.URI;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,16 +32,24 @@ import java.util.List;
 public class DroolsTCKTest
         implements DmnTckVendorTestSuite {
 
-    public List<URI> getTestCases() {
-        List testCases = new ArrayList(  );
+    public List<URL> getTestCases() {
+        List<URL> testCases = new ArrayList<>(  );
         File cl2parent = new File("../../TestCases/compliance-level-2");
         FilenameFilter filenameFilter = (dir, name) -> name.matches( "\\d\\d\\d\\d-.*" );
         for( File file : cl2parent.listFiles( filenameFilter ) ) {
-            testCases.add( file.toURI() );
+            try {
+                testCases.add( file.toURI().toURL() );
+            } catch ( MalformedURLException e ) {
+                e.printStackTrace();
+            }
         }
         File cl3parent = new File("../../TestCases/compliance-level-3");
         for( File file : cl3parent.listFiles( filenameFilter ) ) {
-            testCases.add( file.toURI() );
+            try {
+                testCases.add( file.toURI().toURL() );
+            } catch ( MalformedURLException e ) {
+                e.printStackTrace();
+            }
         }
         return testCases;
     }
@@ -49,8 +58,8 @@ public class DroolsTCKTest
         return null;
     }
 
-    public void beforeTestCases(TestSuiteContext context, TestCases testCases, URI modelURI ) {
-        System.out.println("Before test case for model: "+modelURI);
+    public void beforeTestCases(TestSuiteContext context, TestCases testCases, URL modelURL ) {
+        System.out.println("Before test case for model: "+modelURL);
     }
 
     public void beforeTest(TestSuiteContext context, TestCases.TestCase testCase) {
