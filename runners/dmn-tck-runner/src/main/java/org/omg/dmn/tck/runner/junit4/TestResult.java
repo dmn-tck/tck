@@ -14,7 +14,15 @@
 
 package org.omg.dmn.tck.runner.junit4;
 
+/**
+ * A class to return a test result.
+ */
 public class TestResult {
+
+    /**
+     * An enum for the possible test
+     * result.
+     */
     public static enum Result {
         SUCCESS, ERROR, IGNORED;
     }
