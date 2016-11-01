@@ -36,19 +36,6 @@
 			</list>
 		</inputNode>
 		<resultNode name="literalSimpleList" type="decision">
-			<computed>
-				<list>
-					<item>
-						<value>a</value>
-					</item>
-					<item>
-						<value>b</value>
-					</item>
-					<item>
-						<value>c</value>
-					</item>
-				</list>
-			</computed>
 			<expected>
 				<list>
 					<item>
@@ -64,26 +51,6 @@
 			</expected>
 		</resultNode>
 		<resultNode name="literalNestedList" type="decision">
-			<computed>
-				<list>
-					<item>
-						<list>
-							<item>
-								<value>w</value>
-							</item>
-							<item>
-								<value>x</value>
-							</item>
-						</list>
-					</item>
-					<item>
-						<value>y</value>
-					</item>
-					<item>
-						<value>z</value>
-					</item>
-				</list>
-			</computed>
 			<expected>
 				<list>
 					<item>
