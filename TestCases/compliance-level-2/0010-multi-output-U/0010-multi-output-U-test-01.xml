@@ -12,14 +12,14 @@
 			<value>true</value>
 		</inputNode>
 		<resultNode name="Approval" type="decision">
-			<computed>
+			<expected>
 				<component name="Status">
 					<value>Approved</value>
 				</component>
 				<component name="Rate">
 					<value>Standard</value>
 				</component>
-			</computed>
+			</expected>
 		</resultNode>
 	</testCase>
 	<testCase id="002">
@@ -33,14 +33,14 @@
 			<value>true</value>
 		</inputNode>
 		<resultNode name="Approval" type="decision">
-			<computed>
+			<expected>
 				<component name="Status">
 					<value>Declined</value>
 				</component>
 				<component name="Rate">
 					<value>Standard</value>
 				</component>
-			</computed>
+			</expected>
 		</resultNode>
 	</testCase>
 	<testCase id="003">
@@ -54,14 +54,14 @@
 			<value>true</value>
 		</inputNode>
 		<resultNode name="Approval" type="decision">
-			<computed>
+			<expected>
 				<component name="Status">
 					<value>Declined</value>
 				</component>
 				<component name="Rate">
 					<value>Standard</value>
 				</component>
-			</computed>
+			</expected>
 		</resultNode>
 	</testCase>
 </testCases>

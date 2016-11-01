@@ -14,9 +14,9 @@
 			</component>
 		</inputNode>
 		<resultNode name="payment" type="decision">
-			<computed>
+			<expected>
 				<value>2778.69354943277</value>
-			</computed>
+			</expected>
 		</resultNode>
 	</testCase>
 	<testCase id="002">
@@ -32,9 +32,9 @@
 			</component>
 		</inputNode>
 		<resultNode name="payment" type="decision">
-			<computed>
+			<expected>
 				<value>562.707359373292</value>
-			</computed>
+			</expected>
 		</resultNode>
 	</testCase>
 	<testCase id="003">
@@ -50,9 +50,9 @@
 			</component>
 		</inputNode>
 		<resultNode name="payment" type="decision">
-			<computed>
+			<expected>
 				<value>2861.03377700389</value>
-			</computed>
+			</expected>
 		</resultNode>
 	</testCase>
 </testCases>

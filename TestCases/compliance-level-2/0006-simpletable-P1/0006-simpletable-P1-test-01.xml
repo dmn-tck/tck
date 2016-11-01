@@ -12,9 +12,9 @@
 			<value>true</value>
 		</inputNode>
 		<resultNode name="Approval Status" type="decision">
-			<computed>
+			<expected>
 				<value>Approved</value>
-			</computed>
+			</expected>
 		</resultNode>
 	</testCase>
 	<testCase id="002">
@@ -28,9 +28,9 @@
 			<value>true</value>
 		</inputNode>
 		<resultNode name="Approval Status" type="decision">
-			<computed>
+			<expected>
 				<value>Declined</value>
-			</computed>
+			</expected>
 		</resultNode>
 	</testCase>
 	<testCase id="003">
@@ -44,9 +44,9 @@
 			<value>true</value>
 		</inputNode>
 		<resultNode name="Approval Status" type="decision">
-			<computed>
+			<expected>
 				<value>Declined</value>
-			</computed>
+			</expected>
 		</resultNode>
 	</testCase>
 </testCases>
