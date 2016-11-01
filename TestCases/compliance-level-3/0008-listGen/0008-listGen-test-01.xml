@@ -22,19 +22,6 @@
 			</list>
 		</inputNode>
 		<resultNode name="listGen1" type="decision">
-			<computed>
-				<list>
-					<item>
-						<value>a</value>
-					</item>
-					<item>
-						<value>b</value>
-					</item>
-					<item>
-						<value>c</value>
-					</item>
-				</list>
-			</computed>
 			<expected>
 				<list>
 					<item>
@@ -50,19 +37,6 @@
 			</expected>
 		</resultNode>
 		<resultNode name="listGen2" type="decision">
-			<computed>
-				<list>
-					<item>
-						<value>a</value>
-					</item>
-					<item>
-						<value>b</value>
-					</item>
-					<item>
-						<value>c</value>
-					</item>
-				</list>
-			</computed>
 			<expected>
 				<list>
 					<item>
@@ -78,19 +52,6 @@
 			</expected>
 		</resultNode>
 		<resultNode name="listGen3" type="decision">
-			<computed>
-				<list>
-					<item>
-						<value>a</value>
-					</item>
-					<item>
-						<value>b</value>
-					</item>
-					<item>
-						<value>c</value>
-					</item>
-				</list>
-			</computed>
 			<expected>
 				<list>
 					<item>
@@ -106,19 +67,6 @@
 			</expected>
 		</resultNode>
 		<resultNode name="listGen4" type="decision">
-			<computed>
-				<list>
-					<item>
-						<value>a</value>
-					</item>
-					<item>
-						<value>b</value>
-					</item>
-					<item>
-						<value>c</value>
-					</item>
-				</list>
-			</computed>
 			<expected>
 				<list>
 					<item>
@@ -134,19 +82,6 @@
 			</expected>
 		</resultNode>
 		<resultNode name="listGen5" type="decision">
-			<computed>
-				<list>
-					<item>
-						<value>a</value>
-					</item>
-					<item>
-						<value>b</value>
-					</item>
-					<item>
-						<value>c</value>
-					</item>
-				</list>
-			</computed>
 			<expected>
 				<list>
 					<item>
@@ -162,26 +97,6 @@
 			</expected>
 		</resultNode>
 		<resultNode name="listGen6" type="decision">
-			<computed>
-				<list>
-					<item>
-						<list>
-							<item>
-								<value>w</value>
-							</item>
-							<item>
-								<value>x</value>
-							</item>
-						</list>
-					</item>
-					<item>
-						<value>y</value>
-					</item>
-					<item>
-						<value>z</value>
-					</item>
-				</list>
-			</computed>
 			<expected>
 				<list>
 					<item>
@@ -204,26 +119,6 @@
 			</expected>
 		</resultNode>
 		<resultNode name="listGen7" type="decision">
-			<computed>
-				<list>
-					<item>
-						<list>
-							<item>
-								<value>w</value>
-							</item>
-							<item>
-								<value>x</value>
-							</item>
-						</list>
-					</item>
-					<item>
-						<value>y</value>
-					</item>
-					<item>
-						<value>z</value>
-					</item>
-				</list>
-			</computed>
 			<expected>
 				<list>
 					<item>
@@ -246,36 +141,6 @@
 			</expected>
 		</resultNode>
 		<resultNode name="listGen8" type="decision">
-			<computed>
-				<list>
-					<item>
-						<value>a</value>
-					</item>
-					<item>
-						<value>b</value>
-					</item>
-					<item>
-						<list>
-							<item>
-								<list>
-									<item>
-										<value>w</value>
-									</item>
-									<item>
-										<value>x</value>
-									</item>
-								</list>
-							</item>
-							<item>
-								<value>y</value>
-							</item>
-							<item>
-								<value>z</value>
-							</item>
-						</list>
-					</item>
-				</list>
-			</computed>
 			<expected>
 				<list>
 					<item>
@@ -308,36 +173,6 @@
 			</expected>
 		</resultNode>
 		<resultNode name="listGen9" type="decision">
-			<computed>
-				<list>
-					<item>
-						<value>a</value>
-					</item>
-					<item>
-						<value>b</value>
-					</item>
-					<item>
-						<list>
-							<item>
-								<list>
-									<item>
-										<value>w</value>
-									</item>
-									<item>
-										<value>x</value>
-									</item>
-								</list>
-							</item>
-							<item>
-								<value>y</value>
-							</item>
-							<item>
-								<value>z</value>
-							</item>
-						</list>
-					</item>
-				</list>
-			</computed>
 			<expected>
 				<list>
 					<item>
@@ -370,43 +205,6 @@
 			</expected>
 		</resultNode>
 		<resultNode name="listGen10" type="decision">
-			<computed>
-				<list>
-					<item>
-						<list>
-							<item>
-								<value>a</value>
-							</item>
-							<item>
-								<value>b</value>
-							</item>
-							<item>
-								<value>c</value>
-							</item>
-						</list>
-					</item>
-					<item>
-						<list>
-							<item>
-								<list>
-									<item>
-										<value>w</value>
-									</item>
-									<item>
-										<value>x</value>
-									</item>
-								</list>
-							</item>
-							<item>
-								<value>y</value>
-							</item>
-							<item>
-								<value>z</value>
-							</item>
-						</list>
-					</item>
-				</list>
-			</computed>
 			<expected>
 				<list>
 					<item>

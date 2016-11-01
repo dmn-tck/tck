@@ -50,54 +50,54 @@
 			</component>
 		</inputNode>
 		<resultNode name="ApplicationRiskScore" type="decision">
-			<computed>
+			<expected>
 				<value>130</value>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="Pre-bureauRiskCategory" type="decision">
-			<computed>
+			<expected>
 				<value>LOW</value>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="BureauCallType" type="decision">
-			<computed>
+			<expected>
 				<value>MINI</value>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="Post-bureauRiskCategory" type="decision">
-			<computed>
+			<expected>
 				<value>LOW</value>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="RequiredMonthlyInstallment" type="decision">
-			<computed>
+			<expected>
 				<value>1680.880325608555</value>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="Pre-bureauAffordability" type="decision">
-			<computed>
+			<expected>
 				<value>true</value>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="Eligibility" type="decision">
-			<computed>
+			<expected>
 				<value>ELIGIBLE</value>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="Strategy" type="decision">
-			<computed>
+			<expected>
 				<value>BUREAU</value>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="Post-bureauAffordability" type="decision">
-			<computed>
+			<expected>
 				<value>true</value>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="Routing" type="decision">
-			<computed>
+			<expected>
 				<value>ACCEPT</value>
-			</computed>
+			</expected>
 		</resultNode>
 	</testCase>
 </testCases>

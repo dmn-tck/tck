@@ -62,7 +62,7 @@
 			</list>
 		</inputNode>
 		<resultNode name="filter01" type="decision">
-			<computed>
+			<expected>
 				<list>
 					<item>
 						<value>Adams</value>
@@ -71,7 +71,7 @@
 						<value>Ford</value>
 					</item>
 				</list>
-			</computed>
+			</expected>
 		</resultNode>
 	</testCase>
 </testCases>

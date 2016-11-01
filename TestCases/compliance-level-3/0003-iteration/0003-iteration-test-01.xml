@@ -29,7 +29,7 @@
 			</list>
 		</inputNode>
 		<resultNode name="MonthlyPayment" type="decision">
-			<computed>
+			<expected>
 				<list>
 					<item>
 						<value>966.396742204988</value>
@@ -38,7 +38,7 @@
 						<value>376.509070632494</value>
 					</item>
 				</list>
-			</computed>
+			</expected>
 		</resultNode>
 	</testCase>
 </testCases>

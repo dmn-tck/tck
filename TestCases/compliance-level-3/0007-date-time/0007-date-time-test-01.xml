@@ -6,7 +6,7 @@
 			<value>2015-12-24</value>
 		</inputNode>
 		<inputNode name="timeString">
-			<value>00:00:01</value>
+			<value>00:00:01-01:00</value>
 		</inputNode>
 		<inputNode name="dateTimeString">
 			<value>2012-12-24T23:59:00</value>
@@ -39,12 +39,12 @@
 			<value>P13DT2H14S</value>
 		</inputNode>
 		<resultNode name="Date-Time" type="decision">
-			<computed>
+			<expected>
 				<value>2012-12-24T23:59:00</value>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="Date" type="decision">
-			<computed>
+			<expected>
 				<component name="fromString">
 					<value>2015-12-24</value>
 				</component>
@@ -54,97 +54,97 @@
 				<component name="fromYearMonthDay">
 					<value>1999-11-22</value>
 				</component>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="Time" type="decision">
-			<computed>
+			<expected>
 				<value>00:00:01</value>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="Date-Time2" type="decision">
-			<computed>
-				<value>2015-12-24T00:00:01</value>
-			</computed>
+			<expected>
+				<value>2015-12-24T00:00:01-01:00</value>
+			</expected>
 		</resultNode>
 		<resultNode name="Time2" type="decision">
-			<computed>
-				<value>00:00:01</value>
-			</computed>
+			<expected>
+				<value>00:00:01-01:00</value>
+			</expected>
 		</resultNode>
 		<resultNode name="Time3" type="decision">
-			<computed>
+			<expected>
 				<value>12:59:01.3-01:00</value>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="dtDuration1" type="decision">
-			<computed>
+			<expected>
 				<value>P13DT2H14S</value>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="dtDuration2" type="decision">
-			<computed>
-				<value>-P1094DT1M1S</value>
-			</computed>
+			<expected>
+				<value>-P1093DT18H1M1S</value>
+			</expected>
 		</resultNode>
 		<resultNode name="hoursInDuration" type="decision">
-			<computed>
-				<value>-26256.01694444444</value>
-			</computed>
+			<expected>
+				<value>-26250.01694444444</value>
+			</expected>
 		</resultNode>
 		<resultNode name="sumDurations" type="decision">
-			<computed>
-				<value>-P1080DT22H47S</value>
-			</computed>
+			<expected>
+				<value>-P1080DT16H47S</value>
+			</expected>
 		</resultNode>
 		<resultNode name="ymDuration2" type="decision">
-			<computed>
+			<expected>
 				<value>P0M</value>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="cDay" type="decision">
-			<computed>
+			<expected>
 				<value>24</value>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="cYear" type="decision">
-			<computed>
+			<expected>
 				<value>2015</value>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="cMonth" type="decision">
-			<computed>
+			<expected>
 				<value>12</value>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="cHour" type="decision">
-			<computed>
+			<expected>
 				<value>00</value>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="cMinute" type="decision">
-			<computed>
+			<expected>
 				<value>00</value>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="cSecond" type="decision">
-			<computed>
+			<expected>
 				<value>01</value>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="cTimezone" type="decision">
-			<computed>
-				<value></value>
-			</computed>
+			<expected>
+				<value>-01:00</value>
+			</expected>
 		</resultNode>
 		<resultNode name="years" type="decision">
-			<computed>
+			<expected>
 				<value>0</value>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="seconds" type="decision">
-			<computed>
+			<expected>
 				<value>14</value>
-			</computed>
+			</expected>
 		</resultNode>
 	</testCase>
 </testCases>

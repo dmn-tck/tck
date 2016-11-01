@@ -12,7 +12,7 @@
 			<value>2</value>
 		</inputNode>
 		<resultNode name="Basic" type="decision">
-			<computed>
+			<expected>
 				<component name="startsWithX">
 					<value>false</value>
 				</component>
@@ -49,15 +49,15 @@
 				<component name="substringAfterB">
 					<value>nana</value>
 				</component>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="Matches" type="decision">
-			<computed>
+			<expected>
 				<value>true</value>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="Replace" type="decision">
-			<computed>
+			<expected>
 				<component name="Aao">
 					<value>bonono</value>
 				</component>
@@ -67,12 +67,12 @@
 				<component name="encloseVowels">
 					<value>b[a]n[a]n[a]</value>
 				</component>
-			</computed>
+			</expected>
 		</resultNode>
 		<resultNode name="Constructor" type="decision">
-			<computed>
+			<expected>
 				<value>2</value>
-			</computed>
+			</expected>
 		</resultNode>
 	</testCase>
 </testCases>

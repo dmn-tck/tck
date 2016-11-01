@@ -102,9 +102,9 @@
 			<value>Clark</value>
 		</inputNode>
 		<resultNode name="Join" type="decision">
-			<computed>
+			<expected>
 				<value>Smith</value>
-			</computed>
+			</expected>
 		</resultNode>
 	</testCase>
 </testCases>
