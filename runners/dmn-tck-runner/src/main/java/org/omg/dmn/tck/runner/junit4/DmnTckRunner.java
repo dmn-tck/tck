@@ -85,10 +85,11 @@ public class DmnTckRunner
 
     @Override
     public void run(RunNotifier notifier) {
-        TestSuiteContext context = vendorSuite.createContext();
+        context = vendorSuite.createContext();
         vendorSuite.beforeTestCases( context, tcd, modelURL );
         super.run( notifier );
         vendorSuite.afterTestCase( context, tcd );
+        context = null;
     }
 
     @Override
