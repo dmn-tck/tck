@@ -18,6 +18,28 @@
 				</item>
 			</list>
 		</inputNode>
+		<inputNode name="stringList">
+			<list>
+				<item>
+					<value>a</value>
+				</item>
+				<item>
+					<value>8</value>
+				</item>
+				<item>
+					<value>Aa</value>
+				</item>
+				<item>
+					<value>A</value>
+				</item>
+				<item>
+					<value>10</value>
+				</item>
+				<item>
+					<value>9</value>
+				</item>
+			</list>
+		</inputNode>
 		<inputNode name="tableB">
 			<list>
 				<item>
@@ -68,16 +90,16 @@
 			<expected>
 				<list>
 					<item>
-						<value>1</value>
-					</item>
-					<item>
-						<value>3</value>
+						<value>5</value>
 					</item>
 					<item>
 						<value>4</value>
 					</item>
 					<item>
-						<value>5</value>
+						<value>3</value>
+					</item>
+					<item>
+						<value>1</value>
 					</item>
 				</list>
 			</expected>
@@ -126,6 +148,30 @@
 						<component name="col4">
 							<value>10</value>
 						</component>
+					</item>
+				</list>
+			</expected>
+		</resultNode>
+		<resultNode name="sort3" type="decision">
+			<expected>
+				<list>
+					<item>
+						<value>10</value>
+					</item>
+					<item>
+						<value>8</value>
+					</item>
+					<item>
+						<value>9</value>
+					</item>
+					<item>
+						<value>A</value>
+					</item>
+					<item>
+						<value>Aa</value>
+					</item>
+					<item>
+						<value>a</value>
 					</item>
 				</list>
 			</expected>
