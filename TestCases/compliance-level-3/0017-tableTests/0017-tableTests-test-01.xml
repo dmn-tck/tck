@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../testCases.xsd">
+	<modelName>0017-tableTests.dmn</modelName>
+	<testCase>
+		<inputNode name="structA">
+			<component name="name">
+				<value>widget</value>
+			</component>
+			<component name="price">
+				<value>20</value>
+			</component>
+		</inputNode>
+		<inputNode name="numB">
+			<value>9</value>
+		</inputNode>
+		<inputNode name="numC">
+			<value>10</value>
+		</inputNode>
+		<inputNode name="dateD">
+			<value>2016-11-01</value>
+		</inputNode>
+		<inputNode name="dateE">
+			<value>2016-11-02</value>
+		</inputNode>
+		<resultNode name="priceGt10" type="decision">
+			<expected>
+				<value>true</value>
+			</expected>
+		</resultNode>
+		<resultNode name="priceInRange" type="decision">
+			<expected>
+				<value>In range</value>
+			</expected>
+		</resultNode>
+		<resultNode name="dateCompare1" type="decision">
+			<expected>
+				<value>true</value>
+			</expected>
+		</resultNode>
+		<resultNode name="dateCompare2" type="decision">
+			<expected>
+				<value>false</value>
+			</expected>
+		</resultNode>
+	</testCase>
+</testCases>
