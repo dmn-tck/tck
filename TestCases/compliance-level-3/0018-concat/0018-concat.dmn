@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:tns="http://www.trisotech.com/definitions/_44e8b40f-c544-4228-aa44-210cda383ede" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" exporter="DMN Modeler; Method and Style trisofix.xslt" exporterVersion="5.0.35; 1.0" id="_44e8b40f-c544-4228-aa44-210cda383ede" name="concat" namespace="http://www.trisotech.com/definitions/_44e8b40f-c544-4228-aa44-210cda383ede" triso:logoChoice="Default">
+	<inputData id="_0caf69bb-86ca-4991-b95a-436c8bc30f58" name="a">
+		<variable name="a" typeRef="feel:string"/>
+	</inputData>
+	<inputData id="_bb2ffa52-26fb-4dc1-867b-21ab8f2acee0" name="b">
+		<variable name="b" typeRef="feel:string"/>
+	</inputData>
+	<inputData id="_5dbce9ca-7e5c-4860-886f-d1d97909b7c5" name="c">
+		<variable name="c" typeRef="feel:string"/>
+	</inputData>
+	<decision id="_f4affc17-10b0-49f5-8d2b-c1cde27cb0e7" name="concat1">
+		<variable name="concat1" typeRef="feel:string"/>
+		<informationRequirement>
+			<requiredInput href="#_0caf69bb-86ca-4991-b95a-436c8bc30f58"/>
+		</informationRequirement>
+		<informationRequirement>
+			<requiredInput href="#_bb2ffa52-26fb-4dc1-867b-21ab8f2acee0"/>
+		</informationRequirement>
+		<informationRequirement>
+			<requiredInput href="#_5dbce9ca-7e5c-4860-886f-d1d97909b7c5"/>
+		</informationRequirement>
+		<literalExpression>
+			<text>a+b+c</text>
+		</literalExpression>
+	</decision>
+	<decision id="_0dfcf9f2-1e09-4702-8bbf-b995d0fc6a70" name="concat2">
+		<variable name="concat2" typeRef="feel:string"/>
+		<informationRequirement>
+			<requiredInput href="#_0caf69bb-86ca-4991-b95a-436c8bc30f58"/>
+		</informationRequirement>
+		<informationRequirement>
+			<requiredInput href="#_bb2ffa52-26fb-4dc1-867b-21ab8f2acee0"/>
+		</informationRequirement>
+		<informationRequirement>
+			<requiredInput href="#_5dbce9ca-7e5c-4860-886f-d1d97909b7c5"/>
+		</informationRequirement>
+		<literalExpression>
+			<text>string([a,b,c])</text>
+		</literalExpression>
+	</decision>
+	<decision id="_af379957-4df3-4daf-8f17-04f892d1627d" name="concat3">
+		<variable name="concat3" typeRef="feel:string"/>
+		<informationRequirement>
+			<requiredInput href="#_0caf69bb-86ca-4991-b95a-436c8bc30f58"/>
+		</informationRequirement>
+		<informationRequirement>
+			<requiredInput href="#_bb2ffa52-26fb-4dc1-867b-21ab8f2acee0"/>
+		</informationRequirement>
+		<informationRequirement>
+			<requiredInput href="#_5dbce9ca-7e5c-4860-886f-d1d97909b7c5"/>
+		</informationRequirement>
+		<literalExpression>
+			<text>string(concatenate(a,b,c))</text>
+		</literalExpression>
+	</decision>
+</definitions>

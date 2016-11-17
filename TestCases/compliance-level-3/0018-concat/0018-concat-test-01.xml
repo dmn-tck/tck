@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../testCases.xsd">
+	<modelName>0018-concat.dmn</modelName>
+	<testCase id="001">
+		<inputNode name="a">
+			<value>a</value>
+		</inputNode>
+		<inputNode name="b">
+			<value>b</value>
+		</inputNode>
+		<inputNode name="c">
+			<value>c</value>
+		</inputNode>
+		<resultNode name="concat1" type="decision">
+			<expected>
+				<value>abc</value>
+			</expected>
+		</resultNode>
+		<resultNode name="concat2" type="decision">
+			<expected>
+				<value>abc</value>
+			</expected>
+		</resultNode>
+		<resultNode name="concat3" type="decision">
+			<expected>
+				<value>abc</value>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="002">
+		<inputNode name="a">
+			<value>1</value>
+		</inputNode>
+		<inputNode name="b">
+			<value>2</value>
+		</inputNode>
+		<inputNode name="c">
+			<value>3</value>
+		</inputNode>
+		<resultNode name="concat1" type="decision">
+			<expected>
+				<value>123</value>
+			</expected>
+		</resultNode>
+		<resultNode name="concat2" type="decision">
+			<expected>
+				<value>123</value>
+			</expected>
+		</resultNode>
+		<resultNode name="concat3" type="decision">
+			<expected>
+				<value>123</value>
+			</expected>
+		</resultNode>
+	</testCase>
+</testCases>
