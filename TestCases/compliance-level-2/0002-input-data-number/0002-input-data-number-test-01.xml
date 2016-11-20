@@ -13,9 +13,9 @@
 			<value>10000</value>
 		</inputNode>
 		<resultNode name="Yearly Salary" type="decision">
-			<computed>
+			<expected>
 				<value>120000</value>
-			</computed>
+			</expected>
 		</resultNode>
 	</testCase>
 </testCases>

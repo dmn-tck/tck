@@ -13,9 +13,9 @@
 			<value>EMPLOYED</value>
 		</inputNode>
 		<resultNode name="Employment Status Statement" type="decision">
-			<computed>
+			<expected>
 				<value>You are EMPLOYED</value>
-			</computed>
+			</expected>
 		</resultNode>
 	</testCase>	
 </testCases>

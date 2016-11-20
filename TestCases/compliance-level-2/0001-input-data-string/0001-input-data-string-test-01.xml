@@ -13,9 +13,9 @@
 			<value>John Doe</value>
 		</inputNode>
 		<resultNode name="Greeting Message" type="decision">
-			<computed>
+			<expected>
 				<value>Hello John Doe</value>
-			</computed>
+			</expected>
 		</resultNode>
 	</testCase>
 </testCases>
