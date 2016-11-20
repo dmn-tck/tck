@@ -14,9 +14,9 @@
 
 package org.omg.dmn.tck.runner.junit4;
 
+import org.junit.runner.Description;
 import org.omg.dmn.tck.marshaller._20160719.TestCases;
 
-import java.net.URI;
 import java.net.URL;
 import java.util.List;
 
@@ -72,15 +72,18 @@ public interface DmnTckVendorTestSuite {
      * A callback to give vendors an opportunity to prepare for a
      * single test execution.
      *
+     * @param description
      * @param context the context created by the <code>createContext()</code>
      *                call.
      * @param testCase a single test case that will be executed next.
      */
-    void beforeTest(TestSuiteContext context, TestCases.TestCase testCase );
+    void beforeTest(Description description, TestSuiteContext context, TestCases.TestCase testCase);
 
     /**
      * Executes a single test case and returns the result.
      *
+     *
+     * @param description
      * @param context the context created by the <code>createContext()</code>
      *                call.
      * @param testCase a single test case that will be executed next.
@@ -88,17 +91,18 @@ public interface DmnTckVendorTestSuite {
      * @return the result of the test execution. Optionally it includes
      *         a string message.
      */
-    TestResult executeTest(TestSuiteContext context, TestCases.TestCase testCase );
+    TestResult executeTest(Description description, TestSuiteContext context, TestCases.TestCase testCase);
 
     /**
      * A callback to give vendors an opportunity to clean up after a
      * single test execution.
      *
+     * @param description
      * @param context the context created by the <code>createContext()</code>
      *                call.
      * @param testCase a single test case that will be executed next.
      */
-    void afterTest(TestSuiteContext context, TestCases.TestCase testCase );
+    void afterTest(Description description, TestSuiteContext context, TestCases.TestCase testCase);
 
     /**
      * A callback to give vendors an opportunity for clean up after a

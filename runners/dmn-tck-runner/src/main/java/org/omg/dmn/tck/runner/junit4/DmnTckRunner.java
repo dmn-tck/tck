@@ -95,21 +95,24 @@ public class DmnTckRunner
     @Override
     protected void runChild(TestCases.TestCase testCase, RunNotifier runNotifier) {
         Description description = this.children.get( testCase );
-        runNotifier.fireTestStarted( description );
-        vendorSuite.beforeTest( context, testCase );
-        TestResult result = vendorSuite.executeTest( context, testCase );
-        switch ( result.getResult() ) {
-            case SUCCESS:
-                runNotifier.fireTestFinished( description );
-                break;
-            case IGNORED:
-                runNotifier.fireTestIgnored( description );
-                break;
-            case ERROR:
-                runNotifier.fireTestFailure( new Failure( description, new RuntimeException( result.getMsg() ) ) );
-                break;
+        try {
+            runNotifier.fireTestStarted( description );
+            vendorSuite.beforeTest( description, context, testCase );
+            TestResult result = vendorSuite.executeTest( description, context, testCase );
+            switch ( result.getResult() ) {
+                case SUCCESS:
+                    runNotifier.fireTestFinished( description );
+                    break;
+                case IGNORED:
+                    runNotifier.fireTestIgnored( description );
+                    break;
+                case ERROR:
+                    runNotifier.fireTestFailure( new Failure( description, new RuntimeException( result.getMsg() ) ) );
+                    break;
+            }
+        } finally {
+            vendorSuite.afterTest( description, context, testCase );
         }
-        vendorSuite.afterTest( context, testCase );
     }
 
     @Override
