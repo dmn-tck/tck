@@ -15,7 +15,20 @@
   <modules>
     <module>dmn-tck-marshaller</module>
     <module>dmn-tck-runner</module>
-    <module>dmn-tck-runner-drools</module>
   </modules>
+
+  <profiles>
+    <profile>
+      <id>drools</id>
+      <activation>
+        <file>
+          <exists>enable-drools.flag</exists>
+        </file>
+      </activation>
+      <modules>
+        <module>dmn-tck-runner-drools</module>
+      </modules>
+    </profile>
+  </profiles>
 
 </project>
