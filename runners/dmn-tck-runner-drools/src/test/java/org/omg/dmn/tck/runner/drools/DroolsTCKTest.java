@@ -53,23 +53,23 @@ public class DroolsTCKTest
     public List<URL> getTestCases() {
         List<URL> testCases = new ArrayList<>(  );
         File cl2parent = new File("../../TestCases/compliance-level-2");
-//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "\\d\\d\\d\\d-.*" );
-        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0009-.*" );
-        for( File file : cl2parent.listFiles( filenameFilter ) ) {
-            try {
-                testCases.add( file.toURI().toURL() );
-            } catch ( MalformedURLException e ) {
-                e.printStackTrace();
-            }
-        }
-//        File cl3parent = new File("../../TestCases/compliance-level-3");
-//        for( File file : cl3parent.listFiles( filenameFilter ) ) {
+        FilenameFilter filenameFilter = (dir, name) -> name.matches( "\\d\\d\\d\\d-.*" );
+//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0010-.*" );
+//        for( File file : cl2parent.listFiles( filenameFilter ) ) {
 //            try {
 //                testCases.add( file.toURI().toURL() );
 //            } catch ( MalformedURLException e ) {
 //                e.printStackTrace();
 //            }
 //        }
+        File cl3parent = new File("../../TestCases/compliance-level-3");
+        for( File file : cl3parent.listFiles( filenameFilter ) ) {
+            try {
+                testCases.add( file.toURI().toURL() );
+            } catch ( MalformedURLException e ) {
+                e.printStackTrace();
+            }
+        }
         return testCases;
     }
 
@@ -103,6 +103,12 @@ public class DroolsTCKTest
         logger.info( dmnResult.getContext().toString() );
 
         List<String> failures = new ArrayList<>();
+        if( dmnResult.hasErrors() ) {
+            for( DMNMessage msg : dmnResult.getMessages( DMNMessage.Severity.ERROR ) ) {
+                failures.add( msg.toString() );
+            }
+        }
+
         testCase.getResultNode().forEach( rn -> {
             try {
                 String name = rn.getName();
