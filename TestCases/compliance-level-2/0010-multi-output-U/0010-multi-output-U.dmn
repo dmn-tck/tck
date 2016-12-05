@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:tns="http://www.trisotech.com/definitions/_a3ebbd98-af09-42f3-9099-4ae2204a1f54" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="_a3ebbd98-af09-42f3-9099-4ae2204a1f54" namespace="http://www.trisotech.com/definitions/_a3ebbd98-af09-42f3-9099-4ae2204a1f54" exporter="DMN Modeler; Method and Style trisofix.xslt" exporterVersion="5.0.32.2; 1.0" name="multi-output-table" triso:logoChoice="Default" xsi:schemaLocation="http://www.omg.org/spec/DMN/20151101/dmn.xsd ../../dmn.xsd" expressionLanguage="http://www.omg.org/spec/FEEL/20140401" typeLanguage="http://www.omg.org/spec/FEEL/20140401">
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:tns="http://www.trisotech.com/definitions/_a3ebbd98-af09-42f3-9099-4ae2204a1f54" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" exporter="DMN Modeler; Method and Style trisofix.xslt" exporterVersion="5.0.36.1; 1.0" id="_a3ebbd98-af09-42f3-9099-4ae2204a1f54" name="multi-output-table" namespace="http://www.trisotech.com/definitions/_a3ebbd98-af09-42f3-9099-4ae2204a1f54" triso:logoChoice="Default">
+	<itemDefinition id="tApproval" name="tApproval">
+		<itemComponent id="_20dfeb44-1c36-43cf-8819-63ce36819e90" name="Status">
+			<typeRef>feel:string</typeRef>
+		</itemComponent>
+		<itemComponent id="_858ef6e6-69ca-4b50-a654-10f4b981f43c" name="Rate">
+			<typeRef>feel:string</typeRef>
+		</itemComponent>
+	</itemDefinition>
 	<decision id="_3b2953a3-745f-4d2e-b55d-75c8c5ae653c" name="Approval">
-		<variable name="Approval" typeRef="feel:context"/>
+		<variable name="Approval" typeRef="tns:tApproval"/>
 		<informationRequirement>
 			<requiredInput href="#_5a4bdb64-f0ef-4978-9e03-6f1ae64a1f17"/>
 		</informationRequirement>
@@ -11,7 +19,7 @@
 		<informationRequirement>
 			<requiredInput href="#_8ff18665-84e9-49f2-a8df-8981b1844549"/>
 		</informationRequirement>
-		<decisionTable hitPolicy="UNIQUE" outputLabel="Approval" preferredOrientation="Rule-as-Row">
+		<decisionTable hitPolicy="UNIQUE" outputLabel="Approval">
 			<input id="_bf7fc56f-ea82-464e-a541-f3221dc07e78" label="Age">
 				<inputExpression typeRef="feel:number">
 					<text>Age</text>
