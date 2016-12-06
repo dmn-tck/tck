@@ -5,7 +5,7 @@
 			<typeRef>feel:number</typeRef>
 		</itemComponent>
 		<itemComponent id="_0b26fc3e-dcb9-4106-ac30-f536247fb48c" name="dept" isCollection="false">
-			<typeRef>feel:string</typeRef>
+			<typeRef>feel:number</typeRef>
 		</itemComponent>
 		<itemComponent id="_e5120ba7-544a-4f7d-8712-f1c659b82f61" name="name" isCollection="false">
 			<typeRef>feel:string</typeRef>
