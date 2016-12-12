@@ -109,17 +109,13 @@
 			<expected>
 				<list>
 					<item>
-						<list>
-							<item>
-								<value>6</value>
-							</item>
-							<item>
-								<value>14</value>
-							</item>
-							<item>
-								<value>-3</value>
-							</item>
-						</list>
+						<value>6</value>
+					</item>
+					<item>
+						<value>14</value>
+					</item>
+					<item>
+						<value>-3</value>
 					</item>
 					<item>
 						<value>11</value>
@@ -212,17 +208,13 @@
 			<expected>
 				<list>
 					<item>
-						<list>
-							<item>
-								<value>a</value>
-							</item>
-							<item>
-								<value>b</value>
-							</item>
-							<item>
-								<value>c</value>
-							</item>
-						</list>
+						<value>a</value>
+					</item>
+					<item>
+						<value>b</value>
+					</item>
+					<item>
+						<value>c</value>
 					</item>
 					<item>
 						<list>
@@ -455,17 +447,13 @@
 			<expected>
 				<list>
 					<item>
-						<list>
-							<item>
-								<value>6</value>
-							</item>
-							<item>
-								<value>14</value>
-							</item>
-							<item>
-								<value>6</value>
-							</item>
-						</list>
+						<value>6</value>
+					</item>
+					<item>
+						<value>14</value>
+					</item>
+					<item>
+						<value>6</value>
 					</item>
 					<item>
 						<value>0</value>
@@ -576,32 +564,28 @@
 			<expected>
 				<list>
 					<item>
+						<value>a</value>
+					</item>
+					<item>
 						<list>
 							<item>
-								<value>a</value>
+								<value>b</value>
 							</item>
 							<item>
-								<list>
-									<item>
-										<value>b</value>
-									</item>
-									<item>
-										<value>x</value>
-									</item>
-								</list>
+								<value>x</value>
+							</item>
+						</list>
+					</item>
+					<item>
+						<value>c</value>
+					</item>
+					<item>
+						<list>
+							<item>
+								<value>d</value>
 							</item>
 							<item>
-								<value>c</value>
-							</item>
-							<item>
-								<list>
-									<item>
-										<value>d</value>
-									</item>
-									<item>
-										<value>e</value>
-									</item>
-								</list>
+								<value>e</value>
 							</item>
 						</list>
 					</item>
