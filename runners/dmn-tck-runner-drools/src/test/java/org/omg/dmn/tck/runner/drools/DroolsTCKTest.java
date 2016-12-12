@@ -42,6 +42,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @RunWith( DmnTckSuite.class )
 public class DroolsTCKTest
@@ -55,14 +56,15 @@ public class DroolsTCKTest
         File cl2parent = new File("../../TestCases/compliance-level-2");
         FilenameFilter filenameFilter = (dir, name) -> name.matches( "\\d\\d\\d\\d-.*" );
 //        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0010-.*" );
-//        for( File file : cl2parent.listFiles( filenameFilter ) ) {
-//            try {
-//                testCases.add( file.toURI().toURL() );
-//            } catch ( MalformedURLException e ) {
-//                e.printStackTrace();
-//            }
-//        }
+        for( File file : cl2parent.listFiles( filenameFilter ) ) {
+            try {
+                testCases.add( file.toURI().toURL() );
+            } catch ( MalformedURLException e ) {
+                e.printStackTrace();
+            }
+        }
         File cl3parent = new File("../../TestCases/compliance-level-3");
+//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0001-.*" );
         for( File file : cl3parent.listFiles( filenameFilter ) ) {
             try {
                 testCases.add( file.toURI().toURL() );
@@ -124,7 +126,7 @@ public class DroolsTCKTest
         } );
 
         TestResult.Result r = dmnResult.hasErrors() || !failures.isEmpty() ? TestResult.Result.ERROR : TestResult.Result.SUCCESS;
-        return new TestResult( r, failures.toString() );
+        return new TestResult( r, failures.stream().collect( Collectors.joining("\n") ) );
     }
 
     private boolean isEquals( Object expected, Object actual ) {
@@ -183,7 +185,14 @@ public class DroolsTCKTest
     }
 
     private Object parseType(ValueType value, DMNType dmnType) {
-        if( ! dmnType.isComposite() ) {
+        if( value.getList() != null && dmnType.isCollection() ) {
+            List<Object> result = new ArrayList<>();
+            ValueType.List list = value.getList();
+            for( ValueType vt : list.getItem() ) {
+                result.add( parseType( vt, dmnType ) );
+            }
+            return result;
+        } else if( ! dmnType.isComposite() ) {
             String text = ((Node)value.getValue()).getFirstChild().getTextContent();
             return text != null ? dmnType.parseValue( text ) : null;
         } else{
