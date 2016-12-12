@@ -4,7 +4,7 @@
 		<typeRef>feel:string</typeRef>
 	</itemDefinition>
 	<itemDefinition id="tNestedList" isCollection="true" name="tNestedList">
-		<typeRef>tStringList</typeRef>
+		<typeRef>tns:tStringList</typeRef>
 	</itemDefinition>
 	<inputData id="_1296434e-6902-40fc-9a93-07c35dda7ec8" name="simpleList">
 		<variable name="simpleList" typeRef="tns:tStringList"/>
