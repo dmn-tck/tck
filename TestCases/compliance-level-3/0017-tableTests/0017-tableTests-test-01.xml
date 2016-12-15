@@ -29,7 +29,7 @@
 		</resultNode>
 		<resultNode name="priceInRange" type="decision">
 			<expected>
-				<value>In range</value>
+				<value>Not in range</value>
 			</expected>
 		</resultNode>
 		<resultNode name="dateCompare1" type="decision">
