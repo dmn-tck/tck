@@ -9,7 +9,7 @@
 		</itemComponent>
 	</itemDefinition>
 	<itemDefinition id="tPriceTable" isCollection="true" name="tPriceTable">
-		<typeRef>tItemPrice</typeRef>
+		<typeRef>tns:tItemPrice</typeRef>
 	</itemDefinition>
 	<inputData id="_87bb4ba6-43bb-4fc5-a120-0c15c3901278" name="priceTable2">
 		<variable name="priceTable2" typeRef="tns:tPriceTable"/>
