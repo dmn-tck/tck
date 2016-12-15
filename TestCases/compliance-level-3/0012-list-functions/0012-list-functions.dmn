@@ -120,7 +120,7 @@
 			<requiredInput href="#_86f5e710-a139-4cd5-8ac4-90b4671a75b8"/>
 		</informationRequirement>
 		<literalExpression>
-			<text>sublist(list1,-1,-1)</text>
+			<text>sublist(list1,-1,1)</text>
 		</literalExpression>
 	</decision>
 	<decision id="_845ea241-587e-43d8-a563-a1dd18693afe" name="append1">
