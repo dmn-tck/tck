@@ -9,7 +9,7 @@
 			<value>00:00:01-01:00</value>
 		</inputNode>
 		<inputNode name="dateTimeString">
-			<value>2012-12-24T23:59:00</value>
+			<value>2016-12-24T23:59:00</value>
 		</inputNode>
 		<inputNode name="Hours">
 			<value>12</value>
@@ -40,7 +40,7 @@
 		</inputNode>
 		<resultNode name="Date-Time" type="decision">
 			<expected>
-				<value>2012-12-24T23:59:00</value>
+				<value>2016-12-24T23:59:00</value>
 			</expected>
 		</resultNode>
 		<resultNode name="Date" type="decision">
@@ -49,7 +49,7 @@
 					<value>2015-12-24</value>
 				</component>
 				<component name="fromDateTime">
-					<value>2012-12-24</value>
+					<value>2016-12-24</value>
 				</component>
 				<component name="fromYearMonthDay">
 					<value>1999-11-22</value>
@@ -58,7 +58,7 @@
 		</resultNode>
 		<resultNode name="Time" type="decision">
 			<expected>
-				<value>00:00:01</value>
+				<value>00:00:01-01:00</value>
 			</expected>
 		</resultNode>
 		<resultNode name="Date-Time2" type="decision">
@@ -83,17 +83,17 @@
 		</resultNode>
 		<resultNode name="dtDuration2" type="decision">
 			<expected>
-				<value>-P1093DT18H1M1S</value>
+				<value>P367DT6H58M59S</value>
 			</expected>
 		</resultNode>
 		<resultNode name="hoursInDuration" type="decision">
 			<expected>
-				<value>-26250.01694444444</value>
+				<value>8814.98305555556</value>
 			</expected>
 		</resultNode>
 		<resultNode name="sumDurations" type="decision">
 			<expected>
-				<value>-P1080DT16H47S</value>
+				<value>P380DT8H59M13S</value>
 			</expected>
 		</resultNode>
 		<resultNode name="ymDuration2" type="decision">
