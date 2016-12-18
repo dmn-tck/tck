@@ -54,17 +54,17 @@ public class DroolsTCKTest
     public List<URL> getTestCases() {
         List<URL> testCases = new ArrayList<>(  );
         File cl2parent = new File("../../TestCases/compliance-level-2");
-        FilenameFilter filenameFilter = (dir, name) -> name.matches( "\\d\\d\\d\\d-.*" );
+//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "\\d\\d\\d\\d-.*" );
 //        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0010-.*" );
-        for( File file : cl2parent.listFiles( filenameFilter ) ) {
-            try {
-                testCases.add( file.toURI().toURL() );
-            } catch ( MalformedURLException e ) {
-                e.printStackTrace();
-            }
-        }
+//        for( File file : cl2parent.listFiles( filenameFilter ) ) {
+//            try {
+//                testCases.add( file.toURI().toURL() );
+//            } catch ( MalformedURLException e ) {
+//                e.printStackTrace();
+//            }
+//        }
         File cl3parent = new File("../../TestCases/compliance-level-3");
-//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0001-.*" );
+        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0004-.*" );
         for( File file : cl3parent.listFiles( filenameFilter ) ) {
             try {
                 testCases.add( file.toURI().toURL() );
@@ -143,6 +143,19 @@ public class DroolsTCKTest
             BigDecimal actualBD = EvalHelper.getBigDecimalOrNull( actual );
             return expectedBD.subtract( actualBD ).abs().compareTo( NUMBER_COMPARISON_PRECISION ) < 0;
         }
+        if( expected instanceof List && actual instanceof List ) {
+            List e = (List) expected;
+            List a = (List) actual;
+            if( e.size() != a.size() ) {
+                return false;
+            }
+            for( int i = 0; i < e.size(); i++ ) {
+                if( !isEquals( e.get( i ), a.get( i ) ) ) {
+                    return false;
+                }
+            }
+            return true;
+        }
         if( ! expected.getClass().isAssignableFrom( actual.getClass() ) ) {
             return false;
         }
@@ -185,7 +198,7 @@ public class DroolsTCKTest
     }
 
     private Object parseType(ValueType value, DMNType dmnType) {
-        if( value.getList() != null && dmnType.isCollection() ) {
+        if( value.getList() != null ) {
             List<Object> result = new ArrayList<>();
             ValueType.List list = value.getList();
             for( ValueType vt : list.getItem() ) {
