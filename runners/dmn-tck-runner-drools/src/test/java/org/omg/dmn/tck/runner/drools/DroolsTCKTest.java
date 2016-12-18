@@ -54,17 +54,16 @@ public class DroolsTCKTest
     public List<URL> getTestCases() {
         List<URL> testCases = new ArrayList<>(  );
         File cl2parent = new File("../../TestCases/compliance-level-2");
-//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "\\d\\d\\d\\d-.*" );
-//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0010-.*" );
-//        for( File file : cl2parent.listFiles( filenameFilter ) ) {
-//            try {
-//                testCases.add( file.toURI().toURL() );
-//            } catch ( MalformedURLException e ) {
-//                e.printStackTrace();
-//            }
-//        }
+        FilenameFilter filenameFilter = (dir, name) -> name.matches( "\\d\\d\\d\\d-.*" );
+//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0007-.*" );
+        for( File file : cl2parent.listFiles( filenameFilter ) ) {
+            try {
+                testCases.add( file.toURI().toURL() );
+            } catch ( MalformedURLException e ) {
+                e.printStackTrace();
+            }
+        }
         File cl3parent = new File("../../TestCases/compliance-level-3");
-        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0004-.*" );
         for( File file : cl3parent.listFiles( filenameFilter ) ) {
             try {
                 testCases.add( file.toURI().toURL() );
@@ -81,7 +80,7 @@ public class DroolsTCKTest
     }
 
     public void beforeTestCases(TestSuiteContext context, TestCases testCases, URL modelURL ) {
-        logger.info( "Creating runtime for model: "+modelURL );
+        logger.info( "Creating runtime for model: {}\n", modelURL );
         DroolsContext ctx = (DroolsContext)context;
         ctx.runtime = createRuntime( modelURL );
         ctx.dmnmodel = ctx.runtime.getModels().get( 0 );
@@ -93,7 +92,7 @@ public class DroolsTCKTest
 
     public TestResult executeTest(Description description, TestSuiteContext context, TestCases.TestCase testCase) {
         DroolsContext ctx = (DroolsContext)context;
-        logger.info( "Executing test '{} / {}'", description.getClassName(), description.getMethodName() );
+        logger.info( "Executing test '{} / {}'\n", description.getClassName(), description.getMethodName() );
 
         DMNContext dmnctx = DMNFactory.newContext();
         testCase.getInputNode().forEach( in -> {
@@ -102,7 +101,7 @@ public class DroolsTCKTest
         } );
 
         DMNResult dmnResult = ctx.runtime.evaluateAll( ctx.dmnmodel, dmnctx );
-        logger.info( dmnResult.getContext().toString() );
+        logger.info( "Result context: {}\n", dmnResult.getContext() );
 
         List<String> failures = new ArrayList<>();
         if( dmnResult.hasErrors() ) {
@@ -151,6 +150,19 @@ public class DroolsTCKTest
             }
             for( int i = 0; i < e.size(); i++ ) {
                 if( !isEquals( e.get( i ), a.get( i ) ) ) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        if( expected instanceof Map && actual instanceof Map ) {
+            Map<Object, Object> e = (Map<Object, Object>) expected;
+            Map<Object, Object> a = (Map<Object, Object>) actual;
+            if( e.size() != a.size() ) {
+                return false;
+            }
+            for( Map.Entry entry : e.entrySet() ) {
+                if( !isEquals( entry.getValue(), a.get( entry.getKey() ) ) ) {
                     return false;
                 }
             }

@@ -85,11 +85,16 @@ public class DmnTckRunner
 
     @Override
     public void run(RunNotifier notifier) {
-        context = vendorSuite.createContext();
-        vendorSuite.beforeTestCases( context, tcd, modelURL );
-        super.run( notifier );
-        vendorSuite.afterTestCase( context, tcd );
-        context = null;
+        try {
+            context = vendorSuite.createContext();
+            vendorSuite.beforeTestCases( context, tcd, modelURL );
+            super.run( notifier );
+            vendorSuite.afterTestCase( context, tcd );
+        } catch ( Throwable e ) {
+            logger.error( "Error running test cases for model "+modelURL, e );
+        } finally {
+            context = null;
+        }
     }
 
     @Override
