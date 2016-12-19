@@ -87,11 +87,30 @@ public class DmnTckRunner
     public void run(RunNotifier notifier) {
         try {
             context = vendorSuite.createContext();
+        } catch ( Throwable e ) {
+            logger.error( "Error creating context for model "+modelURL, e );
+            notifier.fireTestFailure( new Failure( descr, e )  );
+            context = null;
+            return;
+        }
+        try {
             vendorSuite.beforeTestCases( context, tcd, modelURL );
+        } catch ( Throwable e ) {
+            logger.error( "Error running 'beforeTestCases()' for model "+modelURL, e );
+            notifier.fireTestFailure( new Failure( descr, e )  );
+            context = null;
+            return;
+        }
+        try {
             super.run( notifier );
+        } catch ( Throwable e ) {
+            logger.error( "Error running test cases for model "+modelURL, e );
+        }
+        try {
             vendorSuite.afterTestCase( context, tcd );
         } catch ( Throwable e ) {
             logger.error( "Error running test cases for model "+modelURL, e );
+            return;
         } finally {
             context = null;
         }
