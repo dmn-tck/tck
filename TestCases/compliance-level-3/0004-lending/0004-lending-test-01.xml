@@ -2,7 +2,7 @@
 <testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../testCases.xsd">
 	<modelName>0004-lending.dmn</modelName>
 	<testCase id="001">
-		<inputNode name="ApplicantData">
+		<inputNode name="ApplicantData" type="inputData">
 			<component name="Monthly">
 				<component name="Income">
 					<value>6000</value>
@@ -27,7 +27,7 @@
 				<value>EMPLOYED</value>
 			</component>
 		</inputNode>
-		<inputNode name="RequestedProduct">
+		<inputNode name="RequestedProduct" type="inputData">
 			<component name="ProductType">
 				<value>STANDARD LOAN</value>
 			</component>
@@ -41,13 +41,19 @@
 				<value>360</value>
 			</component>
 		</inputNode>
-		<inputNode name="BureauData">
+		<inputNode name="BureauData" type="inputData">
 			<component name="CreditScore">
 				<value>649</value>
 			</component>
 			<component name="Bankrupt">
 				<value>false</value>
 			</component>
+		</inputNode>
+		<inputNode name="SupportingDocuments" type="inputData">
+			<value>YES</value>
+		</inputNode>
+		<inputNode name="Adjudication" type="decision">
+			<value>ACCEPT</value>
 		</inputNode>
 		<resultNode name="ApplicationRiskScore" type="decision">
 			<expected>
