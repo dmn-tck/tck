@@ -21,7 +21,7 @@
 			<value>01.3</value>
 		</inputNode>
 		<inputNode name="Timezone">
-			<value>-01:00</value>
+			<value>-PT1H</value>
 		</inputNode>
 		<inputNode name="Year">
 			<value>1999</value>
@@ -98,7 +98,7 @@
 		</resultNode>
 		<resultNode name="ymDuration2" type="decision">
 			<expected>
-				<value>P0M</value>
+				<value>P1Y0M</value>
 			</expected>
 		</resultNode>
 		<resultNode name="cDay" type="decision">
@@ -118,27 +118,27 @@
 		</resultNode>
 		<resultNode name="cHour" type="decision">
 			<expected>
-				<value>00</value>
+				<value>0</value>
 			</expected>
 		</resultNode>
 		<resultNode name="cMinute" type="decision">
 			<expected>
-				<value>00</value>
+				<value>0</value>
 			</expected>
 		</resultNode>
 		<resultNode name="cSecond" type="decision">
 			<expected>
-				<value>01</value>
+				<value>1</value>
 			</expected>
 		</resultNode>
 		<resultNode name="cTimezone" type="decision">
 			<expected>
-				<value>-01:00</value>
+				<value>-PT1H</value>
 			</expected>
 		</resultNode>
 		<resultNode name="years" type="decision">
 			<expected>
-				<value>0</value>
+				<value>1</value>
 			</expected>
 		</resultNode>
 		<resultNode name="seconds" type="decision">
