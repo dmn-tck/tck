@@ -37,7 +37,7 @@
 			<requiredInput href="#_7b08bda2-fcf4-44e8-8022-08d9043e1dee"/>
 		</informationRequirement>
 		<literalExpression>
-			<text>DeptTable[number = EmployeeTable[name=LastName].deptNum].manager</text>
+			<text>DeptTable[number = EmployeeTable[name=LastName].deptNum[1]].manager[1]</text>
 		</literalExpression>
 	</decision>
 	<inputData id="_7985579c-554c-4d98-aad6-c9dbacff726b" name="EmployeeTable">
