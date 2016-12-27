@@ -55,14 +55,14 @@ public class DroolsTCKTest
         List<URL> testCases = new ArrayList<>(  );
         File cl2parent = new File("../../TestCases/compliance-level-2");
         FilenameFilter filenameFilter = (dir, name) -> name.matches( "\\d\\d\\d\\d-.*" );
-//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0017-.*" );
-        for( File file : cl2parent.listFiles( filenameFilter ) ) {
-            try {
-                testCases.add( file.toURI().toURL() );
-            } catch ( MalformedURLException e ) {
-                e.printStackTrace();
-            }
-        }
+//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0003-.*" );
+//        for( File file : cl2parent.listFiles( filenameFilter ) ) {
+//            try {
+//                testCases.add( file.toURI().toURL() );
+//            } catch ( MalformedURLException e ) {
+//                e.printStackTrace();
+//            }
+//        }
         File cl3parent = new File("../../TestCases/compliance-level-3");
         for( File file : cl3parent.listFiles( filenameFilter ) ) {
             try {
@@ -83,6 +83,9 @@ public class DroolsTCKTest
         logger.info( "Creating runtime for model: {}\n", modelURL );
         DroolsContext ctx = (DroolsContext)context;
         ctx.runtime = createRuntime( modelURL );
+        if( ctx.runtime.getModels().isEmpty() ) {
+            throw new RuntimeException( "Unable to load model for URL '"+modelURL+"'" );
+        }
         ctx.dmnmodel = ctx.runtime.getModels().get( 0 );
     }
 
@@ -96,8 +99,13 @@ public class DroolsTCKTest
 
         DMNContext dmnctx = DMNFactory.newContext();
         testCase.getInputNode().forEach( in -> {
-            InputDataNode input = ctx.dmnmodel.getInputByName( in.getName() );
-            dmnctx.set( in.getName(), parseValue( in, input ) );
+            if( in.getType() != null && "decision".equals( in.getType() ) ) {
+                DecisionNode decision = ctx.dmnmodel.getDecisionByName( in.getName() );
+                dmnctx.set( in.getName(), parseValue( in, decision ) );
+            } else {
+                InputDataNode input = ctx.dmnmodel.getInputByName( in.getName() );
+                dmnctx.set( in.getName(), parseValue( in, input ) );
+            }
         } );
 
         DMNResult dmnResult = ctx.runtime.evaluateAll( ctx.dmnmodel, dmnctx );
@@ -200,6 +208,13 @@ public class DroolsTCKTest
             throw new RuntimeException( "Unknown type for input node "+in.getName() );
         }
         return parseType( in, input.getDmnType() );
+    }
+
+    private Object parseValue( TestCases.TestCase.InputNode in, DecisionNode decision ) {
+        if( decision == null || decision.getResultType() == null ) {
+            throw new RuntimeException( "Unknown type for decision node "+in.getName() );
+        }
+        return parseType( in, decision.getResultType() );
     }
 
     private Object parseValue( TestCases.TestCase.ResultNode rn, DecisionNode decision ) {
