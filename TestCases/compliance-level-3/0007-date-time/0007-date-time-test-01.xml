@@ -9,7 +9,7 @@
 			<value>00:00:01-01:00</value>
 		</inputNode>
 		<inputNode name="dateTimeString">
-			<value>2016-12-24T23:59:00</value>
+			<value>2016-12-24T23:59:00-08:00</value>
 		</inputNode>
 		<inputNode name="Hours">
 			<value>12</value>
