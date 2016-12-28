@@ -24,7 +24,7 @@
 		<itemComponent id="_02d44cc2-24ac-4f64-a61f-7044684dc438" name="fromString">
 			<typeRef>feel:date</typeRef>
 		</itemComponent>
-		<itemComponent id="_13da5f5e-8fdd-4a33-9500-ceeaaeaccc91" name="fromDateAndTime">
+		<itemComponent id="_13da5f5e-8fdd-4a33-9500-ceeaaeaccc91" name="fromDateTime">
 			<typeRef>feel:date</typeRef>
 		</itemComponent>
 		<itemComponent id="_c4e03aa1-d8f3-4ffa-aab2-42a17a4fb707" name="fromYearMonthDay">
@@ -192,7 +192,7 @@
 			<requiredDecision href="#_a2c48b03-6e72-4846-99cc-02f3747c6867"/>
 		</informationRequirement>
 		<literalExpression>
-			<text>duration(dtDuration2) / duration(oneHour)</text>
+			<text>dtDuration2 / oneHour</text>
 		</literalExpression>
 	</decision>
 	<decision id="_14f9f361-8c3c-455b-9c97-fe15201e3b5e" name="sumDurations">
