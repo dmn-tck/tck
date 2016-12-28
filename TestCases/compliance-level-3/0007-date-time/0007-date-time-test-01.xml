@@ -40,7 +40,7 @@
 		</inputNode>
 		<resultNode name="Date-Time" type="decision">
 			<expected>
-				<value>2016-12-24T23:59:00</value>
+				<value>2016-12-24T23:59:00-08:00</value>
 			</expected>
 		</resultNode>
 		<resultNode name="Date" type="decision">
