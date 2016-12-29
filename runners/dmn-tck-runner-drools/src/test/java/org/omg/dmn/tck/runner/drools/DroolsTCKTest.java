@@ -19,6 +19,7 @@ import org.junit.runner.RunWith;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.dmn.core.api.*;
+import org.kie.dmn.core.api.event.DefaultDMNRuntimeEventListener;
 import org.kie.dmn.core.ast.DecisionNode;
 import org.kie.dmn.core.ast.InputDataNode;
 import org.kie.dmn.feel.util.EvalHelper;
@@ -55,7 +56,7 @@ public class DroolsTCKTest
         List<URL> testCases = new ArrayList<>(  );
         File cl2parent = new File("../../TestCases/compliance-level-2");
         FilenameFilter filenameFilter = (dir, name) -> name.matches( "\\d\\d\\d\\d-.*" );
-//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0007-.*" );
+//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0019-.*" );
         for( File file : cl2parent.listFiles( filenameFilter ) ) {
             try {
                 testCases.add( file.toURI().toURL() );
@@ -110,6 +111,9 @@ public class DroolsTCKTest
 
         DMNResult dmnResult = ctx.runtime.evaluateAll( ctx.dmnmodel, dmnctx );
         logger.info( "Result context: {}\n", dmnResult.getContext() );
+        if( ! dmnResult.getMessages().isEmpty() ) {
+            logger.info( "Messages: \n-----\n{}-----\n", dmnResult.getMessages().stream().map( m -> m.toString() ).collect( Collectors.joining( "\n" ) ) );
+        }
 
         List<String> failures = new ArrayList<>();
         if( dmnResult.hasErrors() ) {
@@ -233,7 +237,10 @@ public class DroolsTCKTest
             }
             return result;
         } else if( ! dmnType.isComposite() ) {
-            String text = ((Node)value.getValue()).getFirstChild().getTextContent();
+            String text = null;
+            if( value.getValue() != null && ((Node)value.getValue()).getFirstChild() != null ) {
+                text = ((Node)value.getValue()).getFirstChild().getTextContent();
+            }
             return text != null ? dmnType.parseValue( text ) : null;
         } else{
             Map<String, Object> result = new HashMap<>();

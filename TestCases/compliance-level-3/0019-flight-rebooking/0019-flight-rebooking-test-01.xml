@@ -87,5 +87,41 @@
 				</item>
 			</list>
 		</inputNode>
+		<resultNode name="Rebooked Passengers">
+			<expected>
+				<list>
+					<item>
+						<component name="Name"><value>Jenny</value></component>
+						<component name="Status"><value>gold</value></component>
+						<component name="Miles"><value>500000</value></component>
+						<component name="Flight"><value>UA456</value></component>
+					</item>
+					<item>
+						<component name="Name"><value>Harry</value></component>
+						<component name="Status"><value>gold</value></component>
+						<component name="Miles"><value>100000</value></component>
+						<component name="Flight"><value>UA456</value></component>
+					</item>
+					<item>
+						<component name="Name"><value>Igor</value></component>
+						<component name="Status"><value>gold</value></component>
+						<component name="Miles"><value>50000</value></component>
+						<component name="Flight"><value>UA789</value></component>
+					</item>
+					<item>
+						<component name="Name"><value>Dick</value></component>
+						<component name="Status"><value>silver</value></component>
+						<component name="Miles"><value>100</value></component>
+						<component name="Flight"><value>UA789</value></component>
+					</item>
+					<item>
+						<component name="Name"><value>Tom</value></component>
+						<component name="Status"><value>bronze</value></component>
+						<component name="Miles"><value>10</value></component>
+						<component name="Flight"><value/></component>
+					</item>
+				</list>
+			</expected>
+		</resultNode>
 	</testCase>
 </testCases>
