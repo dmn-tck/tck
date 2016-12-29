@@ -15,7 +15,7 @@
 		</itemComponent>
 	</itemDefinition>
 	<itemDefinition id="tLoanTable" isCollection="true" name="tLoanTable">
-		<typeRef>tLoanProduct</typeRef>
+		<typeRef>tns:tLoanProduct</typeRef>
 	</itemDefinition>
 	<itemDefinition id="tMetric" name="tMetric">
 		<itemComponent id="_59994d58-3220-4cc6-8d91-783a008ac472" name="lenderName">
@@ -44,7 +44,7 @@
 		</itemComponent>
 	</itemDefinition>
 	<itemDefinition id="tMetrics" isCollection="true" name="tMetrics">
-		<typeRef>tMetric</typeRef>
+		<typeRef>tns:tMetric</typeRef>
 	</itemDefinition>
 	<decision id="_c5dd7a17-b588-4daf-8c9b-677e65ce87be" name="Bankrates">
 		<variable name="Bankrates" typeRef="tns:tLoanTable"/>
@@ -55,7 +55,7 @@
 			<column id="_e9ed23a8-88c6-4cb0-a1f3-2a895999ef06" name="fee"/>
 			<row id="_bc21b674-23cc-440d-b505-32d5f799e281">
 				<literalExpression>
-					<text>Oceans Capital</text>
+					<text>"Oceans Capital"</text>
 				</literalExpression>
 				<literalExpression>
 					<text>.03500</text>
@@ -69,7 +69,7 @@
 			</row>
 			<row id="_6f3eb485-dddc-40f0-a153-8c989dc4b68d">
 				<literalExpression>
-					<text>eClick Lending</text>
+					<text>"eClick Lending"</text>
 				</literalExpression>
 				<literalExpression>
 					<text>.03200</text>
@@ -83,7 +83,7 @@
 			</row>
 			<row id="_36362bb9-5cd1-4b55-8ce2-a8cf02f6bed0">
 				<literalExpression>
-					<text>eClickLending</text>
+					<text>"eClickLending"</text>
 				</literalExpression>
 				<literalExpression>
 					<text>.03375</text>
@@ -97,7 +97,7 @@
 			</row>
 			<row id="_922a8c6b-2bf0-4453-b1d2-1242c5527dce">
 				<literalExpression>
-					<text>AimLoan</text>
+					<text>"AimLoan"</text>
 				</literalExpression>
 				<literalExpression>
 					<text>.03000</text>
@@ -111,7 +111,7 @@
 			</row>
 			<row id="_72d72621-d6aa-4c78-a6ee-b0086b27ea3a">
 				<literalExpression>
-					<text>Home Loans Today</text>
+					<text>"Home Loans Today"</text>
 				</literalExpression>
 				<literalExpression>
 					<text>.03125</text>
@@ -125,7 +125,7 @@
 			</row>
 			<row id="_4fd60510-7767-4cd9-9f5e-9783b9e6f688">
 				<literalExpression>
-					<text>Sebonic</text>
+					<text>"Sebonic"</text>
 				</literalExpression>
 				<literalExpression>
 					<text>.03125</text>
@@ -139,7 +139,7 @@
 			</row>
 			<row id="_4a2aca46-7331-445b-b378-beb0a4b7064f">
 				<literalExpression>
-					<text>AimLoan</text>
+					<text>"AimLoan"</text>
 				</literalExpression>
 				<literalExpression>
 					<text>.03125</text>
@@ -153,7 +153,7 @@
 			</row>
 			<row id="_3b1b71e2-7084-4869-bb08-52d5ad2bcf1e">
 				<literalExpression>
-					<text>eRates Mortgage</text>
+					<text>"eRates Mortgage"</text>
 				</literalExpression>
 				<literalExpression>
 					<text>.03125</text>
@@ -167,7 +167,7 @@
 			</row>
 			<row id="_d0e4ef04-9127-4931-b802-a0d4128a78c9">
 				<literalExpression>
-					<text>Home Loans Today</text>
+					<text>"Home Loans Today"</text>
 				</literalExpression>
 				<literalExpression>
 					<text>.03250</text>
@@ -181,7 +181,7 @@
 			</row>
 			<row id="_a254dd15-1c62-4f4f-9ce2-83f6bfbcb487">
 				<literalExpression>
-					<text>AimLoan</text>
+					<text>"AimLoan"</text>
 				</literalExpression>
 				<literalExpression>
 					<text>.03250</text>
