@@ -18,7 +18,11 @@
 		<inputNode name="nestedList">
 			<list>
 				<item>
-					<value>o</value>
+					<list>
+						<item>
+							<value>o</value>
+						</item>
+					</list>
 				</item>
 				<item>
 					<list>
@@ -30,9 +34,6 @@
 						</item>
 					</list>
 				</item>
-				<item>
-					<value>r</value>
-				</item>
 			</list>
 		</inputNode>
 		<inputNode name="position">
@@ -42,7 +43,14 @@
 			<expected>
 				<list>
 					<item>
-						<value>a</value>
+						<list>
+							<item>
+								<value>a</value>
+							</item>
+							<item>
+								<value>b</value>
+							</item>
+						</list>
 					</item>
 					<item>
 						<list>
@@ -69,29 +77,65 @@
 				</list>
 			</expected>
 		</resultNode>
-		<resultNode name="insert1" type="decision">
+		<resultNode name="insert3" type="decision">
 			<expected>
 				<list>
-					<item>
-						<value>a</value>
-					</item>
 					<item>
 						<list>
 							<item>
 								<value>o</value>
 							</item>
+						</list>
+					</item>
+					<item>
+						<list>
 							<item>
-								<list>
-									<item>
-										<value>p</value>
-									</item>
-									<item>
-										<value>q</value>
-									</item>
-								</list>
+								<value>a</value>
 							</item>
 							<item>
-								<value>r</value>
+								<value>b</value>
+							</item>
+							<item>
+								<value>c</value>
+							</item>
+						</list>
+					</item>
+					<item>
+						<list>
+							<item>
+								<value>p</value>
+							</item>
+							<item>
+								<value>q</value>
+							</item>
+						</list>
+					</item>
+				</list>
+			</expected>
+		</resultNode>
+		<resultNode name="insert2" type="decision">
+			<expected>
+				<list>
+					<item>
+						<list>
+							<item>
+								<value>a</value>
+							</item>
+							<item>
+								<value>b</value>
+							</item>
+						</list>
+					</item>
+					<item>
+						<list>
+							<item>
+								<value>a</value>
+							</item>
+							<item>
+								<value>b</value>
+							</item>
+							<item>
+								<value>c</value>
 							</item>
 						</list>
 					</item>
@@ -108,51 +152,23 @@
 				</list>
 			</expected>
 		</resultNode>
-		<resultNode name="insert2" type="decision">
+		<resultNode name="remove2" type="decision">
 			<expected>
 				<list>
-					<item>
-						<value>o</value>
-					</item>
 					<item>
 						<list>
 							<item>
 								<value>a</value>
 							</item>
 							<item>
-								<list>
-									<item>
-										<value>b</value>
-									</item>
-									<item>
-										<value>c</value>
-									</item>
-								</list>
+								<value>b</value>
 							</item>
 						</list>
-					</item>
-					<item>
-						<list>
-							<item>
-								<value>p</value>
-							</item>
-							<item>
-								<value>q</value>
-							</item>
-						</list>
-					</item>
-					<item>
-						<value>r</value>
 					</item>
 				</list>
 			</expected>
 		</resultNode>
-		<resultNode name="remove2" type="decision">
-			<expected>
-				<value>a</value>
-			</expected>
-		</resultNode>
-		<resultNode name="insert3" type="decision">
+		<resultNode name="insert1" type="decision">
 			<expected>
 				<list>
 					<item>
