@@ -102,7 +102,11 @@
 		</resultNode>
 		<resultNode name="sublistLast" type="decision">
 			<expected>
-				<value>c</value>
+				<list>
+					<item>
+						<value>c</value>
+					</item>
+				</list>
 			</expected>
 		</resultNode>
 		<resultNode name="append1" type="decision">
@@ -234,7 +238,7 @@
 		</resultNode>
 		<resultNode name="indexOf1" type="decision">
 			<expected>
-				<value/>
+				<list/>
 			</expected>
 		</resultNode>
 		<resultNode name="union1" type="decision">
