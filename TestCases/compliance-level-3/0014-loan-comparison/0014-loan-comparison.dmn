@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:tns="http://www.trisotech.com/definitions/_56c7d4a5-e6db-4bba-ac5f-dc082a16f719" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" exporter="DMN Modeler; Method and Style trisofix.xslt" exporterVersion="5.1.1; 1.1" id="_56c7d4a5-e6db-4bba-ac5f-dc082a16f719" name="loanComparison" namespace="http://www.trisotech.com/definitions/_56c7d4a5-e6db-4bba-ac5f-dc082a16f719" triso:logoChoice="Default">
+<?xml-stylesheet type="text/xsl" href="..\libgen 61228.xslt"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:tns="http://www.trisotech.com/definitions/_56c7d4a5-e6db-4bba-ac5f-dc082a16f719" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" exporter="DMN Modeler; Method and Style trisofix.xslt" exporterVersion="5.1.1; 1.1" id="_56c7d4a5-e6db-4bba-ac5f-dc082a16f719" name="loanComparison" namespace="http://www.trisotech.com/definitions/_56c7d4a5-e6db-4bba-ac5f-dc082a16f719" triso:logoChoice="Default" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/DMN/20151101/dmn.xsd ../../DMN1.1%20final/dmn.xsd">
 	<itemDefinition label="tLoanProduct" name="tLoanProduct">
 		<itemComponent id="_e4e050fd-9198-4b62-8f99-15cb2a0a2373" name="lenderName">
 			<typeRef>feel:string</typeRef>
@@ -261,8 +262,8 @@
 	</decision>
 	<businessKnowledgeModel id="_83059f2e-2862-45a9-97a7-71ffaa860586" name="FinancialMetrics">
 		<encapsulatedLogic>
-			<variable name="product" typeRef="tns:tLoanProduct"/>
-			<variable name="requestedAmt" typeRef="feel:number"/>
+			<formalParameter name="product" typeRef="tns:tLoanProduct"/>
+			<formalParameter name="requestedAmt" typeRef="feel:number"/>
 			<context>
 				<contextEntry>
 					<variable name="lenderName" typeRef="feel:string"/>
@@ -324,9 +325,9 @@
 	</businessKnowledgeModel>
 	<businessKnowledgeModel id="_8702e1b6-213b-4f75-bf56-99ac3835cde7" name="monthlyPayment">
 		<encapsulatedLogic>
-			<variable name="p" typeRef="feel:number"/>
-			<variable name="r" typeRef="feel:number"/>
-			<variable name="n" typeRef="feel:number"/>
+			<formalParameter name="p" typeRef="feel:number"/>
+			<formalParameter name="r" typeRef="feel:number"/>
+			<formalParameter name="n" typeRef="feel:number"/>
 			<literalExpression expressionLanguage="FEEL">
 				<text>p*r/12/(1-(1+r/12)**-n)</text>
 			</literalExpression>
@@ -335,10 +336,10 @@
 	</businessKnowledgeModel>
 	<businessKnowledgeModel id="_daec318a-135b-4d54-9e7f-85af3aa662f7" name="equity36Mo">
 		<encapsulatedLogic>
-			<variable name="p" typeRef="feel:number"/>
-			<variable name="r" typeRef="feel:number"/>
-			<variable name="n" typeRef="feel:number"/>
-			<variable name="pmt" typeRef="feel:number"/>
+			<formalParameter name="p" typeRef="feel:number"/>
+			<formalParameter name="r" typeRef="feel:number"/>
+			<formalParameter name="n" typeRef="feel:number"/>
+			<formalParameter name="pmt" typeRef="feel:number"/>
 			<literalExpression expressionLanguage="FEEL">
 				<text>p*(1+r/12)**n - pmt*(-1+(1+r/12)**n)/r</text>
 			</literalExpression>
