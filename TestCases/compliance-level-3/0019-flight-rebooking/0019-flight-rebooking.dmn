@@ -7,7 +7,7 @@
 	xmlns:feel="http://www.omg.org/spec/FEEL/20140401">
 	
 	<itemDefinition id="_tFlight" name="tFlight">
-		<itemComponent id="_tFlight_Flight" name="Flight">
+		<itemComponent id="_tFlight_Flight" name="Flight Number">
 			<typeRef>feel:string</typeRef>
 		</itemComponent>
 		<itemComponent id="_tFlight_From" name="From">
@@ -16,10 +16,10 @@
 		<itemComponent id="_tFlight_To" name="To">
 			<typeRef>feel:string</typeRef>
 		</itemComponent>
-		<itemComponent id="_tFlight_Dep" name="Dep">
+		<itemComponent id="_tFlight_Dep" name="Departure">
 			<typeRef>feel:dateTime</typeRef>
 		</itemComponent>
-		<itemComponent id="_tFlight_Arr" name="Arr">
+		<itemComponent id="_tFlight_Arr" name="Arrival">
 			<typeRef>feel:dateTime</typeRef>
 		</itemComponent>
 		<itemComponent id="_tFlight_Capacity" name="Capacity">
@@ -43,7 +43,7 @@
 		<itemComponent id="_tPassenger_Miles" name="Miles">
 			<typeRef>feel:number</typeRef>
 		</itemComponent>
-		<itemComponent id="_tPassenger_Flight" name="Flight">
+		<itemComponent id="_tPassenger_Flight" name="Flight Number">
 			<typeRef>feel:string</typeRef>
 		</itemComponent>
 	</itemDefinition>
@@ -72,25 +72,33 @@
 		</knowledgeRequirement>
 		<context>
 			<contextEntry>
-				<variable name="Waiting List" typeRef="kie:tPassengerTable"/>
+				<variable name="Cancelled Flights" typeRef="feel:string" isCollection="true"/>
 				<literalExpression>
-					<text>Passenger List[ list contains( Flight List[ Status = "cancelled" ].Flight, Flight ) ]</text>
+					<text>Flight List[ Status = "cancelled" ].Flight Number</text>
 				</literalExpression>
 			</contextEntry>
 			<contextEntry>
-				<variable name="priority" typeRef="feel:boolean"/>
+				<variable name="Waiting List" typeRef="kie:tPassengerTable"/>
+				<literalExpression>
+					<text>Passenger List[ list contains( Cancelled Flights, Flight Number ) ]</text>
+				</literalExpression>
+			</contextEntry>
+			<contextEntry>
+				<variable name="passenger priority" typeRef="feel:boolean"/>
 				<functionDefinition >
 					<formalParameter name="Passenger1" typeRef="kie:tPassenger"/>
 					<formalParameter name="Passenger2" typeRef="kie:tPassenger"/>
 					<literalExpression>
 						<text> status priority( Passenger1.Status ) &lt; status priority( Passenger2.Status ) or
-							( status priority( Passenger1.Status ) = status priority( Passenger2.Status ) and Passenger1.Miles > Passenger2.Miles ) )</text>
+							   ( status priority( Passenger1.Status ) = status priority( Passenger2.Status ) and 
+							     Passenger1.Miles > Passenger2.Miles ) 
+							   )</text>
 					</literalExpression>
 				</functionDefinition>
 			</contextEntry>
 			<contextEntry>
 				<literalExpression>
-					<text>sort( Waiting List, priority )</text>
+					<text>sort( Waiting List, passenger priority )</text>
 				</literalExpression>
 			</contextEntry>
 		</context>
@@ -171,23 +179,25 @@
 				<contextEntry>
 					<variable name="Original Flight" typeRef="kie:tFlight"/>
 					<literalExpression>
-						<text>Flight List[ Flight = Passenger.Flight ][1]</text>
+						<text>Flight List[ Flight Number = Passenger.Flight Number ][1]</text>
 					</literalExpression>
 				</contextEntry>
 				<contextEntry>
 					<variable name="has capacity" typeRef="feel:boolean"/>
-					<literalExpression>
-						<text>function( flight, rebooked ) 
-							        flight.Capacity > count( rebooked[ Flight = flight.Flight ] )
-						</text>
-					</literalExpression>
+					<functionDefinition >
+						<formalParameter name="flight" typeRef="kie:tFlight"/>
+						<formalParameter name="rebooked list" typeRef="kie:tPassengerTable"/>
+						<literalExpression>
+							<text> flight.Capacity > count( rebooked list[ Flight Number = flight.Flight Number ] ) </text>
+						</literalExpression>
+					</functionDefinition>
 				</contextEntry>
 				<contextEntry>
 					<variable name="Best Alternate Flight" typeRef="kie:tFlight"/>
 					<literalExpression>
 						<text>Flight List[ From = Original Flight.From and 
 							               To = Original Flight.To and
-							               Dep > Original Flight.Dep and
+							               Departure > Original Flight.Departure and
 							               Status = "scheduled" and
 							               has capacity( item, Rebooked ) ][1]</text>
 					</literalExpression>
@@ -208,8 +218,8 @@
 							<literalExpression><text>Passenger.Miles</text></literalExpression>
 						</contextEntry>
 						<contextEntry>
-							<variable name="Flight" typeRef="feel:string"/>
-							<literalExpression><text>Best Alternate Flight.Flight</text></literalExpression>
+							<variable name="Flight Number" typeRef="feel:string"/>
+							<literalExpression><text>Best Alternate Flight.Flight Number</text></literalExpression>
 						</contextEntry>
 					</context>
 				</contextEntry>
