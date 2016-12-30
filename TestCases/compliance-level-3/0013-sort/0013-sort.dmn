@@ -18,7 +18,7 @@
 		</itemComponent>
 	</itemDefinition>
 	<itemDefinition id="tTable" isCollection="true" name="tTable">
-		<typeRef>tRow</typeRef>
+		<typeRef>tns:tRow</typeRef>
 	</itemDefinition>
 	<itemDefinition id="tStringList" isCollection="true" name="tStringList">
 		<typeRef>feel:string</typeRef>
