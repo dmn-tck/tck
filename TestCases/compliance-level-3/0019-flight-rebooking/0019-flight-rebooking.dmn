@@ -78,7 +78,7 @@
 				</literalExpression>
 			</contextEntry>
 			<contextEntry>
-				<variable name="priority"/>
+				<variable name="priority" typeRef="feel:boolean"/>
 				<functionDefinition >
 					<formalParameter name="Passenger1" typeRef="kie:tPassenger"/>
 					<formalParameter name="Passenger2" typeRef="kie:tPassenger"/>
@@ -175,7 +175,7 @@
 					</literalExpression>
 				</contextEntry>
 				<contextEntry>
-					<variable name="has capacity"/>
+					<variable name="has capacity" typeRef="feel:boolean"/>
 					<literalExpression>
 						<text>function( flight, rebooked ) 
 							        flight.Capacity > count( rebooked[ Flight = flight.Flight ] )
@@ -196,25 +196,24 @@
 					<variable name="New Flight" typeRef="kie:tPassenger"/>
 					<context>
 						<contextEntry>
-							<variable name="Name"/>
+							<variable name="Name" typeRef="feel:string"/>
 							<literalExpression><text>Passenger.Name</text></literalExpression>
 						</contextEntry>
 						<contextEntry>
-							<variable name="Status"/>
+							<variable name="Status" typeRef="feel:string"/>
 							<literalExpression><text>Passenger.Status</text></literalExpression>
 						</contextEntry>
 						<contextEntry>
-							<variable name="Miles"/>
+							<variable name="Miles" typeRef="feel:number"/>
 							<literalExpression><text>Passenger.Miles</text></literalExpression>
 						</contextEntry>
 						<contextEntry>
-							<variable name="Flight"/>
+							<variable name="Flight" typeRef="feel:string"/>
 							<literalExpression><text>Best Alternate Flight.Flight</text></literalExpression>
 						</contextEntry>
 					</context>
 				</contextEntry>
 				<contextEntry>
-					<variable name="New Bookings"/>
 					<literalExpression>
 						<text>if count( Waiting ) > 1 
 							  then
@@ -226,13 +225,8 @@
 						</text>
 					</literalExpression>
 				</contextEntry>
-				<contextEntry>
-					<literalExpression>
-						<text>New Bookings</text>
-					</literalExpression>
-				</contextEntry>
 			</context>
 		</encapsulatedLogic>
-		<variable name="rebooked flights" typeRef="feel:tPassengerTable"/>
+		<variable name="rebooked flights" typeRef="kie:tPassengerTable"/>
 	</businessKnowledgeModel>
 </definitions>
