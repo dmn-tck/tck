@@ -7,7 +7,7 @@
 		<typeRef>feel:number</typeRef>
 	</itemDefinition>
 	<itemDefinition id="tListOfLists" name="tListOfLists" isCollection="true">
-		<typeRef>tStringList</typeRef>
+		<typeRef>tns:tStringList</typeRef>
 	</itemDefinition>
 	<inputData id="_86f5e710-a139-4cd5-8ac4-90b4671a75b8" name="list1">
 		<variable name="list1" typeRef="tns:tStringList"/>
