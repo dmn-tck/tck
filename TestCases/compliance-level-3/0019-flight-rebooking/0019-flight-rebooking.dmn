@@ -179,7 +179,7 @@
 				<contextEntry>
 					<variable name="Original Flight" typeRef="kie:tFlight"/>
 					<literalExpression>
-						<text>Flight List[ Flight Number = Passenger.Flight Number ][1]</text>
+						<text>Flights[ Flight Number = Passenger.Flight Number ][1]</text>
 					</literalExpression>
 				</contextEntry>
 				<contextEntry>
