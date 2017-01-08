@@ -68,7 +68,7 @@
 			<requiredInput href="#i_Flight_List"/>
 		</informationRequirement>
 		<knowledgeRequirement>
-			<requiredKnowledge href="#b_StatusPriority"/>
+			<requiredKnowledge href="#b_PassengerPriority"/>
 		</knowledgeRequirement>
 		<context>
 			<contextEntry>
@@ -82,19 +82,6 @@
 				<literalExpression>
 					<text>Passenger List[ list contains( Cancelled Flights, Flight Number ) ]</text>
 				</literalExpression>
-			</contextEntry>
-			<contextEntry>
-				<variable name="passenger priority" typeRef="feel:boolean"/>
-				<functionDefinition >
-					<formalParameter name="Passenger1" typeRef="kie:tPassenger"/>
-					<formalParameter name="Passenger2" typeRef="kie:tPassenger"/>
-					<literalExpression>
-						<text> status priority( Passenger1.Status ) &lt; status priority( Passenger2.Status ) or
-							   ( status priority( Passenger1.Status ) = status priority( Passenger2.Status ) and 
-							     Passenger1.Miles > Passenger2.Miles ) 
-							   )</text>
-					</literalExpression>
-				</functionDefinition>
 			</contextEntry>
 			<contextEntry>
 				<literalExpression>
@@ -113,109 +100,187 @@
 			<requiredInput href="#i_Flight_List"/>
 		</informationRequirement>
 		<knowledgeRequirement>
-			<requiredKnowledge href="#b_RebookedFlights"/>
+		    <requiredKnowledge href="#b_ReassignNextPassenger"/>
 		</knowledgeRequirement>
-		<literalExpression>
-			<text>
-				rebooked flights( Prioritized Waiting List, [], Flight List )
-			</text>
-		</literalExpression>
+	    <invocation>
+	        <literalExpression>
+	            <text>reassign next passenger</text>
+	        </literalExpression>
+	        <binding>
+	            <parameter name="Waiting List"/>
+	            <literalExpression>
+	                <text>Prioritized Waiting List</text>
+	            </literalExpression>
+	        </binding>
+	        <binding>
+	            <parameter name="Reassigned Passengers List"/>
+	            <literalExpression>
+	                <text>[]</text>
+	            </literalExpression>
+	        </binding>
+	        <binding>
+	            <parameter name="Flights"/>
+	            <literalExpression>
+	                <text>Flight List</text>
+	            </literalExpression>
+	        </binding>
+	    </invocation>
 	</decision>
 	
-	<businessKnowledgeModel id="b_StatusPriority" name="status priority">
+	<businessKnowledgeModel id="b_PassengerPriority" name="passenger priority">
 		<encapsulatedLogic>
-			<formalParameter name="Status" typeRef="feel:string"/>
-			<decisionTable hitPolicy="UNIQUE">
-				<input id="b_Status_Priority_dt_i_Status" label="Status">
+			<formalParameter name="Passenger1" typeRef="kie:tPassenger"/>
+		    <formalParameter name="Passenger2" typeRef="kie:tPassenger"/>
+		    <decisionTable hitPolicy="UNIQUE">
+				<input id="b_Passenger_Priority_dt_i_P1_Status" label="Passenger1.Status">
 					<inputExpression typeRef="feel:string">
-						<text>Status</text>
+						<text>Passenger1.Status</text>
 					</inputExpression>
 					<inputValues>
 						<text>"gold", "silver", "bronze"</text>
 					</inputValues>
 				</input>
-				<output id="b_Status_Priority_dt_o"/>
-				<rule id="b_Status_Priority_dt_r1">
-					<inputEntry id="b_Status_Priority_dt_r1_i1">
+		        <input id="b_Passenger_Priority_dt_i_P2_Status" label="Passenger2.Status">
+		            <inputExpression typeRef="feel:string">
+		                <text>Passenger2.Status</text>
+		            </inputExpression>
+		            <inputValues>
+		                <text>"gold", "silver", "bronze"</text>
+		            </inputValues>
+		        </input>
+		        <input id="b_Passenger_Priority_dt_i_P1_Miles" label="Passenger1.Miles">
+		            <inputExpression typeRef="feel:string">
+		                <text>Passenger1.Miles</text>
+		            </inputExpression>
+		        </input>
+		        <output id="b_Status_Priority_dt_o" label="Passenger1 has priority">
+		            <outputValues>
+		                <text>true, false</text>
+		            </outputValues>
+		            <defaultOutputEntry>
+		                <text>false</text>
+		            </defaultOutputEntry>
+		        </output>
+				<rule id="b_Passenger_Priority_dt_r1">
+					<inputEntry id="b_Passenger_Priority_dt_r1_i1">
 						<text>"gold"</text>
 					</inputEntry>
-					<outputEntry id="b_Status_Priority_dt_r1_o1">
-						<text>1</text>
+				    <inputEntry id="b_Passenger_Priority_dt_r1_i2">
+				        <text>"gold"</text>
+				    </inputEntry>
+				    <inputEntry id="b_Passenger_Priority_dt_r1_i3">
+				        <text>&gt;= Passenger2.Miles</text>
+				    </inputEntry>
+				    <outputEntry id="b_Passenger_Priority_dt_r1_o1">
+						<text>true</text>
 					</outputEntry>
 				</rule>
-				<rule id="b_Status_Priority_dt_r2">
-					<inputEntry id="b_Status_Priority_dt_r2_i1">
-						<text>"silver"</text>
-					</inputEntry>
-					<outputEntry id="b_Status_Priority_dt_r2_o1">
-						<text>2</text>
-					</outputEntry>
-				</rule>
-				<rule id="b_Status_Priority_dt_r3">
-					<inputEntry id="b_Status_Priority_dt_r3_i1">
-						<text>"bronze"</text>
-					</inputEntry>
-					<outputEntry id="b_Status_Priority_dt_r3_o1">
-						<text>3</text>
-					</outputEntry>
-				</rule>
-			</decisionTable>
+		        <rule id="b_Passenger_Priority_dt_r2">
+		            <inputEntry id="b_Passenger_Priority_dt_r2_i1">
+		                <text>"gold"</text>
+		            </inputEntry>
+		            <inputEntry id="b_Passenger_Priority_dt_r2_i2">
+		                <text>"silver","bronze"</text>
+		            </inputEntry>
+		            <inputEntry id="b_Passenger_Priority_dt_r2_i3">
+		                <text>-</text>
+		            </inputEntry>
+		            <outputEntry id="b_Passenger_Priority_dt_r2_o1">
+		                <text>true</text>
+		            </outputEntry>
+		        </rule>
+		        <rule id="b_Passenger_Priority_dt_r3">
+		            <inputEntry id="b_Passenger_Priority_dt_r3_i1">
+		                <text>"silver"</text>
+		            </inputEntry>
+		            <inputEntry id="b_Passenger_Priority_dt_r3_i2">
+		                <text>"silver"</text>
+		            </inputEntry>
+		            <inputEntry id="b_Passenger_Priority_dt_r3_i3">
+		                <text>&gt;= Passenger2.Miles</text>
+		            </inputEntry>
+		            <outputEntry id="b_Passenger_Priority_dt_r3_o1">
+		                <text>true</text>
+		            </outputEntry>
+		        </rule>
+		        <rule id="b_Passenger_Priority_dt_r4">
+		            <inputEntry id="b_Passenger_Priority_dt_r4_i1">
+		                <text>"silver"</text>
+		            </inputEntry>
+		            <inputEntry id="b_Passenger_Priority_dt_r4_i2">
+		                <text>"bronze"</text>
+		            </inputEntry>
+		            <inputEntry id="b_Passenger_Priority_dt_r4_i3">
+		                <text>-</text>
+		            </inputEntry>
+		            <outputEntry id="b_Passenger_Priority_dt_r4_o1">
+		                <text>true</text>
+		            </outputEntry>
+		        </rule>
+		        <rule id="b_Passenger_Priority_dt_r5">
+		            <inputEntry id="b_Passenger_Priority_dt_r5_i1">
+		                <text>"bronze"</text>
+		            </inputEntry>
+		            <inputEntry id="b_Passenger_Priority_dt_r5_i2">
+		                <text>"bronze"</text>
+		            </inputEntry>
+		            <inputEntry id="b_Passenger_Priority_dt_r5_i3">
+		                <text>&gt;= Passenger2.Miles</text>
+		            </inputEntry>
+		            <outputEntry id="b_Passenger_Priority_dt_r5_o1">
+		                <text>true</text>
+		            </outputEntry>
+		        </rule>
+		    </decisionTable>
 		</encapsulatedLogic>
-		<variable name="status priority" typeRef="feel:number"/>
+		<variable name="passenger priority" typeRef="feel:boolean"/>
 	</businessKnowledgeModel>
 	
-	<businessKnowledgeModel id="b_RebookedFlights" name="rebooked flights">
-		<encapsulatedLogic>
-			<formalParameter name="Waiting" typeRef="kie:tPassengerTable"/>
-			<formalParameter name="Rebooked" typeRef="kie:tPassengerTable"/>
+	<businessKnowledgeModel id="b_ReassignNextPassenger" name="reassign next passenger">
+	    <knowledgeRequirement>
+	        <requiredKnowledge href="#b_HasCapacity"/>
+	    </knowledgeRequirement>
+	    <encapsulatedLogic>
+			<formalParameter name="Waiting List" typeRef="kie:tPassengerTable"/>
+			<formalParameter name="Reassigned Passengers List" typeRef="kie:tPassengerTable"/>
 			<formalParameter name="Flights" typeRef="kie:tFlightTable"/>
 			<context>
 				<contextEntry>
-					<variable name="Passenger" typeRef="kie:tPassenger"/>
+					<variable name="Next Passenger" typeRef="kie:tPassenger"/>
 					<literalExpression>
-						<text>Waiting[1]</text>
+						<text>Waiting List[1]</text>
 					</literalExpression>
 				</contextEntry>
 				<contextEntry>
 					<variable name="Original Flight" typeRef="kie:tFlight"/>
 					<literalExpression>
-						<text>Flights[ Flight Number = Passenger.Flight Number ][1]</text>
+						<text>Flights[ Flight Number = Next Passenger.Flight Number ][1]</text>
 					</literalExpression>
-				</contextEntry>
-				<contextEntry>
-					<variable name="has capacity" typeRef="feel:boolean"/>
-					<functionDefinition >
-						<formalParameter name="flight" typeRef="kie:tFlight"/>
-						<formalParameter name="rebooked list" typeRef="kie:tPassengerTable"/>
-						<literalExpression>
-							<text> flight.Capacity > count( rebooked list[ Flight Number = flight.Flight Number ] ) </text>
-						</literalExpression>
-					</functionDefinition>
 				</contextEntry>
 				<contextEntry>
 					<variable name="Best Alternate Flight" typeRef="kie:tFlight"/>
 					<literalExpression>
-						<text>Flight List[ From = Original Flight.From and 
-							               To = Original Flight.To and
-							               Departure > Original Flight.Departure and
-							               Status = "scheduled" and
-							               has capacity( item, Rebooked ) ][1]</text>
+						<text>Flights[ From = Original Flight.From and 
+							           To = Original Flight.To and
+							           Departure > Original Flight.Departure and
+						               Status = "scheduled" and
+						               has capacity( item, Reassigned Passengers List ) ][1]</text>
 					</literalExpression>
 				</contextEntry>
 				<contextEntry>
-					<variable name="New Flight" typeRef="kie:tPassenger"/>
+					<variable name="Reassigned Passenger" typeRef="kie:tPassenger"/>
 					<context>
 						<contextEntry>
 							<variable name="Name" typeRef="feel:string"/>
-							<literalExpression><text>Passenger.Name</text></literalExpression>
+							<literalExpression><text>Next Passenger.Name</text></literalExpression>
 						</contextEntry>
 						<contextEntry>
 							<variable name="Status" typeRef="feel:string"/>
-							<literalExpression><text>Passenger.Status</text></literalExpression>
+							<literalExpression><text>Next Passenger.Status</text></literalExpression>
 						</contextEntry>
 						<contextEntry>
 							<variable name="Miles" typeRef="feel:number"/>
-							<literalExpression><text>Passenger.Miles</text></literalExpression>
+							<literalExpression><text>Next Passenger.Miles</text></literalExpression>
 						</contextEntry>
 						<contextEntry>
 							<variable name="Flight Number" typeRef="feel:string"/>
@@ -223,20 +288,44 @@
 						</contextEntry>
 					</context>
 				</contextEntry>
-				<contextEntry>
+			    <contextEntry>
+			        <variable name="Remaining Waiting List" typeRef="kie:tPassengerTable"/>
+			        <literalExpression>
+			            <text>remove( Waiting List, 1 )</text>
+			        </literalExpression>
+			    </contextEntry>
+			    <contextEntry>
+			        <variable name="Updated Reassigned Passengers List" typeRef="kie:tPassengerTable"/>
+			        <literalExpression>
+			            <text>append( Reassigned Passengers List, Reassigned Passenger )</text>
+			        </literalExpression>
+			    </contextEntry>
+			    <contextEntry>
 					<literalExpression>
-						<text>if count( Waiting ) > 1 
+					    <text>if count( Remaining Waiting List ) > 0 
 							  then
-							       rebooked flights( remove( Waiting, 1 ),
-							                         append( Rebooked, New Flight ),
-							                         Flights )
+							       reassign next passenger( Remaining Waiting List,
+							                                Updated Reassigned Passengers List,
+							                                Flights )
 							  else 
-							       append( Rebooked, New Flight )
+							       Updated Reassigned Passengers List
 						</text>
 					</literalExpression>
 				</contextEntry>
 			</context>
 		</encapsulatedLogic>
-		<variable name="rebooked flights" typeRef="kie:tPassengerTable"/>
+	    <variable name="reassign next passenger" typeRef="kie:tPassengerTable"/>
 	</businessKnowledgeModel>
+    
+    <businessKnowledgeModel id="b_HasCapacity" name="has capacity">
+        <encapsulatedLogic>
+            <formalParameter name="flight" typeRef="kie:tFlight"/>
+            <formalParameter name="rebooked list" typeRef="kie:tPassengerTable"/>
+            <literalExpression>
+                <text> flight.Capacity > count( rebooked list[ Flight Number = flight.Flight Number ] ) </text>
+            </literalExpression>
+        </encapsulatedLogic>
+        <variable name="has capacity" typeRef="feel:boolean"/>
+    </businessKnowledgeModel>
+    
 </definitions>
