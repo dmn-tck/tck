@@ -16,9 +16,9 @@
 	
 	<decision name="Total Vacation Days" id="d_Total_Vacation_Days">
 	    <variable name="Total Vacation Days" typeRef="feel:number"/>
-	    <knowledgeRequirement>
-	        <requiredKnowledge href="#b_Base_Vacation_Days"/>
-	    </knowledgeRequirement>
+	    <informationRequirement>
+	        <requiredDecision href="#d_Base_Vacation_Days"/>
+	    </informationRequirement>
 	    <informationRequirement>
 			<requiredDecision href="#d_Extra_days_case_1"/>
 		</informationRequirement>
@@ -29,7 +29,7 @@
 	        <requiredDecision href="#d_Extra_days_case_3"/>
 	    </informationRequirement>
 	    <literalExpression>
-	        <text>Base Vacation Days() +
+	        <text>Base Vacation Days +
 	              max( Extra days case 1, Extra days case 3 ) +
 	              Extra days case 2</text>
 	    </literalExpression>
@@ -182,13 +182,11 @@
         </decisionTable>
     </decision>
     
-    <businessKnowledgeModel id="b_Base_Vacation_Days" name="Base Vacation Days">
-		<encapsulatedLogic>
-		    <literalExpression>
-		        <text>22</text>
-		    </literalExpression>
-		</encapsulatedLogic>
-	    <variable name="Base Vacation Days" typeRef="feel:number"/>
-	</businessKnowledgeModel>
+    <decision id="d_Base_Vacation_Days" name="Base Vacation Days">
+        <variable name="Base Vacation Days" typeRef="feel:number"/>
+        <literalExpression>
+            <text>22</text>
+        </literalExpression>
+	</decision>
 	
 </definitions>
