@@ -50,6 +50,9 @@
 	<itemDefinition id="_tPassengerTable" isCollection="true" name="tPassengerTable">
 		<typeRef>kie:tPassenger</typeRef>
 	</itemDefinition>
+    <itemDefinition id="_tFlightNumberList" isCollection="true" name="tFlightNumberList">
+        <typeRef>feel:string</typeRef>
+    </itemDefinition>
 	
 	<inputData id="i_Flight_List" name="Flight List">
 		<variable name="Flight List" typeRef="kie:tFlightTable"/>
@@ -58,7 +61,7 @@
 	<inputData id="i_Passenger_List" name="Passenger List">
 		<variable name="Passenger List" typeRef="kie:tPassengerTable"/>
 	</inputData>
-	
+    
 	<decision name="Prioritized Waiting List" id="d_PrioritizedWaitingList">
 		<variable name="Prioritized Waiting List" typeRef="kie:tPassengerTable"/>
 		<informationRequirement>
@@ -72,7 +75,7 @@
 		</knowledgeRequirement>
 		<context>
 			<contextEntry>
-				<variable name="Cancelled Flights" typeRef="feel:string" isCollection="true"/>
+				<variable name="Cancelled Flights" typeRef="kie:tFlightNumberList"/>
 				<literalExpression>
 					<text>Flight List[ Status = "cancelled" ].Flight Number</text>
 				</literalExpression>
