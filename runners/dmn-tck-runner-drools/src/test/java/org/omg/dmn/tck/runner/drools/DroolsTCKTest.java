@@ -18,10 +18,10 @@ import org.junit.runner.Description;
 import org.junit.runner.RunWith;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
-import org.kie.dmn.core.api.*;
-import org.kie.dmn.core.api.event.DefaultDMNRuntimeEventListener;
-import org.kie.dmn.core.ast.DecisionNode;
-import org.kie.dmn.core.ast.InputDataNode;
+import org.kie.dmn.api.core.*;
+import org.kie.dmn.api.core.ast.DecisionNode;
+import org.kie.dmn.api.core.ast.InputDataNode;
+import org.kie.dmn.core.ast.InputDataNodeImpl;
 import org.kie.dmn.feel.util.EvalHelper;
 import org.kie.internal.utils.KieHelper;
 import org.omg.dmn.tck.marshaller._20160719.TestCases;
@@ -98,7 +98,7 @@ public class DroolsTCKTest
         DroolsContext ctx = (DroolsContext)context;
         logger.info( "Executing test '{} / {}'\n", description.getClassName(), description.getMethodName() );
 
-        DMNContext dmnctx = DMNFactory.newContext();
+        DMNContext dmnctx = ctx.runtime.newContext();
         testCase.getInputNode().forEach( in -> {
             if( in.getType() != null && "decision".equals( in.getType() ) ) {
                 DecisionNode decision = ctx.dmnmodel.getDecisionByName( in.getName() );
@@ -194,7 +194,7 @@ public class DroolsTCKTest
         // nothing to do
     }
 
-    protected DMNRuntime createRuntime( URL modelUrl ) {
+    protected DMNRuntime createRuntime(URL modelUrl ) {
         KieServices ks = KieServices.Factory.get();
         KieContainer kieContainer = new KieHelper(  )
                 .addResource( ks.getResources().newUrlResource( modelUrl ) )
@@ -208,10 +208,10 @@ public class DroolsTCKTest
     }
 
     private Object parseValue( TestCases.TestCase.InputNode in, InputDataNode input ) {
-        if( input == null || input.getDmnType() == null ) {
+        if( input == null || ((InputDataNodeImpl)input).getDmnType() == null ) {
             throw new RuntimeException( "Unknown type for input node "+in.getName() );
         }
-        return parseType( in, input.getDmnType() );
+        return parseType( in, ((InputDataNodeImpl)input).getDmnType() );
     }
 
     private Object parseValue( TestCases.TestCase.InputNode in, DecisionNode decision ) {
