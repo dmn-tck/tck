@@ -25,9 +25,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.xml.bind.JAXBException;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -47,6 +45,8 @@ public class DmnTckRunner
     private       TestSuiteContext      context;
     private       TestCases             tcd;
     private       URL                   modelURL;
+    private       FileWriter            resultFile;
+    private       String                folder = "<unknown>";
 
     public DmnTckRunner(DmnTckVendorTestSuite vendorSuite, File tcfile)
             throws InitializationError {
@@ -56,6 +56,7 @@ public class DmnTckRunner
             tcd = TckMarshallingHelper.load( new FileInputStream( tcfile ) );
             String parent = tcfile.getParent();
             modelURL = new File( parent != null ? parent + "/" + tcd.getModelName() : tcd.getModelName() ).toURI().toURL();
+            folder = parent != null ? parent.substring( parent.lastIndexOf( '/', parent.lastIndexOf( '/' ) - 1 ) + 1 ) : "<unknown>";
             String tcdname = tcfile.getName();
             tcdname = tcdname.substring( 0, tcdname.lastIndexOf( '.' ) ).replaceAll( "\\.", "/" );
             this.descr = Description.createSuiteDescription( tcdname );
@@ -63,6 +64,10 @@ public class DmnTckRunner
                 Description testDescr = Description.createTestDescription( tcdname, test.getId() );
                 children.put( test, testDescr );
                 this.descr.addChild( testDescr );
+            }
+            File results = new File( "tck_results.csv" );
+            if ( results.exists() ) {
+                results.delete();
             }
         } catch ( FileNotFoundException e ) {
             e.printStackTrace();
@@ -86,33 +91,46 @@ public class DmnTckRunner
     @Override
     public void run(RunNotifier notifier) {
         try {
-            context = vendorSuite.createContext();
-        } catch ( Throwable e ) {
-            logger.error( "Error creating context for model "+modelURL, e );
-            notifier.fireTestFailure( new Failure( descr, e )  );
-            context = null;
-            return;
-        }
-        try {
-            vendorSuite.beforeTestCases( context, tcd, modelURL );
-        } catch ( Throwable e ) {
-            logger.error( "Error running 'beforeTestCases()' for model "+modelURL, e );
-            notifier.fireTestFailure( new Failure( descr, e )  );
-            context = null;
-            return;
-        }
-        try {
-            super.run( notifier );
-        } catch ( Throwable e ) {
-            logger.error( "Error running test cases for model "+modelURL, e );
-        }
-        try {
-            vendorSuite.afterTestCase( context, tcd );
-        } catch ( Throwable e ) {
-            logger.error( "Error running test cases for model "+modelURL, e );
-            return;
+            resultFile = new FileWriter( "result.csv", true );
+            try {
+                context = vendorSuite.createContext();
+            } catch ( Throwable e ) {
+                logger.error( "Error creating context for model " + modelURL, e );
+                notifier.fireTestFailure( new Failure( descr, e ) );
+                context = null;
+                return;
+            }
+            try {
+                vendorSuite.beforeTestCases( context, tcd, modelURL );
+            } catch ( Throwable e ) {
+                logger.error( "Error running 'beforeTestCases()' for model " + modelURL, e );
+                notifier.fireTestFailure( new Failure( descr, e ) );
+                context = null;
+                return;
+            }
+            try {
+                super.run( notifier );
+            } catch ( Throwable e ) {
+                logger.error( "Error running test cases for model " + modelURL, e );
+            }
+            try {
+                vendorSuite.afterTestCase( context, tcd );
+            } catch ( Throwable e ) {
+                logger.error( "Error running test cases for model " + modelURL, e );
+                return;
+            } finally {
+                context = null;
+            }
+        } catch ( Throwable t ) {
+            logger.error( "Unable to open results CSV file", t );
         } finally {
-            context = null;
+            if ( resultFile != null ) {
+                try {
+                    resultFile.close();
+                } catch ( IOException e ) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 
@@ -134,6 +152,9 @@ public class DmnTckRunner
                     runNotifier.fireTestFailure( new Failure( description, new RuntimeException( result.getMsg() ) ) );
                     break;
             }
+            resultFile.append( String.format( "%s,%s,%s,%s\n", folder, description.getClassName(), description.getMethodName(), result.getResult().toString() ) );
+        } catch ( IOException e ) {
+            e.printStackTrace();
         } finally {
             vendorSuite.afterTest( description, context, testCase );
         }
