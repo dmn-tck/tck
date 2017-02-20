@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../../testCases.xsd">
 	<modelName>0004-simpletable-U.dmn</modelName>
-	<testCase id="001">
+    <labels>
+        <label>Compliance Level 2</label>
+        <label>Decision Table: Single Output</label>
+        <label>Hit Policy: UNIQUE</label>
+    </labels>
+    <testCase id="001">
 		<inputNode name="Age">
 			<value>18</value>
 		</inputNode>

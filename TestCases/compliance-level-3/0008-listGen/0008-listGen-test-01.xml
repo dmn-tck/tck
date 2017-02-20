@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../testCases.xsd">
 	<modelName>0008-listGen.dmn</modelName>
-	<testCase>
+    <labels>
+        <label>Compliance Level 3</label>
+        <label>Literal Expression</label>
+        <label>Item Definition</label>
+        <label>Decision Table: Single Output</label>
+        <label>Hit Policy: COLLECT</label>
+        <label>FEEL List</label>
+    </labels>
+    <testCase id="001">
 		<inputNode name="a">
 			<value>a</value>
 		</inputNode>

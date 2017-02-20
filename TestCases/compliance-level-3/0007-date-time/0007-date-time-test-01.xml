@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../testCases.xsd">
 	<modelName>0007-date-time.dmn</modelName>
-	<testCase id="001">
+    <labels>
+        <label>Compliance Level 3</label>
+        <label>Literal Expression</label>
+        <label>Context</label>
+        <label>Item Definition</label>
+        <label>FEEL Functions: date and time</label>
+    </labels>
+    <testCase id="001">
 		<inputNode name="dateString">
 			<value>2015-12-24</value>
 		</inputNode>
