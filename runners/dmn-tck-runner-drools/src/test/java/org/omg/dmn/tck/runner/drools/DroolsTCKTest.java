@@ -22,6 +22,8 @@ import org.kie.dmn.api.core.*;
 import org.kie.dmn.api.core.ast.DecisionNode;
 import org.kie.dmn.api.core.ast.InputDataNode;
 import org.kie.dmn.core.ast.InputDataNodeImpl;
+import org.kie.dmn.core.impl.BaseDMNTypeImpl;
+import org.kie.dmn.feel.lang.types.BuiltInType;
 import org.kie.dmn.feel.util.EvalHelper;
 import org.kie.internal.utils.KieHelper;
 import org.omg.dmn.tck.marshaller._20160719.TestCases;
@@ -56,7 +58,7 @@ public class DroolsTCKTest
         List<URL> testCases = new ArrayList<>(  );
         File cl2parent = new File("../../TestCases/compliance-level-2");
         FilenameFilter filenameFilter = (dir, name) -> name.matches( "\\d\\d\\d\\d-.*" );
-//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0019-.*" );
+//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0003-.*" );
         for( File file : cl2parent.listFiles( filenameFilter ) ) {
             try {
                 testCases.add( file.toURI().toURL() );
@@ -208,10 +210,10 @@ public class DroolsTCKTest
     }
 
     private Object parseValue( TestCases.TestCase.InputNode in, InputDataNode input ) {
-        if( input == null || ((InputDataNodeImpl)input).getDmnType() == null ) {
+        if( input == null || input.getType() == null ) {
             throw new RuntimeException( "Unknown type for input node "+in.getName() );
         }
-        return parseType( in, ((InputDataNodeImpl)input).getDmnType() );
+        return parseType( in, input.getType() );
     }
 
     private Object parseValue( TestCases.TestCase.InputNode in, DecisionNode decision ) {
@@ -241,14 +243,14 @@ public class DroolsTCKTest
             if( value.getValue() != null && ((Node)value.getValue()).getFirstChild() != null ) {
                 text = ((Node)value.getValue()).getFirstChild().getTextContent();
             }
-            return text != null ? dmnType.parseValue( text ) : null;
+            return text != null ? ((BuiltInType)( (BaseDMNTypeImpl)dmnType).getFeelType()).fromString( text ) : null;
         } else{
             Map<String, Object> result = new HashMap<>();
             for ( ValueType.Component component : value.getComponent() ) {
                 if( ! dmnType.getFields().containsKey( component.getName() ) ) {
                     throw new RuntimeException( "Error parsing input: unknown field '"+component.getName()+"' for type '"+dmnType.getName()+"'" );
                 }
-                DMNType fieldType = dmnType.getField( component.getName() );
+                DMNType fieldType = dmnType.getFields().get( component.getName() );
                 if( fieldType == null ) {
                     throw new RuntimeException( "Error parsing input: unknown type for field '"+component.getName()+"' on type "+dmnType.getName()+"'" );
                 }

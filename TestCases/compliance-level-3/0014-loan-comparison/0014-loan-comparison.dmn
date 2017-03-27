@@ -328,7 +328,7 @@
 			<formalParameter name="p" typeRef="feel:number"/>
 			<formalParameter name="r" typeRef="feel:number"/>
 			<formalParameter name="n" typeRef="feel:number"/>
-			<literalExpression expressionLanguage="FEEL">
+			<literalExpression>
 				<text>p*r/12/(1-(1+r/12)**-n)</text>
 			</literalExpression>
 		</encapsulatedLogic>
@@ -340,7 +340,7 @@
 			<formalParameter name="r" typeRef="feel:number"/>
 			<formalParameter name="n" typeRef="feel:number"/>
 			<formalParameter name="pmt" typeRef="feel:number"/>
-			<literalExpression expressionLanguage="FEEL">
+			<literalExpression>
 				<text>p*(1+r/12)**n - pmt*(-1+(1+r/12)**n)/r</text>
 			</literalExpression>
 		</encapsulatedLogic>

@@ -96,7 +96,7 @@
 	<businessKnowledgeModel id="_d59cc17d-7f21-4706-8d10-47f7ee297b15" name="gtTen">
 		<encapsulatedLogic>
 			<formalParameter name="theNumber" typeRef="feel:number"/>
-			<literalExpression expressionLanguage="FEEL">
+			<literalExpression>
 				<text>theNumber &gt; 10</text>
 			</literalExpression>
 		</encapsulatedLogic>
