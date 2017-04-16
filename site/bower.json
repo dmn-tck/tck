@@ -1,0 +1,20 @@
+{
+  "name": "edson_html",
+  "authors": [
+    "Eder Ignatowicz <ignatowicz@gmail.com>"
+  ],
+  "description": "desc",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "patternfly": "^3.23.1"
+  }
+}

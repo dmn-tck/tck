@@ -1,0 +1,31 @@
+.breadcrumbs{
+    margin-left: 20px;
+}
+.footer {
+    background-color: #f7f7f7;
+}
+.last-updated {
+    text-align: right;
+    padding-right: 35px;
+}
+.text-small {
+    font-size: small;
+}
+        
+        
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+    overflow: auto;
+}
