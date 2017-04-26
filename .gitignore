@@ -3,4 +3,7 @@
 .idea
 target
 *.flag
+.classpath
+.project
+.settings
 
