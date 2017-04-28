@@ -19,7 +19,12 @@
                             </a>
                         </div>
                         <div style="display:inline-block; margin-top:10px;">
-                            <a href="http://http://methodandstyle.com/" target="_newtab">
+                            <a href="http://www.fujitsu.com/" target="_newtab">
+                                <img alt="fujitsu" class="img-thumbnail" src="images/Fujitsu.jpg" style="height: 60px"/>
+                            </a>
+                        </div>
+                        <div style="display:inline-block; margin-top:10px;">
+                            <a href="http://methodandstyle.com/" target="_newtab">
                                 <img alt="methodandstyle" class="img-thumbnail" src="images/MSlogo4x.jpg" style="height: 60px"/>
                             </a>
                         </div>
