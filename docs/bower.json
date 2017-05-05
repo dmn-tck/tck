@@ -1,0 +1,20 @@
+{
+  "name": "dmn_tck_html",
+  "authors": [
+    "DMN TCK Group"
+  ],
+  "description": "DMN TCK results report",
+  "main": "index.html",
+  "license": "ASL",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "patternfly": "^3.23.1"
+  }
+}
