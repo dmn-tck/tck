@@ -1,9 +1,15 @@
 # dmn-tck
-Decision Modeling Notation Technology Compatibility Kit
+# Decision Modeling Notation Technology Compatibility Kit
 
-Working group collaboration site:  https://interstagebpm.com/av/t/WFM_AORYCMMGG/dmn-reference-implementation/frontPage.htm
+## Current Result Web Site
 
-Current Folders:
+* https://github.com/agilepro/dmn-tck
+
+## Collaboration Site
+
+* https://interstagebpm.com/av/t/WFM_AORYCMMGG/dmn-reference-implementation/frontPage.htm
+
+## Current Folders:
 
 TestExamples - data files used to share and isolate the proper format for tests.
 
