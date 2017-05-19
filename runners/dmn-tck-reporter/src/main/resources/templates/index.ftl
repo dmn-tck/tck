@@ -4,28 +4,26 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <!-- PatternFly Styles -->
-    <link href="bower_components/patternfly/dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">
-    <link href="bower_components/patternfly/dist/css/patternfly-additions.min.css" rel="stylesheet" media="screen, print">
+    <link href="css/patternfly.min.css" rel="stylesheet" media="screen, print">
+    <link href="css/patternfly-additions.min.css" rel="stylesheet" media="screen, print">
     <!-- jQuery -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <!-- PatternFly -->
-    <script src="bower_components/patternfly/dist/js/patternfly.min.js"></script>
+    <script src="js/patternfly.min.js"></script>
     <!-- c3 -->
-    <script src="bower_components/c3/c3.min.js"></script>
+    <script src="js/c3.min.js"></script>
     <!-- c3 -->
-    <script src="bower_components/d3/d3.min.js"></script>
+    <script src="js/d3.min.js"></script>
     <!-- jquery max height -->
-    <script src="bower_components/matchHeight/dist/jquery.matchHeight-min.js"></script>
+    <script src="js/jquery.matchHeight-min.js"></script>
     <!-- Chart.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script>
+    <script src="js/Chart.bundle.js"></script>
 
     <!-- site libs -->
     <script src="js/index.js"></script>
     <link href="css/lib.css" rel="stylesheet" media="screen, print">
-
-    <!-- link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" -->
 </head>
 <body>
 
@@ -170,7 +168,7 @@
                                         Submitted:&nbsp;<b>${vendor.submitted}/${header.totalTests}</b>
                                     </div>
                                     <div class="list-view-pf-additional-info-item">
-                                        Last Submission:&nbsp;<b>${.now?date}</b>
+                                        Last Submission:&nbsp;<b>${vendor.lastUpdate}</b>
                                     </div>
                                 </div>
                             </div>
@@ -188,7 +186,7 @@
 
                             <div class="col-md-10">
                                 <dl class="dl-horizontal">
-                                    <dt>Last Submission: </dt><dd>${.now?date}</dd>
+                                    <dt>Last Submission: </dt><dd>${vendor.lastUpdate}</dd>
                                     <dt>Tests: </dt><dd>${header.totalTests}</dd>
                                     <dt>Labels: </dt><dd>${header.totalLabels}</dd>
                                     <dt>Succeeded: </dt><dd>${vendor.succeeded}</dd>

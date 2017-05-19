@@ -16,6 +16,7 @@
 
 package org.omg.dmn.tck;
 
+import java.time.LocalDate;
 import java.util.Map;
 
 public class Vendor {
@@ -26,6 +27,7 @@ public class Vendor {
     private String                  version;
     private String                  comment;
     private Map<String, TestResult> results;
+    private LocalDate               lastUpdate;
 
     public Vendor( String name,
                    String vendorUrl,
@@ -33,7 +35,8 @@ public class Vendor {
                    String productUrl,
                    String version,
                    String comment,
-                   Map<String, TestResult> results) {
+                   Map<String, TestResult> results,
+                   LocalDate lastUpdate ) {
         this.name = name;
         this.vendorUrl = vendorUrl;
         this.product = product;
@@ -41,6 +44,7 @@ public class Vendor {
         this.version = version;
         this.comment = comment;
         this.results = results;
+        this.lastUpdate = lastUpdate;
     }
 
     public String getName() {
@@ -119,6 +123,14 @@ public class Vendor {
         return this.results.size();
     }
 
+    public LocalDate getLastUpdate() {
+        return lastUpdate;
+    }
+
+    public void setLastUpdate(LocalDate lastUpdate) {
+        this.lastUpdate = lastUpdate;
+    }
+
     @Override
     public boolean equals(Object o) {
         if ( this == o ) return true;
@@ -147,6 +159,7 @@ public class Vendor {
                ", version='" + version + '\'' +
                ", comment='" + comment + '\'' +
                ", results=" + results +
+               ", lastUpdate=" + lastUpdate +
                '}';
     }
 }
