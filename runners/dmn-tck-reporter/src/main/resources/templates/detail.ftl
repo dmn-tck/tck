@@ -108,20 +108,20 @@
                     <#list tAllTests.rows as row>
                     <tr>
                         <#if row.rowspan[0] gt 0 >
-                            <th class="text-nowrap" scope="row" rowspan="${row.rowspan[0]}" style="vertical-align:middle">${row.text[0]}</th>
+                            <td class="text-nowrap" scope="row" rowspan="${row.rowspan[0]}" style="vertical-align:middle">${row.text[0]}</td>
                         </#if>
                         <#if false && row.rowspan[1] gt 0 >
-                            <th class="text-nowrap" scope="row" rowspan="${row.rowspan[1]}" style="vertical-align:middle">${row.text[1]}</th>
+                            <td class="text-nowrap" scope="row" rowspan="${row.rowspan[1]}" style="vertical-align:middle">${row.text[1]}</td>
                         </#if>
                         <#if row.rowspan[2] gt 0 >
-                            <th class="text-nowrap" scope="row" rowspan="${row.rowspan[2]}" style="vertical-align:middle">${row.text[2]}</th>
+                            <td class="text-nowrap" scope="row" rowspan="${row.rowspan[2]}" style="vertical-align:middle">${row.text[2]}</td>
                         </#if>
-                        <th class="text-nowrap" scope="row">${row.text[3]}</th>
+                        <td class="text-nowrap" scope="row">${row.text[3]}</td>
                         <td align="center" style="vertical-align:middle"><span class="glyphicon ${row.icons[4]}" aria-hidden="true"></span></td>
                     </tr>
                     </#list>
                     <tr class="info">
-                        <th colspan="3" style="vertical-align:middle">Total</th>
+                        <td colspan="3" style="vertical-align:middle">Total</td>
                         <td align="center" style="vertical-align:middle">${tAllTests.totals[0]}</td>
                     </tr>
                     </tbody>
@@ -147,20 +147,20 @@
                             <#list tlbl.rows as row>
                             <tr>
                                 <#if row.rowspan[0] gt 0 >
-                                    <th class="text-nowrap" scope="row" rowspan="${row.rowspan[0]}" style="vertical-align:middle">${row.text[0]}</th>
+                                    <td class="text-nowrap" scope="row" rowspan="${row.rowspan[0]}" style="vertical-align:middle">${row.text[0]}</td>
                                 </#if>
                                 <#if false && row.rowspan[1] gt 0 >
-                                    <th class="text-nowrap" scope="row" rowspan="${row.rowspan[1]}" style="vertical-align:middle">${row.text[1]}</th>
+                                    <td class="text-nowrap" scope="row" rowspan="${row.rowspan[1]}" style="vertical-align:middle">${row.text[1]}</td>
                                 </#if>
                                 <#if row.rowspan[2] gt 0 >
-                                    <th class="text-nowrap" scope="row" rowspan="${row.rowspan[2]}" style="vertical-align:middle">${row.text[2]}</th>
+                                    <td class="text-nowrap" scope="row" rowspan="${row.rowspan[2]}" style="vertical-align:middle">${row.text[2]}</td>
                                 </#if>
-                                <th class="text-nowrap" scope="row" style="vertical-align:middle">${row.text[3]}</th>
+                                <td class="text-nowrap" scope="row" style="vertical-align:middle">${row.text[3]}</td>
                                 <td align="center" style="vertical-align:middle"><span class="glyphicon ${row.icons[4]}" aria-hidden="true"></span></td>
                             </tr>
                             </#list>
                             <tr class="info">
-                                <th colspan="3" style="vertical-align:middle">Total</th>
+                                <td colspan="3" style="vertical-align:middle">Total</td>
                                 <td align="center" style="vertical-align:middle">${tlbl.totals[0]}</td>
                             </tr>
                         </tbody>
