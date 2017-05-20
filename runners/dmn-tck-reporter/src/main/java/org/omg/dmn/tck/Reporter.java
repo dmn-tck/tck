@@ -34,6 +34,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Stream;
 
@@ -401,13 +402,25 @@ public class Reporter {
                         logger.error( "Error reading input file '"+params.input.getName()+"'", e );
                         continue;
                     }
+                    LocalDate lastUpdate;
+                    try {
+                        String luStr = properties.getProperty( "last.update" );
+                        if( luStr != null ) {
+                            lastUpdate = LocalDate.parse( luStr );
+                        } else {
+                            lastUpdate = LocalDate.now();
+                        }
+                    } catch ( Exception e ) {
+                        lastUpdate = LocalDate.now();
+                    }
                     Vendor v = new Vendor( properties.getProperty( "vendor.name" ).trim(),
                                            properties.getProperty( "vendor.url" ).trim(),
                                            properties.getProperty( "product.name" ).trim(),
                                            properties.getProperty( "product.url" ).trim(),
                                            properties.getProperty( "product.version" ).trim(),
                                            properties.getProperty( "product.comment" ).trim(),
-                                           testResults );
+                                           testResults,
+                                           lastUpdate );
                     results.put( v.getName()+" / "+v.getVersion(), v );
                     logger.info( testResults.size() + " test results loaded for vendor "+v );
                 }

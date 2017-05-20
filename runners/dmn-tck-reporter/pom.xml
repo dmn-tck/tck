@@ -53,4 +53,42 @@
     </plugins>
   </build>
 
+  <profiles>
+    <profile>
+      <id>generate-site</id>
+      <activation>
+        <property>
+          <name>generate-site</name>
+        </property>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>gensite</id>
+                <phase>install</phase>
+                <goals>
+                  <goal>java</goal>
+                </goals>
+              </execution>
+            </executions>
+            <configuration>
+              <mainClass>org.omg.dmn.tck.Reporter</mainClass>
+              <arguments>
+                <argument>-i</argument>
+                <argument>${project.basedir}/../../TestResults</argument>
+                <argument>-t</argument>
+                <argument>${project.basedir}/../../TestCases</argument>
+                <argument>-o</argument>
+                <argument>${project.basedir}/../../docs</argument>
+              </arguments>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>
