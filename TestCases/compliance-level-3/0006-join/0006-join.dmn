@@ -10,9 +10,6 @@
 		<itemComponent id="_fa7afb54-265e-4244-97bf-4789c48e3629" name="deptNum">
 			<typeRef>feel:number</typeRef>
 		</itemComponent>
-		<itemComponent id="_df562869-8cda-4a15-a37d-e121a4f7abac" name="mgrName">
-			<typeRef>feel:string</typeRef>
-		</itemComponent>
 	</itemDefinition>
 	<itemDefinition id="tDeptTable" name="tDeptTable" isCollection="true">
 		<itemComponent id="_f7e37827-f9ab-4fb1-b07e-9e4367242e65" name="number">
