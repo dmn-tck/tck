@@ -59,6 +59,7 @@ public class Reporter {
         ReportHeader header = createReportHeader( tests, labels, results );
         Map<String, ReportTable> tableByLabels = createTableByLabels( labels, results );
         Map<String, ReportChart> chartByLabels = createChartByLabels( labels, results);
+        Map<String, ReportChart> chartByLabelsPercent = createChartByLabelsPercent( labels, results);
         Map<String, ReportTable> tableAllTests = createTableAllTests( tests.values(), results );
         Map<String, List<ReportTable>> tableIndividualLabels = createTableByIndividualLabels( labels, results );
 
@@ -67,7 +68,8 @@ public class Reporter {
 
         IndexGenerator.generatePage( params, cfg, header, results );
         for( Vendor vendor : results.values() ) {
-            OverviewGenerator.generatePage( params, cfg, vendor, header, tableByLabels.get( vendor.getFileNameId() ), chartByLabels.get( vendor.getFileNameId() ) );
+            OverviewGenerator.generatePage( params, cfg, vendor, header, tableByLabels.get( vendor.getFileNameId() ),
+                                            chartByLabels.get( vendor.getFileNameId() ), chartByLabelsPercent.get( vendor.getFileNameId() ) );
             DetailGenerator.generatePage( params, cfg, vendor, header, tableAllTests.get( vendor.getFileNameId() ), tableIndividualLabels.get( vendor.getFileNameId() ) );
         }
     }
@@ -201,24 +203,7 @@ public class Reporter {
             int[] ignored = new int[results.size()];
             int[] failed = new int[results.size()];
             int[] total = new int[results.size()];
-            for( TestCasesData tcd : lbl.getValue() ) {
-                for( TestCases.TestCase tc : tcd.model.getTestCase() ) {
-                    int index = 0;
-                    for( Vendor v : results.values() ) {
-                        String key = createTestKey( tcd.folder, tcd.testCaseName, tc.getId() );
-                        TestResult r = v.getResults().get( key );
-                        if( r != null && r.getResult() == TestResult.Result.SUCCESS ) {
-                            success[index]++;
-                        } else if( r != null && r.getResult() == TestResult.Result.ERROR ) {
-                            failed[index]++;
-                        } else {
-                            ignored[index]++;
-                        }
-                        total[index]++;
-                        index++;
-                    }
-                }
-            }
+            calculateTotals( results, lbl, success, ignored, failed, total );
             int i = 0;
             for( Vendor vendor : results.values() ) {
                 ReportChart.DataPoint row = new ReportChart.DataPoint(  );
@@ -234,12 +219,74 @@ public class Reporter {
         return charts;
     }
 
+    private static Map<String, ReportChart> createChartByLabelsPercent(Map<String, List<TestCasesData>> labels, Map<String, Vendor> results) {
+        Map<String, ReportChart> charts = new HashMap<>(  );
+        for( Vendor v : results.values() ) {
+            ReportChart chart = new ReportChart();
+            chart.setName( "cblp"+charts.size() );
+            chart.setTitle( v.getName() + " " + v.getVersion() );
+            charts.put( v.getFileNameId(), chart );
+        }
+
+        for( Map.Entry<String, List<TestCasesData>> lbl : labels.entrySet() ) {
+            int[] success = new int[results.size()];
+            int[] ignored = new int[results.size()];
+            int[] failed = new int[results.size()];
+            int[] total = new int[results.size()];
+            calculateTotals( results, lbl, success, ignored, failed, total );
+            int i = 0;
+            for( Vendor vendor : results.values() ) {
+                ReportChart.DataPoint row = new ReportChart.DataPoint(  );
+                row.setLabel( lbl.getKey() );
+                int sp = (int) (((double) success[i] / (double) total[i]) * 100);
+                int ip = (int) (((double) ignored[i] / (double) total[i]) * 100);
+                int fp = failed[i] > 0 ? 100 - sp - ip : 0;
+                if( sp + ip + fp < 100 ) {
+                    // hack to eliminate rounding errors on the chart data
+                    if( sp > 0 ) {
+                        sp += 100-sp-ip-fp;
+                    } else if( ip > 0 ) {
+                        ip += 100-sp-ip-fp;
+                    }
+                }
+                row.getData().add( sp );
+                row.getData().add( ip );
+                row.getData().add( fp );
+                charts.get( vendor.getFileNameId() ).getDataset().add( row );
+                charts.get( vendor.getFileNameId() ).getLabels().add( lbl.getKey() );
+                i++;
+            }
+        }
+        return charts;
+    }
+
+    private static void calculateTotals(Map<String, Vendor> results, Map.Entry<String, List<TestCasesData>> lbl, int[] success, int[] ignored, int[] failed, int[] total) {
+        for( TestCasesData tcd : lbl.getValue() ) {
+            for( TestCases.TestCase tc : tcd.model.getTestCase() ) {
+                int index = 0;
+                for( Vendor v : results.values() ) {
+                    String key = createTestKey( tcd.folder, tcd.testCaseName, tc.getId() );
+                    TestResult r = v.getResults().get( key );
+                    if( r != null && r.getResult() == TestResult.Result.SUCCESS ) {
+                        success[index]++;
+                    } else if( r != null && r.getResult() == TestResult.Result.ERROR ) {
+                        failed[index]++;
+                    } else {
+                        ignored[index]++;
+                    }
+                    total[index]++;
+                    index++;
+                }
+            }
+        }
+    }
+
     private static Map<String, ReportTable> createTableByLabels(Map<String, List<TestCasesData>> labels, Map<String, Vendor> results) {
         Map<String, ReportTable> rt = new HashMap<>(  );
 
         for( Vendor v : results.values() ) {
             ReportTable table = new ReportTable(  );
-            addHeader( table, "", "" );
+            addHeader( table, "Label", "" );
             addHeader( table, v.getName(), v.getVersion() );
             rt.put( v.getFileNameId(), table );
         }

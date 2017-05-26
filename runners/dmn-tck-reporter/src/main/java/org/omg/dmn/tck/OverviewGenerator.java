@@ -35,7 +35,8 @@ import java.util.Map;
 public class OverviewGenerator {
     private static final Logger logger = LoggerFactory.getLogger( OverviewGenerator.class);
 
-    public static void generatePage(Reporter.Parameters params, Configuration cfg, Vendor vendor, ReportHeader header, ReportTable tableByLabels, ReportChart chartByLabels) {
+    public static void generatePage(Reporter.Parameters params, Configuration cfg, Vendor vendor, ReportHeader header,
+                                    ReportTable tableByLabels, ReportChart chartByLabels, ReportChart chartByLabelsPercent) {
         logger.info( "Generating overview_{}.html", vendor.getFileNameId() );
         try {
             Template temp = cfg.getTemplate( "/templates/overview.ftl" );
@@ -45,6 +46,7 @@ public class OverviewGenerator {
             data.put( "header", header );
             data.put( "tByLabels", tableByLabels );
             data.put( "cbl", chartByLabels );
+            data.put( "cblp", chartByLabelsPercent );
 
             Writer out = new FileWriter( params.output.getAbsolutePath() + "/overview_"+vendor.getFileNameId()+".html" );
             temp.process( data, out );

@@ -1,5 +1,6 @@
 <#-- @ftlvariable name="vendor" type="org.omg.dmn.tck.Vendor" -->
 <#-- @ftlvariable name="cbl" type="org.omg.dmn.tck.ReportChart" -->
+<#-- @ftlvariable name="cblp" type="org.omg.dmn.tck.ReportChart" -->
 <#-- @ftlvariable name="header" type="org.omg.dmn.tck.ReportHeader" -->
 <#-- @ftlvariable name="tByLabels" type="org.omg.dmn.tck.ReportTable" -->
 <html lang="en" xmlns="http://www.w3.org/1999/html">
@@ -19,6 +20,15 @@
     <script src="js/d3.min.js"></script>
     <!-- jquery max height -->
     <script src="js/jquery.matchHeight-min.js"></script>
+
+    <!-- tabs -->
+    <script>
+        $(document).ready(function(){
+            $(".nav-tabs a").click(function(){
+                $(this).tab('show');
+            });
+        });
+    </script>
 
     <!-- site libs -->
     <script src="js/lib.js"></script>
@@ -149,8 +159,49 @@
                         }
                     ]
                 };
+                var ${cblp.name}_data = {
+                    labels: [
+                        <#list cblp.labels as lbl>"${lbl}"<#if lbl_has_next>,</#if></#list>
+                    ],
+                    datasets: [
+                        {
+                            label: "Succeeded",
+                            backgroundColor: color(window.chartColors.green).alpha(0.5).rgbString(),
+                            borderColor: window.chartColors.green,
+                            borderWidth: 1,
+                            data: [
+                            <#list cblp.dataset as dp>
+                            ${dp.data[0]}<#if dp_has_next>,</#if>
+                            </#list>
+                            ]
+                        },
+                        {
+                            label: "Skipped",
+                            backgroundColor: color(window.chartColors.yellow).alpha(0.5).rgbString(),
+                            borderColor: window.chartColors.yellow,
+                            borderWidth: 1,
+                            data: [
+                            <#list cblp.dataset as dp>
+                            ${dp.data[1]}<#if dp_has_next>,</#if>
+                            </#list>
+                            ]
+                        },
+                        {
+                            label: "Failed",
+                            backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+                            borderColor: window.chartColors.red,
+                            borderWidth: 1,
+                            data: [
+                            <#list cblp.dataset as dp>
+                            ${dp.data[2]}<#if dp_has_next>,</#if>
+                            </#list>
+                            ]
+                        }
+                    ]
+                };
 
                 window.onload = function() {
+                    // chart by test numbers
                     var ctx = document.getElementById("${cbl.name}").getContext("2d");
                     window.${cbl.name} = new Chart(ctx, {
                         type: 'horizontalBar',
@@ -169,7 +220,39 @@
                             },
                             title: {
                                 display: true,
-                                text: 'Overview for ${cbl.title}'
+                                text: 'Test results for ${cbl.title} (by number of tests)'
+                            },
+                            scales: {
+                                xAxes: [{
+                                    stacked: true,
+                                }],
+                                yAxes: [{
+                                    stacked: true
+                                }]
+                            }
+                        }
+                    });
+
+                    // chart by test percentage
+                    var ctxp = document.getElementById("${cblp.name}").getContext("2d");
+                    window.${cblp.name} = new Chart(ctxp, {
+                        type: 'horizontalBar',
+                        data: ${cblp.name}_data,
+                        options: {
+                            // Elements options apply to all of the options unless overridden in a dataset
+                            // In this case, we are setting the border of each horizontal bar to be 2px wide
+                            elements: {
+                                rectangle: {
+                                    borderWidth: 2,
+                                }
+                            },
+                            responsive: true,
+                            legend: {
+                                position: 'right',
+                            },
+                            title: {
+                                display: true,
+                                text: 'Test results for ${cbl.title} (by percentage of tests)'
                             },
                             scales: {
                                 xAxes: [{
@@ -182,42 +265,57 @@
                         }
                     });
                 };
-
             </script>
 
-            <div id="container" style="width: 100%;">
-                <h3>Tests Overview</h3>
-                <canvas id="${cbl.name}"></canvas>
+            <div id="results_nav">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab1">Chart (by %)</a></li>
+                    <li><a href="#tab2">Chart (by #)</a></li>
+                    <li><a href="#tab3">Table</a></li>
+                </ul>
             </div>
 
-            <div class="container">
-                <h3>Test results by label</h3>
-                <p>Results from all the tests sorted by label</p>
-
-                <div class="table-responsive">
-                    <table class="table table-condensed table-bordered table-striped table-hover">
-                        <thead>
-                        <tr class="info">
-        <#list tByLabels.headers as head>
-                            <th> ${head} <br/>
-                                <small>${tByLabels.headerDetails[head_index]}</small>
-                            </th>
-        </#list>
-                        </tr>
-                        </thead>
-                        <tbody>
-        <#list tByLabels.rows as row>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_${vendor.fileNameId}.html', 'tb${row_index}','${row.text[0]}')">${row.text[0]}</a></th>
-                            <td align="center">
-                                <span class="glyphicon ${row.icons[1]}" aria-hidden="true"><br/><small>${row.text[1]}</small></span>
-                            </td>
-                        </tr>
-        </#list>
-                        </tbody>
-                    </table>
+            <div class="tab-content">
+                <div id="tab1" class="tab-pane fade active in">
+                    <div id="chart_by_percent" style="width: 100%;">
+                        <canvas id="${cblp.name}"></canvas>
+                    </div>
+                </div>
+                <div id="tab2" class="tab-pane fade">
+                    <div id="chart_by_numbers" style="width: 100%;">
+                        <canvas id="${cbl.name}"></canvas>
+                    </div>
+                </div>
+                <div id="tab3" class="tab-pane fade">
+                    <p/>
+                    <div class="container" style="width: 95%;">
+                        <div class="table-responsive">
+                            <table class="table table-condensed table-bordered table-striped table-hover">
+                                <thead>
+                                <tr class="info">
+                                <#list tByLabels.headers as head>
+                                    <th> ${head} <br/>
+                                        <small>${tByLabels.headerDetails[head_index]}</small>
+                                    </th>
+                                </#list>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <#list tByLabels.rows as row>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_${vendor.fileNameId}.html', 'tb${row_index}','${row.text[0]}')">${row.text[0]}</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon ${row.icons[1]}" aria-hidden="true"><br/><small>${row.text[1]}</small></span>
+                                    </td>
+                                </tr>
+                                </#list>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
+
             <blockquote>
                 <p><small><em><strong>DISCLAIMER:</strong> This report is automatically generated from the results
                     of the TCK tests execution provided by each vendor. The accuracy of

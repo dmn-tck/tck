@@ -16,6 +16,15 @@
     <!-- jquery max height -->
     <script src="js/jquery.matchHeight-min.js"></script>
 
+    <!-- tabs -->
+    <script>
+        $(document).ready(function(){
+            $(".nav-tabs a").click(function(){
+                $(this).tab('show');
+            });
+        });
+    </script>
+
     <!-- site libs -->
     <script src="js/lib.js"></script>
     <link href="css/lib.css" rel="stylesheet" media="screen, print">
@@ -211,8 +220,115 @@
                         }
                     ]
                 };
+                var cblp1_data = {
+                    labels: [
+                        "Business Knowledge Model","Compliance Level 2","Compliance Level 3","Context","Decision Table: Multiple Output","Decision Table: Single Output","FEEL Arithmetic","FEEL Conditionals","FEEL Filter (10.3.2.5)","FEEL Function Literals","FEEL Functions: date and time","FEEL Functions: lists","FEEL Functions: strings","FEEL Iteration","FEEL List","FEEL Quantifiers","FEEL Relation","Function Invocation","Hit Policy: ANY","Hit Policy: COLLECT","Hit Policy: PRIORITY","Hit Policy: UNIQUE","Item Definition","Literal Expression","Relation"
+                    ],
+                    datasets: [
+                        {
+                            label: "Succeeded",
+                            backgroundColor: color(window.chartColors.green).alpha(0.5).rgbString(),
+                            borderColor: window.chartColors.green,
+                            borderWidth: 1,
+                            data: [
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100
+                            ]
+                        },
+                        {
+                            label: "Skipped",
+                            backgroundColor: color(window.chartColors.yellow).alpha(0.5).rgbString(),
+                            borderColor: window.chartColors.yellow,
+                            borderWidth: 1,
+                            data: [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                            ]
+                        },
+                        {
+                            label: "Failed",
+                            backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+                            borderColor: window.chartColors.red,
+                            borderWidth: 1,
+                            data: [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                            ]
+                        }
+                    ]
+                };
 
                 window.onload = function() {
+                    // chart by test numbers
                     var ctx = document.getElementById("cbl1").getContext("2d");
                     window.cbl1 = new Chart(ctx, {
                         type: 'horizontalBar',
@@ -231,7 +347,39 @@
                             },
                             title: {
                                 display: true,
-                                text: 'Overview for Red Hat 7.0.0.Final'
+                                text: 'Test results for Red Hat 7.0.0.Final (by number of tests)'
+                            },
+                            scales: {
+                                xAxes: [{
+                                    stacked: true,
+                                }],
+                                yAxes: [{
+                                    stacked: true
+                                }]
+                            }
+                        }
+                    });
+
+                    // chart by test percentage
+                    var ctxp = document.getElementById("cblp1").getContext("2d");
+                    window.cblp1 = new Chart(ctxp, {
+                        type: 'horizontalBar',
+                        data: cblp1_data,
+                        options: {
+                            // Elements options apply to all of the options unless overridden in a dataset
+                            // In this case, we are setting the border of each horizontal bar to be 2px wide
+                            elements: {
+                                rectangle: {
+                                    borderWidth: 2,
+                                }
+                            },
+                            responsive: true,
+                            legend: {
+                                position: 'right',
+                            },
+                            title: {
+                                display: true,
+                                text: 'Test results for Red Hat 7.0.0.Final (by percentage of tests)'
                             },
                             scales: {
                                 xAxes: [{
@@ -244,185 +392,200 @@
                         }
                     });
                 };
-
             </script>
 
-            <div id="container" style="width: 100%;">
-                <h3>Tests Overview</h3>
-                <canvas id="cbl1"></canvas>
+            <div id="results_nav">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab1">Chart (by %)</a></li>
+                    <li><a href="#tab2">Chart (by #)</a></li>
+                    <li><a href="#tab3">Table</a></li>
+                </ul>
             </div>
 
-            <div class="container">
-                <h3>Test results by label</h3>
-                <p>Results from all the tests sorted by label</p>
-
-                <div class="table-responsive">
-                    <table class="table table-condensed table-bordered table-striped table-hover">
-                        <thead>
-                        <tr class="info">
-                            <th>  <br/>
-                                <small></small>
-                            </th>
-                            <th> Red Hat <br/>
-                                <small>7.0.0.Final</small>
-                            </th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb0','Business Knowledge Model')">Business Knowledge Model</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>10/10</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb1','Compliance Level 2')">Compliance Level 2</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>24/24</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb2','Compliance Level 3')">Compliance Level 3</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>28/28</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb3','Context')">Context</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>5/5</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb4','Decision Table: Multiple Output')">Decision Table: Multiple Output</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb5','Decision Table: Single Output')">Decision Table: Single Output</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>26/26</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb6','FEEL Arithmetic')">FEEL Arithmetic</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>12/12</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb7','FEEL Conditionals')">FEEL Conditionals</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb8','FEEL Filter (10.3.2.5)')">FEEL Filter (10.3.2.5)</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb9','FEEL Function Literals')">FEEL Function Literals</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>2/2</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb10','FEEL Functions: date and time')">FEEL Functions: date and time</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>1/1</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb11','FEEL Functions: lists')">FEEL Functions: lists</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>7/7</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb12','FEEL Functions: strings')">FEEL Functions: strings</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>1/1</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb13','FEEL Iteration')">FEEL Iteration</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>2/2</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb14','FEEL List')">FEEL List</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>10/10</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb15','FEEL Quantifiers')">FEEL Quantifiers</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>1/1</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb16','FEEL Relation')">FEEL Relation</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>2/2</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb17','Function Invocation')">Function Invocation</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>5/5</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb18','Hit Policy: ANY')">Hit Policy: ANY</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb19','Hit Policy: COLLECT')">Hit Policy: COLLECT</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>9/9</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb20','Hit Policy: PRIORITY')">Hit Policy: PRIORITY</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>8/8</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb21','Hit Policy: UNIQUE')">Hit Policy: UNIQUE</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>9/9</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb22','Item Definition')">Item Definition</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>38/38</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb23','Literal Expression')">Literal Expression</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>37/37</small></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb24','Relation')">Relation</a></th>
-                            <td align="center">
-                                <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>2/2</small></span>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
+            <div class="tab-content">
+                <div id="tab1" class="tab-pane fade active in">
+                    <div id="chart_by_percent" style="width: 100%;">
+                        <canvas id="cblp1"></canvas>
+                    </div>
+                </div>
+                <div id="tab2" class="tab-pane fade">
+                    <div id="chart_by_numbers" style="width: 100%;">
+                        <canvas id="cbl1"></canvas>
+                    </div>
+                </div>
+                <div id="tab3" class="tab-pane fade">
+                    <p/>
+                    <div class="container" style="width: 95%;">
+                        <div class="table-responsive">
+                            <table class="table table-condensed table-bordered table-striped table-hover">
+                                <thead>
+                                <tr class="info">
+                                    <th> Label <br/>
+                                        <small></small>
+                                    </th>
+                                    <th> Red Hat <br/>
+                                        <small>7.0.0.Final</small>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb0','Business Knowledge Model')">Business Knowledge Model</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>10/10</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb1','Compliance Level 2')">Compliance Level 2</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>24/24</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb2','Compliance Level 3')">Compliance Level 3</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>28/28</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb3','Context')">Context</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>5/5</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb4','Decision Table: Multiple Output')">Decision Table: Multiple Output</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb5','Decision Table: Single Output')">Decision Table: Single Output</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>26/26</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb6','FEEL Arithmetic')">FEEL Arithmetic</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>12/12</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb7','FEEL Conditionals')">FEEL Conditionals</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb8','FEEL Filter (10.3.2.5)')">FEEL Filter (10.3.2.5)</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb9','FEEL Function Literals')">FEEL Function Literals</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>2/2</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb10','FEEL Functions: date and time')">FEEL Functions: date and time</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>1/1</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb11','FEEL Functions: lists')">FEEL Functions: lists</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>7/7</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb12','FEEL Functions: strings')">FEEL Functions: strings</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>1/1</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb13','FEEL Iteration')">FEEL Iteration</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>2/2</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb14','FEEL List')">FEEL List</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>10/10</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb15','FEEL Quantifiers')">FEEL Quantifiers</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>1/1</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb16','FEEL Relation')">FEEL Relation</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>2/2</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb17','Function Invocation')">Function Invocation</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>5/5</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb18','Hit Policy: ANY')">Hit Policy: ANY</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb19','Hit Policy: COLLECT')">Hit Policy: COLLECT</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>9/9</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb20','Hit Policy: PRIORITY')">Hit Policy: PRIORITY</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>8/8</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb21','Hit Policy: UNIQUE')">Hit Policy: UNIQUE</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>9/9</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb22','Item Definition')">Item Definition</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>38/38</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb23','Literal Expression')">Literal Expression</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>37/37</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.0.0.Final.html', 'tb24','Relation')">Relation</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>2/2</small></span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
+
             <blockquote>
                 <p><small><em><strong>DISCLAIMER:</strong> This report is automatically generated from the results
                     of the TCK tests execution provided by each vendor. The accuracy of
@@ -434,7 +597,7 @@
 <!-- pre-footer -->
 <div class="pre-footer">
     <div class="last-updated">
-        <p>Last updated:</strong> 19-May-2017 4:41:39 PM</p>
+        <p>Last updated:</strong> 25-May-2017 1:20:11 PM</p>
     </div>
 </div>
 <div class="footer">
