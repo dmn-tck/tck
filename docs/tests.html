@@ -1,7 +1,5 @@
-<html>
-
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-
     <!-- PatternFly Styles -->
     <link href="css/patternfly.min.css" rel="stylesheet" media="screen, print">
     <link href="css/patternfly-additions.min.css" rel="stylesheet" media="screen, print">
@@ -19,12 +17,15 @@
     <script src="js/jquery.matchHeight-min.js"></script>
 
     <!-- site libs -->
-    <script src="js/index.js"></script>
+    <script src="js/lib.js"></script>
     <link href="css/lib.css" rel="stylesheet" media="screen, print">
 
+    <title>DMN TCK test cases</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
 <body>
+
 <div class="wrapper">
     <div class="header">
         <nav class="navbar navbar-default navbar-pf" role="navigation">
@@ -36,19 +37,18 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/">
-                    <img src="images/logo.png" alt="PatternFly Enterprise Application"/>
+                    <img src="images/logo.png" alt="Decision Model and Notation TCK"/>
                 </a>
             </div>
             <div class="collapse navbar-collapse navbar-collapse-1">
-
                 <ul class="nav navbar-nav navbar-primary">
-                    <li class="active">
+                    <li>
                         <a href="index.html">Submitters</a>
                     </li>
                     <li>
                         <a href="glossary.html">Glossary</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="tests.html">Tests</a>
                     </li>
 
@@ -57,65 +57,647 @@
         </nav>
         <div class="breadcrumbs">
             <ol class="breadcrumb">
-                <li class="active"><strong>Home</strong></li>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="active"><strong>Test Cases</strong></li>
             </ol>
         </div>
     </div>
     <div class="content">
-
-        <h1> TESTS </h1>
-
-    </div>
-    <!-- container -->
-    <div class="footer">
-
         <div class="container">
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">The DMN TCK is supported by:</h3>
-                    </div>
-                    <div class="panel-body">
-                        <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
-                            <div style="display:inline-block; margin-top:10px;">
-                                <a href="http://www.redhat.com" target="_newtab">
-                                    <img alt="redhat" class="img-thumbnail" src="images/redhat3.png" style="height: 60px"/>
-                                </a>
-                            </div>
-                            <div style="display:inline-block; margin-top:10px;">
-                                <a href="http://http://methodandstyle.com/" target="_newtab">
-                                    <img alt="methodandstyle" class="img-thumbnail" src="images/MSlogo4x.jpg" style="height: 60px"/>
-                                </a>
-                            </div>
-                            <div style="display:inline-block; margin-top:10px;">
-                                <a href="http://www.trisotech.com" target="_newtab">
-                                    <img alt="trisotech" class="img-thumbnail" src="images/trisotech3.jpg" style="height: 60px"/>
-                                </a>
-                            </div>
-                            <div style="display:inline-block; margin-top:10px;">
-                                <a href="http://www.camunda.com" target="_newtab">
-                                    <img alt="camunda" class="img-thumbnail" src="images/camunda_logo.png" style="height: 60px"/>
-                                </a>
-                            </div>
-                            <div style="display:inline-block; margin-top:10px;">
-                                <a href="http://openrules.com/" target="_newtab">
-                                    <img alt="openrules" class="img-thumbnail" src="images/openruleslogo.jpg" style="height: 60px"/>
-                                </a>
-                            </div>
-                        </div>
+            <div class="report-header ">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>DMN TCK Test Cases</h1>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <small>
+                            <p><strong>Tests:</strong> 52</p>
+                        </small>
+                    </div>
+                    <div class="col-md-2">
+                        <small>
+                            <p><strong>Labels:</strong> 25</p>
+                        </small>
+                    </div>
+                </div>
+            </div>
 
-
+            <div class="content container">
+                <div id="all-tests">
+                    <table class="table table-striped table-bordered table-hover" id="all-tests-table">
+                        <thead>
+                        <tr>
+                                <th style="vertical-align:middle"> Compliance <br/>
+                                    <small></small>
+                                </th>
+                                <th style="vertical-align:middle"> Test Suite <br/>
+                                    <small></small>
+                                </th>
+                                <th style="vertical-align:middle"> Doc <br/>
+                                    <small></small>
+                                </th>
+                                <th style="vertical-align:middle"> Source <br/>
+                                    <small></small>
+                                </th>
+                                <th style="vertical-align:middle"> Test <br/>
+                                    <small></small>
+                                </th>
+                                <th style="vertical-align:middle"> Description <br/>
+                                    <small></small>
+                                </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="24" style="vertical-align:middle">compliance-level-2</td>
+                                <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0001-input-data-string-test-01</td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                        <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-2/0001-input-data-string">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row">Testing valid input</td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0002-input-data-number-test-01</td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                        <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-2/0002-input-data-number">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row">Testing valid input</td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0003-input-data-string-allowed-values-test-01</td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                        <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-2/0003-input-data-string-allowed-values">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row">Testing valid input</td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="3" style="vertical-align:middle">0004-simpletable-U-test-01</td>
+                                <td align="center" rowspan="3" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-2/0004-simpletable-U/0004-simpletable-U.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="3" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-2/0004-simpletable-U">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="3" style="vertical-align:middle">0005-simpletable-A-test-01</td>
+                                <td align="center" rowspan="3" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-2/0005-simpletable-A/0005-simpletable-A.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="3" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-2/0005-simpletable-A">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="3" style="vertical-align:middle">0006-simpletable-P1-test-01</td>
+                                <td align="center" rowspan="3" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-2/0006-simpletable-P1/0006-simpletable-P1.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="3" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-2/0006-simpletable-P1">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="3" style="vertical-align:middle">0007-simpletable-P2-test-01</td>
+                                <td align="center" rowspan="3" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-2/0007-simpletable-P2/0007-simpletable-P2.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="3" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-2/0007-simpletable-P2">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="3" style="vertical-align:middle">0008-LX-arithmetic-test-01</td>
+                                <td align="center" rowspan="3" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-2/0008-LX-arithmetic/0008-LX-arithmetic.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="3" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-2/0008-LX-arithmetic">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="3" style="vertical-align:middle">0009-invocation-arithmetic-test-01</td>
+                                <td align="center" rowspan="3" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-2/0009-invocation-arithmetic/0009-invocation-arithmetic.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="3" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-2/0009-invocation-arithmetic">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="3" style="vertical-align:middle">0010-multi-output-U-test-01</td>
+                                <td align="center" rowspan="3" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-2/0010-multi-output-U/0010-multi-output-U.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="3" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-2/0010-multi-output-U">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="28" style="vertical-align:middle">compliance-level-3</td>
+                                <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0001-filter-test-01</td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-3/0001-filter/0001-filter.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-3/0001-filter">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0002-string-functions-test-01</td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-3/0002-string-functions/0002-string-functions.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-3/0002-string-functions">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0003-iteration-test-01</td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-3/0003-iteration/0003-iteration.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-3/0003-iteration">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0004-lending-test-01</td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-3/0004-lending/0004-lending.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-3/0004-lending">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="3" style="vertical-align:middle">0005-literal-invocation-test-01</td>
+                                <td align="center" rowspan="3" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-3/0005-literal-invocation/0005-literal-invocation.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="3" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-3/0005-literal-invocation">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0006-join-test-01</td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-3/0006-join/0006-join.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-3/0006-join">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0007-date-time-test-01</td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-3/0007-date-time/0007-date-time.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-3/0007-date-time">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0008-listGen-test-01</td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-3/0008-listGen/0008-listGen.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-3/0008-listGen">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0009-append-flatten-test-01</td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-3/0009-append-flatten/0009-append-flatten.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-3/0009-append-flatten">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0010-concatenate-test-01</td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-3/0010-concatenate/0010-concatenate.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-3/0010-concatenate">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0011-insert-remove-test-01</td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-3/0011-insert-remove/0011-insert-remove.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-3/0011-insert-remove">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0012-list-functions-test-01</td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-3/0012-list-functions/0012-list-functions.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-3/0012-list-functions">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0013-sort-test-01</td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-3/0013-sort/0013-sort.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-3/0013-sort">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0014-loan-comparison-test-01</td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-3/0014-loan-comparison/0014-loan-comparison.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-3/0014-loan-comparison">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="2" style="vertical-align:middle">0015-all-any-test-01</td>
+                                <td align="center" rowspan="2" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-3/0015-all-any/0015-all-any.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="2" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-3/0015-all-any">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0016-some-every-test-01</td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-3/0016-some-every/0016-some-every.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-3/0016-some-every">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0017-tableTests-test-01</td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-3/0017-tableTests/0017-tableTests.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-3/0017-tableTests">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0019-flight-rebooking-test-01</td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-3/0019-flight-rebooking/0019-flight-rebooking.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="1" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-3/0019-flight-rebooking">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="7" style="vertical-align:middle">0020-vacation-days-test-01</td>
+                                <td align="center" rowspan="7" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/compliance-level-3/0020-vacation-days/0020-vacation-days.pdf">
+                                        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                                <td align="center" rowspan="7" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/compliance-level-3/0020-vacation-days">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">004</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">005</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">006</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">007</td>
+                            <td class="text-nowrap" scope="row"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-    <!-- footer -->
+
+<!-- pre-footer -->
+<div class="pre-footer">
+    <div class="last-updated">
+        <p>Last updated:</strong> 26-May-2017 4:36:36 PM</p>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel-heading">
+                    <h3 class="panel-title">The DMN TCK is supported by:</h3>
+                </div>
+                <div class="panel-body">
+                    <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+                        <div style="display:inline-block; margin-top:10px;">
+                            <a href="http://www.redhat.com" target="_newtab">
+                                <img alt="redhat" class="img-thumbnail" src="images/redhat3.png" style="height: 60px"/>
+                            </a>
+                        </div>
+                        <div style="display:inline-block; margin-top:10px;">
+                            <a href="http://www.fujitsu.com/" target="_newtab">
+                                <img alt="fujitsu" class="img-thumbnail" src="images/Fujitsu.jpg" style="height: 60px"/>
+                            </a>
+                        </div>
+                        <div style="display:inline-block; margin-top:10px;">
+                            <a href="http://methodandstyle.com/" target="_newtab">
+                                <img alt="methodandstyle" class="img-thumbnail" src="images/MSlogo4x.jpg" style="height: 60px"/>
+                            </a>
+                        </div>
+                        <div style="display:inline-block; margin-top:10px;">
+                            <a href="http://www.trisotech.com" target="_newtab">
+                                <img alt="trisotech" class="img-thumbnail" src="images/trisotech3.jpg" style="height: 60px"/>
+                            </a>
+                        </div>
+                        <div style="display:inline-block; margin-top:10px;">
+                            <a href="http://www.camunda.com" target="_newtab">
+                                <img alt="camunda" class="img-thumbnail" src="images/camunda_logo.png" style="height: 60px"/>
+                            </a>
+                        </div>
+                        <div style="display:inline-block; margin-top:10px;">
+                            <a href="http://openrules.com/" target="_newtab">
+                                <img alt="openrules" class="img-thumbnail" src="images/openruleslogo.jpg" style="height: 60px"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- container -->
+</div>
+<!-- footer -->
 
 </div>
-<!--wrapper -->
-
 </body>
-
 </html>

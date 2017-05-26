@@ -53,7 +53,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/">
-                    <img src="images/logo.png" alt="PatternFly Enterprise Application"/>
+                    <img src="images/logo.png" alt="Decision Model and Notation TCK"/>
                 </a>
             </div>
             <div class="collapse navbar-collapse navbar-collapse-1">

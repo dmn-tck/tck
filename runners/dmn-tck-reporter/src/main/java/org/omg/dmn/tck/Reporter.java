@@ -17,8 +17,6 @@
 package org.omg.dmn.tck;
 
 import freemarker.template.Configuration;
-import freemarker.template.Template;
-import freemarker.template.TemplateException;
 import freemarker.template.TemplateExceptionHandler;
 import org.apache.commons.cli.*;
 import org.omg.dmn.tck.marshaller.TckMarshallingHelper;
@@ -60,7 +58,8 @@ public class Reporter {
         Map<String, ReportTable> tableByLabels = createTableByLabels( labels, results );
         Map<String, ReportChart> chartByLabels = createChartByLabels( labels, results);
         Map<String, ReportChart> chartByLabelsPercent = createChartByLabelsPercent( labels, results);
-        Map<String, ReportTable> tableAllTests = createTableAllTests( tests.values(), results );
+        ReportTable tableAllTests = createTableAllTests( params, tests.values() );
+        Map<String, ReportTable> tableAllTestsByVendor = createTableAllTestsByVendor( tests.values(), results );
         Map<String, List<ReportTable>> tableIndividualLabels = createTableByIndividualLabels( labels, results );
 
         logger.info( "Generating report" );
@@ -70,8 +69,9 @@ public class Reporter {
         for( Vendor vendor : results.values() ) {
             OverviewGenerator.generatePage( params, cfg, vendor, header, tableByLabels.get( vendor.getFileNameId() ),
                                             chartByLabels.get( vendor.getFileNameId() ), chartByLabelsPercent.get( vendor.getFileNameId() ) );
-            DetailGenerator.generatePage( params, cfg, vendor, header, tableAllTests.get( vendor.getFileNameId() ), tableIndividualLabels.get( vendor.getFileNameId() ) );
+            DetailGenerator.generatePage( params, cfg, vendor, header, tableAllTestsByVendor.get( vendor.getFileNameId() ), tableIndividualLabels.get( vendor.getFileNameId() ) );
         }
+        TestsGenerator.generatePage( params, cfg, header, tableAllTests );
     }
 
     private static ReportHeader createReportHeader(Map<String, TestCasesData> tests, Map<String, List<TestCasesData>> labels, Map<String, Vendor> results) {
@@ -91,7 +91,7 @@ public class Reporter {
 
         for( Map.Entry<String, List<TestCasesData>> entry : tests.entrySet() ) {
             List<TestCasesData> testList = entry.getValue();
-            Map<String, ReportTable> rt = createTableAllTests( testList, results );
+            Map<String, ReportTable> rt = createTableAllTestsByVendor( testList, results );
             for( Map.Entry<String, ReportTable> reportEntry : rt.entrySet() ) {
                 List<ReportTable> tablesForVendor = tables.get( reportEntry.getKey() );
                 if( tablesForVendor == null ) {
@@ -105,7 +105,40 @@ public class Reporter {
         return tables;
     }
 
-    private static Map<String, ReportTable> createTableAllTests(Collection<TestCasesData> tests, Map<String, Vendor> results) {
+    private static ReportTable createTableAllTests(Parameters params, Collection<TestCasesData> tests) {
+        ReportTable table = new ReportTable(  );
+        addHeader( table, "Compliance", "" );
+        addHeader( table, "Test Case", "" );
+        addHeader( table, "Test Suite", "" );
+        addHeader( table, "Doc", "" );
+        addHeader( table, "Source", "" );
+        addHeader( table, "Test", "" );
+        addHeader( table, "Description", "" );
+        String[] text = new String[3];
+        TableRow[] parents = new TableRow[3];
+        for( TestCasesData tcd : tests ) {
+            for( TestCases.TestCase tc : tcd.model.getTestCase() ) {
+                TableRow row = new TableRow(  );
+                String[] split = tcd.folder.split( "/" );
+                addRowCell( row, split[0], "" );
+                addRowCell( row, split[1], "" );
+                addRowCell( row, tcd.testCaseName, "" );
+                if( Files.exists( params.testsFolder.resolve( tcd.folder+"/"+split[1]+".pdf" ) ) ) {
+                    addRowCell( row, "OK", "glyphicon glyphicon-book" );
+                } else {
+                    addRowCell( row, "NA", "glyphicon glyphicon-book" );
+                }
+                addRowCell( row, "", "glyphicon glyphicon-folder-open" );
+                addRowCell( row, tc.getId() != null ? tc.getId() : "[no ID]", "" );
+                addRowCell( row, tc.getDescription() != null ? tc.getDescription() : "", "" );
+                table.getRows().add( row );
+                updateRowspan( text, parents, tcd, row, split );
+            }
+        }
+        return table;
+    }
+
+    private static Map<String, ReportTable> createTableAllTestsByVendor(Collection<TestCasesData> tests, Map<String, Vendor> results) {
         Map<String, ReportTable> tables = new HashMap<>(  );
         for( Vendor vendor : results.values() ) {
             ReportTable table = new ReportTable(  );
