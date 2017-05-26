@@ -111,31 +111,31 @@
 			<expected>
 				<list>
 					<item>
-						<value>a</value>
+						<list>
+							<item>
+								<value>w</value>
+							</item>
+							<item>
+								<value>x</value>
+							</item>
+						</list>
 					</item>
 					<item>
-						<value>b</value>
+						<value>y</value>
 					</item>
 					<item>
-						<value>c</value>
+						<value>z</value>
 					</item>
 					<item>
 						<list>
 							<item>
-								<list>
-									<item>
-										<value>w</value>
-									</item>
-									<item>
-										<value>x</value>
-									</item>
-								</list>
+								<value>a</value>
 							</item>
 							<item>
-								<value>y</value>
+								<value>b</value>
 							</item>
 							<item>
-								<value>z</value>
+								<value>c</value>
 							</item>
 						</list>
 					</item>
@@ -146,31 +146,31 @@
 			<expected>
 				<list>
 					<item>
-						<value>a</value>
+						<list>
+							<item>
+								<value>w</value>
+							</item>
+							<item>
+								<value>x</value>
+							</item>
+						</list>
 					</item>
 					<item>
-						<value>b</value>
+						<value>y</value>
 					</item>
 					<item>
-						<value>c</value>
+						<value>z</value>
 					</item>
 					<item>
 						<list>
 							<item>
-								<list>
-									<item>
-										<value>w</value>
-									</item>
-									<item>
-										<value>x</value>
-									</item>
-								</list>
+								<value>a</value>
 							</item>
 							<item>
-								<value>y</value>
+								<value>b</value>
 							</item>
 							<item>
-								<value>z</value>
+								<value>c</value>
 							</item>
 						</list>
 					</item>
@@ -181,31 +181,31 @@
 			<expected>
 				<list>
 					<item>
-						<value>a</value>
+						<list>
+							<item>
+								<value>w</value>
+							</item>
+							<item>
+								<value>x</value>
+							</item>
+						</list>
 					</item>
 					<item>
-						<value>b</value>
+						<value>y</value>
 					</item>
 					<item>
-						<value>c</value>
+						<value>z</value>
 					</item>
 					<item>
 						<list>
 							<item>
-								<list>
-									<item>
-										<value>w</value>
-									</item>
-									<item>
-										<value>x</value>
-									</item>
-								</list>
+								<value>a</value>
 							</item>
 							<item>
-								<value>y</value>
+								<value>b</value>
 							</item>
 							<item>
-								<value>z</value>
+								<value>c</value>
 							</item>
 						</list>
 					</item>
@@ -240,15 +240,6 @@
 			<expected>
 				<list>
 					<item>
-						<value>a</value>
-					</item>
-					<item>
-						<value>b</value>
-					</item>
-					<item>
-						<value>c</value>
-					</item>
-					<item>
 						<value>w</value>
 					</item>
 					<item>
@@ -259,6 +250,15 @@
 					</item>
 					<item>
 						<value>z</value>
+					</item>
+					<item>
+						<value>a</value>
+					</item>
+					<item>
+						<value>b</value>
+					</item>
+					<item>
+						<value>c</value>
 					</item>
 				</list>
 			</expected>
@@ -267,15 +267,6 @@
 			<expected>
 				<list>
 					<item>
-						<value>a</value>
-					</item>
-					<item>
-						<value>b</value>
-					</item>
-					<item>
-						<value>c</value>
-					</item>
-					<item>
 						<value>w</value>
 					</item>
 					<item>
@@ -286,6 +277,15 @@
 					</item>
 					<item>
 						<value>z</value>
+					</item>
+					<item>
+						<value>a</value>
+					</item>
+					<item>
+						<value>b</value>
+					</item>
+					<item>
+						<value>c</value>
 					</item>
 				</list>
 			</expected>
@@ -294,15 +294,6 @@
 			<expected>
 				<list>
 					<item>
-						<value>a</value>
-					</item>
-					<item>
-						<value>b</value>
-					</item>
-					<item>
-						<value>c</value>
-					</item>
-					<item>
 						<value>w</value>
 					</item>
 					<item>
@@ -313,6 +304,15 @@
 					</item>
 					<item>
 						<value>z</value>
+					</item>
+					<item>
+						<value>a</value>
+					</item>
+					<item>
+						<value>b</value>
+					</item>
+					<item>
+						<value>c</value>
 					</item>
 				</list>
 			</expected>

@@ -45,7 +45,7 @@
 			<requiredInput href="#_4e72e88f-2239-43b8-9944-4893daf84127"/>
 		</informationRequirement>
 		<literalExpression>
-			<text>append(simpleList,nestedList)</text>
+			<text>append(nestedList,simpleList)</text>
 		</literalExpression>
 	</decision>
 	<decision id="_877fd216-703c-4b2f-8197-9f3ed144ff4d" name="append3">
@@ -57,7 +57,7 @@
 			<requiredInput href="#_4e72e88f-2239-43b8-9944-4893daf84127"/>
 		</informationRequirement>
 		<literalExpression>
-			<text>append(literalSimpleList,nestedList)</text>
+			<text>append(nestedList,literalSimpleList)</text>
 		</literalExpression>
 	</decision>
 	<decision id="_cf4db6c6-da6b-42fe-8f85-110f8d711111" name="append4">
@@ -69,7 +69,7 @@
 			<requiredDecision href="#_d6152254-7ad2-4aeb-90a0-16b962a11257"/>
 		</informationRequirement>
 		<literalExpression>
-			<text>append(literalSimpleList,literalNestedList)</text>
+			<text>append(literalNestedList,literalSimpleList)</text>
 		</literalExpression>
 	</decision>
 	<decision id="_84459bf0-7e3a-4897-8f0d-5abb51b1d564" name="flatten1">
