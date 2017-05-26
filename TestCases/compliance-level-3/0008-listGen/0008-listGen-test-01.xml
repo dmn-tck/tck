@@ -108,14 +108,10 @@
 			<expected>
 				<list>
 					<item>
-						<list>
-							<item>
-								<value>w</value>
-							</item>
-							<item>
-								<value>x</value>
-							</item>
-						</list>
+						<value>w</value>
+					</item>
+					<item>
+						<value>x</value>
 					</item>
 					<item>
 						<value>y</value>
@@ -130,14 +126,10 @@
 			<expected>
 				<list>
 					<item>
-						<list>
-							<item>
-								<value>w</value>
-							</item>
-							<item>
-								<value>x</value>
-							</item>
-						</list>
+						<value>w</value>
+					</item>
+					<item>
+						<value>x</value>
 					</item>
 					<item>
 						<value>y</value>
@@ -158,24 +150,16 @@
 						<value>b</value>
 					</item>
 					<item>
-						<list>
-							<item>
-								<list>
-									<item>
-										<value>w</value>
-									</item>
-									<item>
-										<value>x</value>
-									</item>
-								</list>
-							</item>
-							<item>
-								<value>y</value>
-							</item>
-							<item>
-								<value>z</value>
-							</item>
-						</list>
+						<value>w</value>
+					</item>
+					<item>
+						<value>x</value>
+					</item>
+					<item>
+						<value>y</value>
+					</item>
+					<item>
+						<value>z</value>
 					</item>
 				</list>
 			</expected>
@@ -190,24 +174,16 @@
 						<value>b</value>
 					</item>
 					<item>
-						<list>
-							<item>
-								<list>
-									<item>
-										<value>w</value>
-									</item>
-									<item>
-										<value>x</value>
-									</item>
-								</list>
-							</item>
-							<item>
-								<value>y</value>
-							</item>
-							<item>
-								<value>z</value>
-							</item>
-						</list>
+						<value>w</value>
+					</item>
+					<item>
+						<value>x</value>
+					</item>
+					<item>
+						<value>y</value>
+					</item>
+					<item>
+						<value>z</value>
 					</item>
 				</list>
 			</expected>
@@ -216,37 +192,25 @@
 			<expected>
 				<list>
 					<item>
-						<list>
-							<item>
-								<value>a</value>
-							</item>
-							<item>
-								<value>b</value>
-							</item>
-							<item>
-								<value>c</value>
-							</item>
-						</list>
+						<value>a</value>
 					</item>
 					<item>
-						<list>
-							<item>
-								<list>
-									<item>
-										<value>w</value>
-									</item>
-									<item>
-										<value>x</value>
-									</item>
-								</list>
-							</item>
-							<item>
-								<value>y</value>
-							</item>
-							<item>
-								<value>z</value>
-							</item>
-						</list>
+						<value>b</value>
+					</item>
+					<item>
+						<value>c</value>
+					</item>
+					<item>
+						<value>w</value>
+					</item>
+					<item>
+						<value>x</value>
+					</item>
+					<item>
+						<value>y</value>
+					</item>
+					<item>
+						<value>z</value>
 					</item>
 				</list>
 			</expected>

@@ -161,7 +161,7 @@
 	<decision id="_50554bc6-d4e1-468b-a620-db2d35da5a0b" name="listGen6">
 		<variable name="listGen6" typeRef="tns:tStringList"/>
 		<literalExpression>
-			<text>[["w","x"],"y","z"]</text>
+			<text>flatten([["w","x"],"y","z"])</text>
 		</literalExpression>
 	</decision>
 	<decision id="_6d3062b2-55d4-4299-aeb2-a5e97e03daec" name="listGen7">
@@ -170,7 +170,7 @@
 			<requiredInput href="#_c51e77a1-30a4-4f23-9054-6c359bf80e9f"/>
 		</informationRequirement>
 		<literalExpression>
-			<text>[wx,"y","z"]</text>
+			<text>flatten([wx,"y","z"])</text>
 		</literalExpression>
 	</decision>
 	<decision id="_bd8b0287-1ff4-4c13-b0ef-68cff151cabd" name="listGen8">
@@ -185,7 +185,7 @@
 			<requiredDecision href="#_50554bc6-d4e1-468b-a620-db2d35da5a0b"/>
 		</informationRequirement>
 		<literalExpression>
-			<text>[a,b,listGen6]</text>
+			<text>flatten([a,b,listGen6])</text>
 		</literalExpression>
 	</decision>
 	<decision id="_64ccac33-c22b-454d-b763-5a77ffd38678" name="listGen9">
@@ -200,7 +200,7 @@
 			<requiredDecision href="#_6d3062b2-55d4-4299-aeb2-a5e97e03daec"/>
 		</informationRequirement>
 		<literalExpression>
-			<text>[a,b,listGen7]</text>
+			<text>flatten([a,b,listGen7])</text>
 		</literalExpression>
 	</decision>
 	<decision id="_9d464a01-5230-4270-88b6-f8e08d03e10b" name="listGen10">
@@ -212,7 +212,7 @@
 			<requiredDecision href="#_ca299168-4590-4040-bb10-beb7d1a6932b"/>
 		</informationRequirement>
 		<literalExpression>
-			<text>[listGen4,listGen7]</text>
+			<text>flatten([listGen4,listGen7])</text>
 		</literalExpression>
 	</decision>
 </definitions>
