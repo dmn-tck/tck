@@ -57,15 +57,15 @@ public class DroolsTCKTest
     public List<URL> getTestCases() {
         List<URL> testCases = new ArrayList<>(  );
         File cl2parent = new File("../../TestCases/compliance-level-2");
-//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "\\d\\d\\d\\d-.*" );
-        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0012-.*" );
-//        for( File file : cl2parent.listFiles( filenameFilter ) ) {
-//            try {
-//                testCases.add( file.toURI().toURL() );
-//            } catch ( MalformedURLException e ) {
-//                e.printStackTrace();
-//            }
-//        }
+        FilenameFilter filenameFilter = (dir, name) -> name.matches( "\\d\\d\\d\\d-.*" );
+//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0012-.*" );
+        for( File file : cl2parent.listFiles( filenameFilter ) ) {
+            try {
+                testCases.add( file.toURI().toURL() );
+            } catch ( MalformedURLException e ) {
+                e.printStackTrace();
+            }
+        }
         File cl3parent = new File("../../TestCases/compliance-level-3");
         for( File file : cl3parent.listFiles( filenameFilter ) ) {
             try {
