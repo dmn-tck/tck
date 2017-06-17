@@ -3,7 +3,7 @@
 
 ## Current Result Web Site
 
-* https://agilepro.github.io/dmn-tck/
+* https://dmn-tck.github.io/tck/
 
 ## Collaboration Site
 
