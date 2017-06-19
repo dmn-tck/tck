@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../../testCases.xsd">
+	<modelName>0102-feel-constants.dmn</modelName>
+	<labels>
+	    <label>Compliance Level 2</label>
+		<label>Literal Expression</label>
+	    <label>FEEL constants</label>
+	    <label>Data Type: String</label>
+	</labels>
+	<testCase id="001"> 
+		<description>Tests FEEL string constants</description>
+		<resultNode name="Decision1" type="decision">
+			<expected>
+				<value>foo bar</value>
+			</expected>
+		</resultNode>
+	    <resultNode name="Decision2" type="decision">
+	        <expected>
+	            <value>šomeÚnicodeŠtriňg</value>
+	        </expected>
+	    </resultNode>
+	    <resultNode name="Decision3" type="decision">
+	        <expected>
+	            <value>横綱</value>
+	        </expected>
+	    </resultNode>
+	    <resultNode name="Decision4" type="decision">
+	        <expected>
+	            <value>thisIsSomeLongStringThatMustBeProcessedSoHopefullyThisTestPassWithItAndIMustWriteSomethingMoreSoItIsLongerAndLongerAndLongerAndLongerAndLongerTillItIsReallyLong</value>
+	        </expected>
+	    </resultNode>
+	</testCase>
+</testCases>
