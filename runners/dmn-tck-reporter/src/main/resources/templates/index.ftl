@@ -24,6 +24,8 @@
     <!-- site libs -->
     <script src="js/index.js"></script>
     <link href="css/lib.css" rel="stylesheet" media="screen, print">
+
+    <title>Decision Model and Notation TCK</title>
 </head>
 <body>
 
