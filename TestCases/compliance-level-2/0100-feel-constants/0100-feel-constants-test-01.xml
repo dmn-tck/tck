@@ -6,7 +6,7 @@
 	<labels>
 	    <label>Compliance Level 2</label>
 		<label>Literal Expression</label>
-	    <label>FEEL constants</label>
+	    <label>FEEL Constants</label>
 	    <label>Data Type: Boolean</label>
 	</labels>
 	<testCase id="001"> 
