@@ -16,7 +16,7 @@
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1"/>
-							<xs:element name="inputNode" maxOccurs="unbounded">
+							<xs:element name="inputNode" minOccurs="0" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:complexContent>
 										<xs:extension base="valueType">
