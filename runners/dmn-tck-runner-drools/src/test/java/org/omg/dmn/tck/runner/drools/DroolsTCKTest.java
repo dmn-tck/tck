@@ -58,7 +58,7 @@ public class DroolsTCKTest
         List<URL> testCases = new ArrayList<>(  );
         File cl2parent = new File("../../TestCases/compliance-level-2");
         FilenameFilter filenameFilter = (dir, name) -> name.matches( "\\d\\d\\d\\d-.*" );
-//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0012-.*" );
+//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0105-.*" );
         for( File file : cl2parent.listFiles( filenameFilter ) ) {
             try {
                 testCases.add( file.toURI().toURL() );
