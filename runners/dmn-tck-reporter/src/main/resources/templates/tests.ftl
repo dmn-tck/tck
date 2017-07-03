@@ -115,7 +115,7 @@
                                 <td class="text-nowrap" scope="row" rowspan="${row.rowspan[2]}" style="vertical-align:middle">${row.text[2]}</td>
                                 <td align="center" rowspan="${row.rowspan[2]}" style="vertical-align:middle">
                                     <#if row.text[3] == "OK">
-                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/blob/master/TestCases/${row.text[0]}/${row.text[1]}/${row.text[1]}.pdf">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/blob/master/TestCases/${row.text[0]}/${row.text[1]}/${row.text[1]}.pdf">
                                         <span class="${row.icons[3]}" aria-hidden="true"></span>
                                     </a>
                                     <#else>
@@ -123,7 +123,7 @@
                                     </#if>
                                 </td>
                                 <td align="center" rowspan="${row.rowspan[2]}" style="vertical-align:middle">
-                                    <a target="_blank" href="https://github.com/agilepro/dmn-tck/tree/master/TestCases/${row.text[0]}/${row.text[1]}">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/${row.text[0]}/${row.text[1]}">
                                         <span class="${row.icons[4]}" aria-hidden="true"></span>
                                     </a>
                                 </td>
