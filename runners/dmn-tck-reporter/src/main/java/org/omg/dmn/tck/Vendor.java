@@ -104,7 +104,7 @@ public class Vendor {
     }
 
     public String getFileNameId() {
-        return product.replaceAll( "//s+","" ) + "_" + version.replaceAll( "//s+", "" );
+        return product.replaceAll( "//s+,","" ) + "_" + version.replaceAll( "//s+", "" );
     }
 
     public long getSucceeded() {

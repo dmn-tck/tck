@@ -92,12 +92,12 @@
                     </div>
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Tests:</strong> 52</p>
+                            <p><strong>Tests:</strong> 49</p>
                         </small>
                     </div>
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Labels:</strong> 29</p>
+                            <p><strong>Labels:</strong> 25</p>
                         </small>
                     </div>
                 </div>
@@ -114,9 +114,9 @@
                 };
 
                 var color = Chart.helpers.color;
-                var cbl2_data = {
+                var cbl3_data = {
                     labels: [
-                        "Business Knowledge Model","Compliance Level 2","Compliance Level 3","Context","Data Type: Boolean","Data Type: Number","Data Type: String","Decision Table: Multiple Output","Decision Table: Single Output","FEEL Arithmetic","FEEL Conditionals","FEEL Constants","FEEL Filter (10.3.2.5)","FEEL Function Literals","FEEL Functions: date and time","FEEL Functions: lists","FEEL Functions: strings","FEEL Iteration","FEEL List","FEEL Quantifiers","FEEL Relation","Function Invocation","Hit Policy: ANY","Hit Policy: COLLECT","Hit Policy: PRIORITY","Hit Policy: UNIQUE","Item Definition","Literal Expression","Relation"
+                        "Business Knowledge Model","Compliance Level 2","Compliance Level 3","Context","Decision Table: Multiple Output","Decision Table: Single Output","FEEL Arithmetic","FEEL Conditionals","FEEL Filter (10.3.2.5)","FEEL Function Literals","FEEL Functions: date and time","FEEL Functions: lists","FEEL Functions: strings","FEEL Iteration","FEEL List","FEEL Quantifiers","FEEL Relation","Function Invocation","Hit Policy: ANY","Hit Policy: COLLECT","Hit Policy: PRIORITY","Hit Policy: UNIQUE","Item Definition","Literal Expression","Relation"
                     ],
                     datasets: [
                         {
@@ -129,14 +129,10 @@
                                 24,
                                 25,
                                 4,
-                                0,
-                                0,
-                                0,
                                 3,
                                 25,
                                 12,
                                 2,
-                                0,
                                 2,
                                 2,
                                 1,
@@ -163,17 +159,6 @@
                             borderWidth: 1,
                             data: [
                                 0,
-                                3,
-                                0,
-                                0,
-                                1,
-                                1,
-                                1,
-                                0,
-                                0,
-                                0,
-                                0,
-                                3,
                                 0,
                                 0,
                                 0,
@@ -189,7 +174,14 @@
                                 0,
                                 0,
                                 0,
-                                3,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
                                 0
                             ]
                         },
@@ -199,10 +191,6 @@
                             borderColor: window.chartColors.red,
                             borderWidth: 1,
                             data: [
-                                0,
-                                0,
-                                0,
-                                0,
                                 0,
                                 0,
                                 0,
@@ -232,9 +220,9 @@
                         }
                     ]
                 };
-                var cblp2_data = {
+                var cblp3_data = {
                     labels: [
-                        "Business Knowledge Model","Compliance Level 2","Compliance Level 3","Context","Data Type: Boolean","Data Type: Number","Data Type: String","Decision Table: Multiple Output","Decision Table: Single Output","FEEL Arithmetic","FEEL Conditionals","FEEL Constants","FEEL Filter (10.3.2.5)","FEEL Function Literals","FEEL Functions: date and time","FEEL Functions: lists","FEEL Functions: strings","FEEL Iteration","FEEL List","FEEL Quantifiers","FEEL Relation","Function Invocation","Hit Policy: ANY","Hit Policy: COLLECT","Hit Policy: PRIORITY","Hit Policy: UNIQUE","Item Definition","Literal Expression","Relation"
+                        "Business Knowledge Model","Compliance Level 2","Compliance Level 3","Context","Decision Table: Multiple Output","Decision Table: Single Output","FEEL Arithmetic","FEEL Conditionals","FEEL Filter (10.3.2.5)","FEEL Function Literals","FEEL Functions: date and time","FEEL Functions: lists","FEEL Functions: strings","FEEL Iteration","FEEL List","FEEL Quantifiers","FEEL Relation","Function Invocation","Hit Policy: ANY","Hit Policy: COLLECT","Hit Policy: PRIORITY","Hit Policy: UNIQUE","Item Definition","Literal Expression","Relation"
                     ],
                     datasets: [
                         {
@@ -244,17 +232,6 @@
                             borderWidth: 1,
                             data: [
                             100,
-                            89,
-                            100,
-                            100,
-                            0,
-                            0,
-                            0,
-                            100,
-                            100,
-                            100,
-                            100,
-                            0,
                             100,
                             100,
                             100,
@@ -270,7 +247,14 @@
                             100,
                             100,
                             100,
-                            92,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
                             100
                             ]
                         },
@@ -281,17 +265,6 @@
                             borderWidth: 1,
                             data: [
                             0,
-                            11,
-                            0,
-                            0,
-                            100,
-                            100,
-                            100,
-                            0,
-                            0,
-                            0,
-                            0,
-                            100,
                             0,
                             0,
                             0,
@@ -307,7 +280,14 @@
                             0,
                             0,
                             0,
-                            8,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
                             0
                             ]
                         },
@@ -317,10 +297,6 @@
                             borderColor: window.chartColors.red,
                             borderWidth: 1,
                             data: [
-                            0,
-                            0,
-                            0,
-                            0,
                             0,
                             0,
                             0,
@@ -353,10 +329,10 @@
 
                 window.onload = function() {
                     // chart by test numbers
-                    var ctx = document.getElementById("cbl2").getContext("2d");
-                    window.cbl2 = new Chart(ctx, {
+                    var ctx = document.getElementById("cbl3").getContext("2d");
+                    window.cbl3 = new Chart(ctx, {
                         type: 'horizontalBar',
-                        data: cbl2_data,
+                        data: cbl3_data,
                         options: {
                             // Elements options apply to all of the options unless overridden in a dataset
                             // In this case, we are setting the border of each horizontal bar to be 2px wide
@@ -385,10 +361,10 @@
                     });
 
                     // chart by test percentage
-                    var ctxp = document.getElementById("cblp2").getContext("2d");
-                    window.cblp2 = new Chart(ctxp, {
+                    var ctxp = document.getElementById("cblp3").getContext("2d");
+                    window.cblp3 = new Chart(ctxp, {
                         type: 'horizontalBar',
-                        data: cblp2_data,
+                        data: cblp3_data,
                         options: {
                             // Elements options apply to all of the options unless overridden in a dataset
                             // In this case, we are setting the border of each horizontal bar to be 2px wide
@@ -429,12 +405,12 @@
             <div class="tab-content">
                 <div id="tab1" class="tab-pane fade active in">
                     <div id="chart_by_percent" style="width: 100%;">
-                        <canvas id="cblp2"></canvas>
+                        <canvas id="cblp3"></canvas>
                     </div>
                 </div>
                 <div id="tab2" class="tab-pane fade">
                     <div id="chart_by_numbers" style="width: 100%;">
-                        <canvas id="cbl2"></canvas>
+                        <canvas id="cbl3"></canvas>
                     </div>
                 </div>
                 <div id="tab3" class="tab-pane fade">
@@ -462,7 +438,7 @@
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb1','Compliance Level 2')">Compliance Level 2</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-alert icon-yellow" aria-hidden="true"><br/><small>24/27</small></span>
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>24/24</small></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -478,151 +454,127 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb4','Data Type: Boolean')">Data Type: Boolean</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/1</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb5','Data Type: Number')">Data Type: Number</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/1</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb6','Data Type: String')">Data Type: String</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/1</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb7','Decision Table: Multiple Output')">Decision Table: Multiple Output</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb4','Decision Table: Multiple Output')">Decision Table: Multiple Output</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb8','Decision Table: Single Output')">Decision Table: Single Output</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb5','Decision Table: Single Output')">Decision Table: Single Output</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>25/25</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb9','FEEL Arithmetic')">FEEL Arithmetic</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb6','FEEL Arithmetic')">FEEL Arithmetic</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>12/12</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb10','FEEL Conditionals')">FEEL Conditionals</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb7','FEEL Conditionals')">FEEL Conditionals</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>2/2</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb11','FEEL Constants')">FEEL Constants</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/3</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb12','FEEL Filter (10.3.2.5)')">FEEL Filter (10.3.2.5)</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb8','FEEL Filter (10.3.2.5)')">FEEL Filter (10.3.2.5)</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>2/2</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb13','FEEL Function Literals')">FEEL Function Literals</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb9','FEEL Function Literals')">FEEL Function Literals</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>2/2</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb14','FEEL Functions: date and time')">FEEL Functions: date and time</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb10','FEEL Functions: date and time')">FEEL Functions: date and time</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>1/1</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb15','FEEL Functions: lists')">FEEL Functions: lists</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb11','FEEL Functions: lists')">FEEL Functions: lists</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>5/5</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb16','FEEL Functions: strings')">FEEL Functions: strings</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb12','FEEL Functions: strings')">FEEL Functions: strings</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>1/1</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb17','FEEL Iteration')">FEEL Iteration</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb13','FEEL Iteration')">FEEL Iteration</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>2/2</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb18','FEEL List')">FEEL List</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb14','FEEL List')">FEEL List</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>7/7</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb19','FEEL Quantifiers')">FEEL Quantifiers</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb15','FEEL Quantifiers')">FEEL Quantifiers</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>1/1</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb20','FEEL Relation')">FEEL Relation</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb16','FEEL Relation')">FEEL Relation</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>1/1</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb21','Function Invocation')">Function Invocation</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb17','Function Invocation')">Function Invocation</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>4/4</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb22','Hit Policy: ANY')">Hit Policy: ANY</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb18','Hit Policy: ANY')">Hit Policy: ANY</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb23','Hit Policy: COLLECT')">Hit Policy: COLLECT</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb19','Hit Policy: COLLECT')">Hit Policy: COLLECT</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>9/9</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb24','Hit Policy: PRIORITY')">Hit Policy: PRIORITY</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb20','Hit Policy: PRIORITY')">Hit Policy: PRIORITY</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>8/8</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb25','Hit Policy: UNIQUE')">Hit Policy: UNIQUE</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb21','Hit Policy: UNIQUE')">Hit Policy: UNIQUE</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>8/8</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb26','Item Definition')">Item Definition</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb22','Item Definition')">Item Definition</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>35/35</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb27','Literal Expression')">Literal Expression</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb23','Literal Expression')">Literal Expression</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-alert icon-yellow" aria-hidden="true"><br/><small>34/37</small></span>
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>34/34</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb28','Relation')">Relation</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech DMN Modeler_5.1.10.html', 'tb24','Relation')">Relation</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>2/2</small></span>
                                     </td>
@@ -645,7 +597,7 @@
 <!-- pre-footer -->
 <div class="pre-footer">
     <div class="last-updated">
-        <p>Last updated:</strong> 3-Jul-2017 10:12:36 AM</p>
+        <p>Last updated:</strong> 7-Jul-2017 6:56:06 AM</p>
     </div>
 </div>
 <div class="footer">

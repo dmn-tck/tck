@@ -58,7 +58,7 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    16, 0, 36
+                    16, 0, 33
                 ]
             }
         ]
@@ -81,7 +81,7 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    52, 0, 0
+                    28, 0, 21
                 ]
             }
         ]
@@ -104,7 +104,30 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    52, 0, 0
+                    52, 0, -3
+                ]
+            }
+        ]
+    };
+        var c_data3 = {
+        labels: [
+            "Succeeded", "Failed", "Skipped"
+        ],
+        datasets: [
+            {
+                backgroundColor: [
+                    color(window.chartColors.green).alpha(0.5).rgbString(),
+                    color(window.chartColors.red).alpha(0.5).rgbString(),
+                    color(window.chartColors.yellow).alpha(0.5).rgbString()
+                ],
+                borderColor: [
+                    window.chartColors.grey,
+                    window.chartColors.grey,
+                    window.chartColors.grey
+                ],
+                borderWidth: 1,
+                data: [
+                    52, 0, -3
                 ]
             }
         ]
@@ -145,6 +168,21 @@
         window.chart2 = new Chart(ctx, {
             type: 'doughnut',
             data: c_data2,
+            options: {
+                responsive: true,
+                legend: {
+                    position: 'right',
+                },
+                title: {
+                    display: true,
+                    text: 'Submitted results'
+                }
+            }
+        });
+        var ctx = document.getElementById("chart3").getContext("2d");
+        window.chart3 = new Chart(ctx, {
+            type: 'doughnut',
+            data: c_data3,
             options: {
                 responsive: true,
                 legend: {
@@ -236,7 +274,7 @@
                                 </div>
                                 <div class="list-view-pf-additional-info">
                                     <div class="list-view-pf-additional-info-item">
-                                        Submitted:&nbsp;<b>16/52</b>
+                                        Submitted:&nbsp;<b>16/49</b>
                                     </div>
                                     <div class="list-view-pf-additional-info-item">
                                         Last Submission:&nbsp;<b>2017-05-16</b>
@@ -258,12 +296,79 @@
                             <div class="col-md-10">
                                 <dl class="dl-horizontal">
                                     <dt>Last Submission: </dt><dd>2017-05-16</dd>
-                                    <dt>Tests: </dt><dd>52</dd>
-                                    <dt>Labels: </dt><dd>29</dd>
+                                    <dt>Tests: </dt><dd>49</dd>
+                                    <dt>Labels: </dt><dd>25</dd>
                                     <dt>Succeeded: </dt><dd>16</dd>
                                     <dt>Failed: </dt><dd>0</dd>
-                                    <dt>Skipped: </dt><dd>36</dd>
+                                    <dt>Skipped: </dt><dd>33</dd>
                                     <dt>Info: </dt><dd>Camunda BPM provides a model execution engine that integrates DMN with BPMN & CMMN.</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- OpenRules 7.0.0 -->
+                <div class="list-group-item">
+                    <div class="list-group-item-header">
+                        <div class="list-view-pf-actions">
+                            <a href="overview_OpenRules_7.0.0.html" class="btn btn-default">Details</a>
+                            <!--div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight1" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="true">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight1">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div-->
+                        </div>
+                        <div class="list-view-pf-main-info">
+                            <div class="list-view-pf-left">
+                                <span class="fa fa-university list-view-pf-icon-sm"></span>
+                            </div>
+                            <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                    <div class="list-group-item-heading">
+                                        OpenRules, Inc.
+                                    </div>
+                                    <div class="list-group-item-text">
+                                        OpenRules 7.0.0
+                                    </div>
+                                </div>
+                                <div class="list-view-pf-additional-info">
+                                    <div class="list-view-pf-additional-info-item">
+                                        Submitted:&nbsp;<b>28/49</b>
+                                    </div>
+                                    <div class="list-view-pf-additional-info-item">
+                                        Last Submission:&nbsp;<b>2017-07-05</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-group-item-container container-fluid hidden">
+                        <div class="close">
+                            <span class="pficon pficon-close"></span>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-2">
+                                <canvas id="chart1"></canvas>
+                            </div>
+
+                            <div class="col-md-10">
+                                <dl class="dl-horizontal">
+                                    <dt>Last Submission: </dt><dd>2017-07-05</dd>
+                                    <dt>Tests: </dt><dd>49</dd>
+                                    <dt>Labels: </dt><dd>25</dd>
+                                    <dt>Succeeded: </dt><dd>28</dd>
+                                    <dt>Failed: </dt><dd>0</dd>
+                                    <dt>Skipped: </dt><dd>21</dd>
+                                    <dt>Info: </dt><dd>OpenRules provides a runtime compliance level 2 engine</dd>
                                 </dl>
                             </div>
                         </div>
@@ -275,11 +380,11 @@
                         <div class="list-view-pf-actions">
                             <a href="overview_Drools_7.0.0.Final.html" class="btn btn-default">Details</a>
                             <!--div class="dropdown pull-right dropdown-kebab-pf">
-                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight1" data-toggle="dropdown" aria-haspopup="true"
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight2" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true">
                                     <span class="fa fa-ellipsis-v"></span>
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight1">
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight2">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li><a href="#">Something else here</a></li>
@@ -303,7 +408,7 @@
                                 </div>
                                 <div class="list-view-pf-additional-info">
                                     <div class="list-view-pf-additional-info-item">
-                                        Submitted:&nbsp;<b>52/52</b>
+                                        Submitted:&nbsp;<b>52/49</b>
                                     </div>
                                     <div class="list-view-pf-additional-info-item">
                                         Last Submission:&nbsp;<b>2017-04-12</b>
@@ -319,17 +424,17 @@
                         <div class="row">
 
                             <div class="col-md-2">
-                                <canvas id="chart1"></canvas>
+                                <canvas id="chart2"></canvas>
                             </div>
 
                             <div class="col-md-10">
                                 <dl class="dl-horizontal">
                                     <dt>Last Submission: </dt><dd>2017-04-12</dd>
-                                    <dt>Tests: </dt><dd>52</dd>
-                                    <dt>Labels: </dt><dd>29</dd>
+                                    <dt>Tests: </dt><dd>49</dd>
+                                    <dt>Labels: </dt><dd>25</dd>
                                     <dt>Succeeded: </dt><dd>52</dd>
                                     <dt>Failed: </dt><dd>0</dd>
-                                    <dt>Skipped: </dt><dd>0</dd>
+                                    <dt>Skipped: </dt><dd>-3</dd>
                                     <dt>Info: </dt><dd>Drools provides a runtime compliance level 3 engine</dd>
                                 </dl>
                             </div>
@@ -342,11 +447,11 @@
                         <div class="list-view-pf-actions">
                             <a href="overview_Trisotech DMN Modeler_5.1.10.html" class="btn btn-default">Details</a>
                             <!--div class="dropdown pull-right dropdown-kebab-pf">
-                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight2" data-toggle="dropdown" aria-haspopup="true"
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight3" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true">
                                     <span class="fa fa-ellipsis-v"></span>
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight2">
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight3">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li><a href="#">Something else here</a></li>
@@ -370,7 +475,7 @@
                                 </div>
                                 <div class="list-view-pf-additional-info">
                                     <div class="list-view-pf-additional-info-item">
-                                        Submitted:&nbsp;<b>52/52</b>
+                                        Submitted:&nbsp;<b>52/49</b>
                                     </div>
                                     <div class="list-view-pf-additional-info-item">
                                         Last Submission:&nbsp;<b>2017-04-12</b>
@@ -386,17 +491,17 @@
                         <div class="row">
 
                             <div class="col-md-2">
-                                <canvas id="chart2"></canvas>
+                                <canvas id="chart3"></canvas>
                             </div>
 
                             <div class="col-md-10">
                                 <dl class="dl-horizontal">
                                     <dt>Last Submission: </dt><dd>2017-04-12</dd>
-                                    <dt>Tests: </dt><dd>52</dd>
-                                    <dt>Labels: </dt><dd>29</dd>
+                                    <dt>Tests: </dt><dd>49</dd>
+                                    <dt>Labels: </dt><dd>25</dd>
                                     <dt>Succeeded: </dt><dd>52</dd>
                                     <dt>Failed: </dt><dd>0</dd>
-                                    <dt>Skipped: </dt><dd>0</dd>
+                                    <dt>Skipped: </dt><dd>-3</dd>
                                     <dt>Info: </dt><dd>A full compliance level 3 DMN authoring environment</dd>
                                 </dl>
                             </div>
@@ -410,7 +515,7 @@
 <!-- pre-footer -->
 <div class="pre-footer">
     <div class="last-updated">
-        <p>Last updated:</strong> 3-Jul-2017 10:12:36 AM</p>
+        <p>Last updated:</strong> 7-Jul-2017 6:56:06 AM</p>
     </div>
 </div>
 <div class="footer">
