@@ -38,11 +38,8 @@ compliance-level-3/0011-insert-remove,0011-insert-remove-test-01,001,SUCCESS
 compliance-level-3/0012-list-functions,0012-list-functions-test-01,001,SUCCESS
 compliance-level-3/0013-sort,0013-sort-test-01,001,SUCCESS
 compliance-level-3/0014-loan-comparison,0014-loan-comparison-test-01,001,SUCCESS
-compliance-level-3/0015-all-any,0015-all-any-test-01,001,SUCCESS
-compliance-level-3/0015-all-any,0015-all-any-test-01,002,SUCCESS
 compliance-level-3/0016-some-every,0016-some-every-test-01,001,SUCCESS
 compliance-level-3/0017-tableTests,0017-tableTests-test-01,001,SUCCESS
-compliance-level-3/0019-flight-rebooking,0019-flight-rebooking-test-01,001,SUCCESS
 compliance-level-3/0020-vacation-days,0020-vacation-days-test-01,001,SUCCESS
 compliance-level-3/0020-vacation-days,0020-vacation-days-test-01,006,SUCCESS
 compliance-level-3/0020-vacation-days,0020-vacation-days-test-01,007,SUCCESS
