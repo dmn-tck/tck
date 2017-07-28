@@ -39,7 +39,7 @@ public class DmnTckRunner
     private static final Logger logger = LoggerFactory.getLogger( DmnTckRunner.class );
 
     // The description of the test suite
-    private final ConcurrentMap<TestCases.TestCase, Description> children = new ConcurrentHashMap<TestCases.TestCase, Description>();
+    private final ConcurrentMap<TestCases.TestCase, Description> children = new ConcurrentHashMap<>();
     private final DmnTckVendorTestSuite vendorSuite;
     private       Description           descr;
     private       TestSuiteContext      context;
@@ -80,7 +80,7 @@ public class DmnTckRunner
 
     @Override
     protected List<TestCases.TestCase> getChildren() {
-        return new ArrayList<TestCases.TestCase>( children.keySet() );
+        return new ArrayList<>( children.keySet() );
     }
 
     @Override
@@ -149,7 +149,7 @@ public class DmnTckRunner
                     runNotifier.fireTestIgnored( description );
                     break;
                 case ERROR:
-                    runNotifier.fireTestFailure( new Failure( description, new RuntimeException( result.getMsg() ) ) );
+				runNotifier.fireTestFailure(new Failure(description, new RuntimeException(result.toStringWithLines())));
                     break;
             }
             resultFile.append( String.format( "%s,%s,%s,%s\n", folder, description.getClassName(), description.getMethodName(), result.getResult().toString() ) );
