@@ -158,7 +158,8 @@ public class DmnTckRunner
                     break;
             }
 			if (resultFile != null) {
-            resultFile.append( String.format( "%s,%s,%s,%s\n", folder, description.getClassName(), description.getMethodName(), result.getResult().toString() ) );
+            resultFile.append( String.format( "%s,%s,%s,%s,%s\n", folder, description.getClassName(), description.getMethodName(),
+                                              result.getResult().toString(), result.getMsg() ) );
 			}
         } catch ( IOException e ) {
             e.printStackTrace();
