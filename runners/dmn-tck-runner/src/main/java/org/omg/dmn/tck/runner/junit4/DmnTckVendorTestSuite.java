@@ -115,4 +115,16 @@ public interface DmnTckVendorTestSuite {
      */
     void afterTestCase( TestSuiteContext context, TestCases testCases );
 
+	/**
+	 * Defines the filename where tck results are written to. Defaults to
+	 * 'result.csv'. Override to customize the file name or path. If a path is
+	 * returned, the directories must exist.
+	 * 
+	 * @return the result path. Defaults to 'result.csv'. Return {@code null} to
+	 *         disable result file creation.
+	 */
+	default String getResultFileName() {
+		return "result.csv";
+	}
+
 }

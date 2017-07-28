@@ -91,7 +91,12 @@ public class DmnTckRunner
     @Override
     public void run(RunNotifier notifier) {
         try {
-            resultFile = new FileWriter( "result.csv", true );
+			String resultFilePath = vendorSuite.getResultFileName();
+			if (resultFilePath != null) {
+				resultFile = new FileWriter(resultFilePath, true);
+			} else {
+				logger.error("Result file path is null. Skipping result file generation.");
+			}
             try {
                 context = vendorSuite.createContext();
             } catch ( Throwable e ) {
@@ -152,7 +157,9 @@ public class DmnTckRunner
                     runNotifier.fireTestFailure( new Failure( description, new RuntimeException( result.getMsg() ) ) );
                     break;
             }
+			if (resultFile != null) {
             resultFile.append( String.format( "%s,%s,%s,%s\n", folder, description.getClassName(), description.getMethodName(), result.getResult().toString() ) );
+			}
         } catch ( IOException e ) {
             e.printStackTrace();
         } finally {
