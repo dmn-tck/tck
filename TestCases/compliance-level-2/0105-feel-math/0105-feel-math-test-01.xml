@@ -1,190 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../../testCases.xsd">
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelName>0105-feel-math.dmn</modelName>
 	<labels>
-	    <label>Compliance Level 2</label>
+		<label>Compliance Level 2</label>
 		<label>Literal Expression</label>
-	    <label>FEEL Constants</label>
-	    <label>Data Type: Number</label>
-	    <label>FEEL Arithmetic</label>
+		<label>FEEL Constants</label>
+		<label>Data Type: Number</label>
+		<label>FEEL Arithmetic</label>
 	</labels>
-	<testCase id="001"> 
+	<testCase id="001">
 		<description>Tests FEEL simple arithmetics with constants</description>
 		<resultNode name="Decision1" type="decision">
 			<expected>
 				<value>15</value>
 			</expected>
 		</resultNode>
-	    <resultNode name="Decision2" type="decision">
-	        <expected>
-	            <value>-15</value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision3" type="decision">
-	        <expected>
-	            <value>-15</value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision4" type="decision">
-	        <expected>
-	            <value>5</value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision5" type="decision">
-	        <expected>
-	            <value>-5</value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision6" type="decision">
-	        <expected>
-	            <value>-5</value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision7" type="decision">
-	        <expected>
-	            <value>32</value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision8" type="decision">
-	        <expected>
-	            <value>50</value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision9" type="decision">
-	        <expected>
-	            <value>50</value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision10" type="decision">
-	        <expected>
-	            <value>50</value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision11" type="decision">
-	        <expected>
-	            <value>-225</value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision12" type="decision">
-	        <expected>
-	            <value>2</value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision13" type="decision">
-	        <expected>
-	            <value>2</value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision14" type="decision">
-	        <expected>
-	            <value>2</value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision15" type="decision">
-	        <expected>
-	            <value>-2</value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision16" type="decision">
-	        <expected>
-	            <!-- null -->
-	            <value></value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision17" type="decision">
-	        <expected>
-	            <value>100000</value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision18" type="decision">
-	        <expected>
-	            <value>0.00001</value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision19" type="decision">
-	        <expected>
-	            <value>16807</value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision20" type="decision">
-	        <expected>
-	            <value>37</value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision21" type="decision">
-	        <expected>
-	            <value>40</value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision22" type="decision">
-	        <expected>
-	            <value>261</value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision23" type="decision">
-	        <expected>
-	            <!-- null -->
-	            <value></value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision24" type="decision">
-	        <expected>
-	            <!-- null -->
-	            <value></value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision25" type="decision">
-	        <expected>
-	            <!-- null -->
-	            <value></value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision26" type="decision">
-	        <expected>
-	            <!-- null -->
-	            <value></value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision27" type="decision">
-	        <expected>
-	            <!-- null -->
-	            <value></value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision28" type="decision">
-	        <expected>
-	            <!-- null -->
-	            <value></value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision29" type="decision">
-	        <expected>
-	            <!-- null -->
-	            <value></value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision30" type="decision">
-	        <expected>
-	            <!-- null -->
-	            <value></value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision31" type="decision">
-	        <expected>
-	            <value>3</value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision32" type="decision">
-	        <expected>
-	            <value>7.5</value>
-	        </expected>
-	    </resultNode>
-	    <resultNode name="Decision33" type="decision">
-	        <expected>
-	            <value>1200</value>
-	        </expected>
-	    </resultNode>
+		<resultNode name="Decision2" type="decision">
+			<expected>
+				<value>-15</value>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision3" type="decision">
+			<expected>
+				<value>-15</value>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision4" type="decision">
+			<expected>
+				<value>5</value>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision5" type="decision">
+			<expected>
+				<value>-5</value>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision6" type="decision">
+			<expected>
+				<value>-5</value>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision7" type="decision">
+			<expected>
+				<value>32</value>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision8" type="decision">
+			<expected>
+				<value>50</value>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision9" type="decision">
+			<expected>
+				<value>50</value>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision10" type="decision">
+			<expected>
+				<value>50</value>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision11" type="decision">
+			<expected>
+				<value>-225</value>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision12" type="decision">
+			<expected>
+				<value>2</value>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision13" type="decision">
+			<expected>
+				<value>2</value>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision14" type="decision">
+			<expected>
+				<value>2</value>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision15" type="decision">
+			<expected>
+				<value>-2</value>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision16" type="decision">
+			<expected>
+				<!-- null -->
+				<value/>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision17" type="decision">
+			<expected>
+				<value>100000</value>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision18" type="decision">
+			<expected>
+				<value>0.00001</value>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision19" type="decision">
+			<expected>
+				<value>16807</value>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision20" type="decision">
+			<expected>
+				<value>37</value>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision21" type="decision">
+			<expected>
+				<value>40</value>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision22" type="decision">
+			<expected>
+				<value>261</value>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision23" type="decision">
+			<expected>
+				<!-- null -->
+				<value/>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision24" type="decision">
+			<expected>
+				<!-- null -->
+				<value/>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision25" type="decision">
+			<expected>
+				<!-- null -->
+				<value/>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision26" type="decision">
+			<expected>
+				<!-- null -->
+				<value/>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision27" type="decision">
+			<expected>
+				<!-- null -->
+				<value/>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision28" type="decision">
+			<expected>
+				<!-- null -->
+				<value/>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision29" type="decision">
+			<expected>
+				<!-- null -->
+				<value/>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision30" type="decision">
+			<expected>
+				<!-- null -->
+				<value/>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision31" type="decision">
+			<expected>
+				<value>3</value>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision32" type="decision">
+			<expected>
+				<value>7.5</value>
+			</expected>
+		</resultNode>
+		<resultNode name="Decision33" type="decision">
+			<expected>
+				<value>1200</value>
+			</expected>
+		</resultNode>
 	</testCase>
 </testCases>

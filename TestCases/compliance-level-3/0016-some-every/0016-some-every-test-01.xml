@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../testCases.xsd">
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelName>0016-some-every.dmn</modelName>
-    <labels>
-        <label>Compliance Level 3</label>
-        <label>Literal Expression</label>
-        <label>Item Definition</label>
-        <label>Relation</label>
-        <label>FEEL Quantifiers</label>
-    </labels>
-    <testCase id="001">
+	<labels>
+		<label>Compliance Level 3</label>
+		<label>Literal Expression</label>
+		<label>Item Definition</label>
+		<label>Relation</label>
+		<label>FEEL Quantifiers</label>
+		<label>Business Knowledge Model</label>
+		<label>Data Type: String</label>
+		<label>Data Type: Number</label>
+		<label>Data Type: Boolean</label>
+		<label>Data Type: Structure</label>
+		<label>Data Type: Collection</label>
+	</labels>
+	<testCase id="001">
 		<inputNode name="priceTable2">
 			<list>
 				<item>
