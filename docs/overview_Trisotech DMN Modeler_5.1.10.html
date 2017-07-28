@@ -114,7 +114,7 @@
                 };
 
                 var color = Chart.helpers.color;
-                var cbl3_data = {
+                var cbl4_data = {
                     labels: [
                         "Business Knowledge Model","Compliance Level 2","Compliance Level 3","Context","Decision Table: Multiple Output","Decision Table: Single Output","FEEL Arithmetic","FEEL Conditionals","FEEL Filter (10.3.2.5)","FEEL Function Literals","FEEL Functions: date and time","FEEL Functions: lists","FEEL Functions: strings","FEEL Iteration","FEEL List","FEEL Quantifiers","FEEL Relation","Function Invocation","Hit Policy: ANY","Hit Policy: COLLECT","Hit Policy: PRIORITY","Hit Policy: UNIQUE","Item Definition","Literal Expression","Relation"
                     ],
@@ -220,7 +220,7 @@
                         }
                     ]
                 };
-                var cblp3_data = {
+                var cblp4_data = {
                     labels: [
                         "Business Knowledge Model","Compliance Level 2","Compliance Level 3","Context","Decision Table: Multiple Output","Decision Table: Single Output","FEEL Arithmetic","FEEL Conditionals","FEEL Filter (10.3.2.5)","FEEL Function Literals","FEEL Functions: date and time","FEEL Functions: lists","FEEL Functions: strings","FEEL Iteration","FEEL List","FEEL Quantifiers","FEEL Relation","Function Invocation","Hit Policy: ANY","Hit Policy: COLLECT","Hit Policy: PRIORITY","Hit Policy: UNIQUE","Item Definition","Literal Expression","Relation"
                     ],
@@ -329,10 +329,10 @@
 
                 window.onload = function() {
                     // chart by test numbers
-                    var ctx = document.getElementById("cbl3").getContext("2d");
-                    window.cbl3 = new Chart(ctx, {
+                    var ctx = document.getElementById("cbl4").getContext("2d");
+                    window.cbl4 = new Chart(ctx, {
                         type: 'horizontalBar',
-                        data: cbl3_data,
+                        data: cbl4_data,
                         options: {
                             // Elements options apply to all of the options unless overridden in a dataset
                             // In this case, we are setting the border of each horizontal bar to be 2px wide
@@ -361,10 +361,10 @@
                     });
 
                     // chart by test percentage
-                    var ctxp = document.getElementById("cblp3").getContext("2d");
-                    window.cblp3 = new Chart(ctxp, {
+                    var ctxp = document.getElementById("cblp4").getContext("2d");
+                    window.cblp4 = new Chart(ctxp, {
                         type: 'horizontalBar',
-                        data: cblp3_data,
+                        data: cblp4_data,
                         options: {
                             // Elements options apply to all of the options unless overridden in a dataset
                             // In this case, we are setting the border of each horizontal bar to be 2px wide
@@ -405,12 +405,12 @@
             <div class="tab-content">
                 <div id="tab1" class="tab-pane fade active in">
                     <div id="chart_by_percent" style="width: 100%;">
-                        <canvas id="cblp3"></canvas>
+                        <canvas id="cblp4"></canvas>
                     </div>
                 </div>
                 <div id="tab2" class="tab-pane fade">
                     <div id="chart_by_numbers" style="width: 100%;">
-                        <canvas id="cbl3"></canvas>
+                        <canvas id="cbl4"></canvas>
                     </div>
                 </div>
                 <div id="tab3" class="tab-pane fade">
@@ -597,7 +597,7 @@
 <!-- pre-footer -->
 <div class="pre-footer">
     <div class="last-updated">
-        <p>Last updated:</strong> 12-Jul-2017 9:03:07 AM</p>
+        <p>Last updated:</strong> 28-Jul-2017 10:44:32 AM</p>
     </div>
 </div>
 <div class="footer">
