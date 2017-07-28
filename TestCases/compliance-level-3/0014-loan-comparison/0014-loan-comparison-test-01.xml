@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../testCases.xsd">
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelName>0014-loan-comparison.dmn</modelName>
-    <labels>
-        <label>Compliance Level 3</label>
-        <label>Literal Expression</label>
-        <label>Item Definition</label>
-        <label>Business Knowledge Model</label>
-        <label>Context</label>
-        <label>Relation</label>
-        <label>FEEL Arithmetic</label>
-        <label>FEEL Conditionals</label>
-        <label>FEEL Function Literals</label>
-        <label>FEEL Iteration</label>
-    </labels>
-    <testCase id="001">
+	<labels>
+		<label>Compliance Level 3</label>
+		<label>Literal Expression</label>
+		<label>Item Definition</label>
+		<label>Business Knowledge Model</label>
+		<label>Context</label>
+		<label>Relation</label>
+		<label>FEEL Arithmetic</label>
+		<label>FEEL Conditionals</label>
+		<label>FEEL Function Literals</label>
+		<label>FEEL Iteration</label>
+		<label>FEEL Special-character Names</label>
+		<label>Data Type: String</label>
+		<label>Data Type: Number</label>
+		<label>Data Type: Structure</label>
+		<label>Data Type: Collection</label>
+	</labels>
+	<testCase id="001">
 		<inputNode name="RequestedAmt">
 			<value>330000</value>
 		</inputNode>
