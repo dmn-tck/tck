@@ -315,7 +315,7 @@
 				</contextEntry>
 			</context>
 		</encapsulatedLogic>
-		<variable name="FinancialMetrics" typeRef="tns:tMetrics"/>
+		<variable name="FinancialMetrics" typeRef="tns:tMetric"/>
 		<knowledgeRequirement>
 			<requiredKnowledge href="#_8702e1b6-213b-4f75-bf56-99ac3835cde7"/>
 		</knowledgeRequirement>
