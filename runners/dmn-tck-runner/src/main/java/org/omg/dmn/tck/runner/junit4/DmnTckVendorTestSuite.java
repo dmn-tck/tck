@@ -124,7 +124,7 @@ public interface DmnTckVendorTestSuite {
 	 *         disable result file creation.
 	 */
 	default String getResultFileName() {
-		return "result.csv";
+		return "tck_results.csv";
 	}
 
 }
