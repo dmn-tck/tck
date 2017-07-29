@@ -15,12 +15,6 @@
             <text>-.872</text>
         </literalExpression>
     </decision>
-    <decision name="Decision3" id="d_Decision3">
-        <variable name="Decision3" typeRef="feel:number"/>
-        <literalExpression>
-            <text>+.872</text>
-        </literalExpression>
-    </decision>
     <decision name="Decision4" id="d_Decision4">
         <variable name="Decision4" typeRef="feel:number"/>
         <literalExpression>
@@ -33,12 +27,6 @@
             <text>-50</text>
         </literalExpression>
     </decision>
-    <decision name="Decision6" id="d_Decision6">
-        <variable name="Decision6" typeRef="feel:number"/>
-        <literalExpression>
-            <text>+50</text>
-        </literalExpression>
-    </decision>
     <decision name="Decision7" id="d_Decision7">
         <variable name="Decision7" typeRef="feel:number"/>
         <literalExpression>
@@ -49,12 +37,6 @@
         <variable name="Decision8" typeRef="feel:number"/>
         <literalExpression>
             <text>-125.4321987654</text>
-        </literalExpression>
-    </decision>
-    <decision name="Decision9" id="d_Decision9">
-        <variable name="Decision9" typeRef="feel:number"/>
-        <literalExpression>
-            <text>+125.4321987654</text>
         </literalExpression>
     </decision>
 </definitions>
