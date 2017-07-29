@@ -183,18 +183,6 @@
 	<inputData id="_d96a8f03-5cee-42ca-8646-4383ad5ecee2" name="oneHour">
 		<variable name="oneHour" typeRef="feel:dayTimeDuration"/>
 	</inputData>
-	<decision id="_634e7bf4-782f-43f0-8b4f-cd8a3146da38" name="hoursInDuration">
-		<variable name="hoursInDuration" typeRef="feel:number"/>
-		<informationRequirement>
-			<requiredInput href="#_d96a8f03-5cee-42ca-8646-4383ad5ecee2"/>
-		</informationRequirement>
-		<informationRequirement>
-			<requiredDecision href="#_a2c48b03-6e72-4846-99cc-02f3747c6867"/>
-		</informationRequirement>
-		<literalExpression>
-			<text>dtDuration2 / oneHour</text>
-		</literalExpression>
-	</decision>
 	<decision id="_14f9f361-8c3c-455b-9c97-fe15201e3b5e" name="sumDurations">
 		<variable name="sumDurations" typeRef="feel:dayTimeDuration"/>
 		<informationRequirement>
