@@ -8,7 +8,7 @@
         <label>FEEL Filter (10.3.2.5)</label>
     </labels>
     <testCase id="001">
-		<inputNode name="Employee">
+		<inputNode name="Employees">
 			<list>
 				<item>
 					<component name="id">
