@@ -7,7 +7,6 @@
 		<label>FEEL Constants</label>
 		<label>Data Type: Number</label>
 		<label>FEEL Arithmetic</label>
-		<label>FEEL Special-character Names</label>
 	</labels>
 	<testCase id="001">
 		<description>Tests FEEL simple arithmetics with constants</description>

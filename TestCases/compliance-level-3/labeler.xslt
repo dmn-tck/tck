@@ -54,7 +54,7 @@
 			<xsl:if test="$dmn//n1:relation">
 				<xsl:sequence select="'Relation'"/>
 			</xsl:if>
-			<xsl:if test="$dmn//n1:variable/@name[matches(.,'(\s|\.|\+|\-|\&apos;&apos;|\*|/)')]">
+			<xsl:if test="count($dmn//n1:variable/@name[matches(.,'(\s|\.|\+|\-|\*|/)') or contains(.,'&apos;&apos;')]) gt 0">
 				<xsl:sequence select="'FEEL Special-character Names'"/>
 			</xsl:if>
 			<xsl:if test="$dmn//n1:invocation">

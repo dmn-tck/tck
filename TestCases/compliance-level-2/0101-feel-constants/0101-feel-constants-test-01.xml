@@ -6,7 +6,6 @@
 		<label>Literal Expression</label>
 		<label>FEEL Constants</label>
 		<label>Data Type: Number</label>
-		<label>FEEL Special-character Names</label>
 	</labels>
 	<testCase id="001">
 		<description>Tests FEEL number constants</description>
