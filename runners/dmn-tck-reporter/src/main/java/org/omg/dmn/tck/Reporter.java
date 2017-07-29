@@ -59,8 +59,8 @@ public class Reporter {
         Map<String, ReportChart> chartByLabels = createChartByLabels( labels, results);
         Map<String, ReportChart> chartByLabelsPercent = createChartByLabelsPercent( labels, results);
         ReportTable tableAllTests = createTableAllTests( params, tests.values() );
-        Map<String, ReportTable> tableAllTestsByVendor = createTableAllTestsByVendor( tests.values(), results );
-        Map<String, List<ReportTable>> tableIndividualLabels = createTableByIndividualLabels( labels, results );
+        Map<String, ReportTable> tableAllTestsByVendor = createTableAllTestsByVendor( params, tests.values(), results );
+        Map<String, List<ReportTable>> tableIndividualLabels = createTableByIndividualLabels( params, labels, results );
 
         logger.info( "Generating report" );
         Configuration cfg = createFreemarkerConfiguration();
@@ -86,12 +86,12 @@ public class Reporter {
         return header;
     }
 
-    private static Map<String, List<ReportTable>> createTableByIndividualLabels(Map<String, List<TestCasesData>> tests, Map<String, Vendor> results) {
+    private static Map<String, List<ReportTable>> createTableByIndividualLabels(Parameters params, Map<String, List<TestCasesData>> tests, Map<String, Vendor> results) {
         Map<String, List<ReportTable>> tables = new HashMap<>(  );
 
         for( Map.Entry<String, List<TestCasesData>> entry : tests.entrySet() ) {
             List<TestCasesData> testList = entry.getValue();
-            Map<String, ReportTable> rt = createTableAllTestsByVendor( testList, results );
+            Map<String, ReportTable> rt = createTableAllTestsByVendor( params, testList, results );
             for( Map.Entry<String, ReportTable> reportEntry : rt.entrySet() ) {
                 List<ReportTable> tablesForVendor = tables.get( reportEntry.getKey() );
                 if( tablesForVendor == null ) {
@@ -138,15 +138,18 @@ public class Reporter {
         return table;
     }
 
-    private static Map<String, ReportTable> createTableAllTestsByVendor(Collection<TestCasesData> tests, Map<String, Vendor> results) {
+    private static Map<String, ReportTable> createTableAllTestsByVendor(Parameters params, Collection<TestCasesData> tests, Map<String, Vendor> results) {
         Map<String, ReportTable> tables = new HashMap<>(  );
         for( Vendor vendor : results.values() ) {
             ReportTable table = new ReportTable(  );
             addHeader( table, "Compliance", "" );
             addHeader( table, "Test Case", "" );
             addHeader( table, "Test Suite", "" );
+            addHeader( table, "Doc", "" );
+            addHeader( table, "Source", "" );
             addHeader( table, "Test", "" );
             addHeader( table, vendor.getProduct(), vendor.getVersion() );
+            addHeader( table, "Comment", "" );
             String[] text = new String[3];
             TableRow[] parents = new TableRow[3];
             int succeeded = 0;
@@ -158,6 +161,12 @@ public class Reporter {
                     addRowCell( row, split[0], "" );
                     addRowCell( row, split[1], "" );
                     addRowCell( row, tcd.testCaseName, "" );
+                    if( Files.exists( params.testsFolder.resolve( tcd.folder+"/"+split[1]+".pdf" ) ) ) {
+                        addRowCell( row, "OK", "glyphicon glyphicon-book" );
+                    } else {
+                        addRowCell( row, "NA", "glyphicon glyphicon-book" );
+                    }
+                    addRowCell( row, "", "glyphicon glyphicon-folder-open" );
                     addRowCell( row, tc.getId() != null ? tc.getId() : "[no ID]", "" );
                     TestResult r = vendor.getResults().get( createTestKey( tcd.folder, tcd.testCaseName, tc.getId() ) );
                     String icon = null;
@@ -171,7 +180,9 @@ public class Reporter {
                     } else {
                         icon = GLYPHICON_WARNING;
                     }
+                    String comment = r != null ? r.getComment() : "";
                     addRowCell( row, "", icon );
+                    addRowCell( row, comment, "" );
                     total++;
                     table.getRows().add( row );
 
@@ -473,8 +484,9 @@ public class Reporter {
                     try (Stream<String> lines = Files.lines( resultsFile[0].toPath() ) ) {
                         // skip the file header and load the rest
                         lines.forEach( l -> {
-                            String[] fields = l.split( "," );
-                            TestResult testResult = new TestResult( fields[0], fields[1], fields[2], TestResult.Result.fromString( fields[3] ) );
+                            String[] fields = l.split( ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
+                            String comment = fields.length > 4 ? fields[4] : "";
+                            TestResult testResult = new TestResult( fields[0], fields[1], fields[2], TestResult.Result.fromString( fields[3] ), comment );
                             String testKey = createTestKey( fields[0], fields[1], fields[2] );
                             testResults.put( testKey, testResult );
                         });

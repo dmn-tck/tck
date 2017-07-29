@@ -65,7 +65,7 @@ public class DmnTckRunner
                 children.put( test, testDescr );
                 this.descr.addChild( testDescr );
             }
-            File results = new File( "tck_results.csv" );
+            File results = new File( vendorSuite.getResultFileName() );
             if ( results.exists() ) {
                 results.delete();
             }

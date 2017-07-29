@@ -36,12 +36,14 @@ public class TestResult {
     private String testSuit;
     private String testId;
     private Result result;
+    private String comment;
 
-    public TestResult(String testFolder, String testSuit, String testId, Result result) {
+    public TestResult(String testFolder, String testSuit, String testId, Result result, String comment) {
         this.testFolder = testFolder;
         this.testSuit = testSuit;
         this.testId = testId;
         this.result = result;
+        this.comment = comment;
     }
 
     public String getTestFolder() {
@@ -76,6 +78,14 @@ public class TestResult {
         this.result = result;
     }
 
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
     @Override
     public boolean equals(Object o) {
         if ( this == o ) return true;
@@ -86,7 +96,8 @@ public class TestResult {
         if ( testFolder != null ? !testFolder.equals( that.testFolder ) : that.testFolder != null ) return false;
         if ( testSuit != null ? !testSuit.equals( that.testSuit ) : that.testSuit != null ) return false;
         if ( testId != null ? !testId.equals( that.testId ) : that.testId != null ) return false;
-        return result == that.result;
+        if ( result != that.result ) return false;
+        return comment != null ? comment.equals( that.comment ) : that.comment == null;
     }
 
     @Override
@@ -95,6 +106,7 @@ public class TestResult {
         result1 = 31 * result1 + (testSuit != null ? testSuit.hashCode() : 0);
         result1 = 31 * result1 + (testId != null ? testId.hashCode() : 0);
         result1 = 31 * result1 + (result != null ? result.hashCode() : 0);
+        result1 = 31 * result1 + (comment != null ? comment.hashCode() : 0);
         return result1;
     }
 }
