@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelName>0001-filter.dmn</modelName>
-	<labels>
-		<label>Compliance Level 3</label>
+    <labels>
+        <label>Compliance Level 3</label>
+        <label>Literal Expression</label>
+        <label>Item Definition</label>
+        <label>FEEL Filter (10.3.2.5)</label>
+    	<label>Compliance Level 3</label>
 		<label>Literal Expression</label>
 		<label>Item Definition</label>
 		<label>FEEL Filter (10.3.2.5)</label>
-		<label>FEEL Special-character Names</label>
 		<label>Data Type: String</label>
 		<label>Data Type: Number</label>
 		<label>Data Type: Structure</label>
