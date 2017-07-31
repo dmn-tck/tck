@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../testCases.xsd">
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../testCases.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<modelName>0013-sort.dmn</modelName>
     <labels>
         <label>Compliance Level 3</label>
@@ -29,22 +29,22 @@
 		<inputNode name="stringList">
 			<list>
 				<item>
-					<value>a</value>
+					<value xsi:type="xs:string">a</value>
 				</item>
 				<item>
-					<value>8</value>
+					<value xsi:type="xs:string">8</value>
 				</item>
 				<item>
-					<value>Aa</value>
+					<value xsi:type="xs:string">Aa</value>
 				</item>
 				<item>
-					<value>A</value>
+					<value xsi:type="xs:string">A</value>
 				</item>
 				<item>
-					<value>10</value>
+					<value xsi:type="xs:string">10</value>
 				</item>
 				<item>
-					<value>9</value>
+					<value xsi:type="xs:string">9</value>
 				</item>
 			</list>
 		</inputNode>

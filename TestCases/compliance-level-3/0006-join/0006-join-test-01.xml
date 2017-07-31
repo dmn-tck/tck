@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="dmnexecute61220.xslt"?>
-<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../testCases.xsd">
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../testCases.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<modelName>0006-join.dmn</modelName>
     <labels>
         <label>Compliance Level 3</label>
@@ -15,7 +15,7 @@
 			<list>
 				<item>
 					<component name="id">
-						<value>7792</value>
+						<value xsi:type="xsd:string">7792</value>
 					</component>
 					<component name="deptNum">
 						<value>10</value>
@@ -26,7 +26,7 @@
 				</item>
 				<item>
 					<component name="id">
-						<value>7934</value>
+						<value xsi:type="xsd:string">7934</value>
 					</component>
 					<component name="deptNum">
 						<value>10</value>
@@ -37,7 +37,7 @@
 				</item>
 				<item>
 					<component name="id">
-						<value>7976</value>
+						<value xsi:type="xsd:string">7976</value>
 					</component>
 					<component name="deptNum">
 						<value>20</value>
@@ -48,7 +48,7 @@
 				</item>
 				<item>
 					<component name="id">
-						<value>7902</value>
+						<value xsi:type="xsd:string">7902</value>
 					</component>
 					<component name="deptNum">
 						<value>20</value>
@@ -59,7 +59,7 @@
 				</item>
 				<item>
 					<component name="id">
-						<value>7900</value>
+						<value xsi:type="xsd:string">7900</value>
 					</component>
 					<component name="deptNum">
 						<value>30</value>
