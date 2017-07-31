@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../testCases.xsd">
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../testCases.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<modelName>0007-date-time.dmn</modelName>
     <labels>
         <label>Compliance Level 3</label>
@@ -28,7 +28,7 @@
 			<value>01.3</value>
 		</inputNode>
 		<inputNode name="Timezone">
-			<value>-PT1H</value>
+			<value xsi:type="xsd:duration">-PT1H</value>
 		</inputNode>
 		<inputNode name="Year">
 			<value>1999</value>
@@ -40,57 +40,57 @@
 			<value>22</value>
 		</inputNode>
 		<inputNode name="oneHour">
-			<value>PT1H</value>
+			<value xsi:type="xsd:duration">PT1H</value>
 		</inputNode>
 		<inputNode name="durationString">
 			<value>P13DT2H14S</value>
 		</inputNode>
 		<resultNode name="Date-Time" type="decision">
 			<expected>
-				<value>2016-12-24T23:59:00-08:00</value>
+				<value xsi:type="xsd:dateTime">2016-12-24T23:59:00-08:00</value>
 			</expected>
 		</resultNode>
 		<resultNode name="Date" type="decision">
 			<expected>
 				<component name="fromString">
-					<value>2015-12-24</value>
+					<value xsi:type="xsd:date">2015-12-24</value>
 				</component>
 				<component name="fromDateTime">
-					<value>2016-12-24</value>
+					<value xsi:type="xsd:date">2016-12-24</value>
 				</component>
 				<component name="fromYearMonthDay">
-					<value>1999-11-22</value>
+					<value xsi:type="xsd:date">1999-11-22</value>
 				</component>
 			</expected>
 		</resultNode>
 		<resultNode name="Time" type="decision">
 			<expected>
-				<value>00:00:01-01:00</value>
+				<value xsi:type="xsd:time">00:00:01-01:00</value>
 			</expected>
 		</resultNode>
 		<resultNode name="Date-Time2" type="decision">
 			<expected>
-				<value>2015-12-24T00:00:01-01:00</value>
+				<value xsi:type="xsd:dateTime">2015-12-24T00:00:01-01:00</value>
 			</expected>
 		</resultNode>
 		<resultNode name="Time2" type="decision">
 			<expected>
-				<value>00:00:01-01:00</value>
+				<value xsi:type="xsd:time">00:00:01-01:00</value>
 			</expected>
 		</resultNode>
 		<resultNode name="Time3" type="decision">
 			<expected>
-				<value>12:59:01.3-01:00</value>
+				<value xsi:type="xsd:time">12:59:01.3-01:00</value>
 			</expected>
 		</resultNode>
 		<resultNode name="dtDuration1" type="decision">
 			<expected>
-				<value>P13DT2H14S</value>
+				<value xsi:type="xsd:duration">P13DT2H14S</value>
 			</expected>
 		</resultNode>
 		<resultNode name="dtDuration2" type="decision">
 			<expected>
-				<value>P367DT6H58M59S</value>
+				<value xsi:type="xsd:duration">P367DT6H58M59S</value>
 			</expected>
 		</resultNode>
 		<resultNode name="hoursInDuration" type="decision">
@@ -100,12 +100,12 @@
 		</resultNode>
 		<resultNode name="sumDurations" type="decision">
 			<expected>
-				<value>P380DT8H59M13S</value>
+				<value xsi:type="xsd:duration">P380DT8H59M13S</value>
 			</expected>
 		</resultNode>
 		<resultNode name="ymDuration2" type="decision">
 			<expected>
-				<value>P1Y0M</value>
+				<value xsi:type="xsd:duration">P1Y0M</value>
 			</expected>
 		</resultNode>
 		<resultNode name="cDay" type="decision">
@@ -140,7 +140,7 @@
 		</resultNode>
 		<resultNode name="cTimezone" type="decision">
 			<expected>
-				<value>-PT1H</value>
+				<value xsi:type="xsd:duration">-PT1H</value>
 			</expected>
 		</resultNode>
 		<resultNode name="years" type="decision">
