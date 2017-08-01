@@ -66,10 +66,12 @@
 		<inputNode name="SupportingDocuments" type="inputData">
 			<value>YES</value>
 		</inputNode>
-		<inputNode name="Adjudication" type="decision">
-			<value>ACCEPT</value>
-		</inputNode>
-		<resultNode name="ApplicationRiskScore" type="decision">
+        <resultNode name="Adjudication" type="decision">
+            <expected>
+                <value>ACCEPT</value>
+            </expected>
+        </resultNode>
+        <resultNode name="ApplicationRiskScore" type="decision">
 			<expected>
 				<value>130</value>
 			</expected>
