@@ -93,11 +93,6 @@
 				<value>P367DT6H58M59S</value>
 			</expected>
 		</resultNode>
-		<resultNode name="hoursInDuration" type="decision">
-			<expected>
-				<value>8814.98305555556</value>
-			</expected>
-		</resultNode>
 		<resultNode name="sumDurations" type="decision">
 			<expected>
 				<value>P380DT8H59M13S</value>
