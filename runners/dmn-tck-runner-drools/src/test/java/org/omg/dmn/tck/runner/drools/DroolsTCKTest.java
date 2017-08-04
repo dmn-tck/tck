@@ -57,15 +57,15 @@ public class DroolsTCKTest
     public List<URL> getTestCases() {
         List<URL> testCases = new ArrayList<>(  );
         File cl2parent = new File("../../TestCases/compliance-level-2");
-        FilenameFilter filenameFilter = (dir, name) -> name.matches( "\\d\\d\\d\\d-.*" );
-//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0105-.*" );
-        for( File file : cl2parent.listFiles( filenameFilter ) ) {
-            try {
-                testCases.add( file.toURI().toURL() );
-            } catch ( MalformedURLException e ) {
-                e.printStackTrace();
-            }
-        }
+//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "\\d\\d\\d\\d-.*" );
+        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0002-.*" );
+//        for( File file : cl2parent.listFiles( filenameFilter ) ) {
+//            try {
+//                testCases.add( file.toURI().toURL() );
+//            } catch ( MalformedURLException e ) {
+//                e.printStackTrace();
+//            }
+//        }
         File cl3parent = new File("../../TestCases/compliance-level-3");
         for( File file : cl3parent.listFiles( filenameFilter ) ) {
             try {
@@ -240,10 +240,14 @@ public class DroolsTCKTest
             return result;
         } else if( ! dmnType.isComposite() ) {
             String text = null;
-            if( value.getValue() != null && ((Node)value.getValue()).getFirstChild() != null ) {
-                text = ((Node)value.getValue()).getFirstChild().getTextContent();
+            if( value.getValue() != null && value.getValue() instanceof Node ) {
+                if( ((Node)value.getValue()).getFirstChild() != null ) {
+                    text = ((Node)value.getValue()).getFirstChild().getTextContent();
+                }
+                return text != null ? ((BuiltInType)( (BaseDMNTypeImpl)dmnType).getFeelType()).fromString( text ) : null;
+            } else {
+                return value.getValue();
             }
-            return text != null ? ((BuiltInType)( (BaseDMNTypeImpl)dmnType).getFeelType()).fromString( text ) : null;
         } else{
             Map<String, Object> result = new HashMap<>();
             for ( ValueType.Component component : value.getComponent() ) {
