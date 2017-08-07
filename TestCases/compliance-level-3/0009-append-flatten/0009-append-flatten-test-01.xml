@@ -38,10 +38,18 @@
 					</list>
 				</item>
 				<item>
-					<value>y</value>
+				    <list>
+				        <item>
+				            <value>y</value>
+				        </item>
+				    </list>
 				</item>
 				<item>
-					<value>z</value>
+				    <list>
+				        <item>
+				            <value>z</value>
+				        </item>
+				    </list>
 				</item>
 			</list>
 		</inputNode>
@@ -74,40 +82,57 @@
 						</list>
 					</item>
 					<item>
-						<value>y</value>
+					    <list>
+					        <item>
+					            <value>y</value>
+					        </item>
+					    </list>
 					</item>
 					<item>
-						<value>z</value>
+					    <list>
+					        <item>
+					            <value>z</value>
+					        </item>
+					    </list>
 					</item>
 				</list>
 			</expected>
 		</resultNode>
 		<resultNode name="append1" type="decision">
 			<expected>
-				<list>
-					<item>
-						<value>a</value>
-					</item>
-					<item>
-						<value>b</value>
-					</item>
-					<item>
-						<value>c</value>
-					</item>
-					<item>
-						<list>
-							<item>
-								<value>a</value>
-							</item>
-							<item>
-								<value>b</value>
-							</item>
-							<item>
-								<value>c</value>
-							</item>
-						</list>
-					</item>
-				</list>
+			    <list>
+			        <item>
+			            <list>
+			                <item>
+			                    <value>w</value>
+			                </item>
+			                <item>
+			                    <value>x</value>
+			                </item>
+			            </list>
+			        </item>
+			        <item>
+			            <list>
+			                <item>
+			                    <value>y</value>
+			                </item>
+			            </list>
+			        </item>
+			        <item>
+			            <list>
+			                <item>
+			                    <value>z</value>
+			                </item>
+			            </list>
+			        </item>
+			        <item>
+			            <list>
+			                <item>
+			                    <value>t</value>
+			                </item>
+			            </list>
+			        </item>
+			    </list>
 			</expected>
 		</resultNode>
 		<resultNode name="append2" type="decision">
@@ -124,10 +149,18 @@
 						</list>
 					</item>
 					<item>
-						<value>y</value>
+					    <list>
+					        <item>
+					            <value>y</value>
+					        </item>
+					    </list>
 					</item>
 					<item>
-						<value>z</value>
+					    <list>
+					        <item>
+					            <value>z</value>
+					        </item>
+					    </list>
 					</item>
 					<item>
 						<list>
@@ -158,13 +191,21 @@
 							</item>
 						</list>
 					</item>
-					<item>
-						<value>y</value>
-					</item>
-					<item>
-						<value>z</value>
-					</item>
-					<item>
+				    <item>
+				        <list>
+				            <item>
+				                <value>y</value>
+				            </item>
+				        </list>
+				    </item>
+				    <item>
+				        <list>
+				            <item>
+				                <value>z</value>
+				            </item>
+				        </list>
+				    </item>
+				    <item>
 						<list>
 							<item>
 								<value>a</value>
@@ -193,13 +234,21 @@
 							</item>
 						</list>
 					</item>
-					<item>
-						<value>y</value>
-					</item>
-					<item>
-						<value>z</value>
-					</item>
-					<item>
+				    <item>
+				        <list>
+				            <item>
+				                <value>y</value>
+				            </item>
+				        </list>
+				    </item>
+				    <item>
+				        <list>
+				            <item>
+				                <value>z</value>
+				            </item>
+				        </list>
+				    </item>
+				    <item>
 						<list>
 							<item>
 								<value>a</value>
@@ -219,22 +268,19 @@
 			<expected>
 				<list>
 					<item>
-						<value>a</value>
+						<value>w</value>
 					</item>
 					<item>
-						<value>b</value>
+						<value>x</value>
 					</item>
 					<item>
-						<value>c</value>
+						<value>y</value>
 					</item>
-					<item>
-						<value>a</value>
-					</item>
-					<item>
-						<value>b</value>
-					</item>
-					<item>
-						<value>c</value>
+				    <item>
+				        <value>z</value>
+				    </item>
+				    <item>
+						<value>t</value>
 					</item>
 				</list>
 			</expected>

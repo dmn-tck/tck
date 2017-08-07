@@ -21,7 +21,7 @@
 	<decision id="_d6152254-7ad2-4aeb-90a0-16b962a11257" name="literalNestedList">
 		<variable name="literalNestedList" typeRef="tns:tNestedList"/>
 		<literalExpression>
-			<text>[["w","x"],"y","z"]</text>
+			<text>[["w","x"],["y"],["z"]]</text>
 		</literalExpression>
 	</decision>
 	<decision id="_f6e97b3b-d13c-47b5-b679-36cf46d4f904" name="append1">
@@ -30,10 +30,10 @@
 			<requiredDecision href="#_1bd696ab-0181-49e0-bb15-d090219c4943"/>
 		</informationRequirement>
 		<informationRequirement>
-			<requiredInput href="#_1296434e-6902-40fc-9a93-07c35dda7ec8"/>
+		    <requiredInput href="#_d6152254-7ad2-4aeb-90a0-16b962a11257"/>
 		</informationRequirement>
 		<literalExpression>
-			<text>append(simpleList,literalSimpleList)</text>
+		    <text>append(literalNestedList,["t"])</text>
 		</literalExpression>
 	</decision>
 	<decision id="_bf18b7c7-5f20-48a2-bd27-527c82cf0855" name="append2">
