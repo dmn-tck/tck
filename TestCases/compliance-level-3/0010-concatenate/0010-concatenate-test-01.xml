@@ -38,10 +38,18 @@
 					</list>
 				</item>
 				<item>
-					<value>y</value>
+				    <list>
+				        <item>
+				            <value>y</value>
+				        </item>
+				    </list>
 				</item>
 				<item>
-					<value>z</value>
+				    <list>
+				        <item>
+				            <value>z</value>
+				        </item>
+				    </list>
 				</item>
 			</list>
 		</inputNode>
@@ -73,12 +81,20 @@
 							</item>
 						</list>
 					</item>
-					<item>
-						<value>y</value>
-					</item>
-					<item>
-						<value>z</value>
-					</item>
+				    <item>
+				        <list>
+				            <item>
+				                <value>y</value>
+				            </item>
+				        </list>
+				    </item>
+				    <item>
+				        <list>
+				            <item>
+				                <value>z</value>
+				            </item>
+				        </list>
+				    </item>
 				</list>
 			</expected>
 		</resultNode>
@@ -118,17 +134,13 @@
 					<item>
 						<value>c</value>
 					</item>
-					<item>
-						<list>
-							<item>
-								<value>w</value>
-							</item>
-							<item>
-								<value>x</value>
-							</item>
-						</list>
-					</item>
-					<item>
+				    <item>
+				        <value>w</value>
+				    </item>
+				    <item>
+				        <value>x</value>
+				    </item>
+				    <item>
 						<value>y</value>
 					</item>
 					<item>
@@ -149,17 +161,13 @@
 					<item>
 						<value>c</value>
 					</item>
-					<item>
-						<list>
-							<item>
-								<value>w</value>
-							</item>
-							<item>
-								<value>x</value>
-							</item>
-						</list>
-					</item>
-					<item>
+				    <item>
+				        <value>w</value>
+				    </item>
+				    <item>
+				        <value>x</value>
+				    </item>
+				    <item>
 						<value>y</value>
 					</item>
 					<item>
@@ -171,15 +179,19 @@
 		<resultNode name="concatenate4">
 			<expected>
 				<list>
-					<item>
-						<value>a</value>
-					</item>
-					<item>
-						<value>b</value>
-					</item>
-					<item>
-						<value>c</value>
-					</item>
+				    <item>
+				        <list>
+				            <item>
+				                <value>a</value>
+				            </item>
+				            <item>
+				                <value>b</value>
+				            </item>
+				            <item>
+				                <value>c</value>
+				            </item>
+				        </list>
+				    </item>
 					<item>
 						<list>
 							<item>
@@ -190,12 +202,20 @@
 							</item>
 						</list>
 					</item>
-					<item>
-						<value>y</value>
-					</item>
-					<item>
-						<value>z</value>
-					</item>
+				    <item>
+				        <list>
+				            <item>
+				                <value>y</value>
+				            </item>
+				        </list>
+				    </item>
+				    <item>
+				        <list>
+				            <item>
+				                <value>z</value>
+				            </item>
+				        </list>
+				    </item>
 				</list>
 			</expected>
 		</resultNode>
