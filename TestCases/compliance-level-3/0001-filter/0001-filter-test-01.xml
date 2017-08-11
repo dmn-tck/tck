@@ -16,7 +16,7 @@
 		<label>Data Type: Collection</label>
 	</labels>
 	<testCase id="001">
-		<inputNode name="Employee">
+		<inputNode name="Employees">
 			<list>
 				<item>
 					<component name="id">
