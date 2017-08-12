@@ -130,19 +130,19 @@
 		<resultNode name="Decision24" type="decision">
 			<expected>
 				<!-- null -->
-				<value/>
+				<value xsi:nil="true"/>
 			</expected>
 		</resultNode>
 		<resultNode name="Decision25" type="decision">
 			<expected>
 				<!-- null -->
-				<value/>
+			    <value xsi:nil="true"/>
 			</expected>
 		</resultNode>
 		<resultNode name="Decision26" type="decision">
 			<expected>
 				<!-- null -->
-				<value/>
+			    <value xsi:nil="true"/>
 			</expected>
 		</resultNode>
 		<resultNode name="Decision27" type="decision">
