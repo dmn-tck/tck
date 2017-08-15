@@ -36,6 +36,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Node;
 
+import javax.xml.datatype.Duration;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.math.BigDecimal;
@@ -57,15 +59,15 @@ public class DroolsTCKTest
     public List<URL> getTestCases() {
         List<URL> testCases = new ArrayList<>(  );
         File cl2parent = new File("../../TestCases/compliance-level-2");
-//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "\\d\\d\\d\\d-.*" );
-        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0002-.*" );
-//        for( File file : cl2parent.listFiles( filenameFilter ) ) {
-//            try {
-//                testCases.add( file.toURI().toURL() );
-//            } catch ( MalformedURLException e ) {
-//                e.printStackTrace();
-//            }
-//        }
+        FilenameFilter filenameFilter = (dir, name) -> name.matches( "\\d\\d\\d\\d-.*" );
+//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0007-.*" );
+        for( File file : cl2parent.listFiles( filenameFilter ) ) {
+            try {
+                testCases.add( file.toURI().toURL() );
+            } catch ( MalformedURLException e ) {
+                e.printStackTrace();
+            }
+        }
         File cl3parent = new File("../../TestCases/compliance-level-3");
         for( File file : cl3parent.listFiles( filenameFilter ) ) {
             try {
@@ -240,13 +242,23 @@ public class DroolsTCKTest
             return result;
         } else if( ! dmnType.isComposite() ) {
             String text = null;
-            if( value.getValue() != null && value.getValue() instanceof Node ) {
-                if( ((Node)value.getValue()).getFirstChild() != null ) {
-                    text = ((Node)value.getValue()).getFirstChild().getTextContent();
+            Object val = value.getValue();
+            if( val != null && val instanceof Node ) {
+                if( ((Node) val).getFirstChild() != null ) {
+                    text = ((Node) val).getFirstChild().getTextContent();
                 }
                 return text != null ? ((BuiltInType)( (BaseDMNTypeImpl)dmnType).getFeelType()).fromString( text ) : null;
             } else {
-                return value.getValue();
+                try {
+                    if( val instanceof Duration || val instanceof XMLGregorianCalendar ) {
+                        // need to convert to java.time.* equivalent
+                        text = val.toString();
+                        return text != null ? ((BuiltInType)( (BaseDMNTypeImpl)dmnType).getFeelType()).fromString( text ) : null;
+                    }
+                } catch ( Exception e ) {
+                    logger.error( "Error trying to coerce JAXB type "+val.getClass().getName()+" with value '"+val.toString()+"': " + e.getMessage() );
+                }
+                return val;
             }
         } else{
             Map<String, Object> result = new HashMap<>();

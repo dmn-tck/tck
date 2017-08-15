@@ -88,7 +88,7 @@
 		<resultNode name="Decision16" type="decision">
 			<expected>
 				<!-- null -->
-				<value/>
+				<value xsi:nil="true"/>
 			</expected>
 		</resultNode>
 		<resultNode name="Decision17" type="decision">
@@ -124,49 +124,49 @@
 		<resultNode name="Decision23" type="decision">
 			<expected>
 				<!-- null -->
-				<value/>
+			    <value xsi:nil="true"/>
 			</expected>
 		</resultNode>
 		<resultNode name="Decision24" type="decision">
 			<expected>
 				<!-- null -->
-				<value/>
+			    <value xsi:nil="true"/>
 			</expected>
 		</resultNode>
 		<resultNode name="Decision25" type="decision">
 			<expected>
 				<!-- null -->
-				<value/>
+			    <value xsi:nil="true"/>
 			</expected>
 		</resultNode>
 		<resultNode name="Decision26" type="decision">
 			<expected>
 				<!-- null -->
-				<value/>
+			    <value xsi:nil="true"/>
 			</expected>
 		</resultNode>
 		<resultNode name="Decision27" type="decision">
 			<expected>
 				<!-- null -->
-				<value/>
+			    <value xsi:nil="true"/>
 			</expected>
 		</resultNode>
 		<resultNode name="Decision28" type="decision">
 			<expected>
 				<!-- null -->
-				<value/>
+			    <value xsi:nil="true"/>
 			</expected>
 		</resultNode>
 		<resultNode name="Decision29" type="decision">
 			<expected>
 				<!-- null -->
-				<value/>
+			    <value xsi:nil="true"/>
 			</expected>
 		</resultNode>
 		<resultNode name="Decision30" type="decision">
 			<expected>
 				<!-- null -->
-				<value/>
+			    <value xsi:nil="true"/>
 			</expected>
 		</resultNode>
 		<resultNode name="Decision31" type="decision">
