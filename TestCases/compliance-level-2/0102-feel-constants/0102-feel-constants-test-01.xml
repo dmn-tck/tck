@@ -15,16 +15,25 @@
 				<value>foo bar</value>
 			</expected>
 		</resultNode>
+	</testCase>
+	<testCase id="002">
+		<description>Tests FEEL string constants</description>
 		<resultNode name="Decision2" type="decision">
 			<expected>
 				<value>šomeÚnicodeŠtriňg</value>
 			</expected>
 		</resultNode>
+	</testCase>
+	<testCase id="003">
+		<description>Tests FEEL string constants</description>
 		<resultNode name="Decision3" type="decision">
 			<expected>
 				<value>横綱</value>
 			</expected>
 		</resultNode>
+	</testCase>
+	<testCase id="004">
+		<description>Tests FEEL string constants</description>
 		<resultNode name="Decision4" type="decision">
 			<expected>
 				<value>thisIsSomeLongStringThatMustBeProcessedSoHopefullyThisTestPassWithItAndIMustWriteSomethingMoreSoItIsLongerAndLongerAndLongerAndLongerAndLongerTillItIsReallyLong</value>
