@@ -17,6 +17,7 @@
 		<label>Data Type: Structure</label>
 	</labels>
 	<testCase id="001">
+		<description>Tests FEEL built-in functions on string literals (starts_with, ends_with, contains, substring, string_length, upper_case, lower_case, substring_before, substring_after)</description>
 		<inputNode name="A">
 			<value>banana</value>
 		</inputNode>
@@ -68,11 +69,9 @@
 		</resultNode>
 	</testCase>
 	<testCase id="002">
+		<description>Tests FEEL built-in function for regular expresssion matching (matches)</description>
 		<inputNode name="A">
 			<value>banana</value>
-		</inputNode>
-		<inputNode name="B">
-			<value>a</value>
 		</inputNode>
 		<resultNode name="Matches" type="decision">
 			<expected>
@@ -81,11 +80,9 @@
 		</resultNode>
 	</testCase>
 	<testCase id="003">
+		<description>Tests FEEL built-in function 'replace' on string literals</description>
 		<inputNode name="A">
 			<value>banana</value>
-		</inputNode>
-		<inputNode name="B">
-			<value>a</value>
 		</inputNode>
 		<resultNode name="Replace" type="decision">
 			<expected>
@@ -102,6 +99,7 @@
 		</resultNode>
 	</testCase>
 	<testCase id="004">
+		<description>Tests FEEL built-in function for converting a number to a string</description>
 		<inputNode name="NumC">
 			<value>2</value>
 		</inputNode>
