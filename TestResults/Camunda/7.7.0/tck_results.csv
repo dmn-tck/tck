@@ -67,7 +67,10 @@ compliance-level-2/0105-feel-math,0105-feel-math-test-01,031,SUCCESS,
 compliance-level-2/0105-feel-math,0105-feel-math-test-01,032,SUCCESS,
 compliance-level-2/0105-feel-math,0105-feel-math-test-01,033,SUCCESS,
 compliance-level-3/0001-filter,0001-filter-test-01,001,SUCCESS,
-compliance-level-3/0002-string-functions,0002-string-functions-test-01,001,IGNORED,The element 'context' is not supported.
+compliance-level-3/0002-string-functions,0002-string-functions-test-01,001,SUCCESS,
+compliance-level-3/0002-string-functions,0002-string-functions-test-01,002,SUCCESS,
+compliance-level-3/0002-string-functions,0002-string-functions-test-01,003,SUCCESS,
+compliance-level-3/0002-string-functions,0002-string-functions-test-01,004,SUCCESS,
 compliance-level-3/0003-iteration,0003-iteration-test-01,001,IGNORED,The element 'businessKnowledgeModel' is not supported.
 compliance-level-3/0004-lending,0004-lending-test-01,001,IGNORED,The element 'businessKnowledgeModel' is not supported.
 compliance-level-3/0005-literal-invocation,0005-literal-invocation-test-01,002,IGNORED,The element 'businessKnowledgeModel' is not supported.
