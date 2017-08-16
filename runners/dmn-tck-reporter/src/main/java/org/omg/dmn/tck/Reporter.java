@@ -486,8 +486,16 @@ public class Reporter {
                         lines.forEach( l -> {
                             String[] fields = l.split( ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
                             String comment = fields.length > 4 ? fields[4] : "";
-                            TestResult testResult = new TestResult( fields[0], fields[1], fields[2], TestResult.Result.fromString( fields[3] ), comment );
-                            String testKey = createTestKey( fields[0], fields[1], fields[2] );
+                            String testFolder = removeQuotes( fields[0] );
+                            String testSuit = removeQuotes( fields[1] );
+                            String testId = removeQuotes( fields[2] );
+                            TestResult testResult = new TestResult(
+                                    testFolder,
+                                    testSuit,
+                                    testId,
+                                    TestResult.Result.fromString( removeQuotes( fields[3] ) ),
+                                    removeQuotes( comment ) );
+                            String testKey = createTestKey( testFolder, testSuit, testId );
                             testResults.put( testKey, testResult );
                         });
                     } catch (IOException e) {
@@ -523,6 +531,13 @@ public class Reporter {
 
     private static String createTestKey(String folder, String testSuite, String test) {
         return folder+"/"+testSuite+"/"+test;
+    }
+
+    private static String removeQuotes( String val ) {
+        if( val.length() >= 2 && val.startsWith( "\"" ) && val.endsWith( "\"" ) ) {
+            return val.substring( 1, val.length()-1 );
+        }
+        return val;
     }
 
     private static Parameters parseCommandLine(String[] args) {
