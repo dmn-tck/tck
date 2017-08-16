@@ -8,7 +8,7 @@
 		<label>Data Type: Number</label>
 	</labels>
 	<testCase id="001">
-		<description>Tests FEEL number constants</description>
+		<description>Tests FEEL decimal number constant</description>
 		<resultNode name="Decision1" type="decision">
 			<expected>
 				<value>0.872</value>
@@ -16,7 +16,7 @@
 		</resultNode>
 	</testCase>
 	<testCase id="002">
-	    <description>Tests FEEL number constants</description>
+	    <description>Tests FEEL negative decimal number constant</description>
 	    <resultNode name="Decision2" type="decision">
 	        <expected>
 	            <value>-0.872</value>
@@ -24,7 +24,7 @@
 	    </resultNode>
 	</testCase>
 	<testCase id="004">
-	    <description>Tests FEEL number constants</description>
+	    <description>Tests FEEL number constant</description>
 	    <resultNode name="Decision4" type="decision">
 	        <expected>
 	            <value>50</value>
@@ -32,7 +32,7 @@
 	    </resultNode>
 	</testCase>
 	<testCase id="005">
-	    <description>Tests FEEL number constants</description>
+	    <description>Tests FEEL negative number constant</description>
 	    <resultNode name="Decision5" type="decision">
 	        <expected>
 	            <value>-50</value>
@@ -40,7 +40,7 @@
 	    </resultNode>
 	</testCase>
 	<testCase id="007">
-	    <description>Tests FEEL number constants</description>
+	    <description>Tests FEEL decimal number constant</description>
 	    <resultNode name="Decision7" type="decision">
 	        <expected>
 	            <value>125.4321987654</value>
@@ -48,7 +48,7 @@
 	    </resultNode>
 	</testCase>
 	<testCase id="008">
-	    <description>Tests FEEL number constants</description>
+	    <description>Tests FEEL negative decimal number constant</description>
 	    <resultNode name="Decision8" type="decision">
 	        <expected>
 	            <value>-125.4321987654</value>
