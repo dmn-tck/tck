@@ -149,9 +149,6 @@
 		<informationRequirement>
 			<requiredInput href="#_0923ed0c-3674-4476-b84c-f9ad5e5e8048"/>
 		</informationRequirement>
-		<informationRequirement>
-			<requiredInput href="#_1df2ad51-3334-4098-b55f-df885fb0e412"/>
-		</informationRequirement>
 		<literalExpression>
 			<text>matches(A,"[a-z]{3}")</text>
 		</literalExpression>
@@ -160,9 +157,6 @@
 		<variable name="Replace" typeRef="tns:tReplace"/>
 		<informationRequirement>
 			<requiredInput href="#_0923ed0c-3674-4476-b84c-f9ad5e5e8048"/>
-		</informationRequirement>
-		<informationRequirement>
-			<requiredInput href="#_1df2ad51-3334-4098-b55f-df885fb0e412"/>
 		</informationRequirement>
 		<context>
 			<contextEntry>
