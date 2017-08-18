@@ -1,5 +1,5 @@
 # dmn-tck
-# Decision Modeling Notation Technology Compatibility Kit
+# Technology Compatibility Kit for the Decision Model and Notation (DMN) standard
 
 ## Current Result Web Site
 
