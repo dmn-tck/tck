@@ -13,25 +13,6 @@
 		<label>Data Type: Collection</label>
 	</labels>
 	<testCase id="001">
-		<inputNode name="a">
-			<value>a</value>
-		</inputNode>
-		<inputNode name="b">
-			<value>b</value>
-		</inputNode>
-		<inputNode name="c">
-			<value>c</value>
-		</inputNode>
-		<inputNode name="wx">
-			<list>
-				<item>
-					<value>w</value>
-				</item>
-				<item>
-					<value>x</value>
-				</item>
-			</list>
-		</inputNode>
 		<resultNode name="listGen1" type="decision">
 			<expected>
 				<list>
@@ -47,6 +28,17 @@
 				</list>
 			</expected>
 		</resultNode>
+	</testCase>
+	<testCase id="002">
+		<inputNode name="a">
+			<value>a</value>
+		</inputNode>
+		<inputNode name="b">
+			<value>b</value>
+		</inputNode>
+		<inputNode name="c">
+			<value>c</value>
+		</inputNode>
 		<resultNode name="listGen2" type="decision">
 			<expected>
 				<list>
@@ -62,6 +54,14 @@
 				</list>
 			</expected>
 		</resultNode>
+	</testCase>
+	<testCase id="003">
+		<inputNode name="b">
+			<value>b</value>
+		</inputNode>
+		<inputNode name="c">
+			<value>c</value>
+		</inputNode>
 		<resultNode name="listGen3" type="decision">
 			<expected>
 				<list>
@@ -77,6 +77,11 @@
 				</list>
 			</expected>
 		</resultNode>
+	</testCase>
+	<testCase id="004">
+		<inputNode name="c">
+			<value>c</value>
+		</inputNode>
 		<resultNode name="listGen4" type="decision">
 			<expected>
 				<list>
@@ -92,6 +97,17 @@
 				</list>
 			</expected>
 		</resultNode>
+	</testCase>
+	<testCase id="005">
+		<inputNode name="a">
+			<value>a</value>
+		</inputNode>
+		<inputNode name="b">
+			<value>b</value>
+		</inputNode>
+		<inputNode name="c">
+			<value>c</value>
+		</inputNode>
 		<resultNode name="listGen5" type="decision">
 			<expected>
 				<list>
@@ -107,6 +123,8 @@
 				</list>
 			</expected>
 		</resultNode>
+	</testCase>
+	<testCase id="006">
 		<resultNode name="listGen6" type="decision">
 			<expected>
 				<list>
@@ -125,6 +143,18 @@
 				</list>
 			</expected>
 		</resultNode>
+	</testCase>
+	<testCase id="007">
+		<inputNode name="wx">
+			<list>
+				<item>
+					<value>w</value>
+				</item>
+				<item>
+					<value>x</value>
+				</item>
+			</list>
+		</inputNode>
 		<resultNode name="listGen7" type="decision">
 			<expected>
 				<list>
@@ -143,6 +173,14 @@
 				</list>
 			</expected>
 		</resultNode>
+	</testCase>
+	<testCase id="008">
+		<inputNode name="a">
+			<value>a</value>
+		</inputNode>
+		<inputNode name="b">
+			<value>b</value>
+		</inputNode>
 		<resultNode name="listGen8" type="decision">
 			<expected>
 				<list>
@@ -167,6 +205,24 @@
 				</list>
 			</expected>
 		</resultNode>
+	</testCase>
+	<testCase id="009">
+		<inputNode name="a">
+			<value>a</value>
+		</inputNode>
+		<inputNode name="b">
+			<value>b</value>
+		</inputNode>
+		<inputNode name="wx">
+			<list>
+				<item>
+					<value>w</value>
+				</item>
+				<item>
+					<value>x</value>
+				</item>
+			</list>
+		</inputNode>
 		<resultNode name="listGen9" type="decision">
 			<expected>
 				<list>
@@ -191,6 +247,21 @@
 				</list>
 			</expected>
 		</resultNode>
+	</testCase>
+	<testCase id="010">
+		<inputNode name="c">
+			<value>c</value>
+		</inputNode>
+		<inputNode name="wx">
+			<list>
+				<item>
+					<value>w</value>
+				</item>
+				<item>
+					<value>x</value>
+				</item>
+			</list>
+		</inputNode>
 		<resultNode name="listGen10" type="decision">
 			<expected>
 				<list>
