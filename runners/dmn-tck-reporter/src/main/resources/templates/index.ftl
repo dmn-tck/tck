@@ -100,8 +100,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">
-                    <img src="images/logo.png" alt="PatternFly Enterprise Application"/>
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="DMN Technology Compatibility Kit"/>
                 </a>
             </div>
             <div class="collapse navbar-collapse navbar-collapse-1">
@@ -137,7 +137,8 @@
                 <div class="list-group-item">
                     <div class="list-group-item-header">
                         <div class="list-view-pf-actions">
-                            <a href="overview_${vendor.fileNameId}.html" class="btn btn-default">Details</a>
+                            <a href="overview_${vendor.fileNameId}.html" class="btn btn-default">Overview</a>
+                            <a href="detail_${vendor.fileNameId}.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
                             <!--div class="dropdown pull-right dropdown-kebab-pf">
                                 <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight${vendor_index}" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true">
