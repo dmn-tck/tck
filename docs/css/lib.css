@@ -29,3 +29,11 @@ body {
     flex: 1;
     overflow: auto;
 }
+
+.table-info {
+    font-size: 12px;
+}
+
+.table-head {
+    background: #d9edf7 !important;
+}
