@@ -82,7 +82,7 @@
                 <tbody>
                 <#list tAllLabels.rows as row>
                 <tr>
-                    <td class="text-nowrap" scope="row" style="vertical-align:middle">${row.text[0]}</td>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle"><b>${row.text[0]}</b></td>
                     <td scope="row" style="vertical-align:middle">${row.text[1]}</td>
                     <td scope="row" style="vertical-align:middle">${row.text[2]}</td>
                 </tr>
