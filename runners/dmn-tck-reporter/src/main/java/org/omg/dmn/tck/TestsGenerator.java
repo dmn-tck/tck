@@ -29,7 +29,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * generates the detail.html page
+ * generates the tests.html page
  */
 public class TestsGenerator {
     private static final Logger logger = LoggerFactory.getLogger( TestsGenerator.class);

@@ -21,6 +21,7 @@ import freemarker.template.TemplateExceptionHandler;
 import org.apache.commons.cli.*;
 import org.omg.dmn.tck.marshaller.TckMarshallingHelper;
 import org.omg.dmn.tck.marshaller._20160719.TestCases;
+import org.omg.dmn.tck.util.ReportHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -72,6 +73,7 @@ public class Reporter {
             DetailGenerator.generatePage( params, cfg, vendor, header, tableAllTestsByVendor.get( vendor.getFileNameId() ), tableIndividualLabels.get( vendor.getFileNameId() ) );
         }
         TestsGenerator.generatePage( params, cfg, header, tableAllTests );
+        GlossaryGenerator.generatePage( params, cfg, header );
     }
 
     private static ReportHeader createReportHeader(Map<String, TestCasesData> tests, Map<String, List<TestCasesData>> labels, Map<String, Vendor> results) {
@@ -107,30 +109,30 @@ public class Reporter {
 
     private static ReportTable createTableAllTests(Parameters params, Collection<TestCasesData> tests) {
         ReportTable table = new ReportTable(  );
-        addHeader( table, "Compliance", "" );
-        addHeader( table, "Test Case", "" );
-        addHeader( table, "Test Suite", "" );
-        addHeader( table, "Doc", "" );
-        addHeader( table, "Source", "" );
-        addHeader( table, "Test", "" );
-        addHeader( table, "Description", "" );
+        ReportHelper.addHeader( table, "Compliance", "" );
+        ReportHelper.addHeader( table, "Test Case", "" );
+        ReportHelper.addHeader( table, "Test Suite", "" );
+        ReportHelper.addHeader( table, "Doc", "" );
+        ReportHelper.addHeader( table, "Source", "" );
+        ReportHelper.addHeader( table, "Test", "" );
+        ReportHelper.addHeader( table, "Description", "" );
         String[] text = new String[3];
         TableRow[] parents = new TableRow[3];
         for( TestCasesData tcd : tests ) {
             for( TestCases.TestCase tc : tcd.model.getTestCase() ) {
                 TableRow row = new TableRow(  );
                 String[] split = tcd.folder.split( "/" );
-                addRowCell( row, split[0], "" );
-                addRowCell( row, split[1], "" );
-                addRowCell( row, tcd.testCaseName, "" );
+                ReportHelper.addRowCell( row, split[0], "" );
+                ReportHelper.addRowCell( row, split[1], "" );
+                ReportHelper.addRowCell( row, tcd.testCaseName, "" );
                 if( Files.exists( params.testsFolder.resolve( tcd.folder+"/"+split[1]+".pdf" ) ) ) {
-                    addRowCell( row, "OK", "glyphicon glyphicon-book" );
+                    ReportHelper.addRowCell( row, "OK", "glyphicon glyphicon-book" );
                 } else {
-                    addRowCell( row, "NA", "glyphicon glyphicon-book" );
+                    ReportHelper.addRowCell( row, "NA", "glyphicon glyphicon-book" );
                 }
-                addRowCell( row, "", "glyphicon glyphicon-folder-open" );
-                addRowCell( row, tc.getId() != null ? tc.getId() : "[no ID]", "" );
-                addRowCell( row, tc.getDescription() != null ? tc.getDescription() : "", "" );
+                ReportHelper.addRowCell( row, "", "glyphicon glyphicon-folder-open" );
+                ReportHelper.addRowCell( row, tc.getId() != null ? tc.getId() : "[no ID]", "" );
+                ReportHelper.addRowCell( row, tc.getDescription() != null ? tc.getDescription() : "", "" );
                 table.getRows().add( row );
                 updateRowspan( text, parents, tcd, row, split );
             }
@@ -142,14 +144,14 @@ public class Reporter {
         Map<String, ReportTable> tables = new HashMap<>(  );
         for( Vendor vendor : results.values() ) {
             ReportTable table = new ReportTable(  );
-            addHeader( table, "Compliance", "" );
-            addHeader( table, "Test Case", "" );
-            addHeader( table, "Test Suite", "" );
-            addHeader( table, "Doc", "" );
-            addHeader( table, "Source", "" );
-            addHeader( table, "Test", "" );
-            addHeader( table, vendor.getProduct(), vendor.getVersion() );
-            addHeader( table, "Comment", "" );
+            ReportHelper.addHeader( table, "Compliance", "" );
+            ReportHelper.addHeader( table, "Test Case", "" );
+            ReportHelper.addHeader( table, "Test Suite", "" );
+            ReportHelper.addHeader( table, "Doc", "" );
+            ReportHelper.addHeader( table, "Source", "" );
+            ReportHelper.addHeader( table, "Test", "" );
+            ReportHelper.addHeader( table, vendor.getProduct(), vendor.getVersion() );
+            ReportHelper.addHeader( table, "Comment", "" );
             String[] text = new String[3];
             TableRow[] parents = new TableRow[3];
             int succeeded = 0;
@@ -158,16 +160,16 @@ public class Reporter {
                 for( TestCases.TestCase tc : tcd.model.getTestCase() ) {
                     TableRow row = new TableRow(  );
                     String[] split = tcd.folder.split( "/" );
-                    addRowCell( row, split[0], "" );
-                    addRowCell( row, split[1], "" );
-                    addRowCell( row, tcd.testCaseName, "" );
+                    ReportHelper.addRowCell( row, split[0], "" );
+                    ReportHelper.addRowCell( row, split[1], "" );
+                    ReportHelper.addRowCell( row, tcd.testCaseName, "" );
                     if( Files.exists( params.testsFolder.resolve( tcd.folder+"/"+split[1]+".pdf" ) ) ) {
-                        addRowCell( row, "OK", "glyphicon glyphicon-book" );
+                        ReportHelper.addRowCell( row, "OK", "glyphicon glyphicon-book" );
                     } else {
-                        addRowCell( row, "NA", "glyphicon glyphicon-book" );
+                        ReportHelper.addRowCell( row, "NA", "glyphicon glyphicon-book" );
                     }
-                    addRowCell( row, "", "glyphicon glyphicon-folder-open" );
-                    addRowCell( row, tc.getId() != null ? tc.getId() : "[no ID]", "" );
+                    ReportHelper.addRowCell( row, "", "glyphicon glyphicon-folder-open" );
+                    ReportHelper.addRowCell( row, tc.getId() != null ? tc.getId() : "[no ID]", "" );
                     TestResult r = vendor.getResults().get( createTestKey( tcd.folder, tcd.testCaseName, tc.getId() ) );
                     String icon = null;
                     if( r == null ) {
@@ -181,8 +183,8 @@ public class Reporter {
                         icon = GLYPHICON_WARNING;
                     }
                     String comment = r != null ? r.getComment() : "";
-                    addRowCell( row, "", icon );
-                    addRowCell( row, comment, "" );
+                    ReportHelper.addRowCell( row, "", icon );
+                    ReportHelper.addRowCell( row, comment, "" );
                     total++;
                     table.getRows().add( row );
 
@@ -220,17 +222,6 @@ public class Reporter {
             parents[2].getRowspan().set( 2, parents[2].getRowspan().get( 2 ) + 1 );
             row.getRowspan().set( 2, 0 );
         }
-    }
-
-    private static void addRowCell(TableRow row, String text, String icon) {
-        row.getText().add( text );
-        row.getIcons().add( icon );
-        row.getRowspan().add( 1 );
-    }
-
-    private static void addHeader(ReportTable table, String t, String d) {
-        table.getHeaders().add( t );
-        table.getHeaderDetails().add( d );
     }
 
     private static Map<String, ReportChart> createChartByLabels(Map<String, List<TestCasesData>> labels, Map<String, Vendor> results) {
@@ -330,15 +321,15 @@ public class Reporter {
 
         for( Vendor v : results.values() ) {
             ReportTable table = new ReportTable(  );
-            addHeader( table, "Label", "" );
-            addHeader( table, v.getName(), v.getVersion() );
+            ReportHelper.addHeader( table, "Label", "" );
+            ReportHelper.addHeader( table, v.getName(), v.getVersion() );
             rt.put( v.getFileNameId(), table );
         }
         for( Map.Entry<String, List<TestCasesData>> lbl : labels.entrySet() ) {
             for( Vendor v : results.values() ) {
                 ReportTable table = rt.get( v.getFileNameId() );
                 TableRow row = new TableRow(  );
-                addRowCell( row, lbl.getKey(), "" );
+                ReportHelper.addRowCell( row, lbl.getKey(), "" );
                 int success = 0;
                 int total = 0;
                 for( TestCasesData tcd : lbl.getValue() ) {
@@ -359,7 +350,7 @@ public class Reporter {
                 } else {
                     icon = GLYPHICON_WARNING;
                 }
-                addRowCell( row, success+"/"+total, icon );
+                ReportHelper.addRowCell( row, success + "/" + total, icon );
                 table.getRows().add( row );
             }
         }
@@ -486,15 +477,15 @@ public class Reporter {
                         lines.forEach( l -> {
                             String[] fields = l.split( ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
                             String comment = fields.length > 4 ? fields[4] : "";
-                            String testFolder = removeQuotes( fields[0] );
-                            String testSuit = removeQuotes( fields[1] );
-                            String testId = removeQuotes( fields[2] );
+                            String testFolder = ReportHelper.removeQuotes( fields[0] );
+                            String testSuit = ReportHelper.removeQuotes( fields[1] );
+                            String testId = ReportHelper.removeQuotes( fields[2] );
                             TestResult testResult = new TestResult(
                                     testFolder,
                                     testSuit,
                                     testId,
-                                    TestResult.Result.fromString( removeQuotes( fields[3] ) ),
-                                    removeQuotes( comment ) );
+                                    TestResult.Result.fromString( ReportHelper.removeQuotes( fields[3] ) ),
+                                    ReportHelper.removeQuotes( comment ) );
                             String testKey = createTestKey( testFolder, testSuit, testId );
                             testResults.put( testKey, testResult );
                         });
@@ -531,13 +522,6 @@ public class Reporter {
 
     private static String createTestKey(String folder, String testSuite, String test) {
         return folder+"/"+testSuite+"/"+test;
-    }
-
-    private static String removeQuotes( String val ) {
-        if( val.length() >= 2 && val.startsWith( "\"" ) && val.endsWith( "\"" ) ) {
-            return val.substring( 1, val.length()-1 );
-        }
-        return val;
     }
 
     private static Parameters parseCommandLine(String[] args) {

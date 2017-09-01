@@ -38,8 +38,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">
-                    <img src="images/logo.png" alt="Decision Model and Notation TCK"/>
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="DMN Technology Compatibility Kit"/>
                 </a>
             </div>
             <div class="collapse navbar-collapse navbar-collapse-1">
@@ -68,7 +68,7 @@
     </div>
     <div class="content">
         <div class="container">
-            <div class="report-header ">
+            <div class="report-header">
                 <div class="row">
                     <div class="col-md-12">
                         <h1>DMN TCK Test Cases</h1>
@@ -90,8 +90,8 @@
 
             <div class="content container">
                 <div id="all-tests">
-                    <table class="table table-striped table-bordered table-hover" id="all-tests-table">
-                        <thead>
+                    <table class="table table-striped table-bordered table-hover table-info" id="all-tests-table">
+                        <thead class="table-head">
                         <tr>
                         <#list tAllTests.headers as head>
                             <#if head_index != 1>
@@ -129,7 +129,7 @@
                                 </td>
                             </#if>
                             <td class="text-nowrap" scope="row">${row.text[5]}</td>
-                            <td class="text-nowrap" scope="row">${row.text[6]}</td>
+                            <td scope="row">${row.text[6]}</td>
                         </tr>
                         </#list>
                         </tbody>

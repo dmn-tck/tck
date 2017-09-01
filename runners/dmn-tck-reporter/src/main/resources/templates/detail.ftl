@@ -46,8 +46,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">
-                    <img src="images/logo.png" alt="PatternFly Enterprise Application"/>
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="DMN Technology Compatibility Kit"/>
                 </a>
             </div>
             <div class="collapse navbar-collapse navbar-collapse-1">
@@ -92,7 +92,7 @@
 
             <div id="all-tests">
                 <!-- para cada tabela, ela deve ser iniciada no details.js-->
-                <table class="table table-striped table-bordered table-hover" id="all-tests-table">
+                <table class="table table-condensed table-striped table-bordered table-hover" id="all-tests-table">
                     <thead>
                     <tr>
                     <#list tAllTests.headers as head>
@@ -132,7 +132,7 @@
                         </#if>
                         <td class="text-nowrap" scope="row">${row.text[5]}</td>
                         <td align="center" style="vertical-align:middle"><span class="glyphicon ${row.icons[6]}" aria-hidden="true"></span></td>
-                        <td class="text-nowrap" scope="row">${row.text[7]}</td>
+                        <td scope="row">${row.text[7]}</td>
                     </tr>
                     </#list>
                     <tr class="info">
@@ -187,7 +187,7 @@
                                 </#if>
                                 <td class="text-nowrap" scope="row" style="vertical-align:middle">${row.text[5]}</td>
                                 <td align="center" style="vertical-align:middle"><span class="glyphicon ${row.icons[6]}" aria-hidden="true"></span></td>
-                                <td class="text-nowrap" scope="row">${row.text[7]}</td>
+                                <td scope="row">${row.text[7]}</td>
                             </tr>
                             </#list>
                             <tr class="info">
