@@ -108,7 +108,7 @@
     </dmn:context>
   </dmn:decision>
   <dmn:decision id="_yHl3UIDhEee-MeWXoLgrYg" name="fn invocation named parameters">
-    <dmn:variable id="_eApsUYDjEee-MeWXoLgrYg" name="fn invocation named paremeters" typeRef="tFnInvocationNamedResult"/>
+    <dmn:variable id="_eApsUYDjEee-MeWXoLgrYg" name="fn invocation named parameters" typeRef="ns1:tFnInvocationNamedResult"/>
     <dmn:informationRequirement>
       <dmn:requiredInput href="#_5eBhQH6PEeePe9Zmt-encA"/>
     </dmn:informationRequirement>
