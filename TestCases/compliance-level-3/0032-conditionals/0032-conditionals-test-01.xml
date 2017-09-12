@@ -49,7 +49,7 @@
         </inputNode>
         <resultNode name="simpleIf" type="decision">
             <expected>
-                <value xsi:nil="true"/>
+            	<value>90</value>
             </expected>
         </resultNode>
     </testCase>
@@ -91,7 +91,7 @@
         </inputNode>
         <resultNode name="conditionWithFunctions" type="decision">
             <expected>
-                <value xsi:nil="true"/>
+            	<value>World</value>
             </expected>
         </resultNode>
     </testCase>
