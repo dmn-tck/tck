@@ -4,9 +4,17 @@
 	<labels>
 		<label>Compliance Level 3</label>
 		<label>Literal Expression</label>
+		<label>Business Knowledge Model</label>
 		<label>FEEL Arithmetic</label>
 		<label>FEEL Iteration</label>
+		<label>FEEL Functions: numeric</label>
+		<label>FEEL List Operator</label>
+		<label>FEEL Special-character Names</label>
+		<label>Literal Function Invocation</label>
+		<label>Item Definition</label>
 		<label>Data Type: Number</label>
+		<label>Data Type: Boolean</label>
+		<label>Data Type: Collection</label>
 	</labels>
 	<testCase id="001">
 	    <description>Tests single variable iteration</description>
