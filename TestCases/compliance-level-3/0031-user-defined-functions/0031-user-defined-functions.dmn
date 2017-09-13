@@ -1,44 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- ACTICO GmbH - https://actico.com -->
-<dmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dmn="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:ns1="http://www.actico.com/spec/DMN/0.1.0/0030-user-defined-functions" id="_pKGjoH6LEeePe9Zmt-encA" name="0030-user-defined-functions" namespace="http://www.actico.com/spec/DMN/0.1.0/0030-user-defined-functions">
-  <dmn:description>Tests definition of functions in a "function library" and invocation of these functions in decisions using path operator and more complex invocation examples.</dmn:description>
-  <dmn:itemDefinition id="_n3EzIIDIEee-MeWXoLgrYg" name="tFnInvocationResult">
-    <dmn:itemComponent id="_EYx5EIDJEee-MeWXoLgrYg" name="sumResult">
-      <dmn:typeRef>feel:number</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_JEnWEIDJEee-MeWXoLgrYg" name="subResult">
-      <dmn:typeRef>feel:number</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_5pH7oIDMEee-MeWXoLgrYg" name="multiplicationResultPositional">
-      <dmn:typeRef>feel:number</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="__vjuYIDMEee-MeWXoLgrYg" name="multiplicationResultNamed">
-      <dmn:typeRef>feel:number</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="__9p0wIDMEee-MeWXoLgrYg" name="subResultMixed">
-      <dmn:typeRef>feel:number</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_ACClgIDNEee-MeWXoLgrYg" name="divisionResultPositional">
-      <dmn:typeRef>feel:number</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_AFQRkIDNEee-MeWXoLgrYg" name="divisionResultNamed">
-      <dmn:typeRef>feel:number</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_AIWo4IDNEee-MeWXoLgrYg" name="functionInvocationInParameter">
-      <dmn:typeRef>feel:number</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_AL4eAIDNEee-MeWXoLgrYg" label="" name="functionInvocationLiteralExpressionInParameter">
-      <dmn:typeRef>feel:number</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_JTDMIID0Eeehqsf_bU54Lw" name="circumference">
-      <dmn:typeRef>feel:number</dmn:typeRef>
-    </dmn:itemComponent>
-  </dmn:itemDefinition>
+<dmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dmn="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:ns1="http://www.actico.com/spec/DMN/0.1.0/0031-user-defined-functions" id="_pKGjoH6LEeePe9Zmt-encA" name="0030-user-defined-functions" namespace="http://www.actico.com/spec/DMN/0.1.0/0031-user-defined-functions">
   <dmn:itemDefinition id="_fKdL0IDJEee-MeWXoLgrYg" name="tFnLibrary">
     <dmn:itemComponent id="_gtkkYIDJEee-MeWXoLgrYg" name="sumFn"/>
     <dmn:itemComponent id="_pRj-sIDJEee-MeWXoLgrYg" name="subFn"/>
     <dmn:itemComponent id="_l_GGYIDfEee-MeWXoLgrYg" name="multiplyFn"/>
     <dmn:itemComponent id="_pOrn0IDfEee-MeWXoLgrYg" name="divideFn"/>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_xuQ0YIJtEee4zOLdFxCBaA" name="tFnInvocationPositionalResult">
+    <dmn:itemComponent id="_GDzKIIJuEee4zOLdFxCBaA" name="sumResult">
+      <dmn:typeRef>feel:number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_IpHmkIJuEee4zOLdFxCBaA" name="divisionResultPositional">
+      <dmn:typeRef>feel:number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_OmarcIJuEee4zOLdFxCBaA" name="multiplicationResultPositional">
+      <dmn:typeRef>feel:number</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_0BpzUIJtEee4zOLdFxCBaA" name="tFnInvocationNamedResult">
+    <dmn:itemComponent id="_Ua9c8IJuEee4zOLdFxCBaA" name="subResult">
+      <dmn:typeRef>feel:number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_XCUgwIJuEee4zOLdFxCBaA" name="subResultMixed">
+      <dmn:typeRef>feel:number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_XKOfkIJuEee4zOLdFxCBaA" name="divisionResultNamed">
+      <dmn:typeRef>feel:number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_afyGIIJuEee4zOLdFxCBaA" name="multiplicationResultNamed">
+      <dmn:typeRef>feel:number</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_1O2mQIJtEee4zOLdFxCBaA" name="tFnInvocationComplexParamsResult">
+    <dmn:itemComponent id="_fTiwEIJuEee4zOLdFxCBaA" name="functionInvocationLiteralExpressionInParameter">
+      <dmn:typeRef>feel:number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_fb73EIJuEee4zOLdFxCBaA" name="functionInvocationInParameter">
+      <dmn:typeRef>feel:number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_fdbr4IJuEee4zOLdFxCBaA" name="circumference">
+      <dmn:typeRef>feel:number</dmn:typeRef>
+    </dmn:itemComponent>
   </dmn:itemDefinition>
   <dmn:decision id="_q2qzIH6LEeePe9Zmt-encA" name="fn library">
     <dmn:variable id="_mRL98YDJEee-MeWXoLgrYg" name="fn library" typeRef="ns1:tFnLibrary"/>
@@ -74,7 +76,7 @@
     </dmn:context>
   </dmn:decision>
   <dmn:decision id="_AfhOEH6QEeePe9Zmt-encA" name="fn invocation positional parameters">
-    <dmn:variable id="_rwrh8YDIEee-MeWXoLgrYg" name="fn invocation positional parameters" typeRef="ns1:tFnInvocationResult"/>
+    <dmn:variable id="_rwrh8YDIEee-MeWXoLgrYg" name="fn invocation positional parameters" typeRef="ns1:tFnInvocationPositionalResult"/>
     <dmn:informationRequirement>
       <dmn:requiredDecision href="#_q2qzIH6LEeePe9Zmt-encA"/>
     </dmn:informationRequirement>
@@ -106,7 +108,7 @@
     </dmn:context>
   </dmn:decision>
   <dmn:decision id="_yHl3UIDhEee-MeWXoLgrYg" name="fn invocation named parameters">
-    <dmn:variable id="_eApsUYDjEee-MeWXoLgrYg" name="fn invocation named paremeters" typeRef="ns1:tFnInvocationResult"/>
+    <dmn:variable id="_eApsUYDjEee-MeWXoLgrYg" name="fn invocation named parameters" typeRef="ns1:tFnInvocationNamedResult"/>
     <dmn:informationRequirement>
       <dmn:requiredInput href="#_5eBhQH6PEeePe9Zmt-encA"/>
     </dmn:informationRequirement>
@@ -144,7 +146,7 @@
     </dmn:context>
   </dmn:decision>
   <dmn:decision id="_b-gD0IDiEee-MeWXoLgrYg" name="fn invocation complex parameters">
-    <dmn:variable id="_vU2_EYDjEee-MeWXoLgrYg" name="fn invocation complex parameters" typeRef="ns1:tFnInvocationResult"/>
+    <dmn:variable id="_vU2_EYDjEee-MeWXoLgrYg" name="fn invocation complex parameters" typeRef="ns1:tFnInvocationComplexParamsResult"/>
     <dmn:informationRequirement>
       <dmn:requiredInput href="#_48BAYH6PEeePe9Zmt-encA"/>
     </dmn:informationRequirement>
@@ -181,10 +183,11 @@
   <dmn:businessKnowledgeModel id="_8xmTAIDNEee-MeWXoLgrYg" name="Circumference">
     <dmn:encapsulatedLogic id="_92KuYIDNEee-MeWXoLgrYg">
       <dmn:formalParameter id="_3xWKkIDgEee-MeWXoLgrYg" name="radius" typeRef="feel:number"/>
-      <dmn:literalExpression id="_92KuYYDNEee-MeWXoLgrYg" typeRef="number">
+      <dmn:literalExpression id="_92KuYYDNEee-MeWXoLgrYg" typeRef="feel:number">
         <dmn:text>(2*3.141592) * radius</dmn:text>
       </dmn:literalExpression>
     </dmn:encapsulatedLogic>
+    <dmn:variable name="Circumference" typeRef="feel:number"/>
   </dmn:businessKnowledgeModel>
   <dmn:inputData id="_48BAYH6PEeePe9Zmt-encA" name="inputA">
     <dmn:variable id="_XMnoAIDIEee-MeWXoLgrYg" name="inputA" typeRef="feel:number"/>

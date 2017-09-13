@@ -168,22 +168,22 @@
 			<expected>
 				<list>
 					<item>
-						<value>10</value>
+						<value xsi:type="xs:string">10</value>
 					</item>
 					<item>
-						<value>8</value>
+						<value xsi:type="xs:string">8</value>
 					</item>
 					<item>
-						<value>9</value>
+						<value xsi:type="xs:string">9</value>
 					</item>
 					<item>
-						<value>A</value>
+						<value xsi:type="xs:string">A</value>
 					</item>
 					<item>
-						<value>Aa</value>
+						<value xsi:type="xs:string">Aa</value>
 					</item>
 					<item>
-						<value>a</value>
+						<value xsi:type="xs:string">a</value>
 					</item>
 				</list>
 			</expected>

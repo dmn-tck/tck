@@ -60,7 +60,7 @@ public class DroolsTCKTest
         List<URL> testCases = new ArrayList<>(  );
         File cl2parent = new File("../../TestCases/compliance-level-2");
         FilenameFilter filenameFilter = (dir, name) -> name.matches( "\\d\\d\\d\\d-.*" );
-//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0007-.*" );
+//        FilenameFilter filenameFilter = (dir, name) -> name.matches( "0031-.*" );
         for( File file : cl2parent.listFiles( filenameFilter ) ) {
             try {
                 testCases.add( file.toURI().toURL() );
@@ -113,24 +113,23 @@ public class DroolsTCKTest
             }
         } );
 
-        DMNResult dmnResult = ctx.runtime.evaluateAll( ctx.dmnmodel, dmnctx );
-        logger.info( "Result context: {}\n", dmnResult.getContext() );
-        if( ! dmnResult.getMessages().isEmpty() ) {
-            logger.info( "Messages: \n-----\n{}-----\n", dmnResult.getMessages().stream().map( m -> m.toString() ).collect( Collectors.joining( "\n" ) ) );
-        }
-
+        DMNContext resultctx = dmnctx;
         List<String> failures = new ArrayList<>();
-        if( dmnResult.hasErrors() ) {
-            for( DMNMessage msg : dmnResult.getMessages( DMNMessage.Severity.ERROR ) ) {
-                failures.add( msg.toString() );
-            }
-        }
-
-        testCase.getResultNode().forEach( rn -> {
+        for( TestCases.TestCase.ResultNode rn : testCase.getResultNode() ) {
             try {
                 String name = rn.getName();
+                DMNResult dmnResult = ctx.runtime.evaluateDecisionByName( ctx.dmnmodel, name, resultctx );
+                if( ! dmnResult.getMessages().isEmpty() ) {
+                    logger.info( "Messages: \n-----\n{}-----\n", dmnResult.getMessages().stream().map( m -> m.toString() ).collect( Collectors.joining( "\n" ) ) );
+                }
+                if( dmnResult.hasErrors() ) {
+                    for( DMNMessage msg : dmnResult.getMessages( DMNMessage.Severity.ERROR ) ) {
+                        failures.add( msg.toString() );
+                    }
+                }
+                resultctx = dmnResult.getContext();
                 Object expected = parseValue( rn, ctx.dmnmodel.getDecisionByName( name ) );
-                Object actual = dmnResult.getContext().get( name );
+                Object actual = resultctx.get( name );
                 if( ! isEquals( expected, actual ) ) {
                     failures.add( "FAILURE: '"+name+"' expected='"+expected+"' but found='"+actual+"'" );
                 }
@@ -138,9 +137,34 @@ public class DroolsTCKTest
                 failures.add( "FAILURE: unnexpected exception executing test case '"+description.getClassName()+" / " +description.getMethodName()+"': "+t.getClass().getName() );
                 logger.error( "FAILURE: unnexpected exception executing test case '{} / {}'", description.getClassName(), description.getMethodName(), t );
             }
-        } );
+        }
+//        DMNResult dmnResult = ctx.runtime.evaluateAll( ctx.dmnmodel, dmnctx );
+        logger.info( "Result context: {}\n", resultctx );
+//        if( ! dmnResult.getMessages().isEmpty() ) {
+//            logger.info( "Messages: \n-----\n{}-----\n", dmnResult.getMessages().stream().map( m -> m.toString() ).collect( Collectors.joining( "\n" ) ) );
+//        }
+//
+//        List<String> failures = new ArrayList<>();
+//        if( dmnResult.hasErrors() ) {
+//            for( DMNMessage msg : dmnResult.getMessages( DMNMessage.Severity.ERROR ) ) {
+//                failures.add( msg.toString() );
+//            }
+//        }
+//        testCase.getResultNode().forEach( rn -> {
+//            try {
+//                String name = rn.getName();
+//                Object expected = parseValue( rn, ctx.dmnmodel.getDecisionByName( name ) );
+//                Object actual = resultctx.get( name );
+//                if( ! isEquals( expected, actual ) ) {
+//                    failures.add( "FAILURE: '"+name+"' expected='"+expected+"' but found='"+actual+"'" );
+//                }
+//            } catch ( Throwable t ) {
+//                failures.add( "FAILURE: unnexpected exception executing test case '"+description.getClassName()+" / " +description.getMethodName()+"': "+t.getClass().getName() );
+//                logger.error( "FAILURE: unnexpected exception executing test case '{} / {}'", description.getClassName(), description.getMethodName(), t );
+//            }
+//        } );
 
-        TestResult.Result r = dmnResult.hasErrors() || !failures.isEmpty() ? TestResult.Result.ERROR : TestResult.Result.SUCCESS;
+        TestResult.Result r = !failures.isEmpty() ? TestResult.Result.ERROR : TestResult.Result.SUCCESS;
         return new TestResult( r, failures.stream().collect( Collectors.joining("\n") ) );
     }
 

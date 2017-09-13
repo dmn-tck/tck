@@ -1,7 +1,5 @@
-<html>
-
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-
     <!-- PatternFly Styles -->
     <link href="css/patternfly.min.css" rel="stylesheet" media="screen, print">
     <link href="css/patternfly-additions.min.css" rel="stylesheet" media="screen, print">
@@ -22,46 +20,300 @@
     <script src="js/lib.js"></script>
     <link href="css/lib.css" rel="stylesheet" media="screen, print">
 
+    <title>DMN TCK Glossary</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
 <body>
-    <div class="wrapper">
-        <div class="header">
-            <nav class="navbar navbar-default navbar-pf" role="navigation">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-                    <a class="navbar-brand" href="/">
-                        <img src="images/logo.png" alt="PatternFly Enterprise Application" />
-                    </a>
-                </div>
-                <div class="collapse navbar-collapse navbar-collapse-1">
 
-                    <ul class="nav navbar-nav navbar-primary">
-                        <li class="active">
-                            <a href="index.html">Submitters</a>
-                        </li>
-                        <li>
-                            <a href="glossary.html">Glossary</a>
-                        </li>
-                        <li>
-                            <a href="tests.html">Tests</a>
-                        </li>
+<div class="wrapper">
+    <div class="header">
+        <nav class="navbar navbar-default navbar-pf" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="DMN Technology Compatibility Kit"/>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-primary">
+                    <li>
+                        <a href="index.html">Submitters</a>
+                    </li>
+                    <li class="active">
+                        <a href="glossary.html">Glossary</a>
+                    </li>
+                    <li>
+                        <a href="tests.html">Tests</a>
+                    </li>
 
-                    </ul>
-                </div>
-            </nav>
+                </ul>
+            </div>
+        </nav>
+        <div class="breadcrumbs">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="active"><strong>Glossary</strong></li>
+            </ol>
         </div>
-        <div class="content">
-            
-                <h1> glossary </h1>
-
+    </div>
+    <div class="content container">
+        <div id="results">
+            <div id="all-labels">
+            <table class="table table-condensed table-striped table-bordered table-hover table-info" id="all-labels-table">
+                <thead class="table-head">
+                <tr>
+                    <th style="vertical-align:middle"> Label <br/>
+                        <small></small>
+                    </th>
+                    <th style="vertical-align:middle"> Description <br/>
+                        <small></small>
+                    </th>
+                    <th style="vertical-align:middle"> XPath <br/>
+                        <small></small>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">﻿Business Knowledge Model</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:businessKnowledgeModel</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Compliance Level 2</td>
+                    <td scope="row" style="vertical-align:middle">Tests that do not require any capability beyond that required by conformance level 2</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Compliance Level 3</td>
+                    <td scope="row" style="vertical-align:middle">Full capability of DMN with being restricted to a compliance level</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Context</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:context</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Decision Table: Multiple Output</td>
+                    <td scope="row" style="vertical-align:middle">Decision tables that have more than one output column</td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:decisionTable[count(n1:output) gt 1]</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Decision Table: Single Output</td>
+                    <td scope="row" style="vertical-align:middle">Decision table with only a single output column</td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:decisionTable[count(n1:output) = 1]</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">FEEL Constants</td>
+                    <td scope="row" style="vertical-align:middle">Tests feel constants, like true, false, numbers and strings</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">FEEL Arithmetic</td>
+                    <td scope="row" style="vertical-align:middle">Formulas that test FEEL arithmetic operators</td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:text[matches(.,'\b\s*(\+|\-|\*|/)')]</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">FEEL Conditionals</td>
+                    <td scope="row" style="vertical-align:middle">Formulas that test FEEL conditional operators and structures (if..then..else)</td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:text[matches(.,'\bif\b')]</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">FEEL Context</td>
+                    <td scope="row" style="vertical-align:middle">Defined as literal expression using {""key1"": e1, ""key2"": e2, ... }</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">FEEL Filter (10.3.2.5)</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:text[matches(.,'\[((?!\.\.)[^,])+\]')]</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">FEEL Function Literals</td>
+                    <td scope="row" style="vertical-align:middle">Formulas containing anonymous functions</td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:text[matches(.,'\bfunction\s*\(')]</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">FEEL Functions: date and time</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:text[matches(.,'\b(date|time|duration)\s*\(')]</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">FEEL Functions: lists</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:text[matches(.,'\b(list contains|count|min|max|mean|and|or|sublist|append|concatenate|insert before|remove|reverse|index of|union|distinct values|flatten)\s*\(')]</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">FEEL Functions: strings</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:text[matches(.,'\b(string|substring|string length|upper case|lower case|substring before|substring after|replace|starts with|ends with|matches)\s*\(')] | $dmn//n1:text[matches(.,'contains\s*\((?&lt;!list )')]</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">FEEL Functions: numeric</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:text[matches(.,'\b(number|floor|ceiling|decimal)\s*\(')]</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">FEEL Iteration</td>
+                    <td scope="row" style="vertical-align:middle">Formulas containing for..in..return</td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:text[matches(.,'\bfor \.*\bin ')]</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">FEEL List Operator</td>
+                    <td scope="row" style="vertical-align:middle">[e1, e2, ...]</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">FEEL Quantifiers</td>
+                    <td scope="row" style="vertical-align:middle">Formulas containing some/every..in..satisfies</td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:text[matches(.,'\b(some |every )\.*\bin ')]</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">FEEL Relation</td>
+                    <td scope="row" style="vertical-align:middle">[{""key1"": e11, ""key2"": e12, ...}{""key1"": e21, ""key2"": e22, ...}...]</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">FEEL Special-character Names</td>
+                    <td scope="row" style="vertical-align:middle">Tests with variables that have names with spaces or other non alphanumerica characters and for which the expression does not surround the name with single quotes or any other special treatment.  Name might contain operators.</td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:variable/@name[matches(.,'(\s|\.|\+|\-|\&apos;&apos;|\*|/)')]</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Function Definition</td>
+                    <td scope="row" style="vertical-align:middle">Named function definition other than BKM, e.g. context entry.  (Anonymous function definition listed under FEEL Function Literals</td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:functionDefinition</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Function Invocation</td>
+                    <td scope="row" style="vertical-align:middle">Invocation expression type (boxed invocation).</td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:invocation</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Literal Function Invocation</td>
+                    <td scope="row" style="vertical-align:middle">Invocation of user-defined function from literal expression</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Hit Policy: ANY</td>
+                    <td scope="row" style="vertical-align:middle">Decision tables with the hit policy ANY</td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:decisionTable[@hitPolicy='ANY']</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Hit Policy: COLLECT</td>
+                    <td scope="row" style="vertical-align:middle">Decision tables with the hit policy COLLECT</td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:decisionTable[@hitPolicy='COLLECT']</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Hit Policy: PRIORITY</td>
+                    <td scope="row" style="vertical-align:middle">Decision tables with the hit policy PRIORITY</td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:decisionTable[@hitPolicy='PRIORITY']</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Hit Policy: UNIQUE</td>
+                    <td scope="row" style="vertical-align:middle">Decision tables with the hit policy UNIQUE</td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:decisionTable[@hitPolicy='UNIQUE' or not(@hitPolicy)]</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Hit Policy: FIRST</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Hit Policy: OUTPUT ORDER</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Hit Policy: RULE ORDER</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Item Definition</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:itemDefinition</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Literal Expression</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:literalExpression</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Relation</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:relation</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Data Type: String</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:typeRef[contains(lower-case(.),':string')]|$dmn//@typeRef[contains(lower-case(.),':string')]</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Data Type: Number</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:typeRef[contains(lower-case(.),':number')]|$dmn//@typeRef[contains(lower-case(.),':number')]</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Data Type: Structure</td>
+                    <td scope="row" style="vertical-align:middle">Type has components</td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:itemDefinition/n1:itemComponent</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Data Type: Collection</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:itemDefinition[@isCollection=true()]|$dmn//n1:itemDefinition//n1:itemComponent[@isCollection=true()]</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Data Type: Date</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:typeRef[matches(.,':date(?! and time)')]|$dmn//@typeRef[matches(.,':date(?! and time)')]</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Data Type: Time</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:typeRef[matches(.,':time\b')]|$dmn//@typeRef[matches(.,':time\b')]</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Data Type: Date and Time</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:typeRef[matches(.,':date and time')]|$dmn//@typeRef[matches(.,':date and time')]</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Data Type: Days and Time Duration</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:typeRef[contains(.,':days and time duration')]|$dmn//@typeRef[contains(.,':days and time duration)')]</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Data Type: Years and Months Duration</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:typeRef[contains(.,':years and months duration')]|$dmn//@typeRef[contains(.,':years and months duration)')]</td>
+                </tr>
+                <tr>
+                    <td class="text-nowrap" scope="row" style="vertical-align:middle">Data Type: Boolean</td>
+                    <td scope="row" style="vertical-align:middle"></td>
+                    <td scope="row" style="vertical-align:middle">$dmn//n1:typeRef[contains(lower-case(.),':boolean')]|$dmn//@typeRef[contains(lower-case(.),':boolean')]</td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
         </div>
-        <!-- container -->
+    </div>
+
+<!-- pre-footer -->
+<div class="pre-footer">
+    <div class="last-updated">
+        <p>Last updated:</strong> 1-Sep-2017 11:26:39 AM</p>
+    </div>
+</div>
 <div class="footer">
     <div class="container-fluid">
         <div class="row">
@@ -118,11 +370,8 @@
     </div>
     <!-- container -->
 </div>
-        <!-- footer -->
+<!-- footer -->
 
-    </div>
-    <!--wrapper -->
-
+</div>
 </body>
-
 </html>

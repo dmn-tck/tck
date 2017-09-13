@@ -27,10 +27,7 @@
 	<decision id="_f6e97b3b-d13c-47b5-b679-36cf46d4f904" name="append1">
 		<variable name="append1" typeRef="tns:tNestedList"/>
 		<informationRequirement>
-			<requiredDecision href="#_1bd696ab-0181-49e0-bb15-d090219c4943"/>
-		</informationRequirement>
-		<informationRequirement>
-		    <requiredInput href="#_d6152254-7ad2-4aeb-90a0-16b962a11257"/>
+			<requiredDecision href="#_d6152254-7ad2-4aeb-90a0-16b962a11257"/>
 		</informationRequirement>
 		<literalExpression>
 		    <text>append(literalNestedList,["t"])</text>
