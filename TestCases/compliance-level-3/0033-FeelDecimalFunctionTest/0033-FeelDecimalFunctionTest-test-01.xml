@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Contributed to DMN TCK by ACTICO GmbH (http://actico.com) -->
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="">
+	<modelName>0033-FeelDecimalFunctionTest.dmn</modelName>
+	<labels>
+		<label>Compliance Level 3</label>
+		<label>Data Type: Number</label>
+		<label>FEEL Functions: number</label>
+		<label>FEEL Arithmetic</label>
+	</labels>
+	<testCase id="001">
+		<resultNode name="FeelDecimalFunctionTest" type="decision">
+			<expected>
+				<value xsi:nil="true"/>
+				<component name="case_6">
+					<value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:decimal">0.33</value>
+				</component>
+				<component name="case_7">
+					<value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:decimal">0.33</value>
+				</component>
+				<component name="case_8">
+					<value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:decimal">2</value>
+				</component>
+				<component name="case_9">
+					<value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:decimal">2</value>
+				</component>
+				<component name="case_10">
+					<value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:decimal">0</value>
+				</component>
+				<component name="case_11">
+					<value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:decimal">0.0</value>
+				</component>
+				<component name="case_12">
+					<value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:decimal">0.52</value>
+				</component>
+				<component name="case_13">
+					<value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:decimal">65.123456</value>
+				</component>
+				<component name="case_16">
+					<value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:decimal">2.143</value>
+				</component>
+				<component name="case_17">
+					<value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:decimal">0.385</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+</testCases>

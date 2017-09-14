@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Contributed to DMN TCK by ACTICO GmbH (http://actico.com) -->
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" id="_VEbtUJlPEee5_scNgzZPTw" name="0032-FeelFloorFunctionTest">
+  <dmn:itemDefinition id="tFeelFloorFunctionTestResult" name="tFeelFloorFunctionTestResult">
+    <dmn:itemComponent id="_VEmscJlPEee5_scNgzZPTw" name="case_3">
+      <dmn:description>FEEL expression: 'floor(1.5)' Expected Result: '1 (number)'</dmn:description>
+      <dmn:typeRef>feel:number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_VEwdcJlPEee5_scNgzZPTw" name="case_4">
+      <dmn:description>FEEL expression: 'floor(-1.5)' Expected Result: '-2 (number)'</dmn:description>
+      <dmn:typeRef>feel:number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_VEwdc5lPEee5_scNgzZPTw" name="case_5">
+      <dmn:description>FEEL expression: 'floor(--1)' Expected Result: '1 (number)'</dmn:description>
+      <dmn:typeRef>feel:number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_VEwddplPEee5_scNgzZPTw" name="case_6">
+      <dmn:description>FEEL expression: 'floor(-5/2.3*5)' Expected Result: '-11 (number)'</dmn:description>
+      <dmn:typeRef>feel:number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_VEwdeZlPEee5_scNgzZPTw" name="case_7">
+      <dmn:description>FEEL expression: 'floor(n:5.777)' Expected Result: '5 (number)'</dmn:description>
+      <dmn:typeRef>feel:number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_VE61gJlPEee5_scNgzZPTw" name="case_8">
+      <dmn:description>FEEL expression: 'floor(n:-.33333)' Expected Result: '-1 (number)'</dmn:description>
+      <dmn:typeRef>feel:number</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmn:decision id="_VE61g5lPEee5_scNgzZPTw" name="FeelFloorFunctionTest">
+    <dmn:variable id="_VE7ckJlPEee5_scNgzZPTw" name="FeelFloorFunctionTest" typeRef="tFeelFloorFunctionTestResult"/>
+    <dmn:context id="_VEbtUplPEee5_scNgzZPTw">
+      <dmn:contextEntry>
+        <dmn:variable id="_VE61gZlPEee5_scNgzZPTw" name="case_8" typeRef="feel:number"/>
+        <dmn:literalExpression id="_VE61gplPEee5_scNgzZPTw">
+          <dmn:description>FEEL expression: 'floor(n:-.33333)' Expected Result: '-1 (number)'</dmn:description>
+          <dmn:text>floor(n:-.33333)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_VEwdeplPEee5_scNgzZPTw" name="case_7" typeRef="feel:number"/>
+        <dmn:literalExpression id="_VEwde5lPEee5_scNgzZPTw">
+          <dmn:description>FEEL expression: 'floor(n:5.777)' Expected Result: '5 (number)'</dmn:description>
+          <dmn:text>floor(n:5.777)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_VEwdd5lPEee5_scNgzZPTw" name="case_6" typeRef="feel:number"/>
+        <dmn:literalExpression id="_VEwdeJlPEee5_scNgzZPTw">
+          <dmn:description>FEEL expression: 'floor(-5/2.3*5)' Expected Result: '-11 (number)'</dmn:description>
+          <dmn:text>floor(-5/2.3*5)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_VEwddJlPEee5_scNgzZPTw" name="case_5" typeRef="feel:number"/>
+        <dmn:literalExpression id="_VEwddZlPEee5_scNgzZPTw">
+          <dmn:description>FEEL expression: 'floor(--1)' Expected Result: '1 (number)'</dmn:description>
+          <dmn:text>floor(--1)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_VEwdcZlPEee5_scNgzZPTw" name="case_4" typeRef="feel:number"/>
+        <dmn:literalExpression id="_VEwdcplPEee5_scNgzZPTw">
+          <dmn:description>FEEL expression: 'floor(-1.5)' Expected Result: '-2 (number)'</dmn:description>
+          <dmn:text>floor(-1.5)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_VEmscZlPEee5_scNgzZPTw" name="case_3" typeRef="feel:number"/>
+        <dmn:literalExpression id="_VEmscplPEee5_scNgzZPTw">
+          <dmn:description>FEEL expression: 'floor(1.5)' Expected Result: '1 (number)'</dmn:description>
+          <dmn:text>floor(1.5)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+    </dmn:context>
+  </dmn:decision>
+</dmn:definitions>
