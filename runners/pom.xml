@@ -30,6 +30,17 @@
         <module>dmn-tck-runner-drools</module>
       </modules>
     </profile>
+    <profile>
+      <id>trisotech</id>
+      <activation>
+        <file>
+          <exists>enable-trisotech.flag</exists>
+        </file>
+      </activation>
+      <modules>
+        <module>dmn-tck-runner-trisotech</module>
+      </modules>
+    </profile>
   </profiles>
 
   <build>
