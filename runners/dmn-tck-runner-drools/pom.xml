@@ -7,8 +7,25 @@
   <name>DMN :: TCK :: jUnit Runner :: Drools</name>
 
   <properties>
-    <drools.version>7.3.0.Final</drools.version>
+    <drools.version>7.3.1.t013</drools.version>
   </properties>
+
+  <repositories>
+    <repository>
+      <id>jboss-public-repository-group</id>
+      <name>JBoss Public Repository Group</name>
+      <url>https://origin-repository.jboss.org/nexus/content/groups/public/</url>
+      <layout>default</layout>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>daily</updatePolicy>
+      </snapshots>
+    </repository>
+  </repositories>
 
   <dependencies>
     <dependency>
