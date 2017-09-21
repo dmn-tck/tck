@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Contributed to DMN TCK by ACTICO GmbH https://actico.com -->
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="">
+    <modelName>1102-feel-ceiling-function-test.dmn</modelName>
+    <labels>
+        <label>Compliance Level 3</label>
+        <label>Data Type: Number</label>
+        <label>FEEL Functions: number</label>
+        <label>FEEL Arithmetic</label>
+    </labels>
+    <testCase id="001">
+        <resultNode name="feel-ceiling-function-test_1" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:decimal">2</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="002">
+        <resultNode name="feel-ceiling-function-test_2" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:decimal">-1</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="003">
+        <resultNode name="feel-ceiling-function-test_3" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:decimal">1</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="004">
+        <resultNode name="feel-ceiling-function-test_4" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:decimal">-10</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="005">
+        <resultNode name="feel-ceiling-function-test_5" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:decimal">6</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="006">
+        <resultNode name="feel-ceiling-function-test_6" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:decimal">0</value>
+            </expected>
+        </resultNode>
+    </testCase>
+</testCases>
