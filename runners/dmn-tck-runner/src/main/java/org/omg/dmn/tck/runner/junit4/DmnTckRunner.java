@@ -29,6 +29,7 @@ import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
@@ -80,7 +81,9 @@ public class DmnTckRunner
 
     @Override
     protected List<TestCases.TestCase> getChildren() {
-        return new ArrayList<>( children.keySet() );
+        ArrayList<TestCases.TestCase> testCases = new ArrayList<>(children.keySet());
+        Collections.sort(testCases, (o1, o2) -> o1.getId().compareTo(o2.getId()));
+        return testCases;
     }
 
     @Override
