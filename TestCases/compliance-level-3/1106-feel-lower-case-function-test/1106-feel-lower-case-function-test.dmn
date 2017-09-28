@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:ns1="http://www.actico.com/spec/DMN/1106-feel-lower-case-function-test" id="_PCkBEKQ9EeeOzaBINJ6TsA" name="1106-feel-lower-case-function-test" namespace="http://www.actico.com/spec/DMN/1106-feel-lower-case-function-test">
+  <dmn:description>FEEL built-in function 'lower case(string)'</dmn:description>
+  <dmn:itemDefinition id="_PCkBFKQ9EeeOzaBINJ6TsA" name="tfeel-lower-case-function-test_1_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_PClPMaQ9EeeOzaBINJ6TsA" name="tfeel-lower-case-function-test_2_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_PCl2Q6Q9EeeOzaBINJ6TsA" name="tfeel-lower-case-function-test_3_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_PCmdU6Q9EeeOzaBINJ6TsA" name="tfeel-lower-case-function-test_4_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_PCnEY6Q9EeeOzaBINJ6TsA" name="tfeel-lower-case-function-test_5_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_PCoSgaQ9EeeOzaBINJ6TsA" name="tfeel-lower-case-function-test_6_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_PCo5k6Q9EeeOzaBINJ6TsA" name="tfeel-lower-case-function-test_7_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_PCpgo6Q9EeeOzaBINJ6TsA" name="tfeel-lower-case-function-test_8_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_PCqHs6Q9EeeOzaBINJ6TsA" name="tfeel-lower-case-function-test_9_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:decision id="_PCkoIaQ9EeeOzaBINJ6TsA" name="feel-lower-case-function-test_1">
+    <dmn:description>Tests FEEL expression: 'lower case(&quot;A&quot;)' and expects result: '&quot;a&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'lower case(&quot;A&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;a&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_PClPMKQ9EeeOzaBINJ6TsA" name="feel-lower-case-function-test_1" typeRef="ns1:tfeel-lower-case-function-test_1_Result"/>
+    <dmn:literalExpression id="_PCkoIKQ9EeeOzaBINJ6TsA">
+      <dmn:text>lower case(&quot;A&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_PCl2QaQ9EeeOzaBINJ6TsA" name="feel-lower-case-function-test_2">
+    <dmn:description>Tests FEEL expression: 'lower case(&quot;ABC&quot;)' and expects result: '&quot;abc&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'lower case(&quot;ABC&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;abc&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_PCl2QqQ9EeeOzaBINJ6TsA" name="feel-lower-case-function-test_2" typeRef="ns1:tfeel-lower-case-function-test_2_Result"/>
+    <dmn:literalExpression id="_PCl2QKQ9EeeOzaBINJ6TsA">
+      <dmn:text>lower case(&quot;ABC&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_PCmdUaQ9EeeOzaBINJ6TsA" name="feel-lower-case-function-test_3">
+    <dmn:description>Tests FEEL expression: 'lower case(&quot;abc&quot;)' and expects result: '&quot;abc&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'lower case(&quot;abc&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;abc&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_PCmdUqQ9EeeOzaBINJ6TsA" name="feel-lower-case-function-test_3" typeRef="ns1:tfeel-lower-case-function-test_3_Result"/>
+    <dmn:literalExpression id="_PCmdUKQ9EeeOzaBINJ6TsA">
+      <dmn:text>lower case(&quot;abc&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_PCnEYaQ9EeeOzaBINJ6TsA" name="feel-lower-case-function-test_4">
+    <dmn:description>Tests FEEL expression: 'lower case(&quot;aBc4&quot;)' and expects result: '&quot;abc4&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'lower case(&quot;aBc4&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;abc4&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_PCnEYqQ9EeeOzaBINJ6TsA" name="feel-lower-case-function-test_4" typeRef="ns1:tfeel-lower-case-function-test_4_Result"/>
+    <dmn:literalExpression id="_PCnEYKQ9EeeOzaBINJ6TsA">
+      <dmn:text>lower case(&quot;aBc4&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_PCnrcaQ9EeeOzaBINJ6TsA" name="feel-lower-case-function-test_5">
+    <dmn:description>Tests FEEL expression: 'lower case(&quot;&quot;)' and expects result: '&quot;&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'lower case(&quot;&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_PCoSgKQ9EeeOzaBINJ6TsA" name="feel-lower-case-function-test_5" typeRef="ns1:tfeel-lower-case-function-test_5_Result"/>
+    <dmn:literalExpression id="_PCnrcKQ9EeeOzaBINJ6TsA">
+      <dmn:text>lower case(&quot;&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_PCo5kaQ9EeeOzaBINJ6TsA" name="feel-lower-case-function-test_6">
+    <dmn:description>Tests FEEL expression: 'lower case(&quot;?@|&quot;)' and expects result: '&quot;?@|&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'lower case(&quot;?@|&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;?@|&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_PCo5kqQ9EeeOzaBINJ6TsA" name="feel-lower-case-function-test_6" typeRef="ns1:tfeel-lower-case-function-test_6_Result"/>
+    <dmn:literalExpression id="_PCo5kKQ9EeeOzaBINJ6TsA">
+      <dmn:text>lower case(&quot;?@|&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_PCpgoaQ9EeeOzaBINJ6TsA" name="feel-lower-case-function-test_7">
+    <dmn:description>Tests FEEL expression: 'lower case(string:&quot;AbDcF&quot;)' and expects result: '&quot;abdcf&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'lower case(string:&quot;AbDcF&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;abdcf&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_PCpgoqQ9EeeOzaBINJ6TsA" name="feel-lower-case-function-test_7" typeRef="ns1:tfeel-lower-case-function-test_7_Result"/>
+    <dmn:literalExpression id="_PCpgoKQ9EeeOzaBINJ6TsA">
+      <dmn:text>lower case(string:&quot;AbDcF&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_PCqHsaQ9EeeOzaBINJ6TsA" name="feel-lower-case-function-test_8">
+    <dmn:description>Tests FEEL expression: 'lower case(string:&quot;xyZ &quot;)' and expects result: '&quot;xyz &quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'lower case(string:&quot;xyZ &quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;xyz &quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_PCqHsqQ9EeeOzaBINJ6TsA" name="feel-lower-case-function-test_8" typeRef="ns1:tfeel-lower-case-function-test_8_Result"/>
+    <dmn:literalExpression id="_PCqHsKQ9EeeOzaBINJ6TsA">
+      <dmn:text>lower case(string:&quot;xyZ &quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_PCrV0aQ9EeeOzaBINJ6TsA" name="feel-lower-case-function-test_9">
+    <dmn:description>Tests FEEL expression: 'lower case(string:&quot;123ABC&quot;)' and expects result: '&quot;123abc&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'lower case(string:&quot;123ABC&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;123abc&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_PCrV0qQ9EeeOzaBINJ6TsA" name="feel-lower-case-function-test_9" typeRef="ns1:tfeel-lower-case-function-test_9_Result"/>
+    <dmn:literalExpression id="_PCrV0KQ9EeeOzaBINJ6TsA">
+      <dmn:text>lower case(string:&quot;123ABC&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:knowledgeSource id="_PCkBEaQ9EeeOzaBINJ6TsA" name="DMN 1.1 - 10.3.4.3 Table 60"/>
+</dmn:definitions>
