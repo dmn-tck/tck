@@ -47,8 +47,8 @@
 	</xs:element>
 	<xs:complexType name="valueType">
 		<xs:choice>
-			<xs:element name="value" type="xs:anySimpleType"/>
-			<xs:element name="component" maxOccurs="unbounded">
+			<xs:element name="value" type="xs:anySimpleType" nillable="true"/>
+			<xs:element name="component" maxOccurs="unbounded" nillable="true">
 				<xs:complexType>
 					<xs:complexContent>
 						<xs:extension base="valueType">
@@ -57,7 +57,7 @@
 					</xs:complexContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="list">
+			<xs:element name="list" nillable="true">
 				<xs:complexType>
 					<xs:sequence>
 						<xs:element name="item" type="valueType" minOccurs="0" maxOccurs="unbounded"/>
