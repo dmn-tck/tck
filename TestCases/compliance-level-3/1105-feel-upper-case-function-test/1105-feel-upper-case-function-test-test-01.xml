@@ -4,10 +4,9 @@
     <modelName>1105-feel-upper-case-function-test.dmn</modelName>
     <labels>
         <label>Compliance Level 3</label>
-        <label>Data Type : String</label>
+        <label>Data Type: String</label>
         <label>Literal Expression</label>
         <label>FEEL Functions: strings</label>
-        <label>FEEL Functions: string</label>
     </labels>
     <testCase id="001">
         <resultNode name="feel-upper-case-function-test_1" type="decision">
@@ -40,7 +39,7 @@
     <testCase id="005">
         <resultNode name="feel-upper-case-function-test_5" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">?@|</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">?@{</value>
             </expected>
         </resultNode>
     </testCase>

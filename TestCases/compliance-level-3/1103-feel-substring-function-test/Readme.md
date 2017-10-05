@@ -3,7 +3,7 @@
 
 ### Description ###
 
-DMN Model [1103-feel-substring-function-test.dmn](./1103-feel-substring-function-test.dmn) tests DMN specification conformance of `FEEL built-in function 'substring(string, start, position, length?)'`.
+DMN Model [1103-feel-substring-function-test.dmn](./1103-feel-substring-function-test.dmn) tests DMN specification conformance of `FEEL built-in function 'substring(string, start, position, length?)`.
 
 #### Specification Reference(s): ####
  * DMN 1.1 - 10.3.4.3 Table 60
@@ -22,7 +22,7 @@ DMN Model [1103-feel-substring-function-test.dmn](./1103-feel-substring-function
 |feel-substring-function-test_8|substring("foob r",-2,1)|" " (string)|
 |feel-substring-function-test_9|substring("foobar",-6,6)|"foobar" (string)|
 |feel-substring-function-test_10|substring("foobar",3,3.8)|"oba" (string)|
-|feel-substring-function-test_11|substring(string:"foobar",start position : 3)|"obar" (string)|
+|feel-substring-function-test_11|substring(string:"foobar",start position :3)|"obar" (string)|
 
          
 

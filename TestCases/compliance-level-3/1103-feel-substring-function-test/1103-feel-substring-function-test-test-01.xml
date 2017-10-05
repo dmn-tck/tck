@@ -4,10 +4,9 @@
     <modelName>1103-feel-substring-function-test.dmn</modelName>
     <labels>
         <label>Compliance Level 3</label>
-        <label>Data Type : String</label>
+        <label>Data Type: String</label>
         <label>Literal Expression</label>
         <label>FEEL Functions: strings</label>
-        <label>FEEL Functions: string</label>
     </labels>
     <testCase id="001">
         <resultNode name="feel-substring-function-test_1" type="decision">

@@ -17,7 +17,7 @@ DMN Model [1106-feel-lower-case-function-test.dmn](./1106-feel-lower-case-functi
 |feel-lower-case-function-test_3|lower case("abc")|"abc" (string)|
 |feel-lower-case-function-test_4|lower case("aBc4")|"abc4" (string)|
 |feel-lower-case-function-test_5|lower case("")|"" (string)|
-|feel-lower-case-function-test_6|lower case("?@|")|"?@|" (string)|
+|feel-lower-case-function-test_6|lower case("?@{")|"?@{" (string)|
 |feel-lower-case-function-test_7|lower case(string:"AbDcF")|"abdcf" (string)|
 |feel-lower-case-function-test_8|lower case(string:"xyZ ")|"xyz " (string)|
 |feel-lower-case-function-test_9|lower case(string:"123ABC")|"123abc" (string)|
