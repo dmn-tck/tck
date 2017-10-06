@@ -4,22 +4,21 @@
     <modelName>1109-feel-replace-function-test.dmn</modelName>
     <labels>
         <label>Compliance Level 3</label>
-        <label>Data Type : String</label>
+        <label>Data Type: String</label>
         <label>Literal Expression</label>
         <label>FEEL Functions: strings</label>
-        <label>FEEL Functions: string</label>
     </labels>
     <testCase id="001">
         <resultNode name="feel-replace-function-test_1" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string"></value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">[1=ab][2=]cd</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="002">
         <resultNode name="feel-replace-function-test_2" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">[1=ab][2=]cd</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">a</value>
             </expected>
         </resultNode>
     </testCase>
@@ -33,7 +32,7 @@
     <testCase id="004">
         <resultNode name="feel-replace-function-test_4" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">abc</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">#</value>
             </expected>
         </resultNode>
     </testCase>
@@ -47,98 +46,98 @@
     <testCase id="006">
         <resultNode name="feel-replace-function-test_6" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">#ar</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">abc</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="007">
         <resultNode name="feel-replace-function-test_7" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">abc</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">#ar</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="008">
         <resultNode name="feel-replace-function-test_8" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">a*cada*</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">abc</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="009">
         <resultNode name="feel-replace-function-test_9" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">*</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">a*cada*</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="010">
         <resultNode name="feel-replace-function-test_10" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">*c*bra</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">*</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="011">
         <resultNode name="feel-replace-function-test_11" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">brcdbr</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">*c*bra</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="012">
         <resultNode name="feel-replace-function-test_12" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">abbraccaddabbra</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">brcdbr</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="013">
         <resultNode name="feel-replace-function-test_13" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">b</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">abbraccaddabbra</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="014">
         <resultNode name="feel-replace-function-test_14" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">bbbb</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">b</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="015">
         <resultNode name="feel-replace-function-test_15" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">carted</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">bbbb</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="016">
         <resultNode name="feel-replace-function-test_16" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">###</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">carted</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="017">
         <resultNode name="feel-replace-function-test_17" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">##</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">Xant</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="018">
         <resultNode name="feel-replace-function-test_18" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">#.#.#.</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">(012) 345-6789</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="019">
         <resultNode name="feel-replace-function-test_19" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">###</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">facet[i][o][u]sl[y]</value>
             </expected>
         </resultNode>
     </testCase>
@@ -152,35 +151,35 @@
     <testCase id="021">
         <resultNode name="feel-replace-function-test_21" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string"># # # # </value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">#.#.#.</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="022">
         <resultNode name="feel-replace-function-test_22" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">abc</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">###</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="023">
         <resultNode name="feel-replace-function-test_23" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">Xant</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">###</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="024">
         <resultNode name="feel-replace-function-test_24" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">(012) 345-6789</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string"># # # # </value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="025">
         <resultNode name="feel-replace-function-test_25" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">facet[i][o][u]sl[y]</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">abc</value>
             </expected>
         </resultNode>
     </testCase>

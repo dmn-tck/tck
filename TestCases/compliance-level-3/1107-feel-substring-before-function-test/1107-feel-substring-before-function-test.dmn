@@ -1,89 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:ns1="http://www.actico.com/spec/DMN/1107-feel-substring-before-function-test" id="_PDUPAKQ9EeeOzaBINJ6TsA" name="1107-feel-substring-before-function-test" namespace="http://www.actico.com/spec/DMN/1107-feel-substring-before-function-test">
-  <dmn:description>FEEL built-in function 'substring before(string, match)'</dmn:description>
-  <dmn:itemDefinition id="_PDU2FKQ9EeeOzaBINJ6TsA" name="tfeel-substring-before-function-test_1_Result">
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:ns1="http://www.actico.com/spec/DMN/1107-feel-substring-before-function-test" id="_GK9FwKmkEeedaPwUdalcEg" name="1107-feel-substring-before-function-test" namespace="http://www.actico.com/spec/DMN/1107-feel-substring-before-function-test">
+  <dmn:description>FEEL built-in function 'substring before(string, match)</dmn:description>
+  <dmn:itemDefinition id="_GK9FxamkEeedaPwUdalcEg" name="tfeel-substring-before-function-test_1_Result">
     <dmn:typeRef>feel:string</dmn:typeRef>
   </dmn:itemDefinition>
-  <dmn:itemDefinition id="_PDWrQKQ9EeeOzaBINJ6TsA" name="tfeel-substring-before-function-test_2_Result">
+  <dmn:itemDefinition id="_GK-68KmkEeedaPwUdalcEg" name="tfeel-substring-before-function-test_2_Result">
     <dmn:typeRef>feel:string</dmn:typeRef>
   </dmn:itemDefinition>
-  <dmn:itemDefinition id="_PDX5Y6Q9EeeOzaBINJ6TsA" name="tfeel-substring-before-function-test_3_Result">
+  <dmn:itemDefinition id="_GK_iAamkEeedaPwUdalcEg" name="tfeel-substring-before-function-test_3_Result">
     <dmn:typeRef>feel:string</dmn:typeRef>
   </dmn:itemDefinition>
-  <dmn:itemDefinition id="_PDYgc6Q9EeeOzaBINJ6TsA" name="tfeel-substring-before-function-test_4_Result">
+  <dmn:itemDefinition id="_GLAJEamkEeedaPwUdalcEg" name="tfeel-substring-before-function-test_4_Result">
     <dmn:typeRef>feel:string</dmn:typeRef>
   </dmn:itemDefinition>
-  <dmn:itemDefinition id="_PDZHg6Q9EeeOzaBINJ6TsA" name="tfeel-substring-before-function-test_5_Result">
+  <dmn:itemDefinition id="_GLAJFamkEeedaPwUdalcEg" name="tfeel-substring-before-function-test_5_Result">
     <dmn:typeRef>feel:string</dmn:typeRef>
   </dmn:itemDefinition>
-  <dmn:itemDefinition id="_PDaVoaQ9EeeOzaBINJ6TsA" name="tfeel-substring-before-function-test_6_Result">
+  <dmn:itemDefinition id="_GLAJGamkEeedaPwUdalcEg" name="tfeel-substring-before-function-test_6_Result">
     <dmn:typeRef>feel:string</dmn:typeRef>
   </dmn:itemDefinition>
-  <dmn:itemDefinition id="_PDa8s6Q9EeeOzaBINJ6TsA" name="tfeel-substring-before-function-test_7_Result">
+  <dmn:itemDefinition id="_GLAJHamkEeedaPwUdalcEg" name="tfeel-substring-before-function-test_7_Result">
     <dmn:typeRef>feel:string</dmn:typeRef>
   </dmn:itemDefinition>
-  <dmn:decision id="_PDWEMaQ9EeeOzaBINJ6TsA" name="feel-substring-before-function-test_1">
+  <dmn:itemDefinition id="_GLAJIamkEeedaPwUdalcEg" name="tfeel-substring-before-function-test_8_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_GLAJJamkEeedaPwUdalcEg" name="tfeel-substring-before-function-test_9_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:decision id="_GK-T4amkEeedaPwUdalcEg" name="feel-substring-before-function-test_1">
     <dmn:description>Tests FEEL expression: 'substring before(&quot;foobar&quot;,&quot;bar&quot;)' and expects result: '&quot;foo&quot; (string)'</dmn:description>
     <dmn:question>Result of FEEL expression 'substring before(&quot;foobar&quot;,&quot;bar&quot;)'?</dmn:question>
     <dmn:allowedAnswers>&quot;foo&quot; (string)</dmn:allowedAnswers>
-    <dmn:variable id="_PDWEMqQ9EeeOzaBINJ6TsA" name="feel-substring-before-function-test_1" typeRef="ns1:tfeel-substring-before-function-test_1_Result"/>
-    <dmn:literalExpression id="_PDWEMKQ9EeeOzaBINJ6TsA">
+    <dmn:variable id="_GK-T4qmkEeedaPwUdalcEg" name="feel-substring-before-function-test_1" typeRef="ns1:tfeel-substring-before-function-test_1_Result"/>
+    <dmn:literalExpression id="_GK-T4KmkEeedaPwUdalcEg">
       <dmn:text>substring before(&quot;foobar&quot;,&quot;bar&quot;)</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
-  <dmn:decision id="_PDX5YaQ9EeeOzaBINJ6TsA" name="feel-substring-before-function-test_2">
+  <dmn:decision id="_GK-68qmkEeedaPwUdalcEg" name="feel-substring-before-function-test_2">
     <dmn:description>Tests FEEL expression: 'substring before(&quot;foobar&quot;,&quot;o&quot;)' and expects result: '&quot;f&quot; (string)'</dmn:description>
     <dmn:question>Result of FEEL expression 'substring before(&quot;foobar&quot;,&quot;o&quot;)'?</dmn:question>
     <dmn:allowedAnswers>&quot;f&quot; (string)</dmn:allowedAnswers>
-    <dmn:variable id="_PDX5YqQ9EeeOzaBINJ6TsA" name="feel-substring-before-function-test_2" typeRef="ns1:tfeel-substring-before-function-test_2_Result"/>
-    <dmn:literalExpression id="_PDX5YKQ9EeeOzaBINJ6TsA">
+    <dmn:variable id="_GK_iAKmkEeedaPwUdalcEg" name="feel-substring-before-function-test_2" typeRef="ns1:tfeel-substring-before-function-test_2_Result"/>
+    <dmn:literalExpression id="_GK-68amkEeedaPwUdalcEg">
       <dmn:text>substring before(&quot;foobar&quot;,&quot;o&quot;)</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
-  <dmn:decision id="_PDYgcaQ9EeeOzaBINJ6TsA" name="feel-substring-before-function-test_3">
+  <dmn:decision id="_GK_iA6mkEeedaPwUdalcEg" name="feel-substring-before-function-test_3">
     <dmn:description>Tests FEEL expression: 'substring before(&quot;foobar&quot;,&quot;x&quot;)' and expects result: '&quot;&quot; (string)'</dmn:description>
     <dmn:question>Result of FEEL expression 'substring before(&quot;foobar&quot;,&quot;x&quot;)'?</dmn:question>
     <dmn:allowedAnswers>&quot;&quot; (string)</dmn:allowedAnswers>
-    <dmn:variable id="_PDYgcqQ9EeeOzaBINJ6TsA" name="feel-substring-before-function-test_3" typeRef="ns1:tfeel-substring-before-function-test_3_Result"/>
-    <dmn:literalExpression id="_PDYgcKQ9EeeOzaBINJ6TsA">
+    <dmn:variable id="_GLAJEKmkEeedaPwUdalcEg" name="feel-substring-before-function-test_3" typeRef="ns1:tfeel-substring-before-function-test_3_Result"/>
+    <dmn:literalExpression id="_GK_iAqmkEeedaPwUdalcEg">
       <dmn:text>substring before(&quot;foobar&quot;,&quot;x&quot;)</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
-  <dmn:decision id="_PDZHgaQ9EeeOzaBINJ6TsA" name="feel-substring-before-function-test_4">
+  <dmn:decision id="_GLAJE6mkEeedaPwUdalcEg" name="feel-substring-before-function-test_4">
     <dmn:description>Tests FEEL expression: 'substring before(&quot;&quot;,&quot;&quot;)' and expects result: '&quot;&quot; (string)'</dmn:description>
     <dmn:question>Result of FEEL expression 'substring before(&quot;&quot;,&quot;&quot;)'?</dmn:question>
     <dmn:allowedAnswers>&quot;&quot; (string)</dmn:allowedAnswers>
-    <dmn:variable id="_PDZHgqQ9EeeOzaBINJ6TsA" name="feel-substring-before-function-test_4" typeRef="ns1:tfeel-substring-before-function-test_4_Result"/>
-    <dmn:literalExpression id="_PDZHgKQ9EeeOzaBINJ6TsA">
+    <dmn:variable id="_GLAJFKmkEeedaPwUdalcEg" name="feel-substring-before-function-test_4" typeRef="ns1:tfeel-substring-before-function-test_4_Result"/>
+    <dmn:literalExpression id="_GLAJEqmkEeedaPwUdalcEg">
       <dmn:text>substring before(&quot;&quot;,&quot;&quot;)</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
-  <dmn:decision id="_PDZukaQ9EeeOzaBINJ6TsA" name="feel-substring-before-function-test_5">
+  <dmn:decision id="_GLAJF6mkEeedaPwUdalcEg" name="feel-substring-before-function-test_5">
     <dmn:description>Tests FEEL expression: 'substring before(&quot;abc&quot;,&quot;&quot;)' and expects result: '&quot;&quot; (string)'</dmn:description>
     <dmn:question>Result of FEEL expression 'substring before(&quot;abc&quot;,&quot;&quot;)'?</dmn:question>
     <dmn:allowedAnswers>&quot;&quot; (string)</dmn:allowedAnswers>
-    <dmn:variable id="_PDaVoKQ9EeeOzaBINJ6TsA" name="feel-substring-before-function-test_5" typeRef="ns1:tfeel-substring-before-function-test_5_Result"/>
-    <dmn:literalExpression id="_PDZukKQ9EeeOzaBINJ6TsA">
+    <dmn:variable id="_GLAJGKmkEeedaPwUdalcEg" name="feel-substring-before-function-test_5" typeRef="ns1:tfeel-substring-before-function-test_5_Result"/>
+    <dmn:literalExpression id="_GLAJFqmkEeedaPwUdalcEg">
       <dmn:text>substring before(&quot;abc&quot;,&quot;&quot;)</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
-  <dmn:decision id="_PDa8saQ9EeeOzaBINJ6TsA" name="feel-substring-before-function-test_6">
+  <dmn:decision id="_GLAJG6mkEeedaPwUdalcEg" name="feel-substring-before-function-test_6">
+    <dmn:description>Tests FEEL expression: 'substring before(&quot;abc&quot;,&quot;a&quot;)' and expects result: '&quot;&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'substring before(&quot;abc&quot;,&quot;a&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_GLAJHKmkEeedaPwUdalcEg" name="feel-substring-before-function-test_6" typeRef="ns1:tfeel-substring-before-function-test_6_Result"/>
+    <dmn:literalExpression id="_GLAJGqmkEeedaPwUdalcEg">
+      <dmn:text>substring before(&quot;abc&quot;,&quot;a&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_GLAJH6mkEeedaPwUdalcEg" name="feel-substring-before-function-test_7">
+    <dmn:description>Tests FEEL expression: 'substring before(&quot;abc&quot;,&quot;c&quot;)' and expects result: '&quot;ab&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'substring before(&quot;abc&quot;,&quot;c&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;ab&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_GLAJIKmkEeedaPwUdalcEg" name="feel-substring-before-function-test_7" typeRef="ns1:tfeel-substring-before-function-test_7_Result"/>
+    <dmn:literalExpression id="_GLAJHqmkEeedaPwUdalcEg">
+      <dmn:text>substring before(&quot;abc&quot;,&quot;c&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_GLAJI6mkEeedaPwUdalcEg" name="feel-substring-before-function-test_8">
     <dmn:description>Tests FEEL expression: 'substring before(string:&quot;foobar&quot;,match:&quot;bar&quot;)' and expects result: '&quot;foo&quot; (string)'</dmn:description>
     <dmn:question>Result of FEEL expression 'substring before(string:&quot;foobar&quot;,match:&quot;bar&quot;)'?</dmn:question>
     <dmn:allowedAnswers>&quot;foo&quot; (string)</dmn:allowedAnswers>
-    <dmn:variable id="_PDa8sqQ9EeeOzaBINJ6TsA" name="feel-substring-before-function-test_6" typeRef="ns1:tfeel-substring-before-function-test_6_Result"/>
-    <dmn:literalExpression id="_PDa8sKQ9EeeOzaBINJ6TsA">
+    <dmn:variable id="_GLAJJKmkEeedaPwUdalcEg" name="feel-substring-before-function-test_8" typeRef="ns1:tfeel-substring-before-function-test_8_Result"/>
+    <dmn:literalExpression id="_GLAJIqmkEeedaPwUdalcEg">
       <dmn:text>substring before(string:&quot;foobar&quot;,match:&quot;bar&quot;)</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
-  <dmn:decision id="_PDcK0aQ9EeeOzaBINJ6TsA" name="feel-substring-before-function-test_7">
+  <dmn:decision id="_GLAJJ6mkEeedaPwUdalcEg" name="feel-substring-before-function-test_9">
     <dmn:description>Tests FEEL expression: 'substring before(string:&quot;foobar&quot;,match:&quot;b&quot;)' and expects result: '&quot;foo&quot; (string)'</dmn:description>
     <dmn:question>Result of FEEL expression 'substring before(string:&quot;foobar&quot;,match:&quot;b&quot;)'?</dmn:question>
     <dmn:allowedAnswers>&quot;foo&quot; (string)</dmn:allowedAnswers>
-    <dmn:variable id="_PDcK0qQ9EeeOzaBINJ6TsA" name="feel-substring-before-function-test_7" typeRef="ns1:tfeel-substring-before-function-test_7_Result"/>
-    <dmn:literalExpression id="_PDcK0KQ9EeeOzaBINJ6TsA">
+    <dmn:variable id="_GLAJKKmkEeedaPwUdalcEg" name="feel-substring-before-function-test_9" typeRef="ns1:tfeel-substring-before-function-test_9_Result"/>
+    <dmn:literalExpression id="_GLAJJqmkEeedaPwUdalcEg">
       <dmn:text>substring before(string:&quot;foobar&quot;,match:&quot;b&quot;)</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
-  <dmn:knowledgeSource id="_PDU2EKQ9EeeOzaBINJ6TsA" name="DMN 1.1 - 10.3.4.3 Table 60"/>
+  <dmn:knowledgeSource id="_GK9FwamkEeedaPwUdalcEg" name="DMN 1.1 - 10.3.4.3 Table 60"/>
 </dmn:definitions>

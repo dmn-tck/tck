@@ -3,7 +3,7 @@
 
 ### Description ###
 
-DMN Model [1105-feel-upper-case-function-test.dmn](./1105-feel-upper-case-function-test.dmn) tests DMN specification conformance of `FEEL built-in function 'upper case(string)'`.
+DMN Model [1105-feel-upper-case-function-test.dmn](./1105-feel-upper-case-function-test.dmn) tests DMN specification conformance of `FEEL built-in function 'upper case(string)`.
 
 #### Specification Reference(s): ####
  * DMN 1.1 - 10.3.4.3 Table 60
@@ -16,7 +16,7 @@ DMN Model [1105-feel-upper-case-function-test.dmn](./1105-feel-upper-case-functi
 |feel-upper-case-function-test_2|upper case("abc")|"ABC" (string)|
 |feel-upper-case-function-test_3|upper case("")|"" (string)|
 |feel-upper-case-function-test_4|upper case("1")|"1" (string)|
-|feel-upper-case-function-test_5|upper case("?@|")|"?@|" (string)|
+|feel-upper-case-function-test_5|upper case("?@{")|"?@{" (string)|
 |feel-upper-case-function-test_6|upper case(string:"AbDcF")|"ABDCF" (string)|
 |feel-upper-case-function-test_7|upper case(string:"xyZ ")|"XYZ " (string)|
 |feel-upper-case-function-test_8|upper case(string:"123ABC")|"123ABC" (string)|

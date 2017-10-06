@@ -12,35 +12,35 @@ DMN Model [1109-feel-replace-function-test.dmn](./1109-feel-replace-function-tes
 
 |Decision Name| Literal Expression (FEEL) | Expected Result|
 |-------------|-------------------------- |----------------|
-|feel-replace-function-test_1|replace("","","",null)|"" (string)|
-|feel-replace-function-test_2|replace("abcd","(ab)|(a)", "[1=$1][2=$2]")|"[1=ab][2=]cd" (string)|
+|feel-replace-function-test_1|replace("abcd","(ab)|(a)", "[1=$1][2=$2]")|"[1=ab][2=]cd" (string)|
+|feel-replace-function-test_2|replace("a","[b-z]","#")|"a" (string)|
 |feel-replace-function-test_3|replace("a","[a-z]","#")|"#" (string)|
-|feel-replace-function-test_4|replace("abc","def","#")|"abc" (string)|
-|feel-replace-function-test_5|replace("abc","e","#")|"abc" (string)|
-|feel-replace-function-test_6|replace("foobar","^fo*b*","#")|"#ar" (string)|
-|feel-replace-function-test_7|replace("abc",".^[d-z]","#")|"abc" (string)|
-|feel-replace-function-test_8|replace("abracadabra","bra","*")|"a*cada*" (string)|
-|feel-replace-function-test_9|replace("abracadabra","a.*a","*")|"*" (string)|
-|feel-replace-function-test_10|replace("abracadabra","a.*?a","*")|"*c*bra" (string)|
-|feel-replace-function-test_11|replace("abracadabra","a","")|"brcdbr" (string)|
-|feel-replace-function-test_12|replace("abracadabra","a(.)","a$1$1")|"abbraccaddabbra" (string)|
-|feel-replace-function-test_13|replace("AAAA","A+","b")|"b" (string)|
-|feel-replace-function-test_14|replace("AAAA","A+?","b")|"bbbb" (string)|
-|feel-replace-function-test_15|replace("darted","^(.*?)d(.*)$","$1c$2")|"carted" (string)|
-|feel-replace-function-test_16|replace("abc","[a-z]","#","")|"###" (string)|
-|feel-replace-function-test_17|replace("abc","[a-z]*","#","")|"##" (string)|
-|feel-replace-function-test_18|replace("a.b.c.","[a-z]","#","s")|"#.#.#." (string)|
-|feel-replace-function-test_19|replace("abc","[A-Z]","#","i")|"###" (string)|
-|feel-replace-function-test_20|replace("abc","[a-z]","#","s")|"###" (string)|
-|feel-replace-function-test_21|replace("a b c d ","[a-z]","#","x")|"# # # # " (string)|
-|feel-replace-function-test_22|replace("abc",".^[d-z]*","smix")|"abc" (string)|
-|feel-replace-function-test_23|replace("reluctant","r.*?t","X")|"Xant" (string)|
-|feel-replace-function-test_24|replace("0123456789","(\d{3})(\d{3})(\d{4})","($1) $2-$3")|"(012) 345-6789" (string)|
-|feel-replace-function-test_25|replace("facetiously","[iouy]","[$0]")|"facet[i][o][u]sl[y]" (string)|
-|feel-replace-function-test_26|replace(input:"abc",pattern:"[a-z]",replacement:"#",flags:"")|"###" (string)|
-|feel-replace-function-test_27|replace(input:"abc",pattern:"[A-Z]",replacement:"#")|"abc" (string)|
+|feel-replace-function-test_4|replace("a","[a-z]","#")|"#" (string)|
+|feel-replace-function-test_5|replace("abc","def","#")|"abc" (string)|
+|feel-replace-function-test_6|replace("abc","e","#")|"abc" (string)|
+|feel-replace-function-test_7|replace("foobar","^fo*b*","#")|"#ar" (string)|
+|feel-replace-function-test_8|replace("abc",".^[d-z]","#")|"abc" (string)|
+|feel-replace-function-test_9|replace("abracadabra","bra","*")|"a*cada*" (string)|
+|feel-replace-function-test_10|replace("abracadabra","a.*a","*")|"*" (string)|
+|feel-replace-function-test_11|replace("abracadabra","a.*?a","*")|"*c*bra" (string)|
+|feel-replace-function-test_12|replace("abracadabra","a","")|"brcdbr" (string)|
+|feel-replace-function-test_13|replace("abracadabra","a(.)","a$1$1")|"abbraccaddabbra" (string)|
+|feel-replace-function-test_14|replace("AAAA","A+","b")|"b" (string)|
+|feel-replace-function-test_15|replace("AAAA","A+?","b")|"bbbb" (string)|
+|feel-replace-function-test_16|replace("darted","^(.*?)d(.*)$","$1c$2")|"carted" (string)|
+|feel-replace-function-test_17|replace("reluctant","r.*?t","X")|"Xant" (string)|
+|feel-replace-function-test_18|replace("0123456789","(\d{3})(\d{3})(\d{4})","($1) $2-$3")|"(012) 345-6789" (string)|
+|feel-replace-function-test_19|replace("facetiously","[iouy]","[$0]")|"facet[i][o][u]sl[y]" (string)|
+|feel-replace-function-test_20|replace("abc","[a-z]","#","")|"###" (string)|
+|feel-replace-function-test_21|replace("a.b.c.","[a-z]","#","s")|"#.#.#." (string)|
+|feel-replace-function-test_22|replace("abc","[A-Z]","#","i")|"###" (string)|
+|feel-replace-function-test_23|replace("abc","[a-z]","#","s")|"###" (string)|
+|feel-replace-function-test_24|replace("a b c d ","[a-z]","#","x")|"# # # # " (string)|
+|feel-replace-function-test_25|replace("abc",".^[d-z]*","smix")|"abc" (string)|
+|feel-replace-function-test_26|replace(input:"abc",pattern:"[a-z]",replacement:"#")|"###" (string)|
+|feel-replace-function-test_27|replace(input:"abc",pattern:"[A-Z]",replacement:"#",flags:"")|"abc" (string)|
 |feel-replace-function-test_28|replace(input:"abc",pattern:"[A-Z]",replacement:"#",flags:"i")|"###" (string)|
-|feel-replace-function-test_29|replace(input:"abc",pattern:".^[d-z]",replacement:"#",flags:"smix")|"abc" (string)|
+|feel-replace-function-test_29|replace(input:"abc",pattern:".^[d-z]*",replacement:"#",flags:"smix")|"abc" (string)|
 
          
 

@@ -3,7 +3,7 @@
 
 ### Description ###
 
-DMN Model [1107-feel-substring-before-function-test.dmn](./1107-feel-substring-before-function-test.dmn) tests DMN specification conformance of `FEEL built-in function 'substring before(string, match)'`.
+DMN Model [1107-feel-substring-before-function-test.dmn](./1107-feel-substring-before-function-test.dmn) tests DMN specification conformance of `FEEL built-in function 'substring before(string, match)`.
 
 #### Specification Reference(s): ####
  * DMN 1.1 - 10.3.4.3 Table 60
@@ -17,8 +17,10 @@ DMN Model [1107-feel-substring-before-function-test.dmn](./1107-feel-substring-b
 |feel-substring-before-function-test_3|substring before("foobar","x")|"" (string)|
 |feel-substring-before-function-test_4|substring before("","")|"" (string)|
 |feel-substring-before-function-test_5|substring before("abc","")|"" (string)|
-|feel-substring-before-function-test_6|substring before(string:"foobar",match:"bar")|"foo" (string)|
-|feel-substring-before-function-test_7|substring before(string:"foobar",match:"b")|"foo" (string)|
+|feel-substring-before-function-test_6|substring before("abc","a")|"" (string)|
+|feel-substring-before-function-test_7|substring before("abc","c")|"ab" (string)|
+|feel-substring-before-function-test_8|substring before(string:"foobar",match:"bar")|"foo" (string)|
+|feel-substring-before-function-test_9|substring before(string:"foobar",match:"b")|"foo" (string)|
 
          
 

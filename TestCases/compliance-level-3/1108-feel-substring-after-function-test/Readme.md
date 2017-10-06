@@ -3,7 +3,7 @@
 
 ### Description ###
 
-DMN Model [1108-feel-substring-after-function-test.dmn](./1108-feel-substring-after-function-test.dmn) tests DMN specification conformance of `FEEL built-in function 'substring after(string, match)'`.
+DMN Model [1108-feel-substring-after-function-test.dmn](./1108-feel-substring-after-function-test.dmn) tests DMN specification conformance of `FEEL built-in function 'substring after(string, match)`.
 
 #### Specification Reference(s): ####
  * DMN 1.1 - 10.3.4.3 Table 60
@@ -18,8 +18,10 @@ DMN Model [1108-feel-substring-after-function-test.dmn](./1108-feel-substring-af
 |feel-substring-after-function-test_4|substring after("","")|"" (string)|
 |feel-substring-after-function-test_5|substring after("","a")|"" (string)|
 |feel-substring-after-function-test_6|substring after("abc","")|"abc" (string)|
-|feel-substring-after-function-test_7|substring after(string:"foobar",match:"ob")|"ar" (string)|
-|feel-substring-after-function-test_8|substring after(string:"foobar",match:"b")|"ar" (string)|
+|feel-substring-after-function-test_7|substring after("abc","c")|"" (string)|
+|feel-substring-after-function-test_8|substring after("abc","a")|"bc" (string)|
+|feel-substring-after-function-test_9|substring after(string:"foobar",match:"ob")|"ar" (string)|
+|feel-substring-after-function-test_10|substring after(string:"foobar",match:"b")|"ar" (string)|
 
          
 
