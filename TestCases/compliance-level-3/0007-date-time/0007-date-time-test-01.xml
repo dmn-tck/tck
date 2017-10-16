@@ -140,7 +140,7 @@
 				<value>1</value>
 			</expected>
 		</resultNode>
-		<resultNode name="cTimezone" type="decision">
+		<resultNode name="cOffset" type="decision">
 			<expected>
 				<value xsi:type="xsd:duration">-PT1H</value>
 			</expected>
