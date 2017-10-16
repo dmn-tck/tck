@@ -161,7 +161,8 @@ public class DmnTckRunner
                     break;
             }
 			if (resultFile != null) {
-            resultFile.append( String.format( "\"%s\",\"%s\",\"%s\",\"%s\",\"%s\"\n", folder, description.getClassName(), description.getMethodName(),
+                String relativePath = relativePath(folder);
+                resultFile.append( String.format( "\"%s\",\"%s\",\"%s\",\"%s\",\"%s\"\n", relativePath, description.getClassName(), description.getMethodName(),
                                               result.getResult().toString(), result.getMsg() ) );
 			}
         } catch ( IOException e ) {
@@ -176,4 +177,9 @@ public class DmnTckRunner
         return descr;
     }
 
+    private String relativePath(String path) {
+        String[] pathParts = path.replace('\\', '/').split("/");
+        int len = pathParts.length;
+        return String.format("%s/%s", pathParts[len-2], pathParts[len-1]);
+    }
 }
