@@ -95,7 +95,10 @@ public class TrisotechTCKHelper {
         Files.copy(dmnFile.toPath(), output);
         output.flush();
 
-        return connection.getResponseCode() == 200;
+        if (connection.getResponseCode() != 200) {
+            throw new IOException("Could not deploy to the cloud: " + connection.getResponseCode() + " " + connection.getResponseMessage());
+        }
+        return true;
     }
 
     public static Map<String, Boolean> runTestCase(String groupId, String artifactId, File tckTestFile, Properties properties)
