@@ -1,0 +1,16 @@
+<!-- 
+* jaxb binding to add jackson deserialization annotation to getValue() method of ValueType class 
+* https://github.com/highsource/jaxb2-annotate-plugin
+-->
+<jaxb:bindings
+	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:annox="http://annox.dev.java.net" 
+	jaxb:extensionBindingPrefixes="annox"
+	jaxb:version="2.1">
+
+	jaxb:extensionBindingPrefixes="annox"
+		<jaxb:bindings schemaLocation="testCases.xsd" node="/xs:schema/xs:complexType[@name='valueType']/xs:choice/xs:element[@name='value']">
+			<annox:annotate target="getter">@com.fasterxml.jackson.databind.annotation.JsonSerialize(using=org.omg.dmn.tck.marshaller._20160719.json.ValueSerializer.class)</annox:annotate>
+		</jaxb:bindings>
+</jaxb:bindings>
