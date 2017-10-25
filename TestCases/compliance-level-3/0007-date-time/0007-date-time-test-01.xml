@@ -140,11 +140,6 @@
 				<value>1</value>
 			</expected>
 		</resultNode>
-		<resultNode name="cTimezone" type="decision">
-			<expected>
-				<value xsi:type="xsd:duration">-PT1H</value>
-			</expected>
-		</resultNode>
 		<resultNode name="years" type="decision">
 			<expected>
 				<value>1</value>

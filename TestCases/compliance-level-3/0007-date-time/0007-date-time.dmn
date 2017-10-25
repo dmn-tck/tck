@@ -261,15 +261,6 @@
 			<text>Date-Time2.second</text>
 		</literalExpression>
 	</decision>
-	<decision id="_81f97dd0-29ea-4bab-9540-b70a2fdf8ff3" name="cTimezone">
-		<variable name="cTimezone" typeRef="feel:dayTimeDuration"/>
-		<informationRequirement>
-			<requiredDecision href="#_7df22028-4b5b-4594-89c7-a80b8aec526f"/>
-		</informationRequirement>
-		<literalExpression>
-			<text>Date-Time2.timezone</text>
-		</literalExpression>
-	</decision>
 	<decision id="_91fb395d-8173-4ed3-95f7-f790bd3967ab" name="years">
 		<variable name="years" typeRef="feel:number"/>
 		<informationRequirement>
