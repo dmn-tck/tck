@@ -2,13 +2,13 @@
 <dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:ns1="http://www.actico.com/spec/DMN/1110-feel-contains-function" id="_JG21oLpMEeeHcLDylYgVNA" name="1110-feel-contains-function" namespace="http://www.actico.com/spec/DMN/1110-feel-contains-function">
   <dmn:description>FEEL built-in function 'contains(string, match)'</dmn:description>
   <dmn:itemDefinition id="_JIz9cLpMEeeHcLDylYgVNA" name="tfeel-contains-function_1_Result">
-    <dmn:typeRef>feel:null</dmn:typeRef>
+    <dmn:typeRef>feel:boolean</dmn:typeRef>
   </dmn:itemDefinition>
   <dmn:itemDefinition id="_JK3y8bpMEeeHcLDylYgVNA" name="tfeel-contains-function_2_Result">
-    <dmn:typeRef>feel:null</dmn:typeRef>
+    <dmn:typeRef>feel:boolean</dmn:typeRef>
   </dmn:itemDefinition>
   <dmn:itemDefinition id="_JK5oI7pMEeeHcLDylYgVNA" name="tfeel-contains-function_3_Result">
-    <dmn:typeRef>feel:null</dmn:typeRef>
+    <dmn:typeRef>feel:boolean</dmn:typeRef>
   </dmn:itemDefinition>
   <dmn:itemDefinition id="_JK62QbpMEeeHcLDylYgVNA" name="tfeel-contains-function_4_Result">
     <dmn:typeRef>feel:boolean</dmn:typeRef>
