@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/DMN/20160719/testcase ../testCases.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<modelName>0032-conditionals.dmn</modelName>
 	<labels>
 		<label>Compliance Level 3</label>
@@ -56,7 +56,7 @@
     <testCase id="004">
         <description>Tests 'if' condition with function calls for true</description>
         <inputNode name="aDate">
-            <value>2017-01-02</value>
+            <value xsi:type="xsd:date">2017-01-02</value>
         </inputNode>
         <inputNode name="aString">
             <value>Hello World</value>
@@ -70,7 +70,7 @@
     <testCase id="005">
         <description>Tests 'if' condition with function calls for false</description>
         <inputNode name="aDate">
-            <value>2017-01-01</value>
+            <value xsi:type="xsd:date">2017-01-01</value>
         </inputNode>
         <inputNode name="aString">
             <value>Hello World</value>
