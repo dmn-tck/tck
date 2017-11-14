@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Contributed to DMN TCK by ACTICO GmbH https://actico.com -->
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="">
+    <modelName>1115-feel-date-function.dmn</modelName>
+    <labels>
+        <label>Compliance Level 3</label>
+        <label>Literal Expression</label>
+        <label>FEEL Functions: date and time</label>
+    </labels>
+    <testCase id="001">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_1" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="002">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_2" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="003">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_3" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="004">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_4" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="005">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_5" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="006">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_6" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="007">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_7" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="008">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_8" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="009">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_9" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="010">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_10" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="011">
+        <resultNode name="feel-date-function_11" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:date">2017-12-31</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="012">
+        <resultNode name="feel-date-function_12" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:date">2017-01-01</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="013">
+        <resultNode name="feel-date-function_13" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:date">-2017-12-31</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="014">
+        <resultNode name="feel-date-function_14" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:date">-2017-01-01</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="015">
+        <resultNode name="feel-date-function_15" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">999999999-12-31</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="016">
+        <resultNode name="feel-date-function_16" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">-999999999-12-31</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="017">
+        <resultNode name="feel-date-function_17" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:date">2017-08-14</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="018">
+        <resultNode name="feel-date-function_18" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:date">2017-08-14</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="019">
+        <resultNode name="feel-date-function_19" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:date">2017-08-14</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="020">
+        <resultNode name="feel-date-function_20" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:date">2017-09-03</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="021">
+        <resultNode name="feel-date-function_21" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:date">2017-09-06</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="022">
+        <resultNode name="feel-date-function_22" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:date">2012-12-25</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="023">
+        <resultNode name="feel-date-function_23" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:date">2017-08-03</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="024">
+        <resultNode name="feel-date-function_24" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:date">2017-12-31</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="025">
+        <resultNode name="feel-date-function_25" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:date">2017-01-01</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="026">
+        <resultNode name="feel-date-function_26" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:date">-2017-12-31</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="027">
+        <resultNode name="feel-date-function_27" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:date">-2017-01-01</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="028">
+        <resultNode name="feel-date-function_28" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">999999999-12-31</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="029">
+        <resultNode name="feel-date-function_29" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">-999999999-12-31</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="030">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_30" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="031">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_31" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="032">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_32" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="033">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_33" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="034">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_34" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="035">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_35" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="036">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_36" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="037">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_37" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="038">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_38" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="039">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_39" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="040">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_40" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="041">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_41" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="042">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_42" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="043">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_43" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="044">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_44" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="045">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_45" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="046">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_46" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="047">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_47" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="048">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_48" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="049">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_49" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="050">
+        <resultNode name="feel-date-function_50" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:date">2012-12-25</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="051">
+        <resultNode errorResult="true" name="feel-date-function_ErrorCase_51" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="052">
+        <resultNode name="feel-date-function_52" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:date">2017-08-30</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="053">
+        <resultNode name="feel-date-function_53" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:date">2017-08-30</value>
+            </expected>
+        </resultNode>
+    </testCase>
+</testCases>

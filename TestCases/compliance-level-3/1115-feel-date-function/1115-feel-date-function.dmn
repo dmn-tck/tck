@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:ns1="http://www.actico.com/spec/DMN/1115-feel-date-function" id="_JNon4MlGEeeAGbzZrHaKcQ" name="1115-feel-date-function" namespace="http://www.actico.com/spec/DMN/1115-feel-date-function">
+  <dmn:description>FEEL built-in function 'date(from [string])', 'date(from [date and time])' and 'date(year,month,day)'</dmn:description>
+  <dmn:itemDefinition id="_JNpO8MlGEeeAGbzZrHaKcQ" name="tfeel-date-function_1_Result"/>
+  <dmn:itemDefinition id="_JNrEI8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_2_Result"/>
+  <dmn:itemDefinition id="_JNtgY8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_3_Result"/>
+  <dmn:itemDefinition id="_JNuHc8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_4_Result"/>
+  <dmn:itemDefinition id="_JNuug8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_5_Result"/>
+  <dmn:itemDefinition id="_JNvVk8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_6_Result"/>
+  <dmn:itemDefinition id="_JNv8o8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_7_Result"/>
+  <dmn:itemDefinition id="_JNwjsclGEeeAGbzZrHaKcQ" name="tfeel-date-function_8_Result"/>
+  <dmn:itemDefinition id="_JNwjtclGEeeAGbzZrHaKcQ" name="tfeel-date-function_9_Result"/>
+  <dmn:itemDefinition id="_JNxKw8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_10_Result"/>
+  <dmn:itemDefinition id="_JNxx08lGEeeAGbzZrHaKcQ" name="tfeel-date-function_11_Result">
+    <dmn:typeRef>feel:date</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JNy_88lGEeeAGbzZrHaKcQ" name="tfeel-date-function_12_Result">
+    <dmn:typeRef>feel:date</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JNznA8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_13_Result">
+    <dmn:typeRef>feel:date</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JN0OE8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_14_Result">
+    <dmn:typeRef>feel:date</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JN01I8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_15_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JN1cM8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_16_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JN2qU8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_17_Result">
+    <dmn:typeRef>feel:date</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JN9_E8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_18_Result">
+    <dmn:typeRef>feel:date</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JOBpc8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_19_Result">
+    <dmn:typeRef>feel:date</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JOC3k8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_20_Result">
+    <dmn:typeRef>feel:date</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JOIXI8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_21_Result">
+    <dmn:typeRef>feel:date</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JOJlQ8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_22_Result">
+    <dmn:typeRef>feel:date</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JOKzY8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_23_Result">
+    <dmn:typeRef>feel:date</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JOMok8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_24_Result">
+    <dmn:typeRef>feel:date</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JONPo8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_25_Result">
+    <dmn:typeRef>feel:date</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JON2s8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_26_Result">
+    <dmn:typeRef>feel:date</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JOPr4MlGEeeAGbzZrHaKcQ" name="tfeel-date-function_27_Result">
+    <dmn:typeRef>feel:date</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JOQS88lGEeeAGbzZrHaKcQ" name="tfeel-date-function_28_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JORhEclGEeeAGbzZrHaKcQ" name="tfeel-date-function_29_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JOSvMclGEeeAGbzZrHaKcQ" name="tfeel-date-function_30_Result"/>
+  <dmn:itemDefinition id="_JOTWQ8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_31_Result"/>
+  <dmn:itemDefinition id="_JOT9U8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_32_Result"/>
+  <dmn:itemDefinition id="_JOUkY8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_33_Result"/>
+  <dmn:itemDefinition id="_JOVLc8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_34_Result"/>
+  <dmn:itemDefinition id="_JOWZkclGEeeAGbzZrHaKcQ" name="tfeel-date-function_35_Result"/>
+  <dmn:itemDefinition id="_JOXnsslGEeeAGbzZrHaKcQ" name="tfeel-date-function_36_Result"/>
+  <dmn:itemDefinition id="_JOY10clGEeeAGbzZrHaKcQ" name="tfeel-date-function_37_Result"/>
+  <dmn:itemDefinition id="_JOaD8clGEeeAGbzZrHaKcQ" name="tfeel-date-function_38_Result"/>
+  <dmn:itemDefinition id="_JOarA8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_39_Result"/>
+  <dmn:itemDefinition id="_JOb5IclGEeeAGbzZrHaKcQ" name="tfeel-date-function_40_Result"/>
+  <dmn:itemDefinition id="_JOcgM8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_41_Result"/>
+  <dmn:itemDefinition id="_JOduUclGEeeAGbzZrHaKcQ" name="tfeel-date-function_42_Result"/>
+  <dmn:itemDefinition id="_JOeVY8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_43_Result"/>
+  <dmn:itemDefinition id="_JOfjg8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_44_Result"/>
+  <dmn:itemDefinition id="_JOgxo8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_45_Result"/>
+  <dmn:itemDefinition id="_JOh_w8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_46_Result"/>
+  <dmn:itemDefinition id="_JOjN4clGEeeAGbzZrHaKcQ" name="tfeel-date-function_47_Result"/>
+  <dmn:itemDefinition id="_JOlDE8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_48_Result"/>
+  <dmn:itemDefinition id="_JOlqI8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_49_Result"/>
+  <dmn:itemDefinition id="_JOnfUclGEeeAGbzZrHaKcQ" name="tfeel-date-function_50_Result">
+    <dmn:typeRef>feel:date</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JOoGYclGEeeAGbzZrHaKcQ" name="tfeel-date-function_51_Result"/>
+  <dmn:itemDefinition id="_JOotcclGEeeAGbzZrHaKcQ" name="tfeel-date-function_52_Result">
+    <dmn:typeRef>feel:date</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JOpUg8lGEeeAGbzZrHaKcQ" name="tfeel-date-function_53_Result">
+    <dmn:typeRef>feel:date</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:decision id="_JNrEIclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_1">
+    <dmn:description>Tests FEEL expression: 'date(null)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(null)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JNrEIslGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_1" typeRef="ns1:tfeel-date-function_1_Result"/>
+    <dmn:literalExpression id="_JNrEIMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(null)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JNtgYclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_2">
+    <dmn:description>Tests FEEL expression: 'date(null,null)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(null,null)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JNtgYslGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_2" typeRef="ns1:tfeel-date-function_2_Result"/>
+    <dmn:literalExpression id="_JNtgYMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(null,null)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JNuHcclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_3">
+    <dmn:description>Tests FEEL expression: 'date(null,2,1)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(null,2,1)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JNuHcslGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_3" typeRef="ns1:tfeel-date-function_3_Result"/>
+    <dmn:literalExpression id="_JNuHcMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(null,2,1)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JNuugclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_4">
+    <dmn:description>Tests FEEL expression: 'date(2017,null,1)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(2017,null,1)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JNuugslGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_4" typeRef="ns1:tfeel-date-function_4_Result"/>
+    <dmn:literalExpression id="_JNuugMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(2017,null,1)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JNvVkclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_5">
+    <dmn:description>Tests FEEL expression: 'date(2017,1,null)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(2017,1,null)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JNvVkslGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_5" typeRef="ns1:tfeel-date-function_5_Result"/>
+    <dmn:literalExpression id="_JNvVkMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(2017,1,null)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JNv8oclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_6">
+    <dmn:description>Tests FEEL expression: 'date(null,null,1)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(null,null,1)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JNv8oslGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_6" typeRef="ns1:tfeel-date-function_6_Result"/>
+    <dmn:literalExpression id="_JNv8oMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(null,null,1)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JNv8pclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_7">
+    <dmn:description>Tests FEEL expression: 'date(null,02,null)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(null,02,null)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JNwjsMlGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_7" typeRef="ns1:tfeel-date-function_7_Result"/>
+    <dmn:literalExpression id="_JNv8pMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(null,02,null)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JNwjs8lGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_8">
+    <dmn:description>Tests FEEL expression: 'date(2017,null,null)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(2017,null,null)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JNwjtMlGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_8" typeRef="ns1:tfeel-date-function_8_Result"/>
+    <dmn:literalExpression id="_JNwjsslGEeeAGbzZrHaKcQ">
+      <dmn:text>date(2017,null,null)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JNxKwclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_9">
+    <dmn:description>Tests FEEL expression: 'date(null,null,null)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(null,null,null)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JNxKwslGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_9" typeRef="ns1:tfeel-date-function_9_Result"/>
+    <dmn:literalExpression id="_JNxKwMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(null,null,null)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JNxx0clGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_10">
+    <dmn:description>Tests FEEL expression: 'date()' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date()'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JNxx0slGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_10" typeRef="ns1:tfeel-date-function_10_Result"/>
+    <dmn:literalExpression id="_JNxx0MlGEeeAGbzZrHaKcQ">
+      <dmn:text>date()</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JNy_8clGEeeAGbzZrHaKcQ" name="feel-date-function_11">
+    <dmn:description>Tests FEEL expression: 'date(&quot;2017-12-31&quot;)' and expects result: '2017-12-31 (date)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(&quot;2017-12-31&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>2017-12-31 (date)</dmn:allowedAnswers>
+    <dmn:variable id="_JNy_8slGEeeAGbzZrHaKcQ" name="feel-date-function_11" typeRef="ns1:tfeel-date-function_11_Result"/>
+    <dmn:literalExpression id="_JNy_8MlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(&quot;2017-12-31&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JNznAclGEeeAGbzZrHaKcQ" name="feel-date-function_12">
+    <dmn:description>Tests FEEL expression: 'date(&quot;2017-01-01&quot;)' and expects result: '2017-01-01 (date)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(&quot;2017-01-01&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>2017-01-01 (date)</dmn:allowedAnswers>
+    <dmn:variable id="_JNznAslGEeeAGbzZrHaKcQ" name="feel-date-function_12" typeRef="ns1:tfeel-date-function_12_Result"/>
+    <dmn:literalExpression id="_JNznAMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(&quot;2017-01-01&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JN0OEclGEeeAGbzZrHaKcQ" name="feel-date-function_13">
+    <dmn:description>Tests FEEL expression: 'date(&quot;-2017-12-31&quot;)' and expects result: '-2017-12-31 (date)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(&quot;-2017-12-31&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>-2017-12-31 (date)</dmn:allowedAnswers>
+    <dmn:variable id="_JN0OEslGEeeAGbzZrHaKcQ" name="feel-date-function_13" typeRef="ns1:tfeel-date-function_13_Result"/>
+    <dmn:literalExpression id="_JN0OEMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(&quot;-2017-12-31&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JN01IclGEeeAGbzZrHaKcQ" name="feel-date-function_14">
+    <dmn:description>Tests FEEL expression: 'date(&quot;-2017-01-01&quot;)' and expects result: '-2017-01-01 (date)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(&quot;-2017-01-01&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>-2017-01-01 (date)</dmn:allowedAnswers>
+    <dmn:variable id="_JN01IslGEeeAGbzZrHaKcQ" name="feel-date-function_14" typeRef="ns1:tfeel-date-function_14_Result"/>
+    <dmn:literalExpression id="_JN01IMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(&quot;-2017-01-01&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JN1cMclGEeeAGbzZrHaKcQ" name="feel-date-function_15">
+    <dmn:description>Tests FEEL expression: 'string(date(&quot;999999999-12-31&quot;))' and expects result: '&quot;999999999-12-31&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'string(date(&quot;999999999-12-31&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>&quot;999999999-12-31&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_JN1cMslGEeeAGbzZrHaKcQ" name="feel-date-function_15" typeRef="ns1:tfeel-date-function_15_Result"/>
+    <dmn:literalExpression id="_JN1cMMlGEeeAGbzZrHaKcQ">
+      <dmn:text>string(date(&quot;999999999-12-31&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JN2qUclGEeeAGbzZrHaKcQ" name="feel-date-function_16">
+    <dmn:description>Tests FEEL expression: 'string(date(&quot;-999999999-12-31&quot;))' and expects result: '&quot;-999999999-12-31&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'string(date(&quot;-999999999-12-31&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>&quot;-999999999-12-31&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_JN2qUslGEeeAGbzZrHaKcQ" name="feel-date-function_16" typeRef="ns1:tfeel-date-function_16_Result"/>
+    <dmn:literalExpression id="_JN2qUMlGEeeAGbzZrHaKcQ">
+      <dmn:text>string(date(&quot;-999999999-12-31&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JN9_EclGEeeAGbzZrHaKcQ" name="feel-date-function_17">
+    <dmn:description>Tests FEEL expression: 'date(date and time(&quot;2017-08-14T14:25:00&quot;))' and expects result: '2017-08-14 (date)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(date and time(&quot;2017-08-14T14:25:00&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-08-14 (date)</dmn:allowedAnswers>
+    <dmn:variable id="_JN9_EslGEeeAGbzZrHaKcQ" name="feel-date-function_17" typeRef="ns1:tfeel-date-function_17_Result"/>
+    <dmn:literalExpression id="_JN9_EMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(date and time(&quot;2017-08-14T14:25:00&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOBpcclGEeeAGbzZrHaKcQ" name="feel-date-function_18">
+    <dmn:description>Tests FEEL expression: 'date(date and time(date and time(&quot;2017-08-14T14:25:00&quot;),time(&quot;10:50:00&quot;)))' and expects result: '2017-08-14 (date)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(date and time(date and time(&quot;2017-08-14T14:25:00&quot;),time(&quot;10:50:00&quot;)))'?</dmn:question>
+    <dmn:allowedAnswers>2017-08-14 (date)</dmn:allowedAnswers>
+    <dmn:variable id="_JOBpcslGEeeAGbzZrHaKcQ" name="feel-date-function_18" typeRef="ns1:tfeel-date-function_18_Result"/>
+    <dmn:literalExpression id="_JOBpcMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(date and time(date and time(&quot;2017-08-14T14:25:00&quot;),time(&quot;10:50:00&quot;)))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOC3kclGEeeAGbzZrHaKcQ" name="feel-date-function_19">
+    <dmn:description>Tests FEEL expression: 'date(date and time(&quot;2017-08-14T14:25:00.123456789&quot;))' and expects result: '2017-08-14 (date)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(date and time(&quot;2017-08-14T14:25:00.123456789&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-08-14 (date)</dmn:allowedAnswers>
+    <dmn:variable id="_JOC3kslGEeeAGbzZrHaKcQ" name="feel-date-function_19" typeRef="ns1:tfeel-date-function_19_Result"/>
+    <dmn:literalExpression id="_JOC3kMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(date and time(&quot;2017-08-14T14:25:00.123456789&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOIXIclGEeeAGbzZrHaKcQ" name="feel-date-function_20">
+    <dmn:description>Tests FEEL expression: 'date(date and time(&quot;2017-09-03T09:45:30@Europe/Paris&quot;))' and expects result: '2017-09-03 (date)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(date and time(&quot;2017-09-03T09:45:30@Europe/Paris&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-09-03 (date)</dmn:allowedAnswers>
+    <dmn:variable id="_JOIXIslGEeeAGbzZrHaKcQ" name="feel-date-function_20" typeRef="ns1:tfeel-date-function_20_Result"/>
+    <dmn:literalExpression id="_JOIXIMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(date and time(&quot;2017-09-03T09:45:30@Europe/Paris&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOJlQclGEeeAGbzZrHaKcQ" name="feel-date-function_21">
+    <dmn:description>Tests FEEL expression: 'date(date and time(&quot;2017-09-06T09:45:30@Asia/Dhaka&quot;))' and expects result: '2017-09-06 (date)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(date and time(&quot;2017-09-06T09:45:30@Asia/Dhaka&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-09-06 (date)</dmn:allowedAnswers>
+    <dmn:variable id="_JOJlQslGEeeAGbzZrHaKcQ" name="feel-date-function_21" typeRef="ns1:tfeel-date-function_21_Result"/>
+    <dmn:literalExpression id="_JOJlQMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(date and time(&quot;2017-09-06T09:45:30@Asia/Dhaka&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOKzYclGEeeAGbzZrHaKcQ" name="feel-date-function_22">
+    <dmn:description>Tests FEEL expression: 'date(date and time(&quot;2012-12-25T11:00:00Z&quot;))' and expects result: '2012-12-25 (date)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(date and time(&quot;2012-12-25T11:00:00Z&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2012-12-25 (date)</dmn:allowedAnswers>
+    <dmn:variable id="_JOKzYslGEeeAGbzZrHaKcQ" name="feel-date-function_22" typeRef="ns1:tfeel-date-function_22_Result"/>
+    <dmn:literalExpression id="_JOKzYMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(date and time(&quot;2012-12-25T11:00:00Z&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOMokclGEeeAGbzZrHaKcQ" name="feel-date-function_23">
+    <dmn:description>Tests FEEL expression: 'date(date and time(&quot;2017-08-03T10:15:30+01:00&quot;))' and expects result: '2017-08-03 (date)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(date and time(&quot;2017-08-03T10:15:30+01:00&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-08-03 (date)</dmn:allowedAnswers>
+    <dmn:variable id="_JOMokslGEeeAGbzZrHaKcQ" name="feel-date-function_23" typeRef="ns1:tfeel-date-function_23_Result"/>
+    <dmn:literalExpression id="_JOMokMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(date and time(&quot;2017-08-03T10:15:30+01:00&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JONPoclGEeeAGbzZrHaKcQ" name="feel-date-function_24">
+    <dmn:description>Tests FEEL expression: 'date(2017,12,31)' and expects result: '2017-12-31 (date)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(2017,12,31)'?</dmn:question>
+    <dmn:allowedAnswers>2017-12-31 (date)</dmn:allowedAnswers>
+    <dmn:variable id="_JONPoslGEeeAGbzZrHaKcQ" name="feel-date-function_24" typeRef="ns1:tfeel-date-function_24_Result"/>
+    <dmn:literalExpression id="_JONPoMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(2017,12,31)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JON2sclGEeeAGbzZrHaKcQ" name="feel-date-function_25">
+    <dmn:description>Tests FEEL expression: 'date(2017,01,01)' and expects result: '2017-01-01 (date)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(2017,01,01)'?</dmn:question>
+    <dmn:allowedAnswers>2017-01-01 (date)</dmn:allowedAnswers>
+    <dmn:variable id="_JON2sslGEeeAGbzZrHaKcQ" name="feel-date-function_25" typeRef="ns1:tfeel-date-function_25_Result"/>
+    <dmn:literalExpression id="_JON2sMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(2017,01,01)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOPE0clGEeeAGbzZrHaKcQ" name="feel-date-function_26">
+    <dmn:description>Tests FEEL expression: 'date(-2017,12,31)' and expects result: '-2017-12-31 (date)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(-2017,12,31)'?</dmn:question>
+    <dmn:allowedAnswers>-2017-12-31 (date)</dmn:allowedAnswers>
+    <dmn:variable id="_JOPE0slGEeeAGbzZrHaKcQ" name="feel-date-function_26" typeRef="ns1:tfeel-date-function_26_Result"/>
+    <dmn:literalExpression id="_JOPE0MlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(-2017,12,31)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOQS8clGEeeAGbzZrHaKcQ" name="feel-date-function_27">
+    <dmn:description>Tests FEEL expression: 'date(-2017,01,01)' and expects result: '-2017-01-01 (date)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(-2017,01,01)'?</dmn:question>
+    <dmn:allowedAnswers>-2017-01-01 (date)</dmn:allowedAnswers>
+    <dmn:variable id="_JOQS8slGEeeAGbzZrHaKcQ" name="feel-date-function_27" typeRef="ns1:tfeel-date-function_27_Result"/>
+    <dmn:literalExpression id="_JOQS8MlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(-2017,01,01)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOQ6AclGEeeAGbzZrHaKcQ" name="feel-date-function_28">
+    <dmn:description>Tests FEEL expression: 'string(date(999999999,12,31))' and expects result: '&quot;999999999-12-31&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'string(date(999999999,12,31))'?</dmn:question>
+    <dmn:allowedAnswers>&quot;999999999-12-31&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_JORhEMlGEeeAGbzZrHaKcQ" name="feel-date-function_28" typeRef="ns1:tfeel-date-function_28_Result"/>
+    <dmn:literalExpression id="_JOQ6AMlGEeeAGbzZrHaKcQ">
+      <dmn:text>string(date(999999999,12,31))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOSIIclGEeeAGbzZrHaKcQ" name="feel-date-function_29">
+    <dmn:description>Tests FEEL expression: 'string(date(-999999999,12,31))' and expects result: '&quot;-999999999-12-31&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'string(date(-999999999,12,31))'?</dmn:question>
+    <dmn:allowedAnswers>&quot;-999999999-12-31&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_JOSvMMlGEeeAGbzZrHaKcQ" name="feel-date-function_29" typeRef="ns1:tfeel-date-function_29_Result"/>
+    <dmn:literalExpression id="_JOSIIMlGEeeAGbzZrHaKcQ">
+      <dmn:text>string(date(-999999999,12,31))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOTWQclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_30">
+    <dmn:description>Tests FEEL expression: 'date(&quot;2017-08-25T11:00:00&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(&quot;2017-08-25T11:00:00&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JOTWQslGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_30" typeRef="ns1:tfeel-date-function_30_Result"/>
+    <dmn:literalExpression id="_JOTWQMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(&quot;2017-08-25T11:00:00&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOT9UclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_31">
+    <dmn:description>Tests FEEL expression: 'date(&quot;2012-12-25T&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(&quot;2012-12-25T&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JOT9UslGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_31" typeRef="ns1:tfeel-date-function_31_Result"/>
+    <dmn:literalExpression id="_JOT9UMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(&quot;2012-12-25T&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOUkYclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_32">
+    <dmn:description>Tests FEEL expression: 'date(&quot;&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(&quot;&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JOUkYslGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_32" typeRef="ns1:tfeel-date-function_32_Result"/>
+    <dmn:literalExpression id="_JOUkYMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(&quot;&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOVLcclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_33">
+    <dmn:description>Tests FEEL expression: 'date(&quot;2012/12/25&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(&quot;2012/12/25&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JOVLcslGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_33" typeRef="ns1:tfeel-date-function_33_Result"/>
+    <dmn:literalExpression id="_JOVLcMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(&quot;2012/12/25&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOVygclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_34">
+    <dmn:description>Tests FEEL expression: 'date(&quot;0000-12-25T&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(&quot;0000-12-25T&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JOWZkMlGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_34" typeRef="ns1:tfeel-date-function_34_Result"/>
+    <dmn:literalExpression id="_JOVygMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(&quot;0000-12-25T&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOXnsMlGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_35">
+    <dmn:description>Tests FEEL expression: 'date(&quot;9999999999-12-25&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(&quot;9999999999-12-25&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JOXnsclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_35" typeRef="ns1:tfeel-date-function_35_Result"/>
+    <dmn:literalExpression id="_JOXAoMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(&quot;9999999999-12-25&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOYOwclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_36">
+    <dmn:description>Tests FEEL expression: 'date(&quot;2017-13-10&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(&quot;2017-13-10&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JOY10MlGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_36" typeRef="ns1:tfeel-date-function_36_Result"/>
+    <dmn:literalExpression id="_JOYOwMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(&quot;2017-13-10&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOZc4clGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_37">
+    <dmn:description>Tests FEEL expression: 'date(&quot;2017-12-32&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(&quot;2017-12-32&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JOaD8MlGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_37" typeRef="ns1:tfeel-date-function_37_Result"/>
+    <dmn:literalExpression id="_JOZc4MlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(&quot;2017-12-32&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOarAclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_38">
+    <dmn:description>Tests FEEL expression: 'date(&quot;998-12-31&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(&quot;998-12-31&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JOarAslGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_38" typeRef="ns1:tfeel-date-function_38_Result"/>
+    <dmn:literalExpression id="_JOarAMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(&quot;998-12-31&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JObSEclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_39">
+    <dmn:description>Tests FEEL expression: 'date(&quot;01211-12-31&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(&quot;01211-12-31&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JOb5IMlGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_39" typeRef="ns1:tfeel-date-function_39_Result"/>
+    <dmn:literalExpression id="_JObSEMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(&quot;01211-12-31&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOcgMclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_40">
+    <dmn:description>Tests FEEL expression: 'date(&quot;2012T-12-2511:00:00Z&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(&quot;2012T-12-2511:00:00Z&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JOcgMslGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_40" typeRef="ns1:tfeel-date-function_40_Result"/>
+    <dmn:literalExpression id="_JOcgMMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(&quot;2012T-12-2511:00:00Z&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOdHQclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_41">
+    <dmn:description>Tests FEEL expression: 'date(&quot;+2012-12-02&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(&quot;+2012-12-02&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JOduUMlGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_41" typeRef="ns1:tfeel-date-function_41_Result"/>
+    <dmn:literalExpression id="_JOdHQMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(&quot;+2012-12-02&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOeVYclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_42">
+    <dmn:description>Tests FEEL expression: 'date(2017,13,31)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(2017,13,31)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JOeVYslGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_42" typeRef="ns1:tfeel-date-function_42_Result"/>
+    <dmn:literalExpression id="_JOeVYMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(2017,13,31)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOfjgclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_43">
+    <dmn:description>Tests FEEL expression: 'date(2017,12,32)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(2017,12,32)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JOfjgslGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_43" typeRef="ns1:tfeel-date-function_43_Result"/>
+    <dmn:literalExpression id="_JOfjgMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(2017,12,32)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOgxoclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_44">
+    <dmn:description>Tests FEEL expression: 'date(2017,-8,2)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(2017,-8,2)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JOgxoslGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_44" typeRef="ns1:tfeel-date-function_44_Result"/>
+    <dmn:literalExpression id="_JOgxoMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(2017,-8,2)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOh_wclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_45">
+    <dmn:description>Tests FEEL expression: 'date(2017,8,-2)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(2017,8,-2)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JOh_wslGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_45" typeRef="ns1:tfeel-date-function_45_Result"/>
+    <dmn:literalExpression id="_JOh_wMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(2017,8,-2)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOim0clGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_46">
+    <dmn:description>Tests FEEL expression: 'date(-1000999999,12,01)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(-1000999999,12,01)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JOjN4MlGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_46" typeRef="ns1:tfeel-date-function_46_Result"/>
+    <dmn:literalExpression id="_JOim0MlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(-1000999999,12,01)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOlDEclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_47">
+    <dmn:description>Tests FEEL expression: 'date(1000999999,12,32)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(1000999999,12,32)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JOlDEslGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_47" typeRef="ns1:tfeel-date-function_47_Result"/>
+    <dmn:literalExpression id="_JOlDEMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(1000999999,12,32)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOlqIclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_48">
+    <dmn:description>Tests FEEL expression: 'date(1)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(1)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JOlqIslGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_48" typeRef="ns1:tfeel-date-function_48_Result"/>
+    <dmn:literalExpression id="_JOlqIMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(1)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOm4QclGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_49">
+    <dmn:description>Tests FEEL expression: 'date([])' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date([])'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JOnfUMlGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_49" typeRef="ns1:tfeel-date-function_49_Result"/>
+    <dmn:literalExpression id="_JOm4QMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date([])</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOnfU8lGEeeAGbzZrHaKcQ" name="feel-date-function_50">
+    <dmn:description>Tests FEEL expression: 'date(from:&quot;2012-12-25&quot;)' and expects result: '2012-12-25 (date)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(from:&quot;2012-12-25&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>2012-12-25 (date)</dmn:allowedAnswers>
+    <dmn:variable id="_JOoGYMlGEeeAGbzZrHaKcQ" name="feel-date-function_50" typeRef="ns1:tfeel-date-function_50_Result"/>
+    <dmn:literalExpression id="_JOnfUslGEeeAGbzZrHaKcQ">
+      <dmn:text>date(from:&quot;2012-12-25&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOoGY8lGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_51">
+    <dmn:description>Tests FEEL expression: 'date(from:&quot;2012-12-25T11:00:00Z&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(from:&quot;2012-12-25T11:00:00Z&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JOotcMlGEeeAGbzZrHaKcQ" name="feel-date-function_ErrorCase_51" typeRef="ns1:tfeel-date-function_51_Result"/>
+    <dmn:literalExpression id="_JOoGYslGEeeAGbzZrHaKcQ">
+      <dmn:text>date(from:&quot;2012-12-25T11:00:00Z&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOpUgclGEeeAGbzZrHaKcQ" name="feel-date-function_52">
+    <dmn:description>Tests FEEL expression: 'date(from:date and time(&quot;2017-08-30T10:25:00&quot;))' and expects result: '2017-08-30 (date)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(from:date and time(&quot;2017-08-30T10:25:00&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-08-30 (date)</dmn:allowedAnswers>
+    <dmn:variable id="_JOpUgslGEeeAGbzZrHaKcQ" name="feel-date-function_52" typeRef="ns1:tfeel-date-function_52_Result"/>
+    <dmn:literalExpression id="_JOpUgMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(from:date and time(&quot;2017-08-30T10:25:00&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JOp7kclGEeeAGbzZrHaKcQ" name="feel-date-function_53">
+    <dmn:description>Tests FEEL expression: 'date(year:2017,month:08,day:30)' and expects result: '2017-08-30 (date)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date(year:2017,month:08,day:30)'?</dmn:question>
+    <dmn:allowedAnswers>2017-08-30 (date)</dmn:allowedAnswers>
+    <dmn:variable id="_JOp7kslGEeeAGbzZrHaKcQ" name="feel-date-function_53" typeRef="ns1:tfeel-date-function_53_Result"/>
+    <dmn:literalExpression id="_JOp7kMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date(year:2017,month:08,day:30)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:knowledgeSource id="_JNon4clGEeeAGbzZrHaKcQ" name="DMN 1.1 - 10.3.4.1 Table 58"/>
+</dmn:definitions>
