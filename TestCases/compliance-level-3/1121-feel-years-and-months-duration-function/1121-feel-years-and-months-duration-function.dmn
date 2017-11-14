@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:ns1="http://www.actico.com/spec/DMN/1121-feel-years-and-months-duration-function" id="_JT_ukMlGEeeAGbzZrHaKcQ" name="1121-feel-years-and-months-duration-function" namespace="http://www.actico.com/spec/DMN/1121-feel-years-and-months-duration-function">
+  <dmn:description>FEEL built-in function 'years and months duration(from [date and time], to [date and time])'</dmn:description>
+  <dmn:itemDefinition id="_JT_ukslGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_1_Result"/>
+  <dmn:itemDefinition id="_JUCx48lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_2_Result"/>
+  <dmn:itemDefinition id="_JUEAA8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_3_Result"/>
+  <dmn:itemDefinition id="_JUF1MclGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_4_Result"/>
+  <dmn:itemDefinition id="_JUHDU8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_5_Result"/>
+  <dmn:itemDefinition id="_JUIRc8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_6_Result"/>
+  <dmn:itemDefinition id="_JUJfk8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_7_Result"/>
+  <dmn:itemDefinition id="_JUKts8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_8_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JUL708lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_9_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JUNxA8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_10_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JUPmMclGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_11_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JUSpg8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_12_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JUT3o8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_13_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JUVFw8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_14_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JUWT48lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_15_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JUXiAclGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_16_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JUYwI8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_17_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JUbMYclGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_18_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JUcagclGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_19_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JUdooclGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_20_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JUePs8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_21_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JUfd08lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_22_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JUgr88lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_23_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JUihIclGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_24_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JUkWU8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_25_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JUmLg8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_26_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JUoAs8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_27_Result"/>
+  <dmn:itemDefinition id="_JUp148lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_28_Result"/>
+  <dmn:itemDefinition id="_JUrEA8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_29_Result"/>
+  <dmn:itemDefinition id="_JUrrE8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_30_Result"/>
+  <dmn:itemDefinition id="_JUsSI8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_31_Result"/>
+  <dmn:itemDefinition id="_JUuHU8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_32_Result"/>
+  <dmn:itemDefinition id="_JUv8gclGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_33_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JUxKo8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_34_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JUyYw8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_35_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JUy_08lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_36_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:decision id="_JUCx4clGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_1">
+    <dmn:description>Tests FEEL expression: 'years and months duration(null)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(null)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JUCx4slGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_1" typeRef="ns1:tfeel-years-and-months-duration-function_1_Result"/>
+    <dmn:literalExpression id="_JUCx4MlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(null)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUEAAclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_2">
+    <dmn:description>Tests FEEL expression: 'years and months duration(null,null)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(null,null)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JUEAAslGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_2" typeRef="ns1:tfeel-years-and-months-duration-function_2_Result"/>
+    <dmn:literalExpression id="_JUEAAMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(null,null)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUFOIclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_3">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date(&quot;2017-08-11&quot;),null)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date(&quot;2017-08-11&quot;),null)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JUF1MMlGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_3" typeRef="ns1:tfeel-years-and-months-duration-function_3_Result"/>
+    <dmn:literalExpression id="_JUFOIMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date(&quot;2017-08-11&quot;),null)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUHDUclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_4">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date and time(&quot;2017-12-31T13:00:00&quot;),null)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date and time(&quot;2017-12-31T13:00:00&quot;),null)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JUHDUslGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_4" typeRef="ns1:tfeel-years-and-months-duration-function_4_Result"/>
+    <dmn:literalExpression id="_JUHDUMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date and time(&quot;2017-12-31T13:00:00&quot;),null)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUIRcclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_5">
+    <dmn:description>Tests FEEL expression: 'years and months duration(null,date(&quot;2017-08-11&quot;))' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(null,date(&quot;2017-08-11&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JUIRcslGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_5" typeRef="ns1:tfeel-years-and-months-duration-function_5_Result"/>
+    <dmn:literalExpression id="_JUIRcMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(null,date(&quot;2017-08-11&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUJfkclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_6">
+    <dmn:description>Tests FEEL expression: 'years and months duration(null,date and time(&quot;2019-10-01T12:32:59&quot;))' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(null,date and time(&quot;2019-10-01T12:32:59&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JUJfkslGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_6" typeRef="ns1:tfeel-years-and-months-duration-function_6_Result"/>
+    <dmn:literalExpression id="_JUJfkMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(null,date and time(&quot;2019-10-01T12:32:59&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUKtsclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_7">
+    <dmn:description>Tests FEEL expression: 'years and months duration()' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration()'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JUKtsslGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_7" typeRef="ns1:tfeel-years-and-months-duration-function_7_Result"/>
+    <dmn:literalExpression id="_JUKtsMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration()</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUL70clGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_8">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date(&quot;2011-12-22&quot;),date(&quot;2013-08-24&quot;))' and expects result: 'P1Y8M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date(&quot;2011-12-22&quot;),date(&quot;2013-08-24&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>P1Y8M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JUL70slGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_8" typeRef="ns1:tfeel-years-and-months-duration-function_8_Result"/>
+    <dmn:literalExpression id="_JUL70MlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date(&quot;2011-12-22&quot;),date(&quot;2013-08-24&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUNxAclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_9">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date(&quot;2013-08-24&quot;),date(&quot;2011-12-22&quot;))' and expects result: '-P1Y8M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date(&quot;2013-08-24&quot;),date(&quot;2011-12-22&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>-P1Y8M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JUNxAslGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_9" typeRef="ns1:tfeel-years-and-months-duration-function_9_Result"/>
+    <dmn:literalExpression id="_JUNxAMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date(&quot;2013-08-24&quot;),date(&quot;2011-12-22&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUO_IclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_10">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date(&quot;2015-01-21&quot;),date(&quot;2016-01-21&quot;))' and expects result: 'P1Y (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date(&quot;2015-01-21&quot;),date(&quot;2016-01-21&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>P1Y (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JUPmMMlGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_10" typeRef="ns1:tfeel-years-and-months-duration-function_10_Result"/>
+    <dmn:literalExpression id="_JUO_IMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date(&quot;2015-01-21&quot;),date(&quot;2016-01-21&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUSpgclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_11">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date(&quot;2016-01-21&quot;),date(&quot;2015-01-21&quot;))' and expects result: '-P1Y (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date(&quot;2016-01-21&quot;),date(&quot;2015-01-21&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>-P1Y (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JUSpgslGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_11" typeRef="ns1:tfeel-years-and-months-duration-function_11_Result"/>
+    <dmn:literalExpression id="_JUSpgMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date(&quot;2016-01-21&quot;),date(&quot;2015-01-21&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUT3oclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_12">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date(&quot;2016-01-01&quot;),date(&quot;2016-01-01&quot;))' and expects result: 'P0M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date(&quot;2016-01-01&quot;),date(&quot;2016-01-01&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>P0M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JUT3oslGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_12" typeRef="ns1:tfeel-years-and-months-duration-function_12_Result"/>
+    <dmn:literalExpression id="_JUT3oMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date(&quot;2016-01-01&quot;),date(&quot;2016-01-01&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUVFwclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_13">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date and time(&quot;2017-12-31T13:00:00&quot;), date and time(&quot;2017-12-31T12:00:00&quot;))' and expects result: 'P0M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date and time(&quot;2017-12-31T13:00:00&quot;), date and time(&quot;2017-12-31T12:00:00&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>P0M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JUVFwslGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_13" typeRef="ns1:tfeel-years-and-months-duration-function_13_Result"/>
+    <dmn:literalExpression id="_JUVFwMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date and time(&quot;2017-12-31T13:00:00&quot;), date and time(&quot;2017-12-31T12:00:00&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUWT4clGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_14">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date and time(&quot;2016-09-30T23:25:00&quot;), date and time(&quot;2017-12-28T12:12:12&quot;))' and expects result: 'P1Y2M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date and time(&quot;2016-09-30T23:25:00&quot;), date and time(&quot;2017-12-28T12:12:12&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>P1Y2M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JUWT4slGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_14" typeRef="ns1:tfeel-years-and-months-duration-function_14_Result"/>
+    <dmn:literalExpression id="_JUWT4MlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date and time(&quot;2016-09-30T23:25:00&quot;), date and time(&quot;2017-12-28T12:12:12&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUW68clGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_15">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date and time(&quot;2010-05-30T03:55:58&quot;), date and time(&quot;2017-12-15T00:59:59&quot;))' and expects result: 'P7Y6M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date and time(&quot;2010-05-30T03:55:58&quot;), date and time(&quot;2017-12-15T00:59:59&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>P7Y6M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JUXiAMlGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_15" typeRef="ns1:tfeel-years-and-months-duration-function_15_Result"/>
+    <dmn:literalExpression id="_JUW68MlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date and time(&quot;2010-05-30T03:55:58&quot;), date and time(&quot;2017-12-15T00:59:59&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUYwIclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_16">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date and time(&quot;2014-12-31T23:59:59&quot;), date and time(&quot;2019-10-01T12:32:59&quot;))' and expects result: 'P4Y9M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date and time(&quot;2014-12-31T23:59:59&quot;), date and time(&quot;2019-10-01T12:32:59&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>P4Y9M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JUYwIslGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_16" typeRef="ns1:tfeel-years-and-months-duration-function_16_Result"/>
+    <dmn:literalExpression id="_JUYwIMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date and time(&quot;2014-12-31T23:59:59&quot;), date and time(&quot;2019-10-01T12:32:59&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUalUclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_17">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date and time(&quot;-2016-01-30T09:05:00&quot;), date and time(&quot;-2017-02-28T02:02:02&quot;))' and expects result: '-P11M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date and time(&quot;-2016-01-30T09:05:00&quot;), date and time(&quot;-2017-02-28T02:02:02&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>-P11M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JUbMYMlGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_17" typeRef="ns1:tfeel-years-and-months-duration-function_17_Result"/>
+    <dmn:literalExpression id="_JUalUMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date and time(&quot;-2016-01-30T09:05:00&quot;), date and time(&quot;-2017-02-28T02:02:02&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUbzcclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_18">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date and time(&quot;2014-12-31T23:59:59&quot;), date and time(&quot;-2019-10-01T12:32:59&quot;))' and expects result: '-P4033Y2M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date and time(&quot;2014-12-31T23:59:59&quot;), date and time(&quot;-2019-10-01T12:32:59&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>-P4033Y2M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JUcagMlGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_18" typeRef="ns1:tfeel-years-and-months-duration-function_18_Result"/>
+    <dmn:literalExpression id="_JUbzcMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date and time(&quot;2014-12-31T23:59:59&quot;), date and time(&quot;-2019-10-01T12:32:59&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUdBkclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_19">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date and time(&quot;2017-09-05T10:20:00-01:00&quot;), date and time(&quot;-2019-10-01T12:32:59+02:00&quot;))' and expects result: '-P4035Y11M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date and time(&quot;2017-09-05T10:20:00-01:00&quot;), date and time(&quot;-2019-10-01T12:32:59+02:00&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>-P4035Y11M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JUdooMlGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_19" typeRef="ns1:tfeel-years-and-months-duration-function_19_Result"/>
+    <dmn:literalExpression id="_JUdBkMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date and time(&quot;2017-09-05T10:20:00-01:00&quot;), date and time(&quot;-2019-10-01T12:32:59+02:00&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUePsclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_20">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date and time(&quot;2017-09-05T10:20:00+05:00&quot;), date and time(&quot;2019-10-01T12:32:59&quot;))' and expects result: 'P2Y (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date and time(&quot;2017-09-05T10:20:00+05:00&quot;), date and time(&quot;2019-10-01T12:32:59&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>P2Y (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JUePsslGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_20" typeRef="ns1:tfeel-years-and-months-duration-function_20_Result"/>
+    <dmn:literalExpression id="_JUePsMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date and time(&quot;2017-09-05T10:20:00+05:00&quot;), date and time(&quot;2019-10-01T12:32:59&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUfd0clGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_21">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date and time(&quot;2016-08-25T15:20:59+02:00&quot;), date and time(&quot;2017-08-10T10:20:00@Europe/Paris&quot;))' and expects result: 'P11M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date and time(&quot;2016-08-25T15:20:59+02:00&quot;), date and time(&quot;2017-08-10T10:20:00@Europe/Paris&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>P11M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JUfd0slGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_21" typeRef="ns1:tfeel-years-and-months-duration-function_21_Result"/>
+    <dmn:literalExpression id="_JUfd0MlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date and time(&quot;2016-08-25T15:20:59+02:00&quot;), date and time(&quot;2017-08-10T10:20:00@Europe/Paris&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUgr8clGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_22">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date and time(&quot;2011-12-31T10:15:30@Etc/UTC&quot;), date and time(&quot;2017-08-10T10:20:00@Europe/Paris&quot;))' and expects result: 'P5Y7M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date and time(&quot;2011-12-31T10:15:30@Etc/UTC&quot;), date and time(&quot;2017-08-10T10:20:00@Europe/Paris&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>P5Y7M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JUgr8slGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_22" typeRef="ns1:tfeel-years-and-months-duration-function_22_Result"/>
+    <dmn:literalExpression id="_JUgr8MlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date and time(&quot;2011-12-31T10:15:30@Etc/UTC&quot;), date and time(&quot;2017-08-10T10:20:00@Europe/Paris&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUh6EclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_23">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date and time(&quot;2017-09-05T10:20:00@Etc/UTC&quot;), date and time(&quot;2018-10-01T23:59:59&quot;))' and expects result: 'P1Y (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date and time(&quot;2017-09-05T10:20:00@Etc/UTC&quot;), date and time(&quot;2018-10-01T23:59:59&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>P1Y (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JUihIMlGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_23" typeRef="ns1:tfeel-years-and-months-duration-function_23_Result"/>
+    <dmn:literalExpression id="_JUh6EMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date and time(&quot;2017-09-05T10:20:00@Etc/UTC&quot;), date and time(&quot;2018-10-01T23:59:59&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUkWUclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_24">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date and time(&quot;2011-08-25T15:59:59@Europe/Paris&quot;), date and time(&quot;2015-08-25T15:20:59+02:00&quot;))' and expects result: 'P4Y (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date and time(&quot;2011-08-25T15:59:59@Europe/Paris&quot;), date and time(&quot;2015-08-25T15:20:59+02:00&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>P4Y (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JUkWUslGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_24" typeRef="ns1:tfeel-years-and-months-duration-function_24_Result"/>
+    <dmn:literalExpression id="_JUkWUMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date and time(&quot;2011-08-25T15:59:59@Europe/Paris&quot;), date and time(&quot;2015-08-25T15:20:59+02:00&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUmLgclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_25">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date and time(&quot;2015-12-31T23:59:59.9999999&quot;), date and time(&quot;2018-10-01T12:32:59.111111&quot;))' and expects result: 'P2Y9M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date and time(&quot;2015-12-31T23:59:59.9999999&quot;), date and time(&quot;2018-10-01T12:32:59.111111&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>P2Y9M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JUmLgslGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_25" typeRef="ns1:tfeel-years-and-months-duration-function_25_Result"/>
+    <dmn:literalExpression id="_JUmLgMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date and time(&quot;2015-12-31T23:59:59.9999999&quot;), date and time(&quot;2018-10-01T12:32:59.111111&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUoAsclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_26">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date and time(&quot;2016-09-05T22:20:55.123456+05:00&quot;), date and time(&quot;2019-10-01T12:32:59.32415645&quot;))' and expects result: 'P3Y (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date and time(&quot;2016-09-05T22:20:55.123456+05:00&quot;), date and time(&quot;2019-10-01T12:32:59.32415645&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>P3Y (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JUoAsslGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_26" typeRef="ns1:tfeel-years-and-months-duration-function_26_Result"/>
+    <dmn:literalExpression id="_JUoAsMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date and time(&quot;2016-09-05T22:20:55.123456+05:00&quot;), date and time(&quot;2019-10-01T12:32:59.32415645&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUp14clGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_27">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date(&quot;&quot;),date(&quot;&quot;))' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date(&quot;&quot;),date(&quot;&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JUp14slGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_27" typeRef="ns1:tfeel-years-and-months-duration-function_27_Result"/>
+    <dmn:literalExpression id="_JUp14MlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date(&quot;&quot;),date(&quot;&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUrEAclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_28">
+    <dmn:description>Tests FEEL expression: 'years and months duration(2017)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(2017)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JUrEAslGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_28" typeRef="ns1:tfeel-years-and-months-duration-function_28_Result"/>
+    <dmn:literalExpression id="_JUrEAMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(2017)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUrrEclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_29">
+    <dmn:description>Tests FEEL expression: 'years and months duration(&quot;2012T-12-2511:00:00Z&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(&quot;2012T-12-2511:00:00Z&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JUrrEslGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_29" typeRef="ns1:tfeel-years-and-months-duration-function_29_Result"/>
+    <dmn:literalExpression id="_JUrrEMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(&quot;2012T-12-2511:00:00Z&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUsSIclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_30">
+    <dmn:description>Tests FEEL expression: 'years and months duration([],[])' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration([],[])'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JUsSIslGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_30" typeRef="ns1:tfeel-years-and-months-duration-function_30_Result"/>
+    <dmn:literalExpression id="_JUsSIMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration([],[])</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUuHUclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_31">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date(&quot;2013-08-24&quot;), date and time(&quot;2017-12-15T00:59:59&quot;))' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date(&quot;2013-08-24&quot;), date and time(&quot;2017-12-15T00:59:59&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JUuHUslGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_31" typeRef="ns1:tfeel-years-and-months-duration-function_31_Result"/>
+    <dmn:literalExpression id="_JUuHUMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date(&quot;2013-08-24&quot;), date and time(&quot;2017-12-15T00:59:59&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUvVcclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_32">
+    <dmn:description>Tests FEEL expression: 'years and months duration(date and time(&quot;2017-02-28T23:59:59&quot;), date(&quot;2019-07-23&quot;) )' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(date and time(&quot;2017-02-28T23:59:59&quot;), date(&quot;2019-07-23&quot;) )'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JUv8gMlGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_32" typeRef="ns1:tfeel-years-and-months-duration-function_32_Result"/>
+    <dmn:literalExpression id="_JUvVcMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(date and time(&quot;2017-02-28T23:59:59&quot;), date(&quot;2019-07-23&quot;) )</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUxKoclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_33">
+    <dmn:description>Tests FEEL expression: 'years and months duration(from:date and time(&quot;2016-12-31T00:00:01&quot;),to:date and time(&quot;2017-12-31T23:59:59&quot;))' and expects result: 'P1Y (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(from:date and time(&quot;2016-12-31T00:00:01&quot;),to:date and time(&quot;2017-12-31T23:59:59&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>P1Y (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JUxKoslGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_33" typeRef="ns1:tfeel-years-and-months-duration-function_33_Result"/>
+    <dmn:literalExpression id="_JUxKoMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(from:date and time(&quot;2016-12-31T00:00:01&quot;),to:date and time(&quot;2017-12-31T23:59:59&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUyYwclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_34">
+    <dmn:description>Tests FEEL expression: 'years and months duration(from:date and time(&quot;2014-12-31T23:59:59&quot;),to:date and time(&quot;2016-12-31T00:00:01&quot;))' and expects result: 'P2Y (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(from:date and time(&quot;2014-12-31T23:59:59&quot;),to:date and time(&quot;2016-12-31T00:00:01&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>P2Y (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JUyYwslGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_34" typeRef="ns1:tfeel-years-and-months-duration-function_34_Result"/>
+    <dmn:literalExpression id="_JUyYwMlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(from:date and time(&quot;2014-12-31T23:59:59&quot;),to:date and time(&quot;2016-12-31T00:00:01&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUy_0clGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_35">
+    <dmn:description>Tests FEEL expression: 'years and months duration(from:date(&quot;2011-12-22&quot;),to:date(&quot;2013-08-24&quot;))' and expects result: 'P1Y8M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(from:date(&quot;2011-12-22&quot;),to:date(&quot;2013-08-24&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>P1Y8M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JUy_0slGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_35" typeRef="ns1:tfeel-years-and-months-duration-function_35_Result"/>
+    <dmn:literalExpression id="_JUy_0MlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(from:date(&quot;2011-12-22&quot;),to:date(&quot;2013-08-24&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JUzm4clGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_36">
+    <dmn:description>Tests FEEL expression: 'years and months duration(from:date(&quot;2016-01-21&quot;),to:date(&quot;2015-01-21&quot;))' and expects result: '-P1Y (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'years and months duration(from:date(&quot;2016-01-21&quot;),to:date(&quot;2015-01-21&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>-P1Y (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JU0N8MlGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_36" typeRef="ns1:tfeel-years-and-months-duration-function_36_Result"/>
+    <dmn:literalExpression id="_JUzm4MlGEeeAGbzZrHaKcQ">
+      <dmn:text>years and months duration(from:date(&quot;2016-01-21&quot;),to:date(&quot;2015-01-21&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:knowledgeSource id="_JT_ukclGEeeAGbzZrHaKcQ" name="DMN 1.1 - 10.3.4.1 Table 58"/>
+</dmn:definitions>

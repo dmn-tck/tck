@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:ns1="http://www.actico.com/spec/DMN/1120-feel-duration-function" id="_JS9MwMlGEeeAGbzZrHaKcQ" name="1120-feel-duration-function" namespace="http://www.actico.com/spec/DMN/1120-feel-duration-function">
+  <dmn:description>FEEL built-in function 'duration(from [String])'</dmn:description>
+  <dmn:itemDefinition id="_JS9MwslGEeeAGbzZrHaKcQ" name="tfeel-duration-function_1_Result"/>
+  <dmn:itemDefinition id="_JS-a4clGEeeAGbzZrHaKcQ" name="tfeel-duration-function_2_Result"/>
+  <dmn:itemDefinition id="_JS-a5clGEeeAGbzZrHaKcQ" name="tfeel-duration-function_3_Result">
+    <dmn:typeRef>feel:dayTimeDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JS_B88lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_4_Result">
+    <dmn:typeRef>feel:dayTimeDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JS_B98lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_5_Result">
+    <dmn:typeRef>feel:dayTimeDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JS_B-8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_6_Result">
+    <dmn:typeRef>feel:dayTimeDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JS_pA8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_7_Result">
+    <dmn:typeRef>feel:dayTimeDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JS_pB8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_8_Result">
+    <dmn:typeRef>feel:dayTimeDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTAQE8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_9_Result">
+    <dmn:typeRef>feel:dayTimeDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTAQF8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_10_Result">
+    <dmn:typeRef>feel:dayTimeDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTA3I8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_11_Result">
+    <dmn:typeRef>feel:dayTimeDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTA3J8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_12_Result">
+    <dmn:typeRef>feel:dayTimeDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTBeMclGEeeAGbzZrHaKcQ" name="tfeel-duration-function_13_Result">
+    <dmn:typeRef>feel:dayTimeDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTBeNclGEeeAGbzZrHaKcQ" name="tfeel-duration-function_14_Result">
+    <dmn:typeRef>feel:dayTimeDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTCFQ8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_15_Result">
+    <dmn:typeRef>feel:dayTimeDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTCsU8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_16_Result">
+    <dmn:typeRef>feel:dayTimeDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTCsV8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_17_Result">
+    <dmn:typeRef>feel:dayTimeDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTD6cclGEeeAGbzZrHaKcQ" name="tfeel-duration-function_18_Result">
+    <dmn:typeRef>feel:dayTimeDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTD6dclGEeeAGbzZrHaKcQ" name="tfeel-duration-function_19_Result">
+    <dmn:typeRef>feel:dayTimeDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTEhg8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_20_Result">
+    <dmn:typeRef>feel:dayTimeDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTFIk8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_21_Result">
+    <dmn:typeRef>feel:dayTimeDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTFvo8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_22_Result">
+    <dmn:typeRef>feel:dayTimeDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTGWsclGEeeAGbzZrHaKcQ" name="tfeel-duration-function_23_Result">
+    <dmn:typeRef>feel:dayTimeDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTGWtclGEeeAGbzZrHaKcQ" name="tfeel-duration-function_24_Result">
+    <dmn:typeRef>feel:dayTimeDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTG9w8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_25_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTHk08lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_26_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTIL48lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_27_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTIy88lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_28_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTIy98lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_29_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTJaA8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_30_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTJaB8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_31_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTKBEclGEeeAGbzZrHaKcQ" name="tfeel-duration-function_32_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTKBFclGEeeAGbzZrHaKcQ" name="tfeel-duration-function_33_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTKoI8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_34_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTKoJ8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_35_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTLPM8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_36_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTL2Q8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_37_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTMdU8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_38_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTNEY8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_39_Result">
+    <dmn:typeRef>feel:dayTimeDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTNrcclGEeeAGbzZrHaKcQ" name="tfeel-duration-function_40_Result">
+    <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JTOSgMlGEeeAGbzZrHaKcQ" name="tfeel-duration-function_41_Result"/>
+  <dmn:itemDefinition id="_JTO5k8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_42_Result"/>
+  <dmn:itemDefinition id="_JTPgo8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_43_Result"/>
+  <dmn:itemDefinition id="_JTQHs8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_44_Result"/>
+  <dmn:itemDefinition id="_JTRV08lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_45_Result"/>
+  <dmn:itemDefinition id="_JTR848lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_46_Result"/>
+  <dmn:itemDefinition id="_JTSj88lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_47_Result"/>
+  <dmn:itemDefinition id="_JTTLAclGEeeAGbzZrHaKcQ" name="tfeel-duration-function_48_Result"/>
+  <dmn:itemDefinition id="_JTTLBclGEeeAGbzZrHaKcQ" name="tfeel-duration-function_49_Result"/>
+  <dmn:itemDefinition id="_JTTyE8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_50_Result"/>
+  <dmn:itemDefinition id="_JTUZIclGEeeAGbzZrHaKcQ" name="tfeel-duration-function_51_Result"/>
+  <dmn:itemDefinition id="_JTVAMclGEeeAGbzZrHaKcQ" name="tfeel-duration-function_52_Result"/>
+  <dmn:itemDefinition id="_JTVANclGEeeAGbzZrHaKcQ" name="tfeel-duration-function_53_Result"/>
+  <dmn:itemDefinition id="_JTVnQ8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_54_Result"/>
+  <dmn:itemDefinition id="_JTWOUclGEeeAGbzZrHaKcQ" name="tfeel-duration-function_55_Result"/>
+  <dmn:itemDefinition id="_JTW1YclGEeeAGbzZrHaKcQ" name="tfeel-duration-function_56_Result"/>
+  <dmn:itemDefinition id="_JTW1ZclGEeeAGbzZrHaKcQ" name="tfeel-duration-function_57_Result"/>
+  <dmn:itemDefinition id="_JTXcc8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_58_Result"/>
+  <dmn:itemDefinition id="_JTXcd8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_59_Result"/>
+  <dmn:itemDefinition id="_JTYDg8lGEeeAGbzZrHaKcQ" name="tfeel-duration-function_60_Result"/>
+  <dmn:decision id="_JS9z0clGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_1">
+    <dmn:description>Tests FEEL expression: 'duration(null)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(null)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JS-a4MlGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_1" typeRef="ns1:tfeel-duration-function_1_Result"/>
+    <dmn:literalExpression id="_JS9z0MlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(null)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JS-a48lGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_2">
+    <dmn:description>Tests FEEL expression: 'duration()' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration()'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JS-a5MlGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_2" typeRef="ns1:tfeel-duration-function_2_Result"/>
+    <dmn:literalExpression id="_JS-a4slGEeeAGbzZrHaKcQ">
+      <dmn:text>duration()</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JS_B8clGEeeAGbzZrHaKcQ" name="feel-duration-function_3">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P1D&quot;)' and expects result: 'P1D (days and time duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P1D&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>P1D (days and time duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JS_B8slGEeeAGbzZrHaKcQ" name="feel-duration-function_3" typeRef="ns1:tfeel-duration-function_3_Result"/>
+    <dmn:literalExpression id="_JS_B8MlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P1D&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JS_B9clGEeeAGbzZrHaKcQ" name="feel-duration-function_4">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;PT2H&quot;)' and expects result: 'PT2H (days and time duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;PT2H&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>PT2H (days and time duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JS_B9slGEeeAGbzZrHaKcQ" name="feel-duration-function_4" typeRef="ns1:tfeel-duration-function_4_Result"/>
+    <dmn:literalExpression id="_JS_B9MlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;PT2H&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JS_B-clGEeeAGbzZrHaKcQ" name="feel-duration-function_5">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;PT3M&quot;)' and expects result: 'PT3M (days and time duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;PT3M&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>PT3M (days and time duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JS_B-slGEeeAGbzZrHaKcQ" name="feel-duration-function_5" typeRef="ns1:tfeel-duration-function_5_Result"/>
+    <dmn:literalExpression id="_JS_B-MlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;PT3M&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JS_pAclGEeeAGbzZrHaKcQ" name="feel-duration-function_6">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;PT4S&quot;)' and expects result: 'PT4S (days and time duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;PT4S&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>PT4S (days and time duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JS_pAslGEeeAGbzZrHaKcQ" name="feel-duration-function_6" typeRef="ns1:tfeel-duration-function_6_Result"/>
+    <dmn:literalExpression id="_JS_pAMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;PT4S&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JS_pBclGEeeAGbzZrHaKcQ" name="feel-duration-function_7">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;PT0.999S&quot;)' and expects result: 'PT0.999S (days and time duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;PT0.999S&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>PT0.999S (days and time duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JS_pBslGEeeAGbzZrHaKcQ" name="feel-duration-function_7" typeRef="ns1:tfeel-duration-function_7_Result"/>
+    <dmn:literalExpression id="_JS_pBMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;PT0.999S&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTAQEclGEeeAGbzZrHaKcQ" name="feel-duration-function_8">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P1DT2H3M4.123456789S&quot;)' and expects result: 'P1DT2H3M4.123456789S (days and time duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P1DT2H3M4.123456789S&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>P1DT2H3M4.123456789S (days and time duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTAQEslGEeeAGbzZrHaKcQ" name="feel-duration-function_8" typeRef="ns1:tfeel-duration-function_8_Result"/>
+    <dmn:literalExpression id="_JTAQEMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P1DT2H3M4.123456789S&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTAQFclGEeeAGbzZrHaKcQ" name="feel-duration-function_9">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;PT0S&quot;)' and expects result: 'PT0S (days and time duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;PT0S&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>PT0S (days and time duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTAQFslGEeeAGbzZrHaKcQ" name="feel-duration-function_9" typeRef="ns1:tfeel-duration-function_9_Result"/>
+    <dmn:literalExpression id="_JTAQFMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;PT0S&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTA3IclGEeeAGbzZrHaKcQ" name="feel-duration-function_10">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;PT0.000S&quot;)' and expects result: 'PT0S (days and time duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;PT0.000S&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>PT0S (days and time duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTA3IslGEeeAGbzZrHaKcQ" name="feel-duration-function_10" typeRef="ns1:tfeel-duration-function_10_Result"/>
+    <dmn:literalExpression id="_JTA3IMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;PT0.000S&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTA3JclGEeeAGbzZrHaKcQ" name="feel-duration-function_11">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;PT0.S&quot;)' and expects result: 'PT0S (days and time duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;PT0.S&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>PT0S (days and time duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTA3JslGEeeAGbzZrHaKcQ" name="feel-duration-function_11" typeRef="ns1:tfeel-duration-function_11_Result"/>
+    <dmn:literalExpression id="_JTA3JMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;PT0.S&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTA3KclGEeeAGbzZrHaKcQ" name="feel-duration-function_12">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;PT0M&quot;)' and expects result: 'PT0S (days and time duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;PT0M&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>PT0S (days and time duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTBeMMlGEeeAGbzZrHaKcQ" name="feel-duration-function_12" typeRef="ns1:tfeel-duration-function_12_Result"/>
+    <dmn:literalExpression id="_JTA3KMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;PT0M&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTBeM8lGEeeAGbzZrHaKcQ" name="feel-duration-function_13">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;PT0H&quot;)' and expects result: 'PT0S (days and time duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;PT0H&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>PT0S (days and time duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTBeNMlGEeeAGbzZrHaKcQ" name="feel-duration-function_13" typeRef="ns1:tfeel-duration-function_13_Result"/>
+    <dmn:literalExpression id="_JTBeMslGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;PT0H&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTCFQclGEeeAGbzZrHaKcQ" name="feel-duration-function_14">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P0D&quot;)' and expects result: 'PT0S (days and time duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P0D&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>PT0S (days and time duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTCFQslGEeeAGbzZrHaKcQ" name="feel-duration-function_14" typeRef="ns1:tfeel-duration-function_14_Result"/>
+    <dmn:literalExpression id="_JTCFQMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P0D&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTCsUclGEeeAGbzZrHaKcQ" name="feel-duration-function_15">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;-PT1H2M&quot;)' and expects result: '-PT1H2M (days and time duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;-PT1H2M&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>-PT1H2M (days and time duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTCsUslGEeeAGbzZrHaKcQ" name="feel-duration-function_15" typeRef="ns1:tfeel-duration-function_15_Result"/>
+    <dmn:literalExpression id="_JTCsUMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;-PT1H2M&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTCsVclGEeeAGbzZrHaKcQ" name="feel-duration-function_16">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;PT1000M&quot;)' and expects result: 'PT16H40M (days and time duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;PT1000M&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>PT16H40M (days and time duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTCsVslGEeeAGbzZrHaKcQ" name="feel-duration-function_16" typeRef="ns1:tfeel-duration-function_16_Result"/>
+    <dmn:literalExpression id="_JTCsVMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;PT1000M&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTDTYclGEeeAGbzZrHaKcQ" name="feel-duration-function_17">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;PT1000M0.999999999S&quot;)' and expects result: 'PT16H40M0.999999999S (days and time duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;PT1000M0.999999999S&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>PT16H40M0.999999999S (days and time duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTD6cMlGEeeAGbzZrHaKcQ" name="feel-duration-function_17" typeRef="ns1:tfeel-duration-function_17_Result"/>
+    <dmn:literalExpression id="_JTDTYMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;PT1000M0.999999999S&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTD6c8lGEeeAGbzZrHaKcQ" name="feel-duration-function_18">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;PT555M&quot;)' and expects result: 'PT9H15M (days and time duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;PT555M&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>PT9H15M (days and time duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTD6dMlGEeeAGbzZrHaKcQ" name="feel-duration-function_18" typeRef="ns1:tfeel-duration-function_18_Result"/>
+    <dmn:literalExpression id="_JTD6cslGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;PT555M&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTEhgclGEeeAGbzZrHaKcQ" name="feel-duration-function_19">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;PT61M&quot;)' and expects result: 'PT1H1M (days and time duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;PT61M&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>PT1H1M (days and time duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTEhgslGEeeAGbzZrHaKcQ" name="feel-duration-function_19" typeRef="ns1:tfeel-duration-function_19_Result"/>
+    <dmn:literalExpression id="_JTEhgMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;PT61M&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTFIkclGEeeAGbzZrHaKcQ" name="feel-duration-function_20">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;PT24H&quot;)' and expects result: 'P1D (days and time duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;PT24H&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>P1D (days and time duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTFIkslGEeeAGbzZrHaKcQ" name="feel-duration-function_20" typeRef="ns1:tfeel-duration-function_20_Result"/>
+    <dmn:literalExpression id="_JTFIkMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;PT24H&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTFvoclGEeeAGbzZrHaKcQ" name="feel-duration-function_21">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;PT240H&quot;)' and expects result: 'P10D (days and time duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;PT240H&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>P10D (days and time duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTFvoslGEeeAGbzZrHaKcQ" name="feel-duration-function_21" typeRef="ns1:tfeel-duration-function_21_Result"/>
+    <dmn:literalExpression id="_JTFvoMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;PT240H&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTFvpclGEeeAGbzZrHaKcQ" name="feel-duration-function_22">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P2DT100M&quot;)' and expects result: 'P2DT1H40M (days and time duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P2DT100M&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>P2DT1H40M (days and time duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTGWsMlGEeeAGbzZrHaKcQ" name="feel-duration-function_22" typeRef="ns1:tfeel-duration-function_22_Result"/>
+    <dmn:literalExpression id="_JTFvpMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P2DT100M&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTGWs8lGEeeAGbzZrHaKcQ" name="feel-duration-function_23">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;PT3600S&quot;)' and expects result: 'PT1H (days and time duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;PT3600S&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>PT1H (days and time duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTGWtMlGEeeAGbzZrHaKcQ" name="feel-duration-function_23" typeRef="ns1:tfeel-duration-function_23_Result"/>
+    <dmn:literalExpression id="_JTGWsslGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;PT3600S&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTG9wclGEeeAGbzZrHaKcQ" name="feel-duration-function_24">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P2DT274M&quot;)' and expects result: 'P2DT4H34M (days and time duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P2DT274M&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>P2DT4H34M (days and time duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTG9wslGEeeAGbzZrHaKcQ" name="feel-duration-function_24" typeRef="ns1:tfeel-duration-function_24_Result"/>
+    <dmn:literalExpression id="_JTG9wMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P2DT274M&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTHk0clGEeeAGbzZrHaKcQ" name="feel-duration-function_25">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P1Y2M&quot;)' and expects result: 'P1Y2M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P1Y2M&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>P1Y2M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTHk0slGEeeAGbzZrHaKcQ" name="feel-duration-function_25" typeRef="ns1:tfeel-duration-function_25_Result"/>
+    <dmn:literalExpression id="_JTHk0MlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P1Y2M&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTIL4clGEeeAGbzZrHaKcQ" name="feel-duration-function_26">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P1Y&quot;)' and expects result: 'P1Y (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P1Y&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>P1Y (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTIL4slGEeeAGbzZrHaKcQ" name="feel-duration-function_26" typeRef="ns1:tfeel-duration-function_26_Result"/>
+    <dmn:literalExpression id="_JTIL4MlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P1Y&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTIy8clGEeeAGbzZrHaKcQ" name="feel-duration-function_27">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P0Y&quot;)' and expects result: 'P0M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P0Y&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>P0M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTIy8slGEeeAGbzZrHaKcQ" name="feel-duration-function_27" typeRef="ns1:tfeel-duration-function_27_Result"/>
+    <dmn:literalExpression id="_JTIy8MlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P0Y&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTIy9clGEeeAGbzZrHaKcQ" name="feel-duration-function_28">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P0M&quot;)' and expects result: 'P0M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P0M&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>P0M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTIy9slGEeeAGbzZrHaKcQ" name="feel-duration-function_28" typeRef="ns1:tfeel-duration-function_28_Result"/>
+    <dmn:literalExpression id="_JTIy9MlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P0M&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTJaAclGEeeAGbzZrHaKcQ" name="feel-duration-function_29">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;-P1Y&quot;)' and expects result: '-P1Y (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;-P1Y&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>-P1Y (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTJaAslGEeeAGbzZrHaKcQ" name="feel-duration-function_29" typeRef="ns1:tfeel-duration-function_29_Result"/>
+    <dmn:literalExpression id="_JTJaAMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;-P1Y&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTJaBclGEeeAGbzZrHaKcQ" name="feel-duration-function_30">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P26M&quot;)' and expects result: 'P2Y2M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P26M&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>P2Y2M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTJaBslGEeeAGbzZrHaKcQ" name="feel-duration-function_30" typeRef="ns1:tfeel-duration-function_30_Result"/>
+    <dmn:literalExpression id="_JTJaBMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P26M&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTJaCclGEeeAGbzZrHaKcQ" name="feel-duration-function_31">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P1Y27M&quot;)' and expects result: 'P3Y3M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P1Y27M&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>P3Y3M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTKBEMlGEeeAGbzZrHaKcQ" name="feel-duration-function_31" typeRef="ns1:tfeel-duration-function_31_Result"/>
+    <dmn:literalExpression id="_JTJaCMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P1Y27M&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTKBE8lGEeeAGbzZrHaKcQ" name="feel-duration-function_32">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P100M&quot;)' and expects result: 'P8Y4M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P100M&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>P8Y4M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTKBFMlGEeeAGbzZrHaKcQ" name="feel-duration-function_32" typeRef="ns1:tfeel-duration-function_32_Result"/>
+    <dmn:literalExpression id="_JTKBEslGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P100M&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTKoIclGEeeAGbzZrHaKcQ" name="feel-duration-function_33">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;-P100M&quot;)' and expects result: '-P8Y4M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;-P100M&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>-P8Y4M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTKoIslGEeeAGbzZrHaKcQ" name="feel-duration-function_33" typeRef="ns1:tfeel-duration-function_33_Result"/>
+    <dmn:literalExpression id="_JTKoIMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;-P100M&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTKoJclGEeeAGbzZrHaKcQ" name="feel-duration-function_34">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P999999999M&quot;)' and expects result: 'P83333333Y3M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P999999999M&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>P83333333Y3M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTKoJslGEeeAGbzZrHaKcQ" name="feel-duration-function_34" typeRef="ns1:tfeel-duration-function_34_Result"/>
+    <dmn:literalExpression id="_JTKoJMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P999999999M&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTLPMclGEeeAGbzZrHaKcQ" name="feel-duration-function_35">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;-P999999999M&quot;)' and expects result: '-P83333333Y3M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;-P999999999M&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>-P83333333Y3M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTLPMslGEeeAGbzZrHaKcQ" name="feel-duration-function_35" typeRef="ns1:tfeel-duration-function_35_Result"/>
+    <dmn:literalExpression id="_JTLPMMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;-P999999999M&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTL2QclGEeeAGbzZrHaKcQ" name="feel-duration-function_36">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P99999999Y&quot;)' and expects result: 'P99999999Y (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P99999999Y&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>P99999999Y (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTL2QslGEeeAGbzZrHaKcQ" name="feel-duration-function_36" typeRef="ns1:tfeel-duration-function_36_Result"/>
+    <dmn:literalExpression id="_JTL2QMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P99999999Y&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTMdUclGEeeAGbzZrHaKcQ" name="feel-duration-function_37">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;-P99999999Y&quot;)' and expects result: '-P99999999Y (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;-P99999999Y&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>-P99999999Y (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTMdUslGEeeAGbzZrHaKcQ" name="feel-duration-function_37" typeRef="ns1:tfeel-duration-function_37_Result"/>
+    <dmn:literalExpression id="_JTMdUMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;-P99999999Y&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTNEYclGEeeAGbzZrHaKcQ" name="feel-duration-function_38">
+    <dmn:description>Tests FEEL expression: 'duration(from:&quot;P1Y&quot;)' and expects result: 'P1Y (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(from:&quot;P1Y&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>P1Y (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTNEYslGEeeAGbzZrHaKcQ" name="feel-duration-function_38" typeRef="ns1:tfeel-duration-function_38_Result"/>
+    <dmn:literalExpression id="_JTNEYMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(from:&quot;P1Y&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTNEZclGEeeAGbzZrHaKcQ" name="feel-duration-function_39">
+    <dmn:description>Tests FEEL expression: 'duration(from:&quot;PT24H&quot;)' and expects result: 'P1D (days and time duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(from:&quot;PT24H&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>P1D (days and time duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTNrcMlGEeeAGbzZrHaKcQ" name="feel-duration-function_39" typeRef="ns1:tfeel-duration-function_39_Result"/>
+    <dmn:literalExpression id="_JTNEZMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(from:&quot;PT24H&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTNrc8lGEeeAGbzZrHaKcQ" name="feel-duration-function_40">
+    <dmn:description>Tests FEEL expression: 'duration(from:&quot;P26M&quot;)' and expects result: 'P2Y2M (years and months duration)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(from:&quot;P26M&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>P2Y2M (years and months duration)</dmn:allowedAnswers>
+    <dmn:variable id="_JTNrdMlGEeeAGbzZrHaKcQ" name="feel-duration-function_40" typeRef="ns1:tfeel-duration-function_40_Result"/>
+    <dmn:literalExpression id="_JTNrcslGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(from:&quot;P26M&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTO5kclGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_41">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JTO5kslGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_41" typeRef="ns1:tfeel-duration-function_41_Result"/>
+    <dmn:literalExpression id="_JTO5kMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTPgoclGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_42">
+    <dmn:description>Tests FEEL expression: 'duration(2017)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(2017)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JTPgoslGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_42" typeRef="ns1:tfeel-duration-function_42_Result"/>
+    <dmn:literalExpression id="_JTPgoMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(2017)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTQHsclGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_43">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;2012T-12-2511:00:00Z&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;2012T-12-2511:00:00Z&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JTQHsslGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_43" typeRef="ns1:tfeel-duration-function_43_Result"/>
+    <dmn:literalExpression id="_JTQHsMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;2012T-12-2511:00:00Z&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTRV0clGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_44">
+    <dmn:description>Tests FEEL expression: 'duration([])' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration([])'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JTRV0slGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_44" typeRef="ns1:tfeel-duration-function_44_Result"/>
+    <dmn:literalExpression id="_JTRV0MlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration([])</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTR84clGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_45">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;1Y&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;1Y&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JTR84slGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_45" typeRef="ns1:tfeel-duration-function_45_Result"/>
+    <dmn:literalExpression id="_JTR84MlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;1Y&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTSj8clGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_46">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JTSj8slGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_46" typeRef="ns1:tfeel-duration-function_46_Result"/>
+    <dmn:literalExpression id="_JTSj8MlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTSj9clGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_47">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P0&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P0&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JTTLAMlGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_47" typeRef="ns1:tfeel-duration-function_47_Result"/>
+    <dmn:literalExpression id="_JTSj9MlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P0&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTTLA8lGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_48">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P-1Y&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P-1Y&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JTTLBMlGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_48" typeRef="ns1:tfeel-duration-function_48_Result"/>
+    <dmn:literalExpression id="_JTTLAslGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P-1Y&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTTyEclGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_49">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P-2M&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P-2M&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JTTyEslGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_49" typeRef="ns1:tfeel-duration-function_49_Result"/>
+    <dmn:literalExpression id="_JTTyEMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P-2M&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTTyFclGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_50">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P-1Y-2M&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P-1Y-2M&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JTUZIMlGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_50" typeRef="ns1:tfeel-duration-function_50_Result"/>
+    <dmn:literalExpression id="_JTTyFMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P-1Y-2M&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTUZI8lGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_51">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;1D&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;1D&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JTVAMMlGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_51" typeRef="ns1:tfeel-duration-function_51_Result"/>
+    <dmn:literalExpression id="_JTUZIslGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;1D&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTVAM8lGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_52">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JTVANMlGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_52" typeRef="ns1:tfeel-duration-function_52_Result"/>
+    <dmn:literalExpression id="_JTVAMslGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTVnQclGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_53">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P0&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P0&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JTVnQslGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_53" typeRef="ns1:tfeel-duration-function_53_Result"/>
+    <dmn:literalExpression id="_JTVnQMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P0&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTVnRclGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_54">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P-1D&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P-1D&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JTWOUMlGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_54" typeRef="ns1:tfeel-duration-function_54_Result"/>
+    <dmn:literalExpression id="_JTVnRMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P-1D&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTWOU8lGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_55">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;PT-2H&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;PT-2H&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JTW1YMlGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_55" typeRef="ns1:tfeel-duration-function_55_Result"/>
+    <dmn:literalExpression id="_JTWOUslGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;PT-2H&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTW1Y8lGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_56">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;PT-3M&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;PT-3M&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JTW1ZMlGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_56" typeRef="ns1:tfeel-duration-function_56_Result"/>
+    <dmn:literalExpression id="_JTW1YslGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;PT-3M&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTXccclGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_57">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;PT-4S&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;PT-4S&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JTXccslGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_57" typeRef="ns1:tfeel-duration-function_57_Result"/>
+    <dmn:literalExpression id="_JTXccMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;PT-4S&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTXcdclGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_58">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;PT-1DT-2H-3M-4S&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;PT-1DT-2H-3M-4S&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JTXcdslGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_58" typeRef="ns1:tfeel-duration-function_58_Result"/>
+    <dmn:literalExpression id="_JTXcdMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;PT-1DT-2H-3M-4S&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTYDgclGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_59">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P1H&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P1H&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JTYDgslGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_59" typeRef="ns1:tfeel-duration-function_59_Result"/>
+    <dmn:literalExpression id="_JTYDgMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P1H&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JTYDhclGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_60">
+    <dmn:description>Tests FEEL expression: 'duration(&quot;P1S&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'duration(&quot;P1S&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JTYqkMlGEeeAGbzZrHaKcQ" name="feel-duration-function_ErrorCase_60" typeRef="ns1:tfeel-duration-function_60_Result"/>
+    <dmn:literalExpression id="_JTYDhMlGEeeAGbzZrHaKcQ">
+      <dmn:text>duration(&quot;P1S&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:knowledgeSource id="_JS9MwclGEeeAGbzZrHaKcQ" name="DMN 1.1 - 10.3.4.1 Table 58"/>
+</dmn:definitions>
