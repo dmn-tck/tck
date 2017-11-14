@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:ns1="http://www.actico.com/spec/DMN/1117-feel-date-and-time-function" id="_JRJ18MlGEeeAGbzZrHaKcQ" name="1117-feel-date-and-time-function" namespace="http://www.actico.com/spec/DMN/1117-feel-date-and-time-function">
+  <dmn:description>FEEL built-in function 'date and time(from [string])' and 'date and time(date, time)'</dmn:description>
+  <dmn:itemDefinition id="_JRJ18slGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_1_Result"/>
+  <dmn:itemDefinition id="_JRKdAclGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_2_Result"/>
+  <dmn:itemDefinition id="_JRKdBclGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_3_Result"/>
+  <dmn:itemDefinition id="_JRLEE8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_4_Result"/>
+  <dmn:itemDefinition id="_JRLrI8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_5_Result"/>
+  <dmn:itemDefinition id="_JRMSM8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_6_Result"/>
+  <dmn:itemDefinition id="_JRM5Q8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_7_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRNgU8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_8_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JROHY8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_9_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JROuc8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_10_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRP8k8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_11_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRRKsclGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_12_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRRxw8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_13_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRSY08lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_14_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRS_48lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_15_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRTm88lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_16_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRUOA8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_17_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRU1E8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_18_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRU1F8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_19_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRVcI8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_20_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRVcJ8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_21_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRWDM8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_22_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRWqQ8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_23_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRXRU8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_24_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRX4YclGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_25_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRYfc8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_26_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRZGg8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_27_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRZtk8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_28_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRa7s8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_29_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRcJ08lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_30_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRdX88lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_31_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRfNIclGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_32_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRgbQ8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_33_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRhpY8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_34_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRjek8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_35_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRkss8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_36_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRmh4clGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_37_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRnwAclGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_38_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRo-IclGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_39_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRqMQclGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_40_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRraYclGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_41_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRsog8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_42_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRudsclGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_43_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRvr08lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_44_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRwS48lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_45_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRxhA8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_46_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRyvIclGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_47_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRzWM8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_48_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JRz9Q8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_49_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JR0kU8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_50_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JR1LY8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_51_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JR2ZgclGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_52_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JR3Ak8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_53_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_JR4OsclGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_54_Result"/>
+  <dmn:itemDefinition id="_JR41wclGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_55_Result"/>
+  <dmn:itemDefinition id="_JR5c0clGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_56_Result"/>
+  <dmn:itemDefinition id="_JR6D4clGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_57_Result"/>
+  <dmn:itemDefinition id="_JR6D5clGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_58_Result"/>
+  <dmn:itemDefinition id="_JR6q88lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_59_Result"/>
+  <dmn:itemDefinition id="_JR7SA8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_60_Result"/>
+  <dmn:itemDefinition id="_JR7SB8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_61_Result"/>
+  <dmn:itemDefinition id="_JR75E8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_62_Result"/>
+  <dmn:itemDefinition id="_JR8gI8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_63_Result"/>
+  <dmn:itemDefinition id="_JR9HM8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_64_Result"/>
+  <dmn:itemDefinition id="_JR9HN8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_65_Result"/>
+  <dmn:itemDefinition id="_JR9uQ8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_66_Result"/>
+  <dmn:itemDefinition id="_JR-VU8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_67_Result"/>
+  <dmn:itemDefinition id="_JR-8Y8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_68_Result"/>
+  <dmn:itemDefinition id="_JR_jcclGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_69_Result"/>
+  <dmn:itemDefinition id="_JSAKg8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_70_Result"/>
+  <dmn:itemDefinition id="_JSBYoclGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_71_Result"/>
+  <dmn:itemDefinition id="_JSB_sclGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_72_Result"/>
+  <dmn:itemDefinition id="_JSCmwclGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_73_Result"/>
+  <dmn:itemDefinition id="_JSDN0clGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_74_Result"/>
+  <dmn:itemDefinition id="_JSDN1clGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_75_Result"/>
+  <dmn:itemDefinition id="_JSD048lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_76_Result"/>
+  <dmn:itemDefinition id="_JSEb88lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_77_Result"/>
+  <dmn:itemDefinition id="_JSFqE8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_78_Result"/>
+  <dmn:itemDefinition id="_JSG4MclGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_79_Result"/>
+  <dmn:itemDefinition id="_JSHfQ8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_80_Result"/>
+  <dmn:itemDefinition id="_JSIGU8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_81_Result"/>
+  <dmn:itemDefinition id="_JSJUcclGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_82_Result"/>
+  <dmn:itemDefinition id="_JSKik8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_83_Result"/>
+  <dmn:itemDefinition id="_JSLws8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_84_Result"/>
+  <dmn:itemDefinition id="_JSM-0clGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_85_Result"/>
+  <dmn:itemDefinition id="_JSNl48lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_86_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:decision id="_JRJ19MlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_1">
+    <dmn:description>Tests FEEL expression: 'date and time(null)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(null)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JRKdAMlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_1" typeRef="ns1:tfeel-date-and-time-function_1_Result"/>
+    <dmn:literalExpression id="_JRJ188lGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(null)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRKdA8lGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_2">
+    <dmn:description>Tests FEEL expression: 'date and time(null,null)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(null,null)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JRKdBMlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_2" typeRef="ns1:tfeel-date-and-time-function_2_Result"/>
+    <dmn:literalExpression id="_JRKdAslGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(null,null)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRLEEclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_3">
+    <dmn:description>Tests FEEL expression: 'date and time(date and time(&quot;2017-08-10T10:20:00&quot;),null)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(date and time(&quot;2017-08-10T10:20:00&quot;),null)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JRLEEslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_3" typeRef="ns1:tfeel-date-and-time-function_3_Result"/>
+    <dmn:literalExpression id="_JRLEEMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(date and time(&quot;2017-08-10T10:20:00&quot;),null)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRLrIclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_4">
+    <dmn:description>Tests FEEL expression: 'date and time(date(&quot;2017-08-10&quot;),null)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(date(&quot;2017-08-10&quot;),null)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JRLrIslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_4" typeRef="ns1:tfeel-date-and-time-function_4_Result"/>
+    <dmn:literalExpression id="_JRLrIMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(date(&quot;2017-08-10&quot;),null)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRMSMclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_5">
+    <dmn:description>Tests FEEL expression: 'date and time(null,time(&quot;23:59:01&quot;))' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(null,time(&quot;23:59:01&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JRMSMslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_5" typeRef="ns1:tfeel-date-and-time-function_5_Result"/>
+    <dmn:literalExpression id="_JRMSMMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(null,time(&quot;23:59:01&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRM5QclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_6">
+    <dmn:description>Tests FEEL expression: 'date and time()' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time()'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JRM5QslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_6" typeRef="ns1:tfeel-date-and-time-function_6_Result"/>
+    <dmn:literalExpression id="_JRM5QMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time()</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRNgUclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_7">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T00:00:00&quot;)' and expects result: '2017-12-31T00:00:00 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T00:00:00&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>2017-12-31T00:00:00 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRNgUslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_7" typeRef="ns1:tfeel-date-and-time-function_7_Result"/>
+    <dmn:literalExpression id="_JRNgUMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T00:00:00&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JROHYclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_8">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T11:22:33&quot;)' and expects result: '2017-12-31T11:22:33 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T11:22:33&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>2017-12-31T11:22:33 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JROHYslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_8" typeRef="ns1:tfeel-date-and-time-function_8_Result"/>
+    <dmn:literalExpression id="_JROHYMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T11:22:33&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JROucclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_9">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;-2017-12-31T11:22:33&quot;)' and expects result: '-2017-12-31T11:22:33 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;-2017-12-31T11:22:33&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>-2017-12-31T11:22:33 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JROucslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_9" typeRef="ns1:tfeel-date-and-time-function_9_Result"/>
+    <dmn:literalExpression id="_JROucMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;-2017-12-31T11:22:33&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRP8kclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_10">
+    <dmn:description>Tests FEEL expression: 'string(date and time(&quot;99999-12-31T11:22:33&quot;))' and expects result: '&quot;99999-12-31T11:22:33&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'string(date and time(&quot;99999-12-31T11:22:33&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>&quot;99999-12-31T11:22:33&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_JRP8kslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_10" typeRef="ns1:tfeel-date-and-time-function_10_Result"/>
+    <dmn:literalExpression id="_JRP8kMlGEeeAGbzZrHaKcQ">
+      <dmn:text>string(date and time(&quot;99999-12-31T11:22:33&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRQjoclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_11">
+    <dmn:description>Tests FEEL expression: 'string(date and time(&quot;-99999-12-31T11:22:33&quot;))' and expects result: '&quot;-99999-12-31T11:22:33&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'string(date and time(&quot;-99999-12-31T11:22:33&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>&quot;-99999-12-31T11:22:33&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_JRRKsMlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_11" typeRef="ns1:tfeel-date-and-time-function_11_Result"/>
+    <dmn:literalExpression id="_JRQjoMlGEeeAGbzZrHaKcQ">
+      <dmn:text>string(date and time(&quot;-99999-12-31T11:22:33&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRRxwclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_12">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T11:22:33.345&quot;)' and expects result: '2017-12-31T11:22:33.345 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T11:22:33.345&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>2017-12-31T11:22:33.345 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRRxwslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_12" typeRef="ns1:tfeel-date-and-time-function_12_Result"/>
+    <dmn:literalExpression id="_JRRxwMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T11:22:33.345&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRSY0clGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_13">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T11:22:33.123456789&quot;)' and expects result: '2017-12-31T11:22:33.123456789 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T11:22:33.123456789&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>2017-12-31T11:22:33.123456789 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRSY0slGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_13" typeRef="ns1:tfeel-date-and-time-function_13_Result"/>
+    <dmn:literalExpression id="_JRSY0MlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T11:22:33.123456789&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRS_4clGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_14">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T11:22:33Z&quot;)' and expects result: '2017-12-31T11:22:33Z (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T11:22:33Z&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>2017-12-31T11:22:33Z (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRS_4slGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_14" typeRef="ns1:tfeel-date-and-time-function_14_Result"/>
+    <dmn:literalExpression id="_JRS_4MlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T11:22:33Z&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRTm8clGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_15">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T11:22:33.567Z&quot;)' and expects result: '2017-12-31T11:22:33.567Z (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T11:22:33.567Z&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>2017-12-31T11:22:33.567Z (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRTm8slGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_15" typeRef="ns1:tfeel-date-and-time-function_15_Result"/>
+    <dmn:literalExpression id="_JRTm8MlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T11:22:33.567Z&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRUOAclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_16">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T11:22:33+01:00&quot;)' and expects result: '2017-12-31T11:22:33+01:00 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T11:22:33+01:00&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>2017-12-31T11:22:33+01:00 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRUOAslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_16" typeRef="ns1:tfeel-date-and-time-function_16_Result"/>
+    <dmn:literalExpression id="_JRUOAMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T11:22:33+01:00&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRU1EclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_17">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T11:22:33-02:00&quot;)' and expects result: '2017-12-31T11:22:33-02:00 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T11:22:33-02:00&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>2017-12-31T11:22:33-02:00 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRU1EslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_17" typeRef="ns1:tfeel-date-and-time-function_17_Result"/>
+    <dmn:literalExpression id="_JRU1EMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T11:22:33-02:00&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRU1FclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_18">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T11:22:33+01:35&quot;)' and expects result: '2017-12-31T11:22:33+01:35 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T11:22:33+01:35&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>2017-12-31T11:22:33+01:35 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRU1FslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_18" typeRef="ns1:tfeel-date-and-time-function_18_Result"/>
+    <dmn:literalExpression id="_JRU1FMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T11:22:33+01:35&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRVcIclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_19">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T11:22:33-01:35&quot;)' and expects result: '2017-12-31T11:22:33-01:35 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T11:22:33-01:35&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>2017-12-31T11:22:33-01:35 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRVcIslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_19" typeRef="ns1:tfeel-date-and-time-function_19_Result"/>
+    <dmn:literalExpression id="_JRVcIMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T11:22:33-01:35&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRVcJclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_20">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T11:22:33.456+01:35&quot;)' and expects result: '2017-12-31T11:22:33.456+01:35 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T11:22:33.456+01:35&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>2017-12-31T11:22:33.456+01:35 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRVcJslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_20" typeRef="ns1:tfeel-date-and-time-function_20_Result"/>
+    <dmn:literalExpression id="_JRVcJMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T11:22:33.456+01:35&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRWDMclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_21">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;-2017-12-31T11:22:33.456+01:35&quot;)' and expects result: '-2017-12-31T11:22:33.456+01:35 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;-2017-12-31T11:22:33.456+01:35&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>-2017-12-31T11:22:33.456+01:35 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRWDMslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_21" typeRef="ns1:tfeel-date-and-time-function_21_Result"/>
+    <dmn:literalExpression id="_JRWDMMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;-2017-12-31T11:22:33.456+01:35&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRWqQclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_22">
+    <dmn:description>Tests FEEL expression: 'string(date and time(&quot;2011-12-31T10:15:30@Europe/Paris&quot;))' and expects result: '&quot;2011-12-31T10:15:30@Europe/Paris&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'string(date and time(&quot;2011-12-31T10:15:30@Europe/Paris&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>&quot;2011-12-31T10:15:30@Europe/Paris&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_JRWqQslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_22" typeRef="ns1:tfeel-date-and-time-function_22_Result"/>
+    <dmn:literalExpression id="_JRWqQMlGEeeAGbzZrHaKcQ">
+      <dmn:text>string(date and time(&quot;2011-12-31T10:15:30@Europe/Paris&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRXRUclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_23">
+    <dmn:description>Tests FEEL expression: 'string(date and time(&quot;2011-12-31T10:15:30@Etc/UTC&quot;))' and expects result: '&quot;2011-12-31T10:15:30@Etc/UTC&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'string(date and time(&quot;2011-12-31T10:15:30@Etc/UTC&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>&quot;2011-12-31T10:15:30@Etc/UTC&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_JRXRUslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_23" typeRef="ns1:tfeel-date-and-time-function_23_Result"/>
+    <dmn:literalExpression id="_JRXRUMlGEeeAGbzZrHaKcQ">
+      <dmn:text>string(date and time(&quot;2011-12-31T10:15:30@Etc/UTC&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRXRVclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_24">
+    <dmn:description>Tests FEEL expression: 'string(date and time(&quot;2011-12-31T10:15:30.987@Europe/Paris&quot;))' and expects result: '&quot;2011-12-31T10:15:30.987@Europe/Paris&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'string(date and time(&quot;2011-12-31T10:15:30.987@Europe/Paris&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>&quot;2011-12-31T10:15:30.987@Europe/Paris&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_JRX4YMlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_24" typeRef="ns1:tfeel-date-and-time-function_24_Result"/>
+    <dmn:literalExpression id="_JRXRVMlGEeeAGbzZrHaKcQ">
+      <dmn:text>string(date and time(&quot;2011-12-31T10:15:30.987@Europe/Paris&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRYfcclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_25">
+    <dmn:description>Tests FEEL expression: 'string(date and time(&quot;2011-12-31T10:15:30.123456789@Europe/Paris&quot;))' and expects result: '&quot;2011-12-31T10:15:30.123456789@Europe/Paris&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'string(date and time(&quot;2011-12-31T10:15:30.123456789@Europe/Paris&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>&quot;2011-12-31T10:15:30.123456789@Europe/Paris&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_JRYfcslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_25" typeRef="ns1:tfeel-date-and-time-function_25_Result"/>
+    <dmn:literalExpression id="_JRYfcMlGEeeAGbzZrHaKcQ">
+      <dmn:text>string(date and time(&quot;2011-12-31T10:15:30.123456789@Europe/Paris&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRZGgclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_26">
+    <dmn:description>Tests FEEL expression: 'string(date and time(&quot;999999999-12-31T23:59:59.999999999@Europe/Paris&quot;))' and expects result: '&quot;999999999-12-31T23:59:59.999999999@Europe/Paris&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'string(date and time(&quot;999999999-12-31T23:59:59.999999999@Europe/Paris&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>&quot;999999999-12-31T23:59:59.999999999@Europe/Paris&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_JRZGgslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_26" typeRef="ns1:tfeel-date-and-time-function_26_Result"/>
+    <dmn:literalExpression id="_JRZGgMlGEeeAGbzZrHaKcQ">
+      <dmn:text>string(date and time(&quot;999999999-12-31T23:59:59.999999999@Europe/Paris&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRZtkclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_27">
+    <dmn:description>Tests FEEL expression: 'string(date and time(&quot;-999999999-12-31T23:59:59.999999999+02:00&quot;))' and expects result: '&quot;-999999999-12-31T23:59:59.999999999+02:00&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'string(date and time(&quot;-999999999-12-31T23:59:59.999999999+02:00&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>&quot;-999999999-12-31T23:59:59.999999999+02:00&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_JRZtkslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_27" typeRef="ns1:tfeel-date-and-time-function_27_Result"/>
+    <dmn:literalExpression id="_JRZtkMlGEeeAGbzZrHaKcQ">
+      <dmn:text>string(date and time(&quot;-999999999-12-31T23:59:59.999999999+02:00&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRa7sclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_28">
+    <dmn:description>Tests FEEL expression: 'date and time(date(&quot;2017-01-01&quot;),time(&quot;23:59:01&quot;))' and expects result: '2017-01-01T23:59:01 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(date(&quot;2017-01-01&quot;),time(&quot;23:59:01&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-01-01T23:59:01 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRa7sslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_28" typeRef="ns1:tfeel-date-and-time-function_28_Result"/>
+    <dmn:literalExpression id="_JRa7sMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(date(&quot;2017-01-01&quot;),time(&quot;23:59:01&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRcJ0clGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_29">
+    <dmn:description>Tests FEEL expression: 'date and time(date(&quot;2017-01-01&quot;),time(&quot;23:59:01Z&quot;))' and expects result: '2017-01-01T23:59:01Z (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(date(&quot;2017-01-01&quot;),time(&quot;23:59:01Z&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-01-01T23:59:01Z (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRcJ0slGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_29" typeRef="ns1:tfeel-date-and-time-function_29_Result"/>
+    <dmn:literalExpression id="_JRcJ0MlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(date(&quot;2017-01-01&quot;),time(&quot;23:59:01Z&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRdX8clGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_30">
+    <dmn:description>Tests FEEL expression: 'date and time(date(&quot;2017-01-01&quot;),time(&quot;23:59:01+02:00&quot;))' and expects result: '2017-01-01T23:59:01+02:00 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(date(&quot;2017-01-01&quot;),time(&quot;23:59:01+02:00&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-01-01T23:59:01+02:00 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRdX8slGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_30" typeRef="ns1:tfeel-date-and-time-function_30_Result"/>
+    <dmn:literalExpression id="_JRdX8MlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(date(&quot;2017-01-01&quot;),time(&quot;23:59:01+02:00&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRemEclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_31">
+    <dmn:description>Tests FEEL expression: 'string(date and time(date(&quot;2017-01-01&quot;),time(&quot;23:59:01@Europe/Paris&quot;)))' and expects result: '&quot;2017-01-01T23:59:01@Europe/Paris&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'string(date and time(date(&quot;2017-01-01&quot;),time(&quot;23:59:01@Europe/Paris&quot;)))'?</dmn:question>
+    <dmn:allowedAnswers>&quot;2017-01-01T23:59:01@Europe/Paris&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_JRfNIMlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_31" typeRef="ns1:tfeel-date-and-time-function_31_Result"/>
+    <dmn:literalExpression id="_JRemEMlGEeeAGbzZrHaKcQ">
+      <dmn:text>string(date and time(date(&quot;2017-01-01&quot;),time(&quot;23:59:01@Europe/Paris&quot;)))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRgbQclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_32">
+    <dmn:description>Tests FEEL expression: 'string(date and time(date(&quot;2017-01-01&quot;),time(&quot;23:59:01.123456789@Europe/Paris&quot;)))' and expects result: '&quot;2017-01-01T23:59:01.123456789@Europe/Paris&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'string(date and time(date(&quot;2017-01-01&quot;),time(&quot;23:59:01.123456789@Europe/Paris&quot;)))'?</dmn:question>
+    <dmn:allowedAnswers>&quot;2017-01-01T23:59:01.123456789@Europe/Paris&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_JRgbQslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_32" typeRef="ns1:tfeel-date-and-time-function_32_Result"/>
+    <dmn:literalExpression id="_JRgbQMlGEeeAGbzZrHaKcQ">
+      <dmn:text>string(date and time(date(&quot;2017-01-01&quot;),time(&quot;23:59:01.123456789@Europe/Paris&quot;)))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRhpYclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_33">
+    <dmn:description>Tests FEEL expression: 'date and time(date and time(&quot;2017-08-10T10:20:00&quot;),time(&quot;23:59:01&quot;))' and expects result: '2017-08-10T23:59:01 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(date and time(&quot;2017-08-10T10:20:00&quot;),time(&quot;23:59:01&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-08-10T23:59:01 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRhpYslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_33" typeRef="ns1:tfeel-date-and-time-function_33_Result"/>
+    <dmn:literalExpression id="_JRhpYMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(date and time(&quot;2017-08-10T10:20:00&quot;),time(&quot;23:59:01&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRjekclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_34">
+    <dmn:description>Tests FEEL expression: 'date and time(date and time(&quot;2017-08-10T10:20:00&quot;),time(&quot;23:59:01.987654321&quot;))' and expects result: '2017-08-10T23:59:01.987654321 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(date and time(&quot;2017-08-10T10:20:00&quot;),time(&quot;23:59:01.987654321&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-08-10T23:59:01.987654321 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRjekslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_34" typeRef="ns1:tfeel-date-and-time-function_34_Result"/>
+    <dmn:literalExpression id="_JRjekMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(date and time(&quot;2017-08-10T10:20:00&quot;),time(&quot;23:59:01.987654321&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRkssclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_35">
+    <dmn:description>Tests FEEL expression: 'date and time(date and time(&quot;2017-09-05T10:20:00&quot;),time(&quot;09:15:30+02:00&quot;))' and expects result: '2017-09-05T09:15:30+02:00 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(date and time(&quot;2017-09-05T10:20:00&quot;),time(&quot;09:15:30+02:00&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-09-05T09:15:30+02:00 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRkssslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_35" typeRef="ns1:tfeel-date-and-time-function_35_Result"/>
+    <dmn:literalExpression id="_JRkssMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(date and time(&quot;2017-09-05T10:20:00&quot;),time(&quot;09:15:30+02:00&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRl60clGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_36">
+    <dmn:description>Tests FEEL expression: 'date and time(date and time(&quot;2017-09-05T10:20:00&quot;),time(&quot;09:15:30Z&quot;))' and expects result: '2017-09-05T09:15:30Z (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(date and time(&quot;2017-09-05T10:20:00&quot;),time(&quot;09:15:30Z&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-09-05T09:15:30Z (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRmh4MlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_36" typeRef="ns1:tfeel-date-and-time-function_36_Result"/>
+    <dmn:literalExpression id="_JRl60MlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(date and time(&quot;2017-09-05T10:20:00&quot;),time(&quot;09:15:30Z&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRnI8clGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_37">
+    <dmn:description>Tests FEEL expression: 'date and time(date and time(&quot;2017-09-05T10:20:00&quot;),time(&quot;09:15:30.987654321+02:00&quot;))' and expects result: '2017-09-05T09:15:30.987654321+02:00 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(date and time(&quot;2017-09-05T10:20:00&quot;),time(&quot;09:15:30.987654321+02:00&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-09-05T09:15:30.987654321+02:00 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRnwAMlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_37" typeRef="ns1:tfeel-date-and-time-function_37_Result"/>
+    <dmn:literalExpression id="_JRnI8MlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(date and time(&quot;2017-09-05T10:20:00&quot;),time(&quot;09:15:30.987654321+02:00&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRoXEclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_38">
+    <dmn:description>Tests FEEL expression: 'date and time(date and time(&quot;2017-09-05T10:20:00&quot;),time(&quot;09:15:30.123456Z&quot;))' and expects result: '2017-09-05T09:15:30.123456Z (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(date and time(&quot;2017-09-05T10:20:00&quot;),time(&quot;09:15:30.123456Z&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-09-05T09:15:30.123456Z (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRo-IMlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_38" typeRef="ns1:tfeel-date-and-time-function_38_Result"/>
+    <dmn:literalExpression id="_JRoXEMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(date and time(&quot;2017-09-05T10:20:00&quot;),time(&quot;09:15:30.123456Z&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRplMclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_39">
+    <dmn:description>Tests FEEL expression: 'string(date and time(date and time(&quot;2017-09-05T10:20:00&quot;),time(&quot;09:15:30.987654321@Europe/Paris&quot;)))' and expects result: '&quot;2017-09-05T09:15:30.987654321@Europe/Paris&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'string(date and time(date and time(&quot;2017-09-05T10:20:00&quot;),time(&quot;09:15:30.987654321@Europe/Paris&quot;)))'?</dmn:question>
+    <dmn:allowedAnswers>&quot;2017-09-05T09:15:30.987654321@Europe/Paris&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_JRqMQMlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_39" typeRef="ns1:tfeel-date-and-time-function_39_Result"/>
+    <dmn:literalExpression id="_JRplMMlGEeeAGbzZrHaKcQ">
+      <dmn:text>string(date and time(date and time(&quot;2017-09-05T10:20:00&quot;),time(&quot;09:15:30.987654321@Europe/Paris&quot;)))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRqzUclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_40">
+    <dmn:description>Tests FEEL expression: 'date and time(date and time(&quot;2017-08-10T10:20:00+02:00&quot;),time(&quot;23:59:01&quot;))' and expects result: '2017-08-10T23:59:01 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(date and time(&quot;2017-08-10T10:20:00+02:00&quot;),time(&quot;23:59:01&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-08-10T23:59:01 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRraYMlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_40" typeRef="ns1:tfeel-date-and-time-function_40_Result"/>
+    <dmn:literalExpression id="_JRqzUMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(date and time(&quot;2017-08-10T10:20:00+02:00&quot;),time(&quot;23:59:01&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRsogclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_41">
+    <dmn:description>Tests FEEL expression: 'date and time(date and time(&quot;2017-08-10T10:20:00+02:00&quot;),time(&quot;23:59:01.987654321&quot;))' and expects result: '2017-08-10T23:59:01.987654321 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(date and time(&quot;2017-08-10T10:20:00+02:00&quot;),time(&quot;23:59:01.987654321&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-08-10T23:59:01.987654321 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRsogslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_41" typeRef="ns1:tfeel-date-and-time-function_41_Result"/>
+    <dmn:literalExpression id="_JRsogMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(date and time(&quot;2017-08-10T10:20:00+02:00&quot;),time(&quot;23:59:01.987654321&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRt2oclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_42">
+    <dmn:description>Tests FEEL expression: 'date and time(date and time(&quot;2017-09-05T10:20:00-01:00&quot;),time(&quot;09:15:30+02:00&quot;))' and expects result: '2017-09-05T09:15:30+02:00 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(date and time(&quot;2017-09-05T10:20:00-01:00&quot;),time(&quot;09:15:30+02:00&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-09-05T09:15:30+02:00 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRudsMlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_42" typeRef="ns1:tfeel-date-and-time-function_42_Result"/>
+    <dmn:literalExpression id="_JRt2oMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(date and time(&quot;2017-09-05T10:20:00-01:00&quot;),time(&quot;09:15:30+02:00&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRvr0clGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_43">
+    <dmn:description>Tests FEEL expression: 'date and time(date and time(&quot;2017-09-05T10:20:00-01:00&quot;),time(&quot;09:15:30Z&quot;))' and expects result: '2017-09-05T09:15:30Z (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(date and time(&quot;2017-09-05T10:20:00-01:00&quot;),time(&quot;09:15:30Z&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-09-05T09:15:30Z (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRvr0slGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_43" typeRef="ns1:tfeel-date-and-time-function_43_Result"/>
+    <dmn:literalExpression id="_JRvr0MlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(date and time(&quot;2017-09-05T10:20:00-01:00&quot;),time(&quot;09:15:30Z&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRwS4clGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_44">
+    <dmn:description>Tests FEEL expression: 'date and time(date and time(&quot;2017-09-05T10:20:00+02:00&quot;),time(&quot;09:15:30.987654321+02:00&quot;))' and expects result: '2017-09-05T09:15:30.987654321+02:00 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(date and time(&quot;2017-09-05T10:20:00+02:00&quot;),time(&quot;09:15:30.987654321+02:00&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-09-05T09:15:30.987654321+02:00 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRwS4slGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_44" typeRef="ns1:tfeel-date-and-time-function_44_Result"/>
+    <dmn:literalExpression id="_JRwS4MlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(date and time(&quot;2017-09-05T10:20:00+02:00&quot;),time(&quot;09:15:30.987654321+02:00&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRxhAclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_45">
+    <dmn:description>Tests FEEL expression: 'date and time(date and time(&quot;2017-09-05T10:20:00+02:00&quot;),time(&quot;09:15:30.123456Z&quot;))' and expects result: '2017-09-05T09:15:30.123456Z (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(date and time(&quot;2017-09-05T10:20:00+02:00&quot;),time(&quot;09:15:30.123456Z&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-09-05T09:15:30.123456Z (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRxhAslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_45" typeRef="ns1:tfeel-date-and-time-function_45_Result"/>
+    <dmn:literalExpression id="_JRxhAMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(date and time(&quot;2017-09-05T10:20:00+02:00&quot;),time(&quot;09:15:30.123456Z&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRyIEclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_46">
+    <dmn:description>Tests FEEL expression: 'string(date and time(date and time(&quot;2017-09-05T10:20:00-01:00&quot;),time(&quot;09:15:30.987654321@Europe/Paris&quot;)))' and expects result: '&quot;2017-09-05T09:15:30.987654321@Europe/Paris&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'string(date and time(date and time(&quot;2017-09-05T10:20:00-01:00&quot;),time(&quot;09:15:30.987654321@Europe/Paris&quot;)))'?</dmn:question>
+    <dmn:allowedAnswers>&quot;2017-09-05T09:15:30.987654321@Europe/Paris&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_JRyvIMlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_46" typeRef="ns1:tfeel-date-and-time-function_46_Result"/>
+    <dmn:literalExpression id="_JRyIEMlGEeeAGbzZrHaKcQ">
+      <dmn:text>string(date and time(date and time(&quot;2017-09-05T10:20:00-01:00&quot;),time(&quot;09:15:30.987654321@Europe/Paris&quot;)))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRzWMclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_47">
+    <dmn:description>Tests FEEL expression: 'date and time(date and time(&quot;2017-08-10T10:20:00@Europe/Paris&quot;),time(&quot;23:59:01&quot;))' and expects result: '2017-08-10T23:59:01 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(date and time(&quot;2017-08-10T10:20:00@Europe/Paris&quot;),time(&quot;23:59:01&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-08-10T23:59:01 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRzWMslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_47" typeRef="ns1:tfeel-date-and-time-function_47_Result"/>
+    <dmn:literalExpression id="_JRzWMMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(date and time(&quot;2017-08-10T10:20:00@Europe/Paris&quot;),time(&quot;23:59:01&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JRz9QclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_48">
+    <dmn:description>Tests FEEL expression: 'date and time(date and time(&quot;2017-08-10T10:20:00@Europe/Paris&quot;),time(&quot;23:59:01.987654321&quot;))' and expects result: '2017-08-10T23:59:01.987654321 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(date and time(&quot;2017-08-10T10:20:00@Europe/Paris&quot;),time(&quot;23:59:01.987654321&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-08-10T23:59:01.987654321 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JRz9QslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_48" typeRef="ns1:tfeel-date-and-time-function_48_Result"/>
+    <dmn:literalExpression id="_JRz9QMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(date and time(&quot;2017-08-10T10:20:00@Europe/Paris&quot;),time(&quot;23:59:01.987654321&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JR0kUclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_49">
+    <dmn:description>Tests FEEL expression: 'date and time(date and time(&quot;2017-09-05T10:20:00@Europe/Paris&quot;),time(&quot;09:15:30+02:00&quot;))' and expects result: '2017-09-05T09:15:30+02:00 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(date and time(&quot;2017-09-05T10:20:00@Europe/Paris&quot;),time(&quot;09:15:30+02:00&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-09-05T09:15:30+02:00 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JR0kUslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_49" typeRef="ns1:tfeel-date-and-time-function_49_Result"/>
+    <dmn:literalExpression id="_JR0kUMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(date and time(&quot;2017-09-05T10:20:00@Europe/Paris&quot;),time(&quot;09:15:30+02:00&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JR1LYclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_50">
+    <dmn:description>Tests FEEL expression: 'date and time(date and time(&quot;2017-09-05T10:20:00@Europe/Paris&quot;),time(&quot;09:15:30Z&quot;))' and expects result: '2017-09-05T09:15:30Z (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(date and time(&quot;2017-09-05T10:20:00@Europe/Paris&quot;),time(&quot;09:15:30Z&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-09-05T09:15:30Z (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JR1LYslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_50" typeRef="ns1:tfeel-date-and-time-function_50_Result"/>
+    <dmn:literalExpression id="_JR1LYMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(date and time(&quot;2017-09-05T10:20:00@Europe/Paris&quot;),time(&quot;09:15:30Z&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JR1ycclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_51">
+    <dmn:description>Tests FEEL expression: 'date and time(date and time(&quot;2017-09-05T10:20:00@Europe/Paris&quot;),time(&quot;09:15:30.987654321+02:00&quot;))' and expects result: '2017-09-05T09:15:30.987654321+02:00 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(date and time(&quot;2017-09-05T10:20:00@Europe/Paris&quot;),time(&quot;09:15:30.987654321+02:00&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-09-05T09:15:30.987654321+02:00 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JR2ZgMlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_51" typeRef="ns1:tfeel-date-and-time-function_51_Result"/>
+    <dmn:literalExpression id="_JR1ycMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(date and time(&quot;2017-09-05T10:20:00@Europe/Paris&quot;),time(&quot;09:15:30.987654321+02:00&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JR3AkclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_52">
+    <dmn:description>Tests FEEL expression: 'date and time(date and time(&quot;2017-09-05T10:20:00@Europe/Paris&quot;),time(&quot;09:15:30.123456Z&quot;))' and expects result: '2017-09-05T09:15:30.123456Z (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(date and time(&quot;2017-09-05T10:20:00@Europe/Paris&quot;),time(&quot;09:15:30.123456Z&quot;))'?</dmn:question>
+    <dmn:allowedAnswers>2017-09-05T09:15:30.123456Z (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JR3AkslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_52" typeRef="ns1:tfeel-date-and-time-function_52_Result"/>
+    <dmn:literalExpression id="_JR3AkMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(date and time(&quot;2017-09-05T10:20:00@Europe/Paris&quot;),time(&quot;09:15:30.123456Z&quot;))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JR3noclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_53">
+    <dmn:description>Tests FEEL expression: 'string(date and time(date and time(&quot;2017-09-05T10:20:00@Europe/Paris&quot;),time(&quot;09:15:30.987654321@Europe/Paris&quot;)))' and expects result: '&quot;2017-09-05T09:15:30.987654321@Europe/Paris&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'string(date and time(date and time(&quot;2017-09-05T10:20:00@Europe/Paris&quot;),time(&quot;09:15:30.987654321@Europe/Paris&quot;)))'?</dmn:question>
+    <dmn:allowedAnswers>&quot;2017-09-05T09:15:30.987654321@Europe/Paris&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_JR4OsMlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_53" typeRef="ns1:tfeel-date-and-time-function_53_Result"/>
+    <dmn:literalExpression id="_JR3noMlGEeeAGbzZrHaKcQ">
+      <dmn:text>string(date and time(date and time(&quot;2017-09-05T10:20:00@Europe/Paris&quot;),time(&quot;09:15:30.987654321@Europe/Paris&quot;)))</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JR4Os8lGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_54">
+    <dmn:description>Tests FEEL expression: 'date and time(2017)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(2017)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JR41wMlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_54" typeRef="ns1:tfeel-date-and-time-function_54_Result"/>
+    <dmn:literalExpression id="_JR4OsslGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(2017)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JR41w8lGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_55">
+    <dmn:description>Tests FEEL expression: 'date and time([])' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time([])'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JR5c0MlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_55" typeRef="ns1:tfeel-date-and-time-function_55_Result"/>
+    <dmn:literalExpression id="_JR41wslGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time([])</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JR5c08lGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_56">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JR6D4MlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_56" typeRef="ns1:tfeel-date-and-time-function_56_Result"/>
+    <dmn:literalExpression id="_JR5c0slGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JR6D48lGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_57">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2012-12-24&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2012-12-24&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JR6D5MlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_57" typeRef="ns1:tfeel-date-and-time-function_57_Result"/>
+    <dmn:literalExpression id="_JR6D4slGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2012-12-24&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JR6q8clGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_58">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;11:00:00&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;11:00:00&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JR6q8slGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_58" typeRef="ns1:tfeel-date-and-time-function_58_Result"/>
+    <dmn:literalExpression id="_JR6q8MlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;11:00:00&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JR7SAclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_59">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2011-12-0310:15:30&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2011-12-0310:15:30&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JR7SAslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_59" typeRef="ns1:tfeel-date-and-time-function_59_Result"/>
+    <dmn:literalExpression id="_JR7SAMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2011-12-0310:15:30&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JR7SBclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_60">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2011-12-03T10:15:30+01:00@Europe/Paris&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2011-12-03T10:15:30+01:00@Europe/Paris&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JR7SBslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_60" typeRef="ns1:tfeel-date-and-time-function_60_Result"/>
+    <dmn:literalExpression id="_JR7SBMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2011-12-03T10:15:30+01:00@Europe/Paris&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JR75EclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_61">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;9999999999-12-27T11:22:33&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;9999999999-12-27T11:22:33&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JR75EslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_61" typeRef="ns1:tfeel-date-and-time-function_61_Result"/>
+    <dmn:literalExpression id="_JR75EMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;9999999999-12-27T11:22:33&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JR8gIclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_62">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-13-10T11:22:33&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-13-10T11:22:33&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JR8gIslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_62" typeRef="ns1:tfeel-date-and-time-function_62_Result"/>
+    <dmn:literalExpression id="_JR8gIMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-13-10T11:22:33&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JR9HMclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_63">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-00-10T11:22:33&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-00-10T11:22:33&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JR9HMslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_63" typeRef="ns1:tfeel-date-and-time-function_63_Result"/>
+    <dmn:literalExpression id="_JR9HMMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-00-10T11:22:33&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JR9HNclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_64">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-13-32T11:22:33&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-13-32T11:22:33&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JR9HNslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_64" typeRef="ns1:tfeel-date-and-time-function_64_Result"/>
+    <dmn:literalExpression id="_JR9HNMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-13-32T11:22:33&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JR9uQclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_65">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-13-0T11:22:33&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-13-0T11:22:33&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JR9uQslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_65" typeRef="ns1:tfeel-date-and-time-function_65_Result"/>
+    <dmn:literalExpression id="_JR9uQMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-13-0T11:22:33&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JR-VUclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_66">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;998-12-31T11:22:33&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;998-12-31T11:22:33&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JR-VUslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_66" typeRef="ns1:tfeel-date-and-time-function_66_Result"/>
+    <dmn:literalExpression id="_JR-VUMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;998-12-31T11:22:33&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JR-8YclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_67">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;01211-12-31T11:22:33&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;01211-12-31T11:22:33&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JR-8YslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_67" typeRef="ns1:tfeel-date-and-time-function_67_Result"/>
+    <dmn:literalExpression id="_JR-8YMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;01211-12-31T11:22:33&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JR-8ZclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_68">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;+99999-12-01T11:22:33&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;+99999-12-01T11:22:33&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JR_jcMlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_68" typeRef="ns1:tfeel-date-and-time-function_68_Result"/>
+    <dmn:literalExpression id="_JR-8ZMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;+99999-12-01T11:22:33&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JSAKgclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_69">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T24:00:01&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T24:00:01&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JSAKgslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_69" typeRef="ns1:tfeel-date-and-time-function_69_Result"/>
+    <dmn:literalExpression id="_JSAKgMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T24:00:01&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JSAxkclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_70">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T24:01:00&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T24:01:00&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JSBYoMlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_70" typeRef="ns1:tfeel-date-and-time-function_70_Result"/>
+    <dmn:literalExpression id="_JSAxkMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T24:01:00&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JSBYo8lGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_71">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T25:00:00&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T25:00:00&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JSB_sMlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_71" typeRef="ns1:tfeel-date-and-time-function_71_Result"/>
+    <dmn:literalExpression id="_JSBYoslGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T25:00:00&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JSB_s8lGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_72">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T00:60:00&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T00:60:00&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JSCmwMlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_72" typeRef="ns1:tfeel-date-and-time-function_72_Result"/>
+    <dmn:literalExpression id="_JSB_sslGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T00:60:00&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JSCmw8lGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_73">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T00:00:61&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T00:00:61&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JSDN0MlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_73" typeRef="ns1:tfeel-date-and-time-function_73_Result"/>
+    <dmn:literalExpression id="_JSCmwslGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T00:00:61&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JSDN08lGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_74">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T7:00:00&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T7:00:00&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JSDN1MlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_74" typeRef="ns1:tfeel-date-and-time-function_74_Result"/>
+    <dmn:literalExpression id="_JSDN0slGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T7:00:00&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JSD04clGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_75">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T07:1:00&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T07:1:00&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JSD04slGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_75" typeRef="ns1:tfeel-date-and-time-function_75_Result"/>
+    <dmn:literalExpression id="_JSD04MlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T07:1:00&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JSEb8clGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_76">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T07:01:2&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T07:01:2&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JSEb8slGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_76" typeRef="ns1:tfeel-date-and-time-function_76_Result"/>
+    <dmn:literalExpression id="_JSEb8MlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T07:01:2&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JSFqEclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_77">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T13:20:00@xyz/abc&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T13:20:00@xyz/abc&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JSFqEslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_77" typeRef="ns1:tfeel-date-and-time-function_77_Result"/>
+    <dmn:literalExpression id="_JSFqEMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T13:20:00@xyz/abc&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JSGRIclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_78">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T13:20:00+19:00&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T13:20:00+19:00&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JSG4MMlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_78" typeRef="ns1:tfeel-date-and-time-function_78_Result"/>
+    <dmn:literalExpression id="_JSGRIMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T13:20:00+19:00&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JSHfQclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_79">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T13:20:00-19:00&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T13:20:00-19:00&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JSHfQslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_79" typeRef="ns1:tfeel-date-and-time-function_79_Result"/>
+    <dmn:literalExpression id="_JSHfQMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T13:20:00-19:00&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JSIGUclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_80">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T13:20:00+05:0&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T13:20:00+05:0&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JSIGUslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_80" typeRef="ns1:tfeel-date-and-time-function_80_Result"/>
+    <dmn:literalExpression id="_JSIGUMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T13:20:00+05:0&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JSItYclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_81">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T13:20:00+5:00&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T13:20:00+5:00&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JSJUcMlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_81" typeRef="ns1:tfeel-date-and-time-function_81_Result"/>
+    <dmn:literalExpression id="_JSItYMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T13:20:00+5:00&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JSKikclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_82">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T13:20:00+5&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T13:20:00+5&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JSKikslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_82" typeRef="ns1:tfeel-date-and-time-function_82_Result"/>
+    <dmn:literalExpression id="_JSKikMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T13:20:00+5&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JSLwsclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_83">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T13:20:00+02:00@Europe/Paris&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T13:20:00+02:00@Europe/Paris&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JSLwsslGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_83" typeRef="ns1:tfeel-date-and-time-function_83_Result"/>
+    <dmn:literalExpression id="_JSLwsMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T13:20:00+02:00@Europe/Paris&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JSMXwclGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_84">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T7:20&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T7:20&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JSM-0MlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_84" typeRef="ns1:tfeel-date-and-time-function_84_Result"/>
+    <dmn:literalExpression id="_JSMXwMlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T7:20&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JSNl4clGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_85">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2017-12-31T07:2&quot;)' and expects result: 'null (null)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(&quot;2017-12-31T07:2&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
+    <dmn:variable id="_JSNl4slGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_85" typeRef="ns1:tfeel-date-and-time-function_85_Result"/>
+    <dmn:literalExpression id="_JSNl4MlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(&quot;2017-12-31T07:2&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_JSOM8clGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_86">
+    <dmn:description>Tests FEEL expression: 'date and time(from:&quot;2012-12-24T23:59:00&quot;)' and expects result: '2012-12-24T23:59:00 (date and time)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'date and time(from:&quot;2012-12-24T23:59:00&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>2012-12-24T23:59:00 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JSOM8slGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_86" typeRef="ns1:tfeel-date-and-time-function_86_Result"/>
+    <dmn:literalExpression id="_JSOM8MlGEeeAGbzZrHaKcQ">
+      <dmn:text>date and time(from:&quot;2012-12-24T23:59:00&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:knowledgeSource id="_JRJ18clGEeeAGbzZrHaKcQ" name="DMN 1.1 - 10.3.4.1 Table 58"/>
+</dmn:definitions>
