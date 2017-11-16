@@ -7,7 +7,7 @@
 
 ## Collaboration Site
 
-* https://interstagebpm.com/av/t/WFM_AORYCMMGG/dmn-reference-implementation/frontPage.htm
+* https://s06.circleweaver.com/weaver/t/wfmc/dmn-reference-implementation/frontPage.htm
 
 ## Current Folders:
 
