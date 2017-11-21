@@ -151,19 +151,26 @@ public class DroolsTCKTest
             {
                logger.info("Messages: \n-----\n{}-----\n", dmnResult.getMessages().stream().map(m -> m.toString()).collect(Collectors.joining("\n")));
             }
-            if (dmnResult.hasErrors())
-            {
-               for (DMNMessage msg : dmnResult.getMessages(DMNMessage.Severity.ERROR))
-               {
-                  failures.add(msg.toString());
-               }
-            }
             resultctx = dmnResult.getContext();
             Object expected = parseValue(rn, ctx.dmnmodel.getDecisionByName(name));
             Object actual = resultctx.get(name);
-            if (!isEquals(expected, actual))
+            if (rn.isErrorResult())
             {
-               failures.add("FAILURE: '" + name + "' expected='" + expected + "' but found='" + actual + "'");
+               if (actual != null) {
+                  failures.add("FAILURE: '" + name + "' expected error but found='" + actual + "'");
+               }
+            } else {
+               if (dmnResult.hasErrors())
+               {
+                  for (DMNMessage msg : dmnResult.getMessages(DMNMessage.Severity.ERROR))
+                  {
+                     failures.add(msg.toString());
+                  }
+               }
+               if (!isEquals(expected, actual))
+               {
+                  failures.add("FAILURE: '" + name + "' expected='" + expected + "' but found='" + actual + "'");
+               }
             }
          }
          catch (Throwable t)
