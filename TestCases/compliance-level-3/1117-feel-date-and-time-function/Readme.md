@@ -68,7 +68,7 @@ DMN Model [1117-feel-date-and-time-function.dmn](./1117-feel-date-and-time-funct
 |feel-date-and-time-function_ErrorCase_54|date and time(2017)|null (null)|
 |feel-date-and-time-function_ErrorCase_55|date and time([])|null (null)|
 |feel-date-and-time-function_ErrorCase_56|date and time("")|null (null)|
-|feel-date-and-time-function_ErrorCase_57|date and time("2012-12-24")|null (null)|
+|feel-date-and-time-function_57|date and time("2012-12-24")|2012-12-24T00:00:00 (date and time)|
 |feel-date-and-time-function_ErrorCase_58|date and time("11:00:00")|null (null)|
 |feel-date-and-time-function_ErrorCase_59|date and time("2011-12-0310:15:30")|null (null)|
 |feel-date-and-time-function_ErrorCase_60|date and time("2011-12-03T10:15:30+01:00@Europe/Paris")|null (null)|

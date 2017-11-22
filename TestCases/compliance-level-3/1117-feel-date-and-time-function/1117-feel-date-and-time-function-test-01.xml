@@ -400,9 +400,9 @@
         </resultNode>
     </testCase>
     <testCase id="057">
-        <resultNode errorResult="true" name="feel-date-and-time-function_ErrorCase_57" type="decision">
+        <resultNode name="feel-date-and-time-function_57" type="decision">
             <expected>
-                <value xsi:nil="true"/>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:dateTime">2012-12-24T00:00:00</value>
             </expected>
         </resultNode>
     </testCase>
