@@ -151,7 +151,9 @@
   <dmn:itemDefinition id="_JR4OsclGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_54_Result"/>
   <dmn:itemDefinition id="_JR41wclGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_55_Result"/>
   <dmn:itemDefinition id="_JR5c0clGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_56_Result"/>
-  <dmn:itemDefinition id="_JR6D4clGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_57_Result"/>
+  <dmn:itemDefinition id="_JR6D4clGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_57_Result">
+    <dmn:typeRef>feel:dateTime</dmn:typeRef>
+  </dmn:itemDefinition>
   <dmn:itemDefinition id="_JR6D5clGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_58_Result"/>
   <dmn:itemDefinition id="_JR6q88lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_59_Result"/>
   <dmn:itemDefinition id="_JR7SA8lGEeeAGbzZrHaKcQ" name="tfeel-date-and-time-function_60_Result"/>
@@ -687,11 +689,11 @@
       <dmn:text>date and time(&quot;&quot;)</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
-  <dmn:decision id="_JR6D48lGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_57">
-    <dmn:description>Tests FEEL expression: 'date and time(&quot;2012-12-24&quot;)' and expects result: 'null (null)'</dmn:description>
+  <dmn:decision id="_JR6D48lGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_57">
+    <dmn:description>Tests FEEL expression: 'date and time(&quot;2012-12-24&quot;)' and expects result: '2012-12-24T00:00:00 (date and time)'</dmn:description>
     <dmn:question>Result of FEEL expression 'date and time(&quot;2012-12-24&quot;)'?</dmn:question>
-    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
-    <dmn:variable id="_JR6D5MlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_ErrorCase_57" typeRef="ns1:tfeel-date-and-time-function_57_Result"/>
+    <dmn:allowedAnswers>2012-12-24T00:00:00 (date and time)</dmn:allowedAnswers>
+    <dmn:variable id="_JR6D5MlGEeeAGbzZrHaKcQ" name="feel-date-and-time-function_57" typeRef="ns1:tfeel-date-and-time-function_57_Result"/>
     <dmn:literalExpression id="_JR6D4slGEeeAGbzZrHaKcQ">
       <dmn:text>date and time(&quot;2012-12-24&quot;)</dmn:text>
     </dmn:literalExpression>
