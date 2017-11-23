@@ -399,13 +399,6 @@
             </expected>
         </resultNode>
     </testCase>
-    <testCase id="057">
-        <resultNode errorResult="true" name="feel-date-and-time-function_ErrorCase_57" type="decision">
-            <expected>
-                <value xsi:nil="true"/>
-            </expected>
-        </resultNode>
-    </testCase>
     <testCase id="058">
         <resultNode errorResult="true" name="feel-date-and-time-function_ErrorCase_58" type="decision">
             <expected>

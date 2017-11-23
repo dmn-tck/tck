@@ -216,20 +216,6 @@
             </expected>
         </resultNode>
     </testCase>
-    <testCase id="031">
-        <resultNode errorResult="true" name="feel-years-and-months-duration-function_ErrorCase_31" type="decision">
-            <expected>
-                <value xsi:nil="true"/>
-            </expected>
-        </resultNode>
-    </testCase>
-    <testCase id="032">
-        <resultNode errorResult="true" name="feel-years-and-months-duration-function_ErrorCase_32" type="decision">
-            <expected>
-                <value xsi:nil="true"/>
-            </expected>
-        </resultNode>
-    </testCase>
     <testCase id="033">
         <resultNode name="feel-years-and-months-duration-function_33" type="decision">
             <expected>
