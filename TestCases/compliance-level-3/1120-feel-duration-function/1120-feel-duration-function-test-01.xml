@@ -336,27 +336,6 @@
             </expected>
         </resultNode>
     </testCase>
-    <testCase id="048">
-        <resultNode errorResult="true" name="feel-duration-function_ErrorCase_48" type="decision">
-            <expected>
-                <value xsi:nil="true"/>
-            </expected>
-        </resultNode>
-    </testCase>
-    <testCase id="049">
-        <resultNode errorResult="true" name="feel-duration-function_ErrorCase_49" type="decision">
-            <expected>
-                <value xsi:nil="true"/>
-            </expected>
-        </resultNode>
-    </testCase>
-    <testCase id="050">
-        <resultNode errorResult="true" name="feel-duration-function_ErrorCase_50" type="decision">
-            <expected>
-                <value xsi:nil="true"/>
-            </expected>
-        </resultNode>
-    </testCase>
     <testCase id="051">
         <resultNode errorResult="true" name="feel-duration-function_ErrorCase_51" type="decision">
             <expected>
@@ -373,34 +352,6 @@
     </testCase>
     <testCase id="053">
         <resultNode errorResult="true" name="feel-duration-function_ErrorCase_53" type="decision">
-            <expected>
-                <value xsi:nil="true"/>
-            </expected>
-        </resultNode>
-    </testCase>
-    <testCase id="054">
-        <resultNode errorResult="true" name="feel-duration-function_ErrorCase_54" type="decision">
-            <expected>
-                <value xsi:nil="true"/>
-            </expected>
-        </resultNode>
-    </testCase>
-    <testCase id="055">
-        <resultNode errorResult="true" name="feel-duration-function_ErrorCase_55" type="decision">
-            <expected>
-                <value xsi:nil="true"/>
-            </expected>
-        </resultNode>
-    </testCase>
-    <testCase id="056">
-        <resultNode errorResult="true" name="feel-duration-function_ErrorCase_56" type="decision">
-            <expected>
-                <value xsi:nil="true"/>
-            </expected>
-        </resultNode>
-    </testCase>
-    <testCase id="057">
-        <resultNode errorResult="true" name="feel-duration-function_ErrorCase_57" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>

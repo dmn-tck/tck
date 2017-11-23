@@ -210,13 +210,6 @@
             </expected>
         </resultNode>
     </testCase>
-    <testCase id="030">
-        <resultNode errorResult="true" name="feel-date-function_ErrorCase_30" type="decision">
-            <expected>
-                <value xsi:nil="true"/>
-            </expected>
-        </resultNode>
-    </testCase>
     <testCase id="031">
         <resultNode errorResult="true" name="feel-date-function_ErrorCase_31" type="decision">
             <expected>
@@ -354,13 +347,6 @@
         <resultNode name="feel-date-function_50" type="decision">
             <expected>
                 <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:date">2012-12-25</value>
-            </expected>
-        </resultNode>
-    </testCase>
-    <testCase id="051">
-        <resultNode errorResult="true" name="feel-date-function_ErrorCase_51" type="decision">
-            <expected>
-                <value xsi:nil="true"/>
             </expected>
         </resultNode>
     </testCase>
