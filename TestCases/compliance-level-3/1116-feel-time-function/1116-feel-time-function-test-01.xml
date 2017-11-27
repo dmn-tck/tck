@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Contributed to DMN TCK by ACTICO GmbH https://actico.com -->
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="">
+    <modelName>1116-feel-time-function.dmn</modelName>
+    <labels>
+        <label>Compliance Level 3</label>
+        <label>Literal Expression</label>
+        <label>FEEL Functions: date and time</label>
+    </labels>
+    <testCase id="001">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_1" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="002">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_2" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="003">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_3" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="004">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_4" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="005">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_5" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="006">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_6" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="007">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_7" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="008">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_8" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="009">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_9" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="010">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_10" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="011">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_11" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="012">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_12" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="013">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_13" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="014">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_14" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="015">
+        <resultNode name="feel-time-function_15" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">12:00:00</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="016">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_16" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="017">
+        <resultNode name="feel-time-function_17" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">01:02:03</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="018">
+        <resultNode name="feel-time-function_18" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">00:00:00</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="019">
+        <resultNode name="feel-time-function_19" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:22:33.444</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="020">
+        <resultNode name="feel-time-function_20" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:22:33.123456789</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="021">
+        <resultNode name="feel-time-function_21" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">23:59:00Z</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="022">
+        <resultNode name="feel-time-function_22" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">23:59:00Z</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="023">
+        <resultNode name="feel-time-function_23" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:00:00Z</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="024">
+        <resultNode name="feel-time-function_24" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">00:00:00Z</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="025">
+        <resultNode name="feel-time-function_25" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">13:20:00+02:00</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="026">
+        <resultNode name="feel-time-function_26" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">13:20:00-05:00</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="027">
+        <resultNode name="feel-time-function_27" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:22:33Z</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="028">
+        <resultNode name="feel-time-function_28" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:22:33Z</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="029">
+        <resultNode name="feel-time-function_29" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">00:01:00@Etc/UTC</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="030">
+        <resultNode name="feel-time-function_30" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">00:01:00@Europe/Paris</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="031">
+        <resultNode name="feel-time-function_31" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">10:20:00</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="032">
+        <resultNode name="feel-time-function_32" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">10:20:00Z</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="033">
+        <resultNode name="feel-time-function_33" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">10:20:00Z</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="034">
+        <resultNode name="feel-time-function_34" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">10:20:00+01:00</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="035">
+        <resultNode name="feel-time-function_35" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">10:20:00-01:00</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="036">
+        <resultNode name="feel-time-function_36" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">10:20:00Z</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="037">
+        <resultNode name="feel-time-function_37" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">10:20:00@Europe/Paris</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="038">
+        <resultNode name="feel-time-function_38" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">11:20:00@Asia/Dhaka</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="039">
+        <resultNode name="feel-time-function_39" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:59:45</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="040">
+        <resultNode name="feel-time-function_40" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:59:45Z</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="041">
+        <resultNode name="feel-time-function_41" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:59:45+02:00</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="042">
+        <resultNode name="feel-time-function_42" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:59:45-02:00</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="043">
+        <resultNode name="feel-time-function_43" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:59:00+02:01</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="044">
+        <resultNode name="feel-time-function_44" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:59:00-02:01</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="045">
+        <resultNode name="feel-time-function_45" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:59:00+02:01</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="046">
+        <resultNode name="feel-time-function_46" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:59:00-02:01</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="047">
+        <resultNode name="feel-time-function_47" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">11:59:45+02:45:55</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="048">
+        <resultNode name="feel-time-function_48" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">11:59:45-02:45:55</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="049">
+        <resultNode name="feel-time-function_49" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:59:45Z</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="050">
+        <resultNode name="feel-time-function_50" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:59:45Z</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="051">
+        <resultNode name="feel-time-function_51" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">23:59:01</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="052">
+        <resultNode name="feel-time-function_52" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">23:59:01.987654321</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="053">
+        <resultNode name="feel-time-function_53" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">09:15:30+02:00</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="054">
+        <resultNode name="feel-time-function_54" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">09:15:30Z</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="055">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_55" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="056">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_56" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="057">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_57" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="058">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_58" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="059">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_59" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="060">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_60" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="061">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_61" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="062">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_62" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="063">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_63" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="064">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_64" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="065">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_65" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="066">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_66" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="067">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_67" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="068">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_68" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="069">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_69" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="070">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_70" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="071">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_71" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="072">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_72" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="073">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_73" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="074">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_74" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="075">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_75" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="076">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_76" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="077">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_77" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="078">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_78" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="079">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_79" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="080">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_80" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="081">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_81" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="082">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_82" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="083">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_83" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="084">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_84" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="085">
+        <resultNode errorResult="true" name="feel-time-function_ErrorCase_85" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="086">
+        <resultNode name="feel-time-function_86" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">23:59:00</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="087">
+        <resultNode name="feel-time-function_87" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">12:45:00</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="088">
+        <resultNode name="feel-time-function_88" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:59:00+02:01</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="089">
+        <resultNode name="feel-time-function_89" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:59:00-02:00</value>
+            </expected>
+        </resultNode>
+    </testCase>
+</testCases>
