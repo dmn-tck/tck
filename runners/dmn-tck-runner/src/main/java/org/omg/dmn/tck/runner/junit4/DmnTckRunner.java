@@ -157,7 +157,7 @@ public class DmnTckRunner
                     runNotifier.fireTestIgnored( description );
                     break;
                 case ERROR:
-				runNotifier.fireTestFailure(new Failure(description, new RuntimeException(result.toStringWithLines())));
+				    runNotifier.fireTestFailure(new Failure(description, new RuntimeException(result.toStringWithLines())));
                     break;
             }
 			if (resultFile != null) {
@@ -169,6 +169,7 @@ public class DmnTckRunner
             e.printStackTrace();
         } finally {
             vendorSuite.afterTest( description, context, testCase );
+            runNotifier.fireTestFinished(description);
         }
     }
 
