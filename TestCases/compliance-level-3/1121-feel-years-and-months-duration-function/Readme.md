@@ -42,8 +42,6 @@ DMN Model [1121-feel-years-and-months-duration-function.dmn](./1121-feel-years-a
 |feel-years-and-months-duration-function_ErrorCase_28|years and months duration(2017)|null (null)|
 |feel-years-and-months-duration-function_ErrorCase_29|years and months duration("2012T-12-2511:00:00Z")|null (null)|
 |feel-years-and-months-duration-function_ErrorCase_30|years and months duration([],[])|null (null)|
-|feel-years-and-months-duration-function_ErrorCase_31|years and months duration(date("2013-08-24"), date and time("2017-12-15T00:59:59"))|null (null)|
-|feel-years-and-months-duration-function_ErrorCase_32|years and months duration(date and time("2017-02-28T23:59:59"), date("2019-07-23") )|null (null)|
 |feel-years-and-months-duration-function_33|years and months duration(from:date and time("2016-12-31T00:00:01"),to:date and time("2017-12-31T23:59:59"))|P1Y (years and months duration)|
 |feel-years-and-months-duration-function_34|years and months duration(from:date and time("2014-12-31T23:59:59"),to:date and time("2016-12-31T00:00:01"))|P2Y (years and months duration)|
 |feel-years-and-months-duration-function_35|years and months duration(from:date("2011-12-22"),to:date("2013-08-24"))|P1Y8M (years and months duration)|
