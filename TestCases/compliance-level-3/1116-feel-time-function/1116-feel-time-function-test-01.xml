@@ -406,13 +406,6 @@
             </expected>
         </resultNode>
     </testCase>
-    <testCase id="058">
-        <resultNode errorResult="true" name="feel-time-function_ErrorCase_58" type="decision">
-            <expected>
-                <value xsi:nil="true"/>
-            </expected>
-        </resultNode>
-    </testCase>
     <testCase id="059">
         <resultNode errorResult="true" name="feel-time-function_ErrorCase_59" type="decision">
             <expected>
@@ -546,13 +539,6 @@
             </expected>
         </resultNode>
     </testCase>
-    <testCase id="078">
-        <resultNode errorResult="true" name="feel-time-function_ErrorCase_78" type="decision">
-            <expected>
-                <value xsi:nil="true"/>
-            </expected>
-        </resultNode>
-    </testCase>
     <testCase id="079">
         <resultNode errorResult="true" name="feel-time-function_ErrorCase_79" type="decision">
             <expected>
@@ -583,20 +569,6 @@
     </testCase>
     <testCase id="083">
         <resultNode errorResult="true" name="feel-time-function_ErrorCase_83" type="decision">
-            <expected>
-                <value xsi:nil="true"/>
-            </expected>
-        </resultNode>
-    </testCase>
-    <testCase id="084">
-        <resultNode errorResult="true" name="feel-time-function_ErrorCase_84" type="decision">
-            <expected>
-                <value xsi:nil="true"/>
-            </expected>
-        </resultNode>
-    </testCase>
-    <testCase id="085">
-        <resultNode errorResult="true" name="feel-time-function_ErrorCase_85" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
