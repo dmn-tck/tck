@@ -406,13 +406,6 @@
             </expected>
         </resultNode>
     </testCase>
-    <testCase id="058">
-        <resultNode errorResult="true" name="feel-time-function_ErrorCase_58" type="decision">
-            <expected>
-                <value xsi:nil="true"/>
-            </expected>
-        </resultNode>
-    </testCase>
     <testCase id="059">
         <resultNode errorResult="true" name="feel-time-function_ErrorCase_59" type="decision">
             <expected>
