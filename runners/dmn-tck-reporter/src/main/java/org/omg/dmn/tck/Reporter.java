@@ -52,7 +52,7 @@ public class Reporter {
 
     private static void runReport(Parameters params) {
         Map<String, TestCasesData> tests = loadTestCases( params );
-        Map<String, Vendor> results = loadTestResults( params );
+        Map<String, Vendor> results = loadTestResults( params, tests );
         Map<String, List<TestCasesData>> labels = sortTestsByLabel( tests );
 
         ReportHeader header = createReportHeader( tests, labels, results );
@@ -418,7 +418,7 @@ public class Reporter {
                     String tcdname = tcfile.getName();
                     tcdname = tcdname.substring( 0, tcdname.lastIndexOf( '.' ) ).replaceAll( "\\.", "/" );
                     TestCasesData tcdd = new TestCasesData( folder, tcdname, tcd );
-                    tests.put( folder+"/"+tcdname, tcdd );
+                    tests.put(createTestCaseKey(folder, tcdname), tcdd );
                 } catch ( FileNotFoundException e ) {
                     logger.error( "Error loading test case "+tcfile, e );
                     System.exit( 1 );
@@ -451,7 +451,7 @@ public class Reporter {
         }
     }
 
-    private static Map<String, Vendor> loadTestResults(Parameters params) {
+    private static Map<String, Vendor> loadTestResults(Parameters params, Map<String, TestCasesData> tests) {
         logger.info( "Loading test results from folder "+params.input.getName() );
         Map< String, Vendor > results = new TreeMap<>(  );
 
@@ -480,14 +480,18 @@ public class Reporter {
                             String testFolder = ReportHelper.removeQuotes( fields[0] );
                             String testSuit = ReportHelper.removeQuotes( fields[1] );
                             String testId = ReportHelper.removeQuotes( fields[2] );
-                            TestResult testResult = new TestResult(
-                                    testFolder,
-                                    testSuit,
-                                    testId,
-                                    TestResult.Result.fromString( ReportHelper.removeQuotes( fields[3] ) ),
-                                    ReportHelper.removeQuotes( comment ) );
                             String testKey = createTestKey( testFolder, testSuit, testId );
-                            testResults.put( testKey, testResult );
+                            TestCasesData tcd = tests.get(createTestCaseKey(testFolder, testSuit));
+                            if( tcd != null && tcd.model.getTestCase().stream().anyMatch( tc -> tc.getId() != null && tc.getId().equals( testId ) ) ) {
+                                // only record results for which the test exist (i.e., was not removed from the test set)
+                                TestResult testResult = new TestResult(
+                                        testFolder,
+                                        testSuit,
+                                        testId,
+                                        TestResult.Result.fromString( ReportHelper.removeQuotes( fields[3] ) ),
+                                        ReportHelper.removeQuotes( comment ) );
+                                testResults.put( testKey, testResult );
+                            }
                         });
                     } catch (IOException e) {
                         logger.error( "Error reading input file '"+params.input.getName()+"'", e );
@@ -518,6 +522,10 @@ public class Reporter {
             }
         }
         return results;
+    }
+
+    private static String createTestCaseKey(String testFolder, String testSuit) {
+        return testFolder+"/"+testSuit;
     }
 
     private static String createTestKey(String folder, String testSuite, String test) {
