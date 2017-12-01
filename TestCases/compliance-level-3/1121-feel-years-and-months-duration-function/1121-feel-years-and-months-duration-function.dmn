@@ -69,8 +69,6 @@
   <dmn:itemDefinition id="_JUp148lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_28_Result"/>
   <dmn:itemDefinition id="_JUrEA8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_29_Result"/>
   <dmn:itemDefinition id="_JUrrE8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_30_Result"/>
-  <dmn:itemDefinition id="_JUsSI8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_31_Result"/>
-  <dmn:itemDefinition id="_JUuHU8lGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_32_Result"/>
   <dmn:itemDefinition id="_JUv8gclGEeeAGbzZrHaKcQ" name="tfeel-years-and-months-duration-function_33_Result">
     <dmn:typeRef>feel:yearMonthDuration</dmn:typeRef>
   </dmn:itemDefinition>
@@ -351,24 +349,6 @@
     <dmn:variable id="_JUsSIslGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_30" typeRef="ns1:tfeel-years-and-months-duration-function_30_Result"/>
     <dmn:literalExpression id="_JUsSIMlGEeeAGbzZrHaKcQ">
       <dmn:text>years and months duration([],[])</dmn:text>
-    </dmn:literalExpression>
-  </dmn:decision>
-  <dmn:decision id="_JUuHUclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_31">
-    <dmn:description>Tests FEEL expression: 'years and months duration(date(&quot;2013-08-24&quot;), date and time(&quot;2017-12-15T00:59:59&quot;))' and expects result: 'null (null)'</dmn:description>
-    <dmn:question>Result of FEEL expression 'years and months duration(date(&quot;2013-08-24&quot;), date and time(&quot;2017-12-15T00:59:59&quot;))'?</dmn:question>
-    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
-    <dmn:variable id="_JUuHUslGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_31" typeRef="ns1:tfeel-years-and-months-duration-function_31_Result"/>
-    <dmn:literalExpression id="_JUuHUMlGEeeAGbzZrHaKcQ">
-      <dmn:text>years and months duration(date(&quot;2013-08-24&quot;), date and time(&quot;2017-12-15T00:59:59&quot;))</dmn:text>
-    </dmn:literalExpression>
-  </dmn:decision>
-  <dmn:decision id="_JUvVcclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_32">
-    <dmn:description>Tests FEEL expression: 'years and months duration(date and time(&quot;2017-02-28T23:59:59&quot;), date(&quot;2019-07-23&quot;) )' and expects result: 'null (null)'</dmn:description>
-    <dmn:question>Result of FEEL expression 'years and months duration(date and time(&quot;2017-02-28T23:59:59&quot;), date(&quot;2019-07-23&quot;) )'?</dmn:question>
-    <dmn:allowedAnswers>null (null)</dmn:allowedAnswers>
-    <dmn:variable id="_JUv8gMlGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_ErrorCase_32" typeRef="ns1:tfeel-years-and-months-duration-function_32_Result"/>
-    <dmn:literalExpression id="_JUvVcMlGEeeAGbzZrHaKcQ">
-      <dmn:text>years and months duration(date and time(&quot;2017-02-28T23:59:59&quot;), date(&quot;2019-07-23&quot;) )</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
   <dmn:decision id="_JUxKoclGEeeAGbzZrHaKcQ" name="feel-years-and-months-duration-function_33">
