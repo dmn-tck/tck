@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:ns1="http://www.actico.com/spec/DMN/1109-feel-replace-function" id="_sFwm4N9LEee025B4HzXadA" name="1109-feel-replace-function" namespace="http://www.actico.com/spec/DMN/1109-feel-replace-function">
+  <dmn:description>FEEL built-in function 'replace(input, pattern, replacement, flags?)' in category string functions</dmn:description>
+  <dmn:itemDefinition id="_sFxN8N9LEee025B4HzXadA" name="tfeel-replace-function_001_7637e5a8ed_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sFxN9N9LEee025B4HzXadA" name="tfeel-replace-function_002_b5c242ccd4_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sFxN-N9LEee025B4HzXadA" name="tfeel-replace-function_003_bf7aa95050_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sFxN_N9LEee025B4HzXadA" name="tfeel-replace-function_004_bf7aa95050_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sFx1A99LEee025B4HzXadA" name="tfeel-replace-function_005_55a2186006_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sFx1B99LEee025B4HzXadA" name="tfeel-replace-function_006_271d93aa68_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sFycEN9LEee025B4HzXadA" name="tfeel-replace-function_007_9cd005d2e2_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sFycFN9LEee025B4HzXadA" name="tfeel-replace-function_008_91583e38c9_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sFycGN9LEee025B4HzXadA" name="tfeel-replace-function_009_8c7c3871f8_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sFzDId9LEee025B4HzXadA" name="tfeel-replace-function_010_b1e4220bc9_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sFzDJd9LEee025B4HzXadA" name="tfeel-replace-function_011_cd4e7a6d9f_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sFzqMN9LEee025B4HzXadA" name="tfeel-replace-function_012_c310665f57_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sFzqNN9LEee025B4HzXadA" name="tfeel-replace-function_013_b0cf9e6723_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sFzqON9LEee025B4HzXadA" name="tfeel-replace-function_014_f669d03fa9_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sF0RQd9LEee025B4HzXadA" name="tfeel-replace-function_015_cea33baeee_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sF0RRd9LEee025B4HzXadA" name="tfeel-replace-function_016_57ce78ec8a_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sF0RSd9LEee025B4HzXadA" name="tfeel-replace-function_017_1c38095f50_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sF0RTd9LEee025B4HzXadA" name="tfeel-replace-function_018_b9c3c03b87_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sF04U99LEee025B4HzXadA" name="tfeel-replace-function_019_aba3349043_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sF04V99LEee025B4HzXadA" name="tfeel-replace-function_020_6ef91033ad_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sF1fYd9LEee025B4HzXadA" name="tfeel-replace-function_021_52d93a8851_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sF2GcN9LEee025B4HzXadA" name="tfeel-replace-function_022_e33828e3da_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sF2GdN9LEee025B4HzXadA" name="tfeel-replace-function_023_bd75fac0bd_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sF2tgN9LEee025B4HzXadA" name="tfeel-replace-function_024_5c337d3725_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sF37oN9LEee025B4HzXadA" name="tfeel-replace-function_025_4a89220cd6_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sF4is99LEee025B4HzXadA" name="tfeel-replace-function_026_4a89220cd6_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sF5Jwd9LEee025B4HzXadA" name="tfeel-replace-function_027_b7f9525875_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sF5Jxd9LEee025B4HzXadA" name="tfeel-replace-function_028_acb176590a_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sF5w0d9LEee025B4HzXadA" name="tfeel-replace-function_029_d8d25f40e5_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_sF5w1d9LEee025B4HzXadA" name="tfeel-replace-function_030_96e8c698af_Result">
+    <dmn:typeRef>feel:string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:decision id="_sFxN8t9LEee025B4HzXadA" name="feel-replace-function_001_7637e5a8ed">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;abcd&quot;,&quot;(ab)|(a)&quot;, &quot;[1=$1][2=$2]&quot;)' and expects result: '&quot;[1=ab][2=]cd&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;abcd&quot;,&quot;(ab)|(a)&quot;, &quot;[1=$1][2=$2]&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;[1=ab][2=]cd&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sFxN899LEee025B4HzXadA" name="feel-replace-function_001_7637e5a8ed" typeRef="ns1:tfeel-replace-function_001_7637e5a8ed_Result"/>
+    <dmn:literalExpression id="_sFxN8d9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;abcd&quot;,&quot;(ab)|(a)&quot;, &quot;[1=$1][2=$2]&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sFxN9t9LEee025B4HzXadA" name="feel-replace-function_002_b5c242ccd4">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;a&quot;,&quot;[b-z]&quot;,&quot;#&quot;)' and expects result: '&quot;a&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;a&quot;,&quot;[b-z]&quot;,&quot;#&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;a&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sFxN999LEee025B4HzXadA" name="feel-replace-function_002_b5c242ccd4" typeRef="ns1:tfeel-replace-function_002_b5c242ccd4_Result"/>
+    <dmn:literalExpression id="_sFxN9d9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;a&quot;,&quot;[b-z]&quot;,&quot;#&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sFxN-t9LEee025B4HzXadA" name="feel-replace-function_003_bf7aa95050">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;a&quot;,&quot;[a-z]&quot;,&quot;#&quot;)' and expects result: '&quot;#&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;a&quot;,&quot;[a-z]&quot;,&quot;#&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;#&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sFxN-99LEee025B4HzXadA" name="feel-replace-function_003_bf7aa95050" typeRef="ns1:tfeel-replace-function_003_bf7aa95050_Result"/>
+    <dmn:literalExpression id="_sFxN-d9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;a&quot;,&quot;[a-z]&quot;,&quot;#&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sFx1Ad9LEee025B4HzXadA" name="feel-replace-function_004_bf7aa95050">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;a&quot;,&quot;[a-z]&quot;,&quot;#&quot;)' and expects result: '&quot;#&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;a&quot;,&quot;[a-z]&quot;,&quot;#&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;#&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sFx1At9LEee025B4HzXadA" name="feel-replace-function_004_bf7aa95050" typeRef="ns1:tfeel-replace-function_004_bf7aa95050_Result"/>
+    <dmn:literalExpression id="_sFx1AN9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;a&quot;,&quot;[a-z]&quot;,&quot;#&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sFx1Bd9LEee025B4HzXadA" name="feel-replace-function_005_55a2186006">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;abc&quot;,&quot;def&quot;,&quot;#&quot;)' and expects result: '&quot;abc&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;abc&quot;,&quot;def&quot;,&quot;#&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;abc&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sFx1Bt9LEee025B4HzXadA" name="feel-replace-function_005_55a2186006" typeRef="ns1:tfeel-replace-function_005_55a2186006_Result"/>
+    <dmn:literalExpression id="_sFx1BN9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;abc&quot;,&quot;def&quot;,&quot;#&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sFx1Cd9LEee025B4HzXadA" name="feel-replace-function_006_271d93aa68">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;abc&quot;,&quot;e&quot;,&quot;#&quot;)' and expects result: '&quot;abc&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;abc&quot;,&quot;e&quot;,&quot;#&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;abc&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sFx1Ct9LEee025B4HzXadA" name="feel-replace-function_006_271d93aa68" typeRef="ns1:tfeel-replace-function_006_271d93aa68_Result"/>
+    <dmn:literalExpression id="_sFx1CN9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;abc&quot;,&quot;e&quot;,&quot;#&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sFycEt9LEee025B4HzXadA" name="feel-replace-function_007_9cd005d2e2">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;foobar&quot;,&quot;^fo*b*&quot;,&quot;#&quot;)' and expects result: '&quot;#ar&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;foobar&quot;,&quot;^fo*b*&quot;,&quot;#&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;#ar&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sFycE99LEee025B4HzXadA" name="feel-replace-function_007_9cd005d2e2" typeRef="ns1:tfeel-replace-function_007_9cd005d2e2_Result"/>
+    <dmn:literalExpression id="_sFycEd9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;foobar&quot;,&quot;^fo*b*&quot;,&quot;#&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sFycFt9LEee025B4HzXadA" name="feel-replace-function_008_91583e38c9">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;abc&quot;,&quot;.^[d-z]&quot;,&quot;#&quot;)' and expects result: '&quot;abc&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;abc&quot;,&quot;.^[d-z]&quot;,&quot;#&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;abc&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sFycF99LEee025B4HzXadA" name="feel-replace-function_008_91583e38c9" typeRef="ns1:tfeel-replace-function_008_91583e38c9_Result"/>
+    <dmn:literalExpression id="_sFycFd9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;abc&quot;,&quot;.^[d-z]&quot;,&quot;#&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sFycGt9LEee025B4HzXadA" name="feel-replace-function_009_8c7c3871f8">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;abracadabra&quot;,&quot;bra&quot;,&quot;*&quot;)' and expects result: '&quot;a*cada*&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;abracadabra&quot;,&quot;bra&quot;,&quot;*&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;a*cada*&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sFzDIN9LEee025B4HzXadA" name="feel-replace-function_009_8c7c3871f8" typeRef="ns1:tfeel-replace-function_009_8c7c3871f8_Result"/>
+    <dmn:literalExpression id="_sFycGd9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;abracadabra&quot;,&quot;bra&quot;,&quot;*&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sFzDI99LEee025B4HzXadA" name="feel-replace-function_010_b1e4220bc9">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;abracadabra&quot;,&quot;a.*a&quot;,&quot;*&quot;)' and expects result: '&quot;*&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;abracadabra&quot;,&quot;a.*a&quot;,&quot;*&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;*&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sFzDJN9LEee025B4HzXadA" name="feel-replace-function_010_b1e4220bc9" typeRef="ns1:tfeel-replace-function_010_b1e4220bc9_Result"/>
+    <dmn:literalExpression id="_sFzDIt9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;abracadabra&quot;,&quot;a.*a&quot;,&quot;*&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sFzDJ99LEee025B4HzXadA" name="feel-replace-function_011_cd4e7a6d9f">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;abracadabra&quot;,&quot;a.*?a&quot;,&quot;*&quot;)' and expects result: '&quot;*c*bra&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;abracadabra&quot;,&quot;a.*?a&quot;,&quot;*&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;*c*bra&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sFzDKN9LEee025B4HzXadA" name="feel-replace-function_011_cd4e7a6d9f" typeRef="ns1:tfeel-replace-function_011_cd4e7a6d9f_Result"/>
+    <dmn:literalExpression id="_sFzDJt9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;abracadabra&quot;,&quot;a.*?a&quot;,&quot;*&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sFzqMt9LEee025B4HzXadA" name="feel-replace-function_012_c310665f57">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;abracadabra&quot;,&quot;a&quot;,&quot;&quot;)' and expects result: '&quot;brcdbr&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;abracadabra&quot;,&quot;a&quot;,&quot;&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;brcdbr&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sFzqM99LEee025B4HzXadA" name="feel-replace-function_012_c310665f57" typeRef="ns1:tfeel-replace-function_012_c310665f57_Result"/>
+    <dmn:literalExpression id="_sFzqMd9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;abracadabra&quot;,&quot;a&quot;,&quot;&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sFzqNt9LEee025B4HzXadA" name="feel-replace-function_013_b0cf9e6723">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;abracadabra&quot;,&quot;a(.)&quot;,&quot;a$1$1&quot;)' and expects result: '&quot;abbraccaddabbra&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;abracadabra&quot;,&quot;a(.)&quot;,&quot;a$1$1&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;abbraccaddabbra&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sFzqN99LEee025B4HzXadA" name="feel-replace-function_013_b0cf9e6723" typeRef="ns1:tfeel-replace-function_013_b0cf9e6723_Result"/>
+    <dmn:literalExpression id="_sFzqNd9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;abracadabra&quot;,&quot;a(.)&quot;,&quot;a$1$1&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sFzqOt9LEee025B4HzXadA" name="feel-replace-function_014_f669d03fa9">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;AAAA&quot;,&quot;A+&quot;,&quot;b&quot;)' and expects result: '&quot;b&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;AAAA&quot;,&quot;A+&quot;,&quot;b&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;b&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sF0RQN9LEee025B4HzXadA" name="feel-replace-function_014_f669d03fa9" typeRef="ns1:tfeel-replace-function_014_f669d03fa9_Result"/>
+    <dmn:literalExpression id="_sFzqOd9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;AAAA&quot;,&quot;A+&quot;,&quot;b&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sF0RQ99LEee025B4HzXadA" name="feel-replace-function_015_cea33baeee">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;AAAA&quot;,&quot;A+?&quot;,&quot;b&quot;)' and expects result: '&quot;bbbb&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;AAAA&quot;,&quot;A+?&quot;,&quot;b&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;bbbb&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sF0RRN9LEee025B4HzXadA" name="feel-replace-function_015_cea33baeee" typeRef="ns1:tfeel-replace-function_015_cea33baeee_Result"/>
+    <dmn:literalExpression id="_sF0RQt9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;AAAA&quot;,&quot;A+?&quot;,&quot;b&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sF0RR99LEee025B4HzXadA" name="feel-replace-function_016_57ce78ec8a">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;darted&quot;,&quot;^(.*?)d(.*)$&quot;,&quot;$1c$2&quot;)' and expects result: '&quot;carted&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;darted&quot;,&quot;^(.*?)d(.*)$&quot;,&quot;$1c$2&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;carted&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sF0RSN9LEee025B4HzXadA" name="feel-replace-function_016_57ce78ec8a" typeRef="ns1:tfeel-replace-function_016_57ce78ec8a_Result"/>
+    <dmn:literalExpression id="_sF0RRt9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;darted&quot;,&quot;^(.*?)d(.*)$&quot;,&quot;$1c$2&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sF0RS99LEee025B4HzXadA" name="feel-replace-function_017_1c38095f50">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;reluctant&quot;,&quot;r.*?t&quot;,&quot;X&quot;)' and expects result: '&quot;Xant&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;reluctant&quot;,&quot;r.*?t&quot;,&quot;X&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;Xant&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sF0RTN9LEee025B4HzXadA" name="feel-replace-function_017_1c38095f50" typeRef="ns1:tfeel-replace-function_017_1c38095f50_Result"/>
+    <dmn:literalExpression id="_sF0RSt9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;reluctant&quot;,&quot;r.*?t&quot;,&quot;X&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sF04Ud9LEee025B4HzXadA" name="feel-replace-function_018_b9c3c03b87">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;0123456789&quot;,&quot;(\d{3})(\d{3})(\d{4})&quot;,&quot;($1) $2-$3&quot;)' and expects result: '&quot;(012) 345-6789&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;0123456789&quot;,&quot;(\d{3})(\d{3})(\d{4})&quot;,&quot;($1) $2-$3&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;(012) 345-6789&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sF04Ut9LEee025B4HzXadA" name="feel-replace-function_018_b9c3c03b87" typeRef="ns1:tfeel-replace-function_018_b9c3c03b87_Result"/>
+    <dmn:literalExpression id="_sF04UN9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;0123456789&quot;,&quot;(\d{3})(\d{3})(\d{4})&quot;,&quot;($1) $2-$3&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sF04Vd9LEee025B4HzXadA" name="feel-replace-function_019_aba3349043">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;facetiously&quot;,&quot;[iouy]&quot;,&quot;[$0]&quot;)' and expects result: '&quot;facet[i][o][u]sl[y]&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;facetiously&quot;,&quot;[iouy]&quot;,&quot;[$0]&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;facet[i][o][u]sl[y]&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sF04Vt9LEee025B4HzXadA" name="feel-replace-function_019_aba3349043" typeRef="ns1:tfeel-replace-function_019_aba3349043_Result"/>
+    <dmn:literalExpression id="_sF04VN9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;facetiously&quot;,&quot;[iouy]&quot;,&quot;[$0]&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sF04Wd9LEee025B4HzXadA" name="feel-replace-function_020_6ef91033ad">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;abc&quot;,&quot;[a-z]&quot;,&quot;#&quot;,&quot;&quot;)' and expects result: '&quot;###&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;abc&quot;,&quot;[a-z]&quot;,&quot;#&quot;,&quot;&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;###&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sF1fYN9LEee025B4HzXadA" name="feel-replace-function_020_6ef91033ad" typeRef="ns1:tfeel-replace-function_020_6ef91033ad_Result"/>
+    <dmn:literalExpression id="_sF04WN9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;abc&quot;,&quot;[a-z]&quot;,&quot;#&quot;,&quot;&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sF1fY99LEee025B4HzXadA" name="feel-replace-function_021_52d93a8851">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;a.b.c.&quot;,&quot;[a-z]&quot;,&quot;#&quot;,&quot;s&quot;)' and expects result: '&quot;#.#.#.&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;a.b.c.&quot;,&quot;[a-z]&quot;,&quot;#&quot;,&quot;s&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;#.#.#.&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sF1fZN9LEee025B4HzXadA" name="feel-replace-function_021_52d93a8851" typeRef="ns1:tfeel-replace-function_021_52d93a8851_Result"/>
+    <dmn:literalExpression id="_sF1fYt9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;a.b.c.&quot;,&quot;[a-z]&quot;,&quot;#&quot;,&quot;s&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sF2Gct9LEee025B4HzXadA" name="feel-replace-function_022_e33828e3da">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;abc&quot;,&quot;[A-Z]&quot;,&quot;#&quot;,&quot;i&quot;)' and expects result: '&quot;###&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;abc&quot;,&quot;[A-Z]&quot;,&quot;#&quot;,&quot;i&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;###&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sF2Gc99LEee025B4HzXadA" name="feel-replace-function_022_e33828e3da" typeRef="ns1:tfeel-replace-function_022_e33828e3da_Result"/>
+    <dmn:literalExpression id="_sF2Gcd9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;abc&quot;,&quot;[A-Z]&quot;,&quot;#&quot;,&quot;i&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sF2Gdt9LEee025B4HzXadA" name="feel-replace-function_023_bd75fac0bd">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;abc&quot;,&quot;[a-z]&quot;,&quot;#&quot;,&quot;s&quot;)' and expects result: '&quot;###&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;abc&quot;,&quot;[a-z]&quot;,&quot;#&quot;,&quot;s&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;###&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sF2Gd99LEee025B4HzXadA" name="feel-replace-function_023_bd75fac0bd" typeRef="ns1:tfeel-replace-function_023_bd75fac0bd_Result"/>
+    <dmn:literalExpression id="_sF2Gdd9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;abc&quot;,&quot;[a-z]&quot;,&quot;#&quot;,&quot;s&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sF3Ukd9LEee025B4HzXadA" name="feel-replace-function_024_5c337d3725">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;a b c d &quot;,&quot;[a-z]&quot;,&quot;#&quot;,&quot;x&quot;)' and expects result: '&quot;# # # # &quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;a b c d &quot;,&quot;[a-z]&quot;,&quot;#&quot;,&quot;x&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;# # # # &quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sF3Ukt9LEee025B4HzXadA" name="feel-replace-function_024_5c337d3725" typeRef="ns1:tfeel-replace-function_024_5c337d3725_Result"/>
+    <dmn:literalExpression id="_sF3UkN9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;a b c d &quot;,&quot;[a-z]&quot;,&quot;#&quot;,&quot;x&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sF4isd9LEee025B4HzXadA" name="feel-replace-function_025_4a89220cd6">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;abc&quot;,&quot;.^[d-z]*&quot;,&quot;smix&quot;)' and expects result: '&quot;abc&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;abc&quot;,&quot;.^[d-z]*&quot;,&quot;smix&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;abc&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sF4ist9LEee025B4HzXadA" name="feel-replace-function_025_4a89220cd6" typeRef="ns1:tfeel-replace-function_025_4a89220cd6_Result"/>
+    <dmn:literalExpression id="_sF4isN9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;abc&quot;,&quot;.^[d-z]*&quot;,&quot;smix&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sF4itd9LEee025B4HzXadA" name="feel-replace-function_026_4a89220cd6">
+    <dmn:description>Tests FEEL expression: 'replace(&quot;abc&quot;,&quot;.^[d-z]*&quot;,&quot;smix&quot;)' and expects result: '&quot;abc&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(&quot;abc&quot;,&quot;.^[d-z]*&quot;,&quot;smix&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;abc&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sF5JwN9LEee025B4HzXadA" name="feel-replace-function_026_4a89220cd6" typeRef="ns1:tfeel-replace-function_026_4a89220cd6_Result"/>
+    <dmn:literalExpression id="_sF4itN9LEee025B4HzXadA">
+      <dmn:text>replace(&quot;abc&quot;,&quot;.^[d-z]*&quot;,&quot;smix&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sF5Jw99LEee025B4HzXadA" name="feel-replace-function_027_b7f9525875">
+    <dmn:description>Tests FEEL expression: 'replace(input:&quot;abc&quot;,pattern:&quot;[a-z]&quot;,replacement:&quot;#&quot;)' and expects result: '&quot;###&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(input:&quot;abc&quot;,pattern:&quot;[a-z]&quot;,replacement:&quot;#&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;###&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sF5JxN9LEee025B4HzXadA" name="feel-replace-function_027_b7f9525875" typeRef="ns1:tfeel-replace-function_027_b7f9525875_Result"/>
+    <dmn:literalExpression id="_sF5Jwt9LEee025B4HzXadA">
+      <dmn:text>replace(input:&quot;abc&quot;,pattern:&quot;[a-z]&quot;,replacement:&quot;#&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sF5Jx99LEee025B4HzXadA" name="feel-replace-function_028_acb176590a">
+    <dmn:description>Tests FEEL expression: 'replace(input:&quot;abc&quot;,pattern:&quot;[A-Z]&quot;,replacement:&quot;#&quot;,flags:&quot;&quot;)' and expects result: '&quot;abc&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(input:&quot;abc&quot;,pattern:&quot;[A-Z]&quot;,replacement:&quot;#&quot;,flags:&quot;&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;abc&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sF5w0N9LEee025B4HzXadA" name="feel-replace-function_028_acb176590a" typeRef="ns1:tfeel-replace-function_028_acb176590a_Result"/>
+    <dmn:literalExpression id="_sF5Jxt9LEee025B4HzXadA">
+      <dmn:text>replace(input:&quot;abc&quot;,pattern:&quot;[A-Z]&quot;,replacement:&quot;#&quot;,flags:&quot;&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sF5w099LEee025B4HzXadA" name="feel-replace-function_029_d8d25f40e5">
+    <dmn:description>Tests FEEL expression: 'replace(input:&quot;abc&quot;,pattern:&quot;[A-Z]&quot;,replacement:&quot;#&quot;,flags:&quot;i&quot;)' and expects result: '&quot;###&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(input:&quot;abc&quot;,pattern:&quot;[A-Z]&quot;,replacement:&quot;#&quot;,flags:&quot;i&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;###&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sF5w1N9LEee025B4HzXadA" name="feel-replace-function_029_d8d25f40e5" typeRef="ns1:tfeel-replace-function_029_d8d25f40e5_Result"/>
+    <dmn:literalExpression id="_sF5w0t9LEee025B4HzXadA">
+      <dmn:text>replace(input:&quot;abc&quot;,pattern:&quot;[A-Z]&quot;,replacement:&quot;#&quot;,flags:&quot;i&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_sF5w199LEee025B4HzXadA" name="feel-replace-function_030_96e8c698af">
+    <dmn:description>Tests FEEL expression: 'replace(input:&quot;abc&quot;,pattern:&quot;.^[d-z]*&quot;,replacement:&quot;#&quot;,flags:&quot;smix&quot;)' and expects result: '&quot;abc&quot; (string)'</dmn:description>
+    <dmn:question>Result of FEEL expression 'replace(input:&quot;abc&quot;,pattern:&quot;.^[d-z]*&quot;,replacement:&quot;#&quot;,flags:&quot;smix&quot;)'?</dmn:question>
+    <dmn:allowedAnswers>&quot;abc&quot; (string)</dmn:allowedAnswers>
+    <dmn:variable id="_sF6X4N9LEee025B4HzXadA" name="feel-replace-function_030_96e8c698af" typeRef="ns1:tfeel-replace-function_030_96e8c698af_Result"/>
+    <dmn:literalExpression id="_sF5w1t9LEee025B4HzXadA">
+      <dmn:text>replace(input:&quot;abc&quot;,pattern:&quot;.^[d-z]*&quot;,replacement:&quot;#&quot;,flags:&quot;smix&quot;)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:knowledgeSource id="_sFwm4d9LEee025B4HzXadA" name="DMN 1.1 - 10.3.4.3 Table 60"/>
+</dmn:definitions>
