@@ -3,25 +3,25 @@
 
 ### Description ###
 
-DMN Model [1110-feel-contains-function.dmn](./1110-feel-contains-function.dmn) tests DMN specification conformance of `FEEL built-in function 'contains(string, match)'`.
+DMN Model [1110-feel-contains-function.dmn](./1110-feel-contains-function.dmn) tests DMN specification conformance of `FEEL built-in function 'contains(string, match)'`. Tested category is `string functions`.
 
 #### Specification Reference(s): ####
  * DMN 1.1 - 10.3.4.3 Table 60
 
 ### Test Cases ###
 
-|Decision Name| Literal Expression (FEEL) | Expected Result|
-|-------------|-------------------------- |----------------|
-|feel-contains-function_ErrorCase_1|contains(null,null)|feel-null (null)|
-|feel-contains-function_ErrorCase_2|contains(null,"bar")|feel-null (null)|
-|feel-contains-function_ErrorCase_3|contains("bar",null)|feel-null (null)|
-|feel-contains-function_4|contains("foobar","bar")|true (boolean)|
-|feel-contains-function_5|contains("foobar","o")|true (boolean)|
-|feel-contains-function_6|contains("abc","")|true (boolean)|
-|feel-contains-function_7|contains("","ab")|false (boolean)|
-|feel-contains-function_8|contains("","")|true (boolean)|
-|feel-contains-function_9|contains(string:"foobar",match:"bar")|true (boolean)|
-|feel-contains-function_10|contains(string:"foobar",match:"b")|true (boolean)|
+|Decision Name| Literal Expression (FEEL) | Expected Result (Expected Type)|
+|-------------|-------------------------- |--------------------------------|
+|feel-contains-function_ErrorCase_001_2a4d7448c6|contains(null,null)|null (boolean)|
+|feel-contains-function_ErrorCase_002_d2a1831b5c|contains(null,"bar")|null (boolean)|
+|feel-contains-function_ErrorCase_003_df56e0a1ad|contains("bar",null)|null (boolean)|
+|feel-contains-function_004_805503b274|contains("foobar","bar")|true (boolean)|
+|feel-contains-function_005_5c1269db16|contains("foobar","o")|true (boolean)|
+|feel-contains-function_006_babdaf4f36|contains("abc","")|true (boolean)|
+|feel-contains-function_007_d24a599180|contains("","ab")|false (boolean)|
+|feel-contains-function_008_cf1311586a|contains("","")|true (boolean)|
+|feel-contains-function_009_c4b50ad623|contains(string:"foobar",match:"bar")|true (boolean)|
+|feel-contains-function_010_9ae03e0e59|contains(string:"foobar",match:"b")|true (boolean)|
 
          
 
