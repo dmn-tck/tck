@@ -15,33 +15,31 @@ DMN Model [1109-feel-replace-function.dmn](./1109-feel-replace-function.dmn) tes
 |feel-replace-function_001_7637e5a8ed|replace("abcd","(ab)|(a)", "[1=$1][2=$2]")|"[1=ab][2=]cd" (string)|
 |feel-replace-function_002_b5c242ccd4|replace("a","[b-z]","#")|"a" (string)|
 |feel-replace-function_003_bf7aa95050|replace("a","[a-z]","#")|"#" (string)|
-|feel-replace-function_004_bf7aa95050|replace("a","[a-z]","#")|"#" (string)|
-|feel-replace-function_005_55a2186006|replace("abc","def","#")|"abc" (string)|
-|feel-replace-function_006_271d93aa68|replace("abc","e","#")|"abc" (string)|
-|feel-replace-function_007_9cd005d2e2|replace("foobar","^fo*b*","#")|"#ar" (string)|
-|feel-replace-function_008_91583e38c9|replace("abc",".^[d-z]","#")|"abc" (string)|
-|feel-replace-function_009_8c7c3871f8|replace("abracadabra","bra","*")|"a*cada*" (string)|
-|feel-replace-function_010_b1e4220bc9|replace("abracadabra","a.*a","*")|"*" (string)|
-|feel-replace-function_011_cd4e7a6d9f|replace("abracadabra","a.*?a","*")|"*c*bra" (string)|
-|feel-replace-function_012_c310665f57|replace("abracadabra","a","")|"brcdbr" (string)|
-|feel-replace-function_013_b0cf9e6723|replace("abracadabra","a(.)","a$1$1")|"abbraccaddabbra" (string)|
-|feel-replace-function_014_f669d03fa9|replace("AAAA","A+","b")|"b" (string)|
-|feel-replace-function_015_cea33baeee|replace("AAAA","A+?","b")|"bbbb" (string)|
-|feel-replace-function_016_57ce78ec8a|replace("darted","^(.*?)d(.*)$","$1c$2")|"carted" (string)|
-|feel-replace-function_017_1c38095f50|replace("reluctant","r.*?t","X")|"Xant" (string)|
-|feel-replace-function_018_b9c3c03b87|replace("0123456789","(\d{3})(\d{3})(\d{4})","($1) $2-$3")|"(012) 345-6789" (string)|
-|feel-replace-function_019_aba3349043|replace("facetiously","[iouy]","[$0]")|"facet[i][o][u]sl[y]" (string)|
-|feel-replace-function_020_6ef91033ad|replace("abc","[a-z]","#","")|"###" (string)|
-|feel-replace-function_021_52d93a8851|replace("a.b.c.","[a-z]","#","s")|"#.#.#." (string)|
-|feel-replace-function_022_e33828e3da|replace("abc","[A-Z]","#","i")|"###" (string)|
-|feel-replace-function_023_bd75fac0bd|replace("abc","[a-z]","#","s")|"###" (string)|
-|feel-replace-function_024_5c337d3725|replace("a b c d ","[a-z]","#","x")|"# # # # " (string)|
-|feel-replace-function_025_4a89220cd6|replace("abc",".^[d-z]*","smix")|"abc" (string)|
-|feel-replace-function_026_4a89220cd6|replace("abc",".^[d-z]*","smix")|"abc" (string)|
-|feel-replace-function_027_b7f9525875|replace(input:"abc",pattern:"[a-z]",replacement:"#")|"###" (string)|
-|feel-replace-function_028_acb176590a|replace(input:"abc",pattern:"[A-Z]",replacement:"#",flags:"")|"abc" (string)|
-|feel-replace-function_029_d8d25f40e5|replace(input:"abc",pattern:"[A-Z]",replacement:"#",flags:"i")|"###" (string)|
-|feel-replace-function_030_96e8c698af|replace(input:"abc",pattern:".^[d-z]*",replacement:"#",flags:"smix")|"abc" (string)|
+|feel-replace-function_004_55a2186006|replace("abc","def","#")|"abc" (string)|
+|feel-replace-function_005_271d93aa68|replace("abc","e","#")|"abc" (string)|
+|feel-replace-function_006_9cd005d2e2|replace("foobar","^fo*b*","#")|"#ar" (string)|
+|feel-replace-function_007_91583e38c9|replace("abc",".^[d-z]","#")|"abc" (string)|
+|feel-replace-function_008_8c7c3871f8|replace("abracadabra","bra","*")|"a*cada*" (string)|
+|feel-replace-function_009_b1e4220bc9|replace("abracadabra","a.*a","*")|"*" (string)|
+|feel-replace-function_010_cd4e7a6d9f|replace("abracadabra","a.*?a","*")|"*c*bra" (string)|
+|feel-replace-function_011_c310665f57|replace("abracadabra","a","")|"brcdbr" (string)|
+|feel-replace-function_012_b0cf9e6723|replace("abracadabra","a(.)","a$1$1")|"abbraccaddabbra" (string)|
+|feel-replace-function_013_f669d03fa9|replace("AAAA","A+","b")|"b" (string)|
+|feel-replace-function_014_cea33baeee|replace("AAAA","A+?","b")|"bbbb" (string)|
+|feel-replace-function_015_57ce78ec8a|replace("darted","^(.*?)d(.*)$","$1c$2")|"carted" (string)|
+|feel-replace-function_016_1c38095f50|replace("reluctant","r.*?t","X")|"Xant" (string)|
+|feel-replace-function_017_b9c3c03b87|replace("0123456789","(\d{3})(\d{3})(\d{4})","($1) $2-$3")|"(012) 345-6789" (string)|
+|feel-replace-function_018_aba3349043|replace("facetiously","[iouy]","[$0]")|"facet[i][o][u]sl[y]" (string)|
+|feel-replace-function_019_6ef91033ad|replace("abc","[a-z]","#","")|"###" (string)|
+|feel-replace-function_020_52d93a8851|replace("a.b.c.","[a-z]","#","s")|"#.#.#." (string)|
+|feel-replace-function_021_e33828e3da|replace("abc","[A-Z]","#","i")|"###" (string)|
+|feel-replace-function_022_bd75fac0bd|replace("abc","[a-z]","#","s")|"###" (string)|
+|feel-replace-function_023_5c337d3725|replace("a b c d ","[a-z]","#","x")|"# # # # " (string)|
+|feel-replace-function_024_4a89220cd6|replace("abc",".^[d-z]*","smix")|"abc" (string)|
+|feel-replace-function_025_b7f9525875|replace(input:"abc",pattern:"[a-z]",replacement:"#")|"###" (string)|
+|feel-replace-function_026_acb176590a|replace(input:"abc",pattern:"[A-Z]",replacement:"#",flags:"")|"abc" (string)|
+|feel-replace-function_027_d8d25f40e5|replace(input:"abc",pattern:"[A-Z]",replacement:"#",flags:"i")|"###" (string)|
+|feel-replace-function_028_96e8c698af|replace(input:"abc",pattern:".^[d-z]*",replacement:"#",flags:"smix")|"abc" (string)|
 
          
 

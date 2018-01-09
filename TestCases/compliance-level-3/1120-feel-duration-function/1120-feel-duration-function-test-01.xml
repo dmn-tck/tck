@@ -315,22 +315,22 @@
             </expected>
         </resultNode>
     </testCase>
-    <testCase id="045_3210c46a5a">
-        <resultNode errorResult="true" name="feel-duration-function_ErrorCase_045_3210c46a5a" type="decision">
+    <testCase id="045_2ffcc37801">
+        <resultNode errorResult="true" name="feel-duration-function_ErrorCase_045_2ffcc37801" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
         </resultNode>
     </testCase>
-    <testCase id="046_2ffcc37801">
-        <resultNode errorResult="true" name="feel-duration-function_ErrorCase_046_2ffcc37801" type="decision">
+    <testCase id="046_eb637de5f6">
+        <resultNode errorResult="true" name="feel-duration-function_ErrorCase_046_eb637de5f6" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
         </resultNode>
     </testCase>
-    <testCase id="047_eb637de5f6">
-        <resultNode errorResult="true" name="feel-duration-function_ErrorCase_047_eb637de5f6" type="decision">
+    <testCase id="047_3210c46a5a">
+        <resultNode errorResult="true" name="feel-duration-function_ErrorCase_047_3210c46a5a" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -343,29 +343,15 @@
             </expected>
         </resultNode>
     </testCase>
-    <testCase id="049_2ffcc37801">
-        <resultNode errorResult="true" name="feel-duration-function_ErrorCase_049_2ffcc37801" type="decision">
+    <testCase id="049_2225b503a0">
+        <resultNode errorResult="true" name="feel-duration-function_ErrorCase_049_2225b503a0" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
         </resultNode>
     </testCase>
-    <testCase id="050_eb637de5f6">
-        <resultNode errorResult="true" name="feel-duration-function_ErrorCase_050_eb637de5f6" type="decision">
-            <expected>
-                <value xsi:nil="true"/>
-            </expected>
-        </resultNode>
-    </testCase>
-    <testCase id="051_2225b503a0">
-        <resultNode errorResult="true" name="feel-duration-function_ErrorCase_051_2225b503a0" type="decision">
-            <expected>
-                <value xsi:nil="true"/>
-            </expected>
-        </resultNode>
-    </testCase>
-    <testCase id="052_dd2ef33bbd">
-        <resultNode errorResult="true" name="feel-duration-function_ErrorCase_052_dd2ef33bbd" type="decision">
+    <testCase id="050_dd2ef33bbd">
+        <resultNode errorResult="true" name="feel-duration-function_ErrorCase_050_dd2ef33bbd" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>

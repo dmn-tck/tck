@@ -98,6 +98,8 @@ DMN Model [1117-feel-date-and-time-function.dmn](./1117-feel-date-and-time-funct
 |feel-date-and-time-function_ErrorCase_084_c633b01603|date and time("2017-12-31T7:20")|null (date and time)|
 |feel-date-and-time-function_ErrorCase_085_a604a1bc80|date and time("2017-12-31T07:2")|null (date and time)|
 |feel-date-and-time-function_086_12ca8ac1d3|date and time(from:"2012-12-24T23:59:00")|2012-12-24T23:59:00 (date and time)|
+|feel-date-and-time-function_087_e9fd32063a|date and time(date:date("2017-01-01"),time:time("23:59:01"))|2017-01-01T23:59:01 (date and time)|
+|feel-date-and-time-function_088_1db0287718|date and time(date:date and time("2017-01-01T00:00:00"),time:time("23:59:01"))|2017-01-01T23:59:01 (date and time)|
 
          
 

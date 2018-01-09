@@ -609,4 +609,18 @@
             </expected>
         </resultNode>
     </testCase>
+    <testCase id="087_e9fd32063a">
+        <resultNode name="feel-date-and-time-function_087_e9fd32063a" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:dateTime">2017-01-01T23:59:01</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="088_1db0287718">
+        <resultNode name="feel-date-and-time-function_088_1db0287718" type="decision">
+            <expected>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:dateTime">2017-01-01T23:59:01</value>
+            </expected>
+        </resultNode>
+    </testCase>
 </testCases>
