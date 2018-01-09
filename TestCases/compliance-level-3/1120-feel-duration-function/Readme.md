@@ -56,14 +56,12 @@ DMN Model [1120-feel-duration-function.dmn](./1120-feel-duration-function.dmn) t
 |feel-duration-function_ErrorCase_042_59a0000245|duration(2017)|null (null)|
 |feel-duration-function_ErrorCase_043_253815dc6c|duration("2012T-12-2511:00:00Z")|null (null)|
 |feel-duration-function_ErrorCase_044_f3b338d877|duration([])|null (null)|
-|feel-duration-function_ErrorCase_045_3210c46a5a|duration("1Y")|null (null)|
-|feel-duration-function_ErrorCase_046_2ffcc37801|duration("P")|null (null)|
-|feel-duration-function_ErrorCase_047_eb637de5f6|duration("P0")|null (null)|
+|feel-duration-function_ErrorCase_045_2ffcc37801|duration("P")|null (null)|
+|feel-duration-function_ErrorCase_046_eb637de5f6|duration("P0")|null (null)|
+|feel-duration-function_ErrorCase_047_3210c46a5a|duration("1Y")|null (null)|
 |feel-duration-function_ErrorCase_048_ab6244f767|duration("1D")|null (null)|
-|feel-duration-function_ErrorCase_049_2ffcc37801|duration("P")|null (null)|
-|feel-duration-function_ErrorCase_050_eb637de5f6|duration("P0")|null (null)|
-|feel-duration-function_ErrorCase_051_2225b503a0|duration("P1H")|null (null)|
-|feel-duration-function_ErrorCase_052_dd2ef33bbd|duration("P1S")|null (null)|
+|feel-duration-function_ErrorCase_049_2225b503a0|duration("P1H")|null (null)|
+|feel-duration-function_ErrorCase_050_dd2ef33bbd|duration("P1S")|null (null)|
 
          
 
