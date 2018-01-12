@@ -15,37 +15,37 @@ DMN Model [0034-drg-scopes.dmn](./0034-drg-scopes.dmn) tests DMN specification c
 
 ![overview.png](./overview.png)
 
-![decision A 1.png](./decision A 1.png)
+![decision_A_1.png](./decision_A_1.png)
 
-![decision A 2.1.png](./decision A 2.1.png) 
+![decision_A_2.1.png](./decision_A_2.1.png) 
 
-![decision A 2.2.png](./decision A 2.2.png)
+![decision_A_2.2.png](./decision_A_2.2.png)
 
-![decision A 3.png](./decision A 3.png)
+![decision_A_3.png](./decision_A_3.png)
 
-![decision B 1.png](./decision B 1.png)
+![decision_B_1.png](./decision_B_1.png)
 
-![decision B 2.1.png](./decision B 2.1.png)
+![decision_B_2.1.png](./decision_B_2.1.png)
 
-![decision B 2.2.png](./decision B 2.2.png)
+![decision_B_2.2.png](./decision_B_2.2.png)
 
-![decision B 3.png](./decision B 3.png)
+![decision_B_3.png](./decision_B_3.png)
 
-![decision C 1.png](./decision C 1.png)
+![decision_C_1.png](./decision_C_1.png)
 
-![decision C 2.png](./decision C 2.png)
+![decision_C_2.png](./decision_C_2.png)
 
-![decision C 3.png](./decision C 3.png)
+![decision_C_3.png](./decision_C_3.png)
 
-![decision C 4.png](./decision C 4.png)
+![decision_C_4.png](./decision_C_4.png)
 
-![BKM I.png](./BKM I.png)
+![BKM_I.png](./BKM_I.png)
 
-![BKM II.png](./BKM II.png)
+![BKM_II.png](./BKM_II.png)
 
-![BKM III.png](./BKM III.png)
+![BKM_III.png](./BKM_III.png)
 
-![BKM IV.png](./BKM IV.png)
+![BKM_IV.png](./BKM_IV.png)
 
 ![TypeDecisionA1.png](./TypeDecisionA1.png)
 
