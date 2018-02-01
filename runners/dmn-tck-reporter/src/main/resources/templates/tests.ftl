@@ -114,12 +114,12 @@
                             <#if row.rowspan[2] gt 0 >
                                 <td class="text-nowrap" scope="row" rowspan="${row.rowspan[2]}" style="vertical-align:middle">${row.text[2]}</td>
                                 <td align="center" rowspan="${row.rowspan[2]}" style="vertical-align:middle">
-                                    <#if row.text[3] == "OK">
-                                    <a target="_blank" href="https://github.com/dmn-tck/tck/blob/master/TestCases/${row.text[0]}/${row.text[1]}/${row.text[1]}.pdf">
+                                    <#if row.text[3] == "NA">
+                                    <span class="${row.icons[3]} text-muted" aria-hidden="true"></span>
+                                    <#else>
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/blob/master/TestCases/${row.text[0]}/${row.text[1]}/${row.text[3]}">
                                         <span class="${row.icons[3]}" aria-hidden="true"></span>
                                     </a>
-                                    <#else>
-                                        <span class="${row.icons[3]} text-muted" aria-hidden="true"></span>
                                     </#if>
                                 </td>
                                 <td align="center" rowspan="${row.rowspan[2]}" style="vertical-align:middle">

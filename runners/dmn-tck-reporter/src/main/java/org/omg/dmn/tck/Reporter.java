@@ -126,7 +126,9 @@ public class Reporter {
                 ReportHelper.addRowCell( row, split[1], "" );
                 ReportHelper.addRowCell( row, tcd.testCaseName, "" );
                 if( Files.exists( params.testsFolder.resolve( tcd.folder+"/"+split[1]+".pdf" ) ) ) {
-                    ReportHelper.addRowCell( row, "OK", "glyphicon glyphicon-book" );
+                    ReportHelper.addRowCell(row, split[1] + ".pdf", "glyphicon glyphicon-book");
+                } else if( Files.exists( params.testsFolder.resolve( tcd.folder+"/Readme.md" ) ) ) {
+                    ReportHelper.addRowCell(row, "Readme.md", "glyphicon glyphicon-book");
                 } else {
                     ReportHelper.addRowCell( row, "NA", "glyphicon glyphicon-book" );
                 }
@@ -164,7 +166,9 @@ public class Reporter {
                     ReportHelper.addRowCell( row, split[1], "" );
                     ReportHelper.addRowCell( row, tcd.testCaseName, "" );
                     if( Files.exists( params.testsFolder.resolve( tcd.folder+"/"+split[1]+".pdf" ) ) ) {
-                        ReportHelper.addRowCell( row, "OK", "glyphicon glyphicon-book" );
+                        ReportHelper.addRowCell(row, split[1] + ".pdf", "glyphicon glyphicon-book");
+                    } else if( Files.exists( params.testsFolder.resolve( tcd.folder+"/Readme.md" ) ) ) {
+                        ReportHelper.addRowCell(row, "Readme.md", "glyphicon glyphicon-book");
                     } else {
                         ReportHelper.addRowCell( row, "NA", "glyphicon glyphicon-book" );
                     }
