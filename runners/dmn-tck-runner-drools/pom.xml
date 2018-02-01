@@ -7,7 +7,7 @@
   <name>DMN :: TCK :: jUnit Runner :: Drools</name>
 
   <properties>
-    <drools.version>7.5.0.t018</drools.version>
+    <drools.version>7.6.0.t022</drools.version>
   </properties>
 
   <repositories>
