@@ -154,20 +154,11 @@
     </dmn:itemComponent>
   </dmn:itemDefinition>
   <dmn:itemDefinition id="_Zp-B4PRQEeeUEfOdtC13fQ" name="TypeDecisionA2.x">
-    <dmn:itemComponent id="_HCukgPRREeeUEfOdtC13fQ" name="resolve A">
-      <dmn:typeRef>feel:string</dmn:typeRef>
-    </dmn:itemComponent>
     <dmn:itemComponent id="_HRrmgPRREeeUEfOdtC13fQ" name="resolve A 1">
       <dmn:typeRef>TypeDecisionA1</dmn:typeRef>
     </dmn:itemComponent>
   </dmn:itemDefinition>
   <dmn:itemDefinition id="_cErw0PRQEeeUEfOdtC13fQ" name="TypeDecisionA3">
-    <dmn:itemComponent id="_XY0CIPRREeeUEfOdtC13fQ" name="resolve A">
-      <dmn:typeRef>feel:string</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_Xl5b4PRREeeUEfOdtC13fQ" name="resolve A 1">
-      <dmn:typeRef>TypeDecisionA1</dmn:typeRef>
-    </dmn:itemComponent>
     <dmn:itemComponent id="_X6vqgPRREeeUEfOdtC13fQ" name="resolve A 2.1">
       <dmn:typeRef>TypeDecisionA2.x</dmn:typeRef>
     </dmn:itemComponent>
@@ -184,23 +175,11 @@
     </dmn:itemComponent>
   </dmn:itemDefinition>
   <dmn:itemDefinition id="_xac0gPRQEeeUEfOdtC13fQ" name="TypeDecisionB2.x">
-    <dmn:itemComponent id="_jQFLEPRREeeUEfOdtC13fQ" name="resolve B">
-      <dmn:typeRef>feel:string</dmn:typeRef>
-    </dmn:itemComponent>
     <dmn:itemComponent id="_jeTNQPRREeeUEfOdtC13fQ" name="resolve B 1">
       <dmn:typeRef>TypeDecisionB1</dmn:typeRef>
     </dmn:itemComponent>
-    <dmn:itemComponent id="_cH4xoPRXEeeUEfOdtC13fQ" name="resolve A">
-      <dmn:typeRef>feel:string</dmn:typeRef>
-    </dmn:itemComponent>
   </dmn:itemDefinition>
   <dmn:itemDefinition id="_0XWDcPRQEeeUEfOdtC13fQ" name="TypeDecisionB3">
-    <dmn:itemComponent id="_sLF-QPRREeeUEfOdtC13fQ" name="resolve B">
-      <dmn:typeRef>feel:string</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_sc6HAPRREeeUEfOdtC13fQ" name="resolve B 1">
-      <dmn:typeRef>TypeDecisionB1</dmn:typeRef>
-    </dmn:itemComponent>
     <dmn:itemComponent id="_slUcIPRREeeUEfOdtC13fQ" name="resolve B 2.1">
       <dmn:typeRef>TypeDecisionB2.x</dmn:typeRef>
     </dmn:itemComponent>
@@ -210,55 +189,19 @@
     <dmn:itemComponent id="_s0jK8PRREeeUEfOdtC13fQ" name="resolve A 3">
       <dmn:typeRef>TypeDecisionA3</dmn:typeRef>
     </dmn:itemComponent>
-    <dmn:itemComponent id="_s85OoPRREeeUEfOdtC13fQ" name="resolve A">
-      <dmn:typeRef>feel:string</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_tEnAMPRREeeUEfOdtC13fQ" name="resolve A 1">
-      <dmn:typeRef>TypeDecisionA1</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_tNTpNvRREeeUEfOdtC13fQ" name="resolve A 2.1">
-      <dmn:typeRef>TypeDecisionA2.x</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_tVcRgPRREeeUEfOdtC13fQ" name="resolve A 2.2">
-      <dmn:typeRef>TypeDecisionA2.x</dmn:typeRef>
-    </dmn:itemComponent>
   </dmn:itemDefinition>
   <dmn:itemDefinition id="_11IQEPRQEeeUEfOdtC13fQ" name="TypeDecisionC1">
     <dmn:itemComponent id="_8-PyYPRREeeUEfOdtC13fQ" name="resolve C">
       <dmn:typeRef>feel:string</dmn:typeRef>
     </dmn:itemComponent>
-    <dmn:itemComponent id="_9Se9APRREeeUEfOdtC13fQ" name="resolve A">
-      <dmn:typeRef>feel:string</dmn:typeRef>
+    <dmn:itemComponent id="_9kn14PRREeeUEfOdtC13fQ" name="resolve A 3">
+      <dmn:typeRef>TypeDecisionA3</dmn:typeRef>
     </dmn:itemComponent>
-    <dmn:itemComponent id="_9falwPRREeeUEfOdtC13fQ" name="resolve B">
-      <dmn:typeRef>feel:string</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_9kn14PRREeeUEfOdtC13fQ" name="resolve A 1">
-      <dmn:typeRef>TypeDecisionA1</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_9u4lIPRREeeUEfOdtC13fQ" name="resolve B 1">
-      <dmn:typeRef>TypeDecisionB1</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_94vrwPRREeeUEfOdtC13fQ" name="resolve A 2.1">
-      <dmn:typeRef>TypeDecisionA2.x</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_-BFIYPRREeeUEfOdtC13fQ" name="resolve A 2.2">
-      <dmn:typeRef>TypeDecisionA2.x</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_FCYn8PRSEeeUEfOdtC13fQ" name="resolve B 2.1">
-      <dmn:typeRef>TypeDecisionB2.x</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_FT2LYPRSEeeUEfOdtC13fQ" name="resolve B 2.2">
-      <dmn:typeRef>TypeDecisionB2.x</dmn:typeRef>
+    <dmn:itemComponent id="_9u4lIPRREeeUEfOdtC13fQ" name="resolve B 3">
+      <dmn:typeRef>TypeDecisionB3</dmn:typeRef>
     </dmn:itemComponent>
   </dmn:itemDefinition>
   <dmn:itemDefinition id="_5G3GkPRQEeeUEfOdtC13fQ" name="TypeDecisionC4">
-    <dmn:itemComponent id="_WS0N8PRSEeeUEfOdtC13fQ" name="resolve C 1">
-      <dmn:typeRef>TypeDecisionC1</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_WfDTJPRSEeeUEfOdtC13fQ" name="resolve C 2">
-      <dmn:typeRef>feel:string</dmn:typeRef>
-    </dmn:itemComponent>
     <dmn:itemComponent id="_WmQuYPRSEeeUEfOdtC13fQ" name="resolve C 3">
       <dmn:typeRef>feel:string</dmn:typeRef>
     </dmn:itemComponent>
@@ -316,12 +259,6 @@
     </dmn:informationRequirement>
     <dmn:context id="_fHePMPQKEeecaNY7kk20yA">
       <dmn:contextEntry>
-        <dmn:variable id="_fI0TB_QKEeecaNY7kk20yA" name="resolve A" typeRef="feel:string"/>
-        <dmn:literalExpression id="_fI0TCPQKEeecaNY7kk20yA">
-          <dmn:text>A</dmn:text>
-        </dmn:literalExpression>
-      </dmn:contextEntry>
-      <dmn:contextEntry>
         <dmn:variable id="_fgqLQPQKEeecaNY7kk20yA" name="resolve A 1" typeRef="TypeDecisionA1"/>
         <dmn:literalExpression id="_fgqLQfQKEeecaNY7kk20yA">
           <dmn:text>decision A 1</dmn:text>
@@ -338,12 +275,6 @@
       <dmn:requiredDecision href="#_DMwGMPQJEeecaNY7kk20yA"/>
     </dmn:informationRequirement>
     <dmn:context id="_nk2rMPQKEeecaNY7kk20yA">
-      <dmn:contextEntry>
-        <dmn:variable id="_nmV49_QKEeecaNY7kk20yA" name="resolve A" typeRef="feel:string"/>
-        <dmn:literalExpression id="_nmV4-PQKEeecaNY7kk20yA">
-          <dmn:text>A</dmn:text>
-        </dmn:literalExpression>
-      </dmn:contextEntry>
       <dmn:contextEntry>
         <dmn:variable id="_pel0APQKEeecaNY7kk20yA" name="resolve A 1" typeRef="TypeDecisionA1"/>
         <dmn:literalExpression id="_pel0AfQKEeecaNY7kk20yA">
@@ -362,21 +293,9 @@
     </dmn:informationRequirement>
     <dmn:context id="_6LkusPQKEeecaNY7kk20yA">
       <dmn:contextEntry>
-        <dmn:variable id="_6MxBkPQKEeecaNY7kk20yA" name="resolve B" typeRef="feel:string"/>
-        <dmn:literalExpression id="_6MxBkfQKEeecaNY7kk20yA">
-          <dmn:text>B</dmn:text>
-        </dmn:literalExpression>
-      </dmn:contextEntry>
-      <dmn:contextEntry>
         <dmn:variable id="_6ijrUPQKEeecaNY7kk20yA" name="resolve B 1" typeRef="TypeDecisionB1"/>
         <dmn:literalExpression id="_6ijrUfQKEeecaNY7kk20yA">
           <dmn:text>decision B 1</dmn:text>
-        </dmn:literalExpression>
-      </dmn:contextEntry>
-      <dmn:contextEntry>
-        <dmn:variable id="_VQQLcPRXEeeUEfOdtC13fQ" name="resolve A" typeRef="feel:string"/>
-        <dmn:literalExpression id="_VQQLcfRXEeeUEfOdtC13fQ">
-          <dmn:text>A</dmn:text>
         </dmn:literalExpression>
       </dmn:contextEntry>
     </dmn:context>
@@ -391,21 +310,9 @@
     </dmn:informationRequirement>
     <dmn:context id="_-2Y4APQKEeecaNY7kk20yA">
       <dmn:contextEntry>
-        <dmn:variable id="_-3bZ1_QKEeecaNY7kk20yA" name="resolve B" typeRef="feel:string"/>
-        <dmn:literalExpression id="_-3bZ2PQKEeecaNY7kk20yA">
-          <dmn:text>B</dmn:text>
-        </dmn:literalExpression>
-      </dmn:contextEntry>
-      <dmn:contextEntry>
         <dmn:variable id="__NOqsPQKEeecaNY7kk20yA" name="resolve B 1" typeRef="TypeDecisionB1"/>
         <dmn:literalExpression id="__NOqsfQKEeecaNY7kk20yA">
           <dmn:text>decision B 1</dmn:text>
-        </dmn:literalExpression>
-      </dmn:contextEntry>
-      <dmn:contextEntry>
-        <dmn:variable id="_Y2lY8PRXEeeUEfOdtC13fQ" name="resolve A" typeRef="feel:string"/>
-        <dmn:literalExpression id="_Y2lY8fRXEeeUEfOdtC13fQ">
-          <dmn:text>A</dmn:text>
         </dmn:literalExpression>
       </dmn:contextEntry>
     </dmn:context>
@@ -422,18 +329,6 @@
       <dmn:requiredDecision href="#_HrMAYPQJEeecaNY7kk20yA"/>
     </dmn:informationRequirement>
     <dmn:context id="_t-lNYPQKEeecaNY7kk20yA">
-      <dmn:contextEntry>
-        <dmn:variable id="_uAEbJ_QKEeecaNY7kk20yA" name="resolve A" typeRef="feel:string"/>
-        <dmn:literalExpression id="_uAEbKPQKEeecaNY7kk20yA">
-          <dmn:text>A</dmn:text>
-        </dmn:literalExpression>
-      </dmn:contextEntry>
-      <dmn:contextEntry>
-        <dmn:variable id="_uX6TZ_QKEeecaNY7kk20yA" name="resolve A 1" typeRef="TypeDecisionA1"/>
-        <dmn:literalExpression id="_uX6TaPQKEeecaNY7kk20yA">
-          <dmn:text>decision A 1</dmn:text>
-        </dmn:literalExpression>
-      </dmn:contextEntry>
       <dmn:contextEntry>
         <dmn:variable id="_uV0ox_QKEeecaNY7kk20yA" name="resolve A 2.1" typeRef="TypeDecisionA2.x"/>
         <dmn:literalExpression id="_uV0oyfQKEeecaNY7kk20yA">
@@ -464,18 +359,6 @@
     </dmn:informationRequirement>
     <dmn:context id="_DaII8PQLEeecaNY7kk20yA">
       <dmn:contextEntry>
-        <dmn:variable id="_DbKqx_QLEeecaNY7kk20yA" name="resolve B" typeRef="feel:string"/>
-        <dmn:literalExpression id="_DbKqyPQLEeecaNY7kk20yA">
-          <dmn:text>B</dmn:text>
-        </dmn:literalExpression>
-      </dmn:contextEntry>
-      <dmn:contextEntry>
-        <dmn:variable id="_DvulgPQLEeecaNY7kk20yA" name="resolve B 1" typeRef="TypeDecisionB1"/>
-        <dmn:literalExpression id="_DvulgfQLEeecaNY7kk20yA">
-          <dmn:text>decision B 1</dmn:text>
-        </dmn:literalExpression>
-      </dmn:contextEntry>
-      <dmn:contextEntry>
         <dmn:variable id="_DuFmwPQLEeecaNY7kk20yA" name="resolve B 2.1" typeRef="TypeDecisionB2.x"/>
         <dmn:literalExpression id="_DuFmwfQLEeecaNY7kk20yA">
           <dmn:text>decision B 2.1</dmn:text>
@@ -491,30 +374,6 @@
         <dmn:variable id="_jrA5kPQPEeecaNY7kk20yA" name="resolve A 3" typeRef="TypeDecisionA3"/>
         <dmn:literalExpression id="_jrA5kfQPEeecaNY7kk20yA">
           <dmn:text>decision A 3</dmn:text>
-        </dmn:literalExpression>
-      </dmn:contextEntry>
-      <dmn:contextEntry>
-        <dmn:variable id="_lqmywPQPEeecaNY7kk20yA" name="resolve A" typeRef="feel:string"/>
-        <dmn:literalExpression id="_lqmywfQPEeecaNY7kk20yA">
-          <dmn:text>A</dmn:text>
-        </dmn:literalExpression>
-      </dmn:contextEntry>
-      <dmn:contextEntry>
-        <dmn:variable id="_pWjgEPQPEeecaNY7kk20yA" name="resolve A 1" typeRef="TypeDecisionA1"/>
-        <dmn:literalExpression id="_pWjgEfQPEeecaNY7kk20yA">
-          <dmn:text>decision A 1</dmn:text>
-        </dmn:literalExpression>
-      </dmn:contextEntry>
-      <dmn:contextEntry>
-        <dmn:variable id="_pPsqIPQPEeecaNY7kk20yA" name="resolve A 2.1" typeRef="TypeDecisionA2.x"/>
-        <dmn:literalExpression id="_pPsqIfQPEeecaNY7kk20yA">
-          <dmn:text>decision A 2.1</dmn:text>
-        </dmn:literalExpression>
-      </dmn:contextEntry>
-      <dmn:contextEntry>
-        <dmn:variable id="_rMa1gPQPEeecaNY7kk20yA" name="resolve A 2.2" typeRef="TypeDecisionA2.x"/>
-        <dmn:literalExpression id="_rMa1gfQPEeecaNY7kk20yA">
-          <dmn:text>decision A 2.2</dmn:text>
         </dmn:literalExpression>
       </dmn:contextEntry>
     </dmn:context>
@@ -541,51 +400,15 @@
         </dmn:literalExpression>
       </dmn:contextEntry>
       <dmn:contextEntry>
-        <dmn:variable id="_N-RdIPQLEeecaNY7kk20yA" name="resolve A" typeRef="feel:string"/>
-        <dmn:literalExpression id="_N-RdIfQLEeecaNY7kk20yA">
-          <dmn:text>A</dmn:text>
-        </dmn:literalExpression>
-      </dmn:contextEntry>
-      <dmn:contextEntry>
-        <dmn:variable id="_N8VjcPQLEeecaNY7kk20yA" name="resolve B" typeRef="feel:string"/>
-        <dmn:literalExpression id="_N8VjcfQLEeecaNY7kk20yA">
-          <dmn:text>B</dmn:text>
-        </dmn:literalExpression>
-      </dmn:contextEntry>
-      <dmn:contextEntry>
-        <dmn:variable id="_N3kYMPQLEeecaNY7kk20yA" name="resolve A 1" typeRef="TypeDecisionA1"/>
+        <dmn:variable id="_N3kYMPQLEeecaNY7kk20yA" name="resolve A 3" typeRef="TypeDecisionA3"/>
         <dmn:literalExpression id="_N3kYMfQLEeecaNY7kk20yA">
-          <dmn:text>decision A 1</dmn:text>
+          <dmn:text>decision A 3</dmn:text>
         </dmn:literalExpression>
       </dmn:contextEntry>
       <dmn:contextEntry>
-        <dmn:variable id="_N1oegPQLEeecaNY7kk20yA" name="resolve B 1" typeRef="TypeDecisionB1"/>
+        <dmn:variable id="_N1oegPQLEeecaNY7kk20yA" name="resolve B 3" typeRef="TypeDecisionB3"/>
         <dmn:literalExpression id="_N1oegfQLEeecaNY7kk20yA">
-          <dmn:text>decision B 1</dmn:text>
-        </dmn:literalExpression>
-      </dmn:contextEntry>
-      <dmn:contextEntry>
-        <dmn:variable id="_NuCBsPQLEeecaNY7kk20yA" name="resolve A 2.1" typeRef="TypeDecisionA2.x"/>
-        <dmn:literalExpression id="_NuCBsfQLEeecaNY7kk20yA">
-          <dmn:text>decision A 2.1</dmn:text>
-        </dmn:literalExpression>
-      </dmn:contextEntry>
-      <dmn:contextEntry>
-        <dmn:variable id="_NrC_IPQLEeecaNY7kk20yA" name="resolve A 2.2" typeRef="TypeDecisionA2.x"/>
-        <dmn:literalExpression id="_NrC_IfQLEeecaNY7kk20yA">
-          <dmn:text>decision A 2.2</dmn:text>
-        </dmn:literalExpression>
-      </dmn:contextEntry>
-      <dmn:contextEntry>
-        <dmn:variable id="_NjwEUPQLEeecaNY7kk20yA" name="resolve B 2.1" typeRef="TypeDecisionB2.x"/>
-        <dmn:literalExpression id="_NjwEUfQLEeecaNY7kk20yA">
-          <dmn:text>decision B 2.1</dmn:text>
-        </dmn:literalExpression>
-      </dmn:contextEntry>
-      <dmn:contextEntry>
-        <dmn:variable id="_NU_2oPQLEeecaNY7kk20yA" name="resolve B 2.2" typeRef="TypeDecisionB2.x"/>
-        <dmn:literalExpression id="_NU_2ofQLEeecaNY7kk20yA">
-          <dmn:text>decision B 2.2</dmn:text>
+          <dmn:text>decision B 3</dmn:text>
         </dmn:literalExpression>
       </dmn:contextEntry>
     </dmn:context>
@@ -645,18 +468,6 @@
       <dmn:requiredDecision href="#_XsZaMPQJEeecaNY7kk20yA"/>
     </dmn:informationRequirement>
     <dmn:context id="_1pWOwPQMEeecaNY7kk20yA">
-      <dmn:contextEntry>
-        <dmn:variable id="_1qihlvQMEeecaNY7kk20yA" name="resolve C 1" typeRef="TypeDecisionC1"/>
-        <dmn:literalExpression id="_1qihl_QMEeecaNY7kk20yA">
-          <dmn:text>decision C 1</dmn:text>
-        </dmn:literalExpression>
-      </dmn:contextEntry>
-      <dmn:contextEntry>
-        <dmn:variable id="_4ooDUPQMEeecaNY7kk20yA" name="resolve C 2" typeRef="feel:string"/>
-        <dmn:literalExpression id="_4ooDUfQMEeecaNY7kk20yA">
-          <dmn:text>decision C 2</dmn:text>
-        </dmn:literalExpression>
-      </dmn:contextEntry>
       <dmn:contextEntry>
         <dmn:variable id="_4nGZbPQMEeecaNY7kk20yA" name="resolve C 3" typeRef="feel:string"/>
         <dmn:literalExpression id="_4nGZbvQMEeecaNY7kk20yA">

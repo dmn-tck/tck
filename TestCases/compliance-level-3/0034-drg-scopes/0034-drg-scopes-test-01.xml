@@ -5,7 +5,7 @@
         <label>Compliance Level 3</label>
         <label>Business Knowledge Model</label>
         <label>Literal Expression</label>
-        <label>Literal Function Invocation</label>        
+        <label>Literal Function Invocation</label>
         <label>Function Definition</label>
         <label>Function Invocation</label>
         <label>FEEL Function Literals</label>
@@ -13,7 +13,7 @@
         <label>Data Type: String</label>
     </labels>
     <testCase id="001">
-        <description>Tests information requirement subgraphs of decisions and knowledge requirement subgraphs of business knowledge models
+        <description>Tests information requirements of decisions and knowledge requirements of business knowledge models
         </description>
         <inputNode name="A">
             <value>A</value>
@@ -33,9 +33,6 @@
         </resultNode>
         <resultNode name="decision A 2.1" type="decision">
             <expected>
-                <component name="resolve A">
-                    <value>A</value>
-                </component>
                 <component name="resolve A 1">
                     <component name="resolve A">
                         <value>A</value>
@@ -45,9 +42,6 @@
         </resultNode>
         <resultNode name="decision A 2.2" type="decision">
             <expected>
-                <component name="resolve A">
-                    <value>A</value>
-                </component>
                 <component name="resolve A 1">
                     <component name="resolve A">
                         <value>A</value>
@@ -57,18 +51,7 @@
         </resultNode>
         <resultNode name="decision A 3" type="decision">
             <expected>
-                <component name="resolve A">
-                    <value>A</value>
-                </component>
-                <component name="resolve A 1">
-                    <component name="resolve A">
-                        <value>A</value>
-                    </component>
-                </component>
                 <component name="resolve A 2.1">
-                    <component name="resolve A">
-                        <value>A</value>
-                    </component>
                     <component name="resolve A 1">
                         <component name="resolve A">
                             <value>A</value>
@@ -76,9 +59,6 @@
                     </component>
                 </component>
                 <component name="resolve A 2.2">
-                    <component name="resolve A">
-                        <value>A</value>
-                    </component>
                     <component name="resolve A 1">
                         <component name="resolve A">
                             <value>A</value>
@@ -99,9 +79,6 @@
         </resultNode>
         <resultNode name="decision B 2.1" type="decision">
             <expected>
-                <component name="resolve B">
-                    <value>B</value>
-                </component>
                 <component name="resolve B 1">
                     <component name="resolve B">
                         <value>B</value>
@@ -109,17 +86,11 @@
                     <component name="resolve A">
                         <value>A</value>
                     </component>
-                </component>
-                <component name="resolve A">
-                    <value>A</value>
                 </component>
             </expected>
         </resultNode>
         <resultNode name="decision B 2.2" type="decision">
             <expected>
-                <component name="resolve B">
-                    <value>B</value>
-                </component>
                 <component name="resolve B 1">
                     <component name="resolve B">
                         <value>B</value>
@@ -127,29 +98,12 @@
                     <component name="resolve A">
                         <value>A</value>
                     </component>
-                </component>
-                <component name="resolve A">
-                    <value>A</value>
                 </component>
             </expected>
         </resultNode>
         <resultNode name="decision B 3" type="decision">
             <expected>
-                <component name="resolve B">
-                    <value>B</value>
-                </component>
-                <component name="resolve B 1">
-                    <component name="resolve B">
-                        <value>B</value>
-                    </component>
-                    <component name="resolve A">
-                        <value>A</value>
-                    </component>
-                </component>
                 <component name="resolve B 2.1">
-                    <component name="resolve B">
-                        <value>B</value>
-                    </component>
                     <component name="resolve B 1">
                         <component name="resolve B">
                             <value>B</value>
@@ -157,15 +111,9 @@
                         <component name="resolve A">
                             <value>A</value>
                         </component>
-                    </component>
-                    <component name="resolve A">
-                        <value>A</value>
                     </component>
                 </component>
                 <component name="resolve B 2.2">
-                    <component name="resolve B">
-                        <value>B</value>
-                    </component>
                     <component name="resolve B 1">
                         <component name="resolve B">
                             <value>B</value>
@@ -174,23 +122,9 @@
                             <value>A</value>
                         </component>
                     </component>
-                    <component name="resolve A">
-                        <value>A</value>
-                    </component>
                 </component>
                 <component name="resolve A 3">
-                    <component name="resolve A">
-                        <value>A</value>
-                    </component>
-                    <component name="resolve A 1">
-                        <component name="resolve A">
-                            <value>A</value>
-                        </component>
-                    </component>
                     <component name="resolve A 2.1">
-                        <component name="resolve A">
-                            <value>A</value>
-                        </component>
                         <component name="resolve A 1">
                             <component name="resolve A">
                                 <value>A</value>
@@ -198,41 +132,10 @@
                         </component>
                     </component>
                     <component name="resolve A 2.2">
-                        <component name="resolve A">
-                            <value>A</value>
-                        </component>
                         <component name="resolve A 1">
                             <component name="resolve A">
                                 <value>A</value>
                             </component>
-                        </component>
-                    </component>
-                </component>
-                <component name="resolve A">
-                    <value>A</value>
-                </component>
-                <component name="resolve A 1">
-                    <component name="resolve A">
-                        <value>A</value>
-                    </component>
-                </component>
-                <component name="resolve A 2.1">
-                    <component name="resolve A">
-                        <value>A</value>
-                    </component>
-                    <component name="resolve A 1">
-                        <component name="resolve A">
-                            <value>A</value>
-                        </component>
-                    </component>
-                </component>
-                <component name="resolve A 2.2">
-                    <component name="resolve A">
-                        <value>A</value>
-                    </component>
-                    <component name="resolve A 1">
-                        <component name="resolve A">
-                            <value>A</value>
                         </component>
                     </component>
                 </component>
@@ -243,75 +146,58 @@
                 <component name="resolve C">
                     <value>C</value>
                 </component>
-                <component name="resolve A">
-                    <value>A</value>
-                </component>
-                <component name="resolve B">
-                    <value>B</value>
-                </component>
-                <component name="resolve A 1">
-                    <component name="resolve A">
-                        <value>A</value>
+                <component name="resolve A 3">
+                    <component name="resolve A 2.1">
+                        <component name="resolve A 1">
+                            <component name="resolve A">
+                                <value>A</value>
+                            </component>
+                        </component>
                     </component>
-                </component>
-                <component name="resolve B 1">
-                    <component name="resolve B">
-                        <value>B</value>
-                    </component>
-                    <component name="resolve A">
-                        <value>A</value>
-                    </component>
-                </component>
-                <component name="resolve A 2.1">
-                    <component name="resolve A">
-                        <value>A</value>
-                    </component>
-                    <component name="resolve A 1">
-                        <component name="resolve A">
-                            <value>A</value>
+                    <component name="resolve A 2.2">
+                        <component name="resolve A 1">
+                            <component name="resolve A">
+                                <value>A</value>
+                            </component>
                         </component>
                     </component>
                 </component>
-                <component name="resolve A 2.2">
-                    <component name="resolve A">
-                        <value>A</value>
-                    </component>
-                    <component name="resolve A 1">
-                        <component name="resolve A">
-                            <value>A</value>
+                <component name="resolve B 3">
+                    <component name="resolve B 2.1">
+                        <component name="resolve B 1">
+                            <component name="resolve B">
+                                <value>B</value>
+                            </component>
+                            <component name="resolve A">
+                                <value>A</value>
+                            </component>
                         </component>
                     </component>
-                </component>
-                <component name="resolve B 2.1">
-                    <component name="resolve B">
-                        <value>B</value>
-                    </component>
-                    <component name="resolve B 1">
-                        <component name="resolve B">
-                            <value>B</value>
-                        </component>
-                        <component name="resolve A">
-                            <value>A</value>
+                    <component name="resolve B 2.2">
+                        <component name="resolve B 1">
+                            <component name="resolve B">
+                                <value>B</value>
+                            </component>
+                            <component name="resolve A">
+                                <value>A</value>
+                            </component>
                         </component>
                     </component>
-                    <component name="resolve A">
-                        <value>A</value>
-                    </component>
-                </component>
-                <component name="resolve B 2.2">
-                    <component name="resolve B">
-                        <value>B</value>
-                    </component>
-                    <component name="resolve B 1">
-                        <component name="resolve B">
-                            <value>B</value>
+                    <component name="resolve A 3">
+                        <component name="resolve A 2.1">
+                            <component name="resolve A 1">
+                                <component name="resolve A">
+                                    <value>A</value>
+                                </component>
+                            </component>
                         </component>
-                        <component name="resolve A">
-                            <value>A</value>
+                        <component name="resolve A 2.2">
+                            <component name="resolve A 1">
+                                <component name="resolve A">
+                                    <value>A</value>
+                                </component>
+                            </component>
                         </component>
-                    </component>
-                    <component name="resolve A">
-                        <value>A</value>
                     </component>
                 </component>
             </expected>
@@ -328,85 +214,6 @@
         </resultNode>
         <resultNode name="decision C 4" type="decision">
             <expected>
-                <component name="resolve C 1">
-                    <component name="resolve C">
-                        <value>C</value>
-                    </component>
-                    <component name="resolve A">
-                        <value>A</value>
-                    </component>
-                    <component name="resolve B">
-                        <value>B</value>
-                    </component>
-                    <component name="resolve A 1">
-                        <component name="resolve A">
-                            <value>A</value>
-                        </component>
-                    </component>
-                    <component name="resolve B 1">
-                        <component name="resolve B">
-                            <value>B</value>
-                        </component>
-                        <component name="resolve A">
-                            <value>A</value>
-                        </component>
-                    </component>
-                    <component name="resolve A 2.1">
-                        <component name="resolve A">
-                            <value>A</value>
-                        </component>
-                        <component name="resolve A 1">
-                            <component name="resolve A">
-                                <value>A</value>
-                            </component>
-                        </component>
-                    </component>
-                    <component name="resolve A 2.2">
-                        <component name="resolve A">
-                            <value>A</value>
-                        </component>
-                        <component name="resolve A 1">
-                            <component name="resolve A">
-                                <value>A</value>
-                            </component>
-                        </component>
-                    </component>
-                    <component name="resolve B 2.1">
-                        <component name="resolve B">
-                            <value>B</value>
-                        </component>
-                        <component name="resolve B 1">
-                            <component name="resolve B">
-                                <value>B</value>
-                            </component>
-                            <component name="resolve A">
-                                <value>A</value>
-                            </component>
-                        </component>
-                        <component name="resolve A">
-                            <value>A</value>
-                        </component>
-                    </component>
-                    <component name="resolve B 2.2">
-                        <component name="resolve B">
-                            <value>B</value>
-                        </component>
-                        <component name="resolve B 1">
-                            <component name="resolve B">
-                                <value>B</value>
-                            </component>
-                            <component name="resolve A">
-                                <value>A</value>
-                            </component>
-                        </component>
-                        <component name="resolve A">
-                            <value>A</value>
-                        </component>
-                    </component>
-                </component>
-                <component name="resolve C 2">
-                    <value>BKM I # BKM II # BKM III # decision C 2 # BKM IV # BKM III # decision C 2</value>
-                </component>
                 <component name="resolve C 3">
                     <value>BKM II # BKM III # decision C 3 # BKM IV # BKM III # decision C 3</value>
                 </component>
