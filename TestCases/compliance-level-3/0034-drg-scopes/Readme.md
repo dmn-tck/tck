@@ -3,7 +3,7 @@
 
 ### Description ###
 
-DMN Model [0034-drg-scopes.dmn](./0034-drg-scopes.dmn) tests DMN specification conformance of `information requirement subgraph scoping and knowledge requirement scoping`.
+DMN Model [0034-drg-scopes.dmn](./0034-drg-scopes.dmn) tests DMN specification conformance of `information requirement scoping and knowledge requirement scoping`.
 
 #### Specification Reference(s): ####
  * DMN 1.1 - 7.1 Introduction
@@ -15,37 +15,37 @@ DMN Model [0034-drg-scopes.dmn](./0034-drg-scopes.dmn) tests DMN specification c
 
 ![overview.png](./overview.png)
 
-![decision_A_1.png](./decision_A_1.png)
+![decisionA1.png](./decisionA1.png)
 
-![decision_A_2.1.png](./decision_A_2.1.png) 
+![decisionA2.1.png](./decisionA2.1.png) 
 
-![decision_A_2.2.png](./decision_A_2.2.png)
+![decisionA2.2.png](./decisionA2.2.png)
 
-![decision_A_3.png](./decision_A_3.png)
+![decisionA3.png](./decisionA3.png)
 
-![decision_B_1.png](./decision_B_1.png)
+![decisionB1.png](./decisionB1.png)
 
-![decision_B_2.1.png](./decision_B_2.1.png)
+![decisionB2.1.png](./decisionB2.1.png)
 
-![decision_B_2.2.png](./decision_B_2.2.png)
+![decisionB2.2.png](./decisionB2.2.png)
 
-![decision_B_3.png](./decision_B_3.png)
+![decisionB 3.png](./decisionB3.png)
 
-![decision_C_1.png](./decision_C_1.png)
+![decisionC1.png](./decisionC1.png)
 
-![decision_C_2.png](./decision_C_2.png)
+![decisionC2.png](./decisionC2.png)
 
-![decision_C_3.png](./decision_C_3.png)
+![decisionC3.png](./decisionC3.png)
 
-![decision_C_4.png](./decision_C_4.png)
+![decisionC4.png](./decisionC4.png)
 
-![BKM_I.png](./BKM_I.png)
+![BKMI.png](./BKMI.png)
 
-![BKM_II.png](./BKM_II.png)
+![BKMII.png](./BKMII.png)
 
-![BKM_III.png](./BKM_III.png)
+![BKMIII.png](./BKMIII.png)
 
-![BKM_IV.png](./BKM_IV.png)
+![BKMIV.png](./BKMIV.png)
 
 ![TypeDecisionA1.png](./TypeDecisionA1.png)
 
