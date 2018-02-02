@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2013 rel. 2 sp2 (x64) (http://www.altova.com) by Bruce Silver (private) -->
 <xs:schema xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.omg.org/spec/DMN/20160719/testcase" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="testCaseType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="decision"/>
+			<xs:enumeration value="bkm"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:element name="testCases">
 		<xs:complexType>
 			<xs:sequence>
@@ -41,6 +47,7 @@
 							</xs:element>
 						</xs:sequence>
 						<xs:attribute name="id" type="xs:string"/>
+						<xs:attribute name="type" type="testCaseType" default="decision"/>
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
