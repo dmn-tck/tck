@@ -127,16 +127,15 @@ public class DroolsTCKTest
 
       DMNContext dmnctx = ctx.runtime.newContext();
       testCase.getInputNode().forEach(in -> {
-         if (in.getType() != null && "decision".equals(in.getType()))
-         {
-            DecisionNode decision = ctx.dmnmodel.getDecisionByName(in.getName());
-            dmnctx.set(in.getName(), parseValue(in, decision));
-         }
-         else
-         {
             InputDataNode input = ctx.dmnmodel.getInputByName(in.getName());
-            dmnctx.set(in.getName(), parseValue(in, input));
-         }
+            DecisionNode decision = ctx.dmnmodel.getDecisionByName(in.getName());
+            if (input != null) {
+                dmnctx.set(in.getName(), parseValue(in, input)); // normally data input from file, should be pointing at a InputData in the model
+            } else if (decision != null) {
+                dmnctx.set(in.getName(), parseValue(in, decision)); // the test case offers a pre-evaluated Decision 
+            } else {
+                throw new RuntimeException("Unable to locate InputData node or a Decision node for name: " + in.getName());
+            }
       });
 
       DMNContext resultctx = dmnctx;
