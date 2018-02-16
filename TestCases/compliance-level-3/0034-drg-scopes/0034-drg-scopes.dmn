@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dmn="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:layout="https://products.bfs-intra.net/milestones/vr/spec/20170328/dmndi.xsd" xmlns:ns1="http://www.actico.com/spec/DMN/0.1.0/0034-drg-scopes" xsi:schemaLocation="http://www.omg.org/spec/DMN/20151101/dmn.xsd http://www.omg.org/spec/DMN/20151101/dmn.xsd" id="_7X638PQIEeecaNY7kk20yA" name="0034-drg-scopes" namespace="http://www.actico.com/spec/DMN/0.1.0/0034-drg-scopes">
+<dmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dmn="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:layout="https://products.bfs-intra.net/milestones/vr/spec/20170328/dmndi.xsd" xmlns:ns1="http://www.actico.com/spec/DMN/0.1.0/0034-drg-scopes" xmlns="http://www.actico.com/spec/DMN/0.1.0/0034-drg-scopes" xsi:schemaLocation="http://www.omg.org/spec/DMN/20151101/dmn.xsd http://www.omg.org/spec/DMN/20151101/dmn.xsd" id="_7X638PQIEeecaNY7kk20yA" name="0034-drg-scopes" namespace="http://www.actico.com/spec/DMN/0.1.0/0034-drg-scopes">
   <dmn:extensionElements>
     <layout:container id="_7ZtAoPQIEeecaNY7kk20yA" name="0034-drg-scopes" type="Dmn" href="#_7X638PQIEeecaNY7kk20yA">
       <layout:node id="_9020cPQIEeecaNY7kk20yA" type="2003" href="#_9z0SoPQIEeecaNY7kk20yA">
@@ -486,6 +486,7 @@
         <dmn:text>&quot;BKM I&quot; + &quot; # &quot; + BKM II(param)</dmn:text>
       </dmn:literalExpression>
     </dmn:encapsulatedLogic>
+    <dmn:variable id="_3_-kYfQLEeecaNY7kk20yA" name="BKM I" />
     <dmn:knowledgeRequirement>
       <dmn:requiredKnowledge href="#_UL_1kPQJEeecaNY7kk20yA"/>
     </dmn:knowledgeRequirement>
@@ -500,6 +501,7 @@
         <dmn:text>&quot;BKM II&quot; + &quot; # &quot; + BKM III(param) + &quot; # &quot; + BKM IV(param)</dmn:text>
       </dmn:literalExpression>
     </dmn:encapsulatedLogic>
+    <dmn:variable id="_68UZsfQLEeecaNY7kk20yA" name="BKM II" />
     <dmn:knowledgeRequirement>
       <dmn:requiredKnowledge href="#_U6fTQPQJEeecaNY7kk20yA"/>
     </dmn:knowledgeRequirement>
@@ -517,6 +519,7 @@
         <dmn:text>&quot;BKM IV&quot; + &quot; # &quot; + BKM III(param)</dmn:text>
       </dmn:literalExpression>
     </dmn:encapsulatedLogic>
+    <dmn:variable id="_MvwmIfQMEeecaNY7kk20yA" name="BKM IV" />
     <dmn:knowledgeRequirement>
       <dmn:requiredKnowledge href="#_U6fTQPQJEeecaNY7kk20yA"/>
     </dmn:knowledgeRequirement>
@@ -531,6 +534,7 @@
         <dmn:text>&quot;BKM III&quot; + &quot; # &quot; + param</dmn:text>
       </dmn:literalExpression>
     </dmn:encapsulatedLogic>
+    <dmn:variable id="_H52AEPQMEeecaNY7kk20yA" name="BKM III" />
   </dmn:businessKnowledgeModel>
   <dmn:inputData id="_9z0SoPQIEeecaNY7kk20yA" name="A">
     <dmn:variable id="_twf9MPROEeeUEfOdtC13fQ" name="A" typeRef="feel:string"/>
