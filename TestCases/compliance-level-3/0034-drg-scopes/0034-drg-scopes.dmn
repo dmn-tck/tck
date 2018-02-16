@@ -486,7 +486,7 @@
         <dmn:text>&quot;BKM I&quot; + &quot; # &quot; + BKM II(param)</dmn:text>
       </dmn:literalExpression>
     </dmn:encapsulatedLogic>
-    <dmn:variable id="_3_-kYfQLEeecaNY7kk20yA" name="BKM I" typeRef="feel:string"/>
+    <dmn:variable id="_3_-kYfQLEeecaNY7kk20yA" name="BKM I" />
     <dmn:knowledgeRequirement>
       <dmn:requiredKnowledge href="#_UL_1kPQJEeecaNY7kk20yA"/>
     </dmn:knowledgeRequirement>
@@ -501,7 +501,7 @@
         <dmn:text>&quot;BKM II&quot; + &quot; # &quot; + BKM III(param) + &quot; # &quot; + BKM IV(param)</dmn:text>
       </dmn:literalExpression>
     </dmn:encapsulatedLogic>
-    <dmn:variable id="_68UZsfQLEeecaNY7kk20yA" name="BKM II" typeRef="feel:string"/>
+    <dmn:variable id="_68UZsfQLEeecaNY7kk20yA" name="BKM II" />
     <dmn:knowledgeRequirement>
       <dmn:requiredKnowledge href="#_U6fTQPQJEeecaNY7kk20yA"/>
     </dmn:knowledgeRequirement>
@@ -519,7 +519,7 @@
         <dmn:text>&quot;BKM IV&quot; + &quot; # &quot; + BKM III(param)</dmn:text>
       </dmn:literalExpression>
     </dmn:encapsulatedLogic>
-    <dmn:variable id="_MvwmIfQMEeecaNY7kk20yA" name="BKM IV" typeRef="feel:string"/>
+    <dmn:variable id="_MvwmIfQMEeecaNY7kk20yA" name="BKM IV" />
     <dmn:knowledgeRequirement>
       <dmn:requiredKnowledge href="#_U6fTQPQJEeecaNY7kk20yA"/>
     </dmn:knowledgeRequirement>
@@ -534,7 +534,7 @@
         <dmn:text>&quot;BKM III&quot; + &quot; # &quot; + param</dmn:text>
       </dmn:literalExpression>
     </dmn:encapsulatedLogic>
-    <dmn:variable id="_H52AEPQMEeecaNY7kk20yA" name="BKM III" typeRef="feel:string"/>
+    <dmn:variable id="_H52AEPQMEeecaNY7kk20yA" name="BKM III" />
   </dmn:businessKnowledgeModel>
   <dmn:inputData id="_9z0SoPQIEeecaNY7kk20yA" name="A">
     <dmn:variable id="_twf9MPROEeeUEfOdtC13fQ" name="A" typeRef="feel:string"/>
