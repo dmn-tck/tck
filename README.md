@@ -9,6 +9,10 @@
 
 * https://s06.circleweaver.com/weaver/t/wfmc/dmn-reference-implementation/frontPage.htm
 
+## How to join
+
+* https://github.com/dmn-tck/tck/wiki/Joining-the-Effort
+
 ## Current Folders:
 
 TestExamples - data files used to share and isolate the proper format for tests.
