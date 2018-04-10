@@ -20,6 +20,14 @@
 
   <profiles>
     <profile>
+      <id>validation</id>
+      <modules>
+        <module>dmn-tck-validation</module>
+      </modules>
+    </profile>
+    
+    <!-- Vendor's runners Profiles: -->
+    <profile>
       <id>drools</id>
       <activation>
         <file>
