@@ -28,6 +28,7 @@ public class Vendor {
     private String                  comment;
     private Map<String, TestResult> results;
     private LocalDate               lastUpdate;
+    private String                  tckRunnerManualUrl;
 
     public Vendor( String name,
                    String vendorUrl,
@@ -36,7 +37,8 @@ public class Vendor {
                    String version,
                    String comment,
                    Map<String, TestResult> results,
-                   LocalDate lastUpdate ) {
+                   LocalDate lastUpdate,
+                   String tckRunnerManualUrl) {
         this.name = name;
         this.vendorUrl = vendorUrl;
         this.product = product;
@@ -45,6 +47,7 @@ public class Vendor {
         this.comment = comment;
         this.results = results;
         this.lastUpdate = lastUpdate;
+        this.tckRunnerManualUrl = tckRunnerManualUrl;
     }
 
     public String getName() {
@@ -129,6 +132,14 @@ public class Vendor {
 
     public void setLastUpdate(LocalDate lastUpdate) {
         this.lastUpdate = lastUpdate;
+    }
+
+    public String getTckRunnerManualUrl() {
+        return tckRunnerManualUrl;
+    }
+
+    public void setTckRunnerManualUrl(String tckRunnerManualUrl) {
+        this.tckRunnerManualUrl = tckRunnerManualUrl;
     }
 
     @Override

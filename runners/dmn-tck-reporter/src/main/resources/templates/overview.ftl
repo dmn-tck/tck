@@ -319,7 +319,11 @@
             <blockquote>
                 <p><small><em><strong>DISCLAIMER:</strong> This report is automatically generated from the results
                     of the TCK tests execution provided by each vendor. The accuracy of
-                    the results is under the responsibility of the respective vendors.</em></small></p>
+                    the results is under the responsibility of the respective vendors.
+            		<#if vendor.tckRunnerManualUrl?has_content>
+						<br />This vendor has supplied an instruction manual for user to reproduce TCK test results, available <a href="${vendor.tckRunnerManualUrl}" target="_blank">at this link <span class="fa fa-external-link"></span></a>.
+					</#if>
+                    </em></small></p>
             </blockquote>
         </div>
     </div>

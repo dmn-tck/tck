@@ -196,6 +196,9 @@
                                     <dt>Failed: </dt><dd>${vendor.failed}</dd>
                                     <dt>Skipped: </dt><dd>${header.totalTests - vendor.succeeded - vendor.failed}</dd>
                                     <dt>Info: </dt><dd>${vendor.comment}</dd>
+                        		<#if vendor.tckRunnerManualUrl?has_content>
+									<dt>TCK Runner manual: </dt><dd>This vendor has supplied an instruction manual for user to reproduce TCK test results, available <a href="${vendor.tckRunnerManualUrl}" target="_blank">at this link <span class="fa fa-external-link"></span></a>.</dd>
+								</#if>
                                 </dl>
                             </div>
                         </div>
