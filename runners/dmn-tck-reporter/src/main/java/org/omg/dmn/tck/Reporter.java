@@ -520,7 +520,7 @@ public class Reporter {
                                            properties.getProperty( "product.comment" ).trim(),
                                            testResults,
                                            lastUpdate,
-                                           Optional.ofNullable(properties.getProperty("tck.runner.manual.url")).map(String::trim).orElse(null));
+                                           Optional.ofNullable(properties.getProperty("instructions.url")).map(String::trim).orElse(null));
                     results.put( v.getName()+" / "+v.getVersion(), v );
                     logger.info( testResults.size() + " test results loaded for vendor "+v );
                 }
