@@ -28,6 +28,7 @@ public class Vendor {
     private String                  comment;
     private Map<String, TestResult> results;
     private LocalDate               lastUpdate;
+    private String                  instructionsUrl;
 
     public Vendor( String name,
                    String vendorUrl,
@@ -36,7 +37,8 @@ public class Vendor {
                    String version,
                    String comment,
                    Map<String, TestResult> results,
-                   LocalDate lastUpdate ) {
+                   LocalDate lastUpdate,
+                   String instructionsUrl) {
         this.name = name;
         this.vendorUrl = vendorUrl;
         this.product = product;
@@ -45,6 +47,7 @@ public class Vendor {
         this.comment = comment;
         this.results = results;
         this.lastUpdate = lastUpdate;
+        this.instructionsUrl = instructionsUrl;
     }
 
     public String getName() {
@@ -129,6 +132,14 @@ public class Vendor {
 
     public void setLastUpdate(LocalDate lastUpdate) {
         this.lastUpdate = lastUpdate;
+    }
+
+    public String getInstructionsUrl() {
+        return instructionsUrl;
+    }
+
+    public void setInstructionsUrl(String instructionsUrl) {
+        this.instructionsUrl = instructionsUrl;
     }
 
     @Override
