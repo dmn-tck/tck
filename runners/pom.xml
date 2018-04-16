@@ -49,6 +49,17 @@
         <module>dmn-tck-runner-trisotech</module>
       </modules>
     </profile>
+    <profile>
+      <id>jdmn</id>
+      <activation>
+        <file>
+          <exists>enable-jdmn.flag</exists>
+        </file>
+      </activation>
+      <modules>
+        <module>dmn-tck-runner-jdmn</module>
+      </modules>
+    </profile>
   </profiles>
 
   <build>
