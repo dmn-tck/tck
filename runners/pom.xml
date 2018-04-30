@@ -60,6 +60,17 @@
         <module>dmn-tck-runner-jdmn</module>
       </modules>
     </profile>
+    <profile>
+      <id>camunda</id>
+      <activation>
+        <file>
+          <exists>enable-camunda.flag</exists>
+        </file>
+      </activation>
+      <modules>
+        <module>dmn-tck-runner-camunda</module>
+      </modules>
+    </profile>
   </profiles>
 
   <build>
