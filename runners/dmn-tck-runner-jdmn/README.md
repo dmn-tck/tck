@@ -2,6 +2,10 @@
 
 This is a jDMN runner implementation for the DMN TCK suite of tests, to automate the TCK DMN tests execution for the [jDMN](https://github.com/goldmansachs/jdmn) engine.
 
+## What is jDMN
+
+jDMN provides an execution engine for decisions models specified in DMN. The decisions can be interpreted or translated to Java and executed on a JVM. More info at [jDMN](https://github.com/goldmansachs/jdmn)
+
 ## How to build and execute this runner
 
 From this directory (`dmn-tck-runner-jdmn/`) with Maven:
@@ -20,7 +24,7 @@ For the full list of running options, please reference the [general DMN TCK runn
 
 ## Details on the DMN TCK jDMN runner
 
-This runner configuration is meant to run normally out-of-the-box.
+This runner configuration is meant to run normally out-of-the-box. Make sure all the Maven dependencies are pusblished in your execution environment.
 
 This DMN TCK jDMN runner reference a published jDMN version as governed in this `pom.xml`.
 
