@@ -23,10 +23,12 @@ import com.gs.dmn.log.Slf4jBuildLogger;
 import com.gs.dmn.runtime.interpreter.DMNInterpreter;
 import com.gs.dmn.runtime.interpreter.environment.RuntimeEnvironment;
 import com.gs.dmn.serialization.DMNReader;
+import com.gs.dmn.serialization.DMNWriter;
 import com.gs.dmn.tck.TCKUtil;
 import com.gs.dmn.transformation.DMNTransformer;
 import com.gs.dmn.transformation.ToSimpleNameTransformer;
 import com.gs.dmn.transformation.basic.BasicDMN2JavaTransformer;
+import com.gs.dmn.transformation.basic.QualifiedName;
 import org.junit.runner.Description;
 import org.junit.runner.RunWith;
 import org.omg.dmn.tck.marshaller._20160719.TestCases;
@@ -80,9 +82,10 @@ public class JDMNTckTest implements DmnTckVendorTestSuite {
     @Override
     public TestSuiteContext createContext() {
         DMNReader dmnReader = new DMNReader(LOGGER, false);
+        DMNWriter dmnWriter = new DMNWriter(LOGGER);
         DMNTransformer<TestCases> dmnTransformer = new ToSimpleNameTransformer(LOGGER);
         StandardDMNDialectDefinition dialectDefinition = new StandardDMNDialectDefinition();
-        return new JDMNTestContext(dmnReader, dmnTransformer, dialectDefinition);
+        return new JDMNTestContext(dmnReader, dmnWriter, dmnTransformer, dialectDefinition);
     }
 
     @Override
@@ -120,7 +123,7 @@ public class JDMNTckTest implements DmnTckVendorTestSuite {
                 try {
                     String decisionName = res.getName();
                     TDecision decision = (TDecision) dmnTransformer.getDMNModelRepository().findDRGElementByName(decisionName);
-                    Type decisionType = dmnTransformer.toFEELType(decision.getVariable().getTypeRef());
+                    Type decisionType = dmnTransformer.toFEELType(QualifiedName.toQualifiedName(decision.getVariable().getTypeRef()));
                     expectedValue = tckUtil.makeValue(res.getExpected(), decisionType);
                     actualOutput = interpreter.evaluate(decisionName, runtimeEnvironment);
                 } catch (Throwable e) {
