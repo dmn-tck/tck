@@ -20,6 +20,7 @@ import com.gs.dmn.log.NopBuildLogger;
 import com.gs.dmn.runtime.interpreter.DMNInterpreter;
 import com.gs.dmn.serialization.DMNNamespacePrefixMapper;
 import com.gs.dmn.serialization.DMNReader;
+import com.gs.dmn.serialization.DMNWriter;
 import com.gs.dmn.tck.TestCasesReader;
 import com.gs.dmn.transformation.DMNTransformer;
 import com.gs.dmn.transformation.ToQuotedNameTransformer;
@@ -39,6 +40,7 @@ public class JDMNTestContext implements TestSuiteContext {
     private static final boolean DEBUG_TRANSFORMER = false;
 
     private final DMNReader dmnReader;
+    private final DMNWriter dmnWriter;
     private final TestCasesReader tckReader;
     private final DMNTransformer<TestCases> dmnTransformer;
     private final DMNDialectDefinition dialectDefinition;
@@ -47,8 +49,9 @@ public class JDMNTestContext implements TestSuiteContext {
 
     private DMNInterpreter interpreter;
     private BasicDMN2JavaTransformer basicToJavaTransformer;
-    public JDMNTestContext(DMNReader dmnReader, DMNTransformer<TestCases> dmnTransformer, DMNDialectDefinition dialectDefinition) {
+    public JDMNTestContext(DMNReader dmnReader, DMNWriter dmnWriter, DMNTransformer<TestCases> dmnTransformer, DMNDialectDefinition dialectDefinition) {
         this.dmnReader = dmnReader;
+        this.dmnWriter = dmnWriter;
         this.tckReader = new TestCasesReader(new NopBuildLogger());
         this.dmnTransformer = dmnTransformer;
         this.dialectDefinition = dialectDefinition;
@@ -105,7 +108,7 @@ public class JDMNTestContext implements TestSuiteContext {
         String tempFolder = TEMP_FOLDER.get(dmnTransformer.getClass());
         new File(tempFolder).mkdirs();
         File dmnFile = new File(tempFolder + modelName);
-        this.dmnReader.write(definitions, dmnFile, new DMNNamespacePrefixMapper());
+        this.dmnWriter.write(definitions, dmnFile, new DMNNamespacePrefixMapper());
     }
 
     private void save(TestCases testCases) {
