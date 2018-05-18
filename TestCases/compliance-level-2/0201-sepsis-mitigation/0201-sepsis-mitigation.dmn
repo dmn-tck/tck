@@ -26,16 +26,16 @@
       <requiredDecision href="#Decision_1rxxbae" />
     </informationRequirement>
     <decisionTable hitPolicy="FIRST">
-      <input id="PatientIsSepticIn" label="patient is septic">
+      <input id="InputClause_1ghiwdh" label="patient is septic">
         <inputExpression id="LiteralExpression_1i1va2n" typeRef="boolean" />
       </input>
-      <input id="PatientIsSeverelySepticIn" label="patient is severely septic">
+      <input id="InputClause_069ypob" label="patient is severely septic">
         <inputExpression id="LiteralExpression_1miwx5w" typeRef="boolean" />
       </input>
-      <input id="PatientIsInSepticShockIn" label="patient is in septic shock">
+      <input id="InputClause_08bfx6b" label="patient is in septic shock">
         <inputExpression id="LiteralExpression_1m5m1dz" typeRef="boolean" />
       </input>
-      <output id="ActionRequired" label="Action required." typeRef="string" />
+      <output id="output_1" label="Action required." typeRef="string" />
       <rule id="row-276013905-4">
         <description>sepsis evaluation</description>
         <inputEntry id="UnaryTests_0z9ens6">
@@ -147,34 +147,34 @@
       <requiredInput href="#InputData_1a8ouhb" />
     </informationRequirement>
     <decisionTable id="DecisionTable_1t37isz" hitPolicy="ANY">
-      <input id="BodyTemp" label="body temp. (degrees Celsius)">
+      <input id="InputClause_16cqn75" label="body temp. (degrees Celsius)">
         <inputExpression id="LiteralExpression_0fnoh9o" typeRef="integer" />
       </input>
-      <input id="HeartRate" label="heart rate (beats per minute)">
+      <input id="InputClause_06ukikc" label="heart rate (beats per minute)">
         <inputExpression id="LiteralExpression_1c21znk" typeRef="integer" />
       </input>
-      <input id="RespiratoryRate" label="respiratory rate (breaths per minute)">
+      <input id="InputClause_030l9ua" label="respiratory rate (breaths per minute)">
         <inputExpression id="LiteralExpression_1h0uy0r" typeRef="integer" />
       </input>
-      <input id="ArterialCarbonDioxideTension" label="arterial carbon dioxide tension  (millimeters of mercury)">
+      <input id="InputClause_1vgkx9d" label="arterial carbon dioxide tension  (millimeters of mercury)">
         <inputExpression id="LiteralExpression_1dk4fj6" typeRef="integer" />
       </input>
-      <input id="AbnormalWhiteBloodCellCount" label="abnormal white blood cell count (number per microliter)">
+      <input id="InputClause_0bhqa7h" label="abnormal white blood cell count (number per microliter)">
         <inputExpression id="LiteralExpression_0cg6hep" typeRef="integer" />
       </input>
-      <input id="WhiteBloodCellImmatureBandForms" label="white blood cell immature band forms (percent in field of vision)">
+      <input id="InputClause_0vgg61l" label="white blood cell immature band forms (percent in field of vision)">
         <inputExpression id="LiteralExpression_1sjo7ij" typeRef="integer" />
       </input>
-      <input id="NonDiabeticGlucose" label="non-diabetic glucose (millimoles per liter)">
+      <input id="InputClause_15e32b2" label="non-diabetic glucose (millimoles per liter)">
         <inputExpression id="LiteralExpression_07ups6j" typeRef="integer" />
       </input>
-      <input id="AcutelyAlteredMentalState" label="acutely altered mental state">
+      <input id="InputClause_1m4zj5v" label="acutely altered mental state">
         <inputExpression id="LiteralExpression_18quqzw" typeRef="boolean" />
       </input>
-      <input id="HistoryOrSignsSuggestNewInfection" label="history or signs suggest new infection">
+      <input id="InputClause_19x4bsg" label="history or signs suggest new infection">
         <inputExpression id="LiteralExpression_0ks98c7" typeRef="boolean" />
       </input>
-      <input id="Neutropenic" label="neutropenic">
+      <input id="InputClause_17wj511" label="neutropenic">
         <inputExpression id="LiteralExpression_18ti2g7" typeRef="boolean" />
       </input>
       <output id="OutputClause_18vb4rj" label="" typeRef="string" />
@@ -210,7 +210,7 @@
         <inputEntry id="UnaryTests_0wbqidf">
           <text>false</text>
         </inputEntry>
-        <outputEntry id="PatientIsSeptic">
+        <outputEntry id="LiteralExpression_16l6llm">
           <text><![CDATA["Patient is septic."]]></text>
         </outputEntry>
       </rule>
@@ -360,40 +360,40 @@
       <requiredInput href="#InputData_14g89av" />
     </informationRequirement>
     <decisionTable id="DecisionTable_0irfmul" hitPolicy="ANY">
-      <input id="MeanArterialPressure" label="mean arterial pressure (millimeters mercury)">
+      <input id="InputClause_124ipjl" label="mean arterial pressure (millimeters mercury)">
         <inputExpression id="LiteralExpression_0otih4k" typeRef="integer" />
       </input>
-      <input id="SystolicBloodPressure" label="systolic blood pressure (millimeters mercury)">
+      <input id="InputClause_0pr7qqk" label="systolic blood pressure (millimeters mercury)">
         <inputExpression id="LiteralExpression_08dsyn0" typeRef="integer" />
       </input>
-      <input id="UrineOutput" label="urine output (milliliters per kilogram per hour)">
+      <input id="InputClause_02i9172" label="urine output (milliliters per kilogram per hour)">
         <inputExpression id="LiteralExpression_1qfngbp" typeRef="integer" />
       </input>
-      <input id="InternationalNormalizedRatio" label="international normalized ratio">
+      <input id="InputClause_0k7033i" label="international normalized ratio">
         <inputExpression id="LiteralExpression_1uyfv33" typeRef="integer" />
       </input>
-      <input id="ActivatedPartialThromboplastinTime" label="activated partial thromboplastin time (seconds)">
+      <input id="InputClause_0s83hsd" label="activated partial thromboplastin time (seconds)">
         <inputExpression id="LiteralExpression_0aobblk" typeRef="integer" />
       </input>
-      <input id="Billirubin" label="billirubin (micromoles per deciliter)">
+      <input id="InputClause_0obfemk" label="billirubin (micromoles per deciliter)">
         <inputExpression id="LiteralExpression_1d046a5" typeRef="integer" />
       </input>
-      <input id="Lactate" label="lactate (millimoles per liter)">
+      <input id="InputClause_09zfbbv" label="lactate (millimoles per liter)">
         <inputExpression id="LiteralExpression_1tvrxxd" typeRef="integer" />
       </input>
-      <input id="NeedOxygen" label="need oxygen fo maintain blood oxygen saturation level &#62; 90%">
+      <input id="InputClause_01n98ej" label="need oxygen fo maintain blood oxygen saturation level &#62; 90%">
         <inputExpression id="LiteralExpression_1rn2k16" typeRef="boolean" />
       </input>
-      <input id="Platelets" label="platelets &#60; 100 X 10 to 9th power per liter">
+      <input id="InputClause_1kyl0mu" label="platelets &#60; 100 X 10 to 9th power per liter">
         <inputExpression id="LiteralExpression_030h5nr" typeRef="boolean" />
       </input>
-      <input id="OrganDysfunctionSigns" label="organ dysfunction signs">
+      <input id="InputClause_1d7989s" label="organ dysfunction signs">
         <inputExpression id="LiteralExpression_02nn80w" typeRef="boolean" />
       </input>
-      <input id="Creatinine" label="creatinine &#62; 177 millimoles per liter">
+      <input id="InputClause_17cnsz6" label="creatinine &#62; 177 millimoles per liter">
         <inputExpression id="LiteralExpression_1gbtbim" typeRef="boolean" />
       </input>
-      <output id="PatientIsSeverelySeptic" label="" typeRef="string" />
+      <output id="OutputClause_17e3fu0" label="" typeRef="string" />
       <rule id="row-276013905-2">
         <description></description>
         <inputEntry id="UnaryTests_0vnu9ji">
@@ -500,22 +500,22 @@
       <requiredInput href="#InputData_1fimkar" />
     </informationRequirement>
     <decisionTable id="DecisionTable_1jr2tk9" hitPolicy="ANY">
-      <input id="SystolicBloodPressure" label="systolic blood pressure (millimeters mercury)">
+      <input id="InputClause_1qvowfn" label="systolic blood pressure (millimeters mercury)">
         <inputExpression id="LiteralExpression_1mo8uyw" typeRef="integer" />
       </input>
-      <input id="MeanArterialPressure" label="mean arterial pressure (millimeters mercury)">
+      <input id="InputClause_1op8bkm" label="mean arterial pressure (millimeters mercury)">
         <inputExpression id="LiteralExpression_1ywrgsx" typeRef="integer" />
       </input>
-      <input id="SystolicBloodPressureDecrease" label="systolic blood pressure (millimeters mercury) decrease from baseline">
+      <input id="InputClause_0am76jn" label="systolic blood pressure (millimeters mercury) decrease from baseline">
         <inputExpression id="LiteralExpression_0r9cs2j" typeRef="integer" />
       </input>
-      <input id="UnresponsiveToCrystalloidFluidChallenge" label="unresponsive to crystalloid fluid challenge of 20 to 40 (milliliters per kilogram)">
+      <input id="InputClause_0q3rpft" label="unresponsive to crystalloid fluid challenge of 20 to 40 (milliliters per kilogram)">
         <inputExpression id="LiteralExpression_0i8entw" typeRef="boolean" />
       </input>
-      <input id="PulmonaryCapillaryWedgePressure" label="pulmonary capillary wedge pressure (millimeters mercury)">
+      <input id="InputClause_043ta0l" label="pulmonary capillary wedge pressure (millimeters mercury)">
         <inputExpression id="LiteralExpression_1m378nu" typeRef="integer" />
       </input>
-      <output id="MoniitoringForSepticShock" typeRef="string" />
+      <output id="OutputClause_0g2s6n9" typeRef="string" />
       <rule id="row-603392296-1">
         <description></description>
         <inputEntry id="UnaryTests_04y5n4u">
