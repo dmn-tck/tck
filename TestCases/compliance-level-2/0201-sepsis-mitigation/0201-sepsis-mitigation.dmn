@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" id="definitions_1os5upx" name="Sepsis Mitigation" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="Decision_13nychf" name="Systemic Inflamatory Response Syndrome (SIRS) Evaluation &#38; Escalation">
+    <extensionElements>
+      <biodi:bounds x="524" y="103" width="180" height="80" />
+      <biodi:edge source="Decision_0ca22ma">
+        <biodi:waypoints x="297" y="282" />
+        <biodi:waypoints x="524" y="182" />
+      </biodi:edge>
+      <biodi:edge source="Decision_1dajcmt">
+        <biodi:waypoints x="615" y="281" />
+        <biodi:waypoints x="614" y="184" />
+      </biodi:edge>
+      <biodi:edge source="Decision_1rxxbae">
+        <biodi:waypoints x="910" y="283" />
+        <biodi:waypoints x="704" y="180" />
+      </biodi:edge>
+    </extensionElements>
+    <informationRequirement>
+      <requiredDecision href="#Decision_0ca22ma" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredDecision href="#Decision_1dajcmt" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredDecision href="#Decision_1rxxbae" />
+    </informationRequirement>
+    <decisionTable hitPolicy="FIRST">
+      <input id="PatientIsSeptic" label="patient is septic">
+        <inputExpression id="LiteralExpression_1i1va2n" typeRef="boolean" />
+      </input>
+      <input id="PatientIsSeverelySeptic" label="patient is severely septic">
+        <inputExpression id="LiteralExpression_1miwx5w" typeRef="boolean" />
+      </input>
+      <input id="PatientIsInSepticShock" label="patient is in septic shock">
+        <inputExpression id="LiteralExpression_1m5m1dz" typeRef="boolean" />
+      </input>
+      <output id="ActionRequired" label="Action required." typeRef="string" />
+      <rule id="row-276013905-4">
+        <description>sepsis evaluation</description>
+        <inputEntry id="UnaryTests_0z9ens6">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sqek4p">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18m7tds">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0146cju">
+          <text><![CDATA["Initiate Sepsis 6 Bundle."]]></text>
+        </outputEntry>
+      </rule>
+      <rule id="row-276013905-5">
+        <description>sepsis evaluation</description>
+        <inputEntry id="UnaryTests_049gt69">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wzu88t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ccuafa">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1e87o1o">
+          <text><![CDATA["Continue monitoring."]]></text>
+        </outputEntry>
+      </rule>
+      <rule id="row-276013905-6">
+        <description>severe sepsis evaluation</description>
+        <inputEntry id="UnaryTests_10lygqr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e6dbg3">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11g7p6y">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13af7ct">
+          <text><![CDATA["Continue Sepsis 6 Bundle."]]></text>
+        </outputEntry>
+      </rule>
+      <rule id="row-276013905-7">
+        <description>severe sepsis evaluation</description>
+        <inputEntry id="UnaryTests_05p75r0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0emq9s9">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0o43wut">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1u5uqpy">
+          <text><![CDATA["Continue monitoring."]]></text>
+        </outputEntry>
+      </rule>
+      <rule id="row-603392296-2">
+        <description>septic shock evaluation</description>
+        <inputEntry id="UnaryTests_1et36v4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vlkdkn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fnl4ik">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1lvvs2b">
+          <text><![CDATA["Initiate resuscitation."]]></text>
+        </outputEntry>
+      </rule>
+      <rule id="row-603392296-3">
+        <description>septic shock evaluation</description>
+        <inputEntry id="UnaryTests_07ji8fb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03paqkh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s8toy2">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10qtt0l">
+          <text><![CDATA["Continue monitoring."]]></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Decision_0ca22ma" name="Monitoring for Sepsis">
+    <extensionElements>
+      <biodi:bounds x="207" y="282" width="180" height="80" />
+      <biodi:edge source="InputData_1xi1ctt">
+        <biodi:waypoints x="267" y="401" />
+        <biodi:waypoints x="267" y="368" />
+      </biodi:edge>
+      <biodi:edge source="InputData_1a8ouhb">
+        <biodi:waypoints x="357" y="401" />
+        <biodi:waypoints x="357" y="364" />
+      </biodi:edge>
+    </extensionElements>
+    <informationRequirement>
+      <requiredInput href="#InputData_1xi1ctt" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredInput href="#InputData_1a8ouhb" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_1t37isz" hitPolicy="ANY">
+      <input id="BodyTemp" label="body temp. (degrees Celsius)">
+        <inputExpression id="LiteralExpression_0fnoh9o" typeRef="integer" />
+      </input>
+      <input id="HeartRate" label="heart rate (beats per minute)">
+        <inputExpression id="LiteralExpression_1c21znk" typeRef="integer" />
+      </input>
+      <input id="RespiratoryRate" label="respiratory rate (breaths per minute)">
+        <inputExpression id="LiteralExpression_1h0uy0r" typeRef="integer" />
+      </input>
+      <input id="ArterialCarbonDioxideTension" label="arterial carbon dioxide tension  (millimeters of mercury)">
+        <inputExpression id="LiteralExpression_1dk4fj6" typeRef="integer" />
+      </input>
+      <input id="AbnormalWhiteBloodCellCount" label="abnormal white blood cell count (number per microliter)">
+        <inputExpression id="LiteralExpression_0cg6hep" typeRef="integer" />
+      </input>
+      <input id="WhiteBloodCellImmatureBandForms" label="white blood cell immature band forms (percent in field of vision)">
+        <inputExpression id="LiteralExpression_1sjo7ij" typeRef="integer" />
+      </input>
+      <input id="NonDiabeticGlucose" label="non-diabetic glucose (millimoles per liter)">
+        <inputExpression id="LiteralExpression_07ups6j" typeRef="integer" />
+      </input>
+      <input id="AcutelyAlteredMentalState" label="acutely altered mental state">
+        <inputExpression id="LiteralExpression_18quqzw" typeRef="boolean" />
+      </input>
+      <input id="HistoryOrSignsSuggestNewInfection" label="history or signs suggest new infection">
+        <inputExpression id="LiteralExpression_0ks98c7" typeRef="boolean" />
+      </input>
+      <input id="Neutropenic" label="neutropenic">
+        <inputExpression id="LiteralExpression_18ti2g7" typeRef="boolean" />
+      </input>
+      <output id="OutputClause_18vb4rj" label="" typeRef="string" />
+      <rule id="row-542858530-1">
+        <description>Any two imply sepsis.</description>
+        <inputEntry id="UnaryTests_0nza8j6">
+          <text><![CDATA[> 38.3]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1htert1">
+          <text><![CDATA[> 90]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1przj4s">
+          <text><![CDATA[> 20]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0whxqqv">
+          <text><![CDATA[< 32]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06yxjzy">
+          <text><![CDATA[> 12000]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hfacx9">
+          <text><![CDATA[> 10]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bldore">
+          <text><![CDATA[> 7.7]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1p4nqlc">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10u7y08">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wbqidf">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="PatientIsSeptic">
+          <text><![CDATA["Patient is septic."]]></text>
+        </outputEntry>
+      </rule>
+      <rule id="row-542858530-2">
+        <description>Any two imply sepsis.</description>
+        <inputEntry id="UnaryTests_1epfgx0">
+          <text><![CDATA[< 36.0]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iifljc">
+          <text><![CDATA[> 90]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06v9toe">
+          <text><![CDATA[> 20]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_073x2lw">
+          <text><![CDATA[< 32]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0og07th">
+          <text><![CDATA[< 4000]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gm1lcc">
+          <text><![CDATA[> 10]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1k6vrm6">
+          <text><![CDATA[> 7.7]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cn33hf">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0h66uzf">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ma7e7e">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lgccpw">
+          <text><![CDATA["Patient is septic."]]></text>
+        </outputEntry>
+      </rule>
+      <rule id="table-85385970-2">
+        <description>Any one implies sepsis.</description>
+        <inputEntry id="UnaryTests_0mxitu7">
+          <text><![CDATA[> 38.3]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1eqay3s">
+          <text><![CDATA[> 90]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kc60wc">
+          <text><![CDATA[> 20]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0l05yoi">
+          <text><![CDATA[< 32]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06yczgi">
+          <text><![CDATA[> 12000]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sgf6g9">
+          <text><![CDATA[> 10]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0q90flv">
+          <text><![CDATA[> 7.7]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12ykm1b">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_131h5ua">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vtk8do">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0i051jh">
+          <text><![CDATA["Patient is septic."]]></text>
+        </outputEntry>
+      </rule>
+      <rule id="table-85385970-3">
+        <description>Any one implies sepsis.</description>
+        <inputEntry id="UnaryTests_1o2a073">
+          <text><![CDATA[< 36.0]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tw2e2c">
+          <text><![CDATA[> 90]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07fsqy8">
+          <text><![CDATA[> 20]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b8g4kq">
+          <text><![CDATA[< 32]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11n32gs">
+          <text><![CDATA[> 4000]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vetyk7">
+          <text><![CDATA[> 10]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qq9yzd">
+          <text><![CDATA[> 7.7]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0byisg8">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pif0ac">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tp35g2">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wioa22">
+          <text><![CDATA["Patient is septic."]]></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <knowledgeSource id="KnowledgeSource_0iygjp2" name="https://bit.ly/2GTwBm4, https://bit.ly/2pVvPwS">
+    <extensionElements>
+      <biodi:bounds x="184" y="454" width="100" height="63" />
+      <biodi:edge source="Decision_0ca22ma">
+        <biodi:waypoints x="236" y="364" />
+        <biodi:waypoints x="236" y="454" />
+      </biodi:edge>
+    </extensionElements>
+    <authorityRequirement>
+      <requiredDecision href="#Decision_0ca22ma" />
+    </authorityRequirement>
+  </knowledgeSource>
+  <knowledgeSource id="KnowledgeSource_086izia" name="https://bit.ly/2pVvPwS">
+    <extensionElements>
+      <biodi:bounds x="506" y="453" width="100" height="63" />
+      <biodi:edge source="Decision_1dajcmt">
+        <biodi:waypoints x="557" y="361" />
+        <biodi:waypoints x="557" y="453" />
+      </biodi:edge>
+    </extensionElements>
+    <authorityRequirement>
+      <requiredDecision href="#Decision_1dajcmt" />
+    </authorityRequirement>
+  </knowledgeSource>
+  <decision id="Decision_1dajcmt" name="Monitoring for Severe Sepsis">
+    <extensionElements>
+      <biodi:bounds x="525" y="281" width="180" height="80" />
+      <biodi:edge source="InputData_14g89av">
+        <biodi:waypoints x="674" y="398" />
+        <biodi:waypoints x="674" y="364" />
+      </biodi:edge>
+    </extensionElements>
+    <informationRequirement>
+      <requiredInput href="#InputData_14g89av" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_0irfmul" hitPolicy="ANY">
+      <input id="MeanArterialPressure" label="mean arterial pressure (millimeters mercury)">
+        <inputExpression id="LiteralExpression_0otih4k" typeRef="integer" />
+      </input>
+      <input id="SystolicBloodPressure" label="systolic blood pressure (millimeters mercury)">
+        <inputExpression id="LiteralExpression_08dsyn0" typeRef="integer" />
+      </input>
+      <input id="UrineOutput" label="urine output (milliliters per kilogram per hour)">
+        <inputExpression id="LiteralExpression_1qfngbp" typeRef="integer" />
+      </input>
+      <input id="InternationalNormalizedRatio" label="international normalized ratio">
+        <inputExpression id="LiteralExpression_1uyfv33" typeRef="integer" />
+      </input>
+      <input id="ActivatedPartialThromboplastinTime" label="activated partial thromboplastin time (seconds)">
+        <inputExpression id="LiteralExpression_0aobblk" typeRef="integer" />
+      </input>
+      <input id="Billirubin" label="billirubin (micromoles per deciliter)">
+        <inputExpression id="LiteralExpression_1d046a5" typeRef="integer" />
+      </input>
+      <input id="Lactate" label="lactate (millimoles per liter)">
+        <inputExpression id="LiteralExpression_1tvrxxd" typeRef="integer" />
+      </input>
+      <input id="NeedOxygen" label="need oxygen fo maintain blood oxygen saturation level &#62; 90%">
+        <inputExpression id="LiteralExpression_1rn2k16" typeRef="boolean" />
+      </input>
+      <input id="Platelets" label="platelets &#60; 100 X 10 to 9th power per liter">
+        <inputExpression id="LiteralExpression_030h5nr" typeRef="boolean" />
+      </input>
+      <input id="OrganDysfunctionSigns" label="organ dysfunction signs">
+        <inputExpression id="LiteralExpression_02nn80w" typeRef="boolean" />
+      </input>
+      <input id="Creatinine" label="creatinine &#62; 177 millimoles per liter">
+        <inputExpression id="LiteralExpression_1gbtbim" typeRef="boolean" />
+      </input>
+      <output id="PatientIsSeverelySeptic" label="" typeRef="string" />
+      <rule id="row-276013905-2">
+        <description></description>
+        <inputEntry id="UnaryTests_0vnu9ji">
+          <text><![CDATA[< 65]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02jjjji">
+          <text><![CDATA[< 90]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13q8uqo">
+          <text><![CDATA[< 0.5]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cyu3hp">
+          <text><![CDATA[>= 1.5]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j2hnrj">
+          <text><![CDATA[> 60]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02yreo6">
+          <text><![CDATA[> 34]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fv8mpt">
+          <text><![CDATA[> 2]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j8dy95">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1797k5z">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ryan0m">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kozbmi">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08gxrvj">
+          <text><![CDATA["Patient is severely septic."]]></text>
+        </outputEntry>
+      </rule>
+      <rule id="table-586737094-2">
+        <description></description>
+        <inputEntry id="UnaryTests_121aa3w">
+          <text><![CDATA[< 65]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s58l5s">
+          <text><![CDATA[< 90]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jwirr3">
+          <text><![CDATA[< 0.5]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nf1rbh">
+          <text><![CDATA[>= 1.5]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rfl58p">
+          <text><![CDATA[> 60]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0asd8w0">
+          <text><![CDATA[> 34]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10q1t8s">
+          <text><![CDATA[> 4]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q50p4o">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16d7j5f">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sef4xh">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0z8rth2">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1casdy8">
+          <text><![CDATA["Patient is severely septic."]]></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_14g89av" name="patient EHR and/or monitoring device">
+    <extensionElements>
+      <biodi:bounds x="611" y="398" width="125" height="45" />
+    </extensionElements>
+  </inputData>
+  <inputData id="InputData_1a8ouhb" name="patient EHR and/or monitoring device">
+    <extensionElements>
+      <biodi:bounds x="294" y="401" width="125" height="45" />
+    </extensionElements>
+  </inputData>
+  <decision id="Decision_1rxxbae" name="Moniitoring for Septic Shock">
+    <extensionElements>
+      <biodi:bounds x="820" y="283" width="180" height="80" />
+      <biodi:edge source="KnowledgeSource_1biq7mi">
+        <biodi:waypoints x="856" y="459" />
+        <biodi:waypoints x="856" y="363" />
+      </biodi:edge>
+      <biodi:edge source="InputData_1fimkar">
+        <biodi:waypoints x="976" y="397" />
+        <biodi:waypoints x="976" y="363" />
+      </biodi:edge>
+    </extensionElements>
+    <informationRequirement>
+      <requiredInput href="#InputData_1fimkar" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_1jr2tk9" hitPolicy="ANY">
+      <input id="SystolicBloodPressure" label="systolic blood pressure (millimeters mercury)">
+        <inputExpression id="LiteralExpression_1mo8uyw" typeRef="integer" />
+      </input>
+      <input id="MeanArterialPressure" label="mean arterial pressure (millimeters mercury)">
+        <inputExpression id="LiteralExpression_1ywrgsx" typeRef="integer" />
+      </input>
+      <input id="SystolicBloodPressureDecrease" label="systolic blood pressure (millimeters mercury) decrease from baseline">
+        <inputExpression id="LiteralExpression_0r9cs2j" typeRef="integer" />
+      </input>
+      <input id="UnresponsiveToCrystalloidFluidChallenge" label="unresponsive to crystalloid fluid challenge of 20 to 40 (milliliters per kilogram)">
+        <inputExpression id="LiteralExpression_0i8entw" typeRef="boolean" />
+      </input>
+      <input id="PulmonaryCapillaryWedgePressure" label="pulmonary capillary wedge pressure (millimeters mercury)">
+        <inputExpression id="LiteralExpression_1m378nu" typeRef="integer" />
+      </input>
+      <output id="MoniitoringForSepticShock" typeRef="string" />
+      <rule id="row-603392296-1">
+        <description></description>
+        <inputEntry id="UnaryTests_04y5n4u">
+          <text><![CDATA[< 90]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nl0fnk">
+          <text><![CDATA[< 65]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_032a32y">
+          <text><![CDATA[>= 40]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mu2u4f">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ysd08z">
+          <text><![CDATA[>= 12]]></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0s78qx6">
+          <text><![CDATA["Patient is in septic shock."]]></text>
+        </outputEntry>
+      </rule>
+      <rule id="table-720371927-1">
+        <description></description>
+        <inputEntry id="UnaryTests_11f20aj">
+          <text><![CDATA[< 90]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18v12ue">
+          <text><![CDATA[< 65]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n6j5f9">
+          <text><![CDATA[>= 40]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14w1oay">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02fnbz0">
+          <text><![CDATA[<= 20]]></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16yvg2q">
+          <text><![CDATA["Patient is in septic shock."]]></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_1fimkar" name="patient EHR and/or monitoring device">
+    <extensionElements>
+      <biodi:bounds x="913" y="397" width="125" height="45" />
+    </extensionElements>
+  </inputData>
+  <knowledgeSource id="KnowledgeSource_1biq7mi" name="https://bit.ly/2pVvPwS">
+    <extensionElements>
+      <biodi:bounds x="803" y="456" width="100" height="63" />
+      <biodi:edge source="Decision_1rxxbae">
+        <biodi:waypoints x="854" y="366" />
+        <biodi:waypoints x="853" y="456" />
+      </biodi:edge>
+    </extensionElements>
+    <authorityRequirement>
+      <requiredDecision href="#Decision_1rxxbae" />
+    </authorityRequirement>
+  </knowledgeSource>
+</definitions>

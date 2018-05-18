@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase">
+	<modelName>0201-sepsis-mitigation.dmn</modelName>
+	<labels>
+		<label>Compliance Level 2</label>
+		<label>Literal Expression</label>
+		<label>Decision Table: Single Output</label>
+	</labels>
+	<testCase id="1">
+		<inputNode name="patient is septic">
+			<value>true</value>
+		</inputNode>
+		<inputNode name="patient is severely septic">
+			<value>true</value>
+		</inputNode>
+		<inputNode name="patient is in septic shock">
+			<value>true</value>
+		</inputNode>
+		<resultNode name="Systemic Inflamatory Response Syndrome (SIRS) Evaluation &amp; Escalation">
+			<expected>
+				<value>Initiate resuscitation.</value>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="2">
+		<inputNode name="body temp. (degrees Celsius)">
+			<value>39</value>
+		</inputNode>
+		<inputNode name="heart rate (beats per minute)">
+			<value>91</value>
+		</inputNode>
+		<inputNode name="respiratory rate (breaths per minute)">
+			<value>20</value>
+		</inputNode>
+		<inputNode name="arterial carbon dioxide tension  (millimeters of mercury)">
+			<value>32</value>
+		</inputNode>
+		<inputNode name="abnormal white blood cell count (number per microliter)">
+			<value>12000</value>
+		</inputNode>
+		<inputNode name="white blood cell immature band forms (percent in field of vision)">
+			<value>10</value>
+		</inputNode>
+		<inputNode name="non-diabetic glucose (millimoles per liter)">
+			<value>7.7</value>
+		</inputNode>
+		<inputNode name="acutely altered mental state">
+			<value>false</value>
+		</inputNode>
+		<inputNode name="history or signs suggest new infection">
+			<value>false</value>
+		</inputNode>
+		<inputNode name="neutropenic">
+			<value>false</value>
+		</inputNode>
+		<resultNode name="Monitoring for Sepsis">
+			<expected>
+				<value>Patient is septic.</value>
+			</expected>
+		</resultNode>
+	</testCase>
+</testCases>
