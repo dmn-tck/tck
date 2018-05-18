@@ -26,13 +26,13 @@
       <requiredDecision href="#Decision_1rxxbae" />
     </informationRequirement>
     <decisionTable hitPolicy="FIRST">
-      <input id="PatientIsSeptic" label="patient is septic">
+      <input id="PatientIsSepticIn" label="patient is septic">
         <inputExpression id="LiteralExpression_1i1va2n" typeRef="boolean" />
       </input>
-      <input id="PatientIsSeverelySeptic" label="patient is severely septic">
+      <input id="PatientIsSeverelySepticIn" label="patient is severely septic">
         <inputExpression id="LiteralExpression_1miwx5w" typeRef="boolean" />
       </input>
-      <input id="PatientIsInSepticShock" label="patient is in septic shock">
+      <input id="PatientIsInSepticShockIn" label="patient is in septic shock">
         <inputExpression id="LiteralExpression_1m5m1dz" typeRef="boolean" />
       </input>
       <output id="ActionRequired" label="Action required." typeRef="string" />
