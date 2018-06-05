@@ -66,7 +66,7 @@
         <dmn11:text>num-(floor(num/divisor)*divisor)</dmn11:text>
       </dmn11:literalExpression>
     </dmn11:encapsulatedLogic>
-    <dmn11:variable id="_1fe7cdad-f987-4257-bd57-bc20a1b083f8" name="remainder" typeRef="feel:number"/>
+    <dmn11:variable id="_1fe7cdad-f987-4257-bd57-bc20a1b083f8" name="remainder"/>
   </dmn11:businessKnowledgeModel>
   <dmn11:businessKnowledgeModel id="_f184a8e1-8808-4e5b-95e2-5d232563d35d" name="single encode to hex">
     <dmn11:encapsulatedLogic xmlns:drools="http://www.drools.org/kie/dmn/1.1" drools:kind="F" id="_69e87c91-f53e-422e-badf-fcdb7e85214c">
@@ -149,7 +149,7 @@
         </dmn11:contextEntry>
       </dmn11:context>
     </dmn11:encapsulatedLogic>
-    <dmn11:variable id="_67626047-2376-4f3f-a104-24030bf96a83" name="single encode to hex" typeRef="feel:string"/>
+    <dmn11:variable id="_67626047-2376-4f3f-a104-24030bf96a83" name="single encode to hex"/>
   </dmn11:businessKnowledgeModel>
   <dmn11:businessKnowledgeModel id="_c36b4a7d-0eb1-4714-b6cd-ae50c8fabcc5" name="to hex">
     <dmn11:encapsulatedLogic xmlns:drools="http://www.drools.org/kie/dmn/1.1" drools:kind="F" id="_eef86b24-d4cb-4358-9640-fcb56edb5163">
@@ -160,7 +160,7 @@ then "0" + single encode to hex(num)
 else single encode to hex(floor(num/16)) + single encode to hex(remainder(num, 16))</dmn11:text>
       </dmn11:literalExpression>
     </dmn11:encapsulatedLogic>
-    <dmn11:variable id="_e18903c9-019d-4a9f-b9d0-ea088be5524a" name="to hex" typeRef="feel:string"/>
+    <dmn11:variable id="_e18903c9-019d-4a9f-b9d0-ea088be5524a" name="to hex" />
     <dmn11:knowledgeRequirement>
       <dmn11:requiredKnowledge href="#_164dc6ba-de3d-44e6-8a19-b6480354e6b9"/>
     </dmn11:knowledgeRequirement>
