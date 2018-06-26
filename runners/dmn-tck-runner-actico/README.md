@@ -55,10 +55,10 @@ Command line arguments:
  Examples:
 
  Execute all DMN TCK test cases:
- java -jar acticoDmnTckTestRunner.jar -tckdirs ./TestCases/compliance-level-2,./TestCases/compliance-level-3 -result result.csv
+ java -jar actico-dmn-tck-test-runner.jar -tckdirs ./TestCases/compliance-level-2,./TestCases/compliance-level-3 -result result.csv
 
  Execute a single DMN TCK test case:
- java -jar acticoDmnTckTestRunner.jar -tckdir ./TestCases/compliance-level-3/0006-join -result ./result.csv
+ java -jar actico-dmn-tck-test-runner.jar -tckdir ./TestCases/compliance-level-3/0006-join -result ./result.csv
 
 
  NOTE: 
