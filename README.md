@@ -47,3 +47,16 @@ To be clear, there are several things that are not the goals of this group
 * Similarly, we strive to implement as much of the spec as possible, but if the spec is too expansive we may limit the scope to a subset that we all agree upon.
 * If the spec is ambiguous, we will make an interpretation of the spec according to what can actually be realized in running code, document that, and remain consistent to that in the future.
 
+## How to run the tests youself
+
+A couple of vendors provide [Java-based runners](/runners), which you can run using the following steps:
+1. Install a [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+2. Install [Apache Maven](http://maven.apache.org/).
+3. Download the [DMN TCK including the runners](https://github.com/dmn-tck/tck/archive/master.zip) and extract it.
+4. Open a terminal in the `runners` directory and run the tests in one or more engines using e.g.
+```sh
+$ mvn clean install -P camunda,drools,jdmn
+```
+5. Check the log output for errors or exceptions and compare number of errors or skipped tests reported for each vendor with what's on the [TCK website](https://dmn-tck.github.io/tck/). For details on failed tests you can also look into the `target/surefire-reports` directory within each executed runner's sub-directory.
+
+If you have trouble executing a runner consult the `README.md` file in its sub-directory or contact the vendor.

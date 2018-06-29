@@ -519,7 +519,8 @@ public class Reporter {
                                            properties.getProperty( "product.version" ).trim(),
                                            properties.getProperty( "product.comment" ).trim(),
                                            testResults,
-                                           lastUpdate );
+                                           lastUpdate,
+                                           Optional.ofNullable(properties.getProperty("instructions.url")).map(String::trim).orElse(null));
                     results.put( v.getName()+" / "+v.getVersion(), v );
                     logger.info( testResults.size() + " test results loaded for vendor "+v );
                 }

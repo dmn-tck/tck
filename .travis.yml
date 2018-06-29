@@ -1,0 +1,2 @@
+language: java
+script: cd runners && mvn verify -B -Pvalidation

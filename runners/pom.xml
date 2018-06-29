@@ -20,6 +20,14 @@
 
   <profiles>
     <profile>
+      <id>validation</id>
+      <modules>
+        <module>dmn-tck-validation</module>
+      </modules>
+    </profile>
+    
+    <!-- Vendor's runners Profiles: -->
+    <profile>
       <id>drools</id>
       <activation>
         <file>
@@ -39,6 +47,28 @@
       </activation>
       <modules>
         <module>dmn-tck-runner-trisotech</module>
+      </modules>
+    </profile>
+    <profile>
+      <id>jdmn</id>
+      <activation>
+        <file>
+          <exists>enable-jdmn.flag</exists>
+        </file>
+      </activation>
+      <modules>
+        <module>dmn-tck-runner-jdmn</module>
+      </modules>
+    </profile>
+    <profile>
+      <id>camunda</id>
+      <activation>
+        <file>
+          <exists>enable-camunda.flag</exists>
+        </file>
+      </activation>
+      <modules>
+        <module>dmn-tck-runner-camunda</module>
       </modules>
     </profile>
   </profiles>

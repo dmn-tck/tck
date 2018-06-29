@@ -196,6 +196,13 @@
                                     <dt>Failed: </dt><dd>${vendor.failed}</dd>
                                     <dt>Skipped: </dt><dd>${header.totalTests - vendor.succeeded - vendor.failed}</dd>
                                     <dt>Info: </dt><dd>${vendor.comment}</dd>
+                                    <dt>Instructions: </dt><dd>
+                                                                <#if vendor.instructionsUrl?has_content>
+                                                                    to execute the tests and reproduce the results, please follow the vendor provided instructions <a href="${vendor.instructionsUrl}" target="_blank">at this link <span class="fa fa-external-link"></span></a>.
+                                                                <#else>
+                                                                    this vendor did not provide instructions to execute the tests and reproduce the results. Please contact the vendor directly.
+                                                                </#if>
+                                                           </dd>
                                 </dl>
                             </div>
                         </div>

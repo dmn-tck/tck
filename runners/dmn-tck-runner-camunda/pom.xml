@@ -1,0 +1,80 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.omg.dmn</groupId>
+  <artifactId>tck-runner-camunda</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>DMN :: TCK :: jUnit Runner :: Camunda</name>
+
+  <properties>
+    <dmn-scala.version>1.0.0-SNAPSHOT</dmn-scala.version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>org.camunda.bpm.model</groupId>
+  			<artifactId>camunda-dmn-model</artifactId>
+  			<version>7.9.0-SNAPSHOT</version>
+  		</dependency>
+  	</dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.omg.dmn</groupId>
+      <artifactId>tck-marshaller</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.omg.dmn</groupId>
+      <artifactId>tck-runner</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+    </dependency>
+
+    <!-- log dependencies -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.7</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.1.3</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- test dependencies -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+    </dependency>
+
+    <!-- Camunda dependencies -->
+  
+    <dependency>
+      <groupId>org.camunda.bpm.extension.dmn.scala</groupId>
+      <artifactId>dmn-engine</artifactId>
+      <version>${dmn-scala.version}</version>
+    </dependency>
+
+	<dependency>
+	    <groupId>com.goldmansachs.jdmn</groupId>
+	    <artifactId>jdmn-core</artifactId>
+	    <version>1.2.0</version>
+	</dependency>
+  </dependencies>
+
+  <repositories>
+    <repository>
+      <id>camunda-bpm-nexus</id>
+      <name>Camunda BPM Maven Repository</name>
+      <url>https://app.camunda.com/nexus/content/groups/public</url>
+    </repository>
+  </repositories>
+</project>
