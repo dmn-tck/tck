@@ -92,7 +92,7 @@
                     </div>
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Tests:</strong> 576</p>
+                            <p><strong>Tests:</strong> 579</p>
                         </small>
                     </div>
                     <div class="col-md-2">
@@ -114,7 +114,7 @@
                 };
 
                 var color = Chart.helpers.color;
-                var cbl3_data = {
+                var cbl4_data = {
                     labels: [
                         "Business Knowledge Model","Compliance Level 2","Compliance Level 3","Context","Data Type : String","Data Type: Boolean","Data Type: Collection","Data Type: Date","Data Type: Function","Data Type: Number","Data Type: String","Data Type: Structure","Data Type: Time","Data Type: Years and Months Duration","Decision Table: Multiple Output","Decision Table: Single Output","FEEL Arithmetic","FEEL Conditionals","FEEL Constants","FEEL Filter (10.3.2.5)","FEEL Function Literals","FEEL Functions: date and time","FEEL Functions: list","FEEL Functions: lists","FEEL Functions: number","FEEL Functions: numeric","FEEL Functions: string","FEEL Functions: strings","FEEL Iteration","FEEL List","FEEL List Operator","FEEL Quantifiers","FEEL Relation","FEEL Special-character Names","Function Definition","Function Invocation","Hit Policy: ANY","Hit Policy: COLLECT","Hit Policy: PRIORITY","Hit Policy: UNIQUE","Item Definition","Literal Expression","Literal Function Invocation","Relation"
                     ],
@@ -177,24 +177,24 @@
                             borderColor: window.chartColors.yellow,
                             borderWidth: 1,
                             data: [
-                                15,
+                                18,
                                 59,
-                                490,
-                                12,
+                                493,
+                                15,
                                 6,
                                 52,
                                 47,
                                 11,
                                 6,
-                                116,
-                                144,
-                                22,
+                                119,
+                                147,
+                                25,
                                 1,
                                 36,
                                 0,
-                                15,
-                                86,
-                                8,
+                                18,
+                                89,
+                                11,
                                 44,
                                 8,
                                 7,
@@ -202,9 +202,9 @@
                                 32,
                                 23,
                                 22,
-                                4,
+                                7,
                                 27,
-                                95,
+                                98,
                                 6,
                                 34,
                                 4,
@@ -216,10 +216,10 @@
                                 0,
                                 11,
                                 5,
-                                5,
-                                60,
-                                491,
-                                5,
+                                8,
+                                63,
+                                494,
+                                8,
                                 2
                             ]
                         },
@@ -277,7 +277,7 @@
                         }
                     ]
                 };
-                var cblp3_data = {
+                var cblp4_data = {
                     labels: [
                         "Business Knowledge Model","Compliance Level 2","Compliance Level 3","Context","Data Type : String","Data Type: Boolean","Data Type: Collection","Data Type: Date","Data Type: Function","Data Type: Number","Data Type: String","Data Type: Structure","Data Type: Time","Data Type: Years and Months Duration","Decision Table: Multiple Output","Decision Table: Single Output","FEEL Arithmetic","FEEL Conditionals","FEEL Constants","FEEL Filter (10.3.2.5)","FEEL Function Literals","FEEL Functions: date and time","FEEL Functions: list","FEEL Functions: lists","FEEL Functions: number","FEEL Functions: numeric","FEEL Functions: string","FEEL Functions: strings","FEEL Iteration","FEEL List","FEEL List Operator","FEEL Quantifiers","FEEL Relation","FEEL Special-character Names","Function Definition","Function Invocation","Hit Policy: ANY","Hit Policy: COLLECT","Hit Policy: PRIORITY","Hit Policy: UNIQUE","Item Definition","Literal Expression","Literal Function Invocation","Relation"
                     ],
@@ -297,14 +297,14 @@
                             0,
                             0,
                             0,
-                            19,
+                            18,
                             11,
-                            22,
+                            20,
                             0,
                             0,
                             100,
-                            60,
-                            13,
+                            55,
+                            12,
                             0,
                             0,
                             0,
@@ -327,7 +327,7 @@
                             100,
                             39,
                             55,
-                            55,
+                            43,
                             19,
                             3,
                             0,
@@ -349,14 +349,14 @@
                             100,
                             100,
                             100,
-                            81,
+                            82,
                             89,
-                            78,
+                            80,
                             100,
                             100,
                             0,
-                            40,
-                            87,
+                            45,
+                            88,
                             100,
                             100,
                             100,
@@ -379,7 +379,7 @@
                             0,
                             61,
                             45,
-                            45,
+                            57,
                             81,
                             97,
                             100,
@@ -443,10 +443,10 @@
 
                 window.onload = function() {
                     // chart by test numbers
-                    var ctx = document.getElementById("cbl3").getContext("2d");
-                    window.cbl3 = new Chart(ctx, {
+                    var ctx = document.getElementById("cbl4").getContext("2d");
+                    window.cbl4 = new Chart(ctx, {
                         type: 'horizontalBar',
-                        data: cbl3_data,
+                        data: cbl4_data,
                         options: {
                             // Elements options apply to all of the options unless overridden in a dataset
                             // In this case, we are setting the border of each horizontal bar to be 2px wide
@@ -475,10 +475,10 @@
                     });
 
                     // chart by test percentage
-                    var ctxp = document.getElementById("cblp3").getContext("2d");
-                    window.cblp3 = new Chart(ctxp, {
+                    var ctxp = document.getElementById("cblp4").getContext("2d");
+                    window.cblp4 = new Chart(ctxp, {
                         type: 'horizontalBar',
-                        data: cblp3_data,
+                        data: cblp4_data,
                         options: {
                             // Elements options apply to all of the options unless overridden in a dataset
                             // In this case, we are setting the border of each horizontal bar to be 2px wide
@@ -519,12 +519,12 @@
             <div class="tab-content">
                 <div id="tab1" class="tab-pane fade active in">
                     <div id="chart_by_percent" style="width: 100%;">
-                        <canvas id="cblp3"></canvas>
+                        <canvas id="cblp4"></canvas>
                     </div>
                 </div>
                 <div id="tab2" class="tab-pane fade">
                     <div id="chart_by_numbers" style="width: 100%;">
-                        <canvas id="cbl3"></canvas>
+                        <canvas id="cbl4"></canvas>
                     </div>
                 </div>
                 <div id="tab3" class="tab-pane fade">
@@ -546,7 +546,7 @@
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb0','Business Knowledge Model')">Business Knowledge Model</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/15</small></span>
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/18</small></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -558,13 +558,13 @@
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb2','Compliance Level 3')">Compliance Level 3</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-alert icon-yellow" aria-hidden="true"><br/><small>7/497</small></span>
+                                        <span class="glyphicon glyphicon-alert icon-yellow" aria-hidden="true"><br/><small>7/500</small></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb3','Context')">Context</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/12</small></span>
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/15</small></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -600,19 +600,19 @@
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb9','Data Type: Number')">Data Type: Number</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-alert icon-yellow" aria-hidden="true"><br/><small>26/142</small></span>
+                                        <span class="glyphicon glyphicon-alert icon-yellow" aria-hidden="true"><br/><small>26/145</small></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb10','Data Type: String')">Data Type: String</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-alert icon-yellow" aria-hidden="true"><br/><small>17/161</small></span>
+                                        <span class="glyphicon glyphicon-alert icon-yellow" aria-hidden="true"><br/><small>17/164</small></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb11','Data Type: Structure')">Data Type: Structure</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-alert icon-yellow" aria-hidden="true"><br/><small>6/28</small></span>
+                                        <span class="glyphicon glyphicon-alert icon-yellow" aria-hidden="true"><br/><small>6/31</small></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -636,19 +636,19 @@
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb15','Decision Table: Single Output')">Decision Table: Single Output</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-alert icon-yellow" aria-hidden="true"><br/><small>22/37</small></span>
+                                        <span class="glyphicon glyphicon-alert icon-yellow" aria-hidden="true"><br/><small>22/40</small></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb16','FEEL Arithmetic')">FEEL Arithmetic</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-alert icon-yellow" aria-hidden="true"><br/><small>12/98</small></span>
+                                        <span class="glyphicon glyphicon-alert icon-yellow" aria-hidden="true"><br/><small>12/101</small></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb17','FEEL Conditionals')">FEEL Conditionals</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/8</small></span>
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/11</small></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -696,7 +696,7 @@
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb25','FEEL Functions: numeric')">FEEL Functions: numeric</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/4</small></span>
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/7</small></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -708,7 +708,7 @@
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb27','FEEL Functions: strings')">FEEL Functions: strings</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/95</small></span>
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/98</small></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -780,25 +780,25 @@
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb39','Hit Policy: UNIQUE')">Hit Policy: UNIQUE</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-alert icon-yellow" aria-hidden="true"><br/><small>6/11</small></span>
+                                        <span class="glyphicon glyphicon-alert icon-yellow" aria-hidden="true"><br/><small>6/14</small></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb40','Item Definition')">Item Definition</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-alert icon-yellow" aria-hidden="true"><br/><small>14/74</small></span>
+                                        <span class="glyphicon glyphicon-alert icon-yellow" aria-hidden="true"><br/><small>14/77</small></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb41','Literal Expression')">Literal Expression</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-alert icon-yellow" aria-hidden="true"><br/><small>13/504</small></span>
+                                        <span class="glyphicon glyphicon-alert icon-yellow" aria-hidden="true"><br/><small>13/507</small></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb42','Literal Function Invocation')">Literal Function Invocation</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/5</small></span>
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/8</small></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -828,7 +828,7 @@
 <!-- pre-footer -->
 <div class="pre-footer">
     <div class="last-updated">
-        <p>Last updated:</strong> 1-Jun-2018 2:49:34 PM</p>
+        <p>Last updated:</strong> 02-Jul-2018 10:33:36</p>
     </div>
 </div>
 <div class="footer">
