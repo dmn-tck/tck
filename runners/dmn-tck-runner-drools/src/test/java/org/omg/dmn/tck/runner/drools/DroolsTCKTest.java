@@ -12,14 +12,28 @@
 package org.omg.dmn.tck.runner.drools;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.FilenameFilter;
+import java.io.IOException;
+import java.io.UncheckedIOException;
 import java.math.BigDecimal;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.file.FileVisitResult;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.SimpleFileVisitor;
+import java.nio.file.attribute.BasicFileAttributes;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.stream.Collectors;
 
 import javax.xml.bind.JAXBElement;
@@ -57,8 +71,48 @@ public class DroolsTCKTest
    implements DmnTckVendorTestSuite
 {
 
+   private static final SimpleFileVisitor<Path> rmrf = new SimpleFileVisitor<Path>() {
+      @Override
+      public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+         Files.delete(file);
+         return FileVisitResult.CONTINUE;
+      }
+
+      @Override
+      public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
+         Files.delete(dir);
+         return FileVisitResult.CONTINUE;
+      }
+   };
    private static final Logger logger = LoggerFactory.getLogger(DroolsTCKTest.class);
    public static final BigDecimal NUMBER_COMPARISON_PRECISION = new BigDecimal("0.00000001");
+
+   File propsFile;
+   Properties props;
+
+   {
+      File dir = new File("../../TestResults/Drools");
+      String[] versions = dir.list((f, s) -> f.isDirectory());
+      assert versions != null;
+      Arrays.sort(versions);
+      propsFile = new File("../../TestResults/Drools/" + versions[versions.length - 1] + "/tck_results.properties");
+      if (versions.length > 1) {
+         for (int i = 0; i < versions.length - 1; i++) {
+            Path toRemove = Paths.get("../../TestResults/Drools/" + versions[i]);
+            try {
+               Files.walkFileTree(toRemove, rmrf);
+            } catch (IOException e) {
+               logger.warn("Exception while removing old test results", e);
+            }
+         }
+      }
+      props = new Properties();
+      try {
+         props.load(new FileReader(propsFile));
+      } catch (IOException e) {
+         throw new UncheckedIOException(e);
+      }
+   }
 
    @Override
    public List<URL> getTestCases()
@@ -277,7 +331,17 @@ public class DroolsTCKTest
    @Override
    public void afterTestCase(TestSuiteContext context, TestCases testCases)
    {
-      // nothing to do
+      props.setProperty("last.update", ZonedDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE));
+      try {
+         props.store(new FileOutputStream(propsFile), null);
+      } catch (IOException e) {
+         logger.warn("Exception while updating last update date", e);
+      }
+   }
+
+   @Override
+   public String getResultFileName() {
+      return "../../TestResults/Drools/" + props.getProperty("product.version") + "/tck_results.csv";
    }
 
    protected DMNRuntime createRuntime(URL modelUrl)
