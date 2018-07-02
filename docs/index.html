@@ -58,7 +58,7 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    576, 0, 0
+                    579, 0, 0
                 ]
             }
         ]
@@ -81,7 +81,7 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    572, 0, 4
+                    572, 0, 7
                 ]
             }
         ]
@@ -104,7 +104,7 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    576, 0, 0
+                    576, 0, 3
                 ]
             }
         ]
@@ -127,7 +127,7 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    28, 0, 548
+                    576, 0, 3
                 ]
             }
         ]
@@ -150,7 +150,7 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    40, 0, 536
+                    28, 0, 551
                 ]
             }
         ]
@@ -173,7 +173,7 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    576, 0, 0
+                    40, 0, 539
                 ]
             }
         ]
@@ -196,7 +196,30 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    576, 0, 0
+                    576, 0, 3
+                ]
+            }
+        ]
+    };
+        var c_data7 = {
+        labels: [
+            "Succeeded", "Failed", "Skipped"
+        ],
+        datasets: [
+            {
+                backgroundColor: [
+                    color(window.chartColors.green).alpha(0.5).rgbString(),
+                    color(window.chartColors.red).alpha(0.5).rgbString(),
+                    color(window.chartColors.yellow).alpha(0.5).rgbString()
+                ],
+                borderColor: [
+                    window.chartColors.grey,
+                    window.chartColors.grey,
+                    window.chartColors.grey
+                ],
+                borderWidth: 1,
+                data: [
+                    579, 0, 0
                 ]
             }
         ]
@@ -308,6 +331,21 @@
                 }
             }
         });
+        var ctx = document.getElementById("chart7").getContext("2d");
+        window.chart7 = new Chart(ctx, {
+            type: 'doughnut',
+            data: c_data7,
+            options: {
+                responsive: true,
+                legend: {
+                    position: 'right',
+                },
+                title: {
+                    display: true,
+                    text: 'Submitted results'
+                }
+            }
+        });
     };
 
 </script>
@@ -354,12 +392,12 @@
 
             <div class="list-group list-view-pf list-view-pf-view">
 
-                <!-- ACTICO Platform 8.0.1 -->
+                <!-- ACTICO Platform 8.0.2 -->
                 <div class="list-group-item">
                     <div class="list-group-item-header">
                         <div class="list-view-pf-actions">
-                            <a href="overview_ACTICO Platform_8.0.1.html" class="btn btn-default">Overview</a>
-                            <a href="detail_ACTICO Platform_8.0.1.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
+                            <a href="overview_ACTICO Platform_8.0.2.html" class="btn btn-default">Overview</a>
+                            <a href="detail_ACTICO Platform_8.0.2.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
                             <!--div class="dropdown pull-right dropdown-kebab-pf">
                                 <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight0" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true">
@@ -384,15 +422,15 @@
                                         ACTICO GmbH
                                     </div>
                                     <div class="list-group-item-text">
-                                        ACTICO Platform 8.0.1
+                                        ACTICO Platform 8.0.2
                                     </div>
                                 </div>
                                 <div class="list-view-pf-additional-info">
                                     <div class="list-view-pf-additional-info-item">
-                                        Submitted:&nbsp;<b>576/576</b>
+                                        Submitted:&nbsp;<b>579/579</b>
                                     </div>
                                     <div class="list-view-pf-additional-info-item">
-                                        Last Submission:&nbsp;<b>2018-04-27</b>
+                                        Last Submission:&nbsp;<b>2018-06-26</b>
                                     </div>
                                 </div>
                             </div>
@@ -410,10 +448,10 @@
 
                             <div class="col-md-10">
                                 <dl class="dl-horizontal">
-                                    <dt>Last Submission: </dt><dd>2018-04-27</dd>
-                                    <dt>Tests: </dt><dd>576</dd>
+                                    <dt>Last Submission: </dt><dd>2018-06-26</dd>
+                                    <dt>Tests: </dt><dd>579</dd>
                                     <dt>Labels: </dt><dd>44</dd>
-                                    <dt>Succeeded: </dt><dd>576</dd>
+                                    <dt>Succeeded: </dt><dd>579</dd>
                                     <dt>Failed: </dt><dd>0</dd>
                                     <dt>Skipped: </dt><dd>0</dd>
                                     <dt>Info: </dt><dd>ACTICO Platform includes a DMN compliance level 3 modeling environment and engine</dd>
@@ -460,7 +498,7 @@
                                 </div>
                                 <div class="list-view-pf-additional-info">
                                     <div class="list-view-pf-additional-info-item">
-                                        Submitted:&nbsp;<b>576/576</b>
+                                        Submitted:&nbsp;<b>576/579</b>
                                     </div>
                                     <div class="list-view-pf-additional-info-item">
                                         Last Submission:&nbsp;<b>2018-04-30</b>
@@ -482,14 +520,85 @@
                             <div class="col-md-10">
                                 <dl class="dl-horizontal">
                                     <dt>Last Submission: </dt><dd>2018-04-30</dd>
-                                    <dt>Tests: </dt><dd>576</dd>
+                                    <dt>Tests: </dt><dd>579</dd>
                                     <dt>Labels: </dt><dd>44</dd>
                                     <dt>Succeeded: </dt><dd>572</dd>
                                     <dt>Failed: </dt><dd>0</dd>
-                                    <dt>Skipped: </dt><dd>4</dd>
+                                    <dt>Skipped: </dt><dd>7</dd>
                                     <dt>Info: </dt><dd>Camunda BPM provides an Open Source engine that integrates DMN with BPMN & CMMN. DMN TCK tests have been conducted using DMN Scala and FEEL Scala.</dd>
                                     <dt>Instructions: </dt><dd>
                                                                     to execute the tests and reproduce the results, please follow the vendor provided instructions <a href="https://github.com/dmn-tck/tck/blob/master/runners/dmn-tck-runner-camunda/" target="_blank">at this link <span class="fa fa-external-link"></span></a>.
+                                                           </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Digital Transformation Platform (DXP) 2.2 -->
+                <div class="list-group-item">
+                    <div class="list-group-item-header">
+                        <div class="list-view-pf-actions">
+                            <a href="overview_Digital Transformation Platform (DXP)_2.2.html" class="btn btn-default">Overview</a>
+                            <a href="detail_Digital Transformation Platform (DXP)_2.2.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
+                            <!--div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight2" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="true">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight2">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div-->
+                        </div>
+                        <div class="list-view-pf-main-info">
+                            <div class="list-view-pf-left">
+                                <span class="fa fa-university list-view-pf-icon-sm"></span>
+                            </div>
+                            <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                    <div class="list-group-item-heading">
+                                        Fujitsu America
+                                    </div>
+                                    <div class="list-group-item-text">
+                                        Digital Transformation Platform (DXP) 2.2
+                                    </div>
+                                </div>
+                                <div class="list-view-pf-additional-info">
+                                    <div class="list-view-pf-additional-info-item">
+                                        Submitted:&nbsp;<b>576/579</b>
+                                    </div>
+                                    <div class="list-view-pf-additional-info-item">
+                                        Last Submission:&nbsp;<b>2018-06-16</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-group-item-container container-fluid hidden">
+                        <div class="close">
+                            <span class="pficon pficon-close"></span>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-2">
+                                <canvas id="chart2"></canvas>
+                            </div>
+
+                            <div class="col-md-10">
+                                <dl class="dl-horizontal">
+                                    <dt>Last Submission: </dt><dd>2018-06-16</dd>
+                                    <dt>Tests: </dt><dd>579</dd>
+                                    <dt>Labels: </dt><dd>44</dd>
+                                    <dt>Succeeded: </dt><dd>576</dd>
+                                    <dt>Failed: </dt><dd>0</dd>
+                                    <dt>Skipped: </dt><dd>3</dd>
+                                    <dt>Info: </dt><dd>Fujitsu DXP includes REST API for DMN using DROOLS for execution of DMN models included in applications</dd>
+                                    <dt>Instructions: </dt><dd>
+                                                                    this vendor did not provide instructions to execute the tests and reproduce the results. Please contact the vendor directly.
                                                            </dd>
                                 </dl>
                             </div>
@@ -503,11 +612,11 @@
                             <a href="overview_jDMN_1.2.0.html" class="btn btn-default">Overview</a>
                             <a href="detail_jDMN_1.2.0.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
                             <!--div class="dropdown pull-right dropdown-kebab-pf">
-                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight2" data-toggle="dropdown" aria-haspopup="true"
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight3" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true">
                                     <span class="fa fa-ellipsis-v"></span>
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight2">
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight3">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li><a href="#">Something else here</a></li>
@@ -531,7 +640,7 @@
                                 </div>
                                 <div class="list-view-pf-additional-info">
                                     <div class="list-view-pf-additional-info-item">
-                                        Submitted:&nbsp;<b>576/576</b>
+                                        Submitted:&nbsp;<b>576/579</b>
                                     </div>
                                     <div class="list-view-pf-additional-info-item">
                                         Last Submission:&nbsp;<b>2018-02-27</b>
@@ -547,17 +656,17 @@
                         <div class="row">
 
                             <div class="col-md-2">
-                                <canvas id="chart2"></canvas>
+                                <canvas id="chart3"></canvas>
                             </div>
 
                             <div class="col-md-10">
                                 <dl class="dl-horizontal">
                                     <dt>Last Submission: </dt><dd>2018-02-27</dd>
-                                    <dt>Tests: </dt><dd>576</dd>
+                                    <dt>Tests: </dt><dd>579</dd>
                                     <dt>Labels: </dt><dd>44</dd>
                                     <dt>Succeeded: </dt><dd>576</dd>
                                     <dt>Failed: </dt><dd>0</dd>
-                                    <dt>Skipped: </dt><dd>0</dd>
+                                    <dt>Skipped: </dt><dd>3</dd>
                                     <dt>Info: </dt><dd>jDMN provides a runtime compliance level 3 engine (interpreter and translator to Java)</dd>
                                     <dt>Instructions: </dt><dd>
                                                                     to execute the tests and reproduce the results, please follow the vendor provided instructions <a href="https://github.com/dmn-tck/tck/tree/master/runners/dmn-tck-runner-jdmn/README.md" target="_blank">at this link <span class="fa fa-external-link"></span></a>.
@@ -574,11 +683,11 @@
                             <a href="overview_OpenRules_7.0.0.html" class="btn btn-default">Overview</a>
                             <a href="detail_OpenRules_7.0.0.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
                             <!--div class="dropdown pull-right dropdown-kebab-pf">
-                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight3" data-toggle="dropdown" aria-haspopup="true"
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight4" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true">
                                     <span class="fa fa-ellipsis-v"></span>
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight3">
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight4">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li><a href="#">Something else here</a></li>
@@ -602,7 +711,7 @@
                                 </div>
                                 <div class="list-view-pf-additional-info">
                                     <div class="list-view-pf-additional-info-item">
-                                        Submitted:&nbsp;<b>28/576</b>
+                                        Submitted:&nbsp;<b>28/579</b>
                                     </div>
                                     <div class="list-view-pf-additional-info-item">
                                         Last Submission:&nbsp;<b>2017-07-05</b>
@@ -618,17 +727,17 @@
                         <div class="row">
 
                             <div class="col-md-2">
-                                <canvas id="chart3"></canvas>
+                                <canvas id="chart4"></canvas>
                             </div>
 
                             <div class="col-md-10">
                                 <dl class="dl-horizontal">
                                     <dt>Last Submission: </dt><dd>2017-07-05</dd>
-                                    <dt>Tests: </dt><dd>576</dd>
+                                    <dt>Tests: </dt><dd>579</dd>
                                     <dt>Labels: </dt><dd>44</dd>
                                     <dt>Succeeded: </dt><dd>28</dd>
                                     <dt>Failed: </dt><dd>0</dd>
-                                    <dt>Skipped: </dt><dd>548</dd>
+                                    <dt>Skipped: </dt><dd>551</dd>
                                     <dt>Info: </dt><dd>OpenRules provides a runtime compliance level 2 engine</dd>
                                     <dt>Instructions: </dt><dd>
                                                                     this vendor did not provide instructions to execute the tests and reproduce the results. Please contact the vendor directly.
@@ -645,11 +754,11 @@
                             <a href="overview_Oracle Process Cloud_17.3.3.html" class="btn btn-default">Overview</a>
                             <a href="detail_Oracle Process Cloud_17.3.3.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
                             <!--div class="dropdown pull-right dropdown-kebab-pf">
-                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight4" data-toggle="dropdown" aria-haspopup="true"
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight5" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true">
                                     <span class="fa fa-ellipsis-v"></span>
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight4">
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight5">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li><a href="#">Something else here</a></li>
@@ -673,7 +782,7 @@
                                 </div>
                                 <div class="list-view-pf-additional-info">
                                     <div class="list-view-pf-additional-info-item">
-                                        Submitted:&nbsp;<b>49/576</b>
+                                        Submitted:&nbsp;<b>49/579</b>
                                     </div>
                                     <div class="list-view-pf-additional-info-item">
                                         Last Submission:&nbsp;<b>2017-07-21</b>
@@ -689,17 +798,17 @@
                         <div class="row">
 
                             <div class="col-md-2">
-                                <canvas id="chart4"></canvas>
+                                <canvas id="chart5"></canvas>
                             </div>
 
                             <div class="col-md-10">
                                 <dl class="dl-horizontal">
                                     <dt>Last Submission: </dt><dd>2017-07-21</dd>
-                                    <dt>Tests: </dt><dd>576</dd>
+                                    <dt>Tests: </dt><dd>579</dd>
                                     <dt>Labels: </dt><dd>44</dd>
                                     <dt>Succeeded: </dt><dd>40</dd>
                                     <dt>Failed: </dt><dd>0</dd>
-                                    <dt>Skipped: </dt><dd>536</dd>
+                                    <dt>Skipped: </dt><dd>539</dd>
                                     <dt>Info: </dt><dd>Oracle Process Cloud provides BPMN, DMN, and Workflow modeling and execution.</dd>
                                     <dt>Instructions: </dt><dd>
                                                                     this vendor did not provide instructions to execute the tests and reproduce the results. Please contact the vendor directly.
@@ -716,11 +825,11 @@
                             <a href="overview_Drools_7.7.0.Final.html" class="btn btn-default">Overview</a>
                             <a href="detail_Drools_7.7.0.Final.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
                             <!--div class="dropdown pull-right dropdown-kebab-pf">
-                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight5" data-toggle="dropdown" aria-haspopup="true"
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight6" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true">
                                     <span class="fa fa-ellipsis-v"></span>
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight5">
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight6">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li><a href="#">Something else here</a></li>
@@ -744,7 +853,7 @@
                                 </div>
                                 <div class="list-view-pf-additional-info">
                                     <div class="list-view-pf-additional-info-item">
-                                        Submitted:&nbsp;<b>576/576</b>
+                                        Submitted:&nbsp;<b>576/579</b>
                                     </div>
                                     <div class="list-view-pf-additional-info-item">
                                         Last Submission:&nbsp;<b>2018-06-01</b>
@@ -760,17 +869,17 @@
                         <div class="row">
 
                             <div class="col-md-2">
-                                <canvas id="chart5"></canvas>
+                                <canvas id="chart6"></canvas>
                             </div>
 
                             <div class="col-md-10">
                                 <dl class="dl-horizontal">
                                     <dt>Last Submission: </dt><dd>2018-06-01</dd>
-                                    <dt>Tests: </dt><dd>576</dd>
+                                    <dt>Tests: </dt><dd>579</dd>
                                     <dt>Labels: </dt><dd>44</dd>
                                     <dt>Succeeded: </dt><dd>576</dd>
                                     <dt>Failed: </dt><dd>0</dd>
-                                    <dt>Skipped: </dt><dd>0</dd>
+                                    <dt>Skipped: </dt><dd>3</dd>
                                     <dt>Info: </dt><dd>Drools provides a compliance level 3 runtime DMN engine</dd>
                                     <dt>Instructions: </dt><dd>
                                                                     to execute the tests and reproduce the results, please follow the vendor provided instructions <a href="https://github.com/dmn-tck/tck/tree/master/runners/dmn-tck-runner-drools/README.md" target="_blank">at this link <span class="fa fa-external-link"></span></a>.
@@ -780,18 +889,18 @@
                         </div>
                     </div>
                 </div>
-                <!-- Trisotech DMN Modeler 6.1.0 -->
+                <!-- Trisotech DMN Modeler 6.1.1 -->
                 <div class="list-group-item">
                     <div class="list-group-item-header">
                         <div class="list-view-pf-actions">
-                            <a href="overview_Trisotech DMN Modeler_6.1.0.html" class="btn btn-default">Overview</a>
-                            <a href="detail_Trisotech DMN Modeler_6.1.0.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
+                            <a href="overview_Trisotech DMN Modeler_6.1.1.html" class="btn btn-default">Overview</a>
+                            <a href="detail_Trisotech DMN Modeler_6.1.1.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
                             <!--div class="dropdown pull-right dropdown-kebab-pf">
-                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight6" data-toggle="dropdown" aria-haspopup="true"
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight7" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true">
                                     <span class="fa fa-ellipsis-v"></span>
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight6">
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight7">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li><a href="#">Something else here</a></li>
@@ -810,15 +919,15 @@
                                         Trisotech
                                     </div>
                                     <div class="list-group-item-text">
-                                        Trisotech DMN Modeler 6.1.0
+                                        Trisotech DMN Modeler 6.1.1
                                     </div>
                                 </div>
                                 <div class="list-view-pf-additional-info">
                                     <div class="list-view-pf-additional-info-item">
-                                        Submitted:&nbsp;<b>576/576</b>
+                                        Submitted:&nbsp;<b>579/579</b>
                                     </div>
                                     <div class="list-view-pf-additional-info-item">
-                                        Last Submission:&nbsp;<b>2018-02-22</b>
+                                        Last Submission:&nbsp;<b>2018-06-29</b>
                                     </div>
                                 </div>
                             </div>
@@ -831,15 +940,15 @@
                         <div class="row">
 
                             <div class="col-md-2">
-                                <canvas id="chart6"></canvas>
+                                <canvas id="chart7"></canvas>
                             </div>
 
                             <div class="col-md-10">
                                 <dl class="dl-horizontal">
-                                    <dt>Last Submission: </dt><dd>2018-02-22</dd>
-                                    <dt>Tests: </dt><dd>576</dd>
+                                    <dt>Last Submission: </dt><dd>2018-06-29</dd>
+                                    <dt>Tests: </dt><dd>579</dd>
                                     <dt>Labels: </dt><dd>44</dd>
-                                    <dt>Succeeded: </dt><dd>576</dd>
+                                    <dt>Succeeded: </dt><dd>579</dd>
                                     <dt>Failed: </dt><dd>0</dd>
                                     <dt>Skipped: </dt><dd>0</dd>
                                     <dt>Info: </dt><dd>A full compliance level 3 DMN authoring environment</dd>
@@ -858,7 +967,7 @@
 <!-- pre-footer -->
 <div class="pre-footer">
     <div class="last-updated">
-        <p>Last updated:</strong> 1-Jun-2018 2:49:34 PM</p>
+        <p>Last updated:</strong> 02-Jul-2018 10:33:35</p>
     </div>
 </div>
 <div class="footer">
