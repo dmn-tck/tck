@@ -223,6 +223,22 @@ public class CamundaTCKTest implements DmnTckVendorTestSuite {
 
 		TestResult.Result r = !failures.isEmpty() ? (LOG_DETAILS ? TestResult.Result.ERROR : TestResult.Result.IGNORED)
 				: TestResult.Result.SUCCESS;
+    // list of test cases that are unsupported by test runner or engine
+    if (r == TestResult.Result.IGNORED) {
+      switch (description.toString()) {
+      case "001(0021-singleton-list-test-01)":
+      case "001(0034-drg-scopes-test-01)":
+      case "011_a559ce6410(1103-feel-substring-function-test-01)":
+      case "001(0007-date-time-test-01)":
+      case "001(0035-test-structure-output-test-01)":
+      case "002(0035-test-structure-output-test-01)":
+      case "003(0035-test-structure-output-test-01)":
+        r = TestResult.Result.IGNORED;
+        break;
+      default:
+        r = TestResult.Result.ERROR;
+      }
+    }
 		return new TestResult(r, (LOG_DETAILS ? failures.stream().collect(Collectors.joining("; ")) : ""));
 	}
 
