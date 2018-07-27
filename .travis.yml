@@ -1,2 +1,16 @@
 language: java
-script: cd runners && mvn verify -B -Pvalidation
+
+jdk:
+  - openjdk8
+
+env:
+  - RUNNERS=validation
+  - RUNNERS=camunda
+  - RUNNERS=drools
+
+script: cd runners && mvn verify -B -P$RUNNERS
+
+matrix:
+  allow_failures:
+    - env: RUNNERS=camunda
+    - env: RUNNERS=drools
