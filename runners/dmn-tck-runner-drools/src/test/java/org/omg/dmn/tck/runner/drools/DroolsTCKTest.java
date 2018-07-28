@@ -53,6 +53,8 @@ import org.kie.dmn.api.core.DMNType;
 import org.kie.dmn.api.core.ast.DecisionNode;
 import org.kie.dmn.api.core.ast.InputDataNode;
 import org.kie.dmn.core.impl.BaseDMNTypeImpl;
+import org.kie.dmn.core.impl.SimpleTypeImpl;
+import org.kie.dmn.feel.lang.Type;
 import org.kie.dmn.feel.lang.types.BuiltInType;
 import org.kie.dmn.feel.util.EvalHelper;
 import org.kie.internal.utils.KieHelper;
@@ -410,7 +412,7 @@ public class DroolsTCKTest
             {
                text = nodeVal.getFirstChild().getTextContent();
             }
-            return text != null ? ((BuiltInType) ((BaseDMNTypeImpl) dmnType).getFeelType()).fromString(text) : null;
+                return text != null ? recurseSimpleDMNTypeToFindBuiltInFEELType((BaseDMNTypeImpl) dmnType).fromString(text) : null;
          }
          else if (val instanceof JAXBElement<?> && !(((JAXBElement<?>) val).getValue() instanceof Node) && !isDateTimeOrDuration(((JAXBElement<?>) val).getValue()))
          {
@@ -425,7 +427,7 @@ public class DroolsTCKTest
                {
                   // need to convert to java.time.* equivalent
                   text = dateTimeOrDurationValue.toString();
-                  return text != null ? ((BuiltInType) ((BaseDMNTypeImpl) dmnType).getFeelType()).fromString(text) : null;
+                        return text != null ? recurseSimpleDMNTypeToFindBuiltInFEELType((BaseDMNTypeImpl) dmnType).fromString(text) : null;
                }
             }
             catch (Exception e)
@@ -455,6 +457,18 @@ public class DroolsTCKTest
          return result;
       }
    }
+
+    private BuiltInType recurseSimpleDMNTypeToFindBuiltInFEELType(BaseDMNTypeImpl dmnType) {
+        Type feelType = dmnType.getFeelType();
+        if (feelType instanceof BuiltInType) {
+            return (BuiltInType) feelType;
+        } else if (dmnType instanceof SimpleTypeImpl) {
+            // circumvent AliasFEELType..
+            return recurseSimpleDMNTypeToFindBuiltInFEELType((BaseDMNTypeImpl) dmnType.getBaseType());
+        } else {
+            throw new RuntimeException("Unable to recurse to determine BuiltInType");
+        }
+    }
 
    private boolean isDateTimeOrDuration(Object value)
    {
