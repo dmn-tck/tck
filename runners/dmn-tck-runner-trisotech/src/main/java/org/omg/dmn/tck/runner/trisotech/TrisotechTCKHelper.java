@@ -81,7 +81,7 @@ public class TrisotechTCKHelper {
         if (!publishURL.endsWith("/")) {
             publishURL += "/";
         }
-        publishURL += "execution/deployment/" + properties.getProperty("repo") + "/" + groupId + "/";
+        publishURL += "execution/deployment/dmn/" + properties.getProperty("repo") + "/" + groupId + "/";
 
         String version = "/" + properties.getProperty("version");
 
