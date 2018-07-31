@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<dmn11:definitions xmlns="http://www.trisotech.com/definitions/Definitions_0reic0g" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:trisofeed="http://trisotech.com/feed" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exporter="DMN Modeler" exporterVersion="6.1.3" id="Definitions_0reic0g" name="DRD" namespace="http://www.trisotech.com/definitions/Definitions_0reic0g" triso:logoChoice="Default" xmlns:dmn11="http://www.omg.org/spec/DMN/20151101/dmn.xsd">
+  <dmn11:extensionElements/>
+  <dmn11:itemDefinition isCollection="false" label="tCarInsurance_3" name="tCarInsurance_3">
+    <dmn11:itemComponent id="_504764fc-c930-4dad-99bb-c9bc67ed07f7" isCollection="false" name="CarInsuranceAmount">
+      <dmn11:typeRef>feel:number</dmn11:typeRef>
+    </dmn11:itemComponent>
+    <dmn11:itemComponent id="_ea187525-2aa3-4607-9e27-d2bf968280d0" name="AgentFees">
+      <dmn11:typeRef>feel:number</dmn11:typeRef>
+    </dmn11:itemComponent>
+  </dmn11:itemDefinition>
+  <dmn11:decision id="carInsurance" name="CarInsurance">
+    <dmn11:variable id="_a295d2fe-a6db-4154-8295-8bd00def95cb" name="CarInsurance" typeRef="tCarInsurance_3"/>
+    <dmn11:informationRequirement>
+      <dmn11:requiredInput href="#inputData_input_1"/>
+    </dmn11:informationRequirement>
+    <dmn11:informationRequirement>
+      <dmn11:requiredInput href="#inputData__a502a8fb-5cdd-4e28-967e-1f0876b763cb"/>
+    </dmn11:informationRequirement>
+    <dmn11:decisionTable aggregation="COUNT" hitPolicy="COLLECT" id="decisionTable_1" outputLabel="CarInsurance" typeRef="tCarInsurance_3">
+      <dmn11:input id="input_1">
+        <dmn11:inputExpression typeRef="feel:number">
+          <dmn11:text>NumOfYears</dmn11:text>
+        </dmn11:inputExpression>
+      </dmn11:input>
+      <dmn11:input id="_a502a8fb-5cdd-4e28-967e-1f0876b763cb">
+        <dmn11:inputExpression typeRef="feel:string">
+          <dmn11:text>CustomerType</dmn11:text>
+        </dmn11:inputExpression>
+      </dmn11:input>
+      <dmn11:output id="output_1" name="CarInsuranceAmount" typeRef="feel:number"/>
+      <dmn11:output id="_1f99db99-1a2c-4355-bb2b-ff0597618f7e" name="AgentFees" typeRef="feel:number"/>
+      <dmn11:rule id="DecisionRule_0acwtg0">
+        <dmn11:inputEntry id="UnaryTests_189k6sw">
+          <dmn11:text>&gt;1</dmn11:text>
+        </dmn11:inputEntry>
+        <dmn11:inputEntry id="_c7b79ce4-c6b7-435b-a3d7-188ced9bf1ae">
+          <dmn11:text>"VIP"</dmn11:text>
+        </dmn11:inputEntry>
+        <dmn11:outputEntry id="LiteralExpression_1qymvo3">
+          <dmn11:text>98.83</dmn11:text>
+        </dmn11:outputEntry>
+        <dmn11:outputEntry id="_00850346-58e2-4fa0-82e1-33bfc50c6fc4">
+          <dmn11:text>100</dmn11:text>
+        </dmn11:outputEntry>
+      </dmn11:rule>
+      <dmn11:rule id="DecisionRule_147sotc">
+        <dmn11:inputEntry id="UnaryTests_1wikul2">
+          <dmn11:text>&gt;2</dmn11:text>
+        </dmn11:inputEntry>
+        <dmn11:inputEntry id="_9826fe2c-c8f5-4933-89f5-42619e2721ab">
+          <dmn11:text>"VIP"</dmn11:text>
+        </dmn11:inputEntry>
+        <dmn11:outputEntry id="LiteralExpression_1evg7ns">
+          <dmn11:text>150.21</dmn11:text>
+        </dmn11:outputEntry>
+        <dmn11:outputEntry id="_9d17bdc4-63e8-4ef4-bda8-db22fabef799">
+          <dmn11:text>200</dmn11:text>
+        </dmn11:outputEntry>
+      </dmn11:rule>
+      <dmn11:rule id="DecisionRule_0gxrx36">
+        <dmn11:inputEntry id="UnaryTests_1ca1yom">
+          <dmn11:text>&gt;3</dmn11:text>
+        </dmn11:inputEntry>
+        <dmn11:inputEntry id="_0d5d52b6-2036-4fe5-9c06-b9310ade018c">
+          <dmn11:text>"VIP"</dmn11:text>
+        </dmn11:inputEntry>
+        <dmn11:outputEntry id="LiteralExpression_0n3hzp6">
+          <dmn11:text>205.43</dmn11:text>
+        </dmn11:outputEntry>
+        <dmn11:outputEntry id="_702d2074-3ec4-4214-bc37-81ef6b1188e9">
+          <dmn11:text>300</dmn11:text>
+        </dmn11:outputEntry>
+      </dmn11:rule>
+      <dmn11:rule id="DecisionRule_0od3nns">
+        <dmn11:inputEntry id="UnaryTests_02zs33d">
+          <dmn11:text>&gt;4</dmn11:text>
+        </dmn11:inputEntry>
+        <dmn11:inputEntry id="_42d6118e-7cd6-4742-86f7-13d1a5c0155b">
+          <dmn11:text>"Special"</dmn11:text>
+        </dmn11:inputEntry>
+        <dmn11:outputEntry id="LiteralExpression_15d1ikl">
+          <dmn11:text>64.32</dmn11:text>
+        </dmn11:outputEntry>
+        <dmn11:outputEntry id="_12ddc7f3-4204-4f55-a440-f5210c98fa28">
+          <dmn11:text>400</dmn11:text>
+        </dmn11:outputEntry>
+      </dmn11:rule>
+    </dmn11:decisionTable>
+  </dmn11:decision>
+  <dmn11:inputData id="inputData_input_1" name="NumOfYears">
+    <dmn11:variable id="_d59296ad-d1a6-4a5b-aa1b-3fb42766c914" name="NumOfYears" typeRef="feel:number"/>
+  </dmn11:inputData>
+  <dmn11:inputData id="inputData__a502a8fb-5cdd-4e28-967e-1f0876b763cb" name="CustomerType">
+    <dmn11:variable id="_484f3c66-9f2c-4016-b5aa-011fb325e6d6" name="CustomerType" typeRef="feel:string"/>
+  </dmn11:inputData>
+</dmn11:definitions>
