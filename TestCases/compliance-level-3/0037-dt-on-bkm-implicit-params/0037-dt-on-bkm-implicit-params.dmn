@@ -87,7 +87,7 @@
             <dmn11:text>-</dmn11:text>
           </dmn11:inputEntry>
           <dmn11:outputEntry expressionLanguage="http://www.omg.org/spec/FEEL/20140401" id="_b2516134-f85e-46fe-a48f-e97d15890193" triso:unparsed="true">
-            <dmn11:text>Person.Name + " is a dad of " + string(Person.Children) + " children."</dmn11:text>
+            <dmn11:text>Person.Name + " is a dad of " + string(decimal(Person.Children,0)) + " children."</dmn11:text>
           </dmn11:outputEntry>
         </dmn11:rule>
         <dmn11:rule id="_55949bfa-9e7d-468d-8338-f98d01910a72">
@@ -101,11 +101,11 @@
             <dmn11:text>-</dmn11:text>
           </dmn11:inputEntry>
           <dmn11:outputEntry expressionLanguage="http://www.omg.org/spec/FEEL/20140401" id="_5ac32905-7373-451e-b143-29c55833eaf6" triso:unparsed="true">
-            <dmn11:text>Person.Name + " is a mother of " + string(Person.Children) + " children."</dmn11:text>
+            <dmn11:text>Person.Name + " is a mother of " + string(decimal(Person.Children,0)) + " children."</dmn11:text>
           </dmn11:outputEntry>
         </dmn11:rule>
       </dmn11:decisionTable>
     </dmn11:encapsulatedLogic>
-    <dmn11:variable id="_4ec95bda-ae86-435a-8724-d804f0448d76" name="Description" typeRef="feel:string"/>
+    <dmn11:variable id="_4ec95bda-ae86-435a-8724-d804f0448d76" name="Description"/>
   </dmn11:businessKnowledgeModel>
 </dmn11:definitions>
