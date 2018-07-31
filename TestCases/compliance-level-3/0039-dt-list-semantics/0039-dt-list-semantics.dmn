@@ -34,14 +34,6 @@
           <dmn11:text>Symptom + " is in the list of Cold symptoms"</dmn11:text>
         </dmn11:outputEntry>
       </dmn11:rule>
-      <dmn11:rule id="_b1bfd87e-c43b-442a-b5ca-da6fb638a6e0">
-        <dmn11:inputEntry id="_6666eb4a-2e7e-4b90-8fc9-def1402602dc">
-          <dmn11:text>["sneezing", "itchy nose", "red eyes", "runny nose"]</dmn11:text>
-        </dmn11:inputEntry>
-        <dmn11:outputEntry id="_83b3d0d0-0bdd-44f5-8ce4-f8316a1d892e">
-          <dmn11:text>Symptom + "is in the list of Spring Allergy symptoms"</dmn11:text>
-        </dmn11:outputEntry>
-      </dmn11:rule>
       <dmn11:rule id="_0da0a131-4e1a-4b1a-b763-8af96a11982d">
         <dmn11:inputEntry id="_2fbeca46-aa7f-4746-9929-ce7c88cd1a5f">
           <dmn11:text>Flu Symtoms</dmn11:text>

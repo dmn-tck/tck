@@ -15,7 +15,7 @@
     <tc:label>FEEL List Operator</tc:label>
   </tc:labels>  
   <tc:testCase id="_a217c840-6ead-4cb7-a3e1-ad9df9c0c584">
-    <tc:description>select 1 and 3</tc:description>
+    <tc:description>select 1 and 2</tc:description>
         <tc:inputNode name="Flu Symtoms">
           <tc:list>
             <tc:item>
@@ -48,40 +48,6 @@
           </tc:expected>
         </tc:resultNode>
       </tc:testCase>
-      <tc:testCase id="_3bac2bfc-8266-4b6c-bc34-201393f5d1ce">
-        <tc:description>select 2 and 3</tc:description>
-        <tc:inputNode name="Flu Symtoms">
-          <tc:list>
-            <tc:item>
-              <tc:value xsi:type="xsd:string">fever</tc:value>
-            </tc:item>
-            <tc:item>
-              <tc:value xsi:type="xsd:string">cough</tc:value>
-            </tc:item>
-            <tc:item>
-              <tc:value xsi:type="xsd:string">sore throat</tc:value>
-            </tc:item>
-            <tc:item>
-              <tc:value xsi:type="xsd:string">runny nose</tc:value>
-            </tc:item>
-          </tc:list>
-        </tc:inputNode>
-        <tc:inputNode name="Symptom">
-          <tc:value xsi:type="xsd:string">runny nose</tc:value>
-        </tc:inputNode>
-        <tc:resultNode name="Symptom Analysis">
-          <tc:expected>
-            <tc:list>
-              <tc:item>
-                <tc:value xsi:type="xsd:string">runny noseis in the list of Spring Allergy symptoms</tc:value>
-              </tc:item>
-              <tc:item>
-                <tc:value xsi:type="xsd:string">runny nose is in the list of Flu symptoms</tc:value>
-              </tc:item>
-            </tc:list>
-          </tc:expected>
-        </tc:resultNode>
-      </tc:testCase>
       <tc:testCase id="_07726176-a1a0-4e9e-9de2-16dba51556e2">
         <tc:description>select 2</tc:description>
         <tc:inputNode name="Flu Symtoms">
@@ -101,7 +67,7 @@
           </tc:list>
         </tc:inputNode>
         <tc:inputNode name="Symptom">
-          <tc:value xsi:type="xsd:string">sneezing</tc:value>
+          <tc:value xsi:type="xsd:string">fever</tc:value>
         </tc:inputNode>
         <tc:resultNode name="Symptom Analysis">
           <tc:expected>
