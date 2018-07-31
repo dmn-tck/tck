@@ -40,9 +40,9 @@
     </dmn11:invocation>
   </dmn11:decision>
   <dmn11:businessKnowledgeModel id="_d86b380d-733f-4c24-8143-c175d11cc95f" name="Description">
-    <dmn11:encapsulatedLogic xmlns:drools="http://www.drools.org/kie/dmn/1.1" drools:kind="F" id="_1faf8619-32bc-4441-ba76-9ab30f101949" typeRef="feel:string">
+    <dmn11:encapsulatedLogic xmlns:drools="http://www.drools.org/kie/dmn/1.1" drools:kind="F" id="_1faf8619-32bc-4441-ba76-9ab30f101949" >
       <dmn11:formalParameter id="_7c9ee2d4-d4a4-439e-b8b6-371792b79cf4" name="Person" typeRef="tPerson"/>
-      <dmn11:context id="_f4acaa28-41f4-4fa5-9536-7ec92e8b21ec">
+      <dmn11:context id="_f4acaa28-41f4-4fa5-9536-7ec92e8b21ec" typeRef="feel:string">
         <dmn11:contextEntry>
           <dmn11:variable id="_d672746e-8f9f-4fed-b75e-ae5113a8fea7" name="the description" typeRef="feel:string"/>
           <dmn11:decisionTable hitPolicy="UNIQUE" id="_5d73f8fd-009d-47c9-aa37-1b7fed64a0ac" outputLabel="the description">
@@ -60,7 +60,7 @@
                 <dmn11:text>"Male"</dmn11:text>
               </dmn11:inputEntry>
               <dmn11:outputEntry expressionLanguage="http://www.omg.org/spec/FEEL/20140401" id="_b2516134-f85e-46fe-a48f-e97d15890193" triso:unparsed="true">
-                <dmn11:text>Person.Name + " is a dad of " + string(Person.Children) + " children."</dmn11:text>
+                <dmn11:text>Person.Name + " is a dad of " + string(decimal(Person.Children,0)) + " children."</dmn11:text>
               </dmn11:outputEntry>
             </dmn11:rule>
             <dmn11:rule id="_55949bfa-9e7d-468d-8338-f98d01910a72">
@@ -68,7 +68,7 @@
                 <dmn11:text>"Female"</dmn11:text>
               </dmn11:inputEntry>
               <dmn11:outputEntry expressionLanguage="http://www.omg.org/spec/FEEL/20140401" id="_5ac32905-7373-451e-b143-29c55833eaf6" triso:unparsed="true">
-                <dmn11:text>Person.Name + " is a mother of " + string(Person.Children) + " children."</dmn11:text>
+                <dmn11:text>Person.Name + " is a mother of " + string(decimal(Person.Children,0)) + " children."</dmn11:text>
               </dmn11:outputEntry>
             </dmn11:rule>
           </dmn11:decisionTable>
@@ -80,6 +80,6 @@
         </dmn11:contextEntry>
       </dmn11:context>
     </dmn11:encapsulatedLogic>
-    <dmn11:variable id="_4ec95bda-ae86-435a-8724-d804f0448d76" name="Description" typeRef="feel:string"/>
+    <dmn11:variable id="_4ec95bda-ae86-435a-8724-d804f0448d76" name="Description"/>
   </dmn11:businessKnowledgeModel>
 </dmn11:definitions>
