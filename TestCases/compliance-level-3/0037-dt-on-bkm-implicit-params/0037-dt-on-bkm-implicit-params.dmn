@@ -52,11 +52,11 @@
     </dmn11:invocation>
   </dmn11:decision>
   <dmn11:businessKnowledgeModel id="_d86b380d-733f-4c24-8143-c175d11cc95f" name="Description">
-    <dmn11:encapsulatedLogic typeRef="feel:string">
+    <dmn11:encapsulatedLogic>
       <dmn11:formalParameter name="Person.Gender" typeRef="feel:string"/>
       <dmn11:formalParameter name="Person.Name" typeRef="feel:string"/>
       <dmn11:formalParameter name="Person.Children" typeRef="feel:number"/>
-      <dmn11:decisionTable hitPolicy="UNIQUE" id="_5d73f8fd-009d-47c9-aa37-1b7fed64a0ac" outputLabel="Description">
+      <dmn11:decisionTable hitPolicy="UNIQUE" id="_5d73f8fd-009d-47c9-aa37-1b7fed64a0ac" outputLabel="Description" typeRef="feel:string">
         <dmn11:input id="_061b2667-8680-4229-bbc6-1d2f371580a8">
           <dmn11:inputExpression typeRef="feel:string">
             <dmn11:text>Person.Gender</dmn11:text>
