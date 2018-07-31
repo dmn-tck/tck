@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelName>0117-multi-min-collect-hitpolicy.dmn</modelName>
+	<labels>
+		<label>Compliance Level 2</label>
+		<label>Item Definition</label>
+		<label>Hit Policy: COLLECT</label>
+		<label>Aggregator: MIN</label>
+		<label>Decision Table: Multiple Output Columns</label>
+		<label>Data Type: Number</label>
+		<label>Data Type: Structure</label>
+	</labels>
+	<testCase id="001">
+		<inputNode name="NumOfYears">
+			<value>4</value>
+		</inputNode>
+		<inputNode name="CustomerType">
+			<value>VIP</value>
+		</inputNode>
+		<resultNode name="CarInsurance" type="decision">
+			<expected>
+				<component name="CarInsuranceAmount">
+					<value>150.21</value>
+				</component>
+				<component name="Required">
+					<value>false</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="002">
+		<inputNode name="NumOfYears">
+			<value>3</value>
+		</inputNode>
+		<inputNode name="CustomerType">
+			<value>Normal</value>
+		</inputNode>
+		<resultNode name="CarInsurance" type="decision">
+			<expected>
+				<component name="CarInsuranceAmount">
+					<value>98.83</value>
+				</component>
+				<component name="Required">
+					<value>true</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="003">
+		<inputNode name="NumOfYears">
+			<value>2</value>
+		</inputNode>
+		<inputNode name="CustomerType">
+			<value>Normal</value>
+		</inputNode>
+		<resultNode name="CarInsurance" type="decision">
+			<expected>
+				<component name="CarInsuranceAmount">
+					<value>98.83</value>
+				</component>
+				<component name="Required">
+					<value>true</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+</testCases>
