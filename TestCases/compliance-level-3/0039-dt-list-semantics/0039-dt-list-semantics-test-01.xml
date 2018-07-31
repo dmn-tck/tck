@@ -73,7 +73,7 @@
           <tc:expected>
             <tc:list>
               <tc:item>
-                <tc:value xsi:type="xsd:string">sneezingis in the list of Spring Allergy symptoms</tc:value>
+                <tc:value xsi:type="xsd:string">fever is in the list of Flu symptoms</tc:value>
               </tc:item>
             </tc:list>
           </tc:expected>
