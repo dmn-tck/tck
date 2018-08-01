@@ -22,8 +22,10 @@ $ java -jar dmn-tck-packager-[version].one-jar
 To extract DMN TCK Tests from dmn-source.xml and write them in tck-destination.xml:
 
 ```
-$ java -jar dmn-tck-packager-[version].one-jar -x dmn-source.xml tck-destination.xml
+$ java -jar dmn-tck-packager-[version].one-jar -x dmn-source.xml tck-destination.xml [dmn-destination.xml]
 ```
+
+You optionally add an extra parameter (dmn-destination.xml) that will contain the dmn file without the test case extension
 
 #### Package Test Cases in DMN XML
 
