@@ -15,11 +15,7 @@
 		</inputNode>
 		<resultNode name="Salary" type="decision">
 			<expected>
-			<list>
-				<item>
 					<value>1100</value>
-				</item>
-				</list>
 			</expected>
 		</resultNode>
 	</testCase>
@@ -29,11 +25,7 @@
 		</inputNode>
 		<resultNode name="Salary" type="decision">
 			<expected>
-			<list>
-				<item>
 					<value>300</value>
-				</item>
-				</list>
 			</expected>
 		</resultNode>
 	</testCase>
@@ -43,11 +35,7 @@
 		</inputNode>
 		<resultNode name="Salary" type="decision">
 			<expected>
-			<list>
-				<item>
 					<value>100</value>
-				</item>
-				</list>
 			</expected>
 		</resultNode>
 	</testCase>
