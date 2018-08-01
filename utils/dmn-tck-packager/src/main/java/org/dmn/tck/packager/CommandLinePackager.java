@@ -28,13 +28,17 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.xml.sax.SAXException;
 
 public class CommandLinePackager {
 
     public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException, TransformerException {
         if (args.length == 3 && "-x".equals(args[0])) {
-            System.exit(unpackageTests(args[1], args[2]));
+            System.exit(unpackageTests(args[1], args[2], null));
+        }
+        if (args.length == 4 && "-x".equals(args[0])) {
+            System.exit(unpackageTests(args[1], args[2], args[3]));
         }
         if (args.length == 4 && "-c".equals(args[0])) {
             System.exit(packageTests(args[1], args[2], args[3]));
@@ -42,20 +46,21 @@ public class CommandLinePackager {
         exitWithUsageMessage();
     }
 
-    public static int unpackageTests(String dmnSource, String tckDestination)
+    public static int unpackageTests(String dmnSource, String tckDestination, String dmnDestination)
             throws ParserConfigurationException, SAXException, IOException, TransformerException {
         File source = new File(dmnSource);
         if (!source.exists()) {
             System.err.println("Could not find source file: " + dmnSource + " (" + source.getAbsolutePath() + ")");
             return 1;
         }
-        File destination = new File(tckDestination);
-        if (!destination.getParentFile().exists()) {
-            if (!destination.getParentFile().mkdirs()) {
-                System.err.println("Could not create destination folder: " + destination.getParentFile().getAbsolutePath());
+        File tckDestinationFile = new File(tckDestination);
+        if (tckDestinationFile.getParentFile() != null && !tckDestinationFile.getParentFile().exists()) {
+            if (!tckDestinationFile.getParentFile().mkdirs()) {
+                System.err.println("Could not create Test Case destination folder: " + tckDestinationFile.getParentFile().getAbsolutePath());
                 return 1;
             }
         }
+
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         dbFactory.setNamespaceAware(true);
         DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -66,15 +71,41 @@ public class CommandLinePackager {
             System.err.println("No DMN TCK Tests found in source file: " + dmnSource + " (" + source.getAbsolutePath() + ")");
             return 2;
         }
+        File dmnDestinationFile = null;
+        if (dmnDestination != null) {
+            dmnDestinationFile = new File(dmnDestination);
+        }
+        Element testCasesNode = tckDestinationXML.getDocumentElement();
+        Element moduleName = tckDestinationXML.createElementNS(Packager.DMN_TCK_NS, "modelName");
+        moduleName.setPrefix(testCasesNode.getPrefix());
+        moduleName.setTextContent(dmnDestinationFile != null ? dmnDestinationFile.getName() : source.getName());
+
+        tckDestinationXML.getDocumentElement().insertBefore(moduleName, tckDestinationXML.getDocumentElement().getFirstChild());
 
         TransformerFactory tFactory = TransformerFactory.newInstance();
         Transformer transformer = tFactory.newTransformer();
 
         DOMSource tckDestinationXMLSrc = new DOMSource(tckDestinationXML);
-        StreamResult result = new StreamResult(destination);
+        StreamResult result = new StreamResult(tckDestinationFile);
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");
         transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
         transformer.transform(tckDestinationXMLSrc, result);
+
+        if (dmnDestinationFile != null) {
+            if (dmnDestinationFile.getParentFile() != null && !dmnDestinationFile.getParentFile().exists()) {
+                if (!dmnDestinationFile.getParentFile().mkdirs()) {
+                    System.err.println("Could not create DMN destination folder: " + dmnDestinationFile.getParentFile().getAbsolutePath());
+                    return 1;
+                }
+            }
+            Document destinationDMNXML = Packager.removeTests(sourceDMNXML);
+            DOMSource dmnDestinationXMLSrc = new DOMSource(destinationDMNXML);
+            result = new StreamResult(dmnDestinationFile);
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+            transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
+            transformer.transform(dmnDestinationXMLSrc, result);
+
+        }
         return 0;
     }
 
@@ -129,7 +160,7 @@ public class CommandLinePackager {
         System.err.println("-------------------------------------------------------------");
         System.err.println("");
         System.err.println("Extract Test Cases from DMN XML:");
-        System.err.println("Usage: java -jar dmn-tck-packager.jar -x dmn-source.xml tck-destination.xml");
+        System.err.println("Usage: java -jar dmn-tck-packager.jar -x dmn-source.xml tck-destination.xml [dmn-destination.xml]");
         System.err.println("");
         System.err.println("Package Test Cases in DMN XML:");
         System.err.println("Usage: java -jar dmn-tck-packager.jar -c dmn-source.xml tck-source.xml dmn-destination.xml");

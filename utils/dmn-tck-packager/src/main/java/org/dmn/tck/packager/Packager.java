@@ -28,7 +28,7 @@ import org.w3c.dom.NodeList;
 
 public class Packager {
 
-    private final static String DMN_TCK_NS = "http://www.omg.org/spec/DMN/20160719/testcase";
+    public final static String DMN_TCK_NS = "http://www.omg.org/spec/DMN/20160719/testcase";
 
     public static Document packageTests(Document dmnXML, Document tckXML) throws ParserConfigurationException {
 
@@ -113,6 +113,34 @@ public class Packager {
         }
 
         return tckTests;
+
+    }
+
+    public static Document removeTests(Document dmnXML) throws ParserConfigurationException {
+
+        NodeList testCasesList = dmnXML.getElementsByTagNameNS(DMN_TCK_NS, "testCases");
+        if (testCasesList.getLength() == 0) {
+            return null;
+        }
+        for (int i = 0; i < testCasesList.getLength(); i++) {
+            Element testCases = (Element) testCasesList.item(i);
+            Node parentNode = testCases.getParentNode();
+            parentNode.removeChild(testCases);
+            NodeList extensions = parentNode.getChildNodes();
+            boolean hasMoreElements = false;
+            for (int j = 0; j < extensions.getLength(); j++) {
+                if (extensions.item(j).getNodeType() == Node.ELEMENT_NODE) {
+                    hasMoreElements = true;
+                    break;
+                }
+            }
+            if (!hasMoreElements) {
+                // Remove extension as the test case was the only extension
+                parentNode.getParentNode().removeChild(parentNode);
+            }
+        }
+
+        return dmnXML;
 
     }
 
