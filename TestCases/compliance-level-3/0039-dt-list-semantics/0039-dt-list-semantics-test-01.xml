@@ -79,31 +79,4 @@
           </tc:expected>
         </tc:resultNode>
       </tc:testCase>
-      <tc:testCase id="_5bef2e2a-3043-4b2b-a61f-27ba47f4ff37">
-        <tc:description>select none</tc:description>
-        <tc:inputNode name="Flu Symtoms">
-          <tc:list>
-            <tc:item>
-              <tc:value xsi:type="xsd:string">fever</tc:value>
-            </tc:item>
-            <tc:item>
-              <tc:value xsi:type="xsd:string">cough</tc:value>
-            </tc:item>
-            <tc:item>
-              <tc:value xsi:type="xsd:string">sore throat</tc:value>
-            </tc:item>
-            <tc:item>
-              <tc:value xsi:type="xsd:string">runny nose</tc:value>
-            </tc:item>
-          </tc:list>
-        </tc:inputNode>
-        <tc:inputNode name="Symptom">
-          <tc:value xsi:type="xsd:string">bleeding</tc:value>
-        </tc:inputNode>
-        <tc:resultNode name="Symptom Analysis">
-          <tc:expected>
-            <tc:list/>
-          </tc:expected>
-        </tc:resultNode>
-      </tc:testCase>
     </tc:testCases>
