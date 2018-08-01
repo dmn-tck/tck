@@ -16,11 +16,7 @@
 		</inputNode>
 		<resultNode name="CarInsurance" type="decision">
 			<expected>
-			<list>
-				<item>
 					<value>64.32</value>
-				</item>
-				</list>
 			</expected>
 		</resultNode>
 	</testCase>
@@ -30,11 +26,7 @@
 		</inputNode>
 		<resultNode name="CarInsurance" type="decision">
 			<expected>
-			<list>
-				<item>
 					<value>98.83</value>
-				</item>
-				</list>
 			</expected>
 		</resultNode>
 	</testCase>
@@ -44,11 +36,7 @@
 		</inputNode>
 		<resultNode name="CarInsurance" type="decision">
 			<expected>
-			<list>
-				<item>
 					<value>98.83</value>
-				</item>
-				</list>
 			</expected>
 		</resultNode>
 	</testCase>
