@@ -10,7 +10,7 @@
 	jaxb:version="2.1">
 
 	jaxb:extensionBindingPrefixes="annox"
-		<jaxb:bindings schemaLocation="testCases.xsd" node="/xs:schema/xs:complexType[@name='valueType']/xs:choice/xs:element[@name='value']">
+		<jaxb:bindings schemaLocation="testCases.xsd" node="/xs:schema/xs:complexType[@name='valueType']/xs:sequence/xs:choice/xs:element[@name='value']">
 			<annox:annotate target="getter">@com.fasterxml.jackson.databind.annotation.JsonSerialize(using=org.omg.dmn.tck.marshaller._20160719.json.ValueSerializer.class)</annox:annotate>
 		</jaxb:bindings>
 </jaxb:bindings>
