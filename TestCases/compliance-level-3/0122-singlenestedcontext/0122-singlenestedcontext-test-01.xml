@@ -13,7 +13,7 @@
 		<inputNode name="Term">
 			<value>360</value>
 		</inputNode>
-		<resultNode name="Boxed Context" type="context">
+		<resultNode name="Boxed Context" type="decision">
 			<expected>
 					<value>2878.6935494327668</value>
 			</expected>
@@ -26,7 +26,7 @@
 		<inputNode name="Term">
 			<value>60</value>
 		</inputNode>
-		<resultNode name="Boxed Context" type="context">
+		<resultNode name="Boxed Context" type="decision">
 			<expected>
 					<value>649.1175498364003</value>
 			</expected>
@@ -39,7 +39,7 @@
 		<inputNode name="Term">
 			<value>365</value>
 		</inputNode>
-		<resultNode name="Boxed Context" type="context">
+		<resultNode name="Boxed Context" type="decision">
 			<expected>
 					<value>2858.1160998965915</value>
 			</expected>
