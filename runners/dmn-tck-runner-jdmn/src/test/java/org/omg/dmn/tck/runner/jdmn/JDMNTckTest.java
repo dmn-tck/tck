@@ -16,6 +16,7 @@ import com.gs.dmn.feel.analysis.semantics.environment.Environment;
 import com.gs.dmn.feel.analysis.semantics.environment.EnvironmentFactory;
 import com.gs.dmn.feel.analysis.semantics.type.Type;
 import com.gs.dmn.feel.lib.FEELLib;
+import com.gs.dmn.feel.lib.StandardFEELLib;
 import com.gs.dmn.feel.synthesis.FEELTranslator;
 import com.gs.dmn.feel.synthesis.FEELTranslatorImpl;
 import com.gs.dmn.log.BuildLogger;
@@ -38,7 +39,7 @@ import org.omg.dmn.tck.runner.junit4.DmnTckSuite;
 import org.omg.dmn.tck.runner.junit4.DmnTckVendorTestSuite;
 import org.omg.dmn.tck.runner.junit4.TestResult;
 import org.omg.dmn.tck.runner.junit4.TestSuiteContext;
-import org.omg.spec.dmn._20151101.dmn.TDecision;
+import org.omg.spec.dmn._20180521.model.TDecision;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
@@ -106,7 +107,7 @@ public class JDMNTckTest implements DmnTckVendorTestSuite {
         try {
             JDMNTestContext gsContext = (JDMNTestContext) context;
             BasicDMN2JavaTransformer dmnTransformer = ((JDMNTestContext) gsContext).getBasicToJavaTransformer();
-            FEELLib lib = gsContext.getLib();
+            StandardFEELLib lib = gsContext.getLib();
             FEELTranslator translator = new FEELTranslatorImpl(dmnTransformer);
             DMNInterpreter interpreter = gsContext.getInterpreter();
             TCKUtil tckUtil = new TCKUtil(dmnTransformer, lib);
