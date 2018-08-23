@@ -106,14 +106,11 @@ public class JDMNTckTest implements DmnTckVendorTestSuite {
 
         try {
             JDMNTestContext gsContext = (JDMNTestContext) context;
-            BasicDMN2JavaTransformer dmnTransformer = ((JDMNTestContext) gsContext).getBasicToJavaTransformer();
+            BasicDMN2JavaTransformer basicTransformer = gsContext.getBasicToJavaTransformer();
             StandardFEELLib lib = gsContext.getLib();
-            FEELTranslator translator = new FEELTranslatorImpl(dmnTransformer);
             DMNInterpreter interpreter = gsContext.getInterpreter();
-            TCKUtil tckUtil = new TCKUtil(dmnTransformer, lib);
+            TCKUtil tckUtil = new TCKUtil(basicTransformer, lib);
 
-            EnvironmentFactory environmentFactory = gsContext.getEnvironmentFactory();
-            Environment environment = environmentFactory.makeEnvironment(environmentFactory.getRootEnvironment());
             RuntimeEnvironment runtimeEnvironment =  tckUtil.makeEnvironment(testCase);
 
             List<ResultNode> resultNode = testCase.getResultNode();
@@ -123,8 +120,9 @@ public class JDMNTckTest implements DmnTckVendorTestSuite {
                 Object actualOutput = null;
                 try {
                     String decisionName = res.getName();
-                    TDecision decision = (TDecision) dmnTransformer.getDMNModelRepository().findDRGElementByName(decisionName);
-                    Type decisionType = dmnTransformer.toFEELType(QualifiedName.toQualifiedName(decision.getVariable().getTypeRef()));
+                    TDecision decision = (TDecision) basicTransformer.getDMNModelRepository().findDRGElementByName(decisionName);
+                    Environment environment = basicTransformer.makeEnvironment(decision);
+                    Type decisionType = basicTransformer.drgElementOutputFEELType(decision, environment);
                     expectedValue = tckUtil.makeValue(res.getExpected(), decisionType);
                     actualOutput = interpreter.evaluate(decisionName, runtimeEnvironment);
                 } catch (Throwable e) {
