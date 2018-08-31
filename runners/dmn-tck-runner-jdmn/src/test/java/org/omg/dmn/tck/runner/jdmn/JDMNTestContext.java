@@ -11,10 +11,12 @@
 
 package org.omg.dmn.tck.runner.jdmn;
 
+import com.gs.dmn.DMNModelRepository;
 import com.gs.dmn.dialect.DMNDialectDefinition;
 import com.gs.dmn.feel.analysis.semantics.environment.DefaultDMNEnvironmentFactory;
 import com.gs.dmn.feel.analysis.semantics.environment.EnvironmentFactory;
 import com.gs.dmn.feel.lib.FEELLib;
+import com.gs.dmn.feel.lib.StandardFEELLib;
 import com.gs.dmn.log.BuildLogger;
 import com.gs.dmn.log.NopBuildLogger;
 import com.gs.dmn.runtime.interpreter.DMNInterpreter;
@@ -29,7 +31,7 @@ import com.gs.dmn.transformation.basic.BasicDMN2JavaTransformer;
 import com.gs.dmn.transformation.lazy.NopLazyEvaluationDetector;
 import org.omg.dmn.tck.marshaller._20160719.TestCases;
 import org.omg.dmn.tck.runner.junit4.TestSuiteContext;
-import org.omg.spec.dmn._20151101.dmn.TDefinitions;
+import org.omg.spec.dmn._20180521.model.TDefinitions;
 
 import java.io.File;
 import java.net.URL;
@@ -44,7 +46,7 @@ public class JDMNTestContext implements TestSuiteContext {
     private final TestCasesReader tckReader;
     private final DMNTransformer<TestCases> dmnTransformer;
     private final DMNDialectDefinition dialectDefinition;
-    private final FEELLib lib;
+    private final StandardFEELLib lib;
     private final EnvironmentFactory environmentFactory;
 
     private DMNInterpreter interpreter;
@@ -55,7 +57,7 @@ public class JDMNTestContext implements TestSuiteContext {
         this.tckReader = new TestCasesReader(new NopBuildLogger());
         this.dmnTransformer = dmnTransformer;
         this.dialectDefinition = dialectDefinition;
-        this.lib = dialectDefinition.createFEELLib();
+        this.lib = (StandardFEELLib) dialectDefinition.createFEELLib();
         this.environmentFactory = DefaultDMNEnvironmentFactory.instance();
     }
 
@@ -63,7 +65,7 @@ public class JDMNTestContext implements TestSuiteContext {
         return interpreter;
     }
 
-    public FEELLib getLib() {
+    public StandardFEELLib getLib() {
         return lib;
     }
 
@@ -76,21 +78,21 @@ public class JDMNTestContext implements TestSuiteContext {
     }
 
     public void prepareModel(URL modelURL, BuildLogger logger) {
-        TDefinitions definitions = new TDefinitions();
+        DMNModelRepository repository = new DMNModelRepository();
         if (modelURL != null) {
-            definitions = dmnReader.read(modelURL);
+            repository = dmnReader.read(modelURL);
         }
-        this.dmnTransformer.transform(definitions);
+        this.dmnTransformer.transform(repository);
         if (DEBUG_TRANSFORMER) {
-            save(modelURL, definitions);
+            save(modelURL, repository.getDefinitions());
         }
-        this.interpreter = dialectDefinition.createDMNInterpreter(definitions);
-        this.basicToJavaTransformer = dialectDefinition.createBasicTransformer(definitions, new NopLazyEvaluationDetector(), new LinkedHashMap<>());
+        this.interpreter = dialectDefinition.createDMNInterpreter(repository);
+        this.basicToJavaTransformer = dialectDefinition.createBasicTransformer(repository, new NopLazyEvaluationDetector(), new LinkedHashMap<>());
     }
 
     public void clean(TestCases testCases) {
-        TDefinitions definitions = basicToJavaTransformer.getDMNModelRepository().getDefinitions();
-        this.dmnTransformer.transform(definitions, testCases);
+        DMNModelRepository repository = basicToJavaTransformer.getDMNModelRepository();
+        this.dmnTransformer.transform(repository, testCases);
         if (DEBUG_TRANSFORMER) {
             save(testCases);
         }
