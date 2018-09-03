@@ -30,7 +30,7 @@
     <link href="css/lib.css" rel="stylesheet" media="screen, print">
 
     <!-- chart js -->
-    <title>DMN TCK results overview for Red Hat 7.9.0.Final</title>
+    <title>DMN TCK results overview for Goldman Sachs, Inc. 2.1.0</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script>
@@ -72,7 +72,7 @@
                 <li>
                     <a href="index.html">Home</a>
                 </li>
-                <li class="active"><strong>Drools 7.9.0.Final</strong></li>
+                <li class="active"><strong>jDMN 2.1.0</strong></li>
             </ol>
         </div>
     </div>
@@ -81,23 +81,23 @@
             <div class="report-header ">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>DMN TCK Results Overview for Drools 7.9.0.Final</h1>
+                        <h1>DMN TCK Results Overview for jDMN 2.1.0</h1>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Date:</strong> 2018-07-28</p>
+                            <p><strong>Date:</strong> 2018-08-19</p>
                         </small>
                     </div>
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Tests:</strong> 579</p>
+                            <p><strong>Tests:</strong> 630</p>
                         </small>
                     </div>
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Labels:</strong> 44</p>
+                            <p><strong>Labels:</strong> 55</p>
                         </small>
                     </div>
                 </div>
@@ -114,9 +114,9 @@
                 };
 
                 var color = Chart.helpers.color;
-                var cbl6_data = {
+                var cbl3_data = {
                     labels: [
-                        "Business Knowledge Model","Compliance Level 2","Compliance Level 3","Context","Data Type : String","Data Type: Boolean","Data Type: Collection","Data Type: Date","Data Type: Function","Data Type: Number","Data Type: String","Data Type: Structure","Data Type: Time","Data Type: Years and Months Duration","Decision Table: Multiple Output","Decision Table: Single Output","FEEL Arithmetic","FEEL Conditionals","FEEL Constants","FEEL Filter (10.3.2.5)","FEEL Function Literals","FEEL Functions: date and time","FEEL Functions: list","FEEL Functions: lists","FEEL Functions: number","FEEL Functions: numeric","FEEL Functions: string","FEEL Functions: strings","FEEL Iteration","FEEL List","FEEL List Operator","FEEL Quantifiers","FEEL Relation","FEEL Special-character Names","Function Definition","Function Invocation","Hit Policy: ANY","Hit Policy: COLLECT","Hit Policy: PRIORITY","Hit Policy: UNIQUE","Item Definition","Literal Expression","Literal Function Invocation","Relation"
+                        "Aggregator: COUNT","Aggregator: MIN","Aggregator: SUM","Business Knowledge Model","Compliance Level 2","Compliance Level 3","Context","Data Type : String","Data Type: Boolean","Data Type: Collection","Data Type: Date","Data Type: Date and Time","Data Type: Days and Time Duration","Data Type: Function","Data Type: Number","Data Type: String","Data Type: Structure","Data Type: Text","Data Type: Time","Data Type: Years and Months Duration","Decision Table: Multiple Output","Decision Table: Multiple Output Columns","Decision Table: Single Output","FEEL Arithmetic","FEEL Conditionals","FEEL Constants","FEEL Filter (10.3.2.5)","FEEL Function Literals","FEEL Functions: date and time","FEEL Functions: list","FEEL Functions: lists","FEEL Functions: number","FEEL Functions: numeric","FEEL Functions: string","FEEL Functions: strings","FEEL Iteration","FEEL List","FEEL List Operator","FEEL Quantifiers","FEEL Relation","FEEL Special-character Names","Function Definition","Function Invocation","Hit Policy: ANY","Hit Policy: COLLECT","Hit Policy: Collect","Hit Policy: FIRST","Hit Policy: OUTPUT ORDER","Hit Policy: PRIORITY","Hit Policy: RULE ORDER","Hit Policy: UNIQUE","Item Definition","Literal Expression","Literal Function Invocation","Relation"
                     ],
                     datasets: [
                         {
@@ -125,22 +125,29 @@
                             borderColor: window.chartColors.green,
                             borderWidth: 1,
                             data: [
-                                18,
-                                80,
-                                500,
-                                15,
-                                6,
-                                67,
-                                47,
-                                11,
-                                6,
-                                145,
-                                164,
-                                31,
-                                1,
-                                36,
                                 3,
-                                40,
+                                3,
+                                3,
+                                22,
+                                116,
+                                515,
+                                17,
+                                6,
+                                88,
+                                47,
+                                14,
+                                3,
+                                3,
+                                6,
+                                194,
+                                191,
+                                65,
+                                3,
+                                4,
+                                39,
+                                18,
+                                3,
+                                67,
                                 101,
                                 11,
                                 44,
@@ -152,21 +159,25 @@
                                 22,
                                 7,
                                 27,
-                                98,
+                                102,
                                 6,
                                 34,
-                                4,
+                                6,
                                 1,
                                 1,
-                                34,
+                                43,
                                 5,
                                 9,
+                                6,
+                                29,
                                 3,
-                                18,
-                                11,
+                                6,
+                                6,
                                 14,
-                                77,
-                                507,
+                                6,
+                                21,
+                                119,
+                                522,
                                 8,
                                 2
                             ]
@@ -177,6 +188,17 @@
                             borderColor: window.chartColors.yellow,
                             borderWidth: 1,
                             data: [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
                                 0,
                                 0,
                                 0,
@@ -272,14 +294,25 @@
                                 0,
                                 0,
                                 0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
                                 0
                             ]
                         }
                     ]
                 };
-                var cblp6_data = {
+                var cblp3_data = {
                     labels: [
-                        "Business Knowledge Model","Compliance Level 2","Compliance Level 3","Context","Data Type : String","Data Type: Boolean","Data Type: Collection","Data Type: Date","Data Type: Function","Data Type: Number","Data Type: String","Data Type: Structure","Data Type: Time","Data Type: Years and Months Duration","Decision Table: Multiple Output","Decision Table: Single Output","FEEL Arithmetic","FEEL Conditionals","FEEL Constants","FEEL Filter (10.3.2.5)","FEEL Function Literals","FEEL Functions: date and time","FEEL Functions: list","FEEL Functions: lists","FEEL Functions: number","FEEL Functions: numeric","FEEL Functions: string","FEEL Functions: strings","FEEL Iteration","FEEL List","FEEL List Operator","FEEL Quantifiers","FEEL Relation","FEEL Special-character Names","Function Definition","Function Invocation","Hit Policy: ANY","Hit Policy: COLLECT","Hit Policy: PRIORITY","Hit Policy: UNIQUE","Item Definition","Literal Expression","Literal Function Invocation","Relation"
+                        "Aggregator: COUNT","Aggregator: MIN","Aggregator: SUM","Business Knowledge Model","Compliance Level 2","Compliance Level 3","Context","Data Type : String","Data Type: Boolean","Data Type: Collection","Data Type: Date","Data Type: Date and Time","Data Type: Days and Time Duration","Data Type: Function","Data Type: Number","Data Type: String","Data Type: Structure","Data Type: Text","Data Type: Time","Data Type: Years and Months Duration","Decision Table: Multiple Output","Decision Table: Multiple Output Columns","Decision Table: Single Output","FEEL Arithmetic","FEEL Conditionals","FEEL Constants","FEEL Filter (10.3.2.5)","FEEL Function Literals","FEEL Functions: date and time","FEEL Functions: list","FEEL Functions: lists","FEEL Functions: number","FEEL Functions: numeric","FEEL Functions: string","FEEL Functions: strings","FEEL Iteration","FEEL List","FEEL List Operator","FEEL Quantifiers","FEEL Relation","FEEL Special-character Names","Function Definition","Function Invocation","Hit Policy: ANY","Hit Policy: COLLECT","Hit Policy: Collect","Hit Policy: FIRST","Hit Policy: OUTPUT ORDER","Hit Policy: PRIORITY","Hit Policy: RULE ORDER","Hit Policy: UNIQUE","Item Definition","Literal Expression","Literal Function Invocation","Relation"
                     ],
                     datasets: [
                         {
@@ -288,6 +321,17 @@
                             borderColor: window.chartColors.green,
                             borderWidth: 1,
                             data: [
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
                             100,
                             100,
                             100,
@@ -383,6 +427,17 @@
                             0,
                             0,
                             0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
                             0
                             ]
                         },
@@ -435,6 +490,17 @@
                             0,
                             0,
                             0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
                             0
                             ]
                         }
@@ -443,10 +509,10 @@
 
                 window.onload = function() {
                     // chart by test numbers
-                    var ctx = document.getElementById("cbl6").getContext("2d");
-                    window.cbl6 = new Chart(ctx, {
+                    var ctx = document.getElementById("cbl3").getContext("2d");
+                    window.cbl3 = new Chart(ctx, {
                         type: 'horizontalBar',
-                        data: cbl6_data,
+                        data: cbl3_data,
                         options: {
                             // Elements options apply to all of the options unless overridden in a dataset
                             // In this case, we are setting the border of each horizontal bar to be 2px wide
@@ -461,7 +527,7 @@
                             },
                             title: {
                                 display: true,
-                                text: 'Test results for Red Hat 7.9.0.Final (by number of tests)'
+                                text: 'Test results for Goldman Sachs, Inc. 2.1.0 (by number of tests)'
                             },
                             scales: {
                                 xAxes: [{
@@ -475,10 +541,10 @@
                     });
 
                     // chart by test percentage
-                    var ctxp = document.getElementById("cblp6").getContext("2d");
-                    window.cblp6 = new Chart(ctxp, {
+                    var ctxp = document.getElementById("cblp3").getContext("2d");
+                    window.cblp3 = new Chart(ctxp, {
                         type: 'horizontalBar',
-                        data: cblp6_data,
+                        data: cblp3_data,
                         options: {
                             // Elements options apply to all of the options unless overridden in a dataset
                             // In this case, we are setting the border of each horizontal bar to be 2px wide
@@ -493,7 +559,7 @@
                             },
                             title: {
                                 display: true,
-                                text: 'Test results for Red Hat 7.9.0.Final (by percentage of tests)'
+                                text: 'Test results for Goldman Sachs, Inc. 2.1.0 (by percentage of tests)'
                             },
                             scales: {
                                 xAxes: [{
@@ -519,12 +585,12 @@
             <div class="tab-content">
                 <div id="tab1" class="tab-pane fade active in">
                     <div id="chart_by_percent" style="width: 100%;">
-                        <canvas id="cblp6"></canvas>
+                        <canvas id="cblp3"></canvas>
                     </div>
                 </div>
                 <div id="tab2" class="tab-pane fade">
                     <div id="chart_by_numbers" style="width: 100%;">
-                        <canvas id="cbl6"></canvas>
+                        <canvas id="cbl3"></canvas>
                     </div>
                 </div>
                 <div id="tab3" class="tab-pane fade">
@@ -537,272 +603,338 @@
                                     <th> Label <br/>
                                         <small></small>
                                     </th>
-                                    <th> Red Hat <br/>
-                                        <small>7.9.0.Final</small>
+                                    <th> Goldman Sachs, Inc. <br/>
+                                        <small>2.1.0</small>
                                     </th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb0','Business Knowledge Model')">Business Knowledge Model</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>18/18</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb1','Compliance Level 2')">Compliance Level 2</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>80/80</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb2','Compliance Level 3')">Compliance Level 3</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>500/500</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb3','Context')">Context</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>15/15</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb4','Data Type : String')">Data Type : String</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb5','Data Type: Boolean')">Data Type: Boolean</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>67/67</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb6','Data Type: Collection')">Data Type: Collection</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>47/47</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb7','Data Type: Date')">Data Type: Date</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>11/11</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb8','Data Type: Function')">Data Type: Function</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb9','Data Type: Number')">Data Type: Number</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>145/145</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb10','Data Type: String')">Data Type: String</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>164/164</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb11','Data Type: Structure')">Data Type: Structure</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>31/31</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb12','Data Type: Time')">Data Type: Time</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>1/1</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb13','Data Type: Years and Months Duration')">Data Type: Years and Months Duration</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>36/36</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb14','Decision Table: Multiple Output')">Decision Table: Multiple Output</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb0','Aggregator: COUNT')">Aggregator: COUNT</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb15','Decision Table: Single Output')">Decision Table: Single Output</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb1','Aggregator: MIN')">Aggregator: MIN</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>40/40</small></span>
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb16','FEEL Arithmetic')">FEEL Arithmetic</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb2','Aggregator: SUM')">Aggregator: SUM</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>101/101</small></span>
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb17','FEEL Conditionals')">FEEL Conditionals</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>11/11</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb18','FEEL Constants')">FEEL Constants</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>44/44</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb19','FEEL Filter (10.3.2.5)')">FEEL Filter (10.3.2.5)</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>8/8</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb20','FEEL Function Literals')">FEEL Function Literals</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>7/7</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb21','FEEL Functions: date and time')">FEEL Functions: date and time</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>278/278</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb22','FEEL Functions: list')">FEEL Functions: list</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>39/39</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb23','FEEL Functions: lists')">FEEL Functions: lists</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>23/23</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb24','FEEL Functions: number')">FEEL Functions: number</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb3','Business Knowledge Model')">Business Knowledge Model</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>22/22</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb25','FEEL Functions: numeric')">FEEL Functions: numeric</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb4','Compliance Level 2')">Compliance Level 2</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>7/7</small></span>
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>116/116</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb26','FEEL Functions: string')">FEEL Functions: string</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb5','Compliance Level 3')">Compliance Level 3</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>27/27</small></span>
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>515/515</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb27','FEEL Functions: strings')">FEEL Functions: strings</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb6','Context')">Context</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>98/98</small></span>
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>17/17</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb28','FEEL Iteration')">FEEL Iteration</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb7','Data Type : String')">Data Type : String</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb29','FEEL List')">FEEL List</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb8','Data Type: Boolean')">Data Type: Boolean</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>34/34</small></span>
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>88/88</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb30','FEEL List Operator')">FEEL List Operator</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb9','Data Type: Collection')">Data Type: Collection</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>4/4</small></span>
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>47/47</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb31','FEEL Quantifiers')">FEEL Quantifiers</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>1/1</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb32','FEEL Relation')">FEEL Relation</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>1/1</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb33','FEEL Special-character Names')">FEEL Special-character Names</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>34/34</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb34','Function Definition')">Function Definition</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>5/5</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb35','Function Invocation')">Function Invocation</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>9/9</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb36','Hit Policy: ANY')">Hit Policy: ANY</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb37','Hit Policy: COLLECT')">Hit Policy: COLLECT</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>18/18</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb38','Hit Policy: PRIORITY')">Hit Policy: PRIORITY</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>11/11</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb39','Hit Policy: UNIQUE')">Hit Policy: UNIQUE</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb10','Data Type: Date')">Data Type: Date</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>14/14</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb40','Item Definition')">Item Definition</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb11','Data Type: Date and Time')">Data Type: Date and Time</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>77/77</small></span>
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb41','Literal Expression')">Literal Expression</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb12','Data Type: Days and Time Duration')">Data Type: Days and Time Duration</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>507/507</small></span>
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb42','Literal Function Invocation')">Literal Function Invocation</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb13','Data Type: Function')">Data Type: Function</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb14','Data Type: Number')">Data Type: Number</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>194/194</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb15','Data Type: String')">Data Type: String</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>191/191</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb16','Data Type: Structure')">Data Type: Structure</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>65/65</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb17','Data Type: Text')">Data Type: Text</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb18','Data Type: Time')">Data Type: Time</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>4/4</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb19','Data Type: Years and Months Duration')">Data Type: Years and Months Duration</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>39/39</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb20','Decision Table: Multiple Output')">Decision Table: Multiple Output</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>18/18</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb21','Decision Table: Multiple Output Columns')">Decision Table: Multiple Output Columns</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb22','Decision Table: Single Output')">Decision Table: Single Output</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>67/67</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb23','FEEL Arithmetic')">FEEL Arithmetic</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>101/101</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb24','FEEL Conditionals')">FEEL Conditionals</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>11/11</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb25','FEEL Constants')">FEEL Constants</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>44/44</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb26','FEEL Filter (10.3.2.5)')">FEEL Filter (10.3.2.5)</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>8/8</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.9.0.Final.html', 'tb43','Relation')">Relation</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb27','FEEL Function Literals')">FEEL Function Literals</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>7/7</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb28','FEEL Functions: date and time')">FEEL Functions: date and time</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>278/278</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb29','FEEL Functions: list')">FEEL Functions: list</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>39/39</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb30','FEEL Functions: lists')">FEEL Functions: lists</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>23/23</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb31','FEEL Functions: number')">FEEL Functions: number</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>22/22</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb32','FEEL Functions: numeric')">FEEL Functions: numeric</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>7/7</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb33','FEEL Functions: string')">FEEL Functions: string</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>27/27</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb34','FEEL Functions: strings')">FEEL Functions: strings</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>102/102</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb35','FEEL Iteration')">FEEL Iteration</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb36','FEEL List')">FEEL List</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>34/34</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb37','FEEL List Operator')">FEEL List Operator</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb38','FEEL Quantifiers')">FEEL Quantifiers</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>1/1</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb39','FEEL Relation')">FEEL Relation</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>1/1</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb40','FEEL Special-character Names')">FEEL Special-character Names</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>43/43</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb41','Function Definition')">Function Definition</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>5/5</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb42','Function Invocation')">Function Invocation</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>9/9</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb43','Hit Policy: ANY')">Hit Policy: ANY</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb44','Hit Policy: COLLECT')">Hit Policy: COLLECT</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>29/29</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb45','Hit Policy: Collect')">Hit Policy: Collect</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb46','Hit Policy: FIRST')">Hit Policy: FIRST</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb47','Hit Policy: OUTPUT ORDER')">Hit Policy: OUTPUT ORDER</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb48','Hit Policy: PRIORITY')">Hit Policy: PRIORITY</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>14/14</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb49','Hit Policy: RULE ORDER')">Hit Policy: RULE ORDER</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb50','Hit Policy: UNIQUE')">Hit Policy: UNIQUE</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>21/21</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb51','Item Definition')">Item Definition</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>119/119</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb52','Literal Expression')">Literal Expression</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>522/522</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb53','Literal Function Invocation')">Literal Function Invocation</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>8/8</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_jDMN_2.1.0.html', 'tb54','Relation')">Relation</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>2/2</small></span>
                                     </td>
@@ -819,7 +951,7 @@
                     of the TCK tests execution provided by each vendor. The accuracy of
                     the results is under the responsibility of the respective vendors.
                     <br/>
-                        To execute the tests and reproduce the results, please follow the vendor provided instructions <a href="https://github.com/dmn-tck/tck/tree/master/runners/dmn-tck-runner-drools/README.md" target="_blank">at this link <span class="fa fa-external-link"></span></a>.
+                        To execute the tests and reproduce the results, please follow the vendor provided instructions <a href="https://github.com/dmn-tck/tck/tree/master/runners/dmn-tck-runner-jdmn/README.md" target="_blank">at this link <span class="fa fa-external-link"></span></a>.
                     </em></small></p>
             </blockquote>
         </div>
@@ -828,7 +960,7 @@
 <!-- pre-footer -->
 <div class="pre-footer">
     <div class="last-updated">
-        <p>Last updated:</strong> 01-Aug-2018 08:25:15</p>
+        <p>Last updated:</strong> 03-Sep-2018 08:35:29</p>
     </div>
 </div>
 <div class="footer">
