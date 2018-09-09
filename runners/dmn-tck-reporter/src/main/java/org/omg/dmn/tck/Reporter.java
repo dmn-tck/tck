@@ -293,9 +293,9 @@ public class Reporter {
                 if( sp + ip + fp + mp < 100 ) {
                     // hack to eliminate rounding errors on the chart data
                     if( sp > 0 ) {
-                        sp += 100-sp-ip-fp;
+                        sp = 100-ip-fp-mp;
                     } else if( ip > 0 ) {
-                        ip += 100-sp-ip-fp;
+                        ip = 100-sp-fp-mp;
                     }
                 }
                 row.getData().add( sp );
