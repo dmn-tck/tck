@@ -80,13 +80,25 @@
     </div>
     <div class="content container">
         <div>
-            <label>Filter By: </label>
-            <select id="label-filter" class="combobox">
-                <option value="all-tests">All Tests</option>
-                <#list tIndLabels as tlbl>
-                    <option value="tb${tlbl_index}">${tlbl.title}</option>
-                </#list>
-            </select>
+            <div>
+                <table class="table table-condensed table-striped">
+                    <tr>
+                        <td>
+                            <label>Filter By: </label>
+                            <select id="label-filter" class="combobox">
+                                <option value="all-tests">All Tests</option>
+                                <#list tIndLabels as tlbl>
+                                <option value="tb${tlbl_index}">${tlbl.title}</option>
+                                </#list>
+                            </select>
+                        </td>
+                        <td><span class="glyphicon glyphicon-ok" aria-hidden="true"> Succeeded</span></td>
+                        <td><span class="glyphicon glyphicon-remove" aria-hidden="true"> Failed</span></td>
+                        <td><span class="glyphicon glyphicon-minus" aria-hidden="true"> Missing</span></td>
+                        <td><span class="glyphicon glyphicon-alert" aria-hidden="true"> Not Supported</span></td>
+                    </tr>
+                </table>
+            </div>
         </div>
         <div id="results">  <!-- ponto de partida da filtragem -->
 
@@ -131,7 +143,7 @@
                             </td>
                         </#if>
                         <td class="text-nowrap" scope="row">${row.text[5]}</td>
-                        <td align="center" style="vertical-align:middle"><span class="glyphicon ${row.icons[6]}" aria-hidden="true"></span></td>
+                        <td align="center" style="vertical-align:middle"><span class="glyphicon ${row.icons[6]}" aria-hidden="true" title="${row.text[8]}"></span></td>
                         <td scope="row">${row.text[7]}</td>
                     </tr>
                     </#list>
@@ -186,7 +198,7 @@
                                     </td>
                                 </#if>
                                 <td class="text-nowrap" scope="row" style="vertical-align:middle">${row.text[5]}</td>
-                                <td align="center" style="vertical-align:middle"><span class="glyphicon ${row.icons[6]}" aria-hidden="true"></span></td>
+                                <td align="center" style="vertical-align:middle"><span class="glyphicon ${row.icons[6]}" aria-hidden="true" title="${row.text[8]}"></span></td>
                                 <td scope="row">${row.text[7]}</td>
                             </tr>
                             </#list>

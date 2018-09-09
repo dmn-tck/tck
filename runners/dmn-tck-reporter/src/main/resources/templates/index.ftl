@@ -45,23 +45,25 @@
 <#list vendors?values as vendor>
         var c_data${vendor_index} = {
         labels: [
-            "Succeeded", "Failed", "Skipped"
+            "Succeeded", "Failed", "Not Supported", "Missing"
         ],
         datasets: [
             {
                 backgroundColor: [
                     color(window.chartColors.green).alpha(0.5).rgbString(),
                     color(window.chartColors.red).alpha(0.5).rgbString(),
-                    color(window.chartColors.yellow).alpha(0.5).rgbString()
+                    color(window.chartColors.yellow).alpha(0.5).rgbString(),
+                    color(window.chartColors.purple).alpha(0.5).rgbString()
                 ],
                 borderColor: [
+                    window.chartColors.grey,
                     window.chartColors.grey,
                     window.chartColors.grey,
                     window.chartColors.grey
                 ],
                 borderWidth: 1,
                 data: [
-                    ${vendor.succeeded}, ${vendor.failed}, ${header.totalTests - vendor.succeeded - vendor.failed}
+                    ${vendor.succeeded}, ${vendor.failed}, ${vendor.ignored}, ${header.totalTests - vendor.succeeded - vendor.failed - vendor.ignored}
                 ]
             }
         ]
@@ -194,7 +196,8 @@
                                     <dt>Labels: </dt><dd>${header.totalLabels}</dd>
                                     <dt>Succeeded: </dt><dd>${vendor.succeeded}</dd>
                                     <dt>Failed: </dt><dd>${vendor.failed}</dd>
-                                    <dt>Skipped: </dt><dd>${header.totalTests - vendor.succeeded - vendor.failed}</dd>
+                                    <dt>Not Supported: </dt><dd>${vendor.ignored}</dd>
+                                    <dt>Missing: </dt><dd>${header.totalTests - vendor.succeeded - vendor.failed - vendor.ignored}</dd>
                                     <dt>Info: </dt><dd>${vendor.comment}</dd>
                                     <dt>Instructions: </dt><dd>
                                                                 <#if vendor.instructionsUrl?has_content>

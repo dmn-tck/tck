@@ -136,7 +136,7 @@
                             ]
                         },
                         {
-                            label: "Skipped",
+                            label: "Not Supported",
                             backgroundColor: color(window.chartColors.yellow).alpha(0.5).rgbString(),
                             borderColor: window.chartColors.yellow,
                             borderWidth: 1,
@@ -154,6 +154,17 @@
                             data: [
                                 <#list cbl.dataset as dp>
                                 ${dp.data[2]}<#if dp_has_next>,</#if>
+                                </#list>
+                            ]
+                        },
+                        {
+                            label: "Missing",
+                            backgroundColor: color(window.chartColors.purple).alpha(0.5).rgbString(),
+                            borderColor: window.chartColors.purple,
+                            borderWidth: 1,
+                            data: [
+                                <#list cbl.dataset as dp>
+                                ${dp.data[3]}<#if dp_has_next>,</#if>
                                 </#list>
                             ]
                         }
@@ -176,7 +187,7 @@
                             ]
                         },
                         {
-                            label: "Skipped",
+                            label: "Not Supported",
                             backgroundColor: color(window.chartColors.yellow).alpha(0.5).rgbString(),
                             borderColor: window.chartColors.yellow,
                             borderWidth: 1,
@@ -194,6 +205,17 @@
                             data: [
                             <#list cblp.dataset as dp>
                             ${dp.data[2]}<#if dp_has_next>,</#if>
+                            </#list>
+                            ]
+                        },
+                        {
+                            label: "Missing",
+                            backgroundColor: color(window.chartColors.purple).alpha(0.5).rgbString(),
+                            borderColor: window.chartColors.purple,
+                            borderWidth: 1,
+                            data: [
+                            <#list cblp.dataset as dp>
+                            ${dp.data[3]}<#if dp_has_next>,</#if>
                             </#list>
                             ]
                         }
