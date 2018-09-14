@@ -19,15 +19,17 @@ package org.omg.dmn.tck;
 public class TestResult {
 
     public enum Result {
-        SUCCESS, ERROR, IGNORED;
+        SUCCESS, ERROR, IGNORED, UNKNOWN;
 
         public static Result fromString(String result) {
             if( SUCCESS.toString().equalsIgnoreCase( result ) ) {
                 return SUCCESS;
             } else if( ERROR.toString().equalsIgnoreCase( result ) ) {
                 return ERROR;
-            } else {
+            } else if( IGNORED.toString().equalsIgnoreCase( result ) ) {
                 return IGNORED;
+            } else {
+                return UNKNOWN;
             }
         }
     }

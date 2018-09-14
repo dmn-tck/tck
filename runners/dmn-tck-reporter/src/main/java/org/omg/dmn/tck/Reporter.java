@@ -43,6 +43,7 @@ public class Reporter {
     public static final String GLYPHICON_SUCCESS = "glyphicon-ok icon-green";
     public static final String GLYPHICON_FAILURE = "glyphicon-remove icon-red";
     public static final String GLYPHICON_WARNING = "glyphicon-alert icon-yellow";
+    public static final String GLYPHICON_MISSING = "glyphicon-minus icon-black";
 
     public static void main(String[] args) {
         Parameters params = parseCommandLine( args );
@@ -176,19 +177,25 @@ public class Reporter {
                     ReportHelper.addRowCell( row, tc.getId() != null ? tc.getId() : "[no ID]", "" );
                     TestResult r = vendor.getResults().get( createTestKey( tcd.folder, tcd.testCaseName, tc.getId() ) );
                     String icon = null;
+                    String tooltip = null;
                     if( r == null ) {
-                        icon = GLYPHICON_WARNING;
+                        icon = GLYPHICON_MISSING;
+                        tooltip = "Missing";
                     } else if( r.getResult() == TestResult.Result.SUCCESS ) {
                         icon = GLYPHICON_SUCCESS;
+                        tooltip = "Succeeded";
                         succeeded++;
                     } else if( r.getResult() == TestResult.Result.ERROR ) {
                         icon = GLYPHICON_FAILURE;
+                        tooltip = "Failed";
                     } else {
                         icon = GLYPHICON_WARNING;
+                        tooltip = "Not Supported";
                     }
                     String comment = r != null ? r.getComment() : "";
                     ReportHelper.addRowCell( row, "", icon );
                     ReportHelper.addRowCell( row, comment, "" );
+                    ReportHelper.addRowCell( row, tooltip, "" );
                     total++;
                     table.getRows().add( row );
 
@@ -250,6 +257,7 @@ public class Reporter {
                 row.getData().add( success[i] );
                 row.getData().add( ignored[i] );
                 row.getData().add( failed[i] );
+                row.getData().add( total[i] - success[i] - ignored[i] - failed[i] );
                 charts.get( vendor.getFileNameId() ).getDataset().add( row );
                 charts.get( vendor.getFileNameId() ).getLabels().add( lbl.getKey() );
                 i++;
@@ -279,18 +287,21 @@ public class Reporter {
                 row.setLabel( lbl.getKey() );
                 int sp = (int) (((double) success[i] / (double) total[i]) * 100);
                 int ip = (int) (((double) ignored[i] / (double) total[i]) * 100);
-                int fp = failed[i] > 0 ? 100 - sp - ip : 0;
-                if( sp + ip + fp < 100 ) {
+                int fp = (int) (((double) failed[i] / (double) total[i]) * 100);
+                int totalReported = success[i] + ignored[i] + failed[i];
+                int mp = totalReported < total[i] ? 100 - sp - ip - fp : 0;
+                if( sp + ip + fp + mp < 100 ) {
                     // hack to eliminate rounding errors on the chart data
                     if( sp > 0 ) {
-                        sp += 100-sp-ip-fp;
+                        sp = 100-ip-fp-mp;
                     } else if( ip > 0 ) {
-                        ip += 100-sp-ip-fp;
+                        ip = 100-sp-fp-mp;
                     }
                 }
                 row.getData().add( sp );
                 row.getData().add( ip );
                 row.getData().add( fp );
+                row.getData().add( mp );
                 charts.get( vendor.getFileNameId() ).getDataset().add( row );
                 charts.get( vendor.getFileNameId() ).getLabels().add( lbl.getKey() );
                 i++;
@@ -310,7 +321,7 @@ public class Reporter {
                         success[index]++;
                     } else if( r != null && r.getResult() == TestResult.Result.ERROR ) {
                         failed[index]++;
-                    } else {
+                    } else if( r != null && r.getResult() == TestResult.Result.IGNORED ) {
                         ignored[index]++;
                     }
                     total[index]++;
