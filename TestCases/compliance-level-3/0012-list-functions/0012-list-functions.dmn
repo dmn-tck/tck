@@ -7,13 +7,13 @@
         <semantic:typeRef>number</semantic:typeRef>
     </semantic:itemDefinition>
     <semantic:itemDefinition isCollection="true" name="tListOfLists" id="tListOfLists">
-        <semantic:typeRef>tns:tStringList</semantic:typeRef>
+        <semantic:typeRef>tStringList</semantic:typeRef>
     </semantic:itemDefinition>
     <semantic:inputData name="list1" id="_86f5e710-a139-4cd5-8ac4-90b4671a75b8">
-        <semantic:variable typeRef="tns:tStringList" name="list1"/>
+        <semantic:variable typeRef="tStringList" name="list1"/>
     </semantic:inputData>
     <semantic:inputData name="list2" id="_82d66f50-2d47-4849-b5fd-da179e0fec66">
-        <semantic:variable typeRef="tns:tStringList" name="list2"/>
+        <semantic:variable typeRef="tStringList" name="list2"/>
     </semantic:inputData>
     <semantic:inputData name="string1" id="_1bbe9689-bd70-45d4-ab30-f3887cf46b28">
         <semantic:variable typeRef="string" name="string1"/>
@@ -61,7 +61,7 @@
         </semantic:literalExpression>
     </semantic:decision>
     <semantic:inputData name="numList" id="_b894ee22-f795-46f7-b713-77d69d07ae22">
-        <semantic:variable typeRef="tns:tNumList" name="numList"/>
+        <semantic:variable typeRef="tNumList" name="numList"/>
     </semantic:inputData>
     <semantic:decision name="sum1" id="_d6b2c4a0-a147-44a1-a9f4-3575f1bb5695">
         <semantic:variable typeRef="number" name="sum1"/>
@@ -106,7 +106,7 @@
         </semantic:literalExpression>
     </semantic:decision>
     <semantic:decision name="sublist12" id="_95e0ad53-c08f-46af-baa0-9c36d69002f5">
-        <semantic:variable typeRef="tns:tStringList" name="sublist12"/>
+        <semantic:variable typeRef="tStringList" name="sublist12"/>
         <semantic:informationRequirement id="a29945fa-45fe-4464-8d07-3e37c37f7069">
             <semantic:requiredInput href="#_86f5e710-a139-4cd5-8ac4-90b4671a75b8"/>
         </semantic:informationRequirement>
@@ -115,7 +115,7 @@
         </semantic:literalExpression>
     </semantic:decision>
     <semantic:decision name="sublistLast" id="_85f6330f-dcaa-47ca-96bb-1c0228da911f">
-        <semantic:variable typeRef="tns:tStringList" name="sublistLast"/>
+        <semantic:variable typeRef="tStringList" name="sublistLast"/>
         <semantic:informationRequirement id="b3c894ac-a211-4265-991b-86ea9dc02101">
             <semantic:requiredInput href="#_86f5e710-a139-4cd5-8ac4-90b4671a75b8"/>
         </semantic:informationRequirement>
@@ -124,7 +124,7 @@
         </semantic:literalExpression>
     </semantic:decision>
     <semantic:decision name="append1" id="_845ea241-587e-43d8-a563-a1dd18693afe">
-        <semantic:variable typeRef="tns:tNumList" name="append1"/>
+        <semantic:variable typeRef="tNumList" name="append1"/>
         <semantic:informationRequirement id="_2856a9f4-86e6-427c-8a12-74be070a9d7a">
             <semantic:requiredInput href="#_b894ee22-f795-46f7-b713-77d69d07ae22"/>
         </semantic:informationRequirement>
@@ -139,7 +139,7 @@
         </semantic:literalExpression>
     </semantic:decision>
     <semantic:decision name="concatenate1" id="_c0c13a64-ef12-4e04-8e3f-fe9193bd72b9">
-        <semantic:variable typeRef="tns:tStringList" name="concatenate1"/>
+        <semantic:variable typeRef="tStringList" name="concatenate1"/>
         <semantic:informationRequirement id="_11e474f0-81c2-46d1-af6a-8003a07af3af">
             <semantic:requiredInput href="#_86f5e710-a139-4cd5-8ac4-90b4671a75b8"/>
         </semantic:informationRequirement>
@@ -151,7 +151,7 @@
         </semantic:literalExpression>
     </semantic:decision>
     <semantic:decision name="insertBefore1" id="_2064fd78-72aa-4851-9813-8d56674b3936">
-        <semantic:variable typeRef="tns:tStringList" name="insertBefore1"/>
+        <semantic:variable typeRef="tStringList" name="insertBefore1"/>
         <semantic:informationRequirement id="cae9c51a-b8fd-4f39-81e5-46ae70f43d8f">
             <semantic:requiredInput href="#_82d66f50-2d47-4849-b5fd-da179e0fec66"/>
         </semantic:informationRequirement>
@@ -163,7 +163,7 @@
         </semantic:literalExpression>
     </semantic:decision>
     <semantic:decision name="remove2nd" id="_ffd2b93c-2bca-4979-9a65-357ca8ba92ff">
-        <semantic:variable typeRef="tns:tStringList" name="remove2nd"/>
+        <semantic:variable typeRef="tStringList" name="remove2nd"/>
         <semantic:informationRequirement id="fc58a8c9-b83d-4df6-a63b-4fe1fda6ca38">
             <semantic:requiredInput href="#_82d66f50-2d47-4849-b5fd-da179e0fec66"/>
         </semantic:informationRequirement>
@@ -172,7 +172,7 @@
         </semantic:literalExpression>
     </semantic:decision>
     <semantic:decision name="reverse1" id="_673c3497-f8e7-4340-827d-99d8d08664db">
-        <semantic:variable typeRef="tns:tStringList" name="reverse1"/>
+        <semantic:variable typeRef="tStringList" name="reverse1"/>
         <semantic:informationRequirement id="f5aa6eb4-f77b-4f33-b256-e26db5d7a6a4">
             <semantic:requiredDecision href="#_c0c13a64-ef12-4e04-8e3f-fe9193bd72b9"/>
         </semantic:informationRequirement>
@@ -181,7 +181,7 @@
         </semantic:literalExpression>
     </semantic:decision>
     <semantic:decision name="appendListItem" id="_d12d9a82-b182-4c15-9fce-d22cdc53dbc4">
-        <semantic:variable typeRef="tns:tListOfLists" name="appendListItem"/>
+        <semantic:variable typeRef="tListOfLists" name="appendListItem"/>
         <semantic:informationRequirement id="cacbbbb5-5e23-4089-a48d-af62e0c605b9">
             <semantic:requiredInput href="#_86f5e710-a139-4cd5-8ac4-90b4671a75b8"/>
         </semantic:informationRequirement>
@@ -193,7 +193,7 @@
         </semantic:literalExpression>
     </semantic:decision>
     <semantic:decision name="indexOf1" id="_3c7aef83-002c-4c61-9297-e822a7d4e829">
-        <semantic:variable typeRef="tns:tNumList" name="indexOf1"/>
+        <semantic:variable typeRef="tNumList" name="indexOf1"/>
         <semantic:informationRequirement id="cbf43b3f-1452-4a47-95e7-6b4f0f80651a">
             <semantic:requiredInput href="#_82d66f50-2d47-4849-b5fd-da179e0fec66"/>
         </semantic:informationRequirement>
@@ -205,7 +205,7 @@
         </semantic:literalExpression>
     </semantic:decision>
     <semantic:decision name="union1" id="_0dee9e3c-ef4e-4853-b182-bdf8bff1d20b">
-        <semantic:variable typeRef="tns:tStringList" name="union1"/>
+        <semantic:variable typeRef="tStringList" name="union1"/>
         <semantic:informationRequirement id="_27a059d8-41a3-4dbf-b1d3-e5f38a7dfa88">
             <semantic:requiredDecision href="#_c0c13a64-ef12-4e04-8e3f-fe9193bd72b9"/>
         </semantic:informationRequirement>
@@ -217,7 +217,7 @@
         </semantic:literalExpression>
     </semantic:decision>
     <semantic:decision name="distinctVals" id="_0bbaa2a8-b265-49d4-9540-28b1bddac540">
-        <semantic:variable typeRef="tns:tStringList" name="distinctVals"/>
+        <semantic:variable typeRef="tStringList" name="distinctVals"/>
         <semantic:informationRequirement id="c9bc506f-643e-4d68-bdd4-f2a2bab981c1">
             <semantic:requiredDecision href="#_2064fd78-72aa-4851-9813-8d56674b3936"/>
         </semantic:informationRequirement>
@@ -226,7 +226,7 @@
         </semantic:literalExpression>
     </semantic:decision>
     <semantic:decision name="flatten1" id="_ef7d1df2-8a1c-47cf-ae2e-928f71e2c460">
-        <semantic:variable typeRef="tns:tStringList" name="flatten1"/>
+        <semantic:variable typeRef="tStringList" name="flatten1"/>
         <semantic:informationRequirement id="_883c9eb4-1f4f-4885-82c0-234f9ac9a1d7">
             <semantic:requiredDecision href="#_d12d9a82-b182-4c15-9fce-d22cdc53dbc4"/>
         </semantic:informationRequirement>

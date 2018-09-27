@@ -4,25 +4,25 @@
         <semantic:typeRef>string</semantic:typeRef>
     </semantic:itemDefinition>
     <semantic:itemDefinition isCollection="true" name="tNestedList" label="tNestedList">
-        <semantic:typeRef>tns:tStringList</semantic:typeRef>
+        <semantic:typeRef>tStringList</semantic:typeRef>
     </semantic:itemDefinition>
     <semantic:inputData name="simpleList" id="_8713a7d7-bae7-484e-b1d5-788b3979d659">
-        <semantic:variable typeRef="tns:tStringList" name="simpleList"/>
+        <semantic:variable typeRef="tStringList" name="simpleList"/>
     </semantic:inputData>
     <semantic:inputData name="nestedList" id="_722095a4-3116-4d71-b225-58795b3ec654">
-        <semantic:variable typeRef="tns:tNestedList" name="nestedList"/>
+        <semantic:variable typeRef="tNestedList" name="nestedList"/>
     </semantic:inputData>
     <semantic:inputData name="position" id="_4688d5d9-3a03-4377-89e3-9ccd50e1624e">
         <semantic:variable typeRef="number" name="position"/>
     </semantic:inputData>
     <semantic:decision name="literalNestedList" id="_7a7f2263-5d9b-4a18-aee8-43783f417b07">
-        <semantic:variable typeRef="tns:tNestedList" name="literalNestedList"/>
+        <semantic:variable typeRef="tNestedList" name="literalNestedList"/>
         <semantic:literalExpression>
             <semantic:text>[["a","b"],["b","c"]]</semantic:text>
         </semantic:literalExpression>
     </semantic:decision>
     <semantic:decision name="remove1" id="_c169428e-2a57-42d2-a26d-cf22039da762">
-        <semantic:variable typeRef="tns:tStringList" name="remove1"/>
+        <semantic:variable typeRef="tStringList" name="remove1"/>
         <semantic:informationRequirement id="b5b98115-918b-4dfa-a278-83d24e42ca32">
             <semantic:requiredInput href="#_8713a7d7-bae7-484e-b1d5-788b3979d659"/>
         </semantic:informationRequirement>
@@ -34,7 +34,7 @@
         </semantic:literalExpression>
     </semantic:decision>
     <semantic:decision name="insert2" id="_12fdd98a-00da-47af-80e6-f70906e359c0">
-        <semantic:variable typeRef="tns:tNestedList" name="insert2"/>
+        <semantic:variable typeRef="tNestedList" name="insert2"/>
         <semantic:informationRequirement id="_4be44ea7-31ff-429e-b47c-6966d06df936">
             <semantic:requiredDecision href="#_7a7f2263-5d9b-4a18-aee8-43783f417b07"/>
         </semantic:informationRequirement>
@@ -49,7 +49,7 @@
         </semantic:literalExpression>
     </semantic:decision>
     <semantic:decision name="remove2" id="_93786c60-d986-4c40-b836-4b2f0bc218ce">
-        <semantic:variable typeRef="tns:tNestedList" name="remove2"/>
+        <semantic:variable typeRef="tNestedList" name="remove2"/>
         <semantic:informationRequirement id="_0e1fd4be-50e3-45a2-99a7-d02e3d6b7caf">
             <semantic:requiredInput href="#_4688d5d9-3a03-4377-89e3-9ccd50e1624e"/>
         </semantic:informationRequirement>
@@ -61,7 +61,7 @@
         </semantic:literalExpression>
     </semantic:decision>
     <semantic:decision name="insert1" id="_d1465880-49ca-4182-ae74-7670fc834f2c">
-        <semantic:variable typeRef="tns:tStringList" name="insert1"/>
+        <semantic:variable typeRef="tStringList" name="insert1"/>
         <semantic:informationRequirement id="_14590401-4bf0-4359-863a-130566ca7129">
             <semantic:requiredInput href="#_8713a7d7-bae7-484e-b1d5-788b3979d659"/>
         </semantic:informationRequirement>
@@ -73,7 +73,7 @@
         </semantic:literalExpression>
     </semantic:decision>
     <semantic:decision name="insert3" id="_d6beae1e-c23f-4fdb-8c63-6c9835337eff">
-        <semantic:variable typeRef="tns:tNestedList" name="insert3"/>
+        <semantic:variable typeRef="tNestedList" name="insert3"/>
         <semantic:informationRequirement id="a371ff70-b197-4ba7-b98b-3f7feddd5a7b">
             <semantic:requiredInput href="#_722095a4-3116-4d71-b225-58795b3ec654"/>
         </semantic:informationRequirement>

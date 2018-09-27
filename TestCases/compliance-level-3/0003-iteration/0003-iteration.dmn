@@ -12,13 +12,13 @@
         </semantic:itemComponent>
     </semantic:itemDefinition>
     <semantic:itemDefinition isCollection="true" name="tLoanList">
-        <semantic:typeRef>tns:tLoan</semantic:typeRef>
+        <semantic:typeRef>tLoan</semantic:typeRef>
     </semantic:itemDefinition>
     <semantic:itemDefinition isCollection="true" name="tMonthlyPaymentList">
         <semantic:typeRef>number</semantic:typeRef>
     </semantic:itemDefinition>
     <semantic:decision name="MonthlyPayment" id="d_MonthlyPayment">
-        <semantic:variable typeRef="tns:tMonthlyPaymentList" name="MonthlyPayment"/>
+        <semantic:variable typeRef="tMonthlyPaymentList" name="MonthlyPayment"/>
         <semantic:informationRequirement id="_4bc8224c-cc94-45ec-8452-a4b9d96db499">
             <semantic:requiredInput href="#i_Loans"/>
         </semantic:informationRequirement>
@@ -32,14 +32,14 @@
     <semantic:businessKnowledgeModel name="PMT2" id="b_PMT2">
         <semantic:variable name="PMT2"/>
         <semantic:encapsulatedLogic>
-            <semantic:formalParameter typeRef="tns:tLoan" name="loan"/>
+            <semantic:formalParameter typeRef="tLoan" name="loan"/>
             <semantic:literalExpression typeRef="number">
                 <semantic:text>(loan.amount * loan.rate/12)/(1-(1+loan.rate/12)**-loan.term)</semantic:text>
             </semantic:literalExpression>
         </semantic:encapsulatedLogic>
     </semantic:businessKnowledgeModel>
     <semantic:inputData name="Loans" id="i_Loans">
-        <semantic:variable typeRef="tns:tLoanList" name="Loans"/>
+        <semantic:variable typeRef="tLoanList" name="Loans"/>
     </semantic:inputData>
     <dmndi:DMNDI>
         <dmndi:DMNDiagram id="_54863c52-2fa7-4a3d-b383-d4eb2eb88771_D1">

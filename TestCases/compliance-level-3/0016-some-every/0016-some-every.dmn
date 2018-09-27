@@ -9,13 +9,13 @@
         </semantic:itemComponent>
     </semantic:itemDefinition>
     <semantic:itemDefinition isCollection="true" name="tPriceTable" id="tPriceTable">
-        <semantic:typeRef>tns:tItemPrice</semantic:typeRef>
+        <semantic:typeRef>tItemPrice</semantic:typeRef>
     </semantic:itemDefinition>
     <semantic:inputData name="priceTable2" id="_87bb4ba6-43bb-4fc5-a120-0c15c3901278">
-        <semantic:variable typeRef="tns:tPriceTable" name="priceTable2"/>
+        <semantic:variable typeRef="tPriceTable" name="priceTable2"/>
     </semantic:inputData>
     <semantic:decision name="priceTable1" id="_a471e76a-64b1-44af-9ede-623f6c15b72e">
-        <semantic:variable typeRef="tns:tPriceTable" name="priceTable1"/>
+        <semantic:variable typeRef="tPriceTable" name="priceTable1"/>
         <semantic:relation>
             <semantic:column name="itemName" id="_b27cab6a-61cb-493c-9d68-b945a7a725f1"/>
             <semantic:column name="price" id="_379f9074-2bd8-496d-8077-c8713d006504"/>
