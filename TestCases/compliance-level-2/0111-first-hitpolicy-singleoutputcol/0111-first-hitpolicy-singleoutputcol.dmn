@@ -1,45 +1,61 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<dmn11:definitions xmlns="http://www.trisotech.com/definitions/Definitions_1qokm8z" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:trisofeed="http://trisotech.com/feed" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exporter="DMN Modeler" exporterVersion="6.1.2" id="Definitions_1qokm8z" name="DRD" namespace="http://www.trisotech.com/definitions/Definitions_1qokm8z" triso:logoChoice="Default" xmlns:dmn11="http://www.omg.org/spec/DMN/20151101/dmn.xsd">
-  <dmn11:extensionElements/>
-  <dmn11:decision id="advertisement" name="Advertisement">
-    <dmn11:variable id="_7f901e84-f450-4108-8b5e-409742a9e301" name="Advertisement" typeRef="feel:string"/>
-    <dmn11:informationRequirement>
-      <dmn11:requiredInput href="#inputData_input_1"/>
-    </dmn11:informationRequirement>
-    <dmn11:decisionTable hitPolicy="FIRST" id="decisionTable_1" outputLabel="Advertisement" typeRef="feel:string">
-      <dmn11:input id="input_1">
-        <dmn11:inputExpression typeRef="feel:number">
-          <dmn11:text>age</dmn11:text>
-        </dmn11:inputExpression>
-      </dmn11:input>
-      <dmn11:output id="output_1"/>
-      <dmn11:rule id="DecisionRule_0bqji8h">
-        <dmn11:inputEntry id="UnaryTests_0zl6br9">
-          <dmn11:text>&gt;18</dmn11:text>
-        </dmn11:inputEntry>
-        <dmn11:outputEntry id="LiteralExpression_10tjqb0">
-          <dmn11:text>"Cars"</dmn11:text>
-        </dmn11:outputEntry>
-      </dmn11:rule>
-      <dmn11:rule id="DecisionRule_1m87ug5">
-        <dmn11:inputEntry id="UnaryTests_0loyy07">
-          <dmn11:text>&gt;12</dmn11:text>
-        </dmn11:inputEntry>
-        <dmn11:outputEntry id="LiteralExpression_0rlkccr">
-          <dmn11:text>"Videogames"</dmn11:text>
-        </dmn11:outputEntry>
-      </dmn11:rule>
-      <dmn11:rule id="DecisionRule_0fnal3o">
-        <dmn11:inputEntry id="UnaryTests_1jpefrb">
-          <dmn11:text>&gt;0</dmn11:text>
-        </dmn11:inputEntry>
-        <dmn11:outputEntry id="LiteralExpression_1nermff">
-          <dmn11:text>"Toys"</dmn11:text>
-        </dmn11:outputEntry>
-      </dmn11:rule>
-    </dmn11:decisionTable>
-  </dmn11:decision>
-  <dmn11:inputData id="inputData_input_1" name="age">
-    <dmn11:variable id="_966f839f-5392-4d9c-902c-397105f16303" name="age" typeRef="feel:number"/>
-  </dmn11:inputData>
-</dmn11:definitions>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<semantic:definitions exporter="DMN Modeler" exporterVersion="6.1.2" namespace="http://www.trisotech.com/definitions/Definitions_1qokm8z" name="DRD" triso:logoChoice="Default" id="Definitions_1qokm8z" xmlns="http://www.trisotech.com/definitions/Definitions_1qokm8z" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:dmn11="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:rss="http://purl.org/rss/2.0/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:trisofeed="http://trisotech.com/feed" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <semantic:extensionElements/>
+    <semantic:decision name="Advertisement" id="advertisement">
+        <semantic:variable typeRef="string" name="Advertisement" id="_7f901e84-f450-4108-8b5e-409742a9e301"/>
+        <semantic:informationRequirement id="_937b0758-6905-4f1d-9874-7b62a2024fdc">
+            <semantic:requiredInput href="#inputData_input_1"/>
+        </semantic:informationRequirement>
+        <semantic:decisionTable hitPolicy="FIRST" outputLabel="Advertisement" typeRef="string" id="decisionTable_1">
+            <semantic:input id="input_1">
+                <semantic:inputExpression typeRef="number">
+                    <semantic:text>age</semantic:text>
+                </semantic:inputExpression>
+            </semantic:input>
+            <semantic:output id="output_1"/>
+            <semantic:rule id="DecisionRule_0bqji8h">
+                <semantic:inputEntry id="UnaryTests_0zl6br9">
+                    <semantic:text>&gt;18</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="LiteralExpression_10tjqb0">
+                    <semantic:text>"Cars"</semantic:text>
+                </semantic:outputEntry>
+            </semantic:rule>
+            <semantic:rule id="DecisionRule_1m87ug5">
+                <semantic:inputEntry id="UnaryTests_0loyy07">
+                    <semantic:text>&gt;12</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="LiteralExpression_0rlkccr">
+                    <semantic:text>"Videogames"</semantic:text>
+                </semantic:outputEntry>
+            </semantic:rule>
+            <semantic:rule id="DecisionRule_0fnal3o">
+                <semantic:inputEntry id="UnaryTests_1jpefrb">
+                    <semantic:text>&gt;0</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="LiteralExpression_1nermff">
+                    <semantic:text>"Toys"</semantic:text>
+                </semantic:outputEntry>
+            </semantic:rule>
+        </semantic:decisionTable>
+    </semantic:decision>
+    <semantic:inputData name="age" id="inputData_input_1">
+        <semantic:variable typeRef="number" name="age" id="_966f839f-5392-4d9c-902c-397105f16303"/>
+    </semantic:inputData>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="Definitions_1qokm8z_D1">
+            <dmndi:Size height="650.0" width="650.0"/>
+            <dmndi:DMNShape dmnElementRef="advertisement" id="Definitions_1qokm8z_s1">
+                <dc:Bounds height="61.0" width="154.0" x="150.0" y="150.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="inputData_input_1" id="Definitions_1qokm8z_s2">
+                <dc:Bounds height="60.0" width="153.0" x="151.0" y="331.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge dmnElementRef="_937b0758-6905-4f1d-9874-7b62a2024fdc" id="Definitions_1qokm8z_e1">
+                <di:waypoint x="227.0" y="331.0"/>
+                <di:waypoint x="227.0" y="211.0"/>
+            </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+</semantic:definitions>
+

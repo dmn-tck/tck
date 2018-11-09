@@ -1,54 +1,98 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:tns="http://www.trisotech.com/definitions/_f52ca843-504b-4c3b-a6bc-4d377bffef7a" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" id="_f52ca843-504b-4c3b-a6bc-4d377bffef7a" namespace="http://www.trisotech.com/definitions/_f52ca843-504b-4c3b-a6bc-4d377bffef7a" exporter="DMN Modeler; Method and Style trisofix.xslt" exporterVersion="5.0.32.2; 1.0" name="filter01" triso:logoChoice="Default">
-	<itemDefinition id="tStringList" name="tStringList" isCollection="true">
-		<typeRef>feel:string</typeRef>
-	</itemDefinition>
-    <inputData id="_Employees" name="Employees">
-        <variable name="Employees" typeRef="tns:tStringList"/>
-    </inputData>
-	<decision id="decision1" name="decision1">
-		<variable name="decision1" typeRef="tns:tStringList"/>
-		<informationRequirement>
-			<requiredInput href="#_Employees"/>
-		</informationRequirement>
-		<literalExpression>
-			<text>sublist(Employees, 2, 1)</text>
-		</literalExpression>
-	</decision>
-    <decision id="decision2" name="decision2">
-        <variable name="decision2" typeRef="feel:string"/>
-        <informationRequirement>
-            <requiredInput href="#_Employees"/>
-        </informationRequirement>
-        <literalExpression>
-            <text>sublist(Employees, 2, 1)</text>
-        </literalExpression>
-    </decision>
-    <decision id="decision3" name="decision3">
-        <variable name="decision3" typeRef="tns:tStringList"/>
-        <informationRequirement>
-            <requiredInput href="#_Employees"/>
-        </informationRequirement>
-        <literalExpression>
-            <text>Employees[item = "Bob"]</text>
-        </literalExpression>
-    </decision>
-    <decision id="decision4" name="decision4">
-        <variable name="decision4" typeRef="feel:string"/>
-        <informationRequirement>
-            <requiredInput href="#_Employees"/>
-        </informationRequirement>
-        <literalExpression>
-            <text>Employees[item = "Bob"]</text>
-        </literalExpression>
-    </decision>
-    <decision id="decision5" name="decision5">
-        <variable name="decision5" typeRef="feel:string"/>
-        <informationRequirement>
-            <requiredInput href="#_Employees"/>
-        </informationRequirement>
-        <literalExpression>
-            <text>upper case( Employees[item = "Bob"] )</text>
-        </literalExpression>
-    </decision>
-</definitions>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<semantic:definitions exporter="DMN Modeler; Method and Style trisofix.xslt" exporterVersion="5.0.32.2; 1.0" namespace="http://www.trisotech.com/definitions/_f52ca843-504b-4c3b-a6bc-4d377bffef7a" name="filter01" triso:logoChoice="Default" id="_f52ca843-504b-4c3b-a6bc-4d377bffef7a" xmlns="http://www.trisotech.com/definitions/_f52ca843-504b-4c3b-a6bc-4d377bffef7a" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:dmn11="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:rss="http://purl.org/rss/2.0/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:trisofeed="http://trisotech.com/feed" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <semantic:itemDefinition isCollection="true" name="tStringList" id="tStringList">
+        <semantic:typeRef>string</semantic:typeRef>
+    </semantic:itemDefinition>
+    <semantic:inputData name="Employees" id="_Employees">
+        <semantic:variable typeRef="tns:tStringList" name="Employees"/>
+    </semantic:inputData>
+    <semantic:decision name="decision1" id="decision1">
+        <semantic:variable typeRef="tns:tStringList" name="decision1"/>
+        <semantic:informationRequirement id="_14c133f4-3127-4c16-97b6-e0e1b76d2c07">
+            <semantic:requiredInput href="#_Employees"/>
+        </semantic:informationRequirement>
+        <semantic:literalExpression>
+            <semantic:text>sublist(Employees, 2, 1)</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision name="decision2" id="decision2">
+        <semantic:variable typeRef="string" name="decision2"/>
+        <semantic:informationRequirement id="_72809455-c133-48a0-88e1-5900fb71b43f">
+            <semantic:requiredInput href="#_Employees"/>
+        </semantic:informationRequirement>
+        <semantic:literalExpression>
+            <semantic:text>sublist(Employees, 2, 1)</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision name="decision3" id="decision3">
+        <semantic:variable typeRef="tns:tStringList" name="decision3"/>
+        <semantic:informationRequirement id="_8643a0b7-f6a9-45fe-9fa1-3550c6b289c4">
+            <semantic:requiredInput href="#_Employees"/>
+        </semantic:informationRequirement>
+        <semantic:literalExpression>
+            <semantic:text>Employees[item = "Bob"]</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision name="decision4" id="decision4">
+        <semantic:variable typeRef="string" name="decision4"/>
+        <semantic:informationRequirement id="_53c66f19-5053-4427-90d9-2d953be5eb44">
+            <semantic:requiredInput href="#_Employees"/>
+        </semantic:informationRequirement>
+        <semantic:literalExpression>
+            <semantic:text>Employees[item = "Bob"]</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision name="decision5" id="decision5">
+        <semantic:variable typeRef="string" name="decision5"/>
+        <semantic:informationRequirement id="fda891d5-fc32-4e86-9b94-59faf98c9ae9">
+            <semantic:requiredInput href="#_Employees"/>
+        </semantic:informationRequirement>
+        <semantic:literalExpression>
+            <semantic:text>upper case( Employees[item = "Bob"] )</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="_f52ca843-504b-4c3b-a6bc-4d377bffef7a_D1">
+            <dmndi:Size height="650.0" width="1310.0"/>
+            <dmndi:DMNShape dmnElementRef="_Employees" id="_f52ca843-504b-4c3b-a6bc-4d377bffef7a_s1">
+                <dc:Bounds height="60.0" width="153.0" x="579.0" y="331.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="decision1" id="_f52ca843-504b-4c3b-a6bc-4d377bffef7a_s2">
+                <dc:Bounds height="61.0" width="154.0" x="150.0" y="150.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="decision2" id="_f52ca843-504b-4c3b-a6bc-4d377bffef7a_s3">
+                <dc:Bounds height="61.0" width="154.0" x="364.0" y="150.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="decision3" id="_f52ca843-504b-4c3b-a6bc-4d377bffef7a_s4">
+                <dc:Bounds height="61.0" width="154.0" x="578.0" y="150.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="decision4" id="_f52ca843-504b-4c3b-a6bc-4d377bffef7a_s5">
+                <dc:Bounds height="61.0" width="154.0" x="792.0" y="150.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="decision5" id="_f52ca843-504b-4c3b-a6bc-4d377bffef7a_s6">
+                <dc:Bounds height="61.0" width="154.0" x="1006.0" y="150.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge dmnElementRef="_14c133f4-3127-4c16-97b6-e0e1b76d2c07" id="_f52ca843-504b-4c3b-a6bc-4d377bffef7a_e1">
+                <di:waypoint x="655.0" y="331.0"/>
+                <di:waypoint x="227.0" y="211.0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge dmnElementRef="_72809455-c133-48a0-88e1-5900fb71b43f" id="_f52ca843-504b-4c3b-a6bc-4d377bffef7a_e2">
+                <di:waypoint x="655.0" y="331.0"/>
+                <di:waypoint x="441.0" y="211.0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge dmnElementRef="_8643a0b7-f6a9-45fe-9fa1-3550c6b289c4" id="_f52ca843-504b-4c3b-a6bc-4d377bffef7a_e3">
+                <di:waypoint x="655.0" y="331.0"/>
+                <di:waypoint x="655.0" y="211.0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge dmnElementRef="_53c66f19-5053-4427-90d9-2d953be5eb44" id="_f52ca843-504b-4c3b-a6bc-4d377bffef7a_e4">
+                <di:waypoint x="655.0" y="331.0"/>
+                <di:waypoint x="869.0" y="211.0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge dmnElementRef="fda891d5-fc32-4e86-9b94-59faf98c9ae9" id="_f52ca843-504b-4c3b-a6bc-4d377bffef7a_e5">
+                <di:waypoint x="655.0" y="331.0"/>
+                <di:waypoint x="1083.0" y="211.0"/>
+            </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+</semantic:definitions>
+

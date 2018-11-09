@@ -1,50 +1,79 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" 
-    xmlns:feel="http://www.omg.org/spec/FEEL/20140401" 
-    xmlns:tns="http://www.trisotech.com/definitions/_54863c52-2fa7-4a3d-b383-d4eb2eb88771" 
-    xmlns:triso="http://www.trisotech.com/2015/triso/modeling" 
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="_54863c52-2fa7-4a3d-b383-d4eb2eb88771"
-    namespace="http://www.trisotech.com/definitions/_54863c52-2fa7-4a3d-b383-d4eb2eb88771" 
-    exporter="DMN Modeler; Method and Style trisofix.xslt" exporterVersion="5.0.32.2; 1.0" 
-    name="conditionals" triso:logoChoice="Default" 
-    xsi:schemaLocation="http://www.omg.org/spec/DMN/20151101/dmn.xsd ../../dmn.xsd" 
-    expressionLanguage="http://www.omg.org/spec/FEEL/20140401" 
-    typeLanguage="http://www.omg.org/spec/FEEL/20140401">
-    <decision id="d_cond1" name="simpleIf">
-        <variable name="simpleIf" typeRef="feel:number" />
-        <informationRequirement>
-            <requiredInput href="#i_bool" />
-        </informationRequirement>
-        <informationRequirement>
-            <requiredInput href="#i_num" />
-        </informationRequirement>
-        <literalExpression>
-            <text>if bool then num+10 else num-10</text>
-        </literalExpression>
-    </decision>
-    <decision id="d_cond2" name="conditionWithFunctions">
-        <variable name="conditionWithFunctions" typeRef="feel:string" />
-        <informationRequirement>
-            <requiredInput href="#i_date" />
-        </informationRequirement>
-        <informationRequirement>
-            <requiredInput href="#i_string" />
-        </informationRequirement>
-        <literalExpression>
-            <text>if aDate > date("2017-01-01") then substring before(aString, " ") else substring after(aString, " ")</text>
-        </literalExpression>
-    </decision>
-    <inputData id="i_bool" name="bool">
-        <variable name="bool" typeRef="feel:boolean" />
-    </inputData>
-    <inputData id="i_num" name="num">
-        <variable name="num" typeRef="feel:number" />
-    </inputData>
-    <inputData id="i_date" name="aDate">
-        <variable name="aDate" typeRef="feel:date" />
-    </inputData>
-    <inputData id="i_string" name="aString">
-        <variable name="aString" typeRef="feel:string" />
-    </inputData>
-    
-</definitions>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<semantic:definitions exporter="DMN Modeler; Method and Style trisofix.xslt" exporterVersion="5.0.32.2; 1.0" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="http://www.trisotech.com/definitions/_54863c52-2fa7-4a3d-b383-d4eb2eb88771" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" name="conditionals" triso:logoChoice="Default" xsi:schemaLocation="http://www.omg.org/spec/DMN/20151101/dmn.xsd ../../dmn.xsd" id="_54863c52-2fa7-4a3d-b383-d4eb2eb88771" xmlns="http://www.trisotech.com/definitions/_54863c52-2fa7-4a3d-b383-d4eb2eb88771" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:dmn11="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:rss="http://purl.org/rss/2.0/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:trisofeed="http://trisotech.com/feed" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <semantic:decision name="simpleIf" id="d_cond1">
+        <semantic:variable typeRef="number" name="simpleIf"/>
+        <semantic:informationRequirement id="_59dee493-9dfe-46a4-b44b-e7af6905c1ff">
+            <semantic:requiredInput href="#i_bool"/>
+        </semantic:informationRequirement>
+        <semantic:informationRequirement id="_8ea6c946-0a79-4989-a171-aa6c89762a3e">
+            <semantic:requiredInput href="#i_num"/>
+        </semantic:informationRequirement>
+        <semantic:literalExpression>
+            <semantic:text>if bool then num+10 else num-10</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision name="conditionWithFunctions" id="d_cond2">
+        <semantic:variable typeRef="string" name="conditionWithFunctions"/>
+        <semantic:informationRequirement id="_3b142b29-efca-43ad-b352-70309001ac8c">
+            <semantic:requiredInput href="#i_date"/>
+        </semantic:informationRequirement>
+        <semantic:informationRequirement id="_1202ac71-5c68-4d7c-a1cc-de15d1da9c10">
+            <semantic:requiredInput href="#i_string"/>
+        </semantic:informationRequirement>
+        <semantic:literalExpression>
+            <semantic:text>if aDate &gt; date("2017-01-01") then substring before(aString, " ") else substring after(aString, " ")</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:inputData name="bool" id="i_bool">
+        <semantic:variable typeRef="boolean" name="bool"/>
+    </semantic:inputData>
+    <semantic:inputData name="num" id="i_num">
+        <semantic:variable typeRef="number" name="num"/>
+    </semantic:inputData>
+    <semantic:inputData name="aDate" id="i_date">
+        <semantic:variable typeRef="date" name="aDate"/>
+    </semantic:inputData>
+    <semantic:inputData name="aString" id="i_string">
+        <semantic:variable typeRef="string" name="aString"/>
+    </semantic:inputData>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="_54863c52-2fa7-4a3d-b383-d4eb2eb88771_D1">
+            <dmndi:Size height="650.0" width="1092.0"/>
+            <dmndi:DMNShape dmnElementRef="d_cond1" id="_54863c52-2fa7-4a3d-b383-d4eb2eb88771_s1">
+                <dc:Bounds height="61.0" width="154.0" x="256.0" y="150.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="d_cond2" id="_54863c52-2fa7-4a3d-b383-d4eb2eb88771_s2">
+                <dc:Bounds height="61.0" width="154.0" x="681.0" y="150.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="i_bool" id="_54863c52-2fa7-4a3d-b383-d4eb2eb88771_s3">
+                <dc:Bounds height="60.0" width="153.0" x="150.0" y="331.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="i_num" id="_54863c52-2fa7-4a3d-b383-d4eb2eb88771_s4">
+                <dc:Bounds height="60.0" width="153.0" x="363.0" y="331.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="i_date" id="_54863c52-2fa7-4a3d-b383-d4eb2eb88771_s5">
+                <dc:Bounds height="60.0" width="153.0" x="576.0" y="331.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="i_string" id="_54863c52-2fa7-4a3d-b383-d4eb2eb88771_s6">
+                <dc:Bounds height="60.0" width="153.0" x="789.0" y="331.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge dmnElementRef="_59dee493-9dfe-46a4-b44b-e7af6905c1ff" id="_54863c52-2fa7-4a3d-b383-d4eb2eb88771_e1">
+                <di:waypoint x="226.0" y="331.0"/>
+                <di:waypoint x="333.0" y="211.0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge dmnElementRef="_8ea6c946-0a79-4989-a171-aa6c89762a3e" id="_54863c52-2fa7-4a3d-b383-d4eb2eb88771_e2">
+                <di:waypoint x="439.0" y="331.0"/>
+                <di:waypoint x="333.0" y="211.0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge dmnElementRef="_3b142b29-efca-43ad-b352-70309001ac8c" id="_54863c52-2fa7-4a3d-b383-d4eb2eb88771_e3">
+                <di:waypoint x="652.0" y="331.0"/>
+                <di:waypoint x="758.0" y="211.0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge dmnElementRef="_1202ac71-5c68-4d7c-a1cc-de15d1da9c10" id="_54863c52-2fa7-4a3d-b383-d4eb2eb88771_e4">
+                <di:waypoint x="865.0" y="331.0"/>
+                <di:waypoint x="758.0" y="211.0"/>
+            </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+</semantic:definitions>
+

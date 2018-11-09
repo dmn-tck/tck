@@ -1,62 +1,98 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:tns="http://www.trisotech.com/definitions/_ac1acfdd-6baa-4f30-9cac-5d23957b4217" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" exporter="DMN Modeler; Method and Style trisofix.xslt" exporterVersion="5.0.35; 1.0" id="_ac1acfdd-6baa-4f30-9cac-5d23957b4217" name="sort" namespace="http://www.trisotech.com/definitions/_ac1acfdd-6baa-4f30-9cac-5d23957b4217" triso:logoChoice="Default">
-	<itemDefinition id="tNumList" isCollection="true" name="tNumList">
-		<typeRef>feel:number</typeRef>
-	</itemDefinition>
-	<itemDefinition id="tRow" name="tRow">
-		<itemComponent id="_bed80fb2-293a-4db0-b261-e58a1311dfd0" name="col1">
-			<typeRef>feel:number</typeRef>
-		</itemComponent>
-		<itemComponent id="_88c1de9d-6c23-4ea2-9bf9-f7cb06d43ebe" name="col2">
-			<typeRef>feel:number</typeRef>
-		</itemComponent>
-		<itemComponent id="_a63e8581-e650-47e5-bd6a-b8cb0f5b3fb7" name="col3">
-			<typeRef>feel:number</typeRef>
-		</itemComponent>
-		<itemComponent id="_fed04cbf-6aee-43ed-b218-d0fffca51693" name="col4">
-			<typeRef>feel:number</typeRef>
-		</itemComponent>
-	</itemDefinition>
-	<itemDefinition id="tTable" isCollection="true" name="tTable">
-		<typeRef>tns:tRow</typeRef>
-	</itemDefinition>
-	<itemDefinition id="tStringList" isCollection="true" name="tStringList">
-		<typeRef>feel:string</typeRef>
-	</itemDefinition>
-	<inputData id="_d8747cda-26be-46c8-98ee-78f64efbf730" name="listA">
-		<variable name="listA" typeRef="tns:tNumList"/>
-	</inputData>
-	<inputData id="_f8197899-44af-4ec5-9453-26da073a2be3" name="tableB">
-		<variable name="tableB" typeRef="tns:tTable"/>
-	</inputData>
-	<decision id="_c6416c42-328a-410c-a083-859b82771690" name="sort1">
-		<variable name="sort1" typeRef="tns:tNumList"/>
-		<informationRequirement>
-			<requiredInput href="#_d8747cda-26be-46c8-98ee-78f64efbf730"/>
-		</informationRequirement>
-		<literalExpression>
-			<text>sort(listA, function(x,y) x&gt;y)</text>
-		</literalExpression>
-	</decision>
-	<decision id="_d8ef1de9-9387-4389-ab83-cbf9dafc419b" name="sort2">
-		<variable name="sort2" typeRef="tns:tTable"/>
-		<informationRequirement>
-			<requiredInput href="#_f8197899-44af-4ec5-9453-26da073a2be3"/>
-		</informationRequirement>
-		<literalExpression>
-			<text>sort(tableB, function(x,y) x.col2&lt;y.col2)</text>
-		</literalExpression>
-	</decision>
-	<inputData id="_7471008b-e8c7-4205-8e17-586ff41e7205" name="stringList">
-		<variable name="stringList" typeRef="tns:tStringList"/>
-	</inputData>
-	<decision id="_4ff4b8ff-4379-477a-a016-f7d1741d2036" name="sort3">
-		<variable name="sort3" typeRef="tns:tStringList"/>
-		<informationRequirement>
-			<requiredInput href="#_7471008b-e8c7-4205-8e17-586ff41e7205"/>
-		</informationRequirement>
-		<literalExpression>
-			<text>sort(stringList, function(x,y) x&lt;y)</text>
-		</literalExpression>
-	</decision>
-</definitions>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<semantic:definitions exporter="DMN Modeler; Method and Style trisofix.xslt" exporterVersion="5.0.35; 1.0" namespace="http://www.trisotech.com/definitions/_ac1acfdd-6baa-4f30-9cac-5d23957b4217" name="sort" triso:logoChoice="Default" id="_ac1acfdd-6baa-4f30-9cac-5d23957b4217" xmlns="http://www.trisotech.com/definitions/_ac1acfdd-6baa-4f30-9cac-5d23957b4217" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:dmn11="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:rss="http://purl.org/rss/2.0/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:trisofeed="http://trisotech.com/feed" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <semantic:itemDefinition isCollection="true" name="tNumList" id="tNumList">
+        <semantic:typeRef>number</semantic:typeRef>
+    </semantic:itemDefinition>
+    <semantic:itemDefinition name="tRow" id="tRow">
+        <semantic:itemComponent name="col1" id="_bed80fb2-293a-4db0-b261-e58a1311dfd0">
+            <semantic:typeRef>number</semantic:typeRef>
+        </semantic:itemComponent>
+        <semantic:itemComponent name="col2" id="_88c1de9d-6c23-4ea2-9bf9-f7cb06d43ebe">
+            <semantic:typeRef>number</semantic:typeRef>
+        </semantic:itemComponent>
+        <semantic:itemComponent name="col3" id="_a63e8581-e650-47e5-bd6a-b8cb0f5b3fb7">
+            <semantic:typeRef>number</semantic:typeRef>
+        </semantic:itemComponent>
+        <semantic:itemComponent name="col4" id="_fed04cbf-6aee-43ed-b218-d0fffca51693">
+            <semantic:typeRef>number</semantic:typeRef>
+        </semantic:itemComponent>
+    </semantic:itemDefinition>
+    <semantic:itemDefinition isCollection="true" name="tTable" id="tTable">
+        <semantic:typeRef>tns:tRow</semantic:typeRef>
+    </semantic:itemDefinition>
+    <semantic:itemDefinition isCollection="true" name="tStringList" id="tStringList">
+        <semantic:typeRef>string</semantic:typeRef>
+    </semantic:itemDefinition>
+    <semantic:inputData name="listA" id="_d8747cda-26be-46c8-98ee-78f64efbf730">
+        <semantic:variable typeRef="tns:tNumList" name="listA"/>
+    </semantic:inputData>
+    <semantic:inputData name="tableB" id="_f8197899-44af-4ec5-9453-26da073a2be3">
+        <semantic:variable typeRef="tns:tTable" name="tableB"/>
+    </semantic:inputData>
+    <semantic:decision name="sort1" id="_c6416c42-328a-410c-a083-859b82771690">
+        <semantic:variable typeRef="tns:tNumList" name="sort1"/>
+        <semantic:informationRequirement id="_5fec54dd-e626-4936-9086-06568a444ea9">
+            <semantic:requiredInput href="#_d8747cda-26be-46c8-98ee-78f64efbf730"/>
+        </semantic:informationRequirement>
+        <semantic:literalExpression>
+            <semantic:text>sort(listA, function(x,y) x&gt;y)</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision name="sort2" id="_d8ef1de9-9387-4389-ab83-cbf9dafc419b">
+        <semantic:variable typeRef="tns:tTable" name="sort2"/>
+        <semantic:informationRequirement id="_39f538b5-afe3-49ba-a3c5-dd419baa11c4">
+            <semantic:requiredInput href="#_f8197899-44af-4ec5-9453-26da073a2be3"/>
+        </semantic:informationRequirement>
+        <semantic:literalExpression>
+            <semantic:text>sort(tableB, function(x,y) x.col2&lt;y.col2)</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:inputData name="stringList" id="_7471008b-e8c7-4205-8e17-586ff41e7205">
+        <semantic:variable typeRef="tns:tStringList" name="stringList"/>
+    </semantic:inputData>
+    <semantic:decision name="sort3" id="_4ff4b8ff-4379-477a-a016-f7d1741d2036">
+        <semantic:variable typeRef="tns:tStringList" name="sort3"/>
+        <semantic:informationRequirement id="_6ce95c21-4d3d-4405-a285-284441ee45e5">
+            <semantic:requiredInput href="#_7471008b-e8c7-4205-8e17-586ff41e7205"/>
+        </semantic:informationRequirement>
+        <semantic:literalExpression>
+            <semantic:text>sort(stringList, function(x,y) x&lt;y)</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="_ac1acfdd-6baa-4f30-9cac-5d23957b4217_D1">
+            <dmndi:Size height="650.0" width="882.0"/>
+            <dmndi:DMNShape dmnElementRef="_d8747cda-26be-46c8-98ee-78f64efbf730" id="_ac1acfdd-6baa-4f30-9cac-5d23957b4217_s1">
+                <dc:Bounds height="60.0" width="153.0" x="151.0" y="331.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="_f8197899-44af-4ec5-9453-26da073a2be3" id="_ac1acfdd-6baa-4f30-9cac-5d23957b4217_s2">
+                <dc:Bounds height="60.0" width="153.0" x="365.0" y="331.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="_c6416c42-328a-410c-a083-859b82771690" id="_ac1acfdd-6baa-4f30-9cac-5d23957b4217_s3">
+                <dc:Bounds height="61.0" width="154.0" x="150.0" y="150.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="_d8ef1de9-9387-4389-ab83-cbf9dafc419b" id="_ac1acfdd-6baa-4f30-9cac-5d23957b4217_s4">
+                <dc:Bounds height="61.0" width="154.0" x="364.0" y="150.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="_7471008b-e8c7-4205-8e17-586ff41e7205" id="_ac1acfdd-6baa-4f30-9cac-5d23957b4217_s5">
+                <dc:Bounds height="60.0" width="153.0" x="579.0" y="331.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="_4ff4b8ff-4379-477a-a016-f7d1741d2036" id="_ac1acfdd-6baa-4f30-9cac-5d23957b4217_s6">
+                <dc:Bounds height="61.0" width="154.0" x="578.0" y="150.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge dmnElementRef="_5fec54dd-e626-4936-9086-06568a444ea9" id="_ac1acfdd-6baa-4f30-9cac-5d23957b4217_e1">
+                <di:waypoint x="227.0" y="331.0"/>
+                <di:waypoint x="227.0" y="211.0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge dmnElementRef="_39f538b5-afe3-49ba-a3c5-dd419baa11c4" id="_ac1acfdd-6baa-4f30-9cac-5d23957b4217_e2">
+                <di:waypoint x="441.0" y="331.0"/>
+                <di:waypoint x="441.0" y="211.0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge dmnElementRef="_6ce95c21-4d3d-4405-a285-284441ee45e5" id="_ac1acfdd-6baa-4f30-9cac-5d23957b4217_e3">
+                <di:waypoint x="655.0" y="331.0"/>
+                <di:waypoint x="655.0" y="211.0"/>
+            </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+</semantic:definitions>
+

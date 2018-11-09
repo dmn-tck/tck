@@ -1,125 +1,163 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:ns1="http://www.actico.com/spec/DMN/1108-feel-substring-after-function" id="_jBcukPUUEeesLuP4RHs4vA" name="1108-feel-substring-after-function" namespace="http://www.actico.com/spec/DMN/1108-feel-substring-after-function">
-  <dmn:description>FEEL built-in function 'substring after(string, match) in category string functions</dmn:description>
-  <dmn:itemDefinition id="_jBcukvUUEeesLuP4RHs4vA" name="tfeel-substring-after-function_001_f532be66f2_Result">
-    <dmn:typeRef>feel:string</dmn:typeRef>
-  </dmn:itemDefinition>
-  <dmn:itemDefinition id="_jBculvUUEeesLuP4RHs4vA" name="tfeel-substring-after-function_002_f20d66fc1e_Result">
-    <dmn:typeRef>feel:string</dmn:typeRef>
-  </dmn:itemDefinition>
-  <dmn:itemDefinition id="_jBcumvUUEeesLuP4RHs4vA" name="tfeel-substring-after-function_003_367612fc8b_Result">
-    <dmn:typeRef>feel:string</dmn:typeRef>
-  </dmn:itemDefinition>
-  <dmn:itemDefinition id="_jBcunvUUEeesLuP4RHs4vA" name="tfeel-substring-after-function_004_e448ee2dad_Result">
-    <dmn:typeRef>feel:string</dmn:typeRef>
-  </dmn:itemDefinition>
-  <dmn:itemDefinition id="_jBcuovUUEeesLuP4RHs4vA" name="tfeel-substring-after-function_005_429efdafd0_Result">
-    <dmn:typeRef>feel:string</dmn:typeRef>
-  </dmn:itemDefinition>
-  <dmn:itemDefinition id="_jBcupvUUEeesLuP4RHs4vA" name="tfeel-substring-after-function_006_bf89d6b618_Result">
-    <dmn:typeRef>feel:string</dmn:typeRef>
-  </dmn:itemDefinition>
-  <dmn:itemDefinition id="_jBcuqvUUEeesLuP4RHs4vA" name="tfeel-substring-after-function_007_529baaeb0b_Result">
-    <dmn:typeRef>feel:string</dmn:typeRef>
-  </dmn:itemDefinition>
-  <dmn:itemDefinition id="_jBcurvUUEeesLuP4RHs4vA" name="tfeel-substring-after-function_008_1e611924ea_Result">
-    <dmn:typeRef>feel:string</dmn:typeRef>
-  </dmn:itemDefinition>
-  <dmn:itemDefinition id="_jBcusvUUEeesLuP4RHs4vA" name="tfeel-substring-after-function_009_712fe2842f_Result">
-    <dmn:typeRef>feel:string</dmn:typeRef>
-  </dmn:itemDefinition>
-  <dmn:itemDefinition id="_jBcutvUUEeesLuP4RHs4vA" name="tfeel-substring-after-function_010_40e159d07a_Result">
-    <dmn:typeRef>feel:string</dmn:typeRef>
-  </dmn:itemDefinition>
-  <dmn:decision id="_jBculPUUEeesLuP4RHs4vA" name="feel-substring-after-function_001_f532be66f2">
-    <dmn:description>Tests FEEL expression: 'substring after(&quot;foobar&quot;,&quot;ob&quot;)' and expects result: '&quot;ar&quot; (string)'</dmn:description>
-    <dmn:question>Result of FEEL expression 'substring after(&quot;foobar&quot;,&quot;ob&quot;)'?</dmn:question>
-    <dmn:allowedAnswers>&quot;ar&quot; (string)</dmn:allowedAnswers>
-    <dmn:variable id="_jBculfUUEeesLuP4RHs4vA" name="feel-substring-after-function_001_f532be66f2" typeRef="ns1:tfeel-substring-after-function_001_f532be66f2_Result"/>
-    <dmn:literalExpression id="_jBcuk_UUEeesLuP4RHs4vA">
-      <dmn:text>substring after(&quot;foobar&quot;,&quot;ob&quot;)</dmn:text>
-    </dmn:literalExpression>
-  </dmn:decision>
-  <dmn:decision id="_jBcumPUUEeesLuP4RHs4vA" name="feel-substring-after-function_002_f20d66fc1e">
-    <dmn:description>Tests FEEL expression: 'substring after(&quot;foobar&quot;,&quot;o&quot;)' and expects result: '&quot;obar&quot; (string)'</dmn:description>
-    <dmn:question>Result of FEEL expression 'substring after(&quot;foobar&quot;,&quot;o&quot;)'?</dmn:question>
-    <dmn:allowedAnswers>&quot;obar&quot; (string)</dmn:allowedAnswers>
-    <dmn:variable id="_jBcumfUUEeesLuP4RHs4vA" name="feel-substring-after-function_002_f20d66fc1e" typeRef="ns1:tfeel-substring-after-function_002_f20d66fc1e_Result"/>
-    <dmn:literalExpression id="_jBcul_UUEeesLuP4RHs4vA">
-      <dmn:text>substring after(&quot;foobar&quot;,&quot;o&quot;)</dmn:text>
-    </dmn:literalExpression>
-  </dmn:decision>
-  <dmn:decision id="_jBcunPUUEeesLuP4RHs4vA" name="feel-substring-after-function_003_367612fc8b">
-    <dmn:description>Tests FEEL expression: 'substring after(&quot;foobar&quot;,&quot;x&quot;)' and expects result: '&quot;&quot; (string)'</dmn:description>
-    <dmn:question>Result of FEEL expression 'substring after(&quot;foobar&quot;,&quot;x&quot;)'?</dmn:question>
-    <dmn:allowedAnswers>&quot;&quot; (string)</dmn:allowedAnswers>
-    <dmn:variable id="_jBcunfUUEeesLuP4RHs4vA" name="feel-substring-after-function_003_367612fc8b" typeRef="ns1:tfeel-substring-after-function_003_367612fc8b_Result"/>
-    <dmn:literalExpression id="_jBcum_UUEeesLuP4RHs4vA">
-      <dmn:text>substring after(&quot;foobar&quot;,&quot;x&quot;)</dmn:text>
-    </dmn:literalExpression>
-  </dmn:decision>
-  <dmn:decision id="_jBcuoPUUEeesLuP4RHs4vA" name="feel-substring-after-function_004_e448ee2dad">
-    <dmn:description>Tests FEEL expression: 'substring after(&quot;&quot;,&quot;&quot;)' and expects result: '&quot;&quot; (string)'</dmn:description>
-    <dmn:question>Result of FEEL expression 'substring after(&quot;&quot;,&quot;&quot;)'?</dmn:question>
-    <dmn:allowedAnswers>&quot;&quot; (string)</dmn:allowedAnswers>
-    <dmn:variable id="_jBcuofUUEeesLuP4RHs4vA" name="feel-substring-after-function_004_e448ee2dad" typeRef="ns1:tfeel-substring-after-function_004_e448ee2dad_Result"/>
-    <dmn:literalExpression id="_jBcun_UUEeesLuP4RHs4vA">
-      <dmn:text>substring after(&quot;&quot;,&quot;&quot;)</dmn:text>
-    </dmn:literalExpression>
-  </dmn:decision>
-  <dmn:decision id="_jBcupPUUEeesLuP4RHs4vA" name="feel-substring-after-function_005_429efdafd0">
-    <dmn:description>Tests FEEL expression: 'substring after(&quot;&quot;,&quot;a&quot;)' and expects result: '&quot;&quot; (string)'</dmn:description>
-    <dmn:question>Result of FEEL expression 'substring after(&quot;&quot;,&quot;a&quot;)'?</dmn:question>
-    <dmn:allowedAnswers>&quot;&quot; (string)</dmn:allowedAnswers>
-    <dmn:variable id="_jBcupfUUEeesLuP4RHs4vA" name="feel-substring-after-function_005_429efdafd0" typeRef="ns1:tfeel-substring-after-function_005_429efdafd0_Result"/>
-    <dmn:literalExpression id="_jBcuo_UUEeesLuP4RHs4vA">
-      <dmn:text>substring after(&quot;&quot;,&quot;a&quot;)</dmn:text>
-    </dmn:literalExpression>
-  </dmn:decision>
-  <dmn:decision id="_jBcuqPUUEeesLuP4RHs4vA" name="feel-substring-after-function_006_bf89d6b618">
-    <dmn:description>Tests FEEL expression: 'substring after(&quot;abc&quot;,&quot;&quot;)' and expects result: '&quot;abc&quot; (string)'</dmn:description>
-    <dmn:question>Result of FEEL expression 'substring after(&quot;abc&quot;,&quot;&quot;)'?</dmn:question>
-    <dmn:allowedAnswers>&quot;abc&quot; (string)</dmn:allowedAnswers>
-    <dmn:variable id="_jBcuqfUUEeesLuP4RHs4vA" name="feel-substring-after-function_006_bf89d6b618" typeRef="ns1:tfeel-substring-after-function_006_bf89d6b618_Result"/>
-    <dmn:literalExpression id="_jBcup_UUEeesLuP4RHs4vA">
-      <dmn:text>substring after(&quot;abc&quot;,&quot;&quot;)</dmn:text>
-    </dmn:literalExpression>
-  </dmn:decision>
-  <dmn:decision id="_jBcurPUUEeesLuP4RHs4vA" name="feel-substring-after-function_007_529baaeb0b">
-    <dmn:description>Tests FEEL expression: 'substring after(&quot;abc&quot;,&quot;c&quot;)' and expects result: '&quot;&quot; (string)'</dmn:description>
-    <dmn:question>Result of FEEL expression 'substring after(&quot;abc&quot;,&quot;c&quot;)'?</dmn:question>
-    <dmn:allowedAnswers>&quot;&quot; (string)</dmn:allowedAnswers>
-    <dmn:variable id="_jBcurfUUEeesLuP4RHs4vA" name="feel-substring-after-function_007_529baaeb0b" typeRef="ns1:tfeel-substring-after-function_007_529baaeb0b_Result"/>
-    <dmn:literalExpression id="_jBcuq_UUEeesLuP4RHs4vA">
-      <dmn:text>substring after(&quot;abc&quot;,&quot;c&quot;)</dmn:text>
-    </dmn:literalExpression>
-  </dmn:decision>
-  <dmn:decision id="_jBcusPUUEeesLuP4RHs4vA" name="feel-substring-after-function_008_1e611924ea">
-    <dmn:description>Tests FEEL expression: 'substring after(&quot;abc&quot;,&quot;a&quot;)' and expects result: '&quot;bc&quot; (string)'</dmn:description>
-    <dmn:question>Result of FEEL expression 'substring after(&quot;abc&quot;,&quot;a&quot;)'?</dmn:question>
-    <dmn:allowedAnswers>&quot;bc&quot; (string)</dmn:allowedAnswers>
-    <dmn:variable id="_jBcusfUUEeesLuP4RHs4vA" name="feel-substring-after-function_008_1e611924ea" typeRef="ns1:tfeel-substring-after-function_008_1e611924ea_Result"/>
-    <dmn:literalExpression id="_jBcur_UUEeesLuP4RHs4vA">
-      <dmn:text>substring after(&quot;abc&quot;,&quot;a&quot;)</dmn:text>
-    </dmn:literalExpression>
-  </dmn:decision>
-  <dmn:decision id="_jBcutPUUEeesLuP4RHs4vA" name="feel-substring-after-function_009_712fe2842f">
-    <dmn:description>Tests FEEL expression: 'substring after(string:&quot;foobar&quot;,match:&quot;ob&quot;)' and expects result: '&quot;ar&quot; (string)'</dmn:description>
-    <dmn:question>Result of FEEL expression 'substring after(string:&quot;foobar&quot;,match:&quot;ob&quot;)'?</dmn:question>
-    <dmn:allowedAnswers>&quot;ar&quot; (string)</dmn:allowedAnswers>
-    <dmn:variable id="_jBcutfUUEeesLuP4RHs4vA" name="feel-substring-after-function_009_712fe2842f" typeRef="ns1:tfeel-substring-after-function_009_712fe2842f_Result"/>
-    <dmn:literalExpression id="_jBcus_UUEeesLuP4RHs4vA">
-      <dmn:text>substring after(string:&quot;foobar&quot;,match:&quot;ob&quot;)</dmn:text>
-    </dmn:literalExpression>
-  </dmn:decision>
-  <dmn:decision id="_jBcuuPUUEeesLuP4RHs4vA" name="feel-substring-after-function_010_40e159d07a">
-    <dmn:description>Tests FEEL expression: 'substring after(string:&quot;foobar&quot;,match:&quot;b&quot;)' and expects result: '&quot;ar&quot; (string)'</dmn:description>
-    <dmn:question>Result of FEEL expression 'substring after(string:&quot;foobar&quot;,match:&quot;b&quot;)'?</dmn:question>
-    <dmn:allowedAnswers>&quot;ar&quot; (string)</dmn:allowedAnswers>
-    <dmn:variable id="_jBcuufUUEeesLuP4RHs4vA" name="feel-substring-after-function_010_40e159d07a" typeRef="ns1:tfeel-substring-after-function_010_40e159d07a_Result"/>
-    <dmn:literalExpression id="_jBcut_UUEeesLuP4RHs4vA">
-      <dmn:text>substring after(string:&quot;foobar&quot;,match:&quot;b&quot;)</dmn:text>
-    </dmn:literalExpression>
-  </dmn:decision>
-  <dmn:knowledgeSource id="_jBcukfUUEeesLuP4RHs4vA" name="DMN 1.1 - 10.3.4.3 Table 60"/>
-</dmn:definitions>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<semantic:definitions namespace="http://www.actico.com/spec/DMN/1108-feel-substring-after-function" name="1108-feel-substring-after-function" id="_jBcukPUUEeesLuP4RHs4vA" xmlns="http://www.actico.com/spec/DMN/1108-feel-substring-after-function" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:dmn11="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:rss="http://purl.org/rss/2.0/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:trisofeed="http://trisotech.com/feed" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <semantic:description>FEEL built-in function 'substring after(string, match) in category string functions</semantic:description>
+    <semantic:itemDefinition name="tfeel-substring-after-function_001_f532be66f2_Result" id="_jBcukvUUEeesLuP4RHs4vA">
+        <semantic:typeRef>string</semantic:typeRef>
+    </semantic:itemDefinition>
+    <semantic:itemDefinition name="tfeel-substring-after-function_002_f20d66fc1e_Result" id="_jBculvUUEeesLuP4RHs4vA">
+        <semantic:typeRef>string</semantic:typeRef>
+    </semantic:itemDefinition>
+    <semantic:itemDefinition name="tfeel-substring-after-function_003_367612fc8b_Result" id="_jBcumvUUEeesLuP4RHs4vA">
+        <semantic:typeRef>string</semantic:typeRef>
+    </semantic:itemDefinition>
+    <semantic:itemDefinition name="tfeel-substring-after-function_004_e448ee2dad_Result" id="_jBcunvUUEeesLuP4RHs4vA">
+        <semantic:typeRef>string</semantic:typeRef>
+    </semantic:itemDefinition>
+    <semantic:itemDefinition name="tfeel-substring-after-function_005_429efdafd0_Result" id="_jBcuovUUEeesLuP4RHs4vA">
+        <semantic:typeRef>string</semantic:typeRef>
+    </semantic:itemDefinition>
+    <semantic:itemDefinition name="tfeel-substring-after-function_006_bf89d6b618_Result" id="_jBcupvUUEeesLuP4RHs4vA">
+        <semantic:typeRef>string</semantic:typeRef>
+    </semantic:itemDefinition>
+    <semantic:itemDefinition name="tfeel-substring-after-function_007_529baaeb0b_Result" id="_jBcuqvUUEeesLuP4RHs4vA">
+        <semantic:typeRef>string</semantic:typeRef>
+    </semantic:itemDefinition>
+    <semantic:itemDefinition name="tfeel-substring-after-function_008_1e611924ea_Result" id="_jBcurvUUEeesLuP4RHs4vA">
+        <semantic:typeRef>string</semantic:typeRef>
+    </semantic:itemDefinition>
+    <semantic:itemDefinition name="tfeel-substring-after-function_009_712fe2842f_Result" id="_jBcusvUUEeesLuP4RHs4vA">
+        <semantic:typeRef>string</semantic:typeRef>
+    </semantic:itemDefinition>
+    <semantic:itemDefinition name="tfeel-substring-after-function_010_40e159d07a_Result" id="_jBcutvUUEeesLuP4RHs4vA">
+        <semantic:typeRef>string</semantic:typeRef>
+    </semantic:itemDefinition>
+    <semantic:decision name="feel-substring-after-function_001_f532be66f2" id="_jBculPUUEeesLuP4RHs4vA">
+        <semantic:description>Tests FEEL expression: 'substring after("foobar","ob")' and expects result: '"ar" (string)'</semantic:description>
+        <semantic:question>Result of FEEL expression 'substring after("foobar","ob")'?</semantic:question>
+        <semantic:allowedAnswers>"ar" (string)</semantic:allowedAnswers>
+        <semantic:variable typeRef="ns1:tfeel-substring-after-function_001_f532be66f2_Result" name="feel-substring-after-function_001_f532be66f2" id="_jBculfUUEeesLuP4RHs4vA"/>
+        <semantic:literalExpression id="_jBcuk_UUEeesLuP4RHs4vA">
+            <semantic:text>substring after("foobar","ob")</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision name="feel-substring-after-function_002_f20d66fc1e" id="_jBcumPUUEeesLuP4RHs4vA">
+        <semantic:description>Tests FEEL expression: 'substring after("foobar","o")' and expects result: '"obar" (string)'</semantic:description>
+        <semantic:question>Result of FEEL expression 'substring after("foobar","o")'?</semantic:question>
+        <semantic:allowedAnswers>"obar" (string)</semantic:allowedAnswers>
+        <semantic:variable typeRef="ns1:tfeel-substring-after-function_002_f20d66fc1e_Result" name="feel-substring-after-function_002_f20d66fc1e" id="_jBcumfUUEeesLuP4RHs4vA"/>
+        <semantic:literalExpression id="_jBcul_UUEeesLuP4RHs4vA">
+            <semantic:text>substring after("foobar","o")</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision name="feel-substring-after-function_003_367612fc8b" id="_jBcunPUUEeesLuP4RHs4vA">
+        <semantic:description>Tests FEEL expression: 'substring after("foobar","x")' and expects result: '"" (string)'</semantic:description>
+        <semantic:question>Result of FEEL expression 'substring after("foobar","x")'?</semantic:question>
+        <semantic:allowedAnswers>"" (string)</semantic:allowedAnswers>
+        <semantic:variable typeRef="ns1:tfeel-substring-after-function_003_367612fc8b_Result" name="feel-substring-after-function_003_367612fc8b" id="_jBcunfUUEeesLuP4RHs4vA"/>
+        <semantic:literalExpression id="_jBcum_UUEeesLuP4RHs4vA">
+            <semantic:text>substring after("foobar","x")</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision name="feel-substring-after-function_004_e448ee2dad" id="_jBcuoPUUEeesLuP4RHs4vA">
+        <semantic:description>Tests FEEL expression: 'substring after("","")' and expects result: '"" (string)'</semantic:description>
+        <semantic:question>Result of FEEL expression 'substring after("","")'?</semantic:question>
+        <semantic:allowedAnswers>"" (string)</semantic:allowedAnswers>
+        <semantic:variable typeRef="ns1:tfeel-substring-after-function_004_e448ee2dad_Result" name="feel-substring-after-function_004_e448ee2dad" id="_jBcuofUUEeesLuP4RHs4vA"/>
+        <semantic:literalExpression id="_jBcun_UUEeesLuP4RHs4vA">
+            <semantic:text>substring after("","")</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision name="feel-substring-after-function_005_429efdafd0" id="_jBcupPUUEeesLuP4RHs4vA">
+        <semantic:description>Tests FEEL expression: 'substring after("","a")' and expects result: '"" (string)'</semantic:description>
+        <semantic:question>Result of FEEL expression 'substring after("","a")'?</semantic:question>
+        <semantic:allowedAnswers>"" (string)</semantic:allowedAnswers>
+        <semantic:variable typeRef="ns1:tfeel-substring-after-function_005_429efdafd0_Result" name="feel-substring-after-function_005_429efdafd0" id="_jBcupfUUEeesLuP4RHs4vA"/>
+        <semantic:literalExpression id="_jBcuo_UUEeesLuP4RHs4vA">
+            <semantic:text>substring after("","a")</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision name="feel-substring-after-function_006_bf89d6b618" id="_jBcuqPUUEeesLuP4RHs4vA">
+        <semantic:description>Tests FEEL expression: 'substring after("abc","")' and expects result: '"abc" (string)'</semantic:description>
+        <semantic:question>Result of FEEL expression 'substring after("abc","")'?</semantic:question>
+        <semantic:allowedAnswers>"abc" (string)</semantic:allowedAnswers>
+        <semantic:variable typeRef="ns1:tfeel-substring-after-function_006_bf89d6b618_Result" name="feel-substring-after-function_006_bf89d6b618" id="_jBcuqfUUEeesLuP4RHs4vA"/>
+        <semantic:literalExpression id="_jBcup_UUEeesLuP4RHs4vA">
+            <semantic:text>substring after("abc","")</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision name="feel-substring-after-function_007_529baaeb0b" id="_jBcurPUUEeesLuP4RHs4vA">
+        <semantic:description>Tests FEEL expression: 'substring after("abc","c")' and expects result: '"" (string)'</semantic:description>
+        <semantic:question>Result of FEEL expression 'substring after("abc","c")'?</semantic:question>
+        <semantic:allowedAnswers>"" (string)</semantic:allowedAnswers>
+        <semantic:variable typeRef="ns1:tfeel-substring-after-function_007_529baaeb0b_Result" name="feel-substring-after-function_007_529baaeb0b" id="_jBcurfUUEeesLuP4RHs4vA"/>
+        <semantic:literalExpression id="_jBcuq_UUEeesLuP4RHs4vA">
+            <semantic:text>substring after("abc","c")</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision name="feel-substring-after-function_008_1e611924ea" id="_jBcusPUUEeesLuP4RHs4vA">
+        <semantic:description>Tests FEEL expression: 'substring after("abc","a")' and expects result: '"bc" (string)'</semantic:description>
+        <semantic:question>Result of FEEL expression 'substring after("abc","a")'?</semantic:question>
+        <semantic:allowedAnswers>"bc" (string)</semantic:allowedAnswers>
+        <semantic:variable typeRef="ns1:tfeel-substring-after-function_008_1e611924ea_Result" name="feel-substring-after-function_008_1e611924ea" id="_jBcusfUUEeesLuP4RHs4vA"/>
+        <semantic:literalExpression id="_jBcur_UUEeesLuP4RHs4vA">
+            <semantic:text>substring after("abc","a")</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision name="feel-substring-after-function_009_712fe2842f" id="_jBcutPUUEeesLuP4RHs4vA">
+        <semantic:description>Tests FEEL expression: 'substring after(string:"foobar",match:"ob")' and expects result: '"ar" (string)'</semantic:description>
+        <semantic:question>Result of FEEL expression 'substring after(string:"foobar",match:"ob")'?</semantic:question>
+        <semantic:allowedAnswers>"ar" (string)</semantic:allowedAnswers>
+        <semantic:variable typeRef="ns1:tfeel-substring-after-function_009_712fe2842f_Result" name="feel-substring-after-function_009_712fe2842f" id="_jBcutfUUEeesLuP4RHs4vA"/>
+        <semantic:literalExpression id="_jBcus_UUEeesLuP4RHs4vA">
+            <semantic:text>substring after(string:"foobar",match:"ob")</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision name="feel-substring-after-function_010_40e159d07a" id="_jBcuuPUUEeesLuP4RHs4vA">
+        <semantic:description>Tests FEEL expression: 'substring after(string:"foobar",match:"b")' and expects result: '"ar" (string)'</semantic:description>
+        <semantic:question>Result of FEEL expression 'substring after(string:"foobar",match:"b")'?</semantic:question>
+        <semantic:allowedAnswers>"ar" (string)</semantic:allowedAnswers>
+        <semantic:variable typeRef="ns1:tfeel-substring-after-function_010_40e159d07a_Result" name="feel-substring-after-function_010_40e159d07a" id="_jBcuufUUEeesLuP4RHs4vA"/>
+        <semantic:literalExpression id="_jBcut_UUEeesLuP4RHs4vA">
+            <semantic:text>substring after(string:"foobar",match:"b")</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:knowledgeSource name="DMN 1.1 - 10.3.4.3 Table 60" id="_jBcukfUUEeesLuP4RHs4vA"/>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram name="Page 1" id="_jBcukPUUEeesLuP4RHs4vA_D2">
+            <dmndi:DMNShape dmnElementRef="_jBcupPUUEeesLuP4RHs4vA" id="_jBcukPUUEeesLuP4RHs4vA_s1">
+                <dc:Bounds height="61.0" width="154.0" x="106.0" y="106.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="_jBcuuPUUEeesLuP4RHs4vA" id="_jBcukPUUEeesLuP4RHs4vA_s2">
+                <dc:Bounds height="61.0" width="154.0" x="106.0" y="199.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="_jBcuoPUUEeesLuP4RHs4vA" id="_jBcukPUUEeesLuP4RHs4vA_s3">
+                <dc:Bounds height="61.0" width="154.0" x="106.0" y="292.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="_jBculPUUEeesLuP4RHs4vA" id="_jBcukPUUEeesLuP4RHs4vA_s4">
+                <dc:Bounds height="61.0" width="154.0" x="106.0" y="385.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="_jBcukfUUEeesLuP4RHs4vA" id="_jBcukPUUEeesLuP4RHs4vA_s5">
+                <dc:Bounds height="69.0" width="100.0" x="133.0" y="478.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="_jBcumPUUEeesLuP4RHs4vA" id="_jBcukPUUEeesLuP4RHs4vA_s6">
+                <dc:Bounds height="61.0" width="154.0" x="106.0" y="579.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="_jBcunPUUEeesLuP4RHs4vA" id="_jBcukPUUEeesLuP4RHs4vA_s7">
+                <dc:Bounds height="61.0" width="154.0" x="106.0" y="672.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="_jBcuqPUUEeesLuP4RHs4vA" id="_jBcukPUUEeesLuP4RHs4vA_s8">
+                <dc:Bounds height="61.0" width="154.0" x="106.0" y="765.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="_jBcutPUUEeesLuP4RHs4vA" id="_jBcukPUUEeesLuP4RHs4vA_s9">
+                <dc:Bounds height="61.0" width="154.0" x="276.0" y="106.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="_jBcurPUUEeesLuP4RHs4vA" id="_jBcukPUUEeesLuP4RHs4vA_s10">
+                <dc:Bounds height="61.0" width="154.0" x="276.0" y="199.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="_jBcusPUUEeesLuP4RHs4vA" id="_jBcukPUUEeesLuP4RHs4vA_s11">
+                <dc:Bounds height="61.0" width="154.0" x="276.0" y="292.0"/>
+            </dmndi:DMNShape>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+</semantic:definitions>
+

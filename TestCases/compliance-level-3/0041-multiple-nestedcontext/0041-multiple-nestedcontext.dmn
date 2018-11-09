@@ -1,115 +1,138 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<dmn11:definitions xmlns="http://www.trisotech.com/definitions/_00ca39fd-8843-49e7-ac80-ecc77b01a01c" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:trisofeed="http://trisotech.com/feed" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exporter="DMN Modeler" exporterVersion="6.1.5" id="_00ca39fd-8843-49e7-ac80-ecc77b01a01c" name="Drawing 1" namespace="http://www.trisotech.com/definitions/_00ca39fd-8843-49e7-ac80-ecc77b01a01c" triso:logoChoice="Default" xmlns:dmn11="http://www.omg.org/spec/DMN/20151101/dmn.xsd">
-  <dmn11:extensionElements/>
-  <dmn11:decision id="_3a383644-10da-49c4-b097-bc2ce96ced5f" name="Boxed Context">
-    <dmn11:variable id="_daa1ccfd-f06a-43ca-97f4-0a37da687a79" name="Boxed Context" typeRef="feel:number"/>
-    <dmn11:informationRequirement>
-      <dmn11:requiredInput href="#_3881fe02-fd24-4051-9e3c-9624a2965012"/>
-    </dmn11:informationRequirement>
-    <dmn11:informationRequirement>
-      <dmn11:requiredInput href="#_8882228d-e585-4dd6-be16-5894c076d3fd"/>
-    </dmn11:informationRequirement>
-    <dmn11:context id="_1a40a2ae-b758-4fc2-a08a-4df30ba6f8b9" typeRef="feel:number">
-      <dmn11:contextEntry>
-        <dmn11:variable id="_1d02d62f-820e-46fb-9615-9d3f4e0ef193" name="Rate" typeRef="feel:number"/>
-        <dmn11:literalExpression id="_e14ab844-5198-46c8-9f48-46866a339b20">
-          <dmn11:text>0.0375</dmn11:text>
-        </dmn11:literalExpression>
-      </dmn11:contextEntry>
-      <dmn11:contextEntry>
-        <dmn11:variable id="_9cff5e4f-486b-49fa-8164-d4ad392b4092" name="Boxed Context" typeRef="feel:number"/>
-        <dmn11:context id="_f213a3a7-4334-4f48-b8ee-40927c631650">
-          <dmn11:contextEntry>
-            <dmn11:variable id="_62c8dd4b-e070-4516-ae87-f5cc3a34d881" name="BoxedContextOutput" typeRef="feel:number"/>
-            <dmn11:context id="_e9c1fbf5-20aa-4644-ba90-82750909c70e">
-              <dmn11:contextEntry>
-                <dmn11:variable id="_9aadcc32-b981-45ac-b725-72345eebf9fd" name="MonthlyPayment" typeRef="feel:number"/>
-                <dmn11:decisionTable hitPolicy="UNIQUE" id="_4aaea452-fedf-4c5b-b5e6-a7e00840fb0d" outputLabel="MonthlyPayment">
-                  <dmn11:input id="_ed127feb-de14-4bf5-b6b9-807b4b14f8a0">
-                    <dmn11:inputExpression typeRef="feel:number">
-                      <dmn11:text>Principal</dmn11:text>
-                    </dmn11:inputExpression>
-                  </dmn11:input>
-                  <dmn11:input id="_49407e5f-2d30-479b-ace7-9322c4f6d89f">
-                    <dmn11:inputExpression typeRef="feel:number">
-                      <dmn11:text>Term</dmn11:text>
-                    </dmn11:inputExpression>
-                  </dmn11:input>
-                  <dmn11:input id="_4ea76628-678b-4950-bd24-3e2bceb11d0b">
-                    <dmn11:inputExpression typeRef="feel:number">
-                      <dmn11:text>Rate</dmn11:text>
-                    </dmn11:inputExpression>
-                  </dmn11:input>
-                  <dmn11:output id="_20a2b3c0-399b-4a75-9e34-c5fed5b1d599"/>
-                  <dmn11:rule id="_e804ff7d-7c8a-463d-8cc4-c2ae47b31fc3">
-                    <dmn11:inputEntry id="_45859286-d084-4177-8c81-1e0f09495e15">
-                      <dmn11:text>600000</dmn11:text>
-                    </dmn11:inputEntry>
-                    <dmn11:inputEntry id="_6df94713-3109-47df-a2fa-7bfbec22bd89">
-                      <dmn11:text>360</dmn11:text>
-                    </dmn11:inputEntry>
-                    <dmn11:inputEntry id="_9c1da34f-0e99-4730-8345-8b42eb05545a">
-                      <dmn11:text>0.0375</dmn11:text>
-                    </dmn11:inputEntry>
-                    <dmn11:outputEntry id="_360515c8-17ce-4a7d-b2cb-68b633cba075">
-                      <dmn11:text>(Principal*Rate/12)/(1-(1+Rate/12)**-Term)</dmn11:text>
-                    </dmn11:outputEntry>
-                  </dmn11:rule>
-                  <dmn11:rule id="_a303adf7-0305-44d9-abf3-9661aa8f0297">
-                    <dmn11:inputEntry id="_339e29bf-a23b-44f8-a2be-7fe1e0def4bc">
-                      <dmn11:text>30000</dmn11:text>
-                    </dmn11:inputEntry>
-                    <dmn11:inputEntry id="_d3244dcf-38a7-4fa6-a127-644c87f397d1">
-                      <dmn11:text>60</dmn11:text>
-                    </dmn11:inputEntry>
-                    <dmn11:inputEntry id="_37abe647-c642-4b3c-85fa-43fc1d57c8a0">
-                      <dmn11:text>0.0375</dmn11:text>
-                    </dmn11:inputEntry>
-                    <dmn11:outputEntry id="_5311506c-9aa4-47f7-b63e-a880c6610a2f">
-                      <dmn11:text>(Principal*Rate/12)/(1-(1+Rate/12)**-Term)</dmn11:text>
-                    </dmn11:outputEntry>
-                  </dmn11:rule>
-                  <dmn11:rule id="_a81534be-8cde-4524-91f0-af0e5a855e7e">
-                    <dmn11:inputEntry id="_d5bd9e44-a1d1-475e-ab1b-2c870a49fd74">
-                      <dmn11:text>600000</dmn11:text>
-                    </dmn11:inputEntry>
-                    <dmn11:inputEntry id="_25b64bba-776c-4c6f-ad3c-9300ff2b7ca9">
-                      <dmn11:text>365</dmn11:text>
-                    </dmn11:inputEntry>
-                    <dmn11:inputEntry id="_6cdd4ba5-dac9-432f-b8b4-484000b3a524">
-                      <dmn11:text>0.0375</dmn11:text>
-                    </dmn11:inputEntry>
-                    <dmn11:outputEntry id="_a1fb641a-7c6a-4395-bcf8-941eef20e484">
-                      <dmn11:text>(Principal*Rate/12)/(1-(1+Rate/12)**-Term)</dmn11:text>
-                    </dmn11:outputEntry>
-                  </dmn11:rule>
-                </dmn11:decisionTable>
-              </dmn11:contextEntry>
-              <dmn11:contextEntry>
-                <dmn11:literalExpression id="_6e07c9b1-27db-4146-8326-93dbb610b056">
-                  <dmn11:text>MonthlyPayment</dmn11:text>
-                </dmn11:literalExpression>
-              </dmn11:contextEntry>
-            </dmn11:context>
-          </dmn11:contextEntry>
-          <dmn11:contextEntry>
-            <dmn11:literalExpression id="_81ae16e0-a14e-422e-a6a7-f03b798f767c">
-              <dmn11:text>BoxedContextOutput</dmn11:text>
-            </dmn11:literalExpression>
-          </dmn11:contextEntry>
-        </dmn11:context>
-      </dmn11:contextEntry>
-      <dmn11:contextEntry>
-        <dmn11:literalExpression id="_0cc0a999-b01d-4895-9840-39e8b103d3fb">
-          <dmn11:text>Boxed Context</dmn11:text>
-        </dmn11:literalExpression>
-      </dmn11:contextEntry>
-    </dmn11:context>
-  </dmn11:decision>
-  <dmn11:inputData id="_3881fe02-fd24-4051-9e3c-9624a2965012" name="Principal">
-    <dmn11:variable id="_c3b0e883-51e7-4cf1-bc16-4dafb4ea1386" name="Principal" typeRef="feel:number"/>
-  </dmn11:inputData>
-  <dmn11:inputData id="_8882228d-e585-4dd6-be16-5894c076d3fd" name="Term">
-    <dmn11:variable id="_5b6d1b18-eaab-420b-a167-61c4fd4761f7" name="Term" typeRef="feel:number"/>
-  </dmn11:inputData>
-</dmn11:definitions>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<semantic:definitions exporter="DMN Modeler" exporterVersion="6.1.5" namespace="http://www.trisotech.com/definitions/_00ca39fd-8843-49e7-ac80-ecc77b01a01c" name="Drawing 1" triso:logoChoice="Default" id="_00ca39fd-8843-49e7-ac80-ecc77b01a01c" xmlns="http://www.trisotech.com/definitions/_00ca39fd-8843-49e7-ac80-ecc77b01a01c" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:dmn11="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:rss="http://purl.org/rss/2.0/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:trisofeed="http://trisotech.com/feed" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <semantic:extensionElements/>
+    <semantic:decision name="Boxed Context" id="_3a383644-10da-49c4-b097-bc2ce96ced5f">
+        <semantic:variable typeRef="number" name="Boxed Context" id="_daa1ccfd-f06a-43ca-97f4-0a37da687a79"/>
+        <semantic:informationRequirement id="_2d26b31b-cfab-401c-8eda-f53a6f5b0b3b">
+            <semantic:requiredInput href="#_3881fe02-fd24-4051-9e3c-9624a2965012"/>
+        </semantic:informationRequirement>
+        <semantic:informationRequirement id="a83517c1-2ce7-42d6-89ec-0e0897c7f448">
+            <semantic:requiredInput href="#_8882228d-e585-4dd6-be16-5894c076d3fd"/>
+        </semantic:informationRequirement>
+        <semantic:context typeRef="number" id="_1a40a2ae-b758-4fc2-a08a-4df30ba6f8b9">
+            <semantic:contextEntry>
+                <semantic:variable typeRef="number" name="Rate" id="_1d02d62f-820e-46fb-9615-9d3f4e0ef193"/>
+                <semantic:literalExpression id="_e14ab844-5198-46c8-9f48-46866a339b20">
+                    <semantic:text>0.0375</semantic:text>
+                </semantic:literalExpression>
+            </semantic:contextEntry>
+            <semantic:contextEntry>
+                <semantic:variable typeRef="number" name="Boxed Context" id="_9cff5e4f-486b-49fa-8164-d4ad392b4092"/>
+                <semantic:context id="_f213a3a7-4334-4f48-b8ee-40927c631650">
+                    <semantic:contextEntry>
+                        <semantic:variable typeRef="number" name="BoxedContextOutput" id="_62c8dd4b-e070-4516-ae87-f5cc3a34d881"/>
+                        <semantic:context id="_e9c1fbf5-20aa-4644-ba90-82750909c70e">
+                            <semantic:contextEntry>
+                                <semantic:variable typeRef="number" name="MonthlyPayment" id="_9aadcc32-b981-45ac-b725-72345eebf9fd"/>
+                                <semantic:decisionTable hitPolicy="UNIQUE" outputLabel="MonthlyPayment" id="_4aaea452-fedf-4c5b-b5e6-a7e00840fb0d">
+                                    <semantic:input id="_ed127feb-de14-4bf5-b6b9-807b4b14f8a0">
+                                        <semantic:inputExpression typeRef="number">
+                                            <semantic:text>Principal</semantic:text>
+                                        </semantic:inputExpression>
+                                    </semantic:input>
+                                    <semantic:input id="_49407e5f-2d30-479b-ace7-9322c4f6d89f">
+                                        <semantic:inputExpression typeRef="number">
+                                            <semantic:text>Term</semantic:text>
+                                        </semantic:inputExpression>
+                                    </semantic:input>
+                                    <semantic:input id="_4ea76628-678b-4950-bd24-3e2bceb11d0b">
+                                        <semantic:inputExpression typeRef="number">
+                                            <semantic:text>Rate</semantic:text>
+                                        </semantic:inputExpression>
+                                    </semantic:input>
+                                    <semantic:output id="_20a2b3c0-399b-4a75-9e34-c5fed5b1d599"/>
+                                    <semantic:rule id="_e804ff7d-7c8a-463d-8cc4-c2ae47b31fc3">
+                                        <semantic:inputEntry id="_45859286-d084-4177-8c81-1e0f09495e15">
+                                            <semantic:text>600000</semantic:text>
+                                        </semantic:inputEntry>
+                                        <semantic:inputEntry id="_6df94713-3109-47df-a2fa-7bfbec22bd89">
+                                            <semantic:text>360</semantic:text>
+                                        </semantic:inputEntry>
+                                        <semantic:inputEntry id="_9c1da34f-0e99-4730-8345-8b42eb05545a">
+                                            <semantic:text>0.0375</semantic:text>
+                                        </semantic:inputEntry>
+                                        <semantic:outputEntry id="_360515c8-17ce-4a7d-b2cb-68b633cba075">
+                                            <semantic:text>(Principal*Rate/12)/(1-(1+Rate/12)**-Term)</semantic:text>
+                                        </semantic:outputEntry>
+                                    </semantic:rule>
+                                    <semantic:rule id="_a303adf7-0305-44d9-abf3-9661aa8f0297">
+                                        <semantic:inputEntry id="_339e29bf-a23b-44f8-a2be-7fe1e0def4bc">
+                                            <semantic:text>30000</semantic:text>
+                                        </semantic:inputEntry>
+                                        <semantic:inputEntry id="_d3244dcf-38a7-4fa6-a127-644c87f397d1">
+                                            <semantic:text>60</semantic:text>
+                                        </semantic:inputEntry>
+                                        <semantic:inputEntry id="_37abe647-c642-4b3c-85fa-43fc1d57c8a0">
+                                            <semantic:text>0.0375</semantic:text>
+                                        </semantic:inputEntry>
+                                        <semantic:outputEntry id="_5311506c-9aa4-47f7-b63e-a880c6610a2f">
+                                            <semantic:text>(Principal*Rate/12)/(1-(1+Rate/12)**-Term)</semantic:text>
+                                        </semantic:outputEntry>
+                                    </semantic:rule>
+                                    <semantic:rule id="_a81534be-8cde-4524-91f0-af0e5a855e7e">
+                                        <semantic:inputEntry id="_d5bd9e44-a1d1-475e-ab1b-2c870a49fd74">
+                                            <semantic:text>600000</semantic:text>
+                                        </semantic:inputEntry>
+                                        <semantic:inputEntry id="_25b64bba-776c-4c6f-ad3c-9300ff2b7ca9">
+                                            <semantic:text>365</semantic:text>
+                                        </semantic:inputEntry>
+                                        <semantic:inputEntry id="_6cdd4ba5-dac9-432f-b8b4-484000b3a524">
+                                            <semantic:text>0.0375</semantic:text>
+                                        </semantic:inputEntry>
+                                        <semantic:outputEntry id="_a1fb641a-7c6a-4395-bcf8-941eef20e484">
+                                            <semantic:text>(Principal*Rate/12)/(1-(1+Rate/12)**-Term)</semantic:text>
+                                        </semantic:outputEntry>
+                                    </semantic:rule>
+                                </semantic:decisionTable>
+                            </semantic:contextEntry>
+                            <semantic:contextEntry>
+                                <semantic:literalExpression id="_6e07c9b1-27db-4146-8326-93dbb610b056">
+                                    <semantic:text>MonthlyPayment</semantic:text>
+                                </semantic:literalExpression>
+                            </semantic:contextEntry>
+                        </semantic:context>
+                    </semantic:contextEntry>
+                    <semantic:contextEntry>
+                        <semantic:literalExpression id="_81ae16e0-a14e-422e-a6a7-f03b798f767c">
+                            <semantic:text>BoxedContextOutput</semantic:text>
+                        </semantic:literalExpression>
+                    </semantic:contextEntry>
+                </semantic:context>
+            </semantic:contextEntry>
+            <semantic:contextEntry>
+                <semantic:literalExpression id="_0cc0a999-b01d-4895-9840-39e8b103d3fb">
+                    <semantic:text>Boxed Context</semantic:text>
+                </semantic:literalExpression>
+            </semantic:contextEntry>
+        </semantic:context>
+    </semantic:decision>
+    <semantic:inputData name="Principal" id="_3881fe02-fd24-4051-9e3c-9624a2965012">
+        <semantic:variable typeRef="number" name="Principal" id="_c3b0e883-51e7-4cf1-bc16-4dafb4ea1386"/>
+    </semantic:inputData>
+    <semantic:inputData name="Term" id="_8882228d-e585-4dd6-be16-5894c076d3fd">
+        <semantic:variable typeRef="number" name="Term" id="_5b6d1b18-eaab-420b-a167-61c4fd4761f7"/>
+    </semantic:inputData>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="_00ca39fd-8843-49e7-ac80-ecc77b01a01c_D1">
+            <dmndi:Size height="650.0" width="666.0"/>
+            <dmndi:DMNShape dmnElementRef="_3a383644-10da-49c4-b097-bc2ce96ced5f" id="_00ca39fd-8843-49e7-ac80-ecc77b01a01c_s1">
+                <dc:Bounds height="61.0" width="154.0" x="255.0" y="150.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="_3881fe02-fd24-4051-9e3c-9624a2965012" id="_00ca39fd-8843-49e7-ac80-ecc77b01a01c_s2">
+                <dc:Bounds height="60.0" width="153.0" x="150.0" y="331.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="_8882228d-e585-4dd6-be16-5894c076d3fd" id="_00ca39fd-8843-49e7-ac80-ecc77b01a01c_s3">
+                <dc:Bounds height="60.0" width="153.0" x="363.0" y="331.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge dmnElementRef="_2d26b31b-cfab-401c-8eda-f53a6f5b0b3b" id="_00ca39fd-8843-49e7-ac80-ecc77b01a01c_e1">
+                <di:waypoint x="226.0" y="331.0"/>
+                <di:waypoint x="332.0" y="211.0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge dmnElementRef="a83517c1-2ce7-42d6-89ec-0e0897c7f448" id="_00ca39fd-8843-49e7-ac80-ecc77b01a01c_e2">
+                <di:waypoint x="439.0" y="331.0"/>
+                <di:waypoint x="332.0" y="211.0"/>
+            </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+</semantic:definitions>
+

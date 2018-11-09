@@ -1,192 +1,246 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<definitions id="_0020_vacation_days" 
-	name="0020-vacation-days"
-	namespace="https://www.drools.org/kie-dmn"
-	xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd"
-	xmlns:kie="https://www.drools.org/kie-dmn"
-	xmlns:feel="http://www.omg.org/spec/FEEL/20140401">
-		
-	<inputData id="i_Age" name="Age">
-		<variable name="Age" typeRef="feel:number"/>
-	</inputData>
-	
-	<inputData id="i_Years_of_Service" name="Years of Service">
-		<variable name="Years of Service" typeRef="feel:number"/>
-	</inputData>
-	
-	<decision name="Total Vacation Days" id="d_Total_Vacation_Days">
-	    <variable name="Total Vacation Days" typeRef="feel:number"/>
-	    <informationRequirement>
-	        <requiredDecision href="#d_Base_Vacation_Days"/>
-	    </informationRequirement>
-	    <informationRequirement>
-			<requiredDecision href="#d_Extra_days_case_1"/>
-		</informationRequirement>
-	    <informationRequirement>
-	        <requiredDecision href="#d_Extra_days_case_2"/>
-	    </informationRequirement>
-	    <informationRequirement>
-	        <requiredDecision href="#d_Extra_days_case_3"/>
-	    </informationRequirement>
-	    <literalExpression>
-	        <text>Base Vacation Days +
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<semantic:definitions namespace="https://www.drools.org/kie-dmn" name="0020-vacation-days" id="_0020_vacation_days" xmlns="https://www.drools.org/kie-dmn" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:dmn11="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:rss="http://purl.org/rss/2.0/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:trisofeed="http://trisotech.com/feed" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <semantic:inputData name="Age" id="i_Age">
+        <semantic:variable typeRef="number" name="Age"/>
+    </semantic:inputData>
+    <semantic:inputData name="Years of Service" id="i_Years_of_Service">
+        <semantic:variable typeRef="number" name="Years of Service"/>
+    </semantic:inputData>
+    <semantic:decision name="Total Vacation Days" id="d_Total_Vacation_Days">
+        <semantic:variable typeRef="number" name="Total Vacation Days"/>
+        <semantic:informationRequirement id="_28d41fff-1f61-46e9-93e2-68caff765c9e">
+            <semantic:requiredDecision href="#d_Base_Vacation_Days"/>
+        </semantic:informationRequirement>
+        <semantic:informationRequirement id="a2ade7be-71c3-4081-8b5a-49f4dd9708b1">
+            <semantic:requiredDecision href="#d_Extra_days_case_1"/>
+        </semantic:informationRequirement>
+        <semantic:informationRequirement id="_181228f4-d219-4629-a1ba-86d45db60e46">
+            <semantic:requiredDecision href="#d_Extra_days_case_2"/>
+        </semantic:informationRequirement>
+        <semantic:informationRequirement id="_6abac4cd-3dbd-4335-879b-b003b9917792">
+            <semantic:requiredDecision href="#d_Extra_days_case_3"/>
+        </semantic:informationRequirement>
+        <semantic:literalExpression>
+            <semantic:text>Base Vacation Days +
 	              max( Extra days case 1, Extra days case 3 ) +
-	              Extra days case 2</text>
-	    </literalExpression>
-	</decision>
-	
-	<decision name="Extra days case 1" id="d_Extra_days_case_1">
-		<variable name="Extra days case 1" typeRef="feel:number"/>
-		<informationRequirement>
-			<requiredInput href="#i_Age"/>
-		</informationRequirement>
-	    <informationRequirement>
-	        <requiredInput href="#i_Years_of_Service"/>
-	    </informationRequirement>
-	    <decisionTable hitPolicy="COLLECT" aggregation="MAX">
-	        <input id="d_Extra_days_case_1_dt_i_age" label="Age">
-	            <inputExpression typeRef="feel:number">
-	                <text>Age</text>
-	            </inputExpression>
-	        </input>
-	        <input id="d_Extra_days_case_1_dt_i_years" label="Years of Service">
-	            <inputExpression typeRef="feel:number">
-	                <text>Years of Service</text>
-	            </inputExpression>
-	        </input>
-	        <output id="d_Extra_days_case_1_dt_o" label="Extra days">
-	            <defaultOutputEntry>
-	                <text>0</text>
-	            </defaultOutputEntry>
-	        </output>
-	        <rule id="d_Extra_days_case_1_dt_r1">
-	            <inputEntry id="d_Extra_days_case_1_dt_r1_i1">
-	                <text>&lt;18,&gt;=60</text>
-	            </inputEntry>
-	            <inputEntry id="d_Extra_days_case_1_dt_r1_i2">
-	                <text>-</text>
-	            </inputEntry>
-	            <outputEntry id="d_Extra_days_case_1_dt_r1_o1">
-	                <text>5</text>
-	            </outputEntry>
-	        </rule>
-	        <rule id="d_Extra_days_case_1_dt_r2">
-	            <inputEntry id="d_Extra_days_case_1_dt_r2_i1">
-	                <text>-</text>
-	            </inputEntry>
-	            <inputEntry id="d_Extra_days_case_1_dt_r2_i2">
-	                <text>&gt;=30</text>
-	            </inputEntry>
-	            <outputEntry id="d_Extra_days_case_1_dt_r2_o1">
-	                <text>5</text>
-	            </outputEntry>
-	        </rule>
-	    </decisionTable>
-	</decision>
-	
-    <decision name="Extra days case 2" id="d_Extra_days_case_2">
-        <variable name="Extra days case 2" typeRef="feel:number"/>
-        <informationRequirement>
-            <requiredInput href="#i_Age"/>
-        </informationRequirement>
-        <informationRequirement>
-            <requiredInput href="#i_Years_of_Service"/>
-        </informationRequirement>
-        <decisionTable hitPolicy="COLLECT" aggregation="MAX">
-            <input id="d_Extra_days_case_2_dt_i_age" label="Age">
-                <inputExpression typeRef="feel:number">
-                    <text>Age</text>
-                </inputExpression>
-            </input>
-            <input id="d_Extra_days_case_2_dt_i_years" label="Years of Service">
-                <inputExpression typeRef="feel:number">
-                    <text>Years of Service</text>
-                </inputExpression>
-            </input>
-            <output id="d_Extra_days_case_2_dt_o" label="Extra days">
-                <defaultOutputEntry>
-                    <text>0</text>
-                </defaultOutputEntry>
-            </output>
-            <rule id="d_Extra_days_case_2_dt_r1">
-                <inputEntry id="d_Extra_days_case_2_dt_r1_i1">
-                    <text>-</text>
-                </inputEntry>
-                <inputEntry id="d_Extra_days_case_2_dt_r1_i2">
-                    <text>&gt;=30</text>
-                </inputEntry>
-                <outputEntry id="d_Extra_days_case_2_dt_r1_o1">
-                    <text>3</text>
-                </outputEntry>
-            </rule>
-            <rule id="d_Extra_days_case_2_dt_r2">
-                <inputEntry id="d_Extra_days_case_2_dt_r2_i1">
-                    <text>&gt;=60</text>
-                </inputEntry>
-                <inputEntry id="d_Extra_days_case_2_dt_r2_i2">
-                    <text>-</text>
-                </inputEntry>
-                <outputEntry id="d_Extra_days_case_2_dt_r2_o1">
-                    <text>3</text>
-                </outputEntry>
-            </rule>
-        </decisionTable>
-    </decision>
-    
-    <decision name="Extra days case 3" id="d_Extra_days_case_3">
-        <variable name="Extra days case 3" typeRef="feel:number"/>
-        <informationRequirement>
-            <requiredInput href="#i_Age"/>
-        </informationRequirement>
-        <informationRequirement>
-            <requiredInput href="#i_Years_of_Service"/>
-        </informationRequirement>
-        <decisionTable hitPolicy="COLLECT" aggregation="MAX">
-            <input id="d_Extra_days_case_3_dt_i_age" label="Age">
-                <inputExpression typeRef="feel:number">
-                    <text>Age</text>
-                </inputExpression>
-            </input>
-            <input id="d_Extra_days_case_3_dt_i_years" label="Years of Service">
-                <inputExpression typeRef="feel:number">
-                    <text>Years of Service</text>
-                </inputExpression>
-            </input>
-            <output id="d_Extra_days_case_3_dt_o" label="Extra days">
-                <defaultOutputEntry>
-                    <text>0</text>
-                </defaultOutputEntry>
-            </output>
-            <rule id="d_Extra_days_case_3_dt_r1">
-                <inputEntry id="d_Extra_days_case_3_dt_r1_i1">
-                    <text>-</text>
-                </inputEntry>
-                <inputEntry id="d_Extra_days_case_3_dt_r1_i2">
-                    <text>[15..30)</text>
-                </inputEntry>
-                <outputEntry id="d_Extra_days_case_3_dt_r1_o1">
-                    <text>2</text>
-                </outputEntry>
-            </rule>
-            <rule id="d_Extra_days_case_3_dt_r2">
-                <inputEntry id="d_Extra_days_case_3_dt_r2_i1">
-                    <text>&gt;=45</text>
-                </inputEntry>
-                <inputEntry id="d_Extra_days_case_3_dt_r2_i2">
-                    <text>-</text>
-                </inputEntry>
-                <outputEntry id="d_Extra_days_case_3_dt_r2_o1">
-                    <text>2</text>
-                </outputEntry>
-            </rule>
-        </decisionTable>
-    </decision>
-    
-    <decision id="d_Base_Vacation_Days" name="Base Vacation Days">
-        <variable name="Base Vacation Days" typeRef="feel:number"/>
-        <literalExpression>
-            <text>22</text>
-        </literalExpression>
-	</decision>
-	
-</definitions>
+	              Extra days case 2</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision name="Extra days case 1" id="d_Extra_days_case_1">
+        <semantic:variable typeRef="number" name="Extra days case 1"/>
+        <semantic:informationRequirement id="_34e5b0ac-81ab-468a-9029-8118fc9a41da">
+            <semantic:requiredInput href="#i_Age"/>
+        </semantic:informationRequirement>
+        <semantic:informationRequirement id="_5b050dfd-c2d9-4c02-93e7-967df45078a2">
+            <semantic:requiredInput href="#i_Years_of_Service"/>
+        </semantic:informationRequirement>
+        <semantic:decisionTable aggregation="MAX" hitPolicy="COLLECT">
+            <semantic:input id="d_Extra_days_case_1_dt_i_age" label="Age">
+                <semantic:inputExpression typeRef="number">
+                    <semantic:text>Age</semantic:text>
+                </semantic:inputExpression>
+            </semantic:input>
+            <semantic:input id="d_Extra_days_case_1_dt_i_years" label="Years of Service">
+                <semantic:inputExpression typeRef="number">
+                    <semantic:text>Years of Service</semantic:text>
+                </semantic:inputExpression>
+            </semantic:input>
+            <semantic:output id="d_Extra_days_case_1_dt_o" label="Extra days">
+                <semantic:defaultOutputEntry>
+                    <semantic:text>0</semantic:text>
+                </semantic:defaultOutputEntry>
+            </semantic:output>
+            <semantic:rule id="d_Extra_days_case_1_dt_r1">
+                <semantic:inputEntry id="d_Extra_days_case_1_dt_r1_i1">
+                    <semantic:text>&lt;18,&gt;=60</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="d_Extra_days_case_1_dt_r1_i2">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="d_Extra_days_case_1_dt_r1_o1">
+                    <semantic:text>5</semantic:text>
+                </semantic:outputEntry>
+            </semantic:rule>
+            <semantic:rule id="d_Extra_days_case_1_dt_r2">
+                <semantic:inputEntry id="d_Extra_days_case_1_dt_r2_i1">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="d_Extra_days_case_1_dt_r2_i2">
+                    <semantic:text>&gt;=30</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="d_Extra_days_case_1_dt_r2_o1">
+                    <semantic:text>5</semantic:text>
+                </semantic:outputEntry>
+            </semantic:rule>
+        </semantic:decisionTable>
+    </semantic:decision>
+    <semantic:decision name="Extra days case 2" id="d_Extra_days_case_2">
+        <semantic:variable typeRef="number" name="Extra days case 2"/>
+        <semantic:informationRequirement id="a507fa41-ff43-4600-80db-663ace4f240a">
+            <semantic:requiredInput href="#i_Age"/>
+        </semantic:informationRequirement>
+        <semantic:informationRequirement id="c5c4f89b-1cc4-4215-b069-adeb6d8dac00">
+            <semantic:requiredInput href="#i_Years_of_Service"/>
+        </semantic:informationRequirement>
+        <semantic:decisionTable aggregation="MAX" hitPolicy="COLLECT">
+            <semantic:input id="d_Extra_days_case_2_dt_i_age" label="Age">
+                <semantic:inputExpression typeRef="number">
+                    <semantic:text>Age</semantic:text>
+                </semantic:inputExpression>
+            </semantic:input>
+            <semantic:input id="d_Extra_days_case_2_dt_i_years" label="Years of Service">
+                <semantic:inputExpression typeRef="number">
+                    <semantic:text>Years of Service</semantic:text>
+                </semantic:inputExpression>
+            </semantic:input>
+            <semantic:output id="d_Extra_days_case_2_dt_o" label="Extra days">
+                <semantic:defaultOutputEntry>
+                    <semantic:text>0</semantic:text>
+                </semantic:defaultOutputEntry>
+            </semantic:output>
+            <semantic:rule id="d_Extra_days_case_2_dt_r1">
+                <semantic:inputEntry id="d_Extra_days_case_2_dt_r1_i1">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="d_Extra_days_case_2_dt_r1_i2">
+                    <semantic:text>&gt;=30</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="d_Extra_days_case_2_dt_r1_o1">
+                    <semantic:text>3</semantic:text>
+                </semantic:outputEntry>
+            </semantic:rule>
+            <semantic:rule id="d_Extra_days_case_2_dt_r2">
+                <semantic:inputEntry id="d_Extra_days_case_2_dt_r2_i1">
+                    <semantic:text>&gt;=60</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="d_Extra_days_case_2_dt_r2_i2">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="d_Extra_days_case_2_dt_r2_o1">
+                    <semantic:text>3</semantic:text>
+                </semantic:outputEntry>
+            </semantic:rule>
+        </semantic:decisionTable>
+    </semantic:decision>
+    <semantic:decision name="Extra days case 3" id="d_Extra_days_case_3">
+        <semantic:variable typeRef="number" name="Extra days case 3"/>
+        <semantic:informationRequirement id="_0273d369-0e99-48d8-b9a4-49185fcedf6e">
+            <semantic:requiredInput href="#i_Age"/>
+        </semantic:informationRequirement>
+        <semantic:informationRequirement id="_3614a6b9-e688-49df-8f1b-2976bdd8f67b">
+            <semantic:requiredInput href="#i_Years_of_Service"/>
+        </semantic:informationRequirement>
+        <semantic:decisionTable aggregation="MAX" hitPolicy="COLLECT">
+            <semantic:input id="d_Extra_days_case_3_dt_i_age" label="Age">
+                <semantic:inputExpression typeRef="number">
+                    <semantic:text>Age</semantic:text>
+                </semantic:inputExpression>
+            </semantic:input>
+            <semantic:input id="d_Extra_days_case_3_dt_i_years" label="Years of Service">
+                <semantic:inputExpression typeRef="number">
+                    <semantic:text>Years of Service</semantic:text>
+                </semantic:inputExpression>
+            </semantic:input>
+            <semantic:output id="d_Extra_days_case_3_dt_o" label="Extra days">
+                <semantic:defaultOutputEntry>
+                    <semantic:text>0</semantic:text>
+                </semantic:defaultOutputEntry>
+            </semantic:output>
+            <semantic:rule id="d_Extra_days_case_3_dt_r1">
+                <semantic:inputEntry id="d_Extra_days_case_3_dt_r1_i1">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="d_Extra_days_case_3_dt_r1_i2">
+                    <semantic:text>[15..30)</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="d_Extra_days_case_3_dt_r1_o1">
+                    <semantic:text>2</semantic:text>
+                </semantic:outputEntry>
+            </semantic:rule>
+            <semantic:rule id="d_Extra_days_case_3_dt_r2">
+                <semantic:inputEntry id="d_Extra_days_case_3_dt_r2_i1">
+                    <semantic:text>&gt;=45</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="d_Extra_days_case_3_dt_r2_i2">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="d_Extra_days_case_3_dt_r2_o1">
+                    <semantic:text>2</semantic:text>
+                </semantic:outputEntry>
+            </semantic:rule>
+        </semantic:decisionTable>
+    </semantic:decision>
+    <semantic:decision name="Base Vacation Days" id="d_Base_Vacation_Days">
+        <semantic:variable typeRef="number" name="Base Vacation Days"/>
+        <semantic:literalExpression>
+            <semantic:text>22</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="_0020_vacation_days_D1">
+            <dmndi:Size height="722.0" width="1096.0"/>
+            <dmndi:DMNShape dmnElementRef="i_Age" id="_0020_vacation_days_s1">
+                <dc:Bounds height="60.0" width="153.0" x="258.0" y="512.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="i_Years_of_Service" id="_0020_vacation_days_s2">
+                <dc:Bounds height="60.0" width="153.0" x="471.0" y="512.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="d_Total_Vacation_Days" id="_0020_vacation_days_s3">
+                <dc:Bounds height="61.0" width="154.0" x="471.0" y="150.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="d_Extra_days_case_1" id="_0020_vacation_days_s4">
+                <dc:Bounds height="61.0" width="154.0" x="150.0" y="331.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="d_Extra_days_case_2" id="_0020_vacation_days_s5">
+                <dc:Bounds height="61.0" width="154.0" x="364.0" y="331.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="d_Extra_days_case_3" id="_0020_vacation_days_s6">
+                <dc:Bounds height="61.0" width="154.0" x="578.0" y="331.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="d_Base_Vacation_Days" id="_0020_vacation_days_s7">
+                <dc:Bounds height="61.0" width="154.0" x="792.0" y="331.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge dmnElementRef="_28d41fff-1f61-46e9-93e2-68caff765c9e" id="_0020_vacation_days_e1">
+                <di:waypoint x="869.0" y="331.0"/>
+                <di:waypoint x="548.0" y="211.0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge dmnElementRef="a2ade7be-71c3-4081-8b5a-49f4dd9708b1" id="_0020_vacation_days_e2">
+                <di:waypoint x="227.0" y="331.0"/>
+                <di:waypoint x="548.0" y="211.0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge dmnElementRef="_181228f4-d219-4629-a1ba-86d45db60e46" id="_0020_vacation_days_e3">
+                <di:waypoint x="441.0" y="331.0"/>
+                <di:waypoint x="548.0" y="211.0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge dmnElementRef="_6abac4cd-3dbd-4335-879b-b003b9917792" id="_0020_vacation_days_e4">
+                <di:waypoint x="655.0" y="331.0"/>
+                <di:waypoint x="548.0" y="211.0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge dmnElementRef="_34e5b0ac-81ab-468a-9029-8118fc9a41da" id="_0020_vacation_days_e5">
+                <di:waypoint x="334.0" y="512.0"/>
+                <di:waypoint x="227.0" y="392.0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge dmnElementRef="_5b050dfd-c2d9-4c02-93e7-967df45078a2" id="_0020_vacation_days_e6">
+                <di:waypoint x="547.0" y="512.0"/>
+                <di:waypoint x="227.0" y="392.0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge dmnElementRef="a507fa41-ff43-4600-80db-663ace4f240a" id="_0020_vacation_days_e7">
+                <di:waypoint x="334.0" y="512.0"/>
+                <di:waypoint x="441.0" y="392.0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge dmnElementRef="c5c4f89b-1cc4-4215-b069-adeb6d8dac00" id="_0020_vacation_days_e8">
+                <di:waypoint x="547.0" y="512.0"/>
+                <di:waypoint x="441.0" y="392.0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge dmnElementRef="_0273d369-0e99-48d8-b9a4-49185fcedf6e" id="_0020_vacation_days_e9">
+                <di:waypoint x="334.0" y="512.0"/>
+                <di:waypoint x="655.0" y="392.0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge dmnElementRef="_3614a6b9-e688-49df-8f1b-2976bdd8f67b" id="_0020_vacation_days_e10">
+                <di:waypoint x="547.0" y="512.0"/>
+                <di:waypoint x="655.0" y="392.0"/>
+            </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+</semantic:definitions>
+
