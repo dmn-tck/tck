@@ -7,21 +7,11 @@
   <name>DMN :: TCK :: jUnit Runner :: Camunda</name>
 
   <properties>
-    <dmn-scala.version>1.0.0-SNAPSHOT</dmn-scala.version>
+    <dmn-scala.version>1.1.0</dmn-scala.version>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-
-  <dependencyManagement>
-  	<dependencies>
-  		<dependency>
-  			<groupId>org.camunda.bpm.model</groupId>
-  			<artifactId>camunda-dmn-model</artifactId>
-  			<version>7.9.0-SNAPSHOT</version>
-  		</dependency>
-  	</dependencies>
-  </dependencyManagement>
 
   <dependencies>
     <dependency>
@@ -62,12 +52,7 @@
       <artifactId>dmn-engine</artifactId>
       <version>${dmn-scala.version}</version>
     </dependency>
-
-	<dependency>
-	    <groupId>com.goldmansachs.jdmn</groupId>
-	    <artifactId>jdmn-core</artifactId>
-	    <version>1.2.0</version>
-	</dependency>
+    
   </dependencies>
 
   <repositories>

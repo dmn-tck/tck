@@ -14,8 +14,6 @@
 
 package org.omg.dmn.tck.runner.camunda;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
@@ -59,7 +57,6 @@ import org.omg.dmn.tck.runner.junit4.DmnTckSuite;
 import org.omg.dmn.tck.runner.junit4.DmnTckVendorTestSuite;
 import org.omg.dmn.tck.runner.junit4.TestResult;
 import org.omg.dmn.tck.runner.junit4.TestSuiteContext;
-import org.omg.spec.dmn._20151101.dmn.TDefinitions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Node;
@@ -77,7 +74,7 @@ public class CamundaTCKTest implements DmnTckVendorTestSuite {
 
 	@Override
 	public String getResultFileName() {
-		String resultDirectory = "../../TestResults/Camunda/7.8.0";
+		String resultDirectory = "../../TestResults/Camunda/7.9.0";
 		new File(resultDirectory).mkdirs();
 		return resultDirectory + "/" + DmnTckVendorTestSuite.super.getResultFileName();
 	}
@@ -92,7 +89,7 @@ public class CamundaTCKTest implements DmnTckVendorTestSuite {
 		File cl2parent = new File("../../TestCases/compliance-level-2");
 		FilenameFilter filenameFilter = (dir, name) -> name.matches("\\d\\d\\d\\d-.*");
 //		 FilenameFilter filenameFilter = (dir, inputName) -> inputName.matches( "000[1-4]-.*" );
-//		 FilenameFilter filenameFilter = (dir, inputName) -> inputName.matches( "0007-d.*" );
+//		 FilenameFilter filenameFilter = (dir, inputName) -> inputName.matches( "0004.*" );
 		for (File file : cl2parent.listFiles(filenameFilter)) {
 			try {
 				testCases.add(file.toURI().toURL());
@@ -117,7 +114,7 @@ public class CamundaTCKTest implements DmnTckVendorTestSuite {
 	public TestSuiteContext createContext() {
 		logger.info("Creating context.");
 		final CamundaContext context = new CamundaContext();
-		context.engine = new DmnEngine();
+		context.engine = new DmnEngine(new DmnEngine.Configuration(true, true));
 
 		return context;
 	}
@@ -128,13 +125,13 @@ public class CamundaTCKTest implements DmnTckVendorTestSuite {
 		CamundaContext ctx = (CamundaContext) context;
 
 		try {
-		  InputStream inputStream = openModel(modelURL);
+		  InputStream inputStream =  modelURL.openStream();
 
 			final Either<Failure, ParsedDmn> parseResult = ctx.engine.parse(inputStream);
 
 			if (parseResult.isLeft()) {
 				final Failure failure = parseResult.left().get();
-				throw new RuntimeException(failure.message());
+				throw new RuntimeException("Failed to parse DMN '" + modelURL + "': " + failure.message());
 			} else {
 				ctx.dmnModel = parseResult.right().get();
 			}
@@ -143,16 +140,6 @@ public class CamundaTCKTest implements DmnTckVendorTestSuite {
 			throw new RuntimeException("Failed to read DMN: " + modelURL, e);
 		}
 	}
-
-  private InputStream openModel(URL modelURL) throws IOException {
-    DMNReaderWriter dmnReader = new DMNReaderWriter(logger, true);
-    TDefinitions definitions = dmnReader.read(modelURL);
-    TDefinitions quotedDefinitions = new NameNormalizer().transform(definitions);
-    ByteArrayOutputStream out = new ByteArrayOutputStream();
-    dmnReader.write(quotedDefinitions, out);
-//    System.out.println(out.toString());
-    return new ByteArrayInputStream(out.toByteArray());
-  }
 
 	@Override
 	public void beforeTest(Description description, TestSuiteContext context, TestCases.TestCase testCase) {
@@ -227,12 +214,8 @@ public class CamundaTCKTest implements DmnTckVendorTestSuite {
     if (r == TestResult.Result.IGNORED) {
       switch (description.toString()) {
       case "001(0021-singleton-list-test-01)":
-      case "001(0034-drg-scopes-test-01)":
-      case "011_a559ce6410(1103-feel-substring-function-test-01)":
-      case "001(0007-date-time-test-01)":
-      case "001(0035-test-structure-output-test-01)":
-      case "002(0035-test-structure-output-test-01)":
-      case "003(0035-test-structure-output-test-01)":
+      case "_a217c840-6ead-4cb7-a3e1-ad9df9c0c584(0039-dt-list-semantics-test-01)":
+      case "_07726176-a1a0-4e9e-9de2-16dba51556e2(0039-dt-list-semantics-test-01)":
         r = TestResult.Result.IGNORED;
         break;
       default:
