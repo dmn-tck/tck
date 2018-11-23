@@ -2,9 +2,9 @@
 <definitions id="_0019_flight_rebooking" 
 	name="0019-flight-rebooking"
 	namespace="https://www.drools.org/kie-dmn"
-	xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd"
+	xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/"
 	xmlns:kie="https://www.drools.org/kie-dmn"
-	xmlns:feel="http://www.omg.org/spec/FEEL/20140401">
+	xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/">
 	
 	<itemDefinition id="_tFlight" name="tFlight">
 		<itemComponent id="_tFlight_Flight" name="Flight Number">
@@ -131,6 +131,7 @@
 	</decision>
 	
 	<businessKnowledgeModel id="b_PassengerPriority" name="passenger priority">
+		<variable name="passenger priority" typeRef="feel:boolean"/>
 		<encapsulatedLogic>
 			<formalParameter name="Passenger1" typeRef="kie:tPassenger"/>
 		    <formalParameter name="Passenger2" typeRef="kie:tPassenger"/>
@@ -236,10 +237,10 @@
 		        </rule>
 		    </decisionTable>
 		</encapsulatedLogic>
-		<variable name="passenger priority" typeRef="feel:boolean"/>
 	</businessKnowledgeModel>
 	
 	<businessKnowledgeModel id="b_ReassignNextPassenger" name="reassign next passenger">
+	    <variable name="reassign next passenger" typeRef="kie:tPassengerTable"/>
 	    <encapsulatedLogic>
 			<formalParameter name="Waiting List" typeRef="kie:tPassengerTable"/>
 			<formalParameter name="Reassigned Passengers List" typeRef="kie:tPassengerTable"/>
@@ -314,13 +315,13 @@
 				</contextEntry>
 			</context>
 		</encapsulatedLogic>
-	    <variable name="reassign next passenger" typeRef="kie:tPassengerTable"/>
 	    <knowledgeRequirement>
 	        <requiredKnowledge href="#b_HasCapacity"/>
 	    </knowledgeRequirement>
 	</businessKnowledgeModel>
     
     <businessKnowledgeModel id="b_HasCapacity" name="has capacity">
+        <variable name="has capacity" typeRef="feel:boolean"/>
         <encapsulatedLogic>
             <formalParameter name="flight" typeRef="kie:tFlight"/>
             <formalParameter name="rebooked list" typeRef="kie:tPassengerTable"/>
@@ -328,7 +329,6 @@
                 <text> flight.Capacity > count( rebooked list[ Flight Number = flight.Flight Number ] ) </text>
             </literalExpression>
         </encapsulatedLogic>
-        <variable name="has capacity" typeRef="feel:boolean"/>
     </businessKnowledgeModel>
     
 </definitions>
