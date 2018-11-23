@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<definitions namespace="http://www.actico.com/spec/DMN/1106-feel-lower-case-function" name="1106-feel-lower-case-function" id="_jAaMwPUUEeesLuP4RHs4vA" xmlns="http://www.actico.com/spec/DMN/1106-feel-lower-case-function" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<definitions namespace="http://www.actico.com/spec/DMN/1106-feel-lower-case-function" name="1106-feel-lower-case-function" id="_jAaMwPUUEeesLuP4RHs4vA" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <description>FEEL built-in function 'lower case(string)' in category string functions</description>
     <itemDefinition name="tfeel-lower-case-function_001_f6ff05bcfa_Result" id="_jAaMwvUUEeesLuP4RHs4vA">
         <typeRef>string</typeRef>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<definitions namespace="http://www.actico.com/spec/DMN/1109-feel-replace-function" name="1109-feel-replace-function" id="_jCDLgPUUEeesLuP4RHs4vA" xmlns="http://www.actico.com/spec/DMN/1109-feel-replace-function" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<definitions namespace="http://www.actico.com/spec/DMN/1109-feel-replace-function" name="1109-feel-replace-function" id="_jCDLgPUUEeesLuP4RHs4vA" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <description>FEEL built-in function 'replace(input, pattern, replacement, flags?)' in category string functions</description>
     <itemDefinition name="tfeel-replace-function_001_7637e5a8ed_Result" id="_jCDLgvUUEeesLuP4RHs4vA">
         <typeRef>string</typeRef>
