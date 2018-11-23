@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<semantic:definitions exporter="DMN Modeler" exporterVersion="6.1.3" namespace="http://www.trisotech.com/dmn/definitions/_7f0fb170-45f8-4189-94a4-74c686cc1d55" name="DT list semantics" triso:logoChoice="Default" id="_7f0fb170-45f8-4189-94a4-74c686cc1d55" xmlns="http://www.trisotech.com/dmn/definitions/_7f0fb170-45f8-4189-94a4-74c686cc1d55" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <semantic:extensionElements/>
-    <semantic:itemDefinition isCollection="true" name="tListOfStrings" label="tListOfStrings">
-        <semantic:typeRef>string</semantic:typeRef>
-    </semantic:itemDefinition>
-    <semantic:inputData name="Flu Symtoms" id="_ceab30da-d86b-4c49-9685-49a6dc60413d">
-        <semantic:variable typeRef="tListOfStrings" name="Flu Symtoms" id="_bfee4407-5d09-444c-9055-95c6c9defec7"/>
-    </semantic:inputData>
-    <semantic:inputData name="Symptom" id="_0d07c799-309c-49cd-9dc4-3c26bbf96282">
-        <semantic:variable typeRef="string" name="Symptom" id="_2ee5c4b8-2820-405e-a5e3-9fd3f56163af"/>
-    </semantic:inputData>
-    <semantic:decision name="Symptom Analysis" id="_531cd585-b1f9-4f12-abda-6d152fc324af">
-        <semantic:variable typeRef="tListOfStrings" name="Symptom Analysis" id="_b89f47cd-d986-45fc-8e97-2d0281b42dab"/>
-        <semantic:informationRequirement id="d252aed4-6a34-4e31-b4c3-c58ea03ee235">
-            <semantic:requiredInput href="#_ceab30da-d86b-4c49-9685-49a6dc60413d"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="d382479e-ab34-4848-abfc-81c1ffcc76e3">
-            <semantic:requiredInput href="#_0d07c799-309c-49cd-9dc4-3c26bbf96282"/>
-        </semantic:informationRequirement>
-        <semantic:decisionTable hitPolicy="COLLECT" outputLabel="Symptom Analysis" typeRef="tListOfStrings" id="_895523c7-9926-43bb-83db-e596f9caaebc">
-            <semantic:input id="_34a2f5f6-d4d9-4b03-8ac0-cbfac33f2591">
-                <semantic:inputExpression typeRef="string">
-                    <semantic:text>Symptom</semantic:text>
-                </semantic:inputExpression>
-            </semantic:input>
-            <semantic:output id="_2a4ebb8a-f98e-47e1-a57f-78230ced36fd"/>
-            <semantic:rule id="_1b20fe26-e3b3-449f-838b-a8ab00238e53">
-                <semantic:inputEntry id="_fd5fb838-ebfd-4b89-916d-a96d51df0cf7">
-                    <semantic:text>"cough", "sore throat", "stuffy nose"</semantic:text>
-                </semantic:inputEntry>
-                <semantic:outputEntry id="_79aaec27-d2f0-4f00-9f33-9ccade427765">
-                    <semantic:text>Symptom + " is in the list of Cold symptoms"</semantic:text>
-                </semantic:outputEntry>
-            </semantic:rule>
-            <semantic:rule id="_0da0a131-4e1a-4b1a-b763-8af96a11982d">
-                <semantic:inputEntry id="_2fbeca46-aa7f-4746-9929-ce7c88cd1a5f">
-                    <semantic:text>Flu Symtoms</semantic:text>
-                </semantic:inputEntry>
-                <semantic:outputEntry id="_ba75f36d-77dd-4190-b64c-3036e9d26d5b">
-                    <semantic:text>Symptom + " is in the list of Flu symptoms"</semantic:text>
-                </semantic:outputEntry>
-            </semantic:rule>
-        </semantic:decisionTable>
-    </semantic:decision>
+<definitions exporter="DMN Modeler" exporterVersion="6.1.3" namespace="http://www.trisotech.com/dmn/definitions/_7f0fb170-45f8-4189-94a4-74c686cc1d55" name="DT list semantics" triso:logoChoice="Default" id="_7f0fb170-45f8-4189-94a4-74c686cc1d55" xmlns="http://www.trisotech.com/dmn/definitions/_7f0fb170-45f8-4189-94a4-74c686cc1d55" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <extensionElements/>
+    <itemDefinition isCollection="true" name="tListOfStrings" label="tListOfStrings">
+        <typeRef>string</typeRef>
+    </itemDefinition>
+    <inputData name="Flu Symtoms" id="_ceab30da-d86b-4c49-9685-49a6dc60413d">
+        <variable typeRef="tListOfStrings" name="Flu Symtoms" id="_bfee4407-5d09-444c-9055-95c6c9defec7"/>
+    </inputData>
+    <inputData name="Symptom" id="_0d07c799-309c-49cd-9dc4-3c26bbf96282">
+        <variable typeRef="string" name="Symptom" id="_2ee5c4b8-2820-405e-a5e3-9fd3f56163af"/>
+    </inputData>
+    <decision name="Symptom Analysis" id="_531cd585-b1f9-4f12-abda-6d152fc324af">
+        <variable typeRef="tListOfStrings" name="Symptom Analysis" id="_b89f47cd-d986-45fc-8e97-2d0281b42dab"/>
+        <informationRequirement id="d252aed4-6a34-4e31-b4c3-c58ea03ee235">
+            <requiredInput href="#_ceab30da-d86b-4c49-9685-49a6dc60413d"/>
+        </informationRequirement>
+        <informationRequirement id="d382479e-ab34-4848-abfc-81c1ffcc76e3">
+            <requiredInput href="#_0d07c799-309c-49cd-9dc4-3c26bbf96282"/>
+        </informationRequirement>
+        <decisionTable hitPolicy="COLLECT" outputLabel="Symptom Analysis" typeRef="tListOfStrings" id="_895523c7-9926-43bb-83db-e596f9caaebc">
+            <input id="_34a2f5f6-d4d9-4b03-8ac0-cbfac33f2591">
+                <inputExpression typeRef="string">
+                    <text>Symptom</text>
+                </inputExpression>
+            </input>
+            <output id="_2a4ebb8a-f98e-47e1-a57f-78230ced36fd"/>
+            <rule id="_1b20fe26-e3b3-449f-838b-a8ab00238e53">
+                <inputEntry id="_fd5fb838-ebfd-4b89-916d-a96d51df0cf7">
+                    <text>"cough", "sore throat", "stuffy nose"</text>
+                </inputEntry>
+                <outputEntry id="_79aaec27-d2f0-4f00-9f33-9ccade427765">
+                    <text>Symptom + " is in the list of Cold symptoms"</text>
+                </outputEntry>
+            </rule>
+            <rule id="_0da0a131-4e1a-4b1a-b763-8af96a11982d">
+                <inputEntry id="_2fbeca46-aa7f-4746-9929-ce7c88cd1a5f">
+                    <text>Flu Symtoms</text>
+                </inputEntry>
+                <outputEntry id="_ba75f36d-77dd-4190-b64c-3036e9d26d5b">
+                    <text>Symptom + " is in the list of Flu symptoms"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
     <dmndi:DMNDI>
         <dmndi:DMNDiagram id="_7f0fb170-45f8-4189-94a4-74c686cc1d55_D1">
             <dmndi:Size height="650.0" width="666.0"/>
@@ -65,5 +65,5 @@
             </dmndi:DMNEdge>
         </dmndi:DMNDiagram>
     </dmndi:DMNDI>
-</semantic:definitions>
+</definitions>
 

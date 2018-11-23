@@ -1,92 +1,92 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<semantic:definitions exporter="DMN Modeler; Method and Style trisofix.xslt" exporterVersion="5.1.1; 1.0" namespace="http://www.trisotech.com/definitions/_6029a6d3-d2f1-484b-a99d-4bedb5858a3e" name="insert-remove" triso:logoChoice="Default" id="_6029a6d3-d2f1-484b-a99d-4bedb5858a3e" xmlns="http://www.trisotech.com/definitions/_6029a6d3-d2f1-484b-a99d-4bedb5858a3e" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <semantic:itemDefinition isCollection="true" name="tStringList" label="tStringList">
-        <semantic:typeRef>string</semantic:typeRef>
-    </semantic:itemDefinition>
-    <semantic:itemDefinition isCollection="true" name="tNestedList" label="tNestedList">
-        <semantic:typeRef>tStringList</semantic:typeRef>
-    </semantic:itemDefinition>
-    <semantic:inputData name="simpleList" id="_8713a7d7-bae7-484e-b1d5-788b3979d659">
-        <semantic:variable typeRef="tStringList" name="simpleList"/>
-    </semantic:inputData>
-    <semantic:inputData name="nestedList" id="_722095a4-3116-4d71-b225-58795b3ec654">
-        <semantic:variable typeRef="tNestedList" name="nestedList"/>
-    </semantic:inputData>
-    <semantic:inputData name="position" id="_4688d5d9-3a03-4377-89e3-9ccd50e1624e">
-        <semantic:variable typeRef="number" name="position"/>
-    </semantic:inputData>
-    <semantic:decision name="literalNestedList" id="_7a7f2263-5d9b-4a18-aee8-43783f417b07">
-        <semantic:variable typeRef="tNestedList" name="literalNestedList"/>
-        <semantic:literalExpression>
-            <semantic:text>[["a","b"],["b","c"]]</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="remove1" id="_c169428e-2a57-42d2-a26d-cf22039da762">
-        <semantic:variable typeRef="tStringList" name="remove1"/>
-        <semantic:informationRequirement id="b5b98115-918b-4dfa-a278-83d24e42ca32">
-            <semantic:requiredInput href="#_8713a7d7-bae7-484e-b1d5-788b3979d659"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="_3cea363c-a217-43de-b98f-0bf07f60f722">
-            <semantic:requiredInput href="#_4688d5d9-3a03-4377-89e3-9ccd50e1624e"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>remove(simpleList,position)</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="insert2" id="_12fdd98a-00da-47af-80e6-f70906e359c0">
-        <semantic:variable typeRef="tNestedList" name="insert2"/>
-        <semantic:informationRequirement id="_4be44ea7-31ff-429e-b47c-6966d06df936">
-            <semantic:requiredDecision href="#_7a7f2263-5d9b-4a18-aee8-43783f417b07"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="_029c713a-9b1f-4275-95ab-71fba607b87a">
-            <semantic:requiredInput href="#_4688d5d9-3a03-4377-89e3-9ccd50e1624e"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="a9dc37e4-8caa-4ff4-b489-5a3ffa692ee9">
-            <semantic:requiredInput href="#_8713a7d7-bae7-484e-b1d5-788b3979d659"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>insert before(literalNestedList,position,simpleList)</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="remove2" id="_93786c60-d986-4c40-b836-4b2f0bc218ce">
-        <semantic:variable typeRef="tNestedList" name="remove2"/>
-        <semantic:informationRequirement id="_0e1fd4be-50e3-45a2-99a7-d02e3d6b7caf">
-            <semantic:requiredInput href="#_4688d5d9-3a03-4377-89e3-9ccd50e1624e"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="_84d0edf0-b060-4528-bf88-8b0ac13c3dbd">
-            <semantic:requiredDecision href="#_7a7f2263-5d9b-4a18-aee8-43783f417b07"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>remove(literalNestedList,position)</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="insert1" id="_d1465880-49ca-4182-ae74-7670fc834f2c">
-        <semantic:variable typeRef="tStringList" name="insert1"/>
-        <semantic:informationRequirement id="_14590401-4bf0-4359-863a-130566ca7129">
-            <semantic:requiredInput href="#_8713a7d7-bae7-484e-b1d5-788b3979d659"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="c2735d32-85dd-48d6-8a5c-71fb0b8f59f7">
-            <semantic:requiredInput href="#_4688d5d9-3a03-4377-89e3-9ccd50e1624e"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>insert before(simpleList,position,"x")</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="insert3" id="_d6beae1e-c23f-4fdb-8c63-6c9835337eff">
-        <semantic:variable typeRef="tNestedList" name="insert3"/>
-        <semantic:informationRequirement id="a371ff70-b197-4ba7-b98b-3f7feddd5a7b">
-            <semantic:requiredInput href="#_722095a4-3116-4d71-b225-58795b3ec654"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="ab22581d-1690-45ca-a0cc-7f8df25ca621">
-            <semantic:requiredInput href="#_4688d5d9-3a03-4377-89e3-9ccd50e1624e"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="_50e5e279-e675-4d68-913f-e07ef7faa5aa">
-            <semantic:requiredInput href="#_8713a7d7-bae7-484e-b1d5-788b3979d659"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>insert before(nestedList,position,simpleList)</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
+<definitions exporter="DMN Modeler; Method and Style trisofix.xslt" exporterVersion="5.1.1; 1.0" namespace="http://www.trisotech.com/definitions/_6029a6d3-d2f1-484b-a99d-4bedb5858a3e" name="insert-remove" triso:logoChoice="Default" id="_6029a6d3-d2f1-484b-a99d-4bedb5858a3e" xmlns="http://www.trisotech.com/definitions/_6029a6d3-d2f1-484b-a99d-4bedb5858a3e" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <itemDefinition isCollection="true" name="tStringList" label="tStringList">
+        <typeRef>string</typeRef>
+    </itemDefinition>
+    <itemDefinition isCollection="true" name="tNestedList" label="tNestedList">
+        <typeRef>tStringList</typeRef>
+    </itemDefinition>
+    <inputData name="simpleList" id="_8713a7d7-bae7-484e-b1d5-788b3979d659">
+        <variable typeRef="tStringList" name="simpleList"/>
+    </inputData>
+    <inputData name="nestedList" id="_722095a4-3116-4d71-b225-58795b3ec654">
+        <variable typeRef="tNestedList" name="nestedList"/>
+    </inputData>
+    <inputData name="position" id="_4688d5d9-3a03-4377-89e3-9ccd50e1624e">
+        <variable typeRef="number" name="position"/>
+    </inputData>
+    <decision name="literalNestedList" id="_7a7f2263-5d9b-4a18-aee8-43783f417b07">
+        <variable typeRef="tNestedList" name="literalNestedList"/>
+        <literalExpression>
+            <text>[["a","b"],["b","c"]]</text>
+        </literalExpression>
+    </decision>
+    <decision name="remove1" id="_c169428e-2a57-42d2-a26d-cf22039da762">
+        <variable typeRef="tStringList" name="remove1"/>
+        <informationRequirement id="b5b98115-918b-4dfa-a278-83d24e42ca32">
+            <requiredInput href="#_8713a7d7-bae7-484e-b1d5-788b3979d659"/>
+        </informationRequirement>
+        <informationRequirement id="_3cea363c-a217-43de-b98f-0bf07f60f722">
+            <requiredInput href="#_4688d5d9-3a03-4377-89e3-9ccd50e1624e"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>remove(simpleList,position)</text>
+        </literalExpression>
+    </decision>
+    <decision name="insert2" id="_12fdd98a-00da-47af-80e6-f70906e359c0">
+        <variable typeRef="tNestedList" name="insert2"/>
+        <informationRequirement id="_4be44ea7-31ff-429e-b47c-6966d06df936">
+            <requiredDecision href="#_7a7f2263-5d9b-4a18-aee8-43783f417b07"/>
+        </informationRequirement>
+        <informationRequirement id="_029c713a-9b1f-4275-95ab-71fba607b87a">
+            <requiredInput href="#_4688d5d9-3a03-4377-89e3-9ccd50e1624e"/>
+        </informationRequirement>
+        <informationRequirement id="a9dc37e4-8caa-4ff4-b489-5a3ffa692ee9">
+            <requiredInput href="#_8713a7d7-bae7-484e-b1d5-788b3979d659"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>insert before(literalNestedList,position,simpleList)</text>
+        </literalExpression>
+    </decision>
+    <decision name="remove2" id="_93786c60-d986-4c40-b836-4b2f0bc218ce">
+        <variable typeRef="tNestedList" name="remove2"/>
+        <informationRequirement id="_0e1fd4be-50e3-45a2-99a7-d02e3d6b7caf">
+            <requiredInput href="#_4688d5d9-3a03-4377-89e3-9ccd50e1624e"/>
+        </informationRequirement>
+        <informationRequirement id="_84d0edf0-b060-4528-bf88-8b0ac13c3dbd">
+            <requiredDecision href="#_7a7f2263-5d9b-4a18-aee8-43783f417b07"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>remove(literalNestedList,position)</text>
+        </literalExpression>
+    </decision>
+    <decision name="insert1" id="_d1465880-49ca-4182-ae74-7670fc834f2c">
+        <variable typeRef="tStringList" name="insert1"/>
+        <informationRequirement id="_14590401-4bf0-4359-863a-130566ca7129">
+            <requiredInput href="#_8713a7d7-bae7-484e-b1d5-788b3979d659"/>
+        </informationRequirement>
+        <informationRequirement id="c2735d32-85dd-48d6-8a5c-71fb0b8f59f7">
+            <requiredInput href="#_4688d5d9-3a03-4377-89e3-9ccd50e1624e"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>insert before(simpleList,position,"x")</text>
+        </literalExpression>
+    </decision>
+    <decision name="insert3" id="_d6beae1e-c23f-4fdb-8c63-6c9835337eff">
+        <variable typeRef="tNestedList" name="insert3"/>
+        <informationRequirement id="a371ff70-b197-4ba7-b98b-3f7feddd5a7b">
+            <requiredInput href="#_722095a4-3116-4d71-b225-58795b3ec654"/>
+        </informationRequirement>
+        <informationRequirement id="ab22581d-1690-45ca-a0cc-7f8df25ca621">
+            <requiredInput href="#_4688d5d9-3a03-4377-89e3-9ccd50e1624e"/>
+        </informationRequirement>
+        <informationRequirement id="_50e5e279-e675-4d68-913f-e07ef7faa5aa">
+            <requiredInput href="#_8713a7d7-bae7-484e-b1d5-788b3979d659"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>insert before(nestedList,position,simpleList)</text>
+        </literalExpression>
+    </decision>
     <dmndi:DMNDI>
         <dmndi:DMNDiagram id="_6029a6d3-d2f1-484b-a99d-4bedb5858a3e_D1">
             <dmndi:Size height="650.0" width="1310.0"/>
@@ -167,5 +167,5 @@
             </dmndi:DMNEdge>
         </dmndi:DMNDiagram>
     </dmndi:DMNDI>
-</semantic:definitions>
+</definitions>
 

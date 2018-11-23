@@ -1,350 +1,350 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<semantic:definitions exporter="DMN Modeler; Method and Style trisofix.xslt" exporterVersion="5.1.1; 1.1" namespace="http://www.trisotech.com/definitions/_56c7d4a5-e6db-4bba-ac5f-dc082a16f719" name="loanComparison" triso:logoChoice="Default" xsi:schemaLocation="http://www.omg.org/spec/DMN/20151101/dmn.xsd ../../DMN1.1%20final/dmn.xsd" id="_56c7d4a5-e6db-4bba-ac5f-dc082a16f719" xmlns="http://www.trisotech.com/definitions/_56c7d4a5-e6db-4bba-ac5f-dc082a16f719" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <semantic:itemDefinition name="tLoanProduct" label="tLoanProduct">
-        <semantic:itemComponent name="lenderName" id="_e4e050fd-9198-4b62-8f99-15cb2a0a2373">
-            <semantic:typeRef>string</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent name="rate" id="_dc34919e-c7d1-4aab-b6d1-4be1174f6fd2">
-            <semantic:typeRef>number</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent name="points" id="_9ca2f88a-3845-4b8d-864f-b86718eaa54d">
-            <semantic:typeRef>number</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent name="fee" id="_5b870440-9692-4e81-959f-f2347c1768c9">
-            <semantic:typeRef>number</semantic:typeRef>
-        </semantic:itemComponent>
-    </semantic:itemDefinition>
-    <semantic:itemDefinition isCollection="true" name="tLoanTable" label="tLoanTable">
-        <semantic:typeRef>tLoanProduct</semantic:typeRef>
-    </semantic:itemDefinition>
-    <semantic:itemDefinition name="tMetric" label="tMetric">
-        <semantic:itemComponent name="lenderName" id="_59994d58-3220-4cc6-8d91-783a008ac472">
-            <semantic:typeRef>string</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent name="rate" id="_63d8c69d-2431-43f5-bfa3-a014a6d2363e">
-            <semantic:typeRef>number</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent name="points" id="_be9eaeb3-8d52-4d99-9d0a-325c15fa6b74">
-            <semantic:typeRef>number</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent name="fee" id="_2a9fe07c-d72b-4f8b-9995-e1b194dd5aa9">
-            <semantic:typeRef>number</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent name="loanAmt" id="_333f9092-d8a7-4e75-973d-82f30569e432">
-            <semantic:typeRef>number</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent name="downPmtAmt" id="_790093df-4886-405a-8ad6-34de25812bdc">
-            <semantic:typeRef>number</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent name="paymentAmt" id="_8f37cdc9-ff7a-4b8c-8849-c0b6a6cbb960">
-            <semantic:typeRef>number</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent name="equity36moPct" id="_3f4568e7-be52-4ce2-8704-be14aa6cd1d5">
-            <semantic:typeRef>number</semantic:typeRef>
-        </semantic:itemComponent>
-    </semantic:itemDefinition>
-    <semantic:itemDefinition isCollection="true" name="tMetrics" label="tMetrics">
-        <semantic:typeRef>tMetric</semantic:typeRef>
-    </semantic:itemDefinition>
-    <semantic:itemDefinition name="tRankedProducts" label="tRankedProducts">
-        <semantic:itemComponent name="metricsTable" id="_0ee333d1-03fc-4a77-8798-d0b351a19a36">
-            <semantic:typeRef>tMetrics</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent name="rankByRate" id="_f0790a52-d95d-466a-bc51-5766c046c717">
-            <semantic:typeRef>tMetrics</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent name="rankByDownPmt" id="_d54127c6-8418-45df-89da-2f84bedae37c">
-            <semantic:typeRef>tMetrics</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent name="rankByMonthlyPmt" id="_7f98fed9-552a-4b57-99de-495cb96e8484">
-            <semantic:typeRef>tMetrics</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent name="rankByEquityPct" id="_897183a6-2ca8-4437-b21d-8ba90555a9e0">
-            <semantic:typeRef>tMetrics</semantic:typeRef>
-        </semantic:itemComponent>
-    </semantic:itemDefinition>
-    <semantic:decision name="Bankrates" id="_c5dd7a17-b588-4daf-8c9b-677e65ce87be">
-        <semantic:variable typeRef="tLoanTable" name="Bankrates"/>
-        <semantic:relation>
-            <semantic:column name="lenderName" id="_23af7b70-cc60-4d84-8e5f-60d5a4ebfe86"/>
-            <semantic:column name="rate" id="_11fb4b39-53a6-4670-90c7-7f1b21bf3936"/>
-            <semantic:column name="points" id="_505d19fa-b5b3-4adc-8aca-5ecc1b58d4f5"/>
-            <semantic:column name="fee" id="_e9ed23a8-88c6-4cb0-a1f3-2a895999ef06"/>
-            <semantic:row id="_bc21b674-23cc-440d-b505-32d5f799e281">
-                <semantic:literalExpression>
-                    <semantic:text>"Oceans Capital"</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>.03500</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>0</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>0</semantic:text>
-                </semantic:literalExpression>
-            </semantic:row>
-            <semantic:row id="_6f3eb485-dddc-40f0-a153-8c989dc4b68d">
-                <semantic:literalExpression>
-                    <semantic:text>"eClick Lending"</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>.03200</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>1.1</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>2700</semantic:text>
-                </semantic:literalExpression>
-            </semantic:row>
-            <semantic:row id="_36362bb9-5cd1-4b55-8ce2-a8cf02f6bed0">
-                <semantic:literalExpression>
-                    <semantic:text>"eClickLending"</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>.03375</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>0.1</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>1200</semantic:text>
-                </semantic:literalExpression>
-            </semantic:row>
-            <semantic:row id="_922a8c6b-2bf0-4453-b1d2-1242c5527dce">
-                <semantic:literalExpression>
-                    <semantic:text>"AimLoan"</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>.03000</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>1.1</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>3966</semantic:text>
-                </semantic:literalExpression>
-            </semantic:row>
-            <semantic:row id="_72d72621-d6aa-4c78-a6ee-b0086b27ea3a">
-                <semantic:literalExpression>
-                    <semantic:text>"Home Loans Today"</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>.03125</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>1.1</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>285</semantic:text>
-                </semantic:literalExpression>
-            </semantic:row>
-            <semantic:row id="_4fd60510-7767-4cd9-9f5e-9783b9e6f688">
-                <semantic:literalExpression>
-                    <semantic:text>"Sebonic"</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>.03125</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>0.1</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>4028</semantic:text>
-                </semantic:literalExpression>
-            </semantic:row>
-            <semantic:row id="_4a2aca46-7331-445b-b378-beb0a4b7064f">
-                <semantic:literalExpression>
-                    <semantic:text>"AimLoan"</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>.03125</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>0.1</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>4317</semantic:text>
-                </semantic:literalExpression>
-            </semantic:row>
-            <semantic:row id="_3b1b71e2-7084-4869-bb08-52d5ad2bcf1e">
-                <semantic:literalExpression>
-                    <semantic:text>"eRates Mortgage"</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>.03125</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>1.1</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>2518</semantic:text>
-                </semantic:literalExpression>
-            </semantic:row>
-            <semantic:row id="_d0e4ef04-9127-4931-b802-a0d4128a78c9">
-                <semantic:literalExpression>
-                    <semantic:text>"Home Loans Today"</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>.03250</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>0.1</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>822</semantic:text>
-                </semantic:literalExpression>
-            </semantic:row>
-            <semantic:row id="_a254dd15-1c62-4f4f-9ce2-83f6bfbcb487">
-                <semantic:literalExpression>
-                    <semantic:text>"AimLoan"</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>.03250</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>0</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>1995</semantic:text>
-                </semantic:literalExpression>
-            </semantic:row>
-        </semantic:relation>
-    </semantic:decision>
-    <semantic:inputData name="RequestedAmt" id="_67c50a4c-3002-4d0a-9acf-4c76cb0364fa">
-        <semantic:variable typeRef="number" name="RequestedAmt"/>
-    </semantic:inputData>
-    <semantic:decision name="RankedProducts" id="_715940be-0f5d-4701-8155-fcba85874aa1">
-        <semantic:variable typeRef="tRankedProducts" name="RankedProducts"/>
-        <semantic:informationRequirement id="_43e49786-488c-468a-8fdf-c89b86a3df7b">
-            <semantic:requiredInput href="#_67c50a4c-3002-4d0a-9acf-4c76cb0364fa"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="b8cf7372-c655-4529-9e27-c9c67cfd61c9">
-            <semantic:requiredDecision href="#_c5dd7a17-b588-4daf-8c9b-677e65ce87be"/>
-        </semantic:informationRequirement>
-        <semantic:knowledgeRequirement id="_111fdf59-f689-4263-8684-f4f1443bce48">
-            <semantic:requiredKnowledge href="#_83059f2e-2862-45a9-97a7-71ffaa860586"/>
-        </semantic:knowledgeRequirement>
-        <semantic:context>
-            <semantic:contextEntry>
-                <semantic:variable typeRef="tMetrics" name="metricsTable"/>
-                <semantic:literalExpression>
-                    <semantic:text>for i in Bankrates return FinancialMetrics(i,RequestedAmt)</semantic:text>
-                </semantic:literalExpression>
-            </semantic:contextEntry>
-            <semantic:contextEntry>
-                <semantic:variable typeRef="tMetrics" name="rankByRate"/>
-                <semantic:literalExpression>
-                    <semantic:text>sort(metricsTable, function(x,y) x.rate&lt;y.rate)</semantic:text>
-                </semantic:literalExpression>
-            </semantic:contextEntry>
-            <semantic:contextEntry>
-                <semantic:variable typeRef="tMetrics" name="rankByDownPmt"/>
-                <semantic:literalExpression>
-                    <semantic:text>sort(metricsTable, function(x,y) x.downPmtAmt&lt;y.downPmtAmt)</semantic:text>
-                </semantic:literalExpression>
-            </semantic:contextEntry>
-            <semantic:contextEntry>
-                <semantic:variable typeRef="tMetrics" name="rankByMonthlyPmt"/>
-                <semantic:literalExpression>
-                    <semantic:text>sort(metricsTable, function(x,y) x.paymentAmt&lt;y.paymentAmt)</semantic:text>
-                </semantic:literalExpression>
-            </semantic:contextEntry>
-            <semantic:contextEntry>
-                <semantic:variable typeRef="tMetrics" name="rankByEquityPct"/>
-                <semantic:literalExpression>
-                    <semantic:text>sort(metricsTable, function(x,y) x.equity36moPct&gt;y.equity36moPct)</semantic:text>
-                </semantic:literalExpression>
-            </semantic:contextEntry>
-        </semantic:context>
-    </semantic:decision>
-    <semantic:businessKnowledgeModel name="FinancialMetrics" id="_83059f2e-2862-45a9-97a7-71ffaa860586">
-        <semantic:variable name="FinancialMetrics"/>
-        <semantic:encapsulatedLogic>
-            <semantic:formalParameter typeRef="tLoanProduct" name="product"/>
-            <semantic:formalParameter typeRef="number" name="requestedAmt"/>
-            <semantic:context typeRef="tMetric">
-                <semantic:contextEntry>
-                    <semantic:variable typeRef="string" name="lenderName"/>
-                    <semantic:literalExpression>
-                        <semantic:text>product.lenderName</semantic:text>
-                    </semantic:literalExpression>
-                </semantic:contextEntry>
-                <semantic:contextEntry>
-                    <semantic:variable typeRef="number" name="rate"/>
-                    <semantic:literalExpression>
-                        <semantic:text>product.rate</semantic:text>
-                    </semantic:literalExpression>
-                </semantic:contextEntry>
-                <semantic:contextEntry>
-                    <semantic:variable typeRef="number" name="points"/>
-                    <semantic:literalExpression>
-                        <semantic:text>product.points</semantic:text>
-                    </semantic:literalExpression>
-                </semantic:contextEntry>
-                <semantic:contextEntry>
-                    <semantic:variable typeRef="number" name="fee"/>
-                    <semantic:literalExpression>
-                        <semantic:text>product.fee</semantic:text>
-                    </semantic:literalExpression>
-                </semantic:contextEntry>
-                <semantic:contextEntry>
-                    <semantic:variable typeRef="number" name="loanAmt"/>
-                    <semantic:literalExpression>
-                        <semantic:text>requestedAmt*(1+points/100)+fee</semantic:text>
-                    </semantic:literalExpression>
-                </semantic:contextEntry>
-                <semantic:contextEntry>
-                    <semantic:variable typeRef="number" name="downPmtAmt"/>
-                    <semantic:literalExpression>
-                        <semantic:text>0.2*loanAmt</semantic:text>
-                    </semantic:literalExpression>
-                </semantic:contextEntry>
-                <semantic:contextEntry>
-                    <semantic:variable typeRef="number" name="paymentAmt"/>
-                    <semantic:literalExpression>
-                        <semantic:text>monthlyPayment(loanAmt,rate,360)</semantic:text>
-                    </semantic:literalExpression>
-                </semantic:contextEntry>
-                <semantic:contextEntry>
-                    <semantic:variable typeRef="number" name="equity36moPct"/>
-                    <semantic:literalExpression>
-                        <semantic:text>1 - equity36Mo(loanAmt,rate,36,paymentAmt)/requestedAmt*0.8</semantic:text>
-                    </semantic:literalExpression>
-                </semantic:contextEntry>
-            </semantic:context>
-        </semantic:encapsulatedLogic>
-        <semantic:knowledgeRequirement id="_8467995b-a9f6-4bad-b3ba-f242d29754d3">
-            <semantic:requiredKnowledge href="#_8702e1b6-213b-4f75-bf56-99ac3835cde7"/>
-        </semantic:knowledgeRequirement>
-        <semantic:knowledgeRequirement id="_2db0c116-2a9e-4360-9f2c-2bdfe2ef69c3">
-            <semantic:requiredKnowledge href="#_daec318a-135b-4d54-9e7f-85af3aa662f7"/>
-        </semantic:knowledgeRequirement>
-    </semantic:businessKnowledgeModel>
-    <semantic:businessKnowledgeModel name="monthlyPayment" id="_8702e1b6-213b-4f75-bf56-99ac3835cde7">
-        <semantic:variable name="monthlyPayment"/>
-        <semantic:encapsulatedLogic>
-            <semantic:formalParameter typeRef="number" name="p"/>
-            <semantic:formalParameter typeRef="number" name="r"/>
-            <semantic:formalParameter typeRef="number" name="n"/>
-            <semantic:literalExpression typeRef="number">
-                <semantic:text>p*r/12/(1-(1+r/12)**-n)</semantic:text>
-            </semantic:literalExpression>
-        </semantic:encapsulatedLogic>
-    </semantic:businessKnowledgeModel>
-    <semantic:businessKnowledgeModel name="equity36Mo" id="_daec318a-135b-4d54-9e7f-85af3aa662f7">
-        <semantic:variable name="equity36Mo"/>
-        <semantic:encapsulatedLogic>
-            <semantic:formalParameter typeRef="number" name="p"/>
-            <semantic:formalParameter typeRef="number" name="r"/>
-            <semantic:formalParameter typeRef="number" name="n"/>
-            <semantic:formalParameter typeRef="number" name="pmt"/>
-            <semantic:literalExpression typeRef="number">
-                <semantic:text>p*(1+r/12)**n - pmt*(-1+(1+r/12)**n)/r</semantic:text>
-            </semantic:literalExpression>
-        </semantic:encapsulatedLogic>
-    </semantic:businessKnowledgeModel>
+<definitions exporter="DMN Modeler; Method and Style trisofix.xslt" exporterVersion="5.1.1; 1.1" namespace="http://www.trisotech.com/definitions/_56c7d4a5-e6db-4bba-ac5f-dc082a16f719" name="loanComparison" triso:logoChoice="Default" xsi:schemaLocation="http://www.omg.org/spec/DMN/20151101/dmn.xsd ../../DMN1.1%20final/dmn.xsd" id="_56c7d4a5-e6db-4bba-ac5f-dc082a16f719" xmlns="http://www.trisotech.com/definitions/_56c7d4a5-e6db-4bba-ac5f-dc082a16f719" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <itemDefinition name="tLoanProduct" label="tLoanProduct">
+        <itemComponent name="lenderName" id="_e4e050fd-9198-4b62-8f99-15cb2a0a2373">
+            <typeRef>string</typeRef>
+        </itemComponent>
+        <itemComponent name="rate" id="_dc34919e-c7d1-4aab-b6d1-4be1174f6fd2">
+            <typeRef>number</typeRef>
+        </itemComponent>
+        <itemComponent name="points" id="_9ca2f88a-3845-4b8d-864f-b86718eaa54d">
+            <typeRef>number</typeRef>
+        </itemComponent>
+        <itemComponent name="fee" id="_5b870440-9692-4e81-959f-f2347c1768c9">
+            <typeRef>number</typeRef>
+        </itemComponent>
+    </itemDefinition>
+    <itemDefinition isCollection="true" name="tLoanTable" label="tLoanTable">
+        <typeRef>tLoanProduct</typeRef>
+    </itemDefinition>
+    <itemDefinition name="tMetric" label="tMetric">
+        <itemComponent name="lenderName" id="_59994d58-3220-4cc6-8d91-783a008ac472">
+            <typeRef>string</typeRef>
+        </itemComponent>
+        <itemComponent name="rate" id="_63d8c69d-2431-43f5-bfa3-a014a6d2363e">
+            <typeRef>number</typeRef>
+        </itemComponent>
+        <itemComponent name="points" id="_be9eaeb3-8d52-4d99-9d0a-325c15fa6b74">
+            <typeRef>number</typeRef>
+        </itemComponent>
+        <itemComponent name="fee" id="_2a9fe07c-d72b-4f8b-9995-e1b194dd5aa9">
+            <typeRef>number</typeRef>
+        </itemComponent>
+        <itemComponent name="loanAmt" id="_333f9092-d8a7-4e75-973d-82f30569e432">
+            <typeRef>number</typeRef>
+        </itemComponent>
+        <itemComponent name="downPmtAmt" id="_790093df-4886-405a-8ad6-34de25812bdc">
+            <typeRef>number</typeRef>
+        </itemComponent>
+        <itemComponent name="paymentAmt" id="_8f37cdc9-ff7a-4b8c-8849-c0b6a6cbb960">
+            <typeRef>number</typeRef>
+        </itemComponent>
+        <itemComponent name="equity36moPct" id="_3f4568e7-be52-4ce2-8704-be14aa6cd1d5">
+            <typeRef>number</typeRef>
+        </itemComponent>
+    </itemDefinition>
+    <itemDefinition isCollection="true" name="tMetrics" label="tMetrics">
+        <typeRef>tMetric</typeRef>
+    </itemDefinition>
+    <itemDefinition name="tRankedProducts" label="tRankedProducts">
+        <itemComponent name="metricsTable" id="_0ee333d1-03fc-4a77-8798-d0b351a19a36">
+            <typeRef>tMetrics</typeRef>
+        </itemComponent>
+        <itemComponent name="rankByRate" id="_f0790a52-d95d-466a-bc51-5766c046c717">
+            <typeRef>tMetrics</typeRef>
+        </itemComponent>
+        <itemComponent name="rankByDownPmt" id="_d54127c6-8418-45df-89da-2f84bedae37c">
+            <typeRef>tMetrics</typeRef>
+        </itemComponent>
+        <itemComponent name="rankByMonthlyPmt" id="_7f98fed9-552a-4b57-99de-495cb96e8484">
+            <typeRef>tMetrics</typeRef>
+        </itemComponent>
+        <itemComponent name="rankByEquityPct" id="_897183a6-2ca8-4437-b21d-8ba90555a9e0">
+            <typeRef>tMetrics</typeRef>
+        </itemComponent>
+    </itemDefinition>
+    <decision name="Bankrates" id="_c5dd7a17-b588-4daf-8c9b-677e65ce87be">
+        <variable typeRef="tLoanTable" name="Bankrates"/>
+        <relation>
+            <column name="lenderName" id="_23af7b70-cc60-4d84-8e5f-60d5a4ebfe86"/>
+            <column name="rate" id="_11fb4b39-53a6-4670-90c7-7f1b21bf3936"/>
+            <column name="points" id="_505d19fa-b5b3-4adc-8aca-5ecc1b58d4f5"/>
+            <column name="fee" id="_e9ed23a8-88c6-4cb0-a1f3-2a895999ef06"/>
+            <row id="_bc21b674-23cc-440d-b505-32d5f799e281">
+                <literalExpression>
+                    <text>"Oceans Capital"</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>.03500</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>0</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>0</text>
+                </literalExpression>
+            </row>
+            <row id="_6f3eb485-dddc-40f0-a153-8c989dc4b68d">
+                <literalExpression>
+                    <text>"eClick Lending"</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>.03200</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>1.1</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>2700</text>
+                </literalExpression>
+            </row>
+            <row id="_36362bb9-5cd1-4b55-8ce2-a8cf02f6bed0">
+                <literalExpression>
+                    <text>"eClickLending"</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>.03375</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>0.1</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>1200</text>
+                </literalExpression>
+            </row>
+            <row id="_922a8c6b-2bf0-4453-b1d2-1242c5527dce">
+                <literalExpression>
+                    <text>"AimLoan"</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>.03000</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>1.1</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>3966</text>
+                </literalExpression>
+            </row>
+            <row id="_72d72621-d6aa-4c78-a6ee-b0086b27ea3a">
+                <literalExpression>
+                    <text>"Home Loans Today"</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>.03125</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>1.1</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>285</text>
+                </literalExpression>
+            </row>
+            <row id="_4fd60510-7767-4cd9-9f5e-9783b9e6f688">
+                <literalExpression>
+                    <text>"Sebonic"</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>.03125</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>0.1</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>4028</text>
+                </literalExpression>
+            </row>
+            <row id="_4a2aca46-7331-445b-b378-beb0a4b7064f">
+                <literalExpression>
+                    <text>"AimLoan"</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>.03125</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>0.1</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>4317</text>
+                </literalExpression>
+            </row>
+            <row id="_3b1b71e2-7084-4869-bb08-52d5ad2bcf1e">
+                <literalExpression>
+                    <text>"eRates Mortgage"</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>.03125</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>1.1</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>2518</text>
+                </literalExpression>
+            </row>
+            <row id="_d0e4ef04-9127-4931-b802-a0d4128a78c9">
+                <literalExpression>
+                    <text>"Home Loans Today"</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>.03250</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>0.1</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>822</text>
+                </literalExpression>
+            </row>
+            <row id="_a254dd15-1c62-4f4f-9ce2-83f6bfbcb487">
+                <literalExpression>
+                    <text>"AimLoan"</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>.03250</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>0</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>1995</text>
+                </literalExpression>
+            </row>
+        </relation>
+    </decision>
+    <inputData name="RequestedAmt" id="_67c50a4c-3002-4d0a-9acf-4c76cb0364fa">
+        <variable typeRef="number" name="RequestedAmt"/>
+    </inputData>
+    <decision name="RankedProducts" id="_715940be-0f5d-4701-8155-fcba85874aa1">
+        <variable typeRef="tRankedProducts" name="RankedProducts"/>
+        <informationRequirement id="_43e49786-488c-468a-8fdf-c89b86a3df7b">
+            <requiredInput href="#_67c50a4c-3002-4d0a-9acf-4c76cb0364fa"/>
+        </informationRequirement>
+        <informationRequirement id="b8cf7372-c655-4529-9e27-c9c67cfd61c9">
+            <requiredDecision href="#_c5dd7a17-b588-4daf-8c9b-677e65ce87be"/>
+        </informationRequirement>
+        <knowledgeRequirement id="_111fdf59-f689-4263-8684-f4f1443bce48">
+            <requiredKnowledge href="#_83059f2e-2862-45a9-97a7-71ffaa860586"/>
+        </knowledgeRequirement>
+        <context>
+            <contextEntry>
+                <variable typeRef="tMetrics" name="metricsTable"/>
+                <literalExpression>
+                    <text>for i in Bankrates return FinancialMetrics(i,RequestedAmt)</text>
+                </literalExpression>
+            </contextEntry>
+            <contextEntry>
+                <variable typeRef="tMetrics" name="rankByRate"/>
+                <literalExpression>
+                    <text>sort(metricsTable, function(x,y) x.rate&lt;y.rate)</text>
+                </literalExpression>
+            </contextEntry>
+            <contextEntry>
+                <variable typeRef="tMetrics" name="rankByDownPmt"/>
+                <literalExpression>
+                    <text>sort(metricsTable, function(x,y) x.downPmtAmt&lt;y.downPmtAmt)</text>
+                </literalExpression>
+            </contextEntry>
+            <contextEntry>
+                <variable typeRef="tMetrics" name="rankByMonthlyPmt"/>
+                <literalExpression>
+                    <text>sort(metricsTable, function(x,y) x.paymentAmt&lt;y.paymentAmt)</text>
+                </literalExpression>
+            </contextEntry>
+            <contextEntry>
+                <variable typeRef="tMetrics" name="rankByEquityPct"/>
+                <literalExpression>
+                    <text>sort(metricsTable, function(x,y) x.equity36moPct&gt;y.equity36moPct)</text>
+                </literalExpression>
+            </contextEntry>
+        </context>
+    </decision>
+    <businessKnowledgeModel name="FinancialMetrics" id="_83059f2e-2862-45a9-97a7-71ffaa860586">
+        <variable name="FinancialMetrics"/>
+        <encapsulatedLogic>
+            <formalParameter typeRef="tLoanProduct" name="product"/>
+            <formalParameter typeRef="number" name="requestedAmt"/>
+            <context typeRef="tMetric">
+                <contextEntry>
+                    <variable typeRef="string" name="lenderName"/>
+                    <literalExpression>
+                        <text>product.lenderName</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable typeRef="number" name="rate"/>
+                    <literalExpression>
+                        <text>product.rate</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable typeRef="number" name="points"/>
+                    <literalExpression>
+                        <text>product.points</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable typeRef="number" name="fee"/>
+                    <literalExpression>
+                        <text>product.fee</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable typeRef="number" name="loanAmt"/>
+                    <literalExpression>
+                        <text>requestedAmt*(1+points/100)+fee</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable typeRef="number" name="downPmtAmt"/>
+                    <literalExpression>
+                        <text>0.2*loanAmt</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable typeRef="number" name="paymentAmt"/>
+                    <literalExpression>
+                        <text>monthlyPayment(loanAmt,rate,360)</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable typeRef="number" name="equity36moPct"/>
+                    <literalExpression>
+                        <text>1 - equity36Mo(loanAmt,rate,36,paymentAmt)/requestedAmt*0.8</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+        <knowledgeRequirement id="_8467995b-a9f6-4bad-b3ba-f242d29754d3">
+            <requiredKnowledge href="#_8702e1b6-213b-4f75-bf56-99ac3835cde7"/>
+        </knowledgeRequirement>
+        <knowledgeRequirement id="_2db0c116-2a9e-4360-9f2c-2bdfe2ef69c3">
+            <requiredKnowledge href="#_daec318a-135b-4d54-9e7f-85af3aa662f7"/>
+        </knowledgeRequirement>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel name="monthlyPayment" id="_8702e1b6-213b-4f75-bf56-99ac3835cde7">
+        <variable name="monthlyPayment"/>
+        <encapsulatedLogic>
+            <formalParameter typeRef="number" name="p"/>
+            <formalParameter typeRef="number" name="r"/>
+            <formalParameter typeRef="number" name="n"/>
+            <literalExpression typeRef="number">
+                <text>p*r/12/(1-(1+r/12)**-n)</text>
+            </literalExpression>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel name="equity36Mo" id="_daec318a-135b-4d54-9e7f-85af3aa662f7">
+        <variable name="equity36Mo"/>
+        <encapsulatedLogic>
+            <formalParameter typeRef="number" name="p"/>
+            <formalParameter typeRef="number" name="r"/>
+            <formalParameter typeRef="number" name="n"/>
+            <formalParameter typeRef="number" name="pmt"/>
+            <literalExpression typeRef="number">
+                <text>p*(1+r/12)**n - pmt*(-1+(1+r/12)**n)/r</text>
+            </literalExpression>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
     <dmndi:DMNDI>
         <dmndi:DMNDiagram id="_56c7d4a5-e6db-4bba-ac5f-dc082a16f719_D1">
             <dmndi:Size height="723.0" width="881.0"/>
@@ -388,5 +388,5 @@
             </dmndi:DMNEdge>
         </dmndi:DMNDiagram>
     </dmndi:DMNDI>
-</semantic:definitions>
+</definitions>
 

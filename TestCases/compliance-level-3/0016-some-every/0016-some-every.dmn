@@ -1,107 +1,107 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<semantic:definitions exporter="DMN Modeler; Method and Style trisofix.xslt" exporterVersion="5.0.34.1; 1.0" namespace="http://www.trisotech.com/definitions/_d7643a02-a8fc-4a6f-a8a9-5c2881afea70" name="some-every" triso:logoChoice="Default" id="_d7643a02-a8fc-4a6f-a8a9-5c2881afea70" xmlns="http://www.trisotech.com/definitions/_d7643a02-a8fc-4a6f-a8a9-5c2881afea70" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <semantic:itemDefinition name="tItemPrice" id="tItemPrice">
-        <semantic:itemComponent name="itemName" id="_de166af3-e625-4572-bc70-cb3c3aa01ca8">
-            <semantic:typeRef>string</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent name="price" id="_d68f500e-3997-409e-8152-d454c34487d8">
-            <semantic:typeRef>number</semantic:typeRef>
-        </semantic:itemComponent>
-    </semantic:itemDefinition>
-    <semantic:itemDefinition isCollection="true" name="tPriceTable" id="tPriceTable">
-        <semantic:typeRef>tItemPrice</semantic:typeRef>
-    </semantic:itemDefinition>
-    <semantic:inputData name="priceTable2" id="_87bb4ba6-43bb-4fc5-a120-0c15c3901278">
-        <semantic:variable typeRef="tPriceTable" name="priceTable2"/>
-    </semantic:inputData>
-    <semantic:decision name="priceTable1" id="_a471e76a-64b1-44af-9ede-623f6c15b72e">
-        <semantic:variable typeRef="tPriceTable" name="priceTable1"/>
-        <semantic:relation>
-            <semantic:column name="itemName" id="_b27cab6a-61cb-493c-9d68-b945a7a725f1"/>
-            <semantic:column name="price" id="_379f9074-2bd8-496d-8077-c8713d006504"/>
-            <semantic:row id="_bb0e1dff-05cd-49c2-9e39-caef85fa82a5">
-                <semantic:literalExpression>
-                    <semantic:text>"widget"</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>25</semantic:text>
-                </semantic:literalExpression>
-            </semantic:row>
-            <semantic:row id="_4f90e9d4-2244-4d63-bbb9-d47b3e1d62ee">
-                <semantic:literalExpression>
-                    <semantic:text>"sprocket"</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>15</semantic:text>
-                </semantic:literalExpression>
-            </semantic:row>
-            <semantic:row id="_cf9445b7-4f8e-4618-a39a-acca4ae5a48e">
-                <semantic:literalExpression>
-                    <semantic:text>"trinket"</semantic:text>
-                </semantic:literalExpression>
-                <semantic:literalExpression>
-                    <semantic:text>1.5</semantic:text>
-                </semantic:literalExpression>
-            </semantic:row>
-        </semantic:relation>
-    </semantic:decision>
-    <semantic:decision name="everyGtTen1" id="_a747d388-e0c0-41e1-b3ef-2904ba1a5d63">
-        <semantic:variable typeRef="boolean" name="everyGtTen1"/>
-        <semantic:informationRequirement id="_30257a70-33cc-4b56-98c2-e524ce03c962">
-            <semantic:requiredDecision href="#_a471e76a-64b1-44af-9ede-623f6c15b72e"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>every i in priceTable1 satisfies i.price &gt; 10</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="everyGtTen2" id="_e5194b4c-2191-45c3-a78c-723d04197dc6">
-        <semantic:variable typeRef="boolean" name="everyGtTen2"/>
-        <semantic:informationRequirement id="_5ba5ca54-b16e-4e67-9430-e94dd2f344da">
-            <semantic:requiredInput href="#_87bb4ba6-43bb-4fc5-a120-0c15c3901278"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>every i in priceTable2 satisfies i.price &gt; 10</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="someGtTen1" id="_655236ba-669a-4a80-a07c-ec051f57a529">
-        <semantic:variable typeRef="boolean" name="someGtTen1"/>
-        <semantic:informationRequirement id="_8f037f85-7a70-461e-8b6a-67a703730490">
-            <semantic:requiredDecision href="#_a471e76a-64b1-44af-9ede-623f6c15b72e"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>some i in priceTable1 satisfies i.price &gt; 10</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="someGtTen2" id="_41ed4571-ad86-4c9d-9d3b-7b813ae5cd28">
-        <semantic:variable typeRef="boolean" name="someGtTen2"/>
-        <semantic:informationRequirement id="eb1baab6-53b5-487a-8cf6-298a17628384">
-            <semantic:requiredInput href="#_87bb4ba6-43bb-4fc5-a120-0c15c3901278"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>some i in priceTable2 satisfies i.price &gt; 10</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="everyGtTen3" id="_72422ed3-5088-4ed0-9ab6-dbcfe3a6cf48">
-        <semantic:variable typeRef="boolean" name="everyGtTen3"/>
-        <semantic:informationRequirement id="_9e6cc0d3-f8e9-4068-a47d-048a8befeb29">
-            <semantic:requiredDecision href="#_a471e76a-64b1-44af-9ede-623f6c15b72e"/>
-        </semantic:informationRequirement>
-        <semantic:knowledgeRequirement id="_475e9317-9cd8-40ef-bbbe-3ab39bdccdcc">
-            <semantic:requiredKnowledge href="#_d59cc17d-7f21-4706-8d10-47f7ee297b15"/>
-        </semantic:knowledgeRequirement>
-        <semantic:literalExpression>
-            <semantic:text>every i in priceTable1 satisfies gtTen(i.price)=true</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:businessKnowledgeModel name="gtTen" id="_d59cc17d-7f21-4706-8d10-47f7ee297b15">
-        <semantic:variable name="gtTen"/>
-        <semantic:encapsulatedLogic>
-            <semantic:formalParameter typeRef="number" name="theNumber"/>
-            <semantic:literalExpression typeRef="boolean">
-                <semantic:text>theNumber &gt; 10</semantic:text>
-            </semantic:literalExpression>
-        </semantic:encapsulatedLogic>
-    </semantic:businessKnowledgeModel>
+<definitions exporter="DMN Modeler; Method and Style trisofix.xslt" exporterVersion="5.0.34.1; 1.0" namespace="http://www.trisotech.com/definitions/_d7643a02-a8fc-4a6f-a8a9-5c2881afea70" name="some-every" triso:logoChoice="Default" id="_d7643a02-a8fc-4a6f-a8a9-5c2881afea70" xmlns="http://www.trisotech.com/definitions/_d7643a02-a8fc-4a6f-a8a9-5c2881afea70" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <itemDefinition name="tItemPrice" id="tItemPrice">
+        <itemComponent name="itemName" id="_de166af3-e625-4572-bc70-cb3c3aa01ca8">
+            <typeRef>string</typeRef>
+        </itemComponent>
+        <itemComponent name="price" id="_d68f500e-3997-409e-8152-d454c34487d8">
+            <typeRef>number</typeRef>
+        </itemComponent>
+    </itemDefinition>
+    <itemDefinition isCollection="true" name="tPriceTable" id="tPriceTable">
+        <typeRef>tItemPrice</typeRef>
+    </itemDefinition>
+    <inputData name="priceTable2" id="_87bb4ba6-43bb-4fc5-a120-0c15c3901278">
+        <variable typeRef="tPriceTable" name="priceTable2"/>
+    </inputData>
+    <decision name="priceTable1" id="_a471e76a-64b1-44af-9ede-623f6c15b72e">
+        <variable typeRef="tPriceTable" name="priceTable1"/>
+        <relation>
+            <column name="itemName" id="_b27cab6a-61cb-493c-9d68-b945a7a725f1"/>
+            <column name="price" id="_379f9074-2bd8-496d-8077-c8713d006504"/>
+            <row id="_bb0e1dff-05cd-49c2-9e39-caef85fa82a5">
+                <literalExpression>
+                    <text>"widget"</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>25</text>
+                </literalExpression>
+            </row>
+            <row id="_4f90e9d4-2244-4d63-bbb9-d47b3e1d62ee">
+                <literalExpression>
+                    <text>"sprocket"</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>15</text>
+                </literalExpression>
+            </row>
+            <row id="_cf9445b7-4f8e-4618-a39a-acca4ae5a48e">
+                <literalExpression>
+                    <text>"trinket"</text>
+                </literalExpression>
+                <literalExpression>
+                    <text>1.5</text>
+                </literalExpression>
+            </row>
+        </relation>
+    </decision>
+    <decision name="everyGtTen1" id="_a747d388-e0c0-41e1-b3ef-2904ba1a5d63">
+        <variable typeRef="boolean" name="everyGtTen1"/>
+        <informationRequirement id="_30257a70-33cc-4b56-98c2-e524ce03c962">
+            <requiredDecision href="#_a471e76a-64b1-44af-9ede-623f6c15b72e"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>every i in priceTable1 satisfies i.price &gt; 10</text>
+        </literalExpression>
+    </decision>
+    <decision name="everyGtTen2" id="_e5194b4c-2191-45c3-a78c-723d04197dc6">
+        <variable typeRef="boolean" name="everyGtTen2"/>
+        <informationRequirement id="_5ba5ca54-b16e-4e67-9430-e94dd2f344da">
+            <requiredInput href="#_87bb4ba6-43bb-4fc5-a120-0c15c3901278"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>every i in priceTable2 satisfies i.price &gt; 10</text>
+        </literalExpression>
+    </decision>
+    <decision name="someGtTen1" id="_655236ba-669a-4a80-a07c-ec051f57a529">
+        <variable typeRef="boolean" name="someGtTen1"/>
+        <informationRequirement id="_8f037f85-7a70-461e-8b6a-67a703730490">
+            <requiredDecision href="#_a471e76a-64b1-44af-9ede-623f6c15b72e"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>some i in priceTable1 satisfies i.price &gt; 10</text>
+        </literalExpression>
+    </decision>
+    <decision name="someGtTen2" id="_41ed4571-ad86-4c9d-9d3b-7b813ae5cd28">
+        <variable typeRef="boolean" name="someGtTen2"/>
+        <informationRequirement id="eb1baab6-53b5-487a-8cf6-298a17628384">
+            <requiredInput href="#_87bb4ba6-43bb-4fc5-a120-0c15c3901278"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>some i in priceTable2 satisfies i.price &gt; 10</text>
+        </literalExpression>
+    </decision>
+    <decision name="everyGtTen3" id="_72422ed3-5088-4ed0-9ab6-dbcfe3a6cf48">
+        <variable typeRef="boolean" name="everyGtTen3"/>
+        <informationRequirement id="_9e6cc0d3-f8e9-4068-a47d-048a8befeb29">
+            <requiredDecision href="#_a471e76a-64b1-44af-9ede-623f6c15b72e"/>
+        </informationRequirement>
+        <knowledgeRequirement id="_475e9317-9cd8-40ef-bbbe-3ab39bdccdcc">
+            <requiredKnowledge href="#_d59cc17d-7f21-4706-8d10-47f7ee297b15"/>
+        </knowledgeRequirement>
+        <literalExpression>
+            <text>every i in priceTable1 satisfies gtTen(i.price)=true</text>
+        </literalExpression>
+    </decision>
+    <businessKnowledgeModel name="gtTen" id="_d59cc17d-7f21-4706-8d10-47f7ee297b15">
+        <variable name="gtTen"/>
+        <encapsulatedLogic>
+            <formalParameter typeRef="number" name="theNumber"/>
+            <literalExpression typeRef="boolean">
+                <text>theNumber &gt; 10</text>
+            </literalExpression>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
     <dmndi:DMNDI>
         <dmndi:DMNDiagram id="_d7643a02-a8fc-4a6f-a8a9-5c2881afea70_D1">
             <dmndi:Size height="650.0" width="1310.0"/>
@@ -155,5 +155,5 @@
             </dmndi:DMNEdge>
         </dmndi:DMNDiagram>
     </dmndi:DMNDI>
-</semantic:definitions>
+</definitions>
 

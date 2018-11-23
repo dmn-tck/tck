@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<semantic:definitions namespace="https://github.com/dmn-tck/tck" name="feel-logic" id="_feel-logic" xmlns="https://github.com/dmn-tck/tck" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <semantic:inputData name="A" id="i_a">
-        <semantic:variable typeRef="boolean" name="A"/>
-    </semantic:inputData>
-    <semantic:inputData name="B" id="i_b">
-        <semantic:variable typeRef="boolean" name="B"/>
-    </semantic:inputData>
-    <semantic:decision name="DecisionAnd" id="d_1">
-        <semantic:variable typeRef="boolean" name="DecisionAnd"/>
-        <semantic:informationRequirement id="_7606f2b4-fc80-4ee1-a7e0-dd720f70141f">
-            <semantic:requiredInput href="#i_a"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="_9acd9374-1e94-4fb1-9f98-fee2444f9cfe">
-            <semantic:requiredInput href="#i_b"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>A and B</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="DecisionOr" id="d_2">
-        <semantic:variable typeRef="boolean" name="DecisionOr"/>
-        <semantic:informationRequirement id="_666cfa05-0e2d-4065-8377-361ca78e35fa">
-            <semantic:requiredInput href="#i_a"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="_5eac4395-b434-4719-aeff-dbd78d680ea4">
-            <semantic:requiredInput href="#i_b"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>A or B</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
+<definitions namespace="https://github.com/dmn-tck/tck" name="feel-logic" id="_feel-logic" xmlns="https://github.com/dmn-tck/tck" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <inputData name="A" id="i_a">
+        <variable typeRef="boolean" name="A"/>
+    </inputData>
+    <inputData name="B" id="i_b">
+        <variable typeRef="boolean" name="B"/>
+    </inputData>
+    <decision name="DecisionAnd" id="d_1">
+        <variable typeRef="boolean" name="DecisionAnd"/>
+        <informationRequirement id="_7606f2b4-fc80-4ee1-a7e0-dd720f70141f">
+            <requiredInput href="#i_a"/>
+        </informationRequirement>
+        <informationRequirement id="_9acd9374-1e94-4fb1-9f98-fee2444f9cfe">
+            <requiredInput href="#i_b"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>A and B</text>
+        </literalExpression>
+    </decision>
+    <decision name="DecisionOr" id="d_2">
+        <variable typeRef="boolean" name="DecisionOr"/>
+        <informationRequirement id="_666cfa05-0e2d-4065-8377-361ca78e35fa">
+            <requiredInput href="#i_a"/>
+        </informationRequirement>
+        <informationRequirement id="_5eac4395-b434-4719-aeff-dbd78d680ea4">
+            <requiredInput href="#i_b"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>A or B</text>
+        </literalExpression>
+    </decision>
     <dmndi:DMNDI>
         <dmndi:DMNDiagram id="_feel-logic_D1">
             <dmndi:Size height="650.0" width="668.0"/>
@@ -63,5 +63,5 @@
             </dmndi:DMNEdge>
         </dmndi:DMNDiagram>
     </dmndi:DMNDI>
-</semantic:definitions>
+</definitions>
 

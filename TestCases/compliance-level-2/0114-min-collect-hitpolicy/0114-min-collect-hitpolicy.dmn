@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<semantic:definitions exporter="DMN Modeler" exporterVersion="6.1.3" namespace="http://www.trisotech.com/definitions/Definitions_0reic0g" name="DRD" triso:logoChoice="Default" id="Definitions_0reic0g" xmlns="http://www.trisotech.com/definitions/Definitions_0reic0g" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <semantic:extensionElements/>
-    <semantic:decision name="CarInsurance" id="carInsurance">
-        <semantic:variable typeRef="number" name="CarInsurance" id="_a295d2fe-a6db-4154-8295-8bd00def95cb"/>
-        <semantic:informationRequirement id="_49b4d297-8d1c-4477-bd2f-61219727f3ad">
-            <semantic:requiredInput href="#inputData_input_1"/>
-        </semantic:informationRequirement>
-        <semantic:decisionTable aggregation="MIN" hitPolicy="COLLECT" outputLabel="CarInsurance" typeRef="number" id="decisionTable_1">
-            <semantic:input id="input_1">
-                <semantic:inputExpression typeRef="number">
-                    <semantic:text>NumOfYears</semantic:text>
-                </semantic:inputExpression>
-            </semantic:input>
-            <semantic:output id="output_1"/>
-            <semantic:rule id="DecisionRule_0acwtg0">
-                <semantic:inputEntry id="UnaryTests_189k6sw">
-                    <semantic:text>&gt;1</semantic:text>
-                </semantic:inputEntry>
-                <semantic:outputEntry id="LiteralExpression_1qymvo3">
-                    <semantic:text>98.83</semantic:text>
-                </semantic:outputEntry>
-            </semantic:rule>
-            <semantic:rule id="DecisionRule_147sotc">
-                <semantic:inputEntry id="UnaryTests_1wikul2">
-                    <semantic:text>&gt;2</semantic:text>
-                </semantic:inputEntry>
-                <semantic:outputEntry id="LiteralExpression_1evg7ns">
-                    <semantic:text>150.21</semantic:text>
-                </semantic:outputEntry>
-            </semantic:rule>
-            <semantic:rule id="DecisionRule_0gxrx36">
-                <semantic:inputEntry id="UnaryTests_1ca1yom">
-                    <semantic:text>&gt;3</semantic:text>
-                </semantic:inputEntry>
-                <semantic:outputEntry id="LiteralExpression_0n3hzp6">
-                    <semantic:text>205.43</semantic:text>
-                </semantic:outputEntry>
-            </semantic:rule>
-            <semantic:rule id="DecisionRule_0od3nns">
-                <semantic:inputEntry id="UnaryTests_02zs33d">
-                    <semantic:text>&gt;4</semantic:text>
-                </semantic:inputEntry>
-                <semantic:outputEntry id="LiteralExpression_15d1ikl">
-                    <semantic:text>64.32</semantic:text>
-                </semantic:outputEntry>
-            </semantic:rule>
-        </semantic:decisionTable>
-    </semantic:decision>
-    <semantic:inputData name="NumOfYears" id="inputData_input_1">
-        <semantic:variable typeRef="number" name="NumOfYears" id="_d59296ad-d1a6-4a5b-aa1b-3fb42766c914"/>
-    </semantic:inputData>
+<definitions exporter="DMN Modeler" exporterVersion="6.1.3" namespace="http://www.trisotech.com/definitions/Definitions_0reic0g" name="DRD" triso:logoChoice="Default" id="Definitions_0reic0g" xmlns="http://www.trisotech.com/definitions/Definitions_0reic0g" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <extensionElements/>
+    <decision name="CarInsurance" id="carInsurance">
+        <variable typeRef="number" name="CarInsurance" id="_a295d2fe-a6db-4154-8295-8bd00def95cb"/>
+        <informationRequirement id="_49b4d297-8d1c-4477-bd2f-61219727f3ad">
+            <requiredInput href="#inputData_input_1"/>
+        </informationRequirement>
+        <decisionTable aggregation="MIN" hitPolicy="COLLECT" outputLabel="CarInsurance" typeRef="number" id="decisionTable_1">
+            <input id="input_1">
+                <inputExpression typeRef="number">
+                    <text>NumOfYears</text>
+                </inputExpression>
+            </input>
+            <output id="output_1"/>
+            <rule id="DecisionRule_0acwtg0">
+                <inputEntry id="UnaryTests_189k6sw">
+                    <text>&gt;1</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1qymvo3">
+                    <text>98.83</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_147sotc">
+                <inputEntry id="UnaryTests_1wikul2">
+                    <text>&gt;2</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1evg7ns">
+                    <text>150.21</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0gxrx36">
+                <inputEntry id="UnaryTests_1ca1yom">
+                    <text>&gt;3</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0n3hzp6">
+                    <text>205.43</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0od3nns">
+                <inputEntry id="UnaryTests_02zs33d">
+                    <text>&gt;4</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_15d1ikl">
+                    <text>64.32</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+    <inputData name="NumOfYears" id="inputData_input_1">
+        <variable typeRef="number" name="NumOfYears" id="_d59296ad-d1a6-4a5b-aa1b-3fb42766c914"/>
+    </inputData>
     <dmndi:DMNDI>
         <dmndi:DMNDiagram id="Definitions_0reic0g_D1">
             <dmndi:Size height="650.0" width="650.0"/>
@@ -65,5 +65,5 @@
             </dmndi:DMNEdge>
         </dmndi:DMNDiagram>
     </dmndi:DMNDI>
-</semantic:definitions>
+</definitions>
 

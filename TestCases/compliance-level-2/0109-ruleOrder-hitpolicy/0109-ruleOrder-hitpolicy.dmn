@@ -1,124 +1,124 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<semantic:definitions exporter="DMN Modeler" exporterVersion="6.1.3" namespace="http://www.trisotech.com/definitions/_a3ebbd98-af09-42f3-9099-4ae2204a1f54" name="multi-output-table" triso:logoChoice="Default" id="_a3ebbd98-af09-42f3-9099-4ae2204a1f54" xmlns="http://www.trisotech.com/definitions/_a3ebbd98-af09-42f3-9099-4ae2204a1f54" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <semantic:extensionElements/>
-    <semantic:itemDefinition isCollection="true" name="tApproval" label="tApproval">
-        <semantic:itemComponent isCollection="false" name="Status" id="_20dfeb44-1c36-43cf-8819-63ce36819e90">
-            <semantic:typeRef>string</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent isCollection="false" name="Rate" id="_858ef6e6-69ca-4b50-a654-10f4b981f43c">
-            <semantic:typeRef>string</semantic:typeRef>
-        </semantic:itemComponent>
-    </semantic:itemDefinition>
-    <semantic:itemDefinition isCollection="true" name="tApproval_2" label="tApproval_2">
-        <semantic:itemComponent isCollection="false" name="Status" id="_bc8333eb-c4af-4e13-8913-bf1181d5dc53">
-            <semantic:typeRef>string</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent isCollection="false" name="Rate" id="_ebb154a3-a641-4021-8ad9-21884666ad74">
-            <semantic:typeRef>string</semantic:typeRef>
-        </semantic:itemComponent>
-    </semantic:itemDefinition>
-    <semantic:decision name="Approval" id="_3b2953a3-745f-4d2e-b55d-75c8c5ae653c">
-        <semantic:variable typeRef="tApproval_2" name="Approval" id="_726bba98-e108-4ee4-b22b-9b9f4da43a88"/>
-        <semantic:informationRequirement id="_092dbd95-b4bb-4cdb-b282-3eaaba03ba9a">
-            <semantic:requiredInput href="#_5a4bdb64-f0ef-4978-9e03-6f1ae64a1f17"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="_9d474bf3-f7df-45d5-b2a8-54e1380f37f1">
-            <semantic:requiredInput href="#_41effb45-b3c4-46ac-b1da-122b3e428a98"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="af8e8fca-edff-425b-9a74-7a9152a61886">
-            <semantic:requiredInput href="#_8ff18665-84e9-49f2-a8df-8981b1844549"/>
-        </semantic:informationRequirement>
-        <semantic:decisionTable hitPolicy="RULE ORDER" outputLabel="Approval" typeRef="tApproval_2" id="_d81c5a51-b7c3-493c-ae8a-07ff798fb1bd">
-            <semantic:input id="_bf7fc56f-ea82-464e-a541-f3221dc07e78">
-                <semantic:inputExpression typeRef="number">
-                    <semantic:text>Age</semantic:text>
-                </semantic:inputExpression>
-            </semantic:input>
-            <semantic:input id="_bb73bf86-b399-490a-a635-c6f2c04ff75d">
-                <semantic:inputExpression typeRef="string">
-                    <semantic:text>RiskCategory</semantic:text>
-                </semantic:inputExpression>
-                <semantic:inputValues triso:constraintsType="enumeration">
-                    <semantic:text>"High", "Low", "Medium"</semantic:text>
-                </semantic:inputValues>
-            </semantic:input>
-            <semantic:input id="_af5e5c2a-5124-4277-9409-d07421dcb5a4">
-                <semantic:inputExpression typeRef="boolean">
-                    <semantic:text>isAffordable</semantic:text>
-                </semantic:inputExpression>
-            </semantic:input>
-            <semantic:output name="Status" typeRef="string" id="_bffba7a1-f0a2-4679-b6e2-50e27bb27968">
-                <semantic:defaultOutputEntry>
-                    <semantic:text>"Declined"</semantic:text>
-                </semantic:defaultOutputEntry>
-            </semantic:output>
-            <semantic:output name="Rate" typeRef="string" id="_f07f9e98-3a1e-4add-a200-7cee75b550b3">
-                <semantic:defaultOutputEntry>
-                    <semantic:text>"Standard"</semantic:text>
-                </semantic:defaultOutputEntry>
-            </semantic:output>
-            <semantic:rule id="_ca85854c-27a3-4001-b2ac-23a164ca5940">
-                <semantic:inputEntry id="_ca85854c-27a3-4001-b2ac-23a164ca5940-0">
-                    <semantic:text>&gt;=18</semantic:text>
-                </semantic:inputEntry>
-                <semantic:inputEntry id="_ca85854c-27a3-4001-b2ac-23a164ca5940-1">
-                    <semantic:text>"Medium"</semantic:text>
-                </semantic:inputEntry>
-                <semantic:inputEntry id="_ca85854c-27a3-4001-b2ac-23a164ca5940-2">
-                    <semantic:text>true</semantic:text>
-                </semantic:inputEntry>
-                <semantic:outputEntry id="_ca85854c-27a3-4001-b2ac-23a164ca5940-3">
-                    <semantic:text>"Approved"</semantic:text>
-                </semantic:outputEntry>
-                <semantic:outputEntry id="_ca85854c-27a3-4001-b2ac-23a164ca5940-4">
-                    <semantic:text>"Best"</semantic:text>
-                </semantic:outputEntry>
-            </semantic:rule>
-            <semantic:rule id="_7f03803d-2636-40ab-8346-7fd7f38ab695">
-                <semantic:inputEntry id="_7f03803d-2636-40ab-8346-7fd7f38ab695-0">
-                    <semantic:text>&gt;=12</semantic:text>
-                </semantic:inputEntry>
-                <semantic:inputEntry id="_7f03803d-2636-40ab-8346-7fd7f38ab695-1">
-                    <semantic:text>"Medium"</semantic:text>
-                </semantic:inputEntry>
-                <semantic:inputEntry id="_7f03803d-2636-40ab-8346-7fd7f38ab695-2">
-                    <semantic:text>true</semantic:text>
-                </semantic:inputEntry>
-                <semantic:outputEntry id="_7f03803d-2636-40ab-8346-7fd7f38ab695-3">
-                    <semantic:text>"Approved"</semantic:text>
-                </semantic:outputEntry>
-                <semantic:outputEntry id="_7f03803d-2636-40ab-8346-7fd7f38ab695-4">
-                    <semantic:text>"Standard"</semantic:text>
-                </semantic:outputEntry>
-            </semantic:rule>
-            <semantic:rule id="_887acecd-40fc-42da-9443-eeba476f5516">
-                <semantic:inputEntry id="_887acecd-40fc-42da-9443-eeba476f5516-0">
-                    <semantic:text>&lt;12</semantic:text>
-                </semantic:inputEntry>
-                <semantic:inputEntry id="_887acecd-40fc-42da-9443-eeba476f5516-1">
-                    <semantic:text>"Low"</semantic:text>
-                </semantic:inputEntry>
-                <semantic:inputEntry id="_887acecd-40fc-42da-9443-eeba476f5516-2">
-                    <semantic:text>true</semantic:text>
-                </semantic:inputEntry>
-                <semantic:outputEntry id="_887acecd-40fc-42da-9443-eeba476f5516-3">
-                    <semantic:text>"Declined"</semantic:text>
-                </semantic:outputEntry>
-                <semantic:outputEntry id="_887acecd-40fc-42da-9443-eeba476f5516-4">
-                    <semantic:text>"Standard"</semantic:text>
-                </semantic:outputEntry>
-            </semantic:rule>
-        </semantic:decisionTable>
-    </semantic:decision>
-    <semantic:inputData name="Age" id="_41effb45-b3c4-46ac-b1da-122b3e428a98">
-        <semantic:variable typeRef="number" name="Age" id="_b6681d58-50f4-42a1-9daf-8daa45ac458e"/>
-    </semantic:inputData>
-    <semantic:inputData name="RiskCategory" id="_5a4bdb64-f0ef-4978-9e03-6f1ae64a1f17">
-        <semantic:variable typeRef="string" name="RiskCategory" id="_97a8d30d-d396-49d9-948b-b2c95eac8db8"/>
-    </semantic:inputData>
-    <semantic:inputData name="isAffordable" id="_8ff18665-84e9-49f2-a8df-8981b1844549">
-        <semantic:variable typeRef="boolean" name="isAffordable" id="_3b975105-0d93-4b1a-b31d-9cce3b897721"/>
-    </semantic:inputData>
+<definitions exporter="DMN Modeler" exporterVersion="6.1.3" namespace="http://www.trisotech.com/definitions/_a3ebbd98-af09-42f3-9099-4ae2204a1f54" name="multi-output-table" triso:logoChoice="Default" id="_a3ebbd98-af09-42f3-9099-4ae2204a1f54" xmlns="http://www.trisotech.com/definitions/_a3ebbd98-af09-42f3-9099-4ae2204a1f54" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <extensionElements/>
+    <itemDefinition isCollection="true" name="tApproval" label="tApproval">
+        <itemComponent isCollection="false" name="Status" id="_20dfeb44-1c36-43cf-8819-63ce36819e90">
+            <typeRef>string</typeRef>
+        </itemComponent>
+        <itemComponent isCollection="false" name="Rate" id="_858ef6e6-69ca-4b50-a654-10f4b981f43c">
+            <typeRef>string</typeRef>
+        </itemComponent>
+    </itemDefinition>
+    <itemDefinition isCollection="true" name="tApproval_2" label="tApproval_2">
+        <itemComponent isCollection="false" name="Status" id="_bc8333eb-c4af-4e13-8913-bf1181d5dc53">
+            <typeRef>string</typeRef>
+        </itemComponent>
+        <itemComponent isCollection="false" name="Rate" id="_ebb154a3-a641-4021-8ad9-21884666ad74">
+            <typeRef>string</typeRef>
+        </itemComponent>
+    </itemDefinition>
+    <decision name="Approval" id="_3b2953a3-745f-4d2e-b55d-75c8c5ae653c">
+        <variable typeRef="tApproval_2" name="Approval" id="_726bba98-e108-4ee4-b22b-9b9f4da43a88"/>
+        <informationRequirement id="_092dbd95-b4bb-4cdb-b282-3eaaba03ba9a">
+            <requiredInput href="#_5a4bdb64-f0ef-4978-9e03-6f1ae64a1f17"/>
+        </informationRequirement>
+        <informationRequirement id="_9d474bf3-f7df-45d5-b2a8-54e1380f37f1">
+            <requiredInput href="#_41effb45-b3c4-46ac-b1da-122b3e428a98"/>
+        </informationRequirement>
+        <informationRequirement id="af8e8fca-edff-425b-9a74-7a9152a61886">
+            <requiredInput href="#_8ff18665-84e9-49f2-a8df-8981b1844549"/>
+        </informationRequirement>
+        <decisionTable hitPolicy="RULE ORDER" outputLabel="Approval" typeRef="tApproval_2" id="_d81c5a51-b7c3-493c-ae8a-07ff798fb1bd">
+            <input id="_bf7fc56f-ea82-464e-a541-f3221dc07e78">
+                <inputExpression typeRef="number">
+                    <text>Age</text>
+                </inputExpression>
+            </input>
+            <input id="_bb73bf86-b399-490a-a635-c6f2c04ff75d">
+                <inputExpression typeRef="string">
+                    <text>RiskCategory</text>
+                </inputExpression>
+                <inputValues triso:constraintsType="enumeration">
+                    <text>"High", "Low", "Medium"</text>
+                </inputValues>
+            </input>
+            <input id="_af5e5c2a-5124-4277-9409-d07421dcb5a4">
+                <inputExpression typeRef="boolean">
+                    <text>isAffordable</text>
+                </inputExpression>
+            </input>
+            <output name="Status" typeRef="string" id="_bffba7a1-f0a2-4679-b6e2-50e27bb27968">
+                <defaultOutputEntry>
+                    <text>"Declined"</text>
+                </defaultOutputEntry>
+            </output>
+            <output name="Rate" typeRef="string" id="_f07f9e98-3a1e-4add-a200-7cee75b550b3">
+                <defaultOutputEntry>
+                    <text>"Standard"</text>
+                </defaultOutputEntry>
+            </output>
+            <rule id="_ca85854c-27a3-4001-b2ac-23a164ca5940">
+                <inputEntry id="_ca85854c-27a3-4001-b2ac-23a164ca5940-0">
+                    <text>&gt;=18</text>
+                </inputEntry>
+                <inputEntry id="_ca85854c-27a3-4001-b2ac-23a164ca5940-1">
+                    <text>"Medium"</text>
+                </inputEntry>
+                <inputEntry id="_ca85854c-27a3-4001-b2ac-23a164ca5940-2">
+                    <text>true</text>
+                </inputEntry>
+                <outputEntry id="_ca85854c-27a3-4001-b2ac-23a164ca5940-3">
+                    <text>"Approved"</text>
+                </outputEntry>
+                <outputEntry id="_ca85854c-27a3-4001-b2ac-23a164ca5940-4">
+                    <text>"Best"</text>
+                </outputEntry>
+            </rule>
+            <rule id="_7f03803d-2636-40ab-8346-7fd7f38ab695">
+                <inputEntry id="_7f03803d-2636-40ab-8346-7fd7f38ab695-0">
+                    <text>&gt;=12</text>
+                </inputEntry>
+                <inputEntry id="_7f03803d-2636-40ab-8346-7fd7f38ab695-1">
+                    <text>"Medium"</text>
+                </inputEntry>
+                <inputEntry id="_7f03803d-2636-40ab-8346-7fd7f38ab695-2">
+                    <text>true</text>
+                </inputEntry>
+                <outputEntry id="_7f03803d-2636-40ab-8346-7fd7f38ab695-3">
+                    <text>"Approved"</text>
+                </outputEntry>
+                <outputEntry id="_7f03803d-2636-40ab-8346-7fd7f38ab695-4">
+                    <text>"Standard"</text>
+                </outputEntry>
+            </rule>
+            <rule id="_887acecd-40fc-42da-9443-eeba476f5516">
+                <inputEntry id="_887acecd-40fc-42da-9443-eeba476f5516-0">
+                    <text>&lt;12</text>
+                </inputEntry>
+                <inputEntry id="_887acecd-40fc-42da-9443-eeba476f5516-1">
+                    <text>"Low"</text>
+                </inputEntry>
+                <inputEntry id="_887acecd-40fc-42da-9443-eeba476f5516-2">
+                    <text>true</text>
+                </inputEntry>
+                <outputEntry id="_887acecd-40fc-42da-9443-eeba476f5516-3">
+                    <text>"Declined"</text>
+                </outputEntry>
+                <outputEntry id="_887acecd-40fc-42da-9443-eeba476f5516-4">
+                    <text>"Standard"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+    <inputData name="Age" id="_41effb45-b3c4-46ac-b1da-122b3e428a98">
+        <variable typeRef="number" name="Age" id="_b6681d58-50f4-42a1-9daf-8daa45ac458e"/>
+    </inputData>
+    <inputData name="RiskCategory" id="_5a4bdb64-f0ef-4978-9e03-6f1ae64a1f17">
+        <variable typeRef="string" name="RiskCategory" id="_97a8d30d-d396-49d9-948b-b2c95eac8db8"/>
+    </inputData>
+    <inputData name="isAffordable" id="_8ff18665-84e9-49f2-a8df-8981b1844549">
+        <variable typeRef="boolean" name="isAffordable" id="_3b975105-0d93-4b1a-b31d-9cce3b897721"/>
+    </inputData>
     <dmndi:DMNDI>
         <dmndi:DMNDiagram id="_a3ebbd98-af09-42f3-9099-4ae2204a1f54_D1">
             <dmndi:Size height="650.0" width="879.0"/>
@@ -148,5 +148,5 @@
             </dmndi:DMNEdge>
         </dmndi:DMNDiagram>
     </dmndi:DMNDI>
-</semantic:definitions>
+</definitions>
 

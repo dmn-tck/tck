@@ -1,139 +1,139 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<semantic:definitions namespace="http://www.actico.com/spec/DMN/1103-feel-substring-function" name="1103-feel-substring-function" id="_i-xOAPUUEeesLuP4RHs4vA" xmlns="http://www.actico.com/spec/DMN/1103-feel-substring-function" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <semantic:description>FEEL built-in function 'substring(string, start, position, length?) in category string functions</semantic:description>
-    <semantic:itemDefinition name="tfeel-substring-function_001_53051b5628_Result" id="_i-6X8PUUEeesLuP4RHs4vA">
-        <semantic:typeRef>string</semantic:typeRef>
-    </semantic:itemDefinition>
-    <semantic:itemDefinition name="tfeel-substring-function_002_03d12b93f0_Result" id="_i-6X9PUUEeesLuP4RHs4vA">
-        <semantic:typeRef>string</semantic:typeRef>
-    </semantic:itemDefinition>
-    <semantic:itemDefinition name="tfeel-substring-function_003_6d06b1d2ec_Result" id="_i-6X-PUUEeesLuP4RHs4vA">
-        <semantic:typeRef>string</semantic:typeRef>
-    </semantic:itemDefinition>
-    <semantic:itemDefinition name="tfeel-substring-function_004_938a24e7af_Result" id="_i-6X_PUUEeesLuP4RHs4vA">
-        <semantic:typeRef>string</semantic:typeRef>
-    </semantic:itemDefinition>
-    <semantic:itemDefinition name="tfeel-substring-function_005_21fcca286c_Result" id="_i-6YAPUUEeesLuP4RHs4vA">
-        <semantic:typeRef>string</semantic:typeRef>
-    </semantic:itemDefinition>
-    <semantic:itemDefinition name="tfeel-substring-function_006_253e533bc6_Result" id="_i-6YBPUUEeesLuP4RHs4vA">
-        <semantic:typeRef>string</semantic:typeRef>
-    </semantic:itemDefinition>
-    <semantic:itemDefinition name="tfeel-substring-function_007_3e021f33a8_Result" id="_i-6YCPUUEeesLuP4RHs4vA">
-        <semantic:typeRef>string</semantic:typeRef>
-    </semantic:itemDefinition>
-    <semantic:itemDefinition name="tfeel-substring-function_008_ddeffdc93e_Result" id="_i-6YDPUUEeesLuP4RHs4vA">
-        <semantic:typeRef>string</semantic:typeRef>
-    </semantic:itemDefinition>
-    <semantic:itemDefinition name="tfeel-substring-function_009_b52405c384_Result" id="_i-6YEPUUEeesLuP4RHs4vA">
-        <semantic:typeRef>string</semantic:typeRef>
-    </semantic:itemDefinition>
-    <semantic:itemDefinition name="tfeel-substring-function_010_fbf9a89fde_Result" id="_i-6YFPUUEeesLuP4RHs4vA">
-        <semantic:typeRef>string</semantic:typeRef>
-    </semantic:itemDefinition>
-    <semantic:itemDefinition name="tfeel-substring-function_011_a559ce6410_Result" id="_i-6YGPUUEeesLuP4RHs4vA">
-        <semantic:typeRef>string</semantic:typeRef>
-    </semantic:itemDefinition>
-    <semantic:decision name="feel-substring-function_001_53051b5628" id="_i-6X8vUUEeesLuP4RHs4vA">
-        <semantic:description>Tests FEEL expression: 'substring("f",1)' and expects result: '"f" (string)'</semantic:description>
-        <semantic:question>Result of FEEL expression 'substring("f",1)'?</semantic:question>
-        <semantic:allowedAnswers>"f" (string)</semantic:allowedAnswers>
-        <semantic:variable typeRef="ns1:tfeel-substring-function_001_53051b5628_Result" name="feel-substring-function_001_53051b5628" id="_i-6X8_UUEeesLuP4RHs4vA"/>
-        <semantic:literalExpression id="_i-6X8fUUEeesLuP4RHs4vA">
-            <semantic:text>substring("f",1)</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="feel-substring-function_002_03d12b93f0" id="_i-6X9vUUEeesLuP4RHs4vA">
-        <semantic:description>Tests FEEL expression: 'substring("f",1,1)' and expects result: '"f" (string)'</semantic:description>
-        <semantic:question>Result of FEEL expression 'substring("f",1,1)'?</semantic:question>
-        <semantic:allowedAnswers>"f" (string)</semantic:allowedAnswers>
-        <semantic:variable typeRef="ns1:tfeel-substring-function_002_03d12b93f0_Result" name="feel-substring-function_002_03d12b93f0" id="_i-6X9_UUEeesLuP4RHs4vA"/>
-        <semantic:literalExpression id="_i-6X9fUUEeesLuP4RHs4vA">
-            <semantic:text>substring("f",1,1)</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="feel-substring-function_003_6d06b1d2ec" id="_i-6X-vUUEeesLuP4RHs4vA">
-        <semantic:description>Tests FEEL expression: 'substring("foobar",6)' and expects result: '"r" (string)'</semantic:description>
-        <semantic:question>Result of FEEL expression 'substring("foobar",6)'?</semantic:question>
-        <semantic:allowedAnswers>"r" (string)</semantic:allowedAnswers>
-        <semantic:variable typeRef="ns1:tfeel-substring-function_003_6d06b1d2ec_Result" name="feel-substring-function_003_6d06b1d2ec" id="_i-6X-_UUEeesLuP4RHs4vA"/>
-        <semantic:literalExpression id="_i-6X-fUUEeesLuP4RHs4vA">
-            <semantic:text>substring("foobar",6)</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="feel-substring-function_004_938a24e7af" id="_i-6X_vUUEeesLuP4RHs4vA">
-        <semantic:description>Tests FEEL expression: 'substring("foobar",1,6)' and expects result: '"foobar" (string)'</semantic:description>
-        <semantic:question>Result of FEEL expression 'substring("foobar",1,6)'?</semantic:question>
-        <semantic:allowedAnswers>"foobar" (string)</semantic:allowedAnswers>
-        <semantic:variable typeRef="ns1:tfeel-substring-function_004_938a24e7af_Result" name="feel-substring-function_004_938a24e7af" id="_i-6X__UUEeesLuP4RHs4vA"/>
-        <semantic:literalExpression id="_i-6X_fUUEeesLuP4RHs4vA">
-            <semantic:text>substring("foobar",1,6)</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="feel-substring-function_005_21fcca286c" id="_i-6YAvUUEeesLuP4RHs4vA">
-        <semantic:description>Tests FEEL expression: 'substring("foobar",3)' and expects result: '"obar" (string)'</semantic:description>
-        <semantic:question>Result of FEEL expression 'substring("foobar",3)'?</semantic:question>
-        <semantic:allowedAnswers>"obar" (string)</semantic:allowedAnswers>
-        <semantic:variable typeRef="ns1:tfeel-substring-function_005_21fcca286c_Result" name="feel-substring-function_005_21fcca286c" id="_i-6YA_UUEeesLuP4RHs4vA"/>
-        <semantic:literalExpression id="_i-6YAfUUEeesLuP4RHs4vA">
-            <semantic:text>substring("foobar",3)</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="feel-substring-function_006_253e533bc6" id="_i-6YBvUUEeesLuP4RHs4vA">
-        <semantic:description>Tests FEEL expression: 'substring("foobar",3,3)' and expects result: '"oba" (string)'</semantic:description>
-        <semantic:question>Result of FEEL expression 'substring("foobar",3,3)'?</semantic:question>
-        <semantic:allowedAnswers>"oba" (string)</semantic:allowedAnswers>
-        <semantic:variable typeRef="ns1:tfeel-substring-function_006_253e533bc6_Result" name="feel-substring-function_006_253e533bc6" id="_i-6YB_UUEeesLuP4RHs4vA"/>
-        <semantic:literalExpression id="_i-6YBfUUEeesLuP4RHs4vA">
-            <semantic:text>substring("foobar",3,3)</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="feel-substring-function_007_3e021f33a8" id="_i-6YCvUUEeesLuP4RHs4vA">
-        <semantic:description>Tests FEEL expression: 'substring("foobar",-2,1)' and expects result: '"a" (string)'</semantic:description>
-        <semantic:question>Result of FEEL expression 'substring("foobar",-2,1)'?</semantic:question>
-        <semantic:allowedAnswers>"a" (string)</semantic:allowedAnswers>
-        <semantic:variable typeRef="ns1:tfeel-substring-function_007_3e021f33a8_Result" name="feel-substring-function_007_3e021f33a8" id="_i-6YC_UUEeesLuP4RHs4vA"/>
-        <semantic:literalExpression id="_i-6YCfUUEeesLuP4RHs4vA">
-            <semantic:text>substring("foobar",-2,1)</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="feel-substring-function_008_ddeffdc93e" id="_i-6YDvUUEeesLuP4RHs4vA">
-        <semantic:description>Tests FEEL expression: 'substring("foob r",-2,1)' and expects result: '" " (string)'</semantic:description>
-        <semantic:question>Result of FEEL expression 'substring("foob r",-2,1)'?</semantic:question>
-        <semantic:allowedAnswers>" " (string)</semantic:allowedAnswers>
-        <semantic:variable typeRef="ns1:tfeel-substring-function_008_ddeffdc93e_Result" name="feel-substring-function_008_ddeffdc93e" id="_i-6YD_UUEeesLuP4RHs4vA"/>
-        <semantic:literalExpression id="_i-6YDfUUEeesLuP4RHs4vA">
-            <semantic:text>substring("foob r",-2,1)</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="feel-substring-function_009_b52405c384" id="_i-6YEvUUEeesLuP4RHs4vA">
-        <semantic:description>Tests FEEL expression: 'substring("foobar",-6,6)' and expects result: '"foobar" (string)'</semantic:description>
-        <semantic:question>Result of FEEL expression 'substring("foobar",-6,6)'?</semantic:question>
-        <semantic:allowedAnswers>"foobar" (string)</semantic:allowedAnswers>
-        <semantic:variable typeRef="ns1:tfeel-substring-function_009_b52405c384_Result" name="feel-substring-function_009_b52405c384" id="_i-6YE_UUEeesLuP4RHs4vA"/>
-        <semantic:literalExpression id="_i-6YEfUUEeesLuP4RHs4vA">
-            <semantic:text>substring("foobar",-6,6)</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="feel-substring-function_010_fbf9a89fde" id="_i-6YFvUUEeesLuP4RHs4vA">
-        <semantic:description>Tests FEEL expression: 'substring("foobar",3,3.8)' and expects result: '"oba" (string)'</semantic:description>
-        <semantic:question>Result of FEEL expression 'substring("foobar",3,3.8)'?</semantic:question>
-        <semantic:allowedAnswers>"oba" (string)</semantic:allowedAnswers>
-        <semantic:variable typeRef="ns1:tfeel-substring-function_010_fbf9a89fde_Result" name="feel-substring-function_010_fbf9a89fde" id="_i-6YF_UUEeesLuP4RHs4vA"/>
-        <semantic:literalExpression id="_i-6YFfUUEeesLuP4RHs4vA">
-            <semantic:text>substring("foobar",3,3.8)</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="feel-substring-function_011_a559ce6410" id="_i-6YGvUUEeesLuP4RHs4vA">
-        <semantic:description>Tests FEEL expression: 'substring(string:"foobar",start position :3)' and expects result: '"obar" (string)'</semantic:description>
-        <semantic:question>Result of FEEL expression 'substring(string:"foobar",start position :3)'?</semantic:question>
-        <semantic:allowedAnswers>"obar" (string)</semantic:allowedAnswers>
-        <semantic:variable typeRef="ns1:tfeel-substring-function_011_a559ce6410_Result" name="feel-substring-function_011_a559ce6410" id="_i-6YG_UUEeesLuP4RHs4vA"/>
-        <semantic:literalExpression id="_i-6YGfUUEeesLuP4RHs4vA">
-            <semantic:text>substring(string:"foobar",start position :3)</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:knowledgeSource name="DMN 1.1 - 10.3.4.3 Table 60" id="_i-xOAfUUEeesLuP4RHs4vA"/>
+<definitions namespace="http://www.actico.com/spec/DMN/1103-feel-substring-function" name="1103-feel-substring-function" id="_i-xOAPUUEeesLuP4RHs4vA" xmlns="http://www.actico.com/spec/DMN/1103-feel-substring-function" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <description>FEEL built-in function 'substring(string, start, position, length?) in category string functions</description>
+    <itemDefinition name="tfeel-substring-function_001_53051b5628_Result" id="_i-6X8PUUEeesLuP4RHs4vA">
+        <typeRef>string</typeRef>
+    </itemDefinition>
+    <itemDefinition name="tfeel-substring-function_002_03d12b93f0_Result" id="_i-6X9PUUEeesLuP4RHs4vA">
+        <typeRef>string</typeRef>
+    </itemDefinition>
+    <itemDefinition name="tfeel-substring-function_003_6d06b1d2ec_Result" id="_i-6X-PUUEeesLuP4RHs4vA">
+        <typeRef>string</typeRef>
+    </itemDefinition>
+    <itemDefinition name="tfeel-substring-function_004_938a24e7af_Result" id="_i-6X_PUUEeesLuP4RHs4vA">
+        <typeRef>string</typeRef>
+    </itemDefinition>
+    <itemDefinition name="tfeel-substring-function_005_21fcca286c_Result" id="_i-6YAPUUEeesLuP4RHs4vA">
+        <typeRef>string</typeRef>
+    </itemDefinition>
+    <itemDefinition name="tfeel-substring-function_006_253e533bc6_Result" id="_i-6YBPUUEeesLuP4RHs4vA">
+        <typeRef>string</typeRef>
+    </itemDefinition>
+    <itemDefinition name="tfeel-substring-function_007_3e021f33a8_Result" id="_i-6YCPUUEeesLuP4RHs4vA">
+        <typeRef>string</typeRef>
+    </itemDefinition>
+    <itemDefinition name="tfeel-substring-function_008_ddeffdc93e_Result" id="_i-6YDPUUEeesLuP4RHs4vA">
+        <typeRef>string</typeRef>
+    </itemDefinition>
+    <itemDefinition name="tfeel-substring-function_009_b52405c384_Result" id="_i-6YEPUUEeesLuP4RHs4vA">
+        <typeRef>string</typeRef>
+    </itemDefinition>
+    <itemDefinition name="tfeel-substring-function_010_fbf9a89fde_Result" id="_i-6YFPUUEeesLuP4RHs4vA">
+        <typeRef>string</typeRef>
+    </itemDefinition>
+    <itemDefinition name="tfeel-substring-function_011_a559ce6410_Result" id="_i-6YGPUUEeesLuP4RHs4vA">
+        <typeRef>string</typeRef>
+    </itemDefinition>
+    <decision name="feel-substring-function_001_53051b5628" id="_i-6X8vUUEeesLuP4RHs4vA">
+        <description>Tests FEEL expression: 'substring("f",1)' and expects result: '"f" (string)'</description>
+        <question>Result of FEEL expression 'substring("f",1)'?</question>
+        <allowedAnswers>"f" (string)</allowedAnswers>
+        <variable typeRef="ns1:tfeel-substring-function_001_53051b5628_Result" name="feel-substring-function_001_53051b5628" id="_i-6X8_UUEeesLuP4RHs4vA"/>
+        <literalExpression id="_i-6X8fUUEeesLuP4RHs4vA">
+            <text>substring("f",1)</text>
+        </literalExpression>
+    </decision>
+    <decision name="feel-substring-function_002_03d12b93f0" id="_i-6X9vUUEeesLuP4RHs4vA">
+        <description>Tests FEEL expression: 'substring("f",1,1)' and expects result: '"f" (string)'</description>
+        <question>Result of FEEL expression 'substring("f",1,1)'?</question>
+        <allowedAnswers>"f" (string)</allowedAnswers>
+        <variable typeRef="ns1:tfeel-substring-function_002_03d12b93f0_Result" name="feel-substring-function_002_03d12b93f0" id="_i-6X9_UUEeesLuP4RHs4vA"/>
+        <literalExpression id="_i-6X9fUUEeesLuP4RHs4vA">
+            <text>substring("f",1,1)</text>
+        </literalExpression>
+    </decision>
+    <decision name="feel-substring-function_003_6d06b1d2ec" id="_i-6X-vUUEeesLuP4RHs4vA">
+        <description>Tests FEEL expression: 'substring("foobar",6)' and expects result: '"r" (string)'</description>
+        <question>Result of FEEL expression 'substring("foobar",6)'?</question>
+        <allowedAnswers>"r" (string)</allowedAnswers>
+        <variable typeRef="ns1:tfeel-substring-function_003_6d06b1d2ec_Result" name="feel-substring-function_003_6d06b1d2ec" id="_i-6X-_UUEeesLuP4RHs4vA"/>
+        <literalExpression id="_i-6X-fUUEeesLuP4RHs4vA">
+            <text>substring("foobar",6)</text>
+        </literalExpression>
+    </decision>
+    <decision name="feel-substring-function_004_938a24e7af" id="_i-6X_vUUEeesLuP4RHs4vA">
+        <description>Tests FEEL expression: 'substring("foobar",1,6)' and expects result: '"foobar" (string)'</description>
+        <question>Result of FEEL expression 'substring("foobar",1,6)'?</question>
+        <allowedAnswers>"foobar" (string)</allowedAnswers>
+        <variable typeRef="ns1:tfeel-substring-function_004_938a24e7af_Result" name="feel-substring-function_004_938a24e7af" id="_i-6X__UUEeesLuP4RHs4vA"/>
+        <literalExpression id="_i-6X_fUUEeesLuP4RHs4vA">
+            <text>substring("foobar",1,6)</text>
+        </literalExpression>
+    </decision>
+    <decision name="feel-substring-function_005_21fcca286c" id="_i-6YAvUUEeesLuP4RHs4vA">
+        <description>Tests FEEL expression: 'substring("foobar",3)' and expects result: '"obar" (string)'</description>
+        <question>Result of FEEL expression 'substring("foobar",3)'?</question>
+        <allowedAnswers>"obar" (string)</allowedAnswers>
+        <variable typeRef="ns1:tfeel-substring-function_005_21fcca286c_Result" name="feel-substring-function_005_21fcca286c" id="_i-6YA_UUEeesLuP4RHs4vA"/>
+        <literalExpression id="_i-6YAfUUEeesLuP4RHs4vA">
+            <text>substring("foobar",3)</text>
+        </literalExpression>
+    </decision>
+    <decision name="feel-substring-function_006_253e533bc6" id="_i-6YBvUUEeesLuP4RHs4vA">
+        <description>Tests FEEL expression: 'substring("foobar",3,3)' and expects result: '"oba" (string)'</description>
+        <question>Result of FEEL expression 'substring("foobar",3,3)'?</question>
+        <allowedAnswers>"oba" (string)</allowedAnswers>
+        <variable typeRef="ns1:tfeel-substring-function_006_253e533bc6_Result" name="feel-substring-function_006_253e533bc6" id="_i-6YB_UUEeesLuP4RHs4vA"/>
+        <literalExpression id="_i-6YBfUUEeesLuP4RHs4vA">
+            <text>substring("foobar",3,3)</text>
+        </literalExpression>
+    </decision>
+    <decision name="feel-substring-function_007_3e021f33a8" id="_i-6YCvUUEeesLuP4RHs4vA">
+        <description>Tests FEEL expression: 'substring("foobar",-2,1)' and expects result: '"a" (string)'</description>
+        <question>Result of FEEL expression 'substring("foobar",-2,1)'?</question>
+        <allowedAnswers>"a" (string)</allowedAnswers>
+        <variable typeRef="ns1:tfeel-substring-function_007_3e021f33a8_Result" name="feel-substring-function_007_3e021f33a8" id="_i-6YC_UUEeesLuP4RHs4vA"/>
+        <literalExpression id="_i-6YCfUUEeesLuP4RHs4vA">
+            <text>substring("foobar",-2,1)</text>
+        </literalExpression>
+    </decision>
+    <decision name="feel-substring-function_008_ddeffdc93e" id="_i-6YDvUUEeesLuP4RHs4vA">
+        <description>Tests FEEL expression: 'substring("foob r",-2,1)' and expects result: '" " (string)'</description>
+        <question>Result of FEEL expression 'substring("foob r",-2,1)'?</question>
+        <allowedAnswers>" " (string)</allowedAnswers>
+        <variable typeRef="ns1:tfeel-substring-function_008_ddeffdc93e_Result" name="feel-substring-function_008_ddeffdc93e" id="_i-6YD_UUEeesLuP4RHs4vA"/>
+        <literalExpression id="_i-6YDfUUEeesLuP4RHs4vA">
+            <text>substring("foob r",-2,1)</text>
+        </literalExpression>
+    </decision>
+    <decision name="feel-substring-function_009_b52405c384" id="_i-6YEvUUEeesLuP4RHs4vA">
+        <description>Tests FEEL expression: 'substring("foobar",-6,6)' and expects result: '"foobar" (string)'</description>
+        <question>Result of FEEL expression 'substring("foobar",-6,6)'?</question>
+        <allowedAnswers>"foobar" (string)</allowedAnswers>
+        <variable typeRef="ns1:tfeel-substring-function_009_b52405c384_Result" name="feel-substring-function_009_b52405c384" id="_i-6YE_UUEeesLuP4RHs4vA"/>
+        <literalExpression id="_i-6YEfUUEeesLuP4RHs4vA">
+            <text>substring("foobar",-6,6)</text>
+        </literalExpression>
+    </decision>
+    <decision name="feel-substring-function_010_fbf9a89fde" id="_i-6YFvUUEeesLuP4RHs4vA">
+        <description>Tests FEEL expression: 'substring("foobar",3,3.8)' and expects result: '"oba" (string)'</description>
+        <question>Result of FEEL expression 'substring("foobar",3,3.8)'?</question>
+        <allowedAnswers>"oba" (string)</allowedAnswers>
+        <variable typeRef="ns1:tfeel-substring-function_010_fbf9a89fde_Result" name="feel-substring-function_010_fbf9a89fde" id="_i-6YF_UUEeesLuP4RHs4vA"/>
+        <literalExpression id="_i-6YFfUUEeesLuP4RHs4vA">
+            <text>substring("foobar",3,3.8)</text>
+        </literalExpression>
+    </decision>
+    <decision name="feel-substring-function_011_a559ce6410" id="_i-6YGvUUEeesLuP4RHs4vA">
+        <description>Tests FEEL expression: 'substring(string:"foobar",start position :3)' and expects result: '"obar" (string)'</description>
+        <question>Result of FEEL expression 'substring(string:"foobar",start position :3)'?</question>
+        <allowedAnswers>"obar" (string)</allowedAnswers>
+        <variable typeRef="ns1:tfeel-substring-function_011_a559ce6410_Result" name="feel-substring-function_011_a559ce6410" id="_i-6YG_UUEeesLuP4RHs4vA"/>
+        <literalExpression id="_i-6YGfUUEeesLuP4RHs4vA">
+            <text>substring(string:"foobar",start position :3)</text>
+        </literalExpression>
+    </decision>
+    <knowledgeSource name="DMN 1.1 - 10.3.4.3 Table 60" id="_i-xOAfUUEeesLuP4RHs4vA"/>
     <dmndi:DMNDI>
         <dmndi:DMNDiagram name="Page 1" id="_i-xOAPUUEeesLuP4RHs4vA_D2">
             <dmndi:DMNShape dmnElementRef="_i-6YDvUUEeesLuP4RHs4vA" id="_i-xOAPUUEeesLuP4RHs4vA_s1">
@@ -174,5 +174,5 @@
             </dmndi:DMNShape>
         </dmndi:DMNDiagram>
     </dmndi:DMNDI>
-</semantic:definitions>
+</definitions>
 

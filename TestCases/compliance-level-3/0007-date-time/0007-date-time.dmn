@@ -1,293 +1,293 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<semantic:definitions exporter="DMN Modeler; Method and Style trisofix.xslt" exporterVersion="5.0.33.1; 1.0" namespace="http://www.trisotech.com/definitions/_69430b3e-17b8-430d-b760-c505bf6469f9" name="dateTime Table 58" triso:logoChoice="Default" id="_69430b3e-17b8-430d-b760-c505bf6469f9" xmlns="http://www.trisotech.com/definitions/_69430b3e-17b8-430d-b760-c505bf6469f9" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <semantic:itemDefinition name="tDateTimeComponents" id="tDateTimeComponents">
-        <semantic:itemComponent name="Year" id="_df05a420-dbc5-48cf-be85-4b41702c4f33">
-            <semantic:typeRef>number</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent name="Month" id="_3e119228-7599-47e5-aa96-182e5ff66034">
-            <semantic:typeRef>number</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent name="Day" id="_d5d22cac-3276-4dfd-9aee-353aa47bf2d4">
-            <semantic:typeRef>number</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent name="Hour" id="_63defe21-0369-438e-b879-27df2bcf475e">
-            <semantic:typeRef>number</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent name="Minute" id="_1ebad337-b2da-49ed-8ab2-b308d78e1b2f">
-            <semantic:typeRef>number</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent name="Second" id="_4666a2d0-63b2-4822-b5b4-e266f4cca3d1">
-            <semantic:typeRef>number</semantic:typeRef>
-        </semantic:itemComponent>
-    </semantic:itemDefinition>
-    <semantic:itemDefinition name="tDateVariants" id="tDateVariants">
-        <semantic:itemComponent name="fromString" id="_02d44cc2-24ac-4f64-a61f-7044684dc438">
-            <semantic:typeRef>date</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent name="fromDateTime" id="_13da5f5e-8fdd-4a33-9500-ceeaaeaccc91">
-            <semantic:typeRef>date</semantic:typeRef>
-        </semantic:itemComponent>
-        <semantic:itemComponent name="fromYearMonthDay" id="_c4e03aa1-d8f3-4ffa-aab2-42a17a4fb707">
-            <semantic:typeRef>date</semantic:typeRef>
-        </semantic:itemComponent>
-    </semantic:itemDefinition>
-    <semantic:inputData name="dateString" id="_74a9c3ad-a813-444e-88ee-8a91096ee233">
-        <semantic:variable typeRef="string" name="dateString"/>
-    </semantic:inputData>
-    <semantic:inputData name="timeString" id="_e5705a69-0114-4f64-8aca-22500a533a51">
-        <semantic:variable typeRef="string" name="timeString"/>
-    </semantic:inputData>
-    <semantic:decision name="Date" id="_bd547a08-c157-47ca-84d4-ac6f3d5bdeda">
-        <semantic:variable typeRef="tns:tDateVariants" name="Date"/>
-        <semantic:informationRequirement id="_5ed07807-110d-4dd1-b721-c2a1965196ac">
-            <semantic:requiredInput href="#_74a9c3ad-a813-444e-88ee-8a91096ee233"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="_6ae051c3-014c-4113-ba30-7664c6e9fea5">
-            <semantic:requiredInput href="#_178690e3-8936-4914-a735-6243a29b6068"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="_319fca9b-1682-4452-83b2-bbc82ffcc7a6">
-            <semantic:requiredInput href="#_e3143b2d-e150-422e-8163-d3e4461988f4"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="_04bc998f-14fd-45c0-820d-80db70891af6">
-            <semantic:requiredInput href="#_ec0d9542-257d-401b-ac6b-ce927014cf25"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="_3a7338bd-a16c-4900-ab7f-0429d8b077b5">
-            <semantic:requiredDecision href="#_dfbb843a-bd34-4099-b700-0d9ca5b38d6a"/>
-        </semantic:informationRequirement>
-        <semantic:context>
-            <semantic:contextEntry>
-                <semantic:variable typeRef="date" name="fromString"/>
-                <semantic:literalExpression>
-                    <semantic:text>date(dateString)</semantic:text>
-                </semantic:literalExpression>
-            </semantic:contextEntry>
-            <semantic:contextEntry>
-                <semantic:variable typeRef="date" name="fromDateTime"/>
-                <semantic:literalExpression>
-                    <semantic:text>date(Date-Time)</semantic:text>
-                </semantic:literalExpression>
-            </semantic:contextEntry>
-            <semantic:contextEntry>
-                <semantic:variable typeRef="date" name="fromYearMonthDay"/>
-                <semantic:literalExpression>
-                    <semantic:text>date(Year,Month,Day)</semantic:text>
-                </semantic:literalExpression>
-            </semantic:contextEntry>
-        </semantic:context>
-    </semantic:decision>
-    <semantic:decision name="Date-Time" id="_dfbb843a-bd34-4099-b700-0d9ca5b38d6a">
-        <semantic:variable typeRef="dateTime" name="Date-Time"/>
-        <semantic:informationRequirement id="_8d312d4f-6650-45f9-8739-00e07e993176">
-            <semantic:requiredInput href="#_c796f29d-d800-4239-b9f6-d4d72f77b183"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>date and time(dateTimeString)</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="Time" id="_9e8acf47-790a-4741-8ebb-e8a22a30744c">
-        <semantic:variable typeRef="time" name="Time"/>
-        <semantic:informationRequirement id="_5201382e-6f86-4846-9a56-1dd77102ccb6">
-            <semantic:requiredInput href="#_e5705a69-0114-4f64-8aca-22500a533a51"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>time(timeString)</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:inputData name="Year" id="_178690e3-8936-4914-a735-6243a29b6068">
-        <semantic:variable typeRef="number" name="Year"/>
-    </semantic:inputData>
-    <semantic:inputData name="Month" id="_e3143b2d-e150-422e-8163-d3e4461988f4">
-        <semantic:variable typeRef="number" name="Month"/>
-    </semantic:inputData>
-    <semantic:inputData name="Day" id="_ec0d9542-257d-401b-ac6b-ce927014cf25">
-        <semantic:variable typeRef="number" name="Day"/>
-    </semantic:inputData>
-    <semantic:decision name="Date-Time2" id="_7df22028-4b5b-4594-89c7-a80b8aec526f">
-        <semantic:variable typeRef="dateTime" name="Date-Time2"/>
-        <semantic:informationRequirement id="f5fbf8c4-02f9-4dff-b0c8-a6e8321284b8">
-            <semantic:requiredDecision href="#_bd547a08-c157-47ca-84d4-ac6f3d5bdeda"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="efe0f748-c173-422a-a9b3-733d6cefa0fb">
-            <semantic:requiredDecision href="#_9e8acf47-790a-4741-8ebb-e8a22a30744c"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>date and time(Date.fromString,Time)</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="Time2" id="_1f2b08ce-3c6b-4e22-a747-8d9f378e9035">
-        <semantic:variable typeRef="time" name="Time2"/>
-        <semantic:informationRequirement id="_5900b0b2-0fb2-4fa5-839e-4ec7c11dc88b">
-            <semantic:requiredDecision href="#_7df22028-4b5b-4594-89c7-a80b8aec526f"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>time(Date-Time2)</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:inputData name="dateTimeString" id="_c796f29d-d800-4239-b9f6-d4d72f77b183">
-        <semantic:variable typeRef="string" name="dateTimeString"/>
-    </semantic:inputData>
-    <semantic:inputData name="Hours" id="_0dffa0f8-4c84-401e-8403-94c201fbd976">
-        <semantic:variable typeRef="number" name="Hours"/>
-    </semantic:inputData>
-    <semantic:inputData name="Minutes" id="_03d8f475-0a28-4c67-8fc5-51d9b1f54781">
-        <semantic:variable typeRef="number" name="Minutes"/>
-    </semantic:inputData>
-    <semantic:inputData name="Seconds" id="_9225dbc5-fe5c-4fa9-b97c-0a41265abf20">
-        <semantic:variable typeRef="number" name="Seconds"/>
-    </semantic:inputData>
-    <semantic:inputData name="Timezone" id="_b133cbd3-884d-4cf9-a750-81d949d17e31">
-        <semantic:variable typeRef="dayTimeDuration" name="Timezone"/>
-    </semantic:inputData>
-    <semantic:decision name="Time3" id="_463b1a36-2505-413a-8056-f6a5efc2b52e">
-        <semantic:variable typeRef="time" name="Time3"/>
-        <semantic:informationRequirement id="_4274d006-c59f-403d-a944-a04238d91346">
-            <semantic:requiredInput href="#_0dffa0f8-4c84-401e-8403-94c201fbd976"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="_5e5240d7-c390-4c06-b5f2-c3d7bf2377b6">
-            <semantic:requiredInput href="#_03d8f475-0a28-4c67-8fc5-51d9b1f54781"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="fc9c1ed9-7c9b-4d47-a278-a343e0d91d43">
-            <semantic:requiredInput href="#_9225dbc5-fe5c-4fa9-b97c-0a41265abf20"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="_8ac32b2a-d345-4a76-b2f7-21d3c0430b98">
-            <semantic:requiredInput href="#_b133cbd3-884d-4cf9-a750-81d949d17e31"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>time(Hours,Minutes,Seconds,Timezone)</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:inputData name="durationString" id="_6f8bf858-eed1-4f41-93f2-73431540f91f">
-        <semantic:variable typeRef="string" name="durationString"/>
-    </semantic:inputData>
-    <semantic:decision name="dtDuration1" id="_972ecd98-1c70-4f0c-909c-786f23c61dbb">
-        <semantic:variable typeRef="dayTimeDuration" name="dtDuration1"/>
-        <semantic:informationRequirement id="_97285856-a25e-42a6-8ab3-2840c3f877ca">
-            <semantic:requiredInput href="#_6f8bf858-eed1-4f41-93f2-73431540f91f"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>duration(durationString)</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="dtDuration2" id="_a2c48b03-6e72-4846-99cc-02f3747c6867">
-        <semantic:variable typeRef="dayTimeDuration" name="dtDuration2"/>
-        <semantic:informationRequirement id="c2b80b2f-3767-4c1a-87a4-926fd8a83df3">
-            <semantic:requiredDecision href="#_7df22028-4b5b-4594-89c7-a80b8aec526f"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="_4714aa72-23ad-4964-9429-feef62f03e9b">
-            <semantic:requiredDecision href="#_dfbb843a-bd34-4099-b700-0d9ca5b38d6a"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>Date-Time - Date-Time2</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:inputData name="oneHour" id="_d96a8f03-5cee-42ca-8646-4383ad5ecee2">
-        <semantic:variable typeRef="dayTimeDuration" name="oneHour"/>
-    </semantic:inputData>
-    <semantic:decision name="sumDurations" id="_14f9f361-8c3c-455b-9c97-fe15201e3b5e">
-        <semantic:variable typeRef="dayTimeDuration" name="sumDurations"/>
-        <semantic:informationRequirement id="_1dc50225-3087-448d-9cdc-e65c31bc654e">
-            <semantic:requiredDecision href="#_a2c48b03-6e72-4846-99cc-02f3747c6867"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="bcac3502-a278-4806-9999-ff28fd763fd2">
-            <semantic:requiredDecision href="#_972ecd98-1c70-4f0c-909c-786f23c61dbb"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>dtDuration1 + dtDuration2</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="ymDuration2" id="_cbac111e-ca71-4fac-a921-175ffd767055">
-        <semantic:variable typeRef="yearMonthDuration" name="ymDuration2"/>
-        <semantic:informationRequirement id="_5221210e-7f47-48d4-a4bf-fe930eaabb47">
-            <semantic:requiredDecision href="#_7df22028-4b5b-4594-89c7-a80b8aec526f"/>
-        </semantic:informationRequirement>
-        <semantic:informationRequirement id="_86f10707-9f4f-4ba1-be26-83ff133c8a5c">
-            <semantic:requiredDecision href="#_dfbb843a-bd34-4099-b700-0d9ca5b38d6a"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>years and months duration(Date-Time2,Date-Time)</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="cDay" id="_04c6bedc-bc63-464f-8e61-c039d24a47bf">
-        <semantic:variable typeRef="number" name="cDay"/>
-        <semantic:informationRequirement id="_25eb94de-81ac-42cb-b2e9-a11f49c2def1">
-            <semantic:requiredDecision href="#_bd547a08-c157-47ca-84d4-ac6f3d5bdeda"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>Date.fromString.day</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="cYear" id="_dc18ebe0-6762-4734-aeb3-ed4fb861865c">
-        <semantic:variable typeRef="number" name="cYear"/>
-        <semantic:informationRequirement id="edbe69a3-9a72-4c23-b1bb-a961d9f1adf3">
-            <semantic:requiredDecision href="#_bd547a08-c157-47ca-84d4-ac6f3d5bdeda"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>Date.fromString.year</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="cMonth" id="_2cf37ed0-590d-4f97-b58b-46eaa424b965">
-        <semantic:variable typeRef="number" name="cMonth"/>
-        <semantic:informationRequirement id="a214e170-6edc-4936-b7d9-c75de86f08bd">
-            <semantic:requiredDecision href="#_bd547a08-c157-47ca-84d4-ac6f3d5bdeda"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>Date.fromString.month</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="cHour" id="_087e3f57-8ea6-4857-a080-fadc5a1dd9e8">
-        <semantic:variable typeRef="number" name="cHour"/>
-        <semantic:informationRequirement id="_29232d62-dc42-48f0-98bf-5ebd3563006f">
-            <semantic:requiredDecision href="#_7df22028-4b5b-4594-89c7-a80b8aec526f"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>Date-Time2.hour</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="cMinute" id="_6836a944-7f7b-4c98-8a7a-a573494110fd">
-        <semantic:variable typeRef="number" name="cMinute"/>
-        <semantic:informationRequirement id="_55acbac0-c512-4da8-9fe3-f815065b7034">
-            <semantic:requiredDecision href="#_7df22028-4b5b-4594-89c7-a80b8aec526f"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>Date-Time2.minute</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="cSecond" id="_4af88a8f-92e4-4f2d-bde1-e8a36b27e5bf">
-        <semantic:variable typeRef="number" name="cSecond"/>
-        <semantic:informationRequirement id="c8b7fc1c-57bf-42fa-8580-f3260258ca93">
-            <semantic:requiredDecision href="#_7df22028-4b5b-4594-89c7-a80b8aec526f"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>Date-Time2.second</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="cOffset" id="_81f97dd0-29ea-4bab-9540-b70a2fdf8ff3">
-        <semantic:variable typeRef="dayTimeDuration" name="cOffset"/>
-        <semantic:informationRequirement id="cf4ba237-0685-4ca5-95da-f889caca520c">
-            <semantic:requiredDecision href="#_7df22028-4b5b-4594-89c7-a80b8aec526f"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>Date-Time2.time offset</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="years" id="_91fb395d-8173-4ed3-95f7-f790bd3967ab">
-        <semantic:variable typeRef="number" name="years"/>
-        <semantic:informationRequirement id="_7acd3f0b-3d4b-4901-976e-1aaa627273dc">
-            <semantic:requiredDecision href="#_cbac111e-ca71-4fac-a921-175ffd767055"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>ymDuration2.years</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
-    <semantic:decision name="seconds" id="_c2f1a1ae-1403-43a2-b176-dedf3da51e6b">
-        <semantic:variable typeRef="number" name="seconds"/>
-        <semantic:informationRequirement id="a8be0b63-799d-49fd-9edd-bf554198cb6a">
-            <semantic:requiredDecision href="#_972ecd98-1c70-4f0c-909c-786f23c61dbb"/>
-        </semantic:informationRequirement>
-        <semantic:literalExpression>
-            <semantic:text>dtDuration1.seconds</semantic:text>
-        </semantic:literalExpression>
-    </semantic:decision>
+<definitions exporter="DMN Modeler; Method and Style trisofix.xslt" exporterVersion="5.0.33.1; 1.0" namespace="http://www.trisotech.com/definitions/_69430b3e-17b8-430d-b760-c505bf6469f9" name="dateTime Table 58" triso:logoChoice="Default" id="_69430b3e-17b8-430d-b760-c505bf6469f9" xmlns="http://www.trisotech.com/definitions/_69430b3e-17b8-430d-b760-c505bf6469f9" xmlns:semantic="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <itemDefinition name="tDateTimeComponents" id="tDateTimeComponents">
+        <itemComponent name="Year" id="_df05a420-dbc5-48cf-be85-4b41702c4f33">
+            <typeRef>number</typeRef>
+        </itemComponent>
+        <itemComponent name="Month" id="_3e119228-7599-47e5-aa96-182e5ff66034">
+            <typeRef>number</typeRef>
+        </itemComponent>
+        <itemComponent name="Day" id="_d5d22cac-3276-4dfd-9aee-353aa47bf2d4">
+            <typeRef>number</typeRef>
+        </itemComponent>
+        <itemComponent name="Hour" id="_63defe21-0369-438e-b879-27df2bcf475e">
+            <typeRef>number</typeRef>
+        </itemComponent>
+        <itemComponent name="Minute" id="_1ebad337-b2da-49ed-8ab2-b308d78e1b2f">
+            <typeRef>number</typeRef>
+        </itemComponent>
+        <itemComponent name="Second" id="_4666a2d0-63b2-4822-b5b4-e266f4cca3d1">
+            <typeRef>number</typeRef>
+        </itemComponent>
+    </itemDefinition>
+    <itemDefinition name="tDateVariants" id="tDateVariants">
+        <itemComponent name="fromString" id="_02d44cc2-24ac-4f64-a61f-7044684dc438">
+            <typeRef>date</typeRef>
+        </itemComponent>
+        <itemComponent name="fromDateTime" id="_13da5f5e-8fdd-4a33-9500-ceeaaeaccc91">
+            <typeRef>date</typeRef>
+        </itemComponent>
+        <itemComponent name="fromYearMonthDay" id="_c4e03aa1-d8f3-4ffa-aab2-42a17a4fb707">
+            <typeRef>date</typeRef>
+        </itemComponent>
+    </itemDefinition>
+    <inputData name="dateString" id="_74a9c3ad-a813-444e-88ee-8a91096ee233">
+        <variable typeRef="string" name="dateString"/>
+    </inputData>
+    <inputData name="timeString" id="_e5705a69-0114-4f64-8aca-22500a533a51">
+        <variable typeRef="string" name="timeString"/>
+    </inputData>
+    <decision name="Date" id="_bd547a08-c157-47ca-84d4-ac6f3d5bdeda">
+        <variable typeRef="tns:tDateVariants" name="Date"/>
+        <informationRequirement id="_5ed07807-110d-4dd1-b721-c2a1965196ac">
+            <requiredInput href="#_74a9c3ad-a813-444e-88ee-8a91096ee233"/>
+        </informationRequirement>
+        <informationRequirement id="_6ae051c3-014c-4113-ba30-7664c6e9fea5">
+            <requiredInput href="#_178690e3-8936-4914-a735-6243a29b6068"/>
+        </informationRequirement>
+        <informationRequirement id="_319fca9b-1682-4452-83b2-bbc82ffcc7a6">
+            <requiredInput href="#_e3143b2d-e150-422e-8163-d3e4461988f4"/>
+        </informationRequirement>
+        <informationRequirement id="_04bc998f-14fd-45c0-820d-80db70891af6">
+            <requiredInput href="#_ec0d9542-257d-401b-ac6b-ce927014cf25"/>
+        </informationRequirement>
+        <informationRequirement id="_3a7338bd-a16c-4900-ab7f-0429d8b077b5">
+            <requiredDecision href="#_dfbb843a-bd34-4099-b700-0d9ca5b38d6a"/>
+        </informationRequirement>
+        <context>
+            <contextEntry>
+                <variable typeRef="date" name="fromString"/>
+                <literalExpression>
+                    <text>date(dateString)</text>
+                </literalExpression>
+            </contextEntry>
+            <contextEntry>
+                <variable typeRef="date" name="fromDateTime"/>
+                <literalExpression>
+                    <text>date(Date-Time)</text>
+                </literalExpression>
+            </contextEntry>
+            <contextEntry>
+                <variable typeRef="date" name="fromYearMonthDay"/>
+                <literalExpression>
+                    <text>date(Year,Month,Day)</text>
+                </literalExpression>
+            </contextEntry>
+        </context>
+    </decision>
+    <decision name="Date-Time" id="_dfbb843a-bd34-4099-b700-0d9ca5b38d6a">
+        <variable typeRef="dateTime" name="Date-Time"/>
+        <informationRequirement id="_8d312d4f-6650-45f9-8739-00e07e993176">
+            <requiredInput href="#_c796f29d-d800-4239-b9f6-d4d72f77b183"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>date and time(dateTimeString)</text>
+        </literalExpression>
+    </decision>
+    <decision name="Time" id="_9e8acf47-790a-4741-8ebb-e8a22a30744c">
+        <variable typeRef="time" name="Time"/>
+        <informationRequirement id="_5201382e-6f86-4846-9a56-1dd77102ccb6">
+            <requiredInput href="#_e5705a69-0114-4f64-8aca-22500a533a51"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>time(timeString)</text>
+        </literalExpression>
+    </decision>
+    <inputData name="Year" id="_178690e3-8936-4914-a735-6243a29b6068">
+        <variable typeRef="number" name="Year"/>
+    </inputData>
+    <inputData name="Month" id="_e3143b2d-e150-422e-8163-d3e4461988f4">
+        <variable typeRef="number" name="Month"/>
+    </inputData>
+    <inputData name="Day" id="_ec0d9542-257d-401b-ac6b-ce927014cf25">
+        <variable typeRef="number" name="Day"/>
+    </inputData>
+    <decision name="Date-Time2" id="_7df22028-4b5b-4594-89c7-a80b8aec526f">
+        <variable typeRef="dateTime" name="Date-Time2"/>
+        <informationRequirement id="f5fbf8c4-02f9-4dff-b0c8-a6e8321284b8">
+            <requiredDecision href="#_bd547a08-c157-47ca-84d4-ac6f3d5bdeda"/>
+        </informationRequirement>
+        <informationRequirement id="efe0f748-c173-422a-a9b3-733d6cefa0fb">
+            <requiredDecision href="#_9e8acf47-790a-4741-8ebb-e8a22a30744c"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>date and time(Date.fromString,Time)</text>
+        </literalExpression>
+    </decision>
+    <decision name="Time2" id="_1f2b08ce-3c6b-4e22-a747-8d9f378e9035">
+        <variable typeRef="time" name="Time2"/>
+        <informationRequirement id="_5900b0b2-0fb2-4fa5-839e-4ec7c11dc88b">
+            <requiredDecision href="#_7df22028-4b5b-4594-89c7-a80b8aec526f"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>time(Date-Time2)</text>
+        </literalExpression>
+    </decision>
+    <inputData name="dateTimeString" id="_c796f29d-d800-4239-b9f6-d4d72f77b183">
+        <variable typeRef="string" name="dateTimeString"/>
+    </inputData>
+    <inputData name="Hours" id="_0dffa0f8-4c84-401e-8403-94c201fbd976">
+        <variable typeRef="number" name="Hours"/>
+    </inputData>
+    <inputData name="Minutes" id="_03d8f475-0a28-4c67-8fc5-51d9b1f54781">
+        <variable typeRef="number" name="Minutes"/>
+    </inputData>
+    <inputData name="Seconds" id="_9225dbc5-fe5c-4fa9-b97c-0a41265abf20">
+        <variable typeRef="number" name="Seconds"/>
+    </inputData>
+    <inputData name="Timezone" id="_b133cbd3-884d-4cf9-a750-81d949d17e31">
+        <variable typeRef="dayTimeDuration" name="Timezone"/>
+    </inputData>
+    <decision name="Time3" id="_463b1a36-2505-413a-8056-f6a5efc2b52e">
+        <variable typeRef="time" name="Time3"/>
+        <informationRequirement id="_4274d006-c59f-403d-a944-a04238d91346">
+            <requiredInput href="#_0dffa0f8-4c84-401e-8403-94c201fbd976"/>
+        </informationRequirement>
+        <informationRequirement id="_5e5240d7-c390-4c06-b5f2-c3d7bf2377b6">
+            <requiredInput href="#_03d8f475-0a28-4c67-8fc5-51d9b1f54781"/>
+        </informationRequirement>
+        <informationRequirement id="fc9c1ed9-7c9b-4d47-a278-a343e0d91d43">
+            <requiredInput href="#_9225dbc5-fe5c-4fa9-b97c-0a41265abf20"/>
+        </informationRequirement>
+        <informationRequirement id="_8ac32b2a-d345-4a76-b2f7-21d3c0430b98">
+            <requiredInput href="#_b133cbd3-884d-4cf9-a750-81d949d17e31"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>time(Hours,Minutes,Seconds,Timezone)</text>
+        </literalExpression>
+    </decision>
+    <inputData name="durationString" id="_6f8bf858-eed1-4f41-93f2-73431540f91f">
+        <variable typeRef="string" name="durationString"/>
+    </inputData>
+    <decision name="dtDuration1" id="_972ecd98-1c70-4f0c-909c-786f23c61dbb">
+        <variable typeRef="dayTimeDuration" name="dtDuration1"/>
+        <informationRequirement id="_97285856-a25e-42a6-8ab3-2840c3f877ca">
+            <requiredInput href="#_6f8bf858-eed1-4f41-93f2-73431540f91f"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>duration(durationString)</text>
+        </literalExpression>
+    </decision>
+    <decision name="dtDuration2" id="_a2c48b03-6e72-4846-99cc-02f3747c6867">
+        <variable typeRef="dayTimeDuration" name="dtDuration2"/>
+        <informationRequirement id="c2b80b2f-3767-4c1a-87a4-926fd8a83df3">
+            <requiredDecision href="#_7df22028-4b5b-4594-89c7-a80b8aec526f"/>
+        </informationRequirement>
+        <informationRequirement id="_4714aa72-23ad-4964-9429-feef62f03e9b">
+            <requiredDecision href="#_dfbb843a-bd34-4099-b700-0d9ca5b38d6a"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>Date-Time - Date-Time2</text>
+        </literalExpression>
+    </decision>
+    <inputData name="oneHour" id="_d96a8f03-5cee-42ca-8646-4383ad5ecee2">
+        <variable typeRef="dayTimeDuration" name="oneHour"/>
+    </inputData>
+    <decision name="sumDurations" id="_14f9f361-8c3c-455b-9c97-fe15201e3b5e">
+        <variable typeRef="dayTimeDuration" name="sumDurations"/>
+        <informationRequirement id="_1dc50225-3087-448d-9cdc-e65c31bc654e">
+            <requiredDecision href="#_a2c48b03-6e72-4846-99cc-02f3747c6867"/>
+        </informationRequirement>
+        <informationRequirement id="bcac3502-a278-4806-9999-ff28fd763fd2">
+            <requiredDecision href="#_972ecd98-1c70-4f0c-909c-786f23c61dbb"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>dtDuration1 + dtDuration2</text>
+        </literalExpression>
+    </decision>
+    <decision name="ymDuration2" id="_cbac111e-ca71-4fac-a921-175ffd767055">
+        <variable typeRef="yearMonthDuration" name="ymDuration2"/>
+        <informationRequirement id="_5221210e-7f47-48d4-a4bf-fe930eaabb47">
+            <requiredDecision href="#_7df22028-4b5b-4594-89c7-a80b8aec526f"/>
+        </informationRequirement>
+        <informationRequirement id="_86f10707-9f4f-4ba1-be26-83ff133c8a5c">
+            <requiredDecision href="#_dfbb843a-bd34-4099-b700-0d9ca5b38d6a"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>years and months duration(Date-Time2,Date-Time)</text>
+        </literalExpression>
+    </decision>
+    <decision name="cDay" id="_04c6bedc-bc63-464f-8e61-c039d24a47bf">
+        <variable typeRef="number" name="cDay"/>
+        <informationRequirement id="_25eb94de-81ac-42cb-b2e9-a11f49c2def1">
+            <requiredDecision href="#_bd547a08-c157-47ca-84d4-ac6f3d5bdeda"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>Date.fromString.day</text>
+        </literalExpression>
+    </decision>
+    <decision name="cYear" id="_dc18ebe0-6762-4734-aeb3-ed4fb861865c">
+        <variable typeRef="number" name="cYear"/>
+        <informationRequirement id="edbe69a3-9a72-4c23-b1bb-a961d9f1adf3">
+            <requiredDecision href="#_bd547a08-c157-47ca-84d4-ac6f3d5bdeda"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>Date.fromString.year</text>
+        </literalExpression>
+    </decision>
+    <decision name="cMonth" id="_2cf37ed0-590d-4f97-b58b-46eaa424b965">
+        <variable typeRef="number" name="cMonth"/>
+        <informationRequirement id="a214e170-6edc-4936-b7d9-c75de86f08bd">
+            <requiredDecision href="#_bd547a08-c157-47ca-84d4-ac6f3d5bdeda"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>Date.fromString.month</text>
+        </literalExpression>
+    </decision>
+    <decision name="cHour" id="_087e3f57-8ea6-4857-a080-fadc5a1dd9e8">
+        <variable typeRef="number" name="cHour"/>
+        <informationRequirement id="_29232d62-dc42-48f0-98bf-5ebd3563006f">
+            <requiredDecision href="#_7df22028-4b5b-4594-89c7-a80b8aec526f"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>Date-Time2.hour</text>
+        </literalExpression>
+    </decision>
+    <decision name="cMinute" id="_6836a944-7f7b-4c98-8a7a-a573494110fd">
+        <variable typeRef="number" name="cMinute"/>
+        <informationRequirement id="_55acbac0-c512-4da8-9fe3-f815065b7034">
+            <requiredDecision href="#_7df22028-4b5b-4594-89c7-a80b8aec526f"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>Date-Time2.minute</text>
+        </literalExpression>
+    </decision>
+    <decision name="cSecond" id="_4af88a8f-92e4-4f2d-bde1-e8a36b27e5bf">
+        <variable typeRef="number" name="cSecond"/>
+        <informationRequirement id="c8b7fc1c-57bf-42fa-8580-f3260258ca93">
+            <requiredDecision href="#_7df22028-4b5b-4594-89c7-a80b8aec526f"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>Date-Time2.second</text>
+        </literalExpression>
+    </decision>
+    <decision name="cOffset" id="_81f97dd0-29ea-4bab-9540-b70a2fdf8ff3">
+        <variable typeRef="dayTimeDuration" name="cOffset"/>
+        <informationRequirement id="cf4ba237-0685-4ca5-95da-f889caca520c">
+            <requiredDecision href="#_7df22028-4b5b-4594-89c7-a80b8aec526f"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>Date-Time2.time offset</text>
+        </literalExpression>
+    </decision>
+    <decision name="years" id="_91fb395d-8173-4ed3-95f7-f790bd3967ab">
+        <variable typeRef="number" name="years"/>
+        <informationRequirement id="_7acd3f0b-3d4b-4901-976e-1aaa627273dc">
+            <requiredDecision href="#_cbac111e-ca71-4fac-a921-175ffd767055"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>ymDuration2.years</text>
+        </literalExpression>
+    </decision>
+    <decision name="seconds" id="_c2f1a1ae-1403-43a2-b176-dedf3da51e6b">
+        <variable typeRef="number" name="seconds"/>
+        <informationRequirement id="a8be0b63-799d-49fd-9edd-bf554198cb6a">
+            <requiredDecision href="#_972ecd98-1c70-4f0c-909c-786f23c61dbb"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>dtDuration1.seconds</text>
+        </literalExpression>
+    </decision>
     <dmndi:DMNDI>
         <dmndi:DMNDiagram id="_69430b3e-17b8-430d-b760-c505bf6469f9_D1">
             <dmndi:Size height="1265.0" width="2814.0"/>
@@ -508,5 +508,5 @@
             </dmndi:DMNShape>
         </dmndi:DMNDiagram>
     </dmndi:DMNDI>
-</semantic:definitions>
+</definitions>
 
