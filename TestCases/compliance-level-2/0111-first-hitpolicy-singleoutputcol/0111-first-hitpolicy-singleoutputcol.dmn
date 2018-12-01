@@ -1,45 +1,61 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<dmn11:definitions xmlns="http://www.trisotech.com/definitions/Definitions_1qokm8z" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:trisofeed="http://trisotech.com/feed" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exporter="DMN Modeler" exporterVersion="6.1.2" id="Definitions_1qokm8z" name="DRD" namespace="http://www.trisotech.com/definitions/Definitions_1qokm8z" triso:logoChoice="Default" xmlns:dmn11="http://www.omg.org/spec/DMN/20151101/dmn.xsd">
-  <dmn11:extensionElements/>
-  <dmn11:decision id="advertisement" name="Advertisement">
-    <dmn11:variable id="_7f901e84-f450-4108-8b5e-409742a9e301" name="Advertisement" typeRef="feel:string"/>
-    <dmn11:informationRequirement>
-      <dmn11:requiredInput href="#inputData_input_1"/>
-    </dmn11:informationRequirement>
-    <dmn11:decisionTable hitPolicy="FIRST" id="decisionTable_1" outputLabel="Advertisement" typeRef="feel:string">
-      <dmn11:input id="input_1">
-        <dmn11:inputExpression typeRef="feel:number">
-          <dmn11:text>age</dmn11:text>
-        </dmn11:inputExpression>
-      </dmn11:input>
-      <dmn11:output id="output_1"/>
-      <dmn11:rule id="DecisionRule_0bqji8h">
-        <dmn11:inputEntry id="UnaryTests_0zl6br9">
-          <dmn11:text>&gt;18</dmn11:text>
-        </dmn11:inputEntry>
-        <dmn11:outputEntry id="LiteralExpression_10tjqb0">
-          <dmn11:text>"Cars"</dmn11:text>
-        </dmn11:outputEntry>
-      </dmn11:rule>
-      <dmn11:rule id="DecisionRule_1m87ug5">
-        <dmn11:inputEntry id="UnaryTests_0loyy07">
-          <dmn11:text>&gt;12</dmn11:text>
-        </dmn11:inputEntry>
-        <dmn11:outputEntry id="LiteralExpression_0rlkccr">
-          <dmn11:text>"Videogames"</dmn11:text>
-        </dmn11:outputEntry>
-      </dmn11:rule>
-      <dmn11:rule id="DecisionRule_0fnal3o">
-        <dmn11:inputEntry id="UnaryTests_1jpefrb">
-          <dmn11:text>&gt;0</dmn11:text>
-        </dmn11:inputEntry>
-        <dmn11:outputEntry id="LiteralExpression_1nermff">
-          <dmn11:text>"Toys"</dmn11:text>
-        </dmn11:outputEntry>
-      </dmn11:rule>
-    </dmn11:decisionTable>
-  </dmn11:decision>
-  <dmn11:inputData id="inputData_input_1" name="age">
-    <dmn11:variable id="_966f839f-5392-4d9c-902c-397105f16303" name="age" typeRef="feel:number"/>
-  </dmn11:inputData>
-</dmn11:definitions>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions exporter="DMN Modeler" exporterVersion="6.1.2" namespace="http://www.trisotech.com/definitions/Definitions_1qokm8z" name="DRD" triso:logoChoice="Default" id="Definitions_1qokm8z" xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <extensionElements/>
+    <decision name="Advertisement" id="advertisement">
+        <variable typeRef="string" name="Advertisement" id="_7f901e84-f450-4108-8b5e-409742a9e301"/>
+        <informationRequirement id="_937b0758-6905-4f1d-9874-7b62a2024fdc">
+            <requiredInput href="#inputData_input_1"/>
+        </informationRequirement>
+        <decisionTable hitPolicy="FIRST" outputLabel="Advertisement" typeRef="string" id="decisionTable_1">
+            <input id="input_1">
+                <inputExpression typeRef="number">
+                    <text>age</text>
+                </inputExpression>
+            </input>
+            <output id="output_1"/>
+            <rule id="DecisionRule_0bqji8h">
+                <inputEntry id="UnaryTests_0zl6br9">
+                    <text>&gt;18</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_10tjqb0">
+                    <text>"Cars"</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1m87ug5">
+                <inputEntry id="UnaryTests_0loyy07">
+                    <text>&gt;12</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0rlkccr">
+                    <text>"Videogames"</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0fnal3o">
+                <inputEntry id="UnaryTests_1jpefrb">
+                    <text>&gt;0</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1nermff">
+                    <text>"Toys"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+    <inputData name="age" id="inputData_input_1">
+        <variable typeRef="number" name="age" id="_966f839f-5392-4d9c-902c-397105f16303"/>
+    </inputData>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="Definitions_1qokm8z_D1">
+            <dmndi:Size height="650.0" width="650.0"/>
+            <dmndi:DMNShape dmnElementRef="advertisement" id="Definitions_1qokm8z_s1">
+                <dc:Bounds height="61.0" width="154.0" x="150.0" y="150.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape dmnElementRef="inputData_input_1" id="Definitions_1qokm8z_s2">
+                <dc:Bounds height="60.0" width="153.0" x="151.0" y="331.0"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge dmnElementRef="_937b0758-6905-4f1d-9874-7b62a2024fdc" id="Definitions_1qokm8z_e1">
+                <di:waypoint x="227.0" y="331.0"/>
+                <di:waypoint x="227.0" y="211.0"/>
+            </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+</definitions>
+

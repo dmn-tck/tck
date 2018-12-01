@@ -24,7 +24,7 @@ public class TestCasesFiles {
     static Schema testCasesSchema;
     static {
         try {
-            dmnSchema = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI).newSchema(new File("../../TestCases/dmn.xsd"));
+            dmnSchema = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI).newSchema(new File("../../TestCases/DMN12.xsd"));
             testCasesSchema = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI).newSchema(new File("../../TestCases/testCases.xsd"));
         } catch (SAXException e) {
             throw new RuntimeException("Unable to initialize correctly.", e);
