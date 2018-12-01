@@ -30,7 +30,7 @@
     <link href="css/lib.css" rel="stylesheet" media="screen, print">
 
     <!-- chart js -->
-    <title>DMN TCK results overview for Red Hat 7.10.0.Final</title>
+    <title>DMN TCK results overview for Red Hat 7.15.0.Final</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script>
@@ -72,7 +72,7 @@
                 <li>
                     <a href="index.html">Home</a>
                 </li>
-                <li class="active"><strong>Drools 7.10.0.Final</strong></li>
+                <li class="active"><strong>Drools 7.15.0.Final</strong></li>
             </ol>
         </div>
     </div>
@@ -81,13 +81,13 @@
             <div class="report-header ">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>DMN TCK Results Overview for Drools 7.10.0.Final</h1>
+                        <h1>DMN TCK Results Overview for Drools 7.15.0.Final</h1>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Date:</strong> 2018-08-20</p>
+                            <p><strong>Date:</strong> 2018-11-30</p>
                         </small>
                     </div>
                     <div class="col-md-2">
@@ -183,7 +183,7 @@
                             ]
                         },
                         {
-                            label: "Skipped",
+                            label: "Not Supported",
                             backgroundColor: color(window.chartColors.yellow).alpha(0.5).rgbString(),
                             borderColor: window.chartColors.yellow,
                             borderWidth: 1,
@@ -249,6 +249,69 @@
                             label: "Failed",
                             backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
                             borderColor: window.chartColors.red,
+                            borderWidth: 1,
+                            data: [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ]
+                        },
+                        {
+                            label: "Missing",
+                            backgroundColor: color(window.chartColors.purple).alpha(0.5).rgbString(),
+                            borderColor: window.chartColors.purple,
                             borderWidth: 1,
                             data: [
                                 0,
@@ -379,7 +442,7 @@
                             ]
                         },
                         {
-                            label: "Skipped",
+                            label: "Not Supported",
                             backgroundColor: color(window.chartColors.yellow).alpha(0.5).rgbString(),
                             borderColor: window.chartColors.yellow,
                             borderWidth: 1,
@@ -503,6 +566,69 @@
                             0,
                             0
                             ]
+                        },
+                        {
+                            label: "Missing",
+                            backgroundColor: color(window.chartColors.purple).alpha(0.5).rgbString(),
+                            borderColor: window.chartColors.purple,
+                            borderWidth: 1,
+                            data: [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                            ]
                         }
                     ]
                 };
@@ -527,7 +653,7 @@
                             },
                             title: {
                                 display: true,
-                                text: 'Test results for Red Hat 7.10.0.Final (by number of tests)'
+                                text: 'Test results for Red Hat 7.15.0.Final (by number of tests)'
                             },
                             scales: {
                                 xAxes: [{
@@ -559,7 +685,7 @@
                             },
                             title: {
                                 display: true,
-                                text: 'Test results for Red Hat 7.10.0.Final (by percentage of tests)'
+                                text: 'Test results for Red Hat 7.15.0.Final (by percentage of tests)'
                             },
                             scales: {
                                 xAxes: [{
@@ -604,337 +730,337 @@
                                         <small></small>
                                     </th>
                                     <th> Red Hat <br/>
-                                        <small>7.10.0.Final</small>
+                                        <small>7.15.0.Final</small>
                                     </th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb0','Aggregator: COUNT')">Aggregator: COUNT</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb0','Aggregator: COUNT')">Aggregator: COUNT</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb1','Aggregator: MIN')">Aggregator: MIN</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb1','Aggregator: MIN')">Aggregator: MIN</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb2','Aggregator: SUM')">Aggregator: SUM</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb2','Aggregator: SUM')">Aggregator: SUM</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb3','Business Knowledge Model')">Business Knowledge Model</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb3','Business Knowledge Model')">Business Knowledge Model</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>22/22</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb4','Compliance Level 2')">Compliance Level 2</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb4','Compliance Level 2')">Compliance Level 2</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>116/116</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb5','Compliance Level 3')">Compliance Level 3</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb5','Compliance Level 3')">Compliance Level 3</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>515/515</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb6','Context')">Context</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb6','Context')">Context</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>17/17</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb7','Data Type : String')">Data Type : String</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb7','Data Type : String')">Data Type : String</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb8','Data Type: Boolean')">Data Type: Boolean</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb8','Data Type: Boolean')">Data Type: Boolean</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>88/88</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb9','Data Type: Collection')">Data Type: Collection</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb9','Data Type: Collection')">Data Type: Collection</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>47/47</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb10','Data Type: Date')">Data Type: Date</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb10','Data Type: Date')">Data Type: Date</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>14/14</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb11','Data Type: Date and Time')">Data Type: Date and Time</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb11','Data Type: Date and Time')">Data Type: Date and Time</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb12','Data Type: Days and Time Duration')">Data Type: Days and Time Duration</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb12','Data Type: Days and Time Duration')">Data Type: Days and Time Duration</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb13','Data Type: Function')">Data Type: Function</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb13','Data Type: Function')">Data Type: Function</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb14','Data Type: Number')">Data Type: Number</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb14','Data Type: Number')">Data Type: Number</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>194/194</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb15','Data Type: String')">Data Type: String</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb15','Data Type: String')">Data Type: String</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>191/191</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb16','Data Type: Structure')">Data Type: Structure</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb16','Data Type: Structure')">Data Type: Structure</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>65/65</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb17','Data Type: Text')">Data Type: Text</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb17','Data Type: Text')">Data Type: Text</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb18','Data Type: Time')">Data Type: Time</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb18','Data Type: Time')">Data Type: Time</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>4/4</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb19','Data Type: Years and Months Duration')">Data Type: Years and Months Duration</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb19','Data Type: Years and Months Duration')">Data Type: Years and Months Duration</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>39/39</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb20','Decision Table: Multiple Output')">Decision Table: Multiple Output</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb20','Decision Table: Multiple Output')">Decision Table: Multiple Output</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>18/18</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb21','Decision Table: Multiple Output Columns')">Decision Table: Multiple Output Columns</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb21','Decision Table: Multiple Output Columns')">Decision Table: Multiple Output Columns</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb22','Decision Table: Single Output')">Decision Table: Single Output</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb22','Decision Table: Single Output')">Decision Table: Single Output</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>67/67</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb23','FEEL Arithmetic')">FEEL Arithmetic</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb23','FEEL Arithmetic')">FEEL Arithmetic</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>101/101</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb24','FEEL Conditionals')">FEEL Conditionals</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb24','FEEL Conditionals')">FEEL Conditionals</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>11/11</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb25','FEEL Constants')">FEEL Constants</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb25','FEEL Constants')">FEEL Constants</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>44/44</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb26','FEEL Filter (10.3.2.5)')">FEEL Filter (10.3.2.5)</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb26','FEEL Filter (10.3.2.5)')">FEEL Filter (10.3.2.5)</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>8/8</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb27','FEEL Function Literals')">FEEL Function Literals</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb27','FEEL Function Literals')">FEEL Function Literals</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>7/7</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb28','FEEL Functions: date and time')">FEEL Functions: date and time</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb28','FEEL Functions: date and time')">FEEL Functions: date and time</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>278/278</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb29','FEEL Functions: list')">FEEL Functions: list</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb29','FEEL Functions: list')">FEEL Functions: list</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>39/39</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb30','FEEL Functions: lists')">FEEL Functions: lists</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb30','FEEL Functions: lists')">FEEL Functions: lists</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>23/23</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb31','FEEL Functions: number')">FEEL Functions: number</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb31','FEEL Functions: number')">FEEL Functions: number</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>22/22</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb32','FEEL Functions: numeric')">FEEL Functions: numeric</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb32','FEEL Functions: numeric')">FEEL Functions: numeric</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>7/7</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb33','FEEL Functions: string')">FEEL Functions: string</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb33','FEEL Functions: string')">FEEL Functions: string</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>27/27</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb34','FEEL Functions: strings')">FEEL Functions: strings</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb34','FEEL Functions: strings')">FEEL Functions: strings</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>102/102</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb35','FEEL Iteration')">FEEL Iteration</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb35','FEEL Iteration')">FEEL Iteration</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb36','FEEL List')">FEEL List</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb36','FEEL List')">FEEL List</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>34/34</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb37','FEEL List Operator')">FEEL List Operator</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb37','FEEL List Operator')">FEEL List Operator</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb38','FEEL Quantifiers')">FEEL Quantifiers</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb38','FEEL Quantifiers')">FEEL Quantifiers</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>1/1</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb39','FEEL Relation')">FEEL Relation</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb39','FEEL Relation')">FEEL Relation</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>1/1</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb40','FEEL Special-character Names')">FEEL Special-character Names</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb40','FEEL Special-character Names')">FEEL Special-character Names</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>43/43</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb41','Function Definition')">Function Definition</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb41','Function Definition')">Function Definition</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>5/5</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb42','Function Invocation')">Function Invocation</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb42','Function Invocation')">Function Invocation</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>9/9</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb43','Hit Policy: ANY')">Hit Policy: ANY</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb43','Hit Policy: ANY')">Hit Policy: ANY</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb44','Hit Policy: COLLECT')">Hit Policy: COLLECT</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb44','Hit Policy: COLLECT')">Hit Policy: COLLECT</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>29/29</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb45','Hit Policy: Collect')">Hit Policy: Collect</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb45','Hit Policy: Collect')">Hit Policy: Collect</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb46','Hit Policy: FIRST')">Hit Policy: FIRST</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb46','Hit Policy: FIRST')">Hit Policy: FIRST</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb47','Hit Policy: OUTPUT ORDER')">Hit Policy: OUTPUT ORDER</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb47','Hit Policy: OUTPUT ORDER')">Hit Policy: OUTPUT ORDER</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb48','Hit Policy: PRIORITY')">Hit Policy: PRIORITY</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb48','Hit Policy: PRIORITY')">Hit Policy: PRIORITY</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>14/14</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb49','Hit Policy: RULE ORDER')">Hit Policy: RULE ORDER</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb49','Hit Policy: RULE ORDER')">Hit Policy: RULE ORDER</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb50','Hit Policy: UNIQUE')">Hit Policy: UNIQUE</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb50','Hit Policy: UNIQUE')">Hit Policy: UNIQUE</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>21/21</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb51','Item Definition')">Item Definition</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb51','Item Definition')">Item Definition</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>119/119</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb52','Literal Expression')">Literal Expression</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb52','Literal Expression')">Literal Expression</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>522/522</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb53','Literal Function Invocation')">Literal Function Invocation</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb53','Literal Function Invocation')">Literal Function Invocation</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>8/8</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.10.0.Final.html', 'tb54','Relation')">Relation</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Drools_7.15.0.Final.html', 'tb54','Relation')">Relation</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>2/2</small></span>
                                     </td>
@@ -960,7 +1086,7 @@
 <!-- pre-footer -->
 <div class="pre-footer">
     <div class="last-updated">
-        <p>Last updated:</strong> 03-Sep-2018 08:35:29</p>
+        <p>Last updated:</strong> 01-Dec-2018 16:09:56</p>
     </div>
 </div>
 <div class="footer">
