@@ -96,7 +96,7 @@
         </itemComponent>
     </itemDefinition>
     <decision name="BureauCallType" id="d_BureauCallType">
-        <variable typeRef="tns:tBureauCallType" name="BureauCallType"/>
+        <variable typeRef="tBureauCallType" name="BureauCallType"/>
         <informationRequirement id="_77738833-38e6-4520-8774-d907958edb38">
             <requiredDecision href="#d_Pre-bureauRiskCategory"/>
         </informationRequirement>
@@ -118,7 +118,7 @@
     <decision name="Strategy" id="d_Strategy">
         <question>Is credit bureau call required?</question>
         <allowedAnswers>Yes (BUREAU) or No (DECLINE, THROUGH)</allowedAnswers>
-        <variable typeRef="tns:tStrategy" name="Strategy"/>
+        <variable typeRef="tStrategy" name="Strategy"/>
         <informationRequirement id="a451ac15-800a-4021-bad0-7371ceaf77a8">
             <requiredDecision href="#d_BureauCallType"/>
         </informationRequirement>
@@ -183,7 +183,7 @@
         </decisionTable>
     </decision>
     <decision name="Eligibility" id="d_Eligibility">
-        <variable typeRef="tns:tEligibility" name="Eligibility"/>
+        <variable typeRef="tEligibility" name="Eligibility"/>
         <informationRequirement id="_53bb075b-376a-4062-b5c1-df7d3e5f55ca">
             <requiredDecision href="#d_Pre-bureauAffordability"/>
         </informationRequirement>
@@ -221,7 +221,7 @@
         </invocation>
     </decision>
     <decision name="Pre-bureauRiskCategory" id="d_Pre-bureauRiskCategory">
-        <variable typeRef="tns:tRiskCategory" name="Pre-bureauRiskCategory"/>
+        <variable typeRef="tRiskCategory" name="Pre-bureauRiskCategory"/>
         <informationRequirement id="_03407f4c-6cb9-41c4-96e5-5b55b16b2b9e">
             <requiredDecision href="#d_ApplicationRiskScore"/>
         </informationRequirement>
@@ -250,7 +250,7 @@
         </invocation>
     </decision>
     <decision name="Post-bureauRiskCategory" id="d_Post-bureauRiskCategory">
-        <variable typeRef="tns:tRiskCategory" name="Post-bureauRiskCategory"/>
+        <variable typeRef="tRiskCategory" name="Post-bureauRiskCategory"/>
         <informationRequirement id="a0a68746-9fcb-424d-82d8-a7ddfca8ef09">
             <requiredDecision href="#d_ApplicationRiskScore"/>
         </informationRequirement>
@@ -458,7 +458,7 @@
         </invocation>
     </decision>
     <decision name="Routing" id="d_Routing">
-        <variable typeRef="tns:tRouting" name="Routing"/>
+        <variable typeRef="tRouting" name="Routing"/>
         <informationRequirement id="_215e8649-6226-457c-83cc-1a3470dee477">
             <requiredDecision href="#d_Post-bureauAffordability"/>
         </informationRequirement>
@@ -502,7 +502,7 @@
         </invocation>
     </decision>
     <decision name="Adjudication" id="d_Adjudication">
-        <variable typeRef="tns:tAdjudication" name="Adjudication"/>
+        <variable typeRef="tAdjudication" name="Adjudication"/>
         <informationRequirement id="b6a62c51-d7e3-423b-b81b-f9d3c889cc7f">
             <requiredInput href="#i_BureauData"/>
         </informationRequirement>
@@ -522,7 +522,7 @@
             <formalParameter typeRef="number" name="MonthlyIncome"/>
             <formalParameter typeRef="number" name="MonthlyRepayments"/>
             <formalParameter typeRef="number" name="MonthlyExpenses"/>
-            <formalParameter typeRef="tns:tRiskCategory" name="RiskCategory"/>
+            <formalParameter typeRef="tRiskCategory" name="RiskCategory"/>
             <formalParameter typeRef="number" name="RequiredMonthlyInstallment"/>
             <context>
                 <contextEntry>
@@ -565,7 +565,7 @@
     <businessKnowledgeModel name="CreditContingencyFactorTable" id="b_CreditContingencyFactorTable">
         <variable name="CreditContingencyFactorTable"/>
         <encapsulatedLogic>
-            <formalParameter typeRef="tns:tRiskCategory" name="RiskCategory"/>
+            <formalParameter typeRef="tRiskCategory" name="RiskCategory"/>
             <decisionTable hitPolicy="UNIQUE" outputLabel="CreditContingencyFactorTable" preferredOrientation="Rule-as-Row">
                 <input id="_7cdd3950-9a45-41f0-bef0-dc54240fe4c2" label="RiskCategory">
                     <inputExpression typeRef="string">
@@ -606,7 +606,7 @@
     <businessKnowledgeModel name="EligibilityRules" id="b_EligibilityRules">
         <variable name="EligibilityRules"/>
         <encapsulatedLogic>
-            <formalParameter typeRef="tns:tRiskCategory" name="Pre-bureauRiskCategory"/>
+            <formalParameter typeRef="tRiskCategory" name="Pre-bureauRiskCategory"/>
             <formalParameter typeRef="boolean" name="Pre-bureauAffordability"/>
             <formalParameter typeRef="number" name="Age"/>
             <decisionTable hitPolicy="PRIORITY" outputLabel="EligibilityRules" preferredOrientation="Rule-as-Row">
@@ -692,7 +692,7 @@
     <businessKnowledgeModel name="BureauCallTypeTable" id="b_BureauCallTypeTable">
         <variable name="BureauCallTypeTable"/>
         <encapsulatedLogic>
-            <formalParameter typeRef="tns:tRiskCategory" name="Pre-bureauRiskCategory"/>
+            <formalParameter typeRef="tRiskCategory" name="Pre-bureauRiskCategory"/>
             <decisionTable hitPolicy="UNIQUE" outputLabel="BureauCallTypeTable" preferredOrientation="Rule-as-Row">
                 <input id="_fcd1287d-7572-4523-ab27-33eff68d965b" label="Pre-bureauRiskCategory">
                     <inputExpression typeRef="string">
@@ -1263,7 +1263,7 @@
     <businessKnowledgeModel name="RoutingRules" id="b_RoutingRules">
         <variable name="RoutingRules"/>
         <encapsulatedLogic>
-            <formalParameter typeRef="tns:tRiskCategory" name="Post-bureauRiskCategory"/>
+            <formalParameter typeRef="tRiskCategory" name="Post-bureauRiskCategory"/>
             <formalParameter typeRef="boolean" name="Post-bureauAffordability"/>
             <formalParameter typeRef="boolean" name="Bankrupt"/>
             <formalParameter typeRef="number" name="CreditScore"/>
@@ -1382,13 +1382,13 @@
         </encapsulatedLogic>
     </businessKnowledgeModel>
     <inputData name="ApplicantData" id="i_ApplicantData">
-        <variable typeRef="tns:tApplicantData" name="ApplicantData"/>
+        <variable typeRef="tApplicantData" name="ApplicantData"/>
     </inputData>
     <inputData name="BureauData" id="i_BureauData">
-        <variable typeRef="tns:tBureauData" name="BureauData"/>
+        <variable typeRef="tBureauData" name="BureauData"/>
     </inputData>
     <inputData name="RequestedProduct" id="i_RequestedProduct">
-        <variable typeRef="tns:tRequestedProduct" name="RequestedProduct"/>
+        <variable typeRef="tRequestedProduct" name="RequestedProduct"/>
     </inputData>
     <inputData name="SupportingDocuments" id="i_SupportingDocuments">
         <variable typeRef="string" name="SupportingDocuments"/>

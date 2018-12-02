@@ -59,7 +59,7 @@
         <variable typeRef="number" name="NumC"/>
     </inputData>
     <decision name="Basic" id="_de5529b1-ed4c-4b39-9e36-e0e056aec20c">
-        <variable typeRef="tns:tBasic" name="Basic"/>
+        <variable typeRef="tBasic" name="Basic"/>
         <informationRequirement id="_17e8658a-1553-481b-872a-ea3ff99a3f30">
             <requiredInput href="#_0923ed0c-3674-4476-b84c-f9ad5e5e8048"/>
         </informationRequirement>
@@ -154,7 +154,7 @@
         </literalExpression>
     </decision>
     <decision name="Replace" id="_cc368e53-961d-4399-ad91-df00446b49d8">
-        <variable typeRef="tns:tReplace" name="Replace"/>
+        <variable typeRef="tReplace" name="Replace"/>
         <informationRequirement id="c43c1999-2a2f-419a-8816-a16d42932298">
             <requiredInput href="#_0923ed0c-3674-4476-b84c-f9ad5e5e8048"/>
         </informationRequirement>

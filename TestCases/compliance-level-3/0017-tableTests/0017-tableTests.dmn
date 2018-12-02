@@ -15,7 +15,7 @@
         <typeRef>string</typeRef>
     </itemDefinition>
     <inputData name="structA" id="_18b9d486-1ec0-436d-af4b-3e4567e8bca9">
-        <variable typeRef="tns:tA" name="structA"/>
+        <variable typeRef="tA" name="structA"/>
     </inputData>
     <inputData name="numB" id="_3b175722-5f96-49e4-a50d-0bf9588c901c">
         <variable typeRef="number" name="numB"/>

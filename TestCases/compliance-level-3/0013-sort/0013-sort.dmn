@@ -18,19 +18,19 @@
         </itemComponent>
     </itemDefinition>
     <itemDefinition isCollection="true" name="tTable" id="tTable">
-        <typeRef>tns:tRow</typeRef>
+        <typeRef>tRow</typeRef>
     </itemDefinition>
     <itemDefinition isCollection="true" name="tStringList" id="tStringList">
         <typeRef>string</typeRef>
     </itemDefinition>
     <inputData name="listA" id="_d8747cda-26be-46c8-98ee-78f64efbf730">
-        <variable typeRef="tns:tNumList" name="listA"/>
+        <variable typeRef="tNumList" name="listA"/>
     </inputData>
     <inputData name="tableB" id="_f8197899-44af-4ec5-9453-26da073a2be3">
-        <variable typeRef="tns:tTable" name="tableB"/>
+        <variable typeRef="tTable" name="tableB"/>
     </inputData>
     <decision name="sort1" id="_c6416c42-328a-410c-a083-859b82771690">
-        <variable typeRef="tns:tNumList" name="sort1"/>
+        <variable typeRef="tNumList" name="sort1"/>
         <informationRequirement id="_5fec54dd-e626-4936-9086-06568a444ea9">
             <requiredInput href="#_d8747cda-26be-46c8-98ee-78f64efbf730"/>
         </informationRequirement>
@@ -39,7 +39,7 @@
         </literalExpression>
     </decision>
     <decision name="sort2" id="_d8ef1de9-9387-4389-ab83-cbf9dafc419b">
-        <variable typeRef="tns:tTable" name="sort2"/>
+        <variable typeRef="tTable" name="sort2"/>
         <informationRequirement id="_39f538b5-afe3-49ba-a3c5-dd419baa11c4">
             <requiredInput href="#_f8197899-44af-4ec5-9453-26da073a2be3"/>
         </informationRequirement>
@@ -48,10 +48,10 @@
         </literalExpression>
     </decision>
     <inputData name="stringList" id="_7471008b-e8c7-4205-8e17-586ff41e7205">
-        <variable typeRef="tns:tStringList" name="stringList"/>
+        <variable typeRef="tStringList" name="stringList"/>
     </inputData>
     <decision name="sort3" id="_4ff4b8ff-4379-477a-a016-f7d1741d2036">
-        <variable typeRef="tns:tStringList" name="sort3"/>
+        <variable typeRef="tStringList" name="sort3"/>
         <informationRequirement id="_6ce95c21-4d3d-4405-a285-284441ee45e5">
             <requiredInput href="#_7471008b-e8c7-4205-8e17-586ff41e7205"/>
         </informationRequirement>

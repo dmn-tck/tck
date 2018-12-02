@@ -4,7 +4,7 @@
         <typeRef>string</typeRef>
     </itemDefinition>
     <decision name="listGen1" id="_102c003f-ec24-47a9-bfa1-36d05f1452f6">
-        <variable typeRef="tns:tStringList" name="listGen1"/>
+        <variable typeRef="tStringList" name="listGen1"/>
         <literalExpression>
             <text>["a","b","c"]</text>
         </literalExpression>
@@ -19,7 +19,7 @@
         <variable typeRef="string" name="c"/>
     </inputData>
     <decision name="listGen2" id="_2504224f-d1c3-43cb-9216-8f9d4ffdfd72">
-        <variable typeRef="tns:tStringList" name="listGen2"/>
+        <variable typeRef="tStringList" name="listGen2"/>
         <informationRequirement id="_5320d4d9-c2f9-4fb1-9fd4-fa2f267bb101">
             <requiredInput href="#_018d53fc-1aef-4e1b-b418-c0fb7c36753b"/>
         </informationRequirement>
@@ -34,7 +34,7 @@
         </literalExpression>
     </decision>
     <decision name="listGen3" id="_5786c8b8-bea1-4b1f-9f7b-71be3f4ffbcc">
-        <variable typeRef="tns:tStringList" name="listGen3"/>
+        <variable typeRef="tStringList" name="listGen3"/>
         <informationRequirement id="a18bbcfe-f486-4f37-87c5-fa5268f856d2">
             <requiredInput href="#_7cd90c11-7224-41eb-95b0-109c0d5930c3"/>
         </informationRequirement>
@@ -46,7 +46,7 @@
         </literalExpression>
     </decision>
     <decision name="listGen4" id="_ca299168-4590-4040-bb10-beb7d1a6932b">
-        <variable typeRef="tns:tStringList" name="listGen4"/>
+        <variable typeRef="tStringList" name="listGen4"/>
         <informationRequirement id="_52fb84a1-a1e7-43fa-8b31-832e9870df55">
             <requiredInput href="#_2b11df48-aba7-435d-a2ea-e10da78fb70e"/>
         </informationRequirement>
@@ -84,7 +84,7 @@
         </decisionTable>
     </decision>
     <decision name="listGen5" id="_4a428274-6c5f-4c4c-ac86-1e81df943704">
-        <variable typeRef="tns:tStringList" name="listGen5"/>
+        <variable typeRef="tStringList" name="listGen5"/>
         <informationRequirement id="_0c6fad9d-246d-4da2-8278-3f85f74aabfe">
             <requiredInput href="#_018d53fc-1aef-4e1b-b418-c0fb7c36753b"/>
         </informationRequirement>
@@ -156,16 +156,16 @@
         </decisionTable>
     </decision>
     <inputData name="wx" id="_c51e77a1-30a4-4f23-9054-6c359bf80e9f">
-        <variable typeRef="tns:tStringList" name="wx"/>
+        <variable typeRef="tStringList" name="wx"/>
     </inputData>
     <decision name="listGen6" id="_50554bc6-d4e1-468b-a620-db2d35da5a0b">
-        <variable typeRef="tns:tStringList" name="listGen6"/>
+        <variable typeRef="tStringList" name="listGen6"/>
         <literalExpression>
             <text>flatten([["w","x"],"y","z"])</text>
         </literalExpression>
     </decision>
     <decision name="listGen7" id="_6d3062b2-55d4-4299-aeb2-a5e97e03daec">
-        <variable typeRef="tns:tStringList" name="listGen7"/>
+        <variable typeRef="tStringList" name="listGen7"/>
         <informationRequirement id="_5fa9d354-9df3-4ec4-af40-98d2aefdb031">
             <requiredInput href="#_c51e77a1-30a4-4f23-9054-6c359bf80e9f"/>
         </informationRequirement>
@@ -174,7 +174,7 @@
         </literalExpression>
     </decision>
     <decision name="listGen8" id="_bd8b0287-1ff4-4c13-b0ef-68cff151cabd">
-        <variable typeRef="tns:tStringList" name="listGen8"/>
+        <variable typeRef="tStringList" name="listGen8"/>
         <informationRequirement id="f5178a85-b0e5-4e39-86ab-ec1c0bf635d9">
             <requiredInput href="#_018d53fc-1aef-4e1b-b418-c0fb7c36753b"/>
         </informationRequirement>
@@ -189,7 +189,7 @@
         </literalExpression>
     </decision>
     <decision name="listGen9" id="_64ccac33-c22b-454d-b763-5a77ffd38678">
-        <variable typeRef="tns:tStringList" name="listGen9"/>
+        <variable typeRef="tStringList" name="listGen9"/>
         <informationRequirement id="a7acf200-5451-429d-9e7b-8bc3e3715fb7">
             <requiredInput href="#_018d53fc-1aef-4e1b-b418-c0fb7c36753b"/>
         </informationRequirement>
@@ -204,7 +204,7 @@
         </literalExpression>
     </decision>
     <decision name="listGen10" id="_9d464a01-5230-4270-88b6-f8e08d03e10b">
-        <variable typeRef="tns:tStringList" name="listGen10"/>
+        <variable typeRef="tStringList" name="listGen10"/>
         <informationRequirement id="eb713f78-1f6a-4fd2-a650-26afed5ae718">
             <requiredDecision href="#_6d3062b2-55d4-4299-aeb2-a5e97e03daec"/>
         </informationRequirement>
