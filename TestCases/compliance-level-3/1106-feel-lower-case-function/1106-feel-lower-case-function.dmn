@@ -32,7 +32,7 @@
         <description>Tests FEEL expression: 'lower case("A")' and expects result: '"a" (string)'</description>
         <question>Result of FEEL expression 'lower case("A")'?</question>
         <allowedAnswers>"a" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-lower-case-function_001_f6ff05bcfa_Result" name="feel-lower-case-function_001_f6ff05bcfa" id="_jAaMxfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-lower-case-function_001_f6ff05bcfa_Result" name="feel-lower-case-function_001_f6ff05bcfa" id="_jAaMxfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jAaMw_UUEeesLuP4RHs4vA">
             <text>lower case("A")</text>
         </literalExpression>
@@ -41,7 +41,7 @@
         <description>Tests FEEL expression: 'lower case("ABC")' and expects result: '"abc" (string)'</description>
         <question>Result of FEEL expression 'lower case("ABC")'?</question>
         <allowedAnswers>"abc" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-lower-case-function_002_0ecb21e1d8_Result" name="feel-lower-case-function_002_0ecb21e1d8" id="_jAaMyfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-lower-case-function_002_0ecb21e1d8_Result" name="feel-lower-case-function_002_0ecb21e1d8" id="_jAaMyfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jAaMx_UUEeesLuP4RHs4vA">
             <text>lower case("ABC")</text>
         </literalExpression>
@@ -50,7 +50,7 @@
         <description>Tests FEEL expression: 'lower case("abc")' and expects result: '"abc" (string)'</description>
         <question>Result of FEEL expression 'lower case("abc")'?</question>
         <allowedAnswers>"abc" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-lower-case-function_003_af9f3a8dab_Result" name="feel-lower-case-function_003_af9f3a8dab" id="_jAaMzfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-lower-case-function_003_af9f3a8dab_Result" name="feel-lower-case-function_003_af9f3a8dab" id="_jAaMzfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jAaMy_UUEeesLuP4RHs4vA">
             <text>lower case("abc")</text>
         </literalExpression>
@@ -59,7 +59,7 @@
         <description>Tests FEEL expression: 'lower case("aBc4")' and expects result: '"abc4" (string)'</description>
         <question>Result of FEEL expression 'lower case("aBc4")'?</question>
         <allowedAnswers>"abc4" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-lower-case-function_004_2dbf99e8c0_Result" name="feel-lower-case-function_004_2dbf99e8c0" id="_jAaM0fUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-lower-case-function_004_2dbf99e8c0_Result" name="feel-lower-case-function_004_2dbf99e8c0" id="_jAaM0fUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jAaMz_UUEeesLuP4RHs4vA">
             <text>lower case("aBc4")</text>
         </literalExpression>
@@ -68,7 +68,7 @@
         <description>Tests FEEL expression: 'lower case("")' and expects result: '"" (string)'</description>
         <question>Result of FEEL expression 'lower case("")'?</question>
         <allowedAnswers>"" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-lower-case-function_005_ad33325968_Result" name="feel-lower-case-function_005_ad33325968" id="_jAaM1fUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-lower-case-function_005_ad33325968_Result" name="feel-lower-case-function_005_ad33325968" id="_jAaM1fUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jAaM0_UUEeesLuP4RHs4vA">
             <text>lower case("")</text>
         </literalExpression>
@@ -77,7 +77,7 @@
         <description>Tests FEEL expression: 'lower case("?@{")' and expects result: '"?@{" (string)'</description>
         <question>Result of FEEL expression 'lower case("?@{")'?</question>
         <allowedAnswers>"?@{" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-lower-case-function_006_d8257b3b92_Result" name="feel-lower-case-function_006_d8257b3b92" id="_jAaM2fUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-lower-case-function_006_d8257b3b92_Result" name="feel-lower-case-function_006_d8257b3b92" id="_jAaM2fUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jAaM1_UUEeesLuP4RHs4vA">
             <text>lower case("?@{")</text>
         </literalExpression>
@@ -86,7 +86,7 @@
         <description>Tests FEEL expression: 'lower case(string:"AbDcF")' and expects result: '"abdcf" (string)'</description>
         <question>Result of FEEL expression 'lower case(string:"AbDcF")'?</question>
         <allowedAnswers>"abdcf" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-lower-case-function_007_a2ce59499a_Result" name="feel-lower-case-function_007_a2ce59499a" id="_jAaM3fUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-lower-case-function_007_a2ce59499a_Result" name="feel-lower-case-function_007_a2ce59499a" id="_jAaM3fUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jAaM2_UUEeesLuP4RHs4vA">
             <text>lower case(string:"AbDcF")</text>
         </literalExpression>
@@ -95,7 +95,7 @@
         <description>Tests FEEL expression: 'lower case(string:"xyZ ")' and expects result: '"xyz " (string)'</description>
         <question>Result of FEEL expression 'lower case(string:"xyZ ")'?</question>
         <allowedAnswers>"xyz " (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-lower-case-function_008_9913ad454f_Result" name="feel-lower-case-function_008_9913ad454f" id="_jAaM4fUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-lower-case-function_008_9913ad454f_Result" name="feel-lower-case-function_008_9913ad454f" id="_jAaM4fUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jAaM3_UUEeesLuP4RHs4vA">
             <text>lower case(string:"xyZ ")</text>
         </literalExpression>
@@ -104,7 +104,7 @@
         <description>Tests FEEL expression: 'lower case(string:"123ABC")' and expects result: '"123abc" (string)'</description>
         <question>Result of FEEL expression 'lower case(string:"123ABC")'?</question>
         <allowedAnswers>"123abc" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-lower-case-function_009_78e6b2969b_Result" name="feel-lower-case-function_009_78e6b2969b" id="_jAaM5fUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-lower-case-function_009_78e6b2969b_Result" name="feel-lower-case-function_009_78e6b2969b" id="_jAaM5fUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jAaM4_UUEeesLuP4RHs4vA">
             <text>lower case(string:"123ABC")</text>
         </literalExpression>

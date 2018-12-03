@@ -23,7 +23,7 @@
         <description>Tests FEEL expression: 'string length("")' and expects result: '0 (number)'</description>
         <question>Result of FEEL expression 'string length("")'?</question>
         <allowedAnswers>0 (number)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-string-length-function_001_1afe6930d1_Result" name="feel-string-length-function_001_1afe6930d1" id="_i_XD5fUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-string-length-function_001_1afe6930d1_Result" name="feel-string-length-function_001_1afe6930d1" id="_i_XD5fUUEeesLuP4RHs4vA"/>
         <literalExpression id="_i_XD4_UUEeesLuP4RHs4vA">
             <text>string length("")</text>
         </literalExpression>
@@ -32,7 +32,7 @@
         <description>Tests FEEL expression: 'string length("a")' and expects result: '1 (number)'</description>
         <question>Result of FEEL expression 'string length("a")'?</question>
         <allowedAnswers>1 (number)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-string-length-function_002_249c23050d_Result" name="feel-string-length-function_002_249c23050d" id="_i_XD6fUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-string-length-function_002_249c23050d_Result" name="feel-string-length-function_002_249c23050d" id="_i_XD6fUUEeesLuP4RHs4vA"/>
         <literalExpression id="_i_XD5_UUEeesLuP4RHs4vA">
             <text>string length("a")</text>
         </literalExpression>
@@ -41,7 +41,7 @@
         <description>Tests FEEL expression: 'string length("abc")' and expects result: '3 (number)'</description>
         <question>Result of FEEL expression 'string length("abc")'?</question>
         <allowedAnswers>3 (number)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-string-length-function_003_e1df507dee_Result" name="feel-string-length-function_003_e1df507dee" id="_i_XD7fUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-string-length-function_003_e1df507dee_Result" name="feel-string-length-function_003_e1df507dee" id="_i_XD7fUUEeesLuP4RHs4vA"/>
         <literalExpression id="_i_XD6_UUEeesLuP4RHs4vA">
             <text>string length("abc")</text>
         </literalExpression>
@@ -50,7 +50,7 @@
         <description>Tests FEEL expression: 'string length(string:"xyz123")' and expects result: '6 (number)'</description>
         <question>Result of FEEL expression 'string length(string:"xyz123")'?</question>
         <allowedAnswers>6 (number)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-string-length-function_004_f4c02fac3d_Result" name="feel-string-length-function_004_f4c02fac3d" id="_i_XD8fUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-string-length-function_004_f4c02fac3d_Result" name="feel-string-length-function_004_f4c02fac3d" id="_i_XD8fUUEeesLuP4RHs4vA"/>
         <literalExpression id="_i_XD7_UUEeesLuP4RHs4vA">
             <text>string length(string:"xyz123")</text>
         </literalExpression>
@@ -59,7 +59,7 @@
         <description>Tests FEEL expression: 'string length(string:"aaaaa dddd")' and expects result: '10 (number)'</description>
         <question>Result of FEEL expression 'string length(string:"aaaaa dddd")'?</question>
         <allowedAnswers>10 (number)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-string-length-function_005_ca834dabac_Result" name="feel-string-length-function_005_ca834dabac" id="_i_XD9fUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-string-length-function_005_ca834dabac_Result" name="feel-string-length-function_005_ca834dabac" id="_i_XD9fUUEeesLuP4RHs4vA"/>
         <literalExpression id="_i_XD8_UUEeesLuP4RHs4vA">
             <text>string length(string:"aaaaa dddd")</text>
         </literalExpression>
@@ -68,7 +68,7 @@
         <description>Tests FEEL expression: 'string length(string:"aaaaa dddd ")' and expects result: '11 (number)'</description>
         <question>Result of FEEL expression 'string length(string:"aaaaa dddd ")'?</question>
         <allowedAnswers>11 (number)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-string-length-function_006_6c4930a0eb_Result" name="feel-string-length-function_006_6c4930a0eb" id="_i_XD-fUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-string-length-function_006_6c4930a0eb_Result" name="feel-string-length-function_006_6c4930a0eb" id="_i_XD-fUUEeesLuP4RHs4vA"/>
         <literalExpression id="_i_XD9_UUEeesLuP4RHs4vA">
             <text>string length(string:"aaaaa dddd ")</text>
         </literalExpression>

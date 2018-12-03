@@ -32,7 +32,7 @@
         <description>Tests FEEL expression: 'substring before("foobar","bar")' and expects result: '"foo" (string)'</description>
         <question>Result of FEEL expression 'substring before("foobar","bar")'?</question>
         <allowedAnswers>"foo" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-substring-before-function_001_2e948ccdc7_Result" name="feel-substring-before-function_001_2e948ccdc7" id="_jBACpfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-substring-before-function_001_2e948ccdc7_Result" name="feel-substring-before-function_001_2e948ccdc7" id="_jBACpfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jBACo_UUEeesLuP4RHs4vA">
             <text>substring before("foobar","bar")</text>
         </literalExpression>
@@ -41,7 +41,7 @@
         <description>Tests FEEL expression: 'substring before("foobar","o")' and expects result: '"f" (string)'</description>
         <question>Result of FEEL expression 'substring before("foobar","o")'?</question>
         <allowedAnswers>"f" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-substring-before-function_002_f4de663db7_Result" name="feel-substring-before-function_002_f4de663db7" id="_jBACqfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-substring-before-function_002_f4de663db7_Result" name="feel-substring-before-function_002_f4de663db7" id="_jBACqfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jBACp_UUEeesLuP4RHs4vA">
             <text>substring before("foobar","o")</text>
         </literalExpression>
@@ -50,7 +50,7 @@
         <description>Tests FEEL expression: 'substring before("foobar","x")' and expects result: '"" (string)'</description>
         <question>Result of FEEL expression 'substring before("foobar","x")'?</question>
         <allowedAnswers>"" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-substring-before-function_003_60bc15bade_Result" name="feel-substring-before-function_003_60bc15bade" id="_jBACrfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-substring-before-function_003_60bc15bade_Result" name="feel-substring-before-function_003_60bc15bade" id="_jBACrfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jBACq_UUEeesLuP4RHs4vA">
             <text>substring before("foobar","x")</text>
         </literalExpression>
@@ -59,7 +59,7 @@
         <description>Tests FEEL expression: 'substring before("","")' and expects result: '"" (string)'</description>
         <question>Result of FEEL expression 'substring before("","")'?</question>
         <allowedAnswers>"" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-substring-before-function_004_6f93aa7654_Result" name="feel-substring-before-function_004_6f93aa7654" id="_jBACsfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-substring-before-function_004_6f93aa7654_Result" name="feel-substring-before-function_004_6f93aa7654" id="_jBACsfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jBACr_UUEeesLuP4RHs4vA">
             <text>substring before("","")</text>
         </literalExpression>
@@ -68,7 +68,7 @@
         <description>Tests FEEL expression: 'substring before("abc","")' and expects result: '"" (string)'</description>
         <question>Result of FEEL expression 'substring before("abc","")'?</question>
         <allowedAnswers>"" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-substring-before-function_005_c8e030633c_Result" name="feel-substring-before-function_005_c8e030633c" id="_jBACtfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-substring-before-function_005_c8e030633c_Result" name="feel-substring-before-function_005_c8e030633c" id="_jBACtfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jBACs_UUEeesLuP4RHs4vA">
             <text>substring before("abc","")</text>
         </literalExpression>
@@ -77,7 +77,7 @@
         <description>Tests FEEL expression: 'substring before("abc","a")' and expects result: '"" (string)'</description>
         <question>Result of FEEL expression 'substring before("abc","a")'?</question>
         <allowedAnswers>"" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-substring-before-function_006_1c3d39811d_Result" name="feel-substring-before-function_006_1c3d39811d" id="_jBACufUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-substring-before-function_006_1c3d39811d_Result" name="feel-substring-before-function_006_1c3d39811d" id="_jBACufUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jBACt_UUEeesLuP4RHs4vA">
             <text>substring before("abc","a")</text>
         </literalExpression>
@@ -86,7 +86,7 @@
         <description>Tests FEEL expression: 'substring before("abc","c")' and expects result: '"ab" (string)'</description>
         <question>Result of FEEL expression 'substring before("abc","c")'?</question>
         <allowedAnswers>"ab" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-substring-before-function_007_ea4e4a38b0_Result" name="feel-substring-before-function_007_ea4e4a38b0" id="_jBACvfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-substring-before-function_007_ea4e4a38b0_Result" name="feel-substring-before-function_007_ea4e4a38b0" id="_jBACvfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jBACu_UUEeesLuP4RHs4vA">
             <text>substring before("abc","c")</text>
         </literalExpression>
@@ -95,7 +95,7 @@
         <description>Tests FEEL expression: 'substring before(string:"foobar",match:"bar")' and expects result: '"foo" (string)'</description>
         <question>Result of FEEL expression 'substring before(string:"foobar",match:"bar")'?</question>
         <allowedAnswers>"foo" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-substring-before-function_008_501b0a5990_Result" name="feel-substring-before-function_008_501b0a5990" id="_jBACwfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-substring-before-function_008_501b0a5990_Result" name="feel-substring-before-function_008_501b0a5990" id="_jBACwfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jBACv_UUEeesLuP4RHs4vA">
             <text>substring before(string:"foobar",match:"bar")</text>
         </literalExpression>
@@ -104,7 +104,7 @@
         <description>Tests FEEL expression: 'substring before(string:"foobar",match:"b")' and expects result: '"foo" (string)'</description>
         <question>Result of FEEL expression 'substring before(string:"foobar",match:"b")'?</question>
         <allowedAnswers>"foo" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-substring-before-function_009_a79c5a4111_Result" name="feel-substring-before-function_009_a79c5a4111" id="_jBACxfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-substring-before-function_009_a79c5a4111_Result" name="feel-substring-before-function_009_a79c5a4111" id="_jBACxfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jBACw_UUEeesLuP4RHs4vA">
             <text>substring before(string:"foobar",match:"b")</text>
         </literalExpression>

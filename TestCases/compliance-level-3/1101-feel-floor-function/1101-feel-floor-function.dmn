@@ -23,7 +23,7 @@
         <description>Tests FEEL expression: 'floor(1.5)' and expects result: '1 (number)'</description>
         <question>Result of FEEL expression 'floor(1.5)'?</question>
         <allowedAnswers>1 (number)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-floor-function_001_75592d0dee_Result" name="feel-floor-function_001_75592d0dee" id="_i9gCtPUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-floor-function_001_75592d0dee_Result" name="feel-floor-function_001_75592d0dee" id="_i9gCtPUUEeesLuP4RHs4vA"/>
         <literalExpression id="_i9gCsvUUEeesLuP4RHs4vA">
             <text>floor(1.5)</text>
         </literalExpression>
@@ -32,7 +32,7 @@
         <description>Tests FEEL expression: 'floor(-1.5)' and expects result: '-2 (number)'</description>
         <question>Result of FEEL expression 'floor(-1.5)'?</question>
         <allowedAnswers>-2 (number)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-floor-function_002_6fea586853_Result" name="feel-floor-function_002_6fea586853" id="_i9gCuPUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-floor-function_002_6fea586853_Result" name="feel-floor-function_002_6fea586853" id="_i9gCuPUUEeesLuP4RHs4vA"/>
         <literalExpression id="_i9gCtvUUEeesLuP4RHs4vA">
             <text>floor(-1.5)</text>
         </literalExpression>
@@ -41,7 +41,7 @@
         <description>Tests FEEL expression: 'floor(--1)' and expects result: '1 (number)'</description>
         <question>Result of FEEL expression 'floor(--1)'?</question>
         <allowedAnswers>1 (number)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-floor-function_003_cbae05445d_Result" name="feel-floor-function_003_cbae05445d" id="_i9gpwPUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-floor-function_003_cbae05445d_Result" name="feel-floor-function_003_cbae05445d" id="_i9gpwPUUEeesLuP4RHs4vA"/>
         <literalExpression id="_i9gCuvUUEeesLuP4RHs4vA">
             <text>floor(--1)</text>
         </literalExpression>
@@ -50,7 +50,7 @@
         <description>Tests FEEL expression: 'floor(-5/2.3*5)' and expects result: '-11 (number)'</description>
         <question>Result of FEEL expression 'floor(-5/2.3*5)'?</question>
         <allowedAnswers>-11 (number)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-floor-function_004_30f6d26798_Result" name="feel-floor-function_004_30f6d26798" id="_i9gpxPUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-floor-function_004_30f6d26798_Result" name="feel-floor-function_004_30f6d26798" id="_i9gpxPUUEeesLuP4RHs4vA"/>
         <literalExpression id="_i9gpwvUUEeesLuP4RHs4vA">
             <text>floor(-5/2.3*5)</text>
         </literalExpression>
@@ -59,7 +59,7 @@
         <description>Tests FEEL expression: 'floor(n:5.777)' and expects result: '5 (number)'</description>
         <question>Result of FEEL expression 'floor(n:5.777)'?</question>
         <allowedAnswers>5 (number)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-floor-function_005_dd970ad275_Result" name="feel-floor-function_005_dd970ad275" id="_i9hQ0PUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-floor-function_005_dd970ad275_Result" name="feel-floor-function_005_dd970ad275" id="_i9hQ0PUUEeesLuP4RHs4vA"/>
         <literalExpression id="_i9gpxvUUEeesLuP4RHs4vA">
             <text>floor(n:5.777)</text>
         </literalExpression>
@@ -68,7 +68,7 @@
         <description>Tests FEEL expression: 'floor(n:-.33333)' and expects result: '-1 (number)'</description>
         <question>Result of FEEL expression 'floor(n:-.33333)'?</question>
         <allowedAnswers>-1 (number)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-floor-function_006_1223620d9c_Result" name="feel-floor-function_006_1223620d9c" id="_i9hQ1PUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-floor-function_006_1223620d9c_Result" name="feel-floor-function_006_1223620d9c" id="_i9hQ1PUUEeesLuP4RHs4vA"/>
         <literalExpression id="_i9hQ0vUUEeesLuP4RHs4vA">
             <text>floor(n:-.33333)</text>
         </literalExpression>
