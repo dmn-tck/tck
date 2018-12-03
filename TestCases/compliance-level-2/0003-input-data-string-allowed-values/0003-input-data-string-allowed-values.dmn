@@ -16,7 +16,7 @@
         </literalExpression>
     </decision>
     <inputData name="Employment Status" id="i_EmploymentStatus">
-        <variable typeRef="tck:tEmploymentStatus" name="Employment Status"/>
+        <variable typeRef="tEmploymentStatus" name="Employment Status"/>
     </inputData>
     <dmndi:DMNDI>
         <dmndi:DMNDiagram id="_0003-input-data-string-allowed-values_D1">
