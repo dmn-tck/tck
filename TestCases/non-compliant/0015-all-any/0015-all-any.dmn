@@ -52,7 +52,7 @@
 		</literalExpression>
 	</decision>
 	<decision id="_065cfe42-f9c4-4218-801d-09a111945833" name="literalList">
-		<variable name="literalList" typeRef="tBoolList"/>
+		<variable name="literalList" typeRef="tns:tBoolList"/>
 		<informationRequirement>
 			<requiredInput href="#_efe62f90-4da2-45ff-9298-741d39b24e3b"/>
 		</informationRequirement>
