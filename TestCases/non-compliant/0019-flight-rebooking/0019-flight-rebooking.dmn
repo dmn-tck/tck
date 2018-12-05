@@ -2,9 +2,9 @@
 <definitions id="_0019_flight_rebooking" 
 	name="0019-flight-rebooking"
 	namespace="https://www.drools.org/kie-dmn"
-	xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd"
+	xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/"
 	xmlns:kie="https://www.drools.org/kie-dmn"
-	xmlns:feel="http://www.omg.org/spec/FEEL/20140401">
+	xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/">
 	
 	<itemDefinition id="_tFlight" name="tFlight">
 		<itemComponent id="_tFlight_Flight" name="Flight Number">
