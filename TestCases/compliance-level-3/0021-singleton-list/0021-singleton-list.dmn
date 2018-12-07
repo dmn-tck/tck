@@ -4,10 +4,10 @@
         <typeRef>string</typeRef>
     </itemDefinition>
     <inputData name="Employees" id="_Employees">
-        <variable typeRef="tns:tStringList" name="Employees"/>
+        <variable typeRef="tStringList" name="Employees"/>
     </inputData>
     <decision name="decision1" id="decision1">
-        <variable typeRef="tns:tStringList" name="decision1"/>
+        <variable typeRef="tStringList" name="decision1"/>
         <informationRequirement id="_14c133f4-3127-4c16-97b6-e0e1b76d2c07">
             <requiredInput href="#_Employees"/>
         </informationRequirement>
@@ -25,7 +25,7 @@
         </literalExpression>
     </decision>
     <decision name="decision3" id="decision3">
-        <variable typeRef="tns:tStringList" name="decision3"/>
+        <variable typeRef="tStringList" name="decision3"/>
         <informationRequirement id="_8643a0b7-f6a9-45fe-9fa1-3550c6b289c4">
             <requiredInput href="#_Employees"/>
         </informationRequirement>

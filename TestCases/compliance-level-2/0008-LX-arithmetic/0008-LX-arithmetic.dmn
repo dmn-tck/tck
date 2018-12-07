@@ -21,7 +21,7 @@
         </literalExpression>
     </decision>
     <inputData name="loan" id="_1f4ae444-2e4e-4d26-b1f7-87a645c3f50a">
-        <variable typeRef="tns:tLoan" name="loan"/>
+        <variable typeRef="tLoan" name="loan"/>
     </inputData>
     <dmndi:DMNDI>
         <dmndi:DMNDiagram id="_1fedf2c0-0f4a-470c-bc66-a15528e8a49a_D1">

@@ -35,7 +35,7 @@
         <description>Tests FEEL expression: 'substring after("foobar","ob")' and expects result: '"ar" (string)'</description>
         <question>Result of FEEL expression 'substring after("foobar","ob")'?</question>
         <allowedAnswers>"ar" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-substring-after-function_001_f532be66f2_Result" name="feel-substring-after-function_001_f532be66f2" id="_jBculfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-substring-after-function_001_f532be66f2_Result" name="feel-substring-after-function_001_f532be66f2" id="_jBculfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jBcuk_UUEeesLuP4RHs4vA">
             <text>substring after("foobar","ob")</text>
         </literalExpression>
@@ -44,7 +44,7 @@
         <description>Tests FEEL expression: 'substring after("foobar","o")' and expects result: '"obar" (string)'</description>
         <question>Result of FEEL expression 'substring after("foobar","o")'?</question>
         <allowedAnswers>"obar" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-substring-after-function_002_f20d66fc1e_Result" name="feel-substring-after-function_002_f20d66fc1e" id="_jBcumfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-substring-after-function_002_f20d66fc1e_Result" name="feel-substring-after-function_002_f20d66fc1e" id="_jBcumfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jBcul_UUEeesLuP4RHs4vA">
             <text>substring after("foobar","o")</text>
         </literalExpression>
@@ -53,7 +53,7 @@
         <description>Tests FEEL expression: 'substring after("foobar","x")' and expects result: '"" (string)'</description>
         <question>Result of FEEL expression 'substring after("foobar","x")'?</question>
         <allowedAnswers>"" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-substring-after-function_003_367612fc8b_Result" name="feel-substring-after-function_003_367612fc8b" id="_jBcunfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-substring-after-function_003_367612fc8b_Result" name="feel-substring-after-function_003_367612fc8b" id="_jBcunfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jBcum_UUEeesLuP4RHs4vA">
             <text>substring after("foobar","x")</text>
         </literalExpression>
@@ -62,7 +62,7 @@
         <description>Tests FEEL expression: 'substring after("","")' and expects result: '"" (string)'</description>
         <question>Result of FEEL expression 'substring after("","")'?</question>
         <allowedAnswers>"" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-substring-after-function_004_e448ee2dad_Result" name="feel-substring-after-function_004_e448ee2dad" id="_jBcuofUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-substring-after-function_004_e448ee2dad_Result" name="feel-substring-after-function_004_e448ee2dad" id="_jBcuofUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jBcun_UUEeesLuP4RHs4vA">
             <text>substring after("","")</text>
         </literalExpression>
@@ -71,7 +71,7 @@
         <description>Tests FEEL expression: 'substring after("","a")' and expects result: '"" (string)'</description>
         <question>Result of FEEL expression 'substring after("","a")'?</question>
         <allowedAnswers>"" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-substring-after-function_005_429efdafd0_Result" name="feel-substring-after-function_005_429efdafd0" id="_jBcupfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-substring-after-function_005_429efdafd0_Result" name="feel-substring-after-function_005_429efdafd0" id="_jBcupfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jBcuo_UUEeesLuP4RHs4vA">
             <text>substring after("","a")</text>
         </literalExpression>
@@ -80,7 +80,7 @@
         <description>Tests FEEL expression: 'substring after("abc","")' and expects result: '"abc" (string)'</description>
         <question>Result of FEEL expression 'substring after("abc","")'?</question>
         <allowedAnswers>"abc" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-substring-after-function_006_bf89d6b618_Result" name="feel-substring-after-function_006_bf89d6b618" id="_jBcuqfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-substring-after-function_006_bf89d6b618_Result" name="feel-substring-after-function_006_bf89d6b618" id="_jBcuqfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jBcup_UUEeesLuP4RHs4vA">
             <text>substring after("abc","")</text>
         </literalExpression>
@@ -89,7 +89,7 @@
         <description>Tests FEEL expression: 'substring after("abc","c")' and expects result: '"" (string)'</description>
         <question>Result of FEEL expression 'substring after("abc","c")'?</question>
         <allowedAnswers>"" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-substring-after-function_007_529baaeb0b_Result" name="feel-substring-after-function_007_529baaeb0b" id="_jBcurfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-substring-after-function_007_529baaeb0b_Result" name="feel-substring-after-function_007_529baaeb0b" id="_jBcurfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jBcuq_UUEeesLuP4RHs4vA">
             <text>substring after("abc","c")</text>
         </literalExpression>
@@ -98,7 +98,7 @@
         <description>Tests FEEL expression: 'substring after("abc","a")' and expects result: '"bc" (string)'</description>
         <question>Result of FEEL expression 'substring after("abc","a")'?</question>
         <allowedAnswers>"bc" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-substring-after-function_008_1e611924ea_Result" name="feel-substring-after-function_008_1e611924ea" id="_jBcusfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-substring-after-function_008_1e611924ea_Result" name="feel-substring-after-function_008_1e611924ea" id="_jBcusfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jBcur_UUEeesLuP4RHs4vA">
             <text>substring after("abc","a")</text>
         </literalExpression>
@@ -107,7 +107,7 @@
         <description>Tests FEEL expression: 'substring after(string:"foobar",match:"ob")' and expects result: '"ar" (string)'</description>
         <question>Result of FEEL expression 'substring after(string:"foobar",match:"ob")'?</question>
         <allowedAnswers>"ar" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-substring-after-function_009_712fe2842f_Result" name="feel-substring-after-function_009_712fe2842f" id="_jBcutfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-substring-after-function_009_712fe2842f_Result" name="feel-substring-after-function_009_712fe2842f" id="_jBcutfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jBcus_UUEeesLuP4RHs4vA">
             <text>substring after(string:"foobar",match:"ob")</text>
         </literalExpression>
@@ -116,7 +116,7 @@
         <description>Tests FEEL expression: 'substring after(string:"foobar",match:"b")' and expects result: '"ar" (string)'</description>
         <question>Result of FEEL expression 'substring after(string:"foobar",match:"b")'?</question>
         <allowedAnswers>"ar" (string)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-substring-after-function_010_40e159d07a_Result" name="feel-substring-after-function_010_40e159d07a" id="_jBcuufUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-substring-after-function_010_40e159d07a_Result" name="feel-substring-after-function_010_40e159d07a" id="_jBcuufUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jBcut_UUEeesLuP4RHs4vA">
             <text>substring after(string:"foobar",match:"b")</text>
         </literalExpression>

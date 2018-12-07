@@ -38,7 +38,7 @@
         </encapsulatedLogic>
     </businessKnowledgeModel>
     <inputData name="Loan" id="i_Loan">
-        <variable typeRef="tns:tLoan" name="Loan"/>
+        <variable typeRef="tLoan" name="Loan"/>
     </inputData>
     <inputData name="fee" id="i_fee">
         <variable typeRef="number" name="fee"/>

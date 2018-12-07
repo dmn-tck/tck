@@ -38,10 +38,10 @@
         </literalExpression>
     </decision>
     <inputData name="EmployeeTable" id="_7985579c-554c-4d98-aad6-c9dbacff726b">
-        <variable typeRef="tns:tEmployeeTable" name="EmployeeTable"/>
+        <variable typeRef="tEmployeeTable" name="EmployeeTable"/>
     </inputData>
     <inputData name="DeptTable" id="_35b4f57c-e574-4963-a149-83cc0030e809">
-        <variable typeRef="tns:tDeptTable" name="DeptTable"/>
+        <variable typeRef="tDeptTable" name="DeptTable"/>
     </inputData>
     <inputData name="LastName" id="_7b08bda2-fcf4-44e8-8022-08d9043e1dee">
         <variable typeRef="string" name="LastName"/>

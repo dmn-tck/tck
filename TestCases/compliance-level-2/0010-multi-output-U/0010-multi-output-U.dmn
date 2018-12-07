@@ -9,7 +9,7 @@
         </itemComponent>
     </itemDefinition>
     <decision name="Approval" id="_3b2953a3-745f-4d2e-b55d-75c8c5ae653c">
-        <variable typeRef="tns:tApproval" name="Approval"/>
+        <variable typeRef="tApproval" name="Approval"/>
         <informationRequirement id="_4f470469-654d-4e9d-9627-c44816c253a3">
             <requiredInput href="#_5a4bdb64-f0ef-4978-9e03-6f1ae64a1f17"/>
         </informationRequirement>

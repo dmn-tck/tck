@@ -35,7 +35,7 @@
         <description>Tests FEEL expression: 'decimal(1/3, 2)' and expects result: '0.33 (number)'</description>
         <question>Result of FEEL expression 'decimal(1/3, 2)'?</question>
         <allowedAnswers>0.33 (number)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-decimal-function_001_af177e63fc_Result" name="feel-decimal-function_001_af177e63fc" id="_i7fQhPUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-decimal-function_001_af177e63fc_Result" name="feel-decimal-function_001_af177e63fc" id="_i7fQhPUUEeesLuP4RHs4vA"/>
         <literalExpression id="_i7fQgvUUEeesLuP4RHs4vA">
             <text>decimal(1/3, 2)</text>
         </literalExpression>
@@ -44,7 +44,7 @@
         <description>Tests FEEL expression: 'decimal(1/3, 2.5)' and expects result: '0.33 (number)'</description>
         <question>Result of FEEL expression 'decimal(1/3, 2.5)'?</question>
         <allowedAnswers>0.33 (number)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-decimal-function_002_f4ed9cd487_Result" name="feel-decimal-function_002_f4ed9cd487" id="_i7fQiPUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-decimal-function_002_f4ed9cd487_Result" name="feel-decimal-function_002_f4ed9cd487" id="_i7fQiPUUEeesLuP4RHs4vA"/>
         <literalExpression id="_i7fQhvUUEeesLuP4RHs4vA">
             <text>decimal(1/3, 2.5)</text>
         </literalExpression>
@@ -53,7 +53,7 @@
         <description>Tests FEEL expression: 'decimal(1.5, 0)' and expects result: '2 (number)'</description>
         <question>Result of FEEL expression 'decimal(1.5, 0)'?</question>
         <allowedAnswers>2 (number)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-decimal-function_003_2d50ec7ffc_Result" name="feel-decimal-function_003_2d50ec7ffc" id="_i7fQjPUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-decimal-function_003_2d50ec7ffc_Result" name="feel-decimal-function_003_2d50ec7ffc" id="_i7fQjPUUEeesLuP4RHs4vA"/>
         <literalExpression id="_i7fQivUUEeesLuP4RHs4vA">
             <text>decimal(1.5, 0)</text>
         </literalExpression>
@@ -62,7 +62,7 @@
         <description>Tests FEEL expression: 'decimal(2.5, 0)' and expects result: '2 (number)'</description>
         <question>Result of FEEL expression 'decimal(2.5, 0)'?</question>
         <allowedAnswers>2 (number)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-decimal-function_004_bb6f445d2c_Result" name="feel-decimal-function_004_bb6f445d2c" id="_i7fQkPUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-decimal-function_004_bb6f445d2c_Result" name="feel-decimal-function_004_bb6f445d2c" id="_i7fQkPUUEeesLuP4RHs4vA"/>
         <literalExpression id="_i7fQjvUUEeesLuP4RHs4vA">
             <text>decimal(2.5, 0)</text>
         </literalExpression>
@@ -71,7 +71,7 @@
         <description>Tests FEEL expression: 'decimal(0, 0)' and expects result: '0 (number)'</description>
         <question>Result of FEEL expression 'decimal(0, 0)'?</question>
         <allowedAnswers>0 (number)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-decimal-function_005_55d33eadf6_Result" name="feel-decimal-function_005_55d33eadf6" id="_i7fQlPUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-decimal-function_005_55d33eadf6_Result" name="feel-decimal-function_005_55d33eadf6" id="_i7fQlPUUEeesLuP4RHs4vA"/>
         <literalExpression id="_i7fQkvUUEeesLuP4RHs4vA">
             <text>decimal(0, 0)</text>
         </literalExpression>
@@ -80,7 +80,7 @@
         <description>Tests FEEL expression: 'decimal(0.0, 1)' and expects result: '0.0 (number)'</description>
         <question>Result of FEEL expression 'decimal(0.0, 1)'?</question>
         <allowedAnswers>0.0 (number)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-decimal-function_006_d9661e1d45_Result" name="feel-decimal-function_006_d9661e1d45" id="_i7fQmPUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-decimal-function_006_d9661e1d45_Result" name="feel-decimal-function_006_d9661e1d45" id="_i7fQmPUUEeesLuP4RHs4vA"/>
         <literalExpression id="_i7fQlvUUEeesLuP4RHs4vA">
             <text>decimal(0.0, 1)</text>
         </literalExpression>
@@ -89,7 +89,7 @@
         <description>Tests FEEL expression: 'decimal(0.515, 2)' and expects result: '0.52 (number)'</description>
         <question>Result of FEEL expression 'decimal(0.515, 2)'?</question>
         <allowedAnswers>0.52 (number)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-decimal-function_007_49f7a22058_Result" name="feel-decimal-function_007_49f7a22058" id="_i7fQnPUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-decimal-function_007_49f7a22058_Result" name="feel-decimal-function_007_49f7a22058" id="_i7fQnPUUEeesLuP4RHs4vA"/>
         <literalExpression id="_i7fQmvUUEeesLuP4RHs4vA">
             <text>decimal(0.515, 2)</text>
         </literalExpression>
@@ -98,7 +98,7 @@
         <description>Tests FEEL expression: 'decimal(65.123456, 6)' and expects result: '65.123456 (number)'</description>
         <question>Result of FEEL expression 'decimal(65.123456, 6)'?</question>
         <allowedAnswers>65.123456 (number)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-decimal-function_008_73e4f1c8b9_Result" name="feel-decimal-function_008_73e4f1c8b9" id="_i7fQoPUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-decimal-function_008_73e4f1c8b9_Result" name="feel-decimal-function_008_73e4f1c8b9" id="_i7fQoPUUEeesLuP4RHs4vA"/>
         <literalExpression id="_i7fQnvUUEeesLuP4RHs4vA">
             <text>decimal(65.123456, 6)</text>
         </literalExpression>
@@ -107,7 +107,7 @@
         <description>Tests FEEL expression: 'decimal(n:15/7,scale:3)' and expects result: '2.143 (number)'</description>
         <question>Result of FEEL expression 'decimal(n:15/7,scale:3)'?</question>
         <allowedAnswers>2.143 (number)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-decimal-function_009_398b94286e_Result" name="feel-decimal-function_009_398b94286e" id="_i7fQpPUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-decimal-function_009_398b94286e_Result" name="feel-decimal-function_009_398b94286e" id="_i7fQpPUUEeesLuP4RHs4vA"/>
         <literalExpression id="_i7fQovUUEeesLuP4RHs4vA">
             <text>decimal(n:15/7,scale:3)</text>
         </literalExpression>
@@ -116,7 +116,7 @@
         <description>Tests FEEL expression: 'decimal(n:15/78*2,scale:3)' and expects result: '0.385 (number)'</description>
         <question>Result of FEEL expression 'decimal(n:15/78*2,scale:3)'?</question>
         <allowedAnswers>0.385 (number)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-decimal-function_010_4b46e59c8b_Result" name="feel-decimal-function_010_4b46e59c8b" id="_i7fQqPUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-decimal-function_010_4b46e59c8b_Result" name="feel-decimal-function_010_4b46e59c8b" id="_i7fQqPUUEeesLuP4RHs4vA"/>
         <literalExpression id="_i7fQpvUUEeesLuP4RHs4vA">
             <text>decimal(n:15/78*2,scale:3)</text>
         </literalExpression>

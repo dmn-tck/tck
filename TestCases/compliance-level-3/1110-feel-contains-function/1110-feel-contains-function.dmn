@@ -35,7 +35,7 @@
         <description>Tests FEEL expression: 'contains(null,null)' and expects result: 'null (boolean)'</description>
         <question>Result of FEEL expression 'contains(null,null)'?</question>
         <allowedAnswers>null (boolean)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-contains-function_001_2a4d7448c6_Result" name="feel-contains-function_ErrorCase_001_2a4d7448c6" id="_jCpBZfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-contains-function_001_2a4d7448c6_Result" name="feel-contains-function_ErrorCase_001_2a4d7448c6" id="_jCpBZfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jCpBY_UUEeesLuP4RHs4vA">
             <text>contains(null,null)</text>
         </literalExpression>
@@ -44,7 +44,7 @@
         <description>Tests FEEL expression: 'contains(null,"bar")' and expects result: 'null (boolean)'</description>
         <question>Result of FEEL expression 'contains(null,"bar")'?</question>
         <allowedAnswers>null (boolean)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-contains-function_002_d2a1831b5c_Result" name="feel-contains-function_ErrorCase_002_d2a1831b5c" id="_jCpBafUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-contains-function_002_d2a1831b5c_Result" name="feel-contains-function_ErrorCase_002_d2a1831b5c" id="_jCpBafUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jCpBZ_UUEeesLuP4RHs4vA">
             <text>contains(null,"bar")</text>
         </literalExpression>
@@ -53,7 +53,7 @@
         <description>Tests FEEL expression: 'contains("bar",null)' and expects result: 'null (boolean)'</description>
         <question>Result of FEEL expression 'contains("bar",null)'?</question>
         <allowedAnswers>null (boolean)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-contains-function_003_df56e0a1ad_Result" name="feel-contains-function_ErrorCase_003_df56e0a1ad" id="_jCpBbfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-contains-function_003_df56e0a1ad_Result" name="feel-contains-function_ErrorCase_003_df56e0a1ad" id="_jCpBbfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jCpBa_UUEeesLuP4RHs4vA">
             <text>contains("bar",null)</text>
         </literalExpression>
@@ -62,7 +62,7 @@
         <description>Tests FEEL expression: 'contains("foobar","bar")' and expects result: 'true (boolean)'</description>
         <question>Result of FEEL expression 'contains("foobar","bar")'?</question>
         <allowedAnswers>true (boolean)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-contains-function_004_805503b274_Result" name="feel-contains-function_004_805503b274" id="_jCpBcfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-contains-function_004_805503b274_Result" name="feel-contains-function_004_805503b274" id="_jCpBcfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jCpBb_UUEeesLuP4RHs4vA">
             <text>contains("foobar","bar")</text>
         </literalExpression>
@@ -71,7 +71,7 @@
         <description>Tests FEEL expression: 'contains("foobar","o")' and expects result: 'true (boolean)'</description>
         <question>Result of FEEL expression 'contains("foobar","o")'?</question>
         <allowedAnswers>true (boolean)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-contains-function_005_5c1269db16_Result" name="feel-contains-function_005_5c1269db16" id="_jCpBdfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-contains-function_005_5c1269db16_Result" name="feel-contains-function_005_5c1269db16" id="_jCpBdfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jCpBc_UUEeesLuP4RHs4vA">
             <text>contains("foobar","o")</text>
         </literalExpression>
@@ -80,7 +80,7 @@
         <description>Tests FEEL expression: 'contains("abc","")' and expects result: 'true (boolean)'</description>
         <question>Result of FEEL expression 'contains("abc","")'?</question>
         <allowedAnswers>true (boolean)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-contains-function_006_babdaf4f36_Result" name="feel-contains-function_006_babdaf4f36" id="_jCpBefUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-contains-function_006_babdaf4f36_Result" name="feel-contains-function_006_babdaf4f36" id="_jCpBefUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jCpBd_UUEeesLuP4RHs4vA">
             <text>contains("abc","")</text>
         </literalExpression>
@@ -89,7 +89,7 @@
         <description>Tests FEEL expression: 'contains("","ab")' and expects result: 'false (boolean)'</description>
         <question>Result of FEEL expression 'contains("","ab")'?</question>
         <allowedAnswers>false (boolean)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-contains-function_007_d24a599180_Result" name="feel-contains-function_007_d24a599180" id="_jCpBffUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-contains-function_007_d24a599180_Result" name="feel-contains-function_007_d24a599180" id="_jCpBffUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jCpBe_UUEeesLuP4RHs4vA">
             <text>contains("","ab")</text>
         </literalExpression>
@@ -98,7 +98,7 @@
         <description>Tests FEEL expression: 'contains("","")' and expects result: 'true (boolean)'</description>
         <question>Result of FEEL expression 'contains("","")'?</question>
         <allowedAnswers>true (boolean)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-contains-function_008_cf1311586a_Result" name="feel-contains-function_008_cf1311586a" id="_jCpBgfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-contains-function_008_cf1311586a_Result" name="feel-contains-function_008_cf1311586a" id="_jCpBgfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jCpBf_UUEeesLuP4RHs4vA">
             <text>contains("","")</text>
         </literalExpression>
@@ -107,7 +107,7 @@
         <description>Tests FEEL expression: 'contains(string:"foobar",match:"bar")' and expects result: 'true (boolean)'</description>
         <question>Result of FEEL expression 'contains(string:"foobar",match:"bar")'?</question>
         <allowedAnswers>true (boolean)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-contains-function_009_c4b50ad623_Result" name="feel-contains-function_009_c4b50ad623" id="_jCpBhfUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-contains-function_009_c4b50ad623_Result" name="feel-contains-function_009_c4b50ad623" id="_jCpBhfUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jCpBg_UUEeesLuP4RHs4vA">
             <text>contains(string:"foobar",match:"bar")</text>
         </literalExpression>
@@ -116,7 +116,7 @@
         <description>Tests FEEL expression: 'contains(string:"foobar",match:"b")' and expects result: 'true (boolean)'</description>
         <question>Result of FEEL expression 'contains(string:"foobar",match:"b")'?</question>
         <allowedAnswers>true (boolean)</allowedAnswers>
-        <variable typeRef="ns1:tfeel-contains-function_010_9ae03e0e59_Result" name="feel-contains-function_010_9ae03e0e59" id="_jCpBifUUEeesLuP4RHs4vA"/>
+        <variable typeRef="tfeel-contains-function_010_9ae03e0e59_Result" name="feel-contains-function_010_9ae03e0e59" id="_jCpBifUUEeesLuP4RHs4vA"/>
         <literalExpression id="_jCpBh_UUEeesLuP4RHs4vA">
             <text>contains(string:"foobar",match:"b")</text>
         </literalExpression>
