@@ -18,6 +18,15 @@
         </resultNode>
     </testCase>
 
+    <testCase id="decision_001_a">
+        <description>-a**b parses as (-a)**b not -(a**b)</description>
+        <resultNode name="decision_001_a" type="decision">
+            <expected>
+                <value xsi:type="xsd:decimal">9</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
     <testCase id="decision_002">
         <description>string exponent is null</description>
         <resultNode name="decision_002" type="decision">
