@@ -9,6 +9,13 @@
         </literalExpression>
     </decision>
 
+    <decision name="decision_001_a" id="_decision_001_a">
+        <variable name="decision_001_a"/>
+        <literalExpression>
+            <text>-3 ** 2</text>
+        </literalExpression>
+    </decision>
+
     <decision name="decision_002" id="_decision_002">
         <variable name="decision_002"/>
         <literalExpression>
