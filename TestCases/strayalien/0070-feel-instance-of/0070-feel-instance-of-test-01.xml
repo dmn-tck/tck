@@ -497,7 +497,9 @@
     </testCase>
 
     <testCase id="date_007">
-        <description>date instance of date and time is false</description>
+        <description>date instance of date and time is false - spec 1.2 "Examples of equivalence
+            and conformance relations" table shows date and confirming to date
+            and time - which I believe is wrong - it is the other way around</description>
         <resultNode name="date_007" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
