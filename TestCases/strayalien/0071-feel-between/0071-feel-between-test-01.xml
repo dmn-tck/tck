@@ -146,7 +146,6 @@
         </resultNode>
     </testCase>
 
-
     <testCase id="time_001">
         <description>before</description>
         <resultNode name="time_001" type="decision">
@@ -191,7 +190,6 @@
             </expected>
         </resultNode>
     </testCase>
-
 
     <testCase id="datetime_001">
         <description>before</description>
@@ -238,7 +236,6 @@
         </resultNode>
     </testCase>
 
-
     <testCase id="ym_duration_001">
         <description>before</description>
         <resultNode name="ym_duration_001" type="decision">
@@ -283,7 +280,6 @@
             </expected>
         </resultNode>
     </testCase>
-
 
     <testCase id="dt_duration_001">
         <description>before</description>

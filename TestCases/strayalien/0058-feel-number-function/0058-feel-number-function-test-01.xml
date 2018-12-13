@@ -117,7 +117,7 @@
             </expected>
         </resultNode>
     </testCase>
-    <testCase id="014">
+    <testCase id="015">
         <description>invalid 'from'</description>
         <resultNode errorResult="true" name="decision015" type="decision">
             <expected>
@@ -125,7 +125,7 @@
             </expected>
         </resultNode>
     </testCase>
-    <testCase id="015">
+    <testCase id="016">
         <description>will error when to few params</description>
         <resultNode errorResult="true" name="decision016" type="decision">
             <expected>
@@ -133,9 +133,9 @@
             </expected>
         </resultNode>
     </testCase>
-    <testCase id="014">
+    <testCase id="017">
         <description>will error when too many params</description>
-        <resultNode errorResult="true" name="decision016" type="decision">
+        <resultNode errorResult="true" name="decision017" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>

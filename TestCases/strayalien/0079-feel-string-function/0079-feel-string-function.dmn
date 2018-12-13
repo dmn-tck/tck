@@ -292,6 +292,16 @@
         </literalExpression>
     </decision>
 
+    <decision name="list_003" id="_list_003">
+        <description>Tests FEEL expression: 'string(["\"foo\""])' and expects result: '"["\"foo\""]" (string)'</description>
+        <question>Result of FEEL expression 'string(["\"foo\""])'?</question>
+        <allowedAnswers>"["\"foo\""]" (string)</allowedAnswers>
+        <variable typeRef="string" name="list_003"/>
+        <literalExpression>
+            <text>string(["\"foo\""])</text>
+        </literalExpression>
+    </decision>
+
     <decision name="context_001" id="_context_001">
         <description>Tests FEEL expression: 'string({a: "foo"})' and expects result: '"{a: "foo"}" (string)'</description>
         <question>Result of FEEL expression 'string({a: "foo"})'?</question>

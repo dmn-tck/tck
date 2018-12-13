@@ -271,6 +271,15 @@
         </resultNode>
     </testCase>
 
+    <testCase id="list_003">
+        <description>list string get escaped</description>
+        <resultNode name="list_003" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">["\"foo\""]</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
     <testCase id="context_001">
         <description>context</description>
         <resultNode name="context_001" type="decision">
