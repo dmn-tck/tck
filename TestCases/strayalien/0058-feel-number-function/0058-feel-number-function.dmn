@@ -10,7 +10,7 @@
             <text>number("1.000.000,01", ".", ",")</text>
         </literalExpression>
     </decision>
-    <decision name="decision003" id="_decision002">
+    <decision name="decision002" id="_decision002">
         <description>Tests FEEL expression: 'number("1,000,000.01", ",", "."))' and expects result: '1000000.01 (number)'</description>
         <question>Result of FEEL expression 'number("1,000,000.01", ",", "."))'?</question>
         <allowedAnswers>1000000.01 (number)</allowedAnswers>

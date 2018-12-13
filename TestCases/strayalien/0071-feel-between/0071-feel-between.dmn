@@ -32,7 +32,6 @@
         </literalExpression>
     </decision>
 
-
     <decision name="number_005" id="_number_005">
         <variable name="number_005"/>
         <literalExpression>
