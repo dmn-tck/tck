@@ -7,12 +7,12 @@
     </itemDefinition>
 
     <decision name="decision001" id="_decision001">
-        <description>Tests FEEL expression: 'split("John Doe", "\\s")' and expects result: '["John", "Doe"] (list)'</description>
-        <question>Result of FEEL expression 'split("John Doe", "\\s")'?</question>
+        <description>Tests FEEL expression: 'split("John Doe", "\s")' and expects result: '["John", "Doe"] (list)'</description>
+        <question>Result of FEEL expression 'split("John Doe", "\s")'?</question>
         <allowedAnswers>["John", "Doe"] (list)</allowedAnswers>
         <variable typeRef="tStringList" name="decision001"/>
         <literalExpression>
-            <text>split("John Doe", "\\s")</text>
+            <text>split("John Doe", "\s")</text>
         </literalExpression>
     </decision>
 
