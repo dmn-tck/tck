@@ -52,6 +52,7 @@ import org.kie.dmn.api.core.DMNRuntime;
 import org.kie.dmn.api.core.DMNType;
 import org.kie.dmn.api.core.ast.DecisionNode;
 import org.kie.dmn.api.core.ast.InputDataNode;
+import org.kie.dmn.core.compiler.DMNTypeRegistryV12;
 import org.kie.dmn.core.impl.BaseDMNTypeImpl;
 import org.kie.dmn.core.impl.SimpleTypeImpl;
 import org.kie.dmn.feel.lang.Type;
@@ -88,6 +89,8 @@ public class DroolsTCKTest
    };
    private static final Logger logger = LoggerFactory.getLogger(DroolsTCKTest.class);
    public static final BigDecimal NUMBER_COMPARISON_PRECISION = new BigDecimal("0.00000001");
+
+    private static final DMNTypeRegistryV12 REGISTRY = new DMNTypeRegistryV12();
 
    File propsFile;
    Properties props;
@@ -400,7 +403,7 @@ public class DroolsTCKTest
          }
          return result;
       }
-      else if (!dmnType.isComposite())
+      else if (isDMNSimpleType(dmnType) || ( isDMNAny(dmnType) && isJAXBValue(value) && !isJAXBComponent(value) ))
       {
          String text = null;
          Object val = value.getValue();
@@ -437,7 +440,7 @@ public class DroolsTCKTest
             return val;
          }
       }
-      else
+      else if (isDMNCompositeType(dmnType)) 
       {
          Map<String, Object> result = new HashMap<>();
          for (ValueType.Component component : value.getComponent())
@@ -455,8 +458,37 @@ public class DroolsTCKTest
             result.put(component.getName(), fieldValue);
          }
          return result;
+      } else if (isDMNAny(dmnType) && !isJAXBValue(value) && isJAXBComponent(value)) {
+            Map<String, Object> result = new HashMap<>();
+            for (ValueType.Component component : value.getComponent()) {
+                Object fieldValue = parseType(component, REGISTRY.unknown());
+                result.put(component.getName(), fieldValue);
+            }
+            return result;
+      } else {
+            throw new RuntimeException("Unable to infer information from JAXB type");
       }
    }
+
+    private boolean isJAXBComponent(ValueType value) {
+        return value.getComponent() != null && value.getComponent().size() > 0;
+    }
+
+    private boolean isJAXBValue(ValueType value) {
+        return value.getValue() != null;
+    }
+
+    private boolean isDMNAny(DMNType dmnType) {
+        return ((BaseDMNTypeImpl) dmnType).getFeelType().equals(BuiltInType.UNKNOWN);
+    }
+
+    private boolean isDMNSimpleType(DMNType dmnType) {
+        return !dmnType.isComposite() && !isDMNAny(dmnType);
+    }
+
+    private boolean isDMNCompositeType(DMNType dmnType) {
+        return dmnType.isComposite() && !isDMNAny(dmnType);
+    }
 
     private BuiltInType recurseSimpleDMNTypeToFindBuiltInFEELType(BaseDMNTypeImpl dmnType) {
         Type feelType = dmnType.getFeelType();
