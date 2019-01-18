@@ -17,6 +17,7 @@ import java.io.FileReader;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.UncheckedIOException;
+import java.lang.reflect.Method;
 import java.math.BigDecimal;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -392,83 +393,82 @@ public class DroolsTCKTest
       return parseType(rn.getExpected(), decision.getResultType());
    }
 
-   private Object parseType(ValueType value, DMNType dmnType)
-   {
-      if (value.getList() != null && !value.getList().isNil())
-      {
-         List<Object> result = new ArrayList<>();
-         ValueType.List list = value.getList().getValue();
-         for (ValueType vt : list.getItem())
-         {
-            result.add(parseType(vt, dmnType));
-         }
-         return result;
-      }
-      else if (isDMNSimpleType(dmnType) || ( isDMNAny(dmnType) && isJAXBValue(value) && !isJAXBComponent(value) ))
-      {
-         String text = null;
-         Object val = value.getValue();
-         if (val != null && !value.getValue().isNil() && val instanceof JAXBElement<?> && ((JAXBElement<?>) val).getValue() instanceof Node
-            && !isDateTimeOrDuration(((JAXBElement<?>) val).getValue()))
-         {
-            Node nodeVal = (Node) ((JAXBElement<?>) val).getValue();
-            if (nodeVal.getFirstChild() != null)
-            {
-               text = nodeVal.getFirstChild().getTextContent();
+    private Object parseType(ValueType value, DMNType dmnType) {
+        if (value.getList() != null && !value.getList().isNil()) {
+            List<Object> result = new ArrayList<>();
+            ValueType.List list = value.getList().getValue();
+            for (ValueType vt : list.getItem()) {
+                result.add(parseType(vt, dmnType));
             }
-                return text != null ? recurseSimpleDMNTypeToFindBuiltInFEELType((BaseDMNTypeImpl) dmnType).fromString(text) : null;
-         }
-         else if (val instanceof JAXBElement<?> && !(((JAXBElement<?>) val).getValue() instanceof Node) && !isDateTimeOrDuration(((JAXBElement<?>) val).getValue()))
-         {
-            return ((JAXBElement<?>) val).getValue();
-         }
-         else
-         {
-            try
-            {
-               Object dateTimeOrDurationValue = (val != null) ? ((JAXBElement<?>) val).getValue() : null;
-               if (dateTimeOrDurationValue instanceof Duration || dateTimeOrDurationValue instanceof XMLGregorianCalendar)
-               {
-                  // need to convert to java.time.* equivalent
-                  text = dateTimeOrDurationValue.toString();
+            return result;
+        } else if (isDMNSimpleType(dmnType) || (isDMNAny(dmnType) && isJAXBValue(value) && !isJAXBComponent(value))) {
+            String text = null;
+            Object val = value.getValue();
+            if (val != null && !value.getValue().isNil() && val instanceof JAXBElement<?> && ((JAXBElement<?>) val).getValue() instanceof Node && !isDateTimeOrDuration(((JAXBElement<?>) val).getValue())) {
+                Node nodeVal = (Node) ((JAXBElement<?>) val).getValue();
+                if (nodeVal.getFirstChild() != null) {
+                    text = nodeVal.getFirstChild().getTextContent();
+                }
+                if (text != null) {
+                    if (isDMNSimpleType(dmnType)) {
+                        return recurseSimpleDMNTypeToFindBuiltInFEELType((BaseDMNTypeImpl) dmnType).fromString(text);
+                    } else {
+                        // no information from DMN; try to use the xml test case file.
+                        Class<?> xmlClass = value.getValue().getDeclaredType();
+                        if (!xmlClass.equals(Object.class) && !xmlClass.equals(String.class)) {
+                            try {
+                                Method m = xmlClass.getMethod("valueOf", String.class);
+                                Object valueOfResult = m.invoke(null, text);
+                                return valueOfResult;
+                            } catch (Exception e) {
+                                return text;
+                            }
+                        } else {
+                            return text;
+                        }
+                    }
+                } else {
+                    return null;
+                }
+            } else if (val instanceof JAXBElement<?> && !(((JAXBElement<?>) val).getValue() instanceof Node) && !isDateTimeOrDuration(((JAXBElement<?>) val).getValue())) {
+                return ((JAXBElement<?>) val).getValue();
+            } else {
+                try {
+                    Object dateTimeOrDurationValue = (val != null) ? ((JAXBElement<?>) val).getValue() : null;
+                    if (dateTimeOrDurationValue instanceof Duration || dateTimeOrDurationValue instanceof XMLGregorianCalendar) {
+                        // need to convert to java.time.* equivalent
+                        text = dateTimeOrDurationValue.toString();
                         return text != null ? recurseSimpleDMNTypeToFindBuiltInFEELType((BaseDMNTypeImpl) dmnType).fromString(text) : null;
+                    }
+                } catch (Exception e) {
+                    logger.error("Error trying to coerce JAXB type " + val.getClass().getName() + " with value '" + val.toString() + "': " + e.getMessage());
+                }
+                return val;
+            }
+        } else if (isDMNCompositeType(dmnType)) {
+            Map<String, Object> result = new HashMap<>();
+            for (ValueType.Component component : value.getComponent()) {
+                if (!dmnType.getFields().containsKey(component.getName())) {
+                    throw new RuntimeException("Error parsing input: unknown field '" + component.getName() + "' for type '" + dmnType.getName() + "'");
+                }
+                DMNType fieldType = dmnType.getFields().get(component.getName());
+                if (fieldType == null) {
+                    throw new RuntimeException("Error parsing input: unknown type for field '" + component.getName() + "' on type " + dmnType.getName() + "'");
                }
+                Object fieldValue = parseType(component, fieldType);
+                result.put(component.getName(), fieldValue);
             }
-            catch (Exception e)
-            {
-               logger.error("Error trying to coerce JAXB type " + val.getClass().getName() + " with value '" + val.toString() + "': " + e.getMessage());
-            }
-            return val;
-         }
-      }
-      else if (isDMNCompositeType(dmnType)) 
-      {
-         Map<String, Object> result = new HashMap<>();
-         for (ValueType.Component component : value.getComponent())
-         {
-            if (!dmnType.getFields().containsKey(component.getName()))
-            {
-               throw new RuntimeException("Error parsing input: unknown field '" + component.getName() + "' for type '" + dmnType.getName() + "'");
-            }
-            DMNType fieldType = dmnType.getFields().get(component.getName());
-            if (fieldType == null)
-            {
-               throw new RuntimeException("Error parsing input: unknown type for field '" + component.getName() + "' on type " + dmnType.getName() + "'");
-            }
-            Object fieldValue = parseType(component, fieldType);
-            result.put(component.getName(), fieldValue);
-         }
-         return result;
-      } else if (isDMNAny(dmnType) && !isJAXBValue(value) && isJAXBComponent(value)) {
+            return result;
+        } else if (isDMNAny(dmnType) && !isJAXBValue(value) && isJAXBComponent(value)) {
             Map<String, Object> result = new HashMap<>();
             for (ValueType.Component component : value.getComponent()) {
                 Object fieldValue = parseType(component, REGISTRY.unknown());
                 result.put(component.getName(), fieldValue);
             }
             return result;
-      } else {
+        } else {
             throw new RuntimeException("Unable to infer information from JAXB type");
-      }
+        }
    }
 
     private boolean isJAXBComponent(ValueType value) {
