@@ -38,9 +38,9 @@
         </literalExpression>
     </decision>
     <decision name="decision003" id="_decision003">
-        <description>Tests FEEL expression: 'odd(0)' and expects result: '0 (number)'</description>
+        <description>Tests FEEL expression: 'odd(0)' and expects result: 'false (boolean)'</description>
         <question>Result of FEEL expression 'odd(0)'?</question>
-        <allowedAnswers>0 (number)</allowedAnswers>
+        <allowedAnswers>false (boolean)</allowedAnswers>
         <variable typeRef="boolean" name="decision003"/>
         <literalExpression>
             <text>odd(0)</text>
@@ -76,7 +76,7 @@
     <decision name="decision007" id="_decision007">
         <description>Tests FEEL expression: 'odd(n:4)' and expects result: 'null (number)'</description>
         <question>Result of FEEL expression 'odd(n:4)'?</question>
-        <allowedAnswers>2 (number)</allowedAnswers>
+        <allowedAnswers>null (number)</allowedAnswers>
         <variable typeRef="boolean" name="decision007"/>
         <literalExpression>
             <text>odd(n:4)</text>

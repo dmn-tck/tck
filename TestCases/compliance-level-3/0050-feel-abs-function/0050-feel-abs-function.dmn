@@ -11,9 +11,9 @@
         </literalExpression>
     </decision>
     <decision name="decision002" id="_decision002">
-        <description>Tests FEEL expression: 'abs(-1)' and expects result: '-1 (number)'</description>
+        <description>Tests FEEL expression: 'abs(-1)' and expects result: '1 (number)'</description>
         <question>Result of FEEL expression 'abs(-1)'?</question>
-        <allowedAnswers>-1 (number)</allowedAnswers>
+        <allowedAnswers>1 (number)</allowedAnswers>
         <variable typeRef="number" name="decision002"/>
         <literalExpression>
             <text>abs(-1)</text>

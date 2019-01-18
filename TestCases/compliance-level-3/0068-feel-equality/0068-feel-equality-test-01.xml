@@ -376,7 +376,6 @@
         </resultNode>
     </testCase>
 
-<!--
     <testCase id="time_006">
         <description>same times in same zone are equal</description>
         <resultNode name="time_006" type="decision">
@@ -385,7 +384,6 @@
             </expected>
         </resultNode>
     </testCase>
--->
 
     <testCase id="time_007">
         <description>same times - one with zone one without are not equal</description>
@@ -414,7 +412,6 @@
         </resultNode>
     </testCase>
 
-<!--
     <testCase id="time_010">
         <description>same times = one with Z zone, the other with UTC are equal</description>
         <resultNode name="time_010" type="decision">
@@ -423,7 +420,6 @@
             </expected>
         </resultNode>
     </testCase>
--->
 
     <testCase id="datetime_001">
         <description>same datetimes are equal</description>

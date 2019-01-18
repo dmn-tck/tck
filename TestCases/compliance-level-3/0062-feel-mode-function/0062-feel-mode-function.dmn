@@ -18,12 +18,12 @@
     </decision>
 
     <decision name="decision002" id="_decision002">
-        <description>Tests FEEL expression: 'mode([6, 1, 9, 6, 1])' and expects result: '[1,6] (list)'</description>
-        <question>Result of FEEL expression 'mode([6, 1, 9, 6, 1])'?</question>
-        <allowedAnswers>[1,6] (list)</allowedAnswers>
+        <description>Tests FEEL expression: 'mode([3, 6, 1, 9, 6, 1, 3])' and expects result: '[1,3,6] (list)'</description>
+        <question>Result of FEEL expression 'mode([3, 6, 1, 9, 6, 1, 3])'?</question>
+        <allowedAnswers>[1,3,6] (list)</allowedAnswers>
         <variable typeRef="tNumberList" name="decision002"/>
         <literalExpression>
-            <text>mode([6, 1, 9, 6, 1])</text>
+            <text>mode([3, 6, 1, 9, 6, 1, 3])</text>
         </literalExpression>
     </decision>
 

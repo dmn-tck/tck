@@ -67,7 +67,7 @@
     <decision name="decision006_a" id="_decision006_a">
         <description>Tests FEEL expression: 'false or null' and expects result: 'false (boolean)'</description>
         <question>Result of FEEL expression 'false or null'?</question>
-        <allowedAnswers>false (boolean)</allowedAnswers>
+        <allowedAnswers>null (boolean)</allowedAnswers>
         <variable typeRef="boolean" name="decision006_a"/>
         <literalExpression>
             <text>false or null</text>

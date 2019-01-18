@@ -452,17 +452,15 @@
         </literalExpression>
     </decision>
 
-<!--
     <decision name="time_010" id="_time_010">
-        <description>Tests FEEL expression: 'time("10:30:00Z") = time("10:30:00@Etc/UTC")' and expects result: 'true (boolean)'</description>
-        <question>Result of FEEL expression 'time("10:30:00Z") = time("10:30:00@Etc/UTC")'?</question>
+        <description>Tests FEEL expression: 'time("10:30:00Z") = time("10:30:00+00:00")' and expects result: 'true (boolean)'</description>
+        <question>Result of FEEL expression 'time("10:30:00Z") = time("10:30:00+00:00")'?</question>
         <allowedAnswers>true (boolean)</allowedAnswers>
         <variable typeRef="boolean" name="time_010"/>
         <literalExpression>
-            <text>time("10:30:00Z") = time("10:30:00@Etc/UTC")</text>
+            <text>time("10:30:00Z") = time("10:30:00+00:00")</text>
         </literalExpression>
     </decision>
--->
 
     <decision name="datetime_001" id="_datetime_001">
         <description>Tests FEEL expression: 'date and time("2018-12-08T10:30:00") = date and time("2018-12-08T10:30:00")' and expects result: 'true (boolean)'</description>
