@@ -398,7 +398,7 @@ public class DroolsTCKTest
             List<Object> result = new ArrayList<>();
             ValueType.List list = value.getList().getValue();
             for (ValueType vt : list.getItem()) {
-                result.add(parseType(vt, dmnType));
+                result.add(parseType(vt, (dmnType.isCollection()) ? dmnType : REGISTRY.unknown()));
             }
             return result;
         } else if (isDMNSimpleType(dmnType) || (isDMNAny(dmnType) && isJAXBValue(value) && !isJAXBComponent(value))) {
