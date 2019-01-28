@@ -29,7 +29,7 @@
 
     <testCase id="decision_002">
         <description>string exponent is null</description>
-        <resultNode name="decision_002" type="decision">
+        <resultNode errorResult="true" name="decision_002" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -38,7 +38,7 @@
 
     <testCase id="decision_003">
         <description>boolean exponent is null</description>
-        <resultNode name="decision_003" type="decision">
+        <resultNode errorResult="true" name="decision_003" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -47,7 +47,7 @@
 
     <testCase id="decision_004">
         <description>date exponent is null</description>
-        <resultNode name="decision_004" type="decision">
+        <resultNode errorResult="true" name="decision_004" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -56,7 +56,7 @@
 
     <testCase id="decision_005">
         <description>time exponent is null</description>
-        <resultNode name="decision_005" type="decision">
+        <resultNode errorResult="true" name="decision_005" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -65,7 +65,7 @@
 
     <testCase id="decision_006">
         <description>date time exponent is null</description>
-        <resultNode name="decision_006" type="decision">
+        <resultNode errorResult="true" name="decision_006" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -74,7 +74,7 @@
 
     <testCase id="decision_007">
         <description>ym duration exponent is null</description>
-        <resultNode name="decision_007" type="decision">
+        <resultNode errorResult="true" name="decision_007" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -83,7 +83,7 @@
 
     <testCase id="decision_008">
         <description>dt duration exponent is null</description>
-        <resultNode name="decision_008" type="decision">
+        <resultNode errorResult="true" name="decision_008" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -92,7 +92,7 @@
 
     <testCase id="decision_009">
         <description>context exponent is null</description>
-        <resultNode name="decision_009" type="decision">
+        <resultNode errorResult="true" name="decision_009" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -101,7 +101,7 @@
 
     <testCase id="decision_010">
         <description>list exponent is null</description>
-        <resultNode name="decision_010" type="decision">
+        <resultNode errorResult="true" name="decision_010" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -110,7 +110,7 @@
 
     <testCase id="decision_011">
         <description>function exponent is null</description>
-        <resultNode name="decision_011" type="decision">
+        <resultNode errorResult="true" name="decision_011" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>

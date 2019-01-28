@@ -16,20 +16,6 @@
         </literalExpression>
     </decision>
 
-    <decision name="decision_003" id="_decision_003">
-        <variable name="decision_003"/>
-        <literalExpression>
-            <text>for i in [2..4] return i</text>
-        </literalExpression>
-    </decision>
-
-    <decision name="decision_003_a" id="_decision_003_a">
-        <variable name="decision_003_a"/>
-        <literalExpression>
-            <text>for i in [4..2] return i</text>
-        </literalExpression>
-    </decision>
-
     <decision name="decision_004" id="_decision_004">
         <variable name="decision_004"/>
         <literalExpression>

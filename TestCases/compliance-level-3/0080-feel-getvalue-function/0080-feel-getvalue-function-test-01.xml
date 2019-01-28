@@ -61,6 +61,7 @@
         </resultNode>
     </testCase>
 
+<!--
     <testCase id="decision_007">
         <description>named params</description>
         <resultNode name="decision_007" type="decision">
@@ -78,6 +79,7 @@
             </expected>
         </resultNode>
     </testCase>
+-->
 
     <testCase id="decision_008">
         <description>badly named params</description>

@@ -62,6 +62,7 @@
         </literalExpression>
     </decision>
 
+<!--
     <decision name="decision_007" id="_decision_007">
         <description>Tests FEEL expression: 'get value(key:"a", m:{a: "foo"})' and expects result: 'foo'</description>
         <question>Result of FEEL expression 'get value(key:"a", m:{a: "foo"})'?</question>
@@ -81,6 +82,7 @@
             <text>get value(k:"a", m:{a: "foo"})</text>
         </literalExpression>
     </decision>
+-->
 
     <decision name="decision_009" id="_decision_009">
         <description>Tests FEEL expression: 'get value(null, "a")' and expects result: 'null'</description>

@@ -43,32 +43,6 @@
         </resultNode>
     </testCase>
 
-    <testCase id="decision_003">
-        <description>numeric range iteration context</description>
-        <resultNode name="decision_003" type="decision">
-            <expected>
-                <list>
-                    <item><value xsi:type="xsd:decimal">2</value></item>
-                    <item><value xsi:type="xsd:decimal">3</value></item>
-                    <item><value xsi:type="xsd:decimal">4</value></item>
-                </list>
-            </expected>
-        </resultNode>
-    </testCase>
-
-    <testCase id="decision_003_a">
-        <description>numeric descending range iteration context</description>
-        <resultNode name="decision_003_a" type="decision">
-            <expected>
-                <list>
-                    <item><value xsi:type="xsd:decimal">4</value></item>
-                    <item><value xsi:type="xsd:decimal">3</value></item>
-                    <item><value xsi:type="xsd:decimal">2</value></item>
-                </list>
-            </expected>
-        </resultNode>
-    </testCase>
-
     <testCase id="decision_004">
         <description>numeric range iteration context</description>
         <resultNode name="decision_004" type="decision">

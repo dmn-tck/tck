@@ -42,6 +42,7 @@
         </literalExpression>
     </decision>
 
+<!--
     <decision name="decision_005" id="_decision_005">
         <description>Tests FEEL expression: 'get entries(m:{a: "foo", b: "bar"})' and expects result: '[{a: "foo}, {b: "bar"}]'</description>
         <question>Result of FEEL expression 'get entries(m:{a: "foo", b: "bar"})'?</question>
@@ -51,7 +52,9 @@
             <text>get entries(m:{a: "foo", b: "bar"})</text>
         </literalExpression>
     </decision>
+-->
 
+<!--
     <decision name="decision_006" id="_decision_006">
         <description>Tests FEEL expression: 'get entries(map:{a: "foo", b: "bar"})' and expects result: 'null'</description>
         <question>Result of FEEL expression 'get entries(map:{a: "foo", b: "bar"})'?</question>
@@ -61,6 +64,7 @@
             <text>get entries(map:{a: "foo", b: "bar"})</text>
         </literalExpression>
     </decision>
+-->
 
     <decision name="decision_007" id="_decision_007">
         <description>Tests FEEL expression: 'get entries(123)' and expects result: 'null'</description>

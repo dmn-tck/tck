@@ -40,12 +40,18 @@
             <expected>
                 <list>
                     <item>
-                        <component name="a">
+                        <component name="key">
+                            <value xsi:type="xsd:string">a</value>
+                        </component>
+                        <component name="value">
                             <value xsi:type="xsd:string">foo</value>
                         </component>
                     </item>
                     <item>
-                        <component name="b">
+                        <component name="key">
+                            <value xsi:type="xsd:string">b</value>
+                        </component>
+                        <component name="value">
                             <value xsi:type="xsd:string">bar</value>
                         </component>
                     </item>
@@ -54,18 +60,25 @@
         </resultNode>
     </testCase>
 
+<!--
     <testCase id="decision_005">
         <description>named param</description>
         <resultNode name="decision_005" type="decision">
             <expected>
                 <list>
                     <item>
-                        <component name="a">
+                        <component name="key">
+                            <value xsi:type="xsd:string">a</value>
+                        </component>
+                        <component name="value">
                             <value xsi:type="xsd:string">foo</value>
                         </component>
                     </item>
                     <item>
-                        <component name="b">
+                        <component name="key">
+                            <value xsi:type="xsd:string">b</value>
+                        </component>
+                        <component name="value">
                             <value xsi:type="xsd:string">bar</value>
                         </component>
                     </item>
@@ -73,7 +86,9 @@
             </expected>
         </resultNode>
     </testCase>
+-->
 
+<!--
     <testCase id="decision_006">
         <description>bad named param</description>
         <resultNode errorResult="true" name="decision_006" type="decision">
@@ -82,6 +97,7 @@
             </expected>
         </resultNode>
     </testCase>
+-->
 
     <testCase id="decision_007">
         <description>not a map as param</description>
