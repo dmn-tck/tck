@@ -398,7 +398,7 @@ public class DroolsTCKTest
             List<Object> result = new ArrayList<>();
             ValueType.List list = value.getList().getValue();
             for (ValueType vt : list.getItem()) {
-                result.add(parseType(vt, dmnType));
+                result.add(parseType(vt, (dmnType.isCollection()) ? dmnType : REGISTRY.unknown()));
             }
             return result;
         } else if (isDMNSimpleType(dmnType) || (isDMNAny(dmnType) && isJAXBValue(value) && !isJAXBComponent(value))) {
@@ -436,9 +436,20 @@ public class DroolsTCKTest
                 try {
                     Object dateTimeOrDurationValue = (val != null) ? ((JAXBElement<?>) val).getValue() : null;
                     if (dateTimeOrDurationValue instanceof Duration || dateTimeOrDurationValue instanceof XMLGregorianCalendar) {
-                        // need to convert to java.time.* equivalent
-                        text = dateTimeOrDurationValue.toString();
-                        return text != null ? recurseSimpleDMNTypeToFindBuiltInFEELType((BaseDMNTypeImpl) dmnType).fromString(text) : null;
+                        if (!isDMNAny(dmnType)) {
+                            // need to convert to java.time.* equivalent
+                            text = dateTimeOrDurationValue.toString();
+                            return text != null ? recurseSimpleDMNTypeToFindBuiltInFEELType((BaseDMNTypeImpl) dmnType).fromString(text) : null;
+                        } else {
+                            // no DMN type information from the DMN model
+                            if (dateTimeOrDurationValue instanceof Duration) {
+                                return java.time.Duration.parse(dateTimeOrDurationValue.toString());
+                            } else if (dateTimeOrDurationValue instanceof XMLGregorianCalendar) {
+                                return ((XMLGregorianCalendar) dateTimeOrDurationValue).toGregorianCalendar();
+                            } else {
+                                return dateTimeOrDurationValue;
+                            }
+                        }
                     }
                 } catch (Exception e) {
                     logger.error("Error trying to coerce JAXB type " + val.getClass().getName() + " with value '" + val.toString() + "': " + e.getMessage());
