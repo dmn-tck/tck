@@ -342,25 +342,6 @@
         </literalExpression>
     </decision>
 
-    <decision name="date_003" id="_date_003">
-        <description>Tests FEEL expression: 'date("2018-12-07") = date and time("2018-12-08")' and expects result: 'false (boolean)'</description>
-        <question>Result of FEEL expression 'date("2018-12-07") = date and time("2018-12-08")'?</question>
-        <allowedAnswers>false (boolean)</allowedAnswers>
-        <variable typeRef="boolean" name="date_003"/>
-        <literalExpression>
-            <text>date("2018-12-07") = date and time("2018-12-08")</text>
-        </literalExpression>
-    </decision>
-
-    <decision name="date_004" id="_date_004">
-        <description>Tests FEEL expression: 'date("1970-01-01") = time("00:00:00")' and expects result: 'false (boolean)'</description>
-        <question>Result of FEEL expression 'date("1970-01-01") = time("00:00:00")'?</question>
-        <allowedAnswers>false (boolean)</allowedAnswers>
-        <variable typeRef="boolean" name="date_004"/>
-        <literalExpression>
-            <text>date("1970-01-01") = time("00:00:00")</text>
-        </literalExpression>
-    </decision>
 
     <decision name="time_001" id="_time_001">
         <description>Tests FEEL expression: 'time("10:30:00") = time("10:30:00")' and expects result: 'true (boolean)'</description>

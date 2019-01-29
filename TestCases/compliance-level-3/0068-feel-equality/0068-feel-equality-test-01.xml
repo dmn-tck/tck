@@ -313,24 +313,6 @@
         </resultNode>
     </testCase>
 
-    <testCase id="date_003">
-        <description>date is not equal to same dateTime with zero time</description>
-        <resultNode name="date_003" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">false</value>
-            </expected>
-        </resultNode>
-    </testCase>
-
-    <testCase id="date_004">
-        <description>start of epoch date is not equal to zero time</description>
-        <resultNode name="date_004" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">false</value>
-            </expected>
-        </resultNode>
-    </testCase>
-
     <testCase id="time_001">
         <description>same times are equal</description>
         <resultNode name="time_001" type="decision">
