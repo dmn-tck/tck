@@ -150,7 +150,7 @@ public class DroolsTCKTest
             e.printStackTrace();
          }
       }
-        // testCases.sort((x, y) -> x.toString().compareTo(y.toString()));
+      testCases.sort((x, y) -> x.toString().compareTo(y.toString()));
       return testCases;
    }
 
