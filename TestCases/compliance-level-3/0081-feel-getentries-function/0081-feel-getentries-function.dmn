@@ -33,9 +33,9 @@
     </decision>
 
     <decision name="decision_004" id="_decision_004">
-        <description>Tests FEEL expression: 'get entries({a: "foo", b: "bar"})' and expects result: '[{a: "foo}, {b: "bar"}]'</description>
+        <description>Tests FEEL expression: 'get entries({a: "foo", b: "bar"})' and expects result: '[{key: "a": value: "foo"}, {key: "b": value: "bar"}]'</description>
         <question>Result of FEEL expression 'get entries({a: "foo", b: "bar"})'?</question>
-        <allowedAnswers>[{a: "foo}, {b: "bar"}]</allowedAnswers>
+        <allowedAnswers>[{key: "a": value: "foo"}, {key: "b": value: "bar"}]</allowedAnswers>
         <variable typeRef="list" name="decision_004"/>
         <literalExpression>
             <text>get entries({a: "foo", b: "bar"})</text>
