@@ -81,15 +81,6 @@
     </testCase>
 -->
 
-    <testCase id="decision_008">
-        <description>badly named params</description>
-        <resultNode errorResult="true" name="decision_008" type="decision">
-            <expected>
-                <value xsi:nil="true"></value>
-            </expected>
-        </resultNode>
-    </testCase>
-
     <testCase id="decision_009">
         <description>null map param</description>
         <resultNode errorResult="true" name="decision_009" type="decision">
