@@ -5,7 +5,7 @@
     <decision name="decision_001" id="_decision_001">
         <variable name="decision_001"/>
         <literalExpression>
-            <text>1 / 0</text>
+            <text>0.0 / 0.0</text>
         </literalExpression>
     </decision>
 
