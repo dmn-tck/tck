@@ -16,24 +16,10 @@
         </literalExpression>
     </decision>
 
-    <decision name="decision_004" id="_decision_004">
-        <variable name="decision_004"/>
+    <decision name="decision_003" id="_decision_003">
+        <variable name="decision_003"/>
         <literalExpression>
-            <text>for i in (2..4] return i</text>
-        </literalExpression>
-    </decision>
-
-    <decision name="decision_005" id="_decision_005">
-        <variable name="decision_005"/>
-        <literalExpression>
-            <text>for i in [2..4) return i</text>
-        </literalExpression>
-    </decision>
-
-    <decision name="decision_006" id="_decision_006">
-        <variable name="decision_006"/>
-        <literalExpression>
-            <text>for i in (2..4) return i</text>
+            <text>for i in [] return i</text>
         </literalExpression>
     </decision>
 
@@ -68,7 +54,7 @@
     <decision name="decision_011" id="_decision_011">
         <variable name="decision_011"/>
         <literalExpression>
-            <text>for i in (0..0) return i</text>
+            <text>for i in 1..1 return i</text>
         </literalExpression>
     </decision>
 

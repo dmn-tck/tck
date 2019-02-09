@@ -43,36 +43,11 @@
         </resultNode>
     </testCase>
 
-    <testCase id="decision_004">
-        <description>numeric range iteration context</description>
-        <resultNode name="decision_004" type="decision">
+    <testCase id="decision_003">
+        <description>loop over empty list</description>
+        <resultNode name="decision_003" type="decision">
             <expected>
                 <list>
-                    <item><value xsi:type="xsd:decimal">3</value></item>
-                    <item><value xsi:type="xsd:decimal">4</value></item>
-                </list>
-            </expected>
-        </resultNode>
-    </testCase>
-
-    <testCase id="decision_005">
-        <description>numeric range iteration context</description>
-        <resultNode name="decision_005" type="decision">
-            <expected>
-                <list>
-                    <item><value xsi:type="xsd:decimal">2</value></item>
-                    <item><value xsi:type="xsd:decimal">3</value></item>
-                </list>
-            </expected>
-        </resultNode>
-    </testCase>
-
-    <testCase id="decision_006">
-        <description>numeric range iteration context</description>
-        <resultNode name="decision_006" type="decision">
-            <expected>
-                <list>
-                    <item><value xsi:type="xsd:decimal">3</value></item>
                 </list>
             </expected>
         </resultNode>
@@ -92,7 +67,7 @@
     </testCase>
 
     <testCase id="decision_008">
-        <description>numeric desending range iteration context - no delimiters</description>
+        <description>numeric descending range iteration context - no delimiters</description>
         <resultNode name="decision_008" type="decision">
             <expected>
                 <list>
@@ -131,10 +106,11 @@
     </testCase>
 
     <testCase id="decision_011">
-        <description>empty range</description>
+        <description>numeric range iteration context - same endpoints</description>
         <resultNode name="decision_011" type="decision">
             <expected>
                 <list>
+                    <item><value xsi:type="xsd:decimal">1</value></item>
                 </list>
             </expected>
         </resultNode>
