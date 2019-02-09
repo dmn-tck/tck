@@ -1,0 +1,1152 @@
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- PatternFly Styles -->
+    <link href="css/patternfly.min.css" rel="stylesheet" media="screen, print">
+    <link href="css/patternfly-additions.min.css" rel="stylesheet" media="screen, print">
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- PatternFly -->
+    <script src="js/patternfly.min.js"></script>
+    <!-- c3 -->
+    <script src="js/c3.min.js"></script>
+    <!-- c3 -->
+    <script src="js/d3.min.js"></script>
+    <!-- jquery max height -->
+    <script src="js/jquery.matchHeight-min.js"></script>
+
+    <!-- tabs -->
+    <script>
+        $(document).ready(function(){
+            $(".nav-tabs a").click(function(){
+                $(this).tab('show');
+            });
+        });
+    </script>
+
+    <!-- site libs -->
+    <script src="js/lib.js"></script>
+    <link href="css/lib.css" rel="stylesheet" media="screen, print">
+
+    <!-- chart js -->
+    <title>DMN TCK results overview for Fujitsu America 2.3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="header">
+        <nav class="navbar navbar-default navbar-pf" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">
+                    <img src="images/logo.png" alt="DMN Technology Compatibility Kit" class="pull-left"/><i>(Archived version of DMNv1.1; please refer to main website for most up-to-date DMN version results)</i>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse navbar-collapse-1">
+
+                <ul class="nav navbar-nav navbar-primary">
+                    <li class="active">
+                        <a href="index.html">Submitters</a>
+                    </li>
+                    <li>
+                        <a href="glossary.html">Glossary</a>
+                    </li>
+                    <li>
+                        <a href="tests.html">Tests</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <div class="breadcrumbs">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="active"><strong>Digital Transformation Platform (DXP) 2.3</strong></li>
+            </ol>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="report-header ">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>DMN TCK Results Overview for Digital Transformation Platform (DXP) 2.3</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <small>
+                            <p><strong>Date:</strong> 2018-08-31</p>
+                        </small>
+                    </div>
+                    <div class="col-md-2">
+                        <small>
+                            <p><strong>Tests:</strong> 630</p>
+                        </small>
+                    </div>
+                    <div class="col-md-2">
+                        <small>
+                            <p><strong>Labels:</strong> 55</p>
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <script>
+                window.chartColors = {
+                    red: 'rgb(255, 99, 132)',
+                    orange: 'rgb(255, 159, 64)',
+                    yellow: 'rgb(255, 205, 86)',
+                    green: 'rgb(75, 192, 192)',
+                    blue: 'rgb(54, 162, 235)',
+                    purple: 'rgb(153, 102, 255)',
+                    grey: 'rgb(231,233,237)'
+                };
+
+                var color = Chart.helpers.color;
+                var cbl2_data = {
+                    labels: [
+                        "Aggregator: COUNT","Aggregator: MIN","Aggregator: SUM","Business Knowledge Model","Compliance Level 2","Compliance Level 3","Context","Data Type : String","Data Type: Boolean","Data Type: Collection","Data Type: Date","Data Type: Date and Time","Data Type: Days and Time Duration","Data Type: Function","Data Type: Number","Data Type: String","Data Type: Structure","Data Type: Text","Data Type: Time","Data Type: Years and Months Duration","Decision Table: Multiple Output","Decision Table: Multiple Output Columns","Decision Table: Single Output","FEEL Arithmetic","FEEL Conditionals","FEEL Constants","FEEL Filter (10.3.2.5)","FEEL Function Literals","FEEL Functions: date and time","FEEL Functions: list","FEEL Functions: lists","FEEL Functions: number","FEEL Functions: numeric","FEEL Functions: string","FEEL Functions: strings","FEEL Iteration","FEEL List","FEEL List Operator","FEEL Quantifiers","FEEL Relation","FEEL Special-character Names","Function Definition","Function Invocation","Hit Policy: ANY","Hit Policy: COLLECT","Hit Policy: Collect","Hit Policy: FIRST","Hit Policy: OUTPUT ORDER","Hit Policy: PRIORITY","Hit Policy: RULE ORDER","Hit Policy: UNIQUE","Item Definition","Literal Expression","Literal Function Invocation","Relation"
+                    ],
+                    datasets: [
+                        {
+                            label: "Succeeded",
+                            backgroundColor: color(window.chartColors.green).alpha(0.5).rgbString(),
+                            borderColor: window.chartColors.green,
+                            borderWidth: 1,
+                            data: [
+                                3,
+                                3,
+                                3,
+                                22,
+                                116,
+                                515,
+                                17,
+                                6,
+                                88,
+                                47,
+                                14,
+                                3,
+                                3,
+                                6,
+                                194,
+                                191,
+                                65,
+                                3,
+                                4,
+                                39,
+                                18,
+                                3,
+                                67,
+                                101,
+                                11,
+                                44,
+                                8,
+                                7,
+                                278,
+                                39,
+                                23,
+                                22,
+                                7,
+                                27,
+                                102,
+                                6,
+                                34,
+                                6,
+                                1,
+                                1,
+                                43,
+                                5,
+                                9,
+                                6,
+                                29,
+                                3,
+                                6,
+                                6,
+                                14,
+                                6,
+                                21,
+                                119,
+                                522,
+                                8,
+                                2
+                            ]
+                        },
+                        {
+                            label: "Not Supported",
+                            backgroundColor: color(window.chartColors.yellow).alpha(0.5).rgbString(),
+                            borderColor: window.chartColors.yellow,
+                            borderWidth: 1,
+                            data: [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ]
+                        },
+                        {
+                            label: "Failed",
+                            backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+                            borderColor: window.chartColors.red,
+                            borderWidth: 1,
+                            data: [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ]
+                        },
+                        {
+                            label: "Missing",
+                            backgroundColor: color(window.chartColors.purple).alpha(0.5).rgbString(),
+                            borderColor: window.chartColors.purple,
+                            borderWidth: 1,
+                            data: [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ]
+                        }
+                    ]
+                };
+                var cblp2_data = {
+                    labels: [
+                        "Aggregator: COUNT","Aggregator: MIN","Aggregator: SUM","Business Knowledge Model","Compliance Level 2","Compliance Level 3","Context","Data Type : String","Data Type: Boolean","Data Type: Collection","Data Type: Date","Data Type: Date and Time","Data Type: Days and Time Duration","Data Type: Function","Data Type: Number","Data Type: String","Data Type: Structure","Data Type: Text","Data Type: Time","Data Type: Years and Months Duration","Decision Table: Multiple Output","Decision Table: Multiple Output Columns","Decision Table: Single Output","FEEL Arithmetic","FEEL Conditionals","FEEL Constants","FEEL Filter (10.3.2.5)","FEEL Function Literals","FEEL Functions: date and time","FEEL Functions: list","FEEL Functions: lists","FEEL Functions: number","FEEL Functions: numeric","FEEL Functions: string","FEEL Functions: strings","FEEL Iteration","FEEL List","FEEL List Operator","FEEL Quantifiers","FEEL Relation","FEEL Special-character Names","Function Definition","Function Invocation","Hit Policy: ANY","Hit Policy: COLLECT","Hit Policy: Collect","Hit Policy: FIRST","Hit Policy: OUTPUT ORDER","Hit Policy: PRIORITY","Hit Policy: RULE ORDER","Hit Policy: UNIQUE","Item Definition","Literal Expression","Literal Function Invocation","Relation"
+                    ],
+                    datasets: [
+                        {
+                            label: "Succeeded",
+                            backgroundColor: color(window.chartColors.green).alpha(0.5).rgbString(),
+                            borderColor: window.chartColors.green,
+                            borderWidth: 1,
+                            data: [
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100
+                            ]
+                        },
+                        {
+                            label: "Not Supported",
+                            backgroundColor: color(window.chartColors.yellow).alpha(0.5).rgbString(),
+                            borderColor: window.chartColors.yellow,
+                            borderWidth: 1,
+                            data: [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                            ]
+                        },
+                        {
+                            label: "Failed",
+                            backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+                            borderColor: window.chartColors.red,
+                            borderWidth: 1,
+                            data: [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                            ]
+                        },
+                        {
+                            label: "Missing",
+                            backgroundColor: color(window.chartColors.purple).alpha(0.5).rgbString(),
+                            borderColor: window.chartColors.purple,
+                            borderWidth: 1,
+                            data: [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                            ]
+                        }
+                    ]
+                };
+
+                window.onload = function() {
+                    // chart by test numbers
+                    var ctx = document.getElementById("cbl2").getContext("2d");
+                    window.cbl2 = new Chart(ctx, {
+                        type: 'horizontalBar',
+                        data: cbl2_data,
+                        options: {
+                            // Elements options apply to all of the options unless overridden in a dataset
+                            // In this case, we are setting the border of each horizontal bar to be 2px wide
+                            elements: {
+                                rectangle: {
+                                    borderWidth: 2,
+                                }
+                            },
+                            responsive: true,
+                            legend: {
+                                position: 'right',
+                            },
+                            title: {
+                                display: true,
+                                text: 'Test results for Fujitsu America 2.3 (by number of tests)'
+                            },
+                            scales: {
+                                xAxes: [{
+                                    stacked: true,
+                                }],
+                                yAxes: [{
+                                    stacked: true
+                                }]
+                            }
+                        }
+                    });
+
+                    // chart by test percentage
+                    var ctxp = document.getElementById("cblp2").getContext("2d");
+                    window.cblp2 = new Chart(ctxp, {
+                        type: 'horizontalBar',
+                        data: cblp2_data,
+                        options: {
+                            // Elements options apply to all of the options unless overridden in a dataset
+                            // In this case, we are setting the border of each horizontal bar to be 2px wide
+                            elements: {
+                                rectangle: {
+                                    borderWidth: 2,
+                                }
+                            },
+                            responsive: true,
+                            legend: {
+                                position: 'right',
+                            },
+                            title: {
+                                display: true,
+                                text: 'Test results for Fujitsu America 2.3 (by percentage of tests)'
+                            },
+                            scales: {
+                                xAxes: [{
+                                    stacked: true,
+                                }],
+                                yAxes: [{
+                                    stacked: true
+                                }]
+                            }
+                        }
+                    });
+                };
+            </script>
+
+            <div id="results_nav">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab1">Chart (by %)</a></li>
+                    <li><a href="#tab2">Chart (by #)</a></li>
+                    <li><a href="#tab3">Table</a></li>
+                </ul>
+            </div>
+
+            <div class="tab-content">
+                <div id="tab1" class="tab-pane fade active in">
+                    <div id="chart_by_percent" style="width: 100%;">
+                        <canvas id="cblp2"></canvas>
+                    </div>
+                </div>
+                <div id="tab2" class="tab-pane fade">
+                    <div id="chart_by_numbers" style="width: 100%;">
+                        <canvas id="cbl2"></canvas>
+                    </div>
+                </div>
+                <div id="tab3" class="tab-pane fade">
+                    <p/>
+                    <div class="container" style="width: 95%;">
+                        <div class="table-responsive">
+                            <table class="table table-condensed table-bordered table-striped table-hover">
+                                <thead>
+                                <tr class="info">
+                                    <th> Label <br/>
+                                        <small></small>
+                                    </th>
+                                    <th> Fujitsu America <br/>
+                                        <small>2.3</small>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb0','Aggregator: COUNT')">Aggregator: COUNT</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb1','Aggregator: MIN')">Aggregator: MIN</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb2','Aggregator: SUM')">Aggregator: SUM</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb3','Business Knowledge Model')">Business Knowledge Model</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>22/22</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb4','Compliance Level 2')">Compliance Level 2</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>116/116</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb5','Compliance Level 3')">Compliance Level 3</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>515/515</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb6','Context')">Context</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>17/17</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb7','Data Type : String')">Data Type : String</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb8','Data Type: Boolean')">Data Type: Boolean</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>88/88</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb9','Data Type: Collection')">Data Type: Collection</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>47/47</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb10','Data Type: Date')">Data Type: Date</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>14/14</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb11','Data Type: Date and Time')">Data Type: Date and Time</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb12','Data Type: Days and Time Duration')">Data Type: Days and Time Duration</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb13','Data Type: Function')">Data Type: Function</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb14','Data Type: Number')">Data Type: Number</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>194/194</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb15','Data Type: String')">Data Type: String</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>191/191</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb16','Data Type: Structure')">Data Type: Structure</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>65/65</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb17','Data Type: Text')">Data Type: Text</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb18','Data Type: Time')">Data Type: Time</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>4/4</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb19','Data Type: Years and Months Duration')">Data Type: Years and Months Duration</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>39/39</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb20','Decision Table: Multiple Output')">Decision Table: Multiple Output</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>18/18</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb21','Decision Table: Multiple Output Columns')">Decision Table: Multiple Output Columns</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb22','Decision Table: Single Output')">Decision Table: Single Output</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>67/67</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb23','FEEL Arithmetic')">FEEL Arithmetic</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>101/101</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb24','FEEL Conditionals')">FEEL Conditionals</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>11/11</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb25','FEEL Constants')">FEEL Constants</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>44/44</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb26','FEEL Filter (10.3.2.5)')">FEEL Filter (10.3.2.5)</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>8/8</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb27','FEEL Function Literals')">FEEL Function Literals</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>7/7</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb28','FEEL Functions: date and time')">FEEL Functions: date and time</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>278/278</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb29','FEEL Functions: list')">FEEL Functions: list</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>39/39</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb30','FEEL Functions: lists')">FEEL Functions: lists</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>23/23</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb31','FEEL Functions: number')">FEEL Functions: number</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>22/22</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb32','FEEL Functions: numeric')">FEEL Functions: numeric</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>7/7</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb33','FEEL Functions: string')">FEEL Functions: string</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>27/27</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb34','FEEL Functions: strings')">FEEL Functions: strings</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>102/102</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb35','FEEL Iteration')">FEEL Iteration</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb36','FEEL List')">FEEL List</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>34/34</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb37','FEEL List Operator')">FEEL List Operator</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb38','FEEL Quantifiers')">FEEL Quantifiers</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>1/1</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb39','FEEL Relation')">FEEL Relation</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>1/1</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb40','FEEL Special-character Names')">FEEL Special-character Names</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>43/43</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb41','Function Definition')">Function Definition</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>5/5</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb42','Function Invocation')">Function Invocation</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>9/9</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb43','Hit Policy: ANY')">Hit Policy: ANY</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb44','Hit Policy: COLLECT')">Hit Policy: COLLECT</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>29/29</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb45','Hit Policy: Collect')">Hit Policy: Collect</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>3/3</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb46','Hit Policy: FIRST')">Hit Policy: FIRST</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb47','Hit Policy: OUTPUT ORDER')">Hit Policy: OUTPUT ORDER</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb48','Hit Policy: PRIORITY')">Hit Policy: PRIORITY</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>14/14</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb49','Hit Policy: RULE ORDER')">Hit Policy: RULE ORDER</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>6/6</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb50','Hit Policy: UNIQUE')">Hit Policy: UNIQUE</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>21/21</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb51','Item Definition')">Item Definition</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>119/119</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb52','Literal Expression')">Literal Expression</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>522/522</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb53','Literal Function Invocation')">Literal Function Invocation</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>8/8</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Digital Transformation Platform (DXP)_2.3.html', 'tb54','Relation')">Relation</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>2/2</small></span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <blockquote>
+                <p><small><em><strong>DISCLAIMER:</strong> This report is automatically generated from the results
+                    of the TCK tests execution provided by each vendor. The accuracy of
+                    the results is under the responsibility of the respective vendors.
+                    <br/>
+                        This vendor did not provide instructions to execute the tests and reproduce the results. Please contact the vendor directly.
+                    </em></small></p>
+            </blockquote>
+        </div>
+    </div>
+
+<!-- pre-footer -->
+<div class="pre-footer">
+    <div class="last-updated">
+        <p>Last updated:</strong> 01-Dec-2018 16:09:56</p>
+    </div>
+</div>
+<div class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container-fluid">
+                <div class="panel-heading">
+                    <h3 class="panel-title">The DMN TCK is supported by:</h3>
+                </div>
+                <div class="panel-body">
+                    <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+                        <div style="display:inline-block; margin-top:10px;">
+                            <a href="https://www.actico.com" target="_newtab">
+                                <img alt="actico" class="img-thumbnail" src="images/actico-logo.png" style="height: 60px"/>
+                            </a>
+                        </div>
+                        <div style="display:inline-block; margin-top:10px;">
+                            <a href="http://www.camunda.com" target="_newtab">
+                                <img alt="camunda" class="img-thumbnail" src="images/camunda_logo.png" style="height: 60px"/>
+                            </a>
+                        </div>
+                        <div style="display:inline-block; margin-top:10px;">
+                            <a href="http://www.fujitsu.com/" target="_newtab">
+                                <img alt="fujitsu" class="img-thumbnail" src="images/Fujitsu.jpg" style="height: 60px"/>
+                            </a>
+                        </div>
+                        <div style="display:inline-block; margin-top:10px;">
+                            <a href="http://methodandstyle.com/" target="_newtab">
+                                <img alt="methodandstyle" class="img-thumbnail" src="images/MSlogo4x.jpg" style="height: 60px"/>
+                            </a>
+                        </div>
+                        <div style="display:inline-block; margin-top:10px;">
+                            <a href="http://openrules.com/" target="_newtab">
+                                <img alt="openrules" class="img-thumbnail" src="images/openruleslogo.jpg" style="height: 60px"/>
+                            </a>
+                        </div>
+                        <div style="display:inline-block; margin-top:10px;">
+                            <a href="http://oracle.com/" target="_newtab">
+                                <img alt="oracle" class="img-thumbnail" src="images/oracle.png" style="height: 60px"/>
+                            </a>
+                        </div>
+                        <div style="display:inline-block; margin-top:10px;">
+                            <a href="http://www.redhat.com" target="_newtab">
+                                <img alt="redhat" class="img-thumbnail" src="images/redhat3.png" style="height: 60px"/>
+                            </a>
+                        </div>
+                        <div style="display:inline-block; margin-top:10px;">
+                            <a href="http://www.trisotech.com" target="_newtab">
+                                <img alt="trisotech" class="img-thumbnail" src="images/trisotech3.jpg" style="height: 60px"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- container -->
+</div>
+<!-- footer -->
+
+</div>
+</body>
+</html>
