@@ -249,7 +249,7 @@
     </testCase>
 
     <testCase id="022">
-        <description>index of 01 on non list - number</description>
+        <description>index of 0 on non list - number</description>
         <resultNode name="decision022" type="decision">
             <expected>
                 <value xsi:nil="true"/>
@@ -258,7 +258,7 @@
     </testCase>
 
     <testCase id="023">
-        <description>index of 1 on non list - string</description>
+        <description>index of 0 on non list - string</description>
         <resultNode name="decision023" type="decision">
             <expected>
                 <value xsi:nil="true"/>
