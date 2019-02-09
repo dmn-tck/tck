@@ -6,6 +6,10 @@
         <typeRef>number</typeRef>
     </itemDefinition>
 
+    <itemDefinition name="tStringList" isCollection="true">
+        <typeRef>string</typeRef>
+    </itemDefinition>
+
     <itemDefinition name="tNameAndAge">
         <itemComponent name="name">
             <typeRef>string</typeRef>
@@ -22,12 +26,12 @@
         </literalExpression>
     </decision>
 
-    <decision name="decision_002" id="_decision_002">
+<!--    <decision name="decision_002" id="_decision_002">
         <variable typeRef="list" name="decision_002"/>
         <literalExpression>
             <text>[1,2,"foo"]</text>
         </literalExpression>
-    </decision>
+    </decision>-->
 
     <decision name="decision_003" id="_decision_003">
         <variable typeRef="tNumberList" name="decision_003"/>
@@ -51,7 +55,7 @@
     </decision>
 
     <decision name="decision_006" id="_decision_006">
-        <variable typeRef="list" name="decision_006"/>
+        <variable typeRef="tStringList" name="decision_006"/>
         <literalExpression>
             <text>"foo"</text>
         </literalExpression>

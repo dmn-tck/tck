@@ -17,7 +17,8 @@
         </resultNode>
     </testCase>
 
-    <testCase id="decision_002">
+<!-- Comment out for now re https://github.com/dmn-tck/tck/pull/238.  How to express an 'any' list -->
+<!--    <testCase id="decision_002">
         <description>type permitted - any list</description>
         <resultNode name="decision_002" type="decision">
             <expected>
@@ -34,7 +35,7 @@
                 </list>
             </expected>
         </resultNode>
-    </testCase>
+    </testCase>-->
 
     <testCase id="decision_003">
         <description>list type mismatch - decision return value is null coerced</description>
