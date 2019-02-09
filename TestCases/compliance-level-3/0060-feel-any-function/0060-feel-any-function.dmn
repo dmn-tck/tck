@@ -2,14 +2,15 @@
 <definitions namespace="http://www.montera.com.au/spec/DMN/0060-feel-any-function" name="0060-feel-any-function" id="_i9fboPUUEeesLuP4RHs4vA" xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <description>FEEL built-in function 'any(list)' in category list functions</description>
     <decision name="decision001" id="_decision001">
-        <description>Tests FEEL expression: 'any([true, false, true])' and expects result: 'false (boolean)'</description>
+        <description>Tests FEEL expression: 'any([true, false, true])' and expects result: 'true (boolean)'</description>
         <question>Result of FEEL expression 'any([true, false, true])'?</question>
-        <allowedAnswers>false (boolean)</allowedAnswers>
+        <allowedAnswers>true (boolean)</allowedAnswers>
         <variable typeRef="boolean" name="decision001"/>
         <literalExpression>
             <text>any([true, false, true])</text>
         </literalExpression>
     </decision>
+
     <decision name="decision002" id="_decision002">
         <description>Tests FEEL expression: 'any([false, false, false])' and expects result: 'false (boolean)'</description>
         <question>Result of FEEL expression 'any([false, false, false])'?</question>
@@ -31,9 +32,9 @@
     </decision>
 
     <decision name="decision005" id="_decision005">
-        <description>Tests FEEL expression: 'any([])' and expects result: 'true (boolean)'</description>
+        <description>Tests FEEL expression: 'any([])' and expects result: 'false (boolean)'</description>
         <question>Result of FEEL expression 'any([])'?</question>
-        <allowedAnswers>true (boolean)</allowedAnswers>
+        <allowedAnswers>false (boolean)</allowedAnswers>
         <variable typeRef="boolean" name="decision005"/>
         <literalExpression>
             <text>any([])</text>
