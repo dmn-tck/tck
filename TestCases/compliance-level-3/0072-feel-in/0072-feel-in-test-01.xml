@@ -36,7 +36,7 @@
     -->
 
     <testCase id="number_001">
-        <description>number in: e1 in [e2,e3,…] (endpoints)</description>
+        <description>number: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="number_001" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -45,7 +45,7 @@
     </testCase>
 
     <testCase id="number_001_a">
-        <description>number not in: e1 in [e2,e3,…] (endpoints)</description>
+        <description>number: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="number_001_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -54,7 +54,7 @@
     </testCase>
 
     <testCase id="number_002">
-        <description>number in: e1 in [e2,e3,…] (ranges)</description>
+        <description>number: e1 in [e2,e3,…] (ranges)</description>
         <resultNode name="number_002" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -63,7 +63,7 @@
     </testCase>
 
     <testCase id="number_002_a">
-        <description>number not in: e1 in [e2,e3,…] (ranges)</description>
+        <description>number: e1 in [e2,e3,…] (ranges)</description>
         <resultNode name="number_002_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -72,7 +72,7 @@
     </testCase>
 
     <testCase id="number_003">
-        <description>number in: e1 in &lt;=e2</description>
+        <description>number: e1 in &lt;=e2</description>
         <resultNode name="number_003" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -81,7 +81,7 @@
     </testCase>
 
     <testCase id="number_003_1">
-        <description>number in: e1 in &lt;=e2</description>
+        <description>number: e1 in &lt;=e2</description>
         <resultNode name="number_003_1" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -90,7 +90,7 @@
     </testCase>
 
     <testCase id="number_003_a">
-        <description>number not in: e1 in &lt;=e2</description>
+        <description>number: e1 in &lt;=e2</description>
         <resultNode name="number_003_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -99,7 +99,7 @@
     </testCase>
 
     <testCase id="number_004">
-        <description>number in: e1 in &lt;e2</description>
+        <description>number: e1 in &lt;e2</description>
         <resultNode name="number_004" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -108,7 +108,7 @@
     </testCase>
 
     <testCase id="number_004_a">
-        <description>number not in: e1 in &lt;e2</description>
+        <description>number: e1 in &lt;e2</description>
         <resultNode name="number_004_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -117,7 +117,7 @@
     </testCase>
 
     <testCase id="number_005">
-        <description>number in: e1 in >=e2</description>
+        <description>number: e1 in >=e2</description>
         <resultNode name="number_005" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -126,7 +126,7 @@
     </testCase>
 
     <testCase id="number_005_1">
-        <description>number in: e1 in >=e2</description>
+        <description>number: e1 in >=e2</description>
         <resultNode name="number_005_1" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -135,7 +135,7 @@
     </testCase>
 
     <testCase id="number_005_a">
-        <description>number not in: e1 in >=e2</description>
+        <description>number: e1 in >=e2</description>
         <resultNode name="number_005_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -144,7 +144,7 @@
     </testCase>
 
     <testCase id="number_006">
-        <description>number in: e1 in >e2</description>
+        <description>number: e1 in >e2</description>
         <resultNode name="number_006" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -153,7 +153,7 @@
     </testCase>
 
     <testCase id="number_006_a">
-        <description>number not in: e1 in >e2</description>
+        <description>number: e1 in >e2</description>
         <resultNode name="number_006_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -162,7 +162,7 @@
     </testCase>
 
     <testCase id="number_007_a">
-        <description>number in: e1 in (e2..e3)</description>
+        <description>number: e1 in (e2..e3)</description>
         <resultNode name="number_007_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -171,7 +171,7 @@
     </testCase>
 
     <testCase id="number_007_b">
-        <description>number in: e1 in (e2..e3)</description>
+        <description>number: e1 in (e2..e3)</description>
         <resultNode name="number_007_b" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -180,7 +180,7 @@
     </testCase>
 
     <testCase id="number_007_c">
-        <description>number in: e1 in (e2..e3)</description>
+        <description>number: e1 in (e2..e3)</description>
         <resultNode name="number_007_c" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -189,7 +189,7 @@
     </testCase>
 
     <testCase id="number_007_d">
-        <description>number in: e1 in (e2..e3)</description>
+        <description>number: e1 in (e2..e3)</description>
         <resultNode name="number_007_d" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -198,7 +198,7 @@
     </testCase>
 
     <testCase id="number_007_e">
-        <description>number in: e1 in (e2..e3)</description>
+        <description>number: e1 in (e2..e3)</description>
         <resultNode name="number_007_e" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -207,7 +207,7 @@
     </testCase>
 
     <testCase id="number_008_a">
-        <description>number in: e1 in (e2..e3]</description>
+        <description>number: e1 in (e2..e3]</description>
         <resultNode name="number_008_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -216,7 +216,7 @@
     </testCase>
 
     <testCase id="number_008_b">
-        <description>number in: e1 in (e2..e3]</description>
+        <description>number: e1 in (e2..e3]</description>
         <resultNode name="number_008_b" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -225,7 +225,7 @@
     </testCase>
 
     <testCase id="number_008_c">
-        <description>number in: e1 in (e2..e3]</description>
+        <description>number: e1 in (e2..e3]</description>
         <resultNode name="number_008_c" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -234,7 +234,7 @@
     </testCase>
 
     <testCase id="number_008_d">
-        <description>number in: e1 in (e2..e3]</description>
+        <description>number: e1 in (e2..e3]</description>
         <resultNode name="number_008_d" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -243,7 +243,7 @@
     </testCase>
 
     <testCase id="number_008_e">
-        <description>number in: e1 in (e2..e3]</description>
+        <description>number: e1 in (e2..e3]</description>
         <resultNode name="number_008_e" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -389,7 +389,7 @@
     </testCase>
 
     <testCase id="string_001">
-        <description>string in: e1 in [e2,e3,…] (endpoints)</description>
+        <description>string: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="string_001" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -398,7 +398,7 @@
     </testCase>
 
     <testCase id="string_001_a">
-        <description>string not in: e1 in [e2,e3,…] (endpoints)</description>
+        <description>string: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="string_001_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -407,7 +407,7 @@
     </testCase>
 
     <testCase id="string_002">
-        <description>string in: e1 in [e2,e3,…] (ranges)</description>
+        <description>string: e1 in [e2,e3,…] (ranges)</description>
         <resultNode name="string_002" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -416,7 +416,7 @@
     </testCase>
 
     <testCase id="string_002_a">
-        <description>string not in: e1 in [e2,e3,…] (ranges)</description>
+        <description>string: e1 in [e2,e3,…] (ranges)</description>
         <resultNode name="string_002_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -425,7 +425,7 @@
     </testCase>
 
     <testCase id="string_003">
-        <description>string in: e1 in &lt;=e2</description>
+        <description>string: e1 in &lt;=e2</description>
         <resultNode name="string_003" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -434,7 +434,7 @@
     </testCase>
 
     <testCase id="string_003_1">
-        <description>string in: e1 in &lt;=e2</description>
+        <description>string: e1 in &lt;=e2</description>
         <resultNode name="string_003_1" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -443,7 +443,7 @@
     </testCase>
 
     <testCase id="string_003_a">
-        <description>string not in: e1 in &lt;=e2</description>
+        <description>string: e1 in &lt;=e2</description>
         <resultNode name="string_003_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -452,7 +452,7 @@
     </testCase>
 
     <testCase id="string_004">
-        <description>string in: e1 in &lt;e2</description>
+        <description>string: e1 in &lt;e2</description>
         <resultNode name="string_004" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -461,7 +461,7 @@
     </testCase>
 
     <testCase id="string_004_a">
-        <description>string not in: e1 in &lt;e2</description>
+        <description>string: e1 in &lt;e2</description>
         <resultNode name="string_004_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -470,7 +470,7 @@
     </testCase>
 
     <testCase id="string_005">
-        <description>string in: e1 in >=e2</description>
+        <description>string: e1 in >=e2</description>
         <resultNode name="string_005" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -479,7 +479,7 @@
     </testCase>
 
     <testCase id="string_005_1">
-        <description>string in: e1 in >=e2</description>
+        <description>string: e1 in >=e2</description>
         <resultNode name="string_005_1" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -488,7 +488,7 @@
     </testCase>
 
     <testCase id="string_005_a">
-        <description>string not in: e1 in >=e2</description>
+        <description>string: e1 in >=e2</description>
         <resultNode name="string_005_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -497,7 +497,7 @@
     </testCase>
 
     <testCase id="string_006">
-        <description>string in: e1 in >e2</description>
+        <description>string: e1 in >e2</description>
         <resultNode name="string_006" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -506,7 +506,7 @@
     </testCase>
 
     <testCase id="string_006_a">
-        <description>string not in: e1 in >e2</description>
+        <description>string: e1 in >e2</description>
         <resultNode name="string_006_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -515,7 +515,7 @@
     </testCase>
 
     <testCase id="string_007_a">
-        <description>string in: e1 in (e2..e3)</description>
+        <description>string: e1 in (e2..e3)</description>
         <resultNode name="string_007_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -524,7 +524,7 @@
     </testCase>
 
     <testCase id="string_007_b">
-        <description>string in: e1 in (e2..e3)</description>
+        <description>string: e1 in (e2..e3)</description>
         <resultNode name="string_007_b" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -533,7 +533,7 @@
     </testCase>
 
     <testCase id="string_007_c">
-        <description>string in: e1 in (e2..e3)</description>
+        <description>string: e1 in (e2..e3)</description>
         <resultNode name="string_007_c" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -542,7 +542,7 @@
     </testCase>
 
     <testCase id="string_007_d">
-        <description>string in: e1 in (e2..e3)</description>
+        <description>string: e1 in (e2..e3)</description>
         <resultNode name="string_007_d" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -551,7 +551,7 @@
     </testCase>
 
     <testCase id="string_007_e">
-        <description>string in: e1 in (e2..e3)</description>
+        <description>string: e1 in (e2..e3)</description>
         <resultNode name="string_007_e" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -560,7 +560,7 @@
     </testCase>
 
     <testCase id="string_008_a">
-        <description>string in: e1 in (e2..e3]</description>
+        <description>string: e1 in (e2..e3]</description>
         <resultNode name="string_008_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -569,7 +569,7 @@
     </testCase>
 
     <testCase id="string_008_b">
-        <description>string in: e1 in (e2..e3]</description>
+        <description>string: e1 in (e2..e3]</description>
         <resultNode name="string_008_b" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -578,7 +578,7 @@
     </testCase>
 
     <testCase id="string_008_c">
-        <description>string in: e1 in (e2..e3]</description>
+        <description>string: e1 in (e2..e3]</description>
         <resultNode name="string_008_c" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -587,7 +587,7 @@
     </testCase>
 
     <testCase id="string_008_d">
-        <description>string in: e1 in (e2..e3]</description>
+        <description>string: e1 in (e2..e3]</description>
         <resultNode name="string_008_d" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -596,7 +596,7 @@
     </testCase>
 
     <testCase id="string_008_e">
-        <description>string in: e1 in (e2..e3]</description>
+        <description>string: e1 in (e2..e3]</description>
         <resultNode name="string_008_e" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -743,7 +743,7 @@
 
 
     <testCase id="boolean_001">
-        <description>number in: e1 in [e2,e3,…] (endpoints)</description>
+        <description>number: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="boolean_001" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -752,7 +752,7 @@
     </testCase>
 
     <testCase id="boolean_001_a">
-        <description>number not in: e1 in [e2,e3,…] (endpoints)</description>
+        <description>number: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="boolean_001_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -808,7 +808,7 @@
     </testCase>
 
     <testCase id="date_001">
-        <description>date in: e1 in [e2,e3,…] (endpoints)</description>
+        <description>date: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="date_001" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -817,7 +817,7 @@
     </testCase>
 
     <testCase id="date_001_a">
-        <description>string not in: e1 in [e2,e3,…] (endpoints)</description>
+        <description>string: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="date_001_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -826,7 +826,7 @@
     </testCase>
 
     <testCase id="date_002">
-        <description>date in: e1 in [e2,e3,…] (ranges)</description>
+        <description>date: e1 in [e2,e3,…] (ranges)</description>
         <resultNode name="date_002" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -835,7 +835,7 @@
     </testCase>
 
     <testCase id="date_002_a">
-        <description>string not in: e1 in [e2,e3,…] (ranges)</description>
+        <description>string: e1 in [e2,e3,…] (ranges)</description>
         <resultNode name="date_002_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -844,7 +844,7 @@
     </testCase>
 
     <testCase id="date_003">
-        <description>date in: e1 in &lt;=e2</description>
+        <description>date: e1 in &lt;=e2</description>
         <resultNode name="date_003" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -853,7 +853,7 @@
     </testCase>
 
     <testCase id="date_003_1">
-        <description>date in: e1 in &lt;=e2</description>
+        <description>date: e1 in &lt;=e2</description>
         <resultNode name="date_003_1" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -862,7 +862,7 @@
     </testCase>
 
     <testCase id="date_003_a">
-        <description>string not in: e1 in &lt;=e2</description>
+        <description>string: e1 in &lt;=e2</description>
         <resultNode name="date_003_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -871,7 +871,7 @@
     </testCase>
 
     <testCase id="date_004">
-        <description>date in: e1 in &lt;e2</description>
+        <description>date: e1 in &lt;e2</description>
         <resultNode name="date_004" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -880,7 +880,7 @@
     </testCase>
 
     <testCase id="date_004_a">
-        <description>string not in: e1 in &lt;e2</description>
+        <description>string: e1 in &lt;e2</description>
         <resultNode name="date_004_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -889,7 +889,7 @@
     </testCase>
 
     <testCase id="date_005">
-        <description>date in: e1 in >=e2</description>
+        <description>date: e1 in >=e2</description>
         <resultNode name="date_005" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -898,7 +898,7 @@
     </testCase>
 
     <testCase id="date_005_1">
-        <description>date in: e1 in >=e2</description>
+        <description>date: e1 in >=e2</description>
         <resultNode name="date_005_1" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -907,7 +907,7 @@
     </testCase>
 
     <testCase id="date_005_a">
-        <description>string not in: e1 in >=e2</description>
+        <description>string: e1 in >=e2</description>
         <resultNode name="date_005_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -916,7 +916,7 @@
     </testCase>
 
     <testCase id="date_006">
-        <description>date in: e1 in >e2</description>
+        <description>date: e1 in >e2</description>
         <resultNode name="date_006" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -925,7 +925,7 @@
     </testCase>
 
     <testCase id="date_006_a">
-        <description>string not in: e1 in >e2</description>
+        <description>string: e1 in >e2</description>
         <resultNode name="date_006_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -934,7 +934,7 @@
     </testCase>
 
     <testCase id="date_007_a">
-        <description>date in: e1 in (e2..e3)</description>
+        <description>date: e1 in (e2..e3)</description>
         <resultNode name="date_007_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -943,7 +943,7 @@
     </testCase>
 
     <testCase id="date_007_b">
-        <description>date in: e1 in (e2..e3)</description>
+        <description>date: e1 in (e2..e3)</description>
         <resultNode name="date_007_b" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -952,7 +952,7 @@
     </testCase>
 
     <testCase id="date_007_c">
-        <description>date in: e1 in (e2..e3)</description>
+        <description>date: e1 in (e2..e3)</description>
         <resultNode name="date_007_c" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -961,7 +961,7 @@
     </testCase>
 
     <testCase id="date_007_d">
-        <description>date in: e1 in (e2..e3)</description>
+        <description>date: e1 in (e2..e3)</description>
         <resultNode name="date_007_d" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -970,7 +970,7 @@
     </testCase>
 
     <testCase id="date_007_e">
-        <description>date in: e1 in (e2..e3)</description>
+        <description>date: e1 in (e2..e3)</description>
         <resultNode name="date_007_e" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -979,7 +979,7 @@
     </testCase>
 
     <testCase id="date_008_a">
-        <description>date in: e1 in (e2..e3]</description>
+        <description>date: e1 in (e2..e3]</description>
         <resultNode name="date_008_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -988,7 +988,7 @@
     </testCase>
 
     <testCase id="date_008_b">
-        <description>date in: e1 in (e2..e3]</description>
+        <description>date: e1 in (e2..e3]</description>
         <resultNode name="date_008_b" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -997,7 +997,7 @@
     </testCase>
 
     <testCase id="date_008_c">
-        <description>date in: e1 in (e2..e3]</description>
+        <description>date: e1 in (e2..e3]</description>
         <resultNode name="date_008_c" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1006,7 +1006,7 @@
     </testCase>
 
     <testCase id="date_008_d">
-        <description>date in: e1 in (e2..e3]</description>
+        <description>date: e1 in (e2..e3]</description>
         <resultNode name="date_008_d" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1015,7 +1015,7 @@
     </testCase>
 
     <testCase id="date_008_e">
-        <description>date in: e1 in (e2..e3]</description>
+        <description>date: e1 in (e2..e3]</description>
         <resultNode name="date_008_e" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1024,7 +1024,7 @@
     </testCase>
 
     <testCase id="date_009_a">
-        <description>date in: e1 in [e2..e3)</description>
+        <description>date: e1 in [e2..e3)</description>
         <resultNode name="date_009_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1033,7 +1033,7 @@
     </testCase>
 
     <testCase id="date_009_b">
-        <description>date in: e1 in [e2..e3)</description>
+        <description>date: e1 in [e2..e3)</description>
         <resultNode name="date_009_b" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1042,7 +1042,7 @@
     </testCase>
 
     <testCase id="date_009_c">
-        <description>date in: e1 in [e2..e3)</description>
+        <description>date: e1 in [e2..e3)</description>
         <resultNode name="date_009_c" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1051,7 +1051,7 @@
     </testCase>
 
     <testCase id="date_009_d">
-        <description>date in: e1 in [e2..e3)</description>
+        <description>date: e1 in [e2..e3)</description>
         <resultNode name="date_009_d" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1060,7 +1060,7 @@
     </testCase>
 
     <testCase id="date_009_e">
-        <description>date in: e1 in [e2..e3)</description>
+        <description>date: e1 in [e2..e3)</description>
         <resultNode name="date_009_e" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1069,7 +1069,7 @@
     </testCase>
 
     <testCase id="date_010_a">
-        <description>date in: e1 in [e2..e3]</description>
+        <description>date: e1 in [e2..e3]</description>
         <resultNode name="date_010_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1078,7 +1078,7 @@
     </testCase>
 
     <testCase id="date_010_b">
-        <description>date in: e1 in [e2..e3]</description>
+        <description>date: e1 in [e2..e3]</description>
         <resultNode name="date_010_b" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1087,7 +1087,7 @@
     </testCase>
 
     <testCase id="date_010_c">
-        <description>date in: e1 in [e2..e3]</description>
+        <description>date: e1 in [e2..e3]</description>
         <resultNode name="date_010_c" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1096,7 +1096,7 @@
     </testCase>
 
     <testCase id="date_010_d">
-        <description>date in: e1 in [e2..e3]</description>
+        <description>date: e1 in [e2..e3]</description>
         <resultNode name="date_010_d" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1105,7 +1105,7 @@
     </testCase>
 
     <testCase id="date_010_e">
-        <description>date in: e1 in [e2..e3]</description>
+        <description>date: e1 in [e2..e3]</description>
         <resultNode name="date_010_e" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1114,7 +1114,7 @@
     </testCase>
 
     <testCase id="date_011">
-        <description>date in: e1 in e2</description>
+        <description>date: e1 in e2</description>
         <resultNode name="date_011" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1124,7 +1124,7 @@
 
 <!--
     <testCase id="date_013">
-        <description>date in: e1 in e2 (where e2 has '?')</description>
+        <description>date: e1 in e2 (where e2 has '?')</description>
         <resultNode name="date_013" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1133,7 +1133,7 @@
     </testCase>
 
     <testCase id="date_013_a">
-        <description>date in: e1 in e2 (where e2 has '?')</description>
+        <description>date: e1 in e2 (where e2 has '?')</description>
         <resultNode name="date_013_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1161,7 +1161,7 @@
     </testCase>
 
     <testCase id="time_001">
-        <description>time in: e1 in [e2,e3,…] (endpoints)</description>
+        <description>time: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="time_001" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1170,7 +1170,7 @@
     </testCase>
 
     <testCase id="time_001_a">
-        <description>time not in: e1 in [e2,e3,…] (endpoints)</description>
+        <description>time: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="time_001_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1179,7 +1179,7 @@
     </testCase>
 
     <testCase id="time_002">
-        <description>time in: e1 in [e2,e3,…] (ranges)</description>
+        <description>time: e1 in [e2,e3,…] (ranges)</description>
         <resultNode name="time_002" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1188,7 +1188,7 @@
     </testCase>
 
     <testCase id="time_002_a">
-        <description>time not in: e1 in [e2,e3,…] (ranges)</description>
+        <description>time: e1 in [e2,e3,…] (ranges)</description>
         <resultNode name="time_002_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1197,7 +1197,7 @@
     </testCase>
 
     <testCase id="time_003">
-        <description>time in: e1 in &lt;=e2</description>
+        <description>time: e1 in &lt;=e2</description>
         <resultNode name="time_003" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1206,7 +1206,7 @@
     </testCase>
 
     <testCase id="time_003_1">
-        <description>time in: e1 in &lt;=e2</description>
+        <description>time: e1 in &lt;=e2</description>
         <resultNode name="time_003_1" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1215,7 +1215,7 @@
     </testCase>
 
     <testCase id="time_003_a">
-        <description>time not in: e1 in &lt;=e2</description>
+        <description>time: e1 in &lt;=e2</description>
         <resultNode name="time_003_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1224,7 +1224,7 @@
     </testCase>
 
     <testCase id="time_004">
-        <description>time in: e1 in &lt;e2</description>
+        <description>time: e1 in &lt;e2</description>
         <resultNode name="time_004" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1233,7 +1233,7 @@
     </testCase>
 
     <testCase id="time_004_a">
-        <description>time not in: e1 in &lt;e2</description>
+        <description>time: e1 in &lt;e2</description>
         <resultNode name="time_004_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1242,7 +1242,7 @@
     </testCase>
 
     <testCase id="time_005">
-        <description>time in: e1 in >=e2</description>
+        <description>time: e1 in >=e2</description>
         <resultNode name="time_005" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1251,7 +1251,7 @@
     </testCase>
 
     <testCase id="time_005_1">
-        <description>time in: e1 in >=e2</description>
+        <description>time: e1 in >=e2</description>
         <resultNode name="time_005_1" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1260,7 +1260,7 @@
     </testCase>
 
     <testCase id="time_005_a">
-        <description>time not in: e1 in >=e2</description>
+        <description>time: e1 in >=e2</description>
         <resultNode name="time_005_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1269,7 +1269,7 @@
     </testCase>
 
     <testCase id="time_006">
-        <description>time in: e1 in >e2</description>
+        <description>time: e1 in >e2</description>
         <resultNode name="time_006" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1278,7 +1278,7 @@
     </testCase>
 
     <testCase id="time_006_a">
-        <description>time not in: e1 in >e2</description>
+        <description>time: e1 in >e2</description>
         <resultNode name="time_006_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1287,7 +1287,7 @@
     </testCase>
 
     <testCase id="time_007_a">
-        <description>time in: e1 in (e2..e3)</description>
+        <description>time: e1 in (e2..e3)</description>
         <resultNode name="time_007_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1296,7 +1296,7 @@
     </testCase>
 
     <testCase id="time_007_b">
-        <description>time in: e1 in (e2..e3)</description>
+        <description>time: e1 in (e2..e3)</description>
         <resultNode name="time_007_b" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1305,7 +1305,7 @@
     </testCase>
 
     <testCase id="time_007_c">
-        <description>time in: e1 in (e2..e3)</description>
+        <description>time: e1 in (e2..e3)</description>
         <resultNode name="time_007_c" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1314,7 +1314,7 @@
     </testCase>
 
     <testCase id="time_007_d">
-        <description>time in: e1 in (e2..e3)</description>
+        <description>time: e1 in (e2..e3)</description>
         <resultNode name="time_007_d" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1323,7 +1323,7 @@
     </testCase>
 
     <testCase id="time_007_e">
-        <description>time in: e1 in (e2..e3)</description>
+        <description>time: e1 in (e2..e3)</description>
         <resultNode name="time_007_e" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1332,7 +1332,7 @@
     </testCase>
 
     <testCase id="time_008_a">
-        <description>time in: e1 in (e2..e3]</description>
+        <description>time: e1 in (e2..e3]</description>
         <resultNode name="time_008_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1341,7 +1341,7 @@
     </testCase>
 
     <testCase id="time_008_b">
-        <description>time in: e1 in (e2..e3]</description>
+        <description>time: e1 in (e2..e3]</description>
         <resultNode name="time_008_b" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1350,7 +1350,7 @@
     </testCase>
 
     <testCase id="time_008_c">
-        <description>time in: e1 in (e2..e3]</description>
+        <description>time: e1 in (e2..e3]</description>
         <resultNode name="time_008_c" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1359,7 +1359,7 @@
     </testCase>
 
     <testCase id="time_008_d">
-        <description>time in: e1 in (e2..e3]</description>
+        <description>time: e1 in (e2..e3]</description>
         <resultNode name="time_008_d" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1368,7 +1368,7 @@
     </testCase>
 
     <testCase id="time_008_e">
-        <description>time in: e1 in (e2..e3]</description>
+        <description>time: e1 in (e2..e3]</description>
         <resultNode name="time_008_e" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1514,7 +1514,7 @@
     </testCase>
 
     <testCase id="dateTime_001">
-        <description>dateTime in: e1 in [e2,e3,…] (endpoints)</description>
+        <description>dateTime: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="dateTime_001" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1523,7 +1523,7 @@
     </testCase>
 
     <testCase id="dateTime_001_a">
-        <description>dateTime not in: e1 in [e2,e3,…] (endpoints)</description>
+        <description>dateTime: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="dateTime_001_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1532,7 +1532,7 @@
     </testCase>
 
     <testCase id="dateTime_002">
-        <description>dateTime in: e1 in [e2,e3,…] (ranges)</description>
+        <description>dateTime: e1 in [e2,e3,…] (ranges)</description>
         <resultNode name="dateTime_002" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1541,7 +1541,7 @@
     </testCase>
 
     <testCase id="dateTime_002_a">
-        <description>dateTime not in: e1 in [e2,e3,…] (ranges)</description>
+        <description>dateTime: e1 in [e2,e3,…] (ranges)</description>
         <resultNode name="dateTime_002_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1550,7 +1550,7 @@
     </testCase>
 
     <testCase id="dateTime_003">
-        <description>dateTime in: e1 in &lt;=e2</description>
+        <description>dateTime: e1 in &lt;=e2</description>
         <resultNode name="dateTime_003" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1559,7 +1559,7 @@
     </testCase>
 
     <testCase id="dateTime_003_1">
-        <description>dateTime in: e1 in &lt;=e2</description>
+        <description>dateTime: e1 in &lt;=e2</description>
         <resultNode name="dateTime_003_1" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1568,7 +1568,7 @@
     </testCase>
 
     <testCase id="dateTime_003_a">
-        <description>dateTime not in: e1 in &lt;=e2</description>
+        <description>dateTime: e1 in &lt;=e2</description>
         <resultNode name="dateTime_003_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1577,7 +1577,7 @@
     </testCase>
 
     <testCase id="dateTime_004">
-        <description>dateTime in: e1 in &lt;e2</description>
+        <description>dateTime: e1 in &lt;e2</description>
         <resultNode name="dateTime_004" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1586,7 +1586,7 @@
     </testCase>
 
     <testCase id="dateTime_004_a">
-        <description>dateTime not in: e1 in &lt;e2</description>
+        <description>dateTime: e1 in &lt;e2</description>
         <resultNode name="dateTime_004_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1595,7 +1595,7 @@
     </testCase>
 
     <testCase id="dateTime_005">
-        <description>dateTime in: e1 in >=e2</description>
+        <description>dateTime: e1 in >=e2</description>
         <resultNode name="dateTime_005" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1604,7 +1604,7 @@
     </testCase>
 
     <testCase id="dateTime_005_1">
-        <description>dateTime in: e1 in >=e2</description>
+        <description>dateTime: e1 in >=e2</description>
         <resultNode name="dateTime_005_1" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1613,7 +1613,7 @@
     </testCase>
 
     <testCase id="dateTime_005_a">
-        <description>dateTime not in: e1 in >=e2</description>
+        <description>dateTime: e1 in >=e2</description>
         <resultNode name="dateTime_005_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1622,7 +1622,7 @@
     </testCase>
 
     <testCase id="dateTime_006">
-        <description>dateTime in: e1 in >e2</description>
+        <description>dateTime: e1 in >e2</description>
         <resultNode name="dateTime_006" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1631,7 +1631,7 @@
     </testCase>
 
     <testCase id="dateTime_006_a">
-        <description>dateTime not in: e1 in >e2</description>
+        <description>dateTime: e1 in >e2</description>
         <resultNode name="dateTime_006_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1640,7 +1640,7 @@
     </testCase>
 
     <testCase id="dateTime_007_a">
-        <description>dateTime in: e1 in (e2..e3)</description>
+        <description>dateTime: e1 in (e2..e3)</description>
         <resultNode name="dateTime_007_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1649,7 +1649,7 @@
     </testCase>
 
     <testCase id="dateTime_007_b">
-        <description>dateTime in: e1 in (e2..e3)</description>
+        <description>dateTime: e1 in (e2..e3)</description>
         <resultNode name="dateTime_007_b" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1658,7 +1658,7 @@
     </testCase>
 
     <testCase id="dateTime_007_c">
-        <description>dateTime in: e1 in (e2..e3)</description>
+        <description>dateTime: e1 in (e2..e3)</description>
         <resultNode name="dateTime_007_c" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1667,7 +1667,7 @@
     </testCase>
 
     <testCase id="dateTime_007_d">
-        <description>dateTime in: e1 in (e2..e3)</description>
+        <description>dateTime: e1 in (e2..e3)</description>
         <resultNode name="dateTime_007_d" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1676,7 +1676,7 @@
     </testCase>
 
     <testCase id="dateTime_007_e">
-        <description>dateTime in: e1 in (e2..e3)</description>
+        <description>dateTime: e1 in (e2..e3)</description>
         <resultNode name="dateTime_007_e" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1685,7 +1685,7 @@
     </testCase>
 
     <testCase id="dateTime_008_a">
-        <description>dateTime in: e1 in (e2..e3]</description>
+        <description>dateTime: e1 in (e2..e3]</description>
         <resultNode name="dateTime_008_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1694,7 +1694,7 @@
     </testCase>
 
     <testCase id="dateTime_008_b">
-        <description>dateTime in: e1 in (e2..e3]</description>
+        <description>dateTime: e1 in (e2..e3]</description>
         <resultNode name="dateTime_008_b" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1703,7 +1703,7 @@
     </testCase>
 
     <testCase id="dateTime_008_c">
-        <description>dateTime in: e1 in (e2..e3]</description>
+        <description>dateTime: e1 in (e2..e3]</description>
         <resultNode name="dateTime_008_c" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1712,7 +1712,7 @@
     </testCase>
 
     <testCase id="dateTime_008_d">
-        <description>dateTime in: e1 in (e2..e3]</description>
+        <description>dateTime: e1 in (e2..e3]</description>
         <resultNode name="dateTime_008_d" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1721,7 +1721,7 @@
     </testCase>
 
     <testCase id="dateTime_008_e">
-        <description>dateTime in: e1 in (e2..e3]</description>
+        <description>dateTime: e1 in (e2..e3]</description>
         <resultNode name="dateTime_008_e" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1867,7 +1867,7 @@
     </testCase>
 
     <testCase id="list_001">
-        <description>number in: e1 in [e2,e3,…] (endpoints)</description>
+        <description>number: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="list_001" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1876,7 +1876,7 @@
     </testCase>
 
     <testCase id="list_001_a">
-        <description>number not in: e1 in [e2,e3,…] (endpoints)</description>
+        <description>number: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="list_001_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1960,7 +1960,7 @@
 
 
     <testCase id="context_001">
-        <description>number in: e1 in [e2,e3,…] (endpoints)</description>
+        <description>number: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="context_001" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1969,7 +1969,7 @@
     </testCase>
 
     <testCase id="context_001_a">
-        <description>number not in: e1 in [e2,e3,…] (endpoints)</description>
+        <description>number: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="context_001_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2025,7 +2025,7 @@
     </testCase>
 
     <testCase id="ym_duration_001">
-        <description>ym_duration in: e1 in [e2,e3,…] (endpoints)</description>
+        <description>ym_duration: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="ym_duration_001" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -2034,7 +2034,7 @@
     </testCase>
 
     <testCase id="ym_duration_001_a">
-        <description>ym_duration not in: e1 in [e2,e3,…] (endpoints)</description>
+        <description>ym_duration: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="ym_duration_001_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2043,7 +2043,7 @@
     </testCase>
 
     <testCase id="ym_duration_002">
-        <description>ym_duration in: e1 in [e2,e3,…] (ranges)</description>
+        <description>ym_duration: e1 in [e2,e3,…] (ranges)</description>
         <resultNode name="ym_duration_002" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -2052,7 +2052,7 @@
     </testCase>
 
     <testCase id="ym_duration_002_a">
-        <description>ym_duration not in: e1 in [e2,e3,…] (ranges)</description>
+        <description>ym_duration: e1 in [e2,e3,…] (ranges)</description>
         <resultNode name="ym_duration_002_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2061,7 +2061,7 @@
     </testCase>
 
     <testCase id="ym_duration_003">
-        <description>ym_duration in: e1 in &lt;=e2</description>
+        <description>ym_duration: e1 in &lt;=e2</description>
         <resultNode name="ym_duration_003" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -2070,7 +2070,7 @@
     </testCase>
 
     <testCase id="ym_duration_003_1">
-        <description>ym_duration in: e1 in &lt;=e2</description>
+        <description>ym_duration: e1 in &lt;=e2</description>
         <resultNode name="ym_duration_003_1" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -2079,7 +2079,7 @@
     </testCase>
 
     <testCase id="ym_duration_003_a">
-        <description>ym_duration not in: e1 in &lt;=e2</description>
+        <description>ym_duration: e1 in &lt;=e2</description>
         <resultNode name="ym_duration_003_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2088,7 +2088,7 @@
     </testCase>
 
     <testCase id="ym_duration_004">
-        <description>ym_duration in: e1 in &lt;e2</description>
+        <description>ym_duration: e1 in &lt;e2</description>
         <resultNode name="ym_duration_004" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -2097,7 +2097,7 @@
     </testCase>
 
     <testCase id="ym_duration_004_a">
-        <description>ym_duration not in: e1 in &lt;e2</description>
+        <description>ym_duration: e1 in &lt;e2</description>
         <resultNode name="ym_duration_004_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2106,7 +2106,7 @@
     </testCase>
 
     <testCase id="ym_duration_005">
-        <description>ym_duration in: e1 in >=e2</description>
+        <description>ym_duration: e1 in >=e2</description>
         <resultNode name="ym_duration_005" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -2115,7 +2115,7 @@
     </testCase>
 
     <testCase id="ym_duration_005_1">
-        <description>ym_duration in: e1 in >=e2</description>
+        <description>ym_duration: e1 in >=e2</description>
         <resultNode name="ym_duration_005_1" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -2124,7 +2124,7 @@
     </testCase>
 
     <testCase id="ym_duration_005_a">
-        <description>ym_duration not in: e1 in >=e2</description>
+        <description>ym_duration: e1 in >=e2</description>
         <resultNode name="ym_duration_005_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2133,7 +2133,7 @@
     </testCase>
 
     <testCase id="ym_duration_006">
-        <description>ym_duration in: e1 in >e2</description>
+        <description>ym_duration: e1 in >e2</description>
         <resultNode name="ym_duration_006" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -2142,7 +2142,7 @@
     </testCase>
 
     <testCase id="ym_duration_006_a">
-        <description>ym_duration not in: e1 in >e2</description>
+        <description>ym_duration: e1 in >e2</description>
         <resultNode name="ym_duration_006_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2151,7 +2151,7 @@
     </testCase>
 
     <testCase id="ym_duration_007_a">
-        <description>ym_duration in: e1 in (e2..e3)</description>
+        <description>ym_duration: e1 in (e2..e3)</description>
         <resultNode name="ym_duration_007_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2160,7 +2160,7 @@
     </testCase>
 
     <testCase id="ym_duration_007_b">
-        <description>ym_duration in: e1 in (e2..e3)</description>
+        <description>ym_duration: e1 in (e2..e3)</description>
         <resultNode name="ym_duration_007_b" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2169,7 +2169,7 @@
     </testCase>
 
     <testCase id="ym_duration_007_c">
-        <description>ym_duration in: e1 in (e2..e3)</description>
+        <description>ym_duration: e1 in (e2..e3)</description>
         <resultNode name="ym_duration_007_c" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -2178,7 +2178,7 @@
     </testCase>
 
     <testCase id="ym_duration_007_d">
-        <description>ym_duration in: e1 in (e2..e3)</description>
+        <description>ym_duration: e1 in (e2..e3)</description>
         <resultNode name="ym_duration_007_d" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2187,7 +2187,7 @@
     </testCase>
 
     <testCase id="ym_duration_007_e">
-        <description>ym_duration in: e1 in (e2..e3)</description>
+        <description>ym_duration: e1 in (e2..e3)</description>
         <resultNode name="ym_duration_007_e" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2196,7 +2196,7 @@
     </testCase>
 
     <testCase id="ym_duration_008_a">
-        <description>ym_duration in: e1 in (e2..e3]</description>
+        <description>ym_duration: e1 in (e2..e3]</description>
         <resultNode name="ym_duration_008_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2205,7 +2205,7 @@
     </testCase>
 
     <testCase id="ym_duration_008_b">
-        <description>ym_duration in: e1 in (e2..e3]</description>
+        <description>ym_duration: e1 in (e2..e3]</description>
         <resultNode name="ym_duration_008_b" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2214,7 +2214,7 @@
     </testCase>
 
     <testCase id="ym_duration_008_c">
-        <description>ym_duration in: e1 in (e2..e3]</description>
+        <description>ym_duration: e1 in (e2..e3]</description>
         <resultNode name="ym_duration_008_c" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -2223,7 +2223,7 @@
     </testCase>
 
     <testCase id="ym_duration_008_d">
-        <description>ym_duration in: e1 in (e2..e3]</description>
+        <description>ym_duration: e1 in (e2..e3]</description>
         <resultNode name="ym_duration_008_d" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -2232,7 +2232,7 @@
     </testCase>
 
     <testCase id="ym_duration_008_e">
-        <description>ym_duration in: e1 in (e2..e3]</description>
+        <description>ym_duration: e1 in (e2..e3]</description>
         <resultNode name="ym_duration_008_e" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2378,7 +2378,7 @@
     </testCase>
 
     <testCase id="dt_duration_001">
-        <description>dt_duration in: e1 in [e2,e3,…] (endpoints)</description>
+        <description>dt_duration: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="dt_duration_001" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -2387,7 +2387,7 @@
     </testCase>
 
     <testCase id="dt_duration_001_a">
-        <description>dt_duration not in: e1 in [e2,e3,…] (endpoints)</description>
+        <description>dt_duration: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="dt_duration_001_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2396,7 +2396,7 @@
     </testCase>
 
     <testCase id="dt_duration_002">
-        <description>dt_duration in: e1 in [e2,e3,…] (ranges)</description>
+        <description>dt_duration: e1 in [e2,e3,…] (ranges)</description>
         <resultNode name="dt_duration_002" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -2405,7 +2405,7 @@
     </testCase>
 
     <testCase id="dt_duration_002_a">
-        <description>dt_duration not in: e1 in [e2,e3,…] (ranges)</description>
+        <description>dt_duration: e1 in [e2,e3,…] (ranges)</description>
         <resultNode name="dt_duration_002_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2414,7 +2414,7 @@
     </testCase>
 
     <testCase id="dt_duration_003">
-        <description>dt_duration in: e1 in &lt;=e2</description>
+        <description>dt_duration: e1 in &lt;=e2</description>
         <resultNode name="dt_duration_003" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -2423,7 +2423,7 @@
     </testCase>
 
     <testCase id="dt_duration_003_1">
-        <description>dt_duration in: e1 in &lt;=e2</description>
+        <description>dt_duration: e1 in &lt;=e2</description>
         <resultNode name="dt_duration_003_1" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -2432,7 +2432,7 @@
     </testCase>
 
     <testCase id="dt_duration_003_a">
-        <description>dt_duration not in: e1 in &lt;=e2</description>
+        <description>dt_duration: e1 in &lt;=e2</description>
         <resultNode name="dt_duration_003_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2441,7 +2441,7 @@
     </testCase>
 
     <testCase id="dt_duration_004">
-        <description>dt_duration in: e1 in &lt;e2</description>
+        <description>dt_duration: e1 in &lt;e2</description>
         <resultNode name="dt_duration_004" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -2450,7 +2450,7 @@
     </testCase>
 
     <testCase id="dt_duration_004_a">
-        <description>dt_duration not in: e1 in &lt;e2</description>
+        <description>dt_duration: e1 in &lt;e2</description>
         <resultNode name="dt_duration_004_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2459,7 +2459,7 @@
     </testCase>
 
     <testCase id="dt_duration_005">
-        <description>dt_duration in: e1 in >=e2</description>
+        <description>dt_duration: e1 in >=e2</description>
         <resultNode name="dt_duration_005" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -2468,7 +2468,7 @@
     </testCase>
 
     <testCase id="dt_duration_005_1">
-        <description>dt_duration in: e1 in >=e2</description>
+        <description>dt_duration: e1 in >=e2</description>
         <resultNode name="dt_duration_005_1" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -2477,7 +2477,7 @@
     </testCase>
 
     <testCase id="dt_duration_005_a">
-        <description>dt_duration not in: e1 in >=e2</description>
+        <description>dt_duration: e1 in >=e2</description>
         <resultNode name="dt_duration_005_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2486,7 +2486,7 @@
     </testCase>
 
     <testCase id="dt_duration_006">
-        <description>dt_duration in: e1 in >e2</description>
+        <description>dt_duration: e1 in >e2</description>
         <resultNode name="dt_duration_006" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -2495,7 +2495,7 @@
     </testCase>
 
     <testCase id="dt_duration_006_a">
-        <description>dt_duration not in: e1 in >e2</description>
+        <description>dt_duration: e1 in >e2</description>
         <resultNode name="dt_duration_006_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2504,7 +2504,7 @@
     </testCase>
 
     <testCase id="dt_duration_007_a">
-        <description>dt_duration in: e1 in (e2..e3)</description>
+        <description>dt_duration: e1 in (e2..e3)</description>
         <resultNode name="dt_duration_007_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2513,7 +2513,7 @@
     </testCase>
 
     <testCase id="dt_duration_007_b">
-        <description>dt_duration in: e1 in (e2..e3)</description>
+        <description>dt_duration: e1 in (e2..e3)</description>
         <resultNode name="dt_duration_007_b" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2522,7 +2522,7 @@
     </testCase>
 
     <testCase id="dt_duration_007_c">
-        <description>dt_duration in: e1 in (e2..e3)</description>
+        <description>dt_duration: e1 in (e2..e3)</description>
         <resultNode name="dt_duration_007_c" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -2531,7 +2531,7 @@
     </testCase>
 
     <testCase id="dt_duration_007_d">
-        <description>dt_duration in: e1 in (e2..e3)</description>
+        <description>dt_duration: e1 in (e2..e3)</description>
         <resultNode name="dt_duration_007_d" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2540,7 +2540,7 @@
     </testCase>
 
     <testCase id="dt_duration_007_e">
-        <description>dt_duration in: e1 in (e2..e3)</description>
+        <description>dt_duration: e1 in (e2..e3)</description>
         <resultNode name="dt_duration_007_e" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2549,7 +2549,7 @@
     </testCase>
 
     <testCase id="dt_duration_008_a">
-        <description>dt_duration in: e1 in (e2..e3]</description>
+        <description>dt_duration: e1 in (e2..e3]</description>
         <resultNode name="dt_duration_008_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2558,7 +2558,7 @@
     </testCase>
 
     <testCase id="dt_duration_008_b">
-        <description>dt_duration in: e1 in (e2..e3]</description>
+        <description>dt_duration: e1 in (e2..e3]</description>
         <resultNode name="dt_duration_008_b" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2567,7 +2567,7 @@
     </testCase>
 
     <testCase id="dt_duration_008_c">
-        <description>dt_duration in: e1 in (e2..e3]</description>
+        <description>dt_duration: e1 in (e2..e3]</description>
         <resultNode name="dt_duration_008_c" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -2576,7 +2576,7 @@
     </testCase>
 
     <testCase id="dt_duration_008_d">
-        <description>dt_duration in: e1 in (e2..e3]</description>
+        <description>dt_duration: e1 in (e2..e3]</description>
         <resultNode name="dt_duration_008_d" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -2585,7 +2585,7 @@
     </testCase>
 
     <testCase id="dt_duration_008_e">
-        <description>dt_duration in: e1 in (e2..e3]</description>
+        <description>dt_duration: e1 in (e2..e3]</description>
         <resultNode name="dt_duration_008_e" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
