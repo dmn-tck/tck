@@ -350,26 +350,6 @@
         </resultNode>
     </testCase>
 
-<!--
-    <testCase id="number_013">
-        <description>number: e1 in e2 (where e2 has '?')</description>
-        <resultNode name="number_013" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">true</value>
-            </expected>
-        </resultNode>
-    </testCase>
-
-    <testCase id="number_013_a">
-        <description>number: e1 in e2 (where e2 has '?')</description>
-        <resultNode name="number_013_a" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">false</value>
-            </expected>
-        </resultNode>
-    </testCase>
--->
-
     <testCase id="number_014">
         <description>number: e1 in unary tests</description>
         <resultNode name="number_014" type="decision">
@@ -703,26 +683,6 @@
         </resultNode>
     </testCase>
 
-<!--
-    <testCase id="string_013">
-        <description>string: e1 in e2 (where e2 has '?')</description>
-        <resultNode name="string_013" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">true</value>
-            </expected>
-        </resultNode>
-    </testCase>
-
-    <testCase id="string_013_a">
-        <description>string: e1 in e2 (where e2 has '?')</description>
-        <resultNode name="string_013_a" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">false</value>
-            </expected>
-        </resultNode>
-    </testCase>
--->
-
     <testCase id="string_014">
         <description>string: e1 in unary tests</description>
         <resultNode name="string_014" type="decision">
@@ -743,7 +703,7 @@
 
 
     <testCase id="boolean_001">
-        <description>number: e1 in [e2,e3,…] (endpoints)</description>
+        <description>boolean: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="boolean_001" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -752,7 +712,7 @@
     </testCase>
 
     <testCase id="boolean_001_a">
-        <description>number: e1 in [e2,e3,…] (endpoints)</description>
+        <description>boolean: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="boolean_001_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -768,26 +728,6 @@
             </expected>
         </resultNode>
     </testCase>
-
-<!--
-    <testCase id="boolean_013">
-        <description>boolean: e1 in e2 (where e2 has '?')</description>
-        <resultNode name="boolean_013" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">true</value>
-            </expected>
-        </resultNode>
-    </testCase>
-
-    <testCase id="boolean_013_a">
-        <description>boolean: e1 in e2 (where e2 has '?')</description>
-        <resultNode name="boolean_013_a" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">false</value>
-            </expected>
-        </resultNode>
-    </testCase>
--->
 
     <testCase id="boolean_014">
         <description>boolean: e1 in unary tests</description>
@@ -817,7 +757,7 @@
     </testCase>
 
     <testCase id="date_001_a">
-        <description>string: e1 in [e2,e3,…] (endpoints)</description>
+        <description>date: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="date_001_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -835,7 +775,7 @@
     </testCase>
 
     <testCase id="date_002_a">
-        <description>string: e1 in [e2,e3,…] (ranges)</description>
+        <description>date: e1 in [e2,e3,…] (ranges)</description>
         <resultNode name="date_002_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -862,7 +802,7 @@
     </testCase>
 
     <testCase id="date_003_a">
-        <description>string: e1 in &lt;=e2</description>
+        <description>date: e1 in &lt;=e2</description>
         <resultNode name="date_003_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -880,7 +820,7 @@
     </testCase>
 
     <testCase id="date_004_a">
-        <description>string: e1 in &lt;e2</description>
+        <description>date: e1 in &lt;e2</description>
         <resultNode name="date_004_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1121,26 +1061,6 @@
             </expected>
         </resultNode>
     </testCase>
-
-<!--
-    <testCase id="date_013">
-        <description>date: e1 in e2 (where e2 has '?')</description>
-        <resultNode name="date_013" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">true</value>
-            </expected>
-        </resultNode>
-    </testCase>
-
-    <testCase id="date_013_a">
-        <description>date: e1 in e2 (where e2 has '?')</description>
-        <resultNode name="date_013_a" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">false</value>
-            </expected>
-        </resultNode>
-    </testCase>
--->
 
     <testCase id="date_014">
         <description>date: e1 in unary tests</description>
@@ -1475,26 +1395,6 @@
         </resultNode>
     </testCase>
 
-<!--
-    <testCase id="time_013">
-        <description>time: e1 in e2 (where e2 has '?')</description>
-        <resultNode name="time_013" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">true</value>
-            </expected>
-        </resultNode>
-    </testCase>
-
-    <testCase id="time_013_a">
-        <description>time: e1 in e2 (where e2 has '?')</description>
-        <resultNode name="time_013_a" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">false</value>
-            </expected>
-        </resultNode>
-    </testCase>
--->
-
     <testCase id="time_014">
         <description>time: e1 in unary tests</description>
         <resultNode name="time_014" type="decision">
@@ -1828,26 +1728,6 @@
         </resultNode>
     </testCase>
 
-<!--
-    <testCase id="dateTime_013">
-        <description>dateTime: e1 in e2 (where e2 has '?')</description>
-        <resultNode name="dateTime_013" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">true</value>
-            </expected>
-        </resultNode>
-    </testCase>
-
-    <testCase id="dateTime_013_a">
-        <description>dateTime: e1 in e2 (where e2 has '?')</description>
-        <resultNode name="dateTime_013_a" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">false</value>
-            </expected>
-        </resultNode>
-    </testCase>
--->
-
     <testCase id="dateTime_014">
         <description>dateTime: e1 in unary tests</description>
         <resultNode name="dateTime_014" type="decision">
@@ -1867,7 +1747,7 @@
     </testCase>
 
     <testCase id="list_001">
-        <description>number: e1 in [e2,e3,…] (endpoints)</description>
+        <description>list: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="list_001" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1876,7 +1756,7 @@
     </testCase>
 
     <testCase id="list_001_a">
-        <description>number: e1 in [e2,e3,…] (endpoints)</description>
+        <description>list: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="list_001_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1885,7 +1765,7 @@
     </testCase>
 
     <testCase id="list_011">
-        <description>boolean: e1 in e2</description>
+        <description>list: e1 in e2</description>
         <resultNode name="list_011" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1894,7 +1774,7 @@
     </testCase>
 
     <testCase id="list_011_a">
-        <description>boolean: e1 in e2</description>
+        <description>list: e1 in e2</description>
         <resultNode name="list_011_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1903,7 +1783,7 @@
     </testCase>
 
     <testCase id="list_011_b">
-        <description>boolean: e1 in e2</description>
+        <description>list: e1 in e2</description>
         <resultNode name="list_011_b" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1911,28 +1791,8 @@
         </resultNode>
     </testCase>
 
-<!--
-    <testCase id="list_013">
-        <description>boolean: e1 in e2 (where e2 has '?')</description>
-        <resultNode name="list_013" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">true</value>
-            </expected>
-        </resultNode>
-    </testCase>
-
-    <testCase id="list_013_a">
-        <description>boolean: e1 in e2 (where e2 has '?')</description>
-        <resultNode name="list_013_a" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">false</value>
-            </expected>
-        </resultNode>
-    </testCase>
--->
-
     <testCase id="list_014">
-        <description>boolean: e1 in unary tests</description>
+        <description>list: e1 in unary tests</description>
         <resultNode name="list_014" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1941,7 +1801,7 @@
     </testCase>
 
     <testCase id="list_014_a">
-        <description>boolean: e1 in unary tests</description>
+        <description>list: e1 in unary tests</description>
         <resultNode name="list_014_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1950,8 +1810,17 @@
     </testCase>
 
     <testCase id="list_014_b">
-        <description>boolean: e1 in unary tests</description>
+        <description>list: e1 in unary tests</description>
         <resultNode name="list_014_b" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="list_015">
+        <description>list: e1 in list in parentheses</description>
+        <resultNode name="list_015" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
             </expected>
@@ -1960,7 +1829,7 @@
 
 
     <testCase id="context_001">
-        <description>number: e1 in [e2,e3,…] (endpoints)</description>
+        <description>context: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="context_001" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1969,7 +1838,7 @@
     </testCase>
 
     <testCase id="context_001_a">
-        <description>number: e1 in [e2,e3,…] (endpoints)</description>
+        <description>context: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="context_001_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -1978,7 +1847,7 @@
     </testCase>
 
     <testCase id="context_011">
-        <description>boolean: e1 in e2</description>
+        <description>context: e1 in e2</description>
         <resultNode name="context_011" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1986,28 +1855,8 @@
         </resultNode>
     </testCase>
 
-<!--
-    <testCase id="context_013">
-        <description>boolean: e1 in e2 (where e2 has '?')</description>
-        <resultNode name="context_013" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">true</value>
-            </expected>
-        </resultNode>
-    </testCase>
-
-    <testCase id="context_013_a">
-        <description>boolean: e1 in e2 (where e2 has '?')</description>
-        <resultNode name="context_013_a" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">false</value>
-            </expected>
-        </resultNode>
-    </testCase>
--->
-
     <testCase id="context_014">
-        <description>boolean: e1 in unary tests</description>
+        <description>context: e1 in unary tests</description>
         <resultNode name="context_014" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -2016,7 +1865,7 @@
     </testCase>
 
     <testCase id="context_014_a">
-        <description>boolean: e1 in unary tests</description>
+        <description>context: e1 in unary tests</description>
         <resultNode name="context_014_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
@@ -2338,26 +2187,6 @@
             </expected>
         </resultNode>
     </testCase>
-
-<!--
-    <testCase id="ym_duration_013">
-        <description>ym_duration: e1 in e2 (where e2 has '?')</description>
-        <resultNode name="ym_duration_013" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">true</value>
-            </expected>
-        </resultNode>
-    </testCase>
-
-    <testCase id="ym_duration_013_a">
-        <description>ym_duration: e1 in e2 (where e2 has '?')</description>
-        <resultNode name="ym_duration_013_a" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">false</value>
-            </expected>
-        </resultNode>
-    </testCase>
--->
 
     <testCase id="ym_duration_014">
         <description>ym_duration: e1 in unary tests</description>
@@ -2692,26 +2521,6 @@
         </resultNode>
     </testCase>
 
-<!--
-    <testCase id="dt_duration_013">
-        <description>dt_duration: e1 in e2 (where e2 has '?')</description>
-        <resultNode name="dt_duration_013" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">true</value>
-            </expected>
-        </resultNode>
-    </testCase>
-
-    <testCase id="dt_duration_013_a">
-        <description>dt_duration: e1 in e2 (where e2 has '?')</description>
-        <resultNode name="dt_duration_013_a" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">false</value>
-            </expected>
-        </resultNode>
-    </testCase>
--->
-
     <testCase id="dt_duration_014">
         <description>dt_duration: e1 in unary tests</description>
         <resultNode name="dt_duration_014" type="decision">
@@ -2729,7 +2538,5 @@
             </expected>
         </resultNode>
     </testCase>
-
-
 
 </testCases>
