@@ -86,7 +86,7 @@
         <informationRequirement id="_1080c15e-bc84-4473-99f3-1b8ea7d12e61">
             <requiredInput href="#_5eBhQH6PEeePe9Zmt-encA"/>
         </informationRequirement>
-        <context typeRef="tFnInvocationResult" id="_JvSJQX6QEeePe9Zmt-encA">
+        <context id="_JvSJQX6QEeePe9Zmt-encA">
             <contextEntry>
                 <variable name="sumResult" id="_TEHYYH6VEeePe9Zmt-encA"/>
                 <literalExpression id="_TEHYYX6VEeePe9Zmt-encA">
@@ -159,7 +159,7 @@
         <knowledgeRequirement id="_548a994a-9a94-4df4-8245-eaefde56cb58">
             <requiredKnowledge href="#_8xmTAIDNEee-MeWXoLgrYg"/>
         </knowledgeRequirement>
-        <context typeRef="tFnInvocationResult" id="_eA6AcYDiEee-MeWXoLgrYg">
+        <context id="_eA6AcYDiEee-MeWXoLgrYg">
             <contextEntry>
                 <variable name="functionInvocationInParameter" id="_eA6Aj4DiEee-MeWXoLgrYg"/>
                 <literalExpression id="_eA6AkYDiEee-MeWXoLgrYg">
