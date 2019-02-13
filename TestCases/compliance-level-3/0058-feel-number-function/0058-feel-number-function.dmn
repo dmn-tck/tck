@@ -83,7 +83,7 @@
         </literalExpression>
     </decision>
     <decision name="decision006" id="_decision006">
-        <description>Tests FEEL expression: 'number("1,000,000.01", null, "."))' and expects result: '1000000.00 (number)'</description>
+        <description>Tests FEEL expression: 'number("1,000,000.01", null, "."))' and expects result: '1000000.01 (number)'</description>
         <question>Result of FEEL expression 'number("1,000,000.01", null, "."))'?</question>
         <allowedAnswers>1000000.01 (number)</allowedAnswers>
         <variable typeRef="number" name="decision006"/>
