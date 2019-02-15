@@ -1813,7 +1813,7 @@
         <description>list: e1 in unary tests</description>
         <resultNode name="list_014_b" type="decision">
             <expected>
-                <value xsi:type="xsd:boolean">false</value>
+                <value xsi:type="xsd:boolean">true</value>
             </expected>
         </resultNode>
     </testCase>
