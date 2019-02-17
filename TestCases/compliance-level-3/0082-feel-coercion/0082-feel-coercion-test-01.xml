@@ -335,4 +335,13 @@
         </resultNode>
     </testCase>
 
+    <testCase id="decisionService_001">
+        <description>Decision service returns context that does not confirm to type</description>
+        <resultNode errorResult="true" name="decisionService_001" type="decisionService">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
 </testCases>

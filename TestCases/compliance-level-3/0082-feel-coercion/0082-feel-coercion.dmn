@@ -10,6 +10,12 @@
         <typeRef>string</typeRef>
     </itemDefinition>
 
+    <itemDefinition name="tDS_001">
+        <itemComponent name="decision_ds_001">
+            <typeRef>string</typeRef>
+        </itemComponent>
+    </itemDefinition>
+
     <itemDefinition name="tNameAndAge">
         <itemComponent name="name">
             <typeRef>string</typeRef>
@@ -398,6 +404,17 @@
         </literalExpression>
     </decision>
 
+    <decision name="decision_ds_001" id="_decision_ds_001">
+        <variable name="decision_ds_001"/>
+        <literalExpression>
+            <text>1000</text>
+        </literalExpression>
+    </decision>
 
+    <decisionService name="decisionService_001" id="_decisionService_001">
+        <variable name="decisionService_001" typeRef="tDS_001"/>
+        <!-- decision returns number, type expects string -->
+        <outputDecision href="#_decision_ds_001"/>
+    </decisionService>
 
 </definitions>
