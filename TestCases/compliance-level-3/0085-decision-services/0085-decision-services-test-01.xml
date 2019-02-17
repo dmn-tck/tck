@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Contributed to DMN TCK by StrayAlien -->
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <modelName>0085-decision-services.dmn</modelName>
+    <labels>
+        <label>Compliance Level 3</label>
+        <label>Decision Services</label>
+    </labels>
+
+    <testCase id="001">
+        <description>Will output decision result</description>
+        <resultNode name="decisionService_001" type="decisionService">
+            <expected>
+                <component name="decision_001">
+                    <value xsi:type="xsd:string">foo</value>
+                </component>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="002">
+        <description>Decision can invoke a decision service as function call</description>
+        <resultNode name="decision_002" type="decision">
+            <expected>
+                <component name="decision_001">
+                    <value xsi:type="xsd:string">foo</value>
+                </component>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="003">
+        <description>Will output decision results only for output decision</description>
+        <resultNode name="decisionService_002" type="decisionService">
+            <expected>
+                <component name="decision_001">
+                    <value xsi:type="xsd:string">foo</value>
+                </component>
+                <component name="decision_003">
+                    <value xsi:type="xsd:string">foo</value>
+                </component>
+            </expected>
+        </resultNode>
+    </testCase>
+
+</testCases>

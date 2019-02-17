@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions namespace="http://www.montera.com.au/spec/DMN/0085-decision-services" name="0085-decision-services" id="_i9fboPUUEeesLuP4RHs4vA" xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <description>Decision Services</description>
+
+    <decisionService name="decisionService_001" id="_decisionService_001">
+        <variable name="decisionService_001"/>
+        <outputDecision href="#_decision_001"/>
+    </decisionService>
+
+    <decision name="decision_001" id="_decision_001">
+        <variable name="decision_001"/>
+        <literalExpression>
+            <text>"foo"</text>
+        </literalExpression>
+    </decision>
+
+    <!-- decision invoking a decision service -->
+    <decision name="decision_002" id="_decision_002">
+        <variable name="decision_002"/>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#_decisionService_001"/>
+        </knowledgeRequirement>
+        <literalExpression>
+            <text>decisionService_001()</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision_003" id="_decision_003">
+        <variable name="decision_003"/>
+        <informationRequirement>
+            <requiredDecision href="#_decision_002"/>
+        </informationRequirement>
+        <literalExpression>
+            <!-- decision_002 returns a context as a result of calling decisionService_001 -->
+            <text>decision_002.decision_001</text>
+        </literalExpression>
+    </decision>
+
+    <!-- two output decisions and one encapsulatedDecision.  The encapsulatedDecision is never
+    invoked directly here, but is invoked indirectly via decision_003 -->
+    <decisionService name="decisionService_002" id="_decisionService_002">
+        <variable name="decisionService_002"/>
+        <outputDecision href="#_decision_001"/>
+        <outputDecision href="#_decision_003"/>
+        <encapsulatedDecision href="#_decision_002"/>
+    </decisionService>
+
+</definitions>
