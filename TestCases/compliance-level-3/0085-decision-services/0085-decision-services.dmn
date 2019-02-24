@@ -3,7 +3,6 @@
     <description>Decision Services</description>
 
     <decisionService name="decisionService_001" id="_decisionService_001">
-        <variable name="decisionService_001"/>
         <outputDecision href="#_decision_001"/>
     </decisionService>
 
@@ -25,6 +24,17 @@
         </literalExpression>
     </decision>
 
+    <!-- decision invoking a decision service with a param (which is illegal)-->
+    <decision name="decision_002_a" id="_decision_002_a">
+        <variable name="decision_002_a"/>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#_decisionService_001"/>
+        </knowledgeRequirement>
+        <literalExpression>
+            <text>decisionService_001("foo")</text>
+        </literalExpression>
+    </decision>
+
     <decision name="decision_003" id="_decision_003">
         <variable name="decision_003"/>
         <informationRequirement>
@@ -39,7 +49,6 @@
     <!-- two output decisions and one encapsulatedDecision.  The encapsulatedDecision is never
     invoked directly here, but is invoked indirectly via decision_003 -->
     <decisionService name="decisionService_002" id="_decisionService_002">
-        <variable name="decisionService_002"/>
         <outputDecision href="#_decision_001"/>
         <outputDecision href="#_decision_003"/>
         <encapsulatedDecision href="#_decision_002"/>

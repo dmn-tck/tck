@@ -30,6 +30,15 @@
         </resultNode>
     </testCase>
 
+    <testCase id="002_a">
+        <description>Pass a param to a decision service invocation will return null</description>
+        <resultNode errorResult="true" name="decision_002_a" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
     <testCase id="003">
         <description>Will output decision results only for output decision</description>
         <resultNode name="decisionService_002" type="decisionService">
