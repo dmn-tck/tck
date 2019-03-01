@@ -734,12 +734,12 @@
             <formalParameter typeRef="number" name="ApplicationRiskScore"/>
             <decisionTable hitPolicy="UNIQUE" outputLabel="Pre-bureauRiskCategoryTable" preferredOrientation="Rule-as-Row">
                 <input id="_6f7fbf13-3fa6-44f5-afe4-7c1e688e76a9" label="ExistingCustomer">
-                    <inputExpression typeRef="string">
+                    <inputExpression typeRef="boolean">
                         <text>ExistingCustomer</text>
                     </inputExpression>
                 </input>
                 <input id="_89d36bd5-03c2-4c6f-bf47-faa7d28e13a1" label="ApplicationRiskScore">
-                    <inputExpression typeRef="string">
+                    <inputExpression typeRef="number">
                         <text>ApplicationRiskScore</text>
                     </inputExpression>
                 </input>
@@ -843,17 +843,17 @@
             <formalParameter typeRef="number" name="CreditScore"/>
             <decisionTable hitPolicy="UNIQUE" outputLabel="Post-bureauRiskCategoryTable" preferredOrientation="Rule-as-Row">
                 <input id="_0859d2fc-bb13-4eaa-bebf-4bf8f0866c49" label="ExistingCustomer">
-                    <inputExpression typeRef="string">
+                    <inputExpression typeRef="boolean">
                         <text>ExistingCustomer</text>
                     </inputExpression>
                 </input>
                 <input id="_fba27bc9-7678-4457-893e-6bc96fc69626" label="ApplicationRiskScore">
-                    <inputExpression typeRef="string">
+                    <inputExpression typeRef="number">
                         <text>ApplicationRiskScore</text>
                     </inputExpression>
                 </input>
                 <input id="_b54042e3-1fe7-4fb3-90d6-ec528047fafb" label="CreditScore">
-                    <inputExpression typeRef="string">
+                    <inputExpression typeRef="number">
                         <text>CreditScore</text>
                     </inputExpression>
                 </input>
@@ -1284,7 +1284,7 @@
                     </inputExpression>
                 </input>
                 <input id="_f692dbba-dc13-4076-a5ba-275041c0b944" label="CreditScore">
-                    <inputExpression typeRef="string">
+                    <inputExpression typeRef="number">
                         <text>CreditScore</text>
                     </inputExpression>
                 </input>
