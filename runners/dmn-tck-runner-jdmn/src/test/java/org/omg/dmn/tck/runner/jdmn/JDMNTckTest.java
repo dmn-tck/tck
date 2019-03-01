@@ -127,6 +127,7 @@ public class JDMNTckTest implements DmnTckVendorTestSuite {
                     actualOutput = interpreter.evaluate(decisionName, runtimeEnvironment);
                 } catch (Throwable e) {
                     if (!res.isErrorResult()) {
+                        e.printStackTrace();
                         String errorMessage = String.format("Expected error for result node '%s' at position %d %s", res.getName(), i, e.getMessage());
                         failures.add(errorMessage);
                     }

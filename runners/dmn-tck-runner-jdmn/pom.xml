@@ -57,7 +57,7 @@
         <dependency>
             <groupId>com.goldmansachs.jdmn</groupId>
             <artifactId>jdmn-core</artifactId>
-            <version>2.3.1</version>
+            <version>2.4.0</version>
         </dependency>
     </dependencies>
 
