@@ -92,12 +92,12 @@
                     </div>
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Tests:</strong> 630</p>
+                            <p><strong>Tests:</strong> 981</p>
                         </small>
                     </div>
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Labels:</strong> 55</p>
+                            <p><strong>Labels:</strong> 62</p>
                         </small>
                     </div>
                 </div>
@@ -116,7 +116,7 @@
                 var color = Chart.helpers.color;
                 var cbl4_data = {
                     labels: [
-                        "Aggregator: COUNT","Aggregator: MIN","Aggregator: SUM","Business Knowledge Model","Compliance Level 2","Compliance Level 3","Context","Data Type : String","Data Type: Boolean","Data Type: Collection","Data Type: Date","Data Type: Date and Time","Data Type: Days and Time Duration","Data Type: Function","Data Type: Number","Data Type: String","Data Type: Structure","Data Type: Text","Data Type: Time","Data Type: Years and Months Duration","Decision Table: Multiple Output","Decision Table: Multiple Output Columns","Decision Table: Single Output","FEEL Arithmetic","FEEL Conditionals","FEEL Constants","FEEL Filter (10.3.2.5)","FEEL Function Literals","FEEL Functions: date and time","FEEL Functions: list","FEEL Functions: lists","FEEL Functions: number","FEEL Functions: numeric","FEEL Functions: string","FEEL Functions: strings","FEEL Iteration","FEEL List","FEEL List Operator","FEEL Quantifiers","FEEL Relation","FEEL Special-character Names","Function Definition","Function Invocation","Hit Policy: ANY","Hit Policy: COLLECT","Hit Policy: Collect","Hit Policy: FIRST","Hit Policy: OUTPUT ORDER","Hit Policy: PRIORITY","Hit Policy: RULE ORDER","Hit Policy: UNIQUE","Item Definition","Literal Expression","Literal Function Invocation","Relation"
+                        "Aggregator: COUNT","Aggregator: MIN","Aggregator: SUM","Business Knowledge Model","Compliance Level 2","Compliance Level 3","Context","Data Type : String","Data Type: Boolean","Data Type: Collection","Data Type: Context","Data Type: Date","Data Type: Date and Time","Data Type: Days and Time Duration","Data Type: Function","Data Type: List","Data Type: Number","Data Type: String","Data Type: Structure","Data Type: Text","Data Type: Time","Data Type: Years and Months Duration","Data Type: any","Decision Table: Multiple Output","Decision Table: Multiple Output Columns","Decision Table: Single Output","FEEL Arithmetic","FEEL Conditionals","FEEL Constants","FEEL Filter (10.3.2.5)","FEEL Function Literals","FEEL Functions: conversion","FEEL Functions: date and time","FEEL Functions: list","FEEL Functions: lists","FEEL Functions: negation","FEEL Functions: number","FEEL Functions: numeric","FEEL Functions: string","FEEL Functions: strings","FEEL Iteration","FEEL List","FEEL List Operator","FEEL Quantifiers","FEEL Relation","FEEL Special-character Names","FEEL comments","Feel : any","Function Definition","Function Invocation","Hit Policy: ANY","Hit Policy: COLLECT","Hit Policy: Collect","Hit Policy: FIRST","Hit Policy: OUTPUT ORDER","Hit Policy: PRIORITY","Hit Policy: RULE ORDER","Hit Policy: UNIQUE","Item Definition","Literal Expression","Literal Function Invocation","Relation"
                     ],
                     datasets: [
                         {
@@ -125,6 +125,13 @@
                             borderColor: window.chartColors.green,
                             borderWidth: 1,
                             data: [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
                                 0,
                                 0,
                                 0,
@@ -242,6 +249,13 @@
                                 0,
                                 0,
                                 0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
                                 0
                             ]
                         },
@@ -251,6 +265,13 @@
                             borderColor: window.chartColors.red,
                             borderWidth: 1,
                             data: [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
                                 0,
                                 0,
                                 0,
@@ -319,35 +340,40 @@
                                 3,
                                 22,
                                 116,
-                                515,
+                                811,
                                 17,
                                 6,
-                                88,
+                                132,
                                 47,
+                                9,
                                 14,
                                 3,
                                 3,
-                                6,
-                                194,
-                                191,
+                                120,
+                                101,
+                                344,
+                                200,
                                 65,
                                 3,
                                 4,
                                 39,
+                                38,
                                 18,
                                 3,
                                 67,
-                                101,
-                                11,
+                                230,
+                                46,
                                 44,
                                 8,
                                 7,
+                                21,
                                 278,
-                                39,
+                                113,
                                 23,
-                                22,
+                                6,
+                                139,
                                 7,
-                                27,
+                                36,
                                 102,
                                 6,
                                 34,
@@ -355,6 +381,8 @@
                                 1,
                                 1,
                                 43,
+                                3,
+                                50,
                                 5,
                                 9,
                                 6,
@@ -375,7 +403,7 @@
                 };
                 var cblp4_data = {
                     labels: [
-                        "Aggregator: COUNT","Aggregator: MIN","Aggregator: SUM","Business Knowledge Model","Compliance Level 2","Compliance Level 3","Context","Data Type : String","Data Type: Boolean","Data Type: Collection","Data Type: Date","Data Type: Date and Time","Data Type: Days and Time Duration","Data Type: Function","Data Type: Number","Data Type: String","Data Type: Structure","Data Type: Text","Data Type: Time","Data Type: Years and Months Duration","Decision Table: Multiple Output","Decision Table: Multiple Output Columns","Decision Table: Single Output","FEEL Arithmetic","FEEL Conditionals","FEEL Constants","FEEL Filter (10.3.2.5)","FEEL Function Literals","FEEL Functions: date and time","FEEL Functions: list","FEEL Functions: lists","FEEL Functions: number","FEEL Functions: numeric","FEEL Functions: string","FEEL Functions: strings","FEEL Iteration","FEEL List","FEEL List Operator","FEEL Quantifiers","FEEL Relation","FEEL Special-character Names","Function Definition","Function Invocation","Hit Policy: ANY","Hit Policy: COLLECT","Hit Policy: Collect","Hit Policy: FIRST","Hit Policy: OUTPUT ORDER","Hit Policy: PRIORITY","Hit Policy: RULE ORDER","Hit Policy: UNIQUE","Item Definition","Literal Expression","Literal Function Invocation","Relation"
+                        "Aggregator: COUNT","Aggregator: MIN","Aggregator: SUM","Business Knowledge Model","Compliance Level 2","Compliance Level 3","Context","Data Type : String","Data Type: Boolean","Data Type: Collection","Data Type: Context","Data Type: Date","Data Type: Date and Time","Data Type: Days and Time Duration","Data Type: Function","Data Type: List","Data Type: Number","Data Type: String","Data Type: Structure","Data Type: Text","Data Type: Time","Data Type: Years and Months Duration","Data Type: any","Decision Table: Multiple Output","Decision Table: Multiple Output Columns","Decision Table: Single Output","FEEL Arithmetic","FEEL Conditionals","FEEL Constants","FEEL Filter (10.3.2.5)","FEEL Function Literals","FEEL Functions: conversion","FEEL Functions: date and time","FEEL Functions: list","FEEL Functions: lists","FEEL Functions: negation","FEEL Functions: number","FEEL Functions: numeric","FEEL Functions: string","FEEL Functions: strings","FEEL Iteration","FEEL List","FEEL List Operator","FEEL Quantifiers","FEEL Relation","FEEL Special-character Names","FEEL comments","Feel : any","Function Definition","Function Invocation","Hit Policy: ANY","Hit Policy: COLLECT","Hit Policy: Collect","Hit Policy: FIRST","Hit Policy: OUTPUT ORDER","Hit Policy: PRIORITY","Hit Policy: RULE ORDER","Hit Policy: UNIQUE","Item Definition","Literal Expression","Literal Function Invocation","Relation"
                     ],
                     datasets: [
                         {
@@ -384,6 +412,13 @@
                             borderColor: window.chartColors.green,
                             borderWidth: 1,
                             data: [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
                             0,
                             0,
                             0,
@@ -501,6 +536,13 @@
                             0,
                             0,
                             0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
                             0
                             ]
                         },
@@ -564,6 +606,13 @@
                             0,
                             0,
                             0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
                             0
                             ]
                         },
@@ -573,6 +622,13 @@
                             borderColor: window.chartColors.purple,
                             borderWidth: 1,
                             data: [
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
+                            100,
                             100,
                             100,
                             100,
@@ -768,7 +824,7 @@
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb5','Compliance Level 3')">Compliance Level 3</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/515</small></span>
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/811</small></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -786,7 +842,7 @@
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb8','Data Type: Boolean')">Data Type: Boolean</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/88</small></span>
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/132</small></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -796,271 +852,313 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb10','Data Type: Date')">Data Type: Date</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/14</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb11','Data Type: Date and Time')">Data Type: Date and Time</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/3</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb12','Data Type: Days and Time Duration')">Data Type: Days and Time Duration</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/3</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb13','Data Type: Function')">Data Type: Function</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/6</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb14','Data Type: Number')">Data Type: Number</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/194</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb15','Data Type: String')">Data Type: String</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/191</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb16','Data Type: Structure')">Data Type: Structure</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/65</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb17','Data Type: Text')">Data Type: Text</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/3</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb18','Data Type: Time')">Data Type: Time</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/4</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb19','Data Type: Years and Months Duration')">Data Type: Years and Months Duration</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/39</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb20','Decision Table: Multiple Output')">Decision Table: Multiple Output</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/18</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb21','Decision Table: Multiple Output Columns')">Decision Table: Multiple Output Columns</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/3</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb22','Decision Table: Single Output')">Decision Table: Single Output</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/67</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb23','FEEL Arithmetic')">FEEL Arithmetic</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/101</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb24','FEEL Conditionals')">FEEL Conditionals</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/11</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb25','FEEL Constants')">FEEL Constants</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/44</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb26','FEEL Filter (10.3.2.5)')">FEEL Filter (10.3.2.5)</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/8</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb27','FEEL Function Literals')">FEEL Function Literals</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/7</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb28','FEEL Functions: date and time')">FEEL Functions: date and time</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/278</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb29','FEEL Functions: list')">FEEL Functions: list</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/39</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb30','FEEL Functions: lists')">FEEL Functions: lists</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/23</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb31','FEEL Functions: number')">FEEL Functions: number</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/22</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb32','FEEL Functions: numeric')">FEEL Functions: numeric</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/7</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb33','FEEL Functions: string')">FEEL Functions: string</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/27</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb34','FEEL Functions: strings')">FEEL Functions: strings</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/102</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb35','FEEL Iteration')">FEEL Iteration</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/6</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb36','FEEL List')">FEEL List</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/34</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb37','FEEL List Operator')">FEEL List Operator</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/6</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb38','FEEL Quantifiers')">FEEL Quantifiers</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/1</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb39','FEEL Relation')">FEEL Relation</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/1</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb40','FEEL Special-character Names')">FEEL Special-character Names</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/43</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb41','Function Definition')">Function Definition</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/5</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb42','Function Invocation')">Function Invocation</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb10','Data Type: Context')">Data Type: Context</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/9</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb43','Hit Policy: ANY')">Hit Policy: ANY</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/6</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb44','Hit Policy: COLLECT')">Hit Policy: COLLECT</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/29</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb45','Hit Policy: Collect')">Hit Policy: Collect</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/3</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb46','Hit Policy: FIRST')">Hit Policy: FIRST</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/6</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb47','Hit Policy: OUTPUT ORDER')">Hit Policy: OUTPUT ORDER</a></th>
-                                    <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/6</small></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb48','Hit Policy: PRIORITY')">Hit Policy: PRIORITY</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb11','Data Type: Date')">Data Type: Date</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/14</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb49','Hit Policy: RULE ORDER')">Hit Policy: RULE ORDER</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb12','Data Type: Date and Time')">Data Type: Date and Time</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/6</small></span>
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/3</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb50','Hit Policy: UNIQUE')">Hit Policy: UNIQUE</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb13','Data Type: Days and Time Duration')">Data Type: Days and Time Duration</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/21</small></span>
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/3</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb51','Item Definition')">Item Definition</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb14','Data Type: Function')">Data Type: Function</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/119</small></span>
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/120</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb52','Literal Expression')">Literal Expression</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb15','Data Type: List')">Data Type: List</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/522</small></span>
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/101</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb53','Literal Function Invocation')">Literal Function Invocation</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb16','Data Type: Number')">Data Type: Number</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/344</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb17','Data Type: String')">Data Type: String</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/200</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb18','Data Type: Structure')">Data Type: Structure</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/65</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb19','Data Type: Text')">Data Type: Text</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/3</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb20','Data Type: Time')">Data Type: Time</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/4</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb21','Data Type: Years and Months Duration')">Data Type: Years and Months Duration</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/39</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb22','Data Type: any')">Data Type: any</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/38</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb23','Decision Table: Multiple Output')">Decision Table: Multiple Output</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/18</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb24','Decision Table: Multiple Output Columns')">Decision Table: Multiple Output Columns</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/3</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb25','Decision Table: Single Output')">Decision Table: Single Output</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/67</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb26','FEEL Arithmetic')">FEEL Arithmetic</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/230</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb27','FEEL Conditionals')">FEEL Conditionals</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/46</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb28','FEEL Constants')">FEEL Constants</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/44</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb29','FEEL Filter (10.3.2.5)')">FEEL Filter (10.3.2.5)</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/8</small></span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb54','Relation')">Relation</a></th>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb30','FEEL Function Literals')">FEEL Function Literals</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/7</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb31','FEEL Functions: conversion')">FEEL Functions: conversion</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/21</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb32','FEEL Functions: date and time')">FEEL Functions: date and time</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/278</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb33','FEEL Functions: list')">FEEL Functions: list</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/113</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb34','FEEL Functions: lists')">FEEL Functions: lists</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/23</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb35','FEEL Functions: negation')">FEEL Functions: negation</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/6</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb36','FEEL Functions: number')">FEEL Functions: number</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/139</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb37','FEEL Functions: numeric')">FEEL Functions: numeric</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/7</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb38','FEEL Functions: string')">FEEL Functions: string</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/36</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb39','FEEL Functions: strings')">FEEL Functions: strings</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/102</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb40','FEEL Iteration')">FEEL Iteration</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/6</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb41','FEEL List')">FEEL List</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/34</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb42','FEEL List Operator')">FEEL List Operator</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/6</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb43','FEEL Quantifiers')">FEEL Quantifiers</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/1</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb44','FEEL Relation')">FEEL Relation</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/1</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb45','FEEL Special-character Names')">FEEL Special-character Names</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/43</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb46','FEEL comments')">FEEL comments</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/3</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb47','Feel : any')">Feel : any</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/50</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb48','Function Definition')">Function Definition</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/5</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb49','Function Invocation')">Function Invocation</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/9</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb50','Hit Policy: ANY')">Hit Policy: ANY</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/6</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb51','Hit Policy: COLLECT')">Hit Policy: COLLECT</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/29</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb52','Hit Policy: Collect')">Hit Policy: Collect</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/3</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb53','Hit Policy: FIRST')">Hit Policy: FIRST</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/6</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb54','Hit Policy: OUTPUT ORDER')">Hit Policy: OUTPUT ORDER</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/6</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb55','Hit Policy: PRIORITY')">Hit Policy: PRIORITY</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/14</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb56','Hit Policy: RULE ORDER')">Hit Policy: RULE ORDER</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/6</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb57','Hit Policy: UNIQUE')">Hit Policy: UNIQUE</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/21</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb58','Item Definition')">Item Definition</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/119</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb59','Literal Expression')">Literal Expression</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/522</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb60','Literal Function Invocation')">Literal Function Invocation</a></th>
+                                    <td align="center">
+                                        <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/8</small></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_OpenRules_7.0.0.html', 'tb61','Relation')">Relation</a></th>
                                     <td align="center">
                                         <span class="glyphicon glyphicon-remove icon-red" aria-hidden="true"><br/><small>0/2</small></span>
                                     </td>
@@ -1086,7 +1184,7 @@
 <!-- pre-footer -->
 <div class="pre-footer">
     <div class="last-updated">
-        <p>Last updated:</strong> 01-Feb-2019 11:24:28</p>
+        <p>Last updated:</strong> 01-Mar-2019 14:51:17</p>
     </div>
 </div>
 <div class="footer">
