@@ -65,22 +65,22 @@
     </dependency>
   </dependencies>
   <build>
-    <resources>
-  	  <resource>
-  	  	<directory>src/main/resources</directory>
-  	  	<filtering>true</filtering>
-  	  	<includes>
-  	  	  <include>drools.properties</include>
-  	    </includes>
-  	  </resource>
-	  <resource>
-  	  	<directory>src/main/resources</directory>
-  	  	<filtering>false</filtering>
-  	  	<excludes>
-  	  	  <exclude>drools.properties</exclude>
-  	    </excludes>
-  	  </resource>
-  	</resources>
+	<resources>
+		<resource>
+			<directory>src/main/resources</directory>
+			<filtering>true</filtering>
+			<includes>
+				<include>drools.properties</include>
+			</includes>
+		</resource>
+		<resource>
+			<directory>src/main/resources</directory>
+			<filtering>false</filtering>
+			<excludes>
+				<exclude>drools.properties</exclude>
+			</excludes>
+		</resource>
+	</resources>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
