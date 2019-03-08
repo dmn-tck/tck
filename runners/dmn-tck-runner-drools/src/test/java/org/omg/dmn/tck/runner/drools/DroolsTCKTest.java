@@ -118,6 +118,24 @@ public class DroolsTCKTest
       } catch (IOException e) {
          throw new UncheckedIOException(e);
       }
+      // update Drools version.
+      try {
+          Properties ps = new Properties();
+          ps.load(this.getClass().getResourceAsStream("/drools.properties"));
+          String curVersion = ps.getProperty("drools.version");
+          if (curVersion != null && !curVersion.equals(props.getProperty("product.version"))) {
+              props.setProperty("product.version", curVersion);    
+              try {
+                  Path toMove = Paths.get("../../TestResults/Drools/" + versions[versions.length - 1] );
+                  toMove.toFile().renameTo(Paths.get("../../TestResults/Drools/" + curVersion ).toFile());
+                  propsFile = new File("../../TestResults/Drools/" + curVersion + "/tck_results.properties");
+              } catch (Throwable e) {
+                 logger.warn("Exception while moving to new version", e);
+              }
+          }
+      } catch (IOException e) {
+          logger.warn("Exception while trying to update Drools version to a new version. ", e);
+      }
    }
 
    @Override
