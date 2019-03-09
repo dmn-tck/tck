@@ -124,7 +124,7 @@
     <decision name="dateTime_009" id="_dateTime_009">
         <variable name="dateTime_009"/>
         <literalExpression>
-            <text>date and time("2018-12-10T10:30:00@Etc/Utc").timezone</text>
+            <text>date and time("2018-12-10T10:30:00@Etc/UTC").timezone</text>
         </literalExpression>
     </decision>
 
@@ -173,7 +173,7 @@
     <decision name="time_005" id="_time_005">
         <variable name="time_005"/>
         <literalExpression>
-            <text>time("10:30:00@Etc/Utc").timezone</text>
+            <text>time("10:30:00@Etc/UTC").timezone</text>
         </literalExpression>
     </decision>
 
