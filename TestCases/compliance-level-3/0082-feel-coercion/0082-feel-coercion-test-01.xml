@@ -201,7 +201,7 @@
     <testCase id="invoke_001">
         <description>decision has invocation call a bkm and passing invalid
             non-comforming context - null coercion of param into bkm</description>
-        <resultNode name="invoke_001" type="decision">
+        <resultNode name="invoke_001" type="decision" errorResult="true">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
             </expected>
@@ -336,7 +336,7 @@
     </testCase>
 
     <testCase id="decisionService_001">
-        <description>Decision service has context typeRef and result is non-conforming context - coercion to null</description>
+        <description>Decision service returns context that does not confirm to type</description>
         <resultNode errorResult="true" name="decisionService_001" type="decisionService">
             <expected>
                 <value xsi:nil="true"/>
