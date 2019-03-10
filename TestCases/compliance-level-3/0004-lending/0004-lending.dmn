@@ -616,7 +616,7 @@
                     </inputExpression>
                 </input>
                 <input id="_1d794320-6e6c-46bf-b86d-de073822d6f6" label="Pre-bureauAffordability">
-                    <inputExpression typeRef="string">
+                    <inputExpression typeRef="boolean">
                         <text>Pre-bureauAffordability</text>
                     </inputExpression>
                 </input>
@@ -1274,7 +1274,7 @@
                     </inputExpression>
                 </input>
                 <input id="_fc1055cf-ab08-44a0-91bc-2d6539df00c5" label="Post-bureauAffordability">
-                    <inputExpression typeRef="string">
+                    <inputExpression typeRef="boolean">
                         <text>Post-bureauAffordability</text>
                     </inputExpression>
                 </input>
