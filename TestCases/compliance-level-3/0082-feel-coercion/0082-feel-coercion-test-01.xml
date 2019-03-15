@@ -389,7 +389,7 @@
 
     <testCase id="decisionService_002_c">
         <description>Indirect invocation: Decision service has string input but we pass in singleton list of correct type - input is coerced to string</description>
-        <resultNode errorResult="true" name="ds_invoke_002_with_singleton_list" type="decision">
+        <resultNode name="ds_invoke_002_with_singleton_list" type="decision">
             <expected>
                 <component name="decision_ds_002">
                     <value xsi:type="xsd:string">foo</value>
@@ -418,10 +418,14 @@
 
     <testCase id="decisionService_003_a">
         <description>Indirect invocation: Decision service has string list input but we pass in string - input is coerced to string list</description>
-        <resultNode errorResult="true" name="ds_invoke_003_with_singleton_list" type="decision">
+        <resultNode name="ds_invoke_003_with_string" type="decision">
             <expected>
                 <component name="decision_ds_003">
-                    <value xsi:type="xsd:string">foo</value>
+                    <list>
+                        <item>
+                            <value xsi:type="xsd:string">foo</value>
+                        </item>
+                    </list>
                 </component>
             </expected>
         </resultNode>
