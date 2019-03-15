@@ -344,7 +344,7 @@
         </context>
     </decision>
 
-    <decision name="fd_001" id="_fd_002">
+    <decision name="fd_002" id="_fd_002">
         <variable name="fd_002"/>
         <context>
             <contextEntry>
@@ -404,6 +404,15 @@
         </literalExpression>
     </decision>
 
+
+    <!-- **************** -->
+
+    <decisionService name="decisionService_001" id="_decisionService_001">
+        <variable name="decisionService_001" typeRef="tDS_001"/>
+        <!-- decision returns number, type expects string -->
+        <outputDecision href="#_decision_ds_001"/>
+    </decisionService>
+
     <decision name="decision_ds_001" id="_decision_ds_001">
         <variable name="decision_ds_001"/>
         <literalExpression>
@@ -411,10 +420,86 @@
         </literalExpression>
     </decision>
 
-    <decisionService name="decisionService_001" id="_decisionService_001">
-        <variable name="decisionService_001" typeRef="tDS_001"/>
-        <!-- decision returns number, type expects string -->
-        <outputDecision href="#_decision_ds_001"/>
+    <!-- **************** -->
+
+    <decisionService name="decisionService_002" id="_decisionService_002">
+        <!-- no output type defined so we can narrow assertion on the input coercion -->
+        <variable name="decisionService_002"/>
+        <outputDecision href="#_decision_ds_002"/>
+        <inputData href="#_decisionService_002_input_1"/>
     </decisionService>
+
+    <decision name="decision_ds_002" id="_decision_ds_002">
+        <variable name="decision_ds_002"/>
+        <informationRequirement>
+            <requiredInput href="#_decisionService_002_input_1"/>
+        </informationRequirement>
+        <literalExpression>
+            <!-- echo the input value -->
+            <text>decisionService_002_input_1</text>
+        </literalExpression>
+    </decision>
+
+    <inputData name="decisionService_002_input_1" id="_decisionService_002_input_1">
+        <variable name="decisionService_002_input_1" typeRef="string"/>
+    </inputData>
+
+    <!-- invoke DS from decision passing incorrect input type -->
+    <decision name="ds_invoke_002_with_number" id="_ds_invoke_002_with_number">
+        <variable name="ds_invoke_002_with_number"/>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#_decisionService_002"/>
+        </knowledgeRequirement>
+        <literalExpression>
+            <text>decisionService_002(10)</text>
+        </literalExpression>
+    </decision>
+
+    <!-- invoke DS from decision passing singleton string list -->
+    <decision name="ds_invoke_002_with_singleton_list" id="_ds_invoke_002_with_singleton_list">
+        <variable name="ds_invoke_002_with_singleton_list"/>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#_decisionService_002"/>
+        </knowledgeRequirement>
+        <literalExpression>
+            <text>decisionService_002(["foo"])</text>
+        </literalExpression>
+    </decision>
+
+    <!-- **************** -->
+
+    <decisionService name="decisionService_003" id="_decisionService_003">
+        <!-- no output type defined so we can narrow assertion on the input coercion -->
+        <variable name="decisionService_003"/>
+        <outputDecision href="#_decision_ds_003"/>
+        <inputData href="#_decisionService_003_input_1"/>
+    </decisionService>
+
+    <decision name="decision_ds_003" id="_decision_ds_003">
+        <variable name="decision_ds_003"/>
+        <informationRequirement>
+            <requiredInput href="#_decisionService_003_input_1"/>
+        </informationRequirement>
+        <literalExpression>
+            <!-- echo the input value -->
+            <text>decisionService_003_input_1</text>
+        </literalExpression>
+    </decision>
+
+    <inputData name="decisionService_003_input_1" id="_decisionService_003_input_1">
+        <variable name="decisionService_003_input_1" typeRef="tStringList"/>
+    </inputData>
+
+    <!-- invoke DS from decision passing singleton string list -->
+    <decision name="ds_invoke_003_with_string" id="_ds_invoke_003_with_string">
+        <variable name="ds_invoke_003_with_string"/>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#_decisionService_003"/>
+        </knowledgeRequirement>
+        <literalExpression>
+            <text>decisionService_003("foo")</text>
+        </literalExpression>
+    </decision>
+
 
 </definitions>

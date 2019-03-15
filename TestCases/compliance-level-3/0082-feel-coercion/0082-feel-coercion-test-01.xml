@@ -10,7 +10,7 @@
 
     <testCase id="decision_001">
         <description>type mismatch - decision return value is null coerced</description>
-        <resultNode name="decision_001" type="decision">
+        <resultNode name="decision_001" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -39,7 +39,7 @@
 
     <testCase id="decision_003">
         <description>list type mismatch - decision return value is null coerced</description>
-        <resultNode name="decision_003" type="decision">
+        <resultNode name="decision_003" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -65,7 +65,7 @@
 
     <testCase id="decision_005">
         <description>context type mismatch - decision return value is null coerced</description>
-        <resultNode name="decision_005" type="decision">
+        <resultNode name="decision_005" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -87,7 +87,7 @@
 
     <testCase id="decision_006_a">
         <description>decision type is list but return val is non-conforming val - coercion to null</description>
-        <resultNode name="decision_006_a" type="decision">
+        <resultNode name="decision_006_a" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -105,7 +105,7 @@
 
     <testCase id="decision_007_a">
         <description>decision type is value but return val is non-conforming singleton list - coercion to null</description>
-        <resultNode name="decision_007_a" type="decision">
+        <resultNode name="decision_007_a" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -142,7 +142,7 @@
 
     <testCase id="decision_bkm_003">
         <description>BKM logic returns non-conforming value to bkm variable typeRef - bk result is null coerced</description>
-        <resultNode name="decision_bkm_003" type="decision">
+        <resultNode name="decision_bkm_003" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -164,7 +164,7 @@
 
     <testCase id="decision_bkm_004_a">
         <description>bkm type is list and bkm logic returns non-conforming (non-list) value - coercion to null</description>
-        <resultNode name="decision_bkm_004_a" type="decision">
+        <resultNode name="decision_bkm_004_a" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -191,7 +191,7 @@
 
     <testCase id="decision_bkm_005_a">
         <description>bkm type is non-list and bkm logic returns singleton list of non-conforming value - coercion to null</description>
-        <resultNode name="decision_bkm_005_a" type="decision">
+        <resultNode name="decision_bkm_005_a" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -212,7 +212,7 @@
         <description>decision has invocation of bkm passing valid param, but bkm return value
             does not match explicit type on invocation defn  - null coercion of result
             of invocation </description>
-        <resultNode name="invoke_002" type="decision">
+        <resultNode name="invoke_002" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -234,7 +234,7 @@
 
     <testCase id="invoke_004">
         <description>invocation type is a list and invoked bkm returns single non-conforming value - coercion to null</description>
-        <resultNode name="invoke_004" type="decision">
+        <resultNode name="invoke_004" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -252,7 +252,7 @@
 
     <testCase id="invoke_006">
         <description>invocation type is a non-list and invoked bkm returns singleton array of non-conforming value - coercion to null</description>
-        <resultNode name="invoke_006" type="decision">
+        <resultNode name="invoke_006" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -270,7 +270,7 @@
 
     <testCase id="fd_002">
         <description>function definition has typed param and is passed non-conforming type - coercion to null</description>
-        <resultNode name="fd_002" type="decision">
+        <resultNode name="fd_002" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -288,7 +288,7 @@
 
     <testCase id="literal_002">
         <description>literal expression has typeRef and result is non-conforming value - coercion to null</description>
-        <resultNode name="literal_002" type="decision">
+        <resultNode name="literal_002" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -310,7 +310,7 @@
 
     <testCase id="literal_004">
         <description>literal expression has list typeRef and result is non-conforming value - coercion to null</description>
-        <resultNode name="literal_004" type="decision">
+        <resultNode name="literal_004" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -328,7 +328,7 @@
 
     <testCase id="literal_006">
         <description>literal expression has non-list typeRef and result is non-conforming singleton list - coercion to null</description>
-        <resultNode name="literal_006" type="decision">
+        <resultNode name="literal_006" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -336,10 +336,93 @@
     </testCase>
 
     <testCase id="decisionService_001">
-        <description>Decision service returns context that does not confirm to type</description>
+        <description>Direct invocation: Decision service returns context that does not confirm to type</description>
         <resultNode errorResult="true" name="decisionService_001" type="decisionService">
             <expected>
                 <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="decisionService_002">
+        <description>Direct invocation: Decision service has string input but we pass incorrect type - input is coerced to null</description>
+        <inputNode name="decisionService_002_input_1">
+            <value xsi:type="xsd:decimal">10</value>
+        </inputNode>
+        <resultNode errorResult="true" name="decisionService_002" type="decisionService">
+            <expected>
+                <component name="decision_ds_002">
+                    <value xsi:nil="true"/>
+                </component>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="decisionService_002_a">
+        <description>Indirect invocation: Decision Service has string input but we pass incorrect type - input is coerced to null</description>
+        <resultNode errorResult="true" name="ds_invoke_002_with_number" type="decision">
+            <expected>
+                <component name="decision_ds_002">
+                    <value xsi:nil="true"/>
+                </component>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="decisionService_002_b">
+        <description>Direct invocation: Decision service has string input but we pass in singleton list of correct type - input is coerced to string</description>
+        <inputNode name="decisionService_002_input_1">
+            <list>
+                <item>
+                    <value xsi:type="xsd:string">foo</value>
+                </item>
+            </list>
+        </inputNode>
+        <resultNode name="decisionService_002" type="decisionService">
+            <expected>
+                <component name="decision_ds_002">
+                    <value xsi:type="xsd:string">foo</value>
+                </component>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="decisionService_002_c">
+        <description>Indirect invocation: Decision service has string input but we pass in singleton list of correct type - input is coerced to string</description>
+        <resultNode errorResult="true" name="ds_invoke_002_with_singleton_list" type="decision">
+            <expected>
+                <component name="decision_ds_002">
+                    <value xsi:type="xsd:string">foo</value>
+                </component>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="decisionService_003">
+        <description>Decision service has string list input but we pass string - input is coerced to string list</description>
+        <inputNode name="decisionService_003_input_1">
+            <value xsi:type="xsd:string">foo</value>
+        </inputNode>
+        <resultNode name="decisionService_003" type="decisionService">
+            <expected>
+                <component name="decision_ds_003">
+                    <list>
+                        <item>
+                            <value xsi:type="xsd:string">foo</value>
+                        </item>
+                    </list>
+                </component>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="decisionService_003_a">
+        <description>Indirect invocation: Decision service has string list input but we pass in string - input is coerced to string list</description>
+        <resultNode errorResult="true" name="ds_invoke_003_with_singleton_list" type="decision">
+            <expected>
+                <component name="decision_ds_003">
+                    <value xsi:type="xsd:string">foo</value>
+                </component>
             </expected>
         </resultNode>
     </testCase>
