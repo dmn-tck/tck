@@ -87,7 +87,7 @@
     </decision>
 
     <inputData name="inputData_003" id="_inputData_003">
-        <variable name="inputData_003"/>
+        <variable name="inputData_003" typeRef="string"/>
     </inputData>
 
     <!-- with no params, when none are expected -->
