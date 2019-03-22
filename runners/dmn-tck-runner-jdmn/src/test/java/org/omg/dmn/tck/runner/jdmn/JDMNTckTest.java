@@ -13,12 +13,8 @@ package org.omg.dmn.tck.runner.jdmn;
 
 import com.gs.dmn.dialect.StandardDMNDialectDefinition;
 import com.gs.dmn.feel.analysis.semantics.environment.Environment;
-import com.gs.dmn.feel.analysis.semantics.environment.EnvironmentFactory;
 import com.gs.dmn.feel.analysis.semantics.type.Type;
-import com.gs.dmn.feel.lib.FEELLib;
 import com.gs.dmn.feel.lib.StandardFEELLib;
-import com.gs.dmn.feel.synthesis.FEELTranslator;
-import com.gs.dmn.feel.synthesis.FEELTranslatorImpl;
 import com.gs.dmn.log.BuildLogger;
 import com.gs.dmn.log.Slf4jBuildLogger;
 import com.gs.dmn.runtime.interpreter.DMNInterpreter;
@@ -29,7 +25,6 @@ import com.gs.dmn.tck.TCKUtil;
 import com.gs.dmn.transformation.DMNTransformer;
 import com.gs.dmn.transformation.ToSimpleNameTransformer;
 import com.gs.dmn.transformation.basic.BasicDMN2JavaTransformer;
-import com.gs.dmn.transformation.basic.QualifiedName;
 import org.junit.runner.Description;
 import org.junit.runner.RunWith;
 import org.omg.dmn.tck.marshaller._20160719.TestCases;
@@ -56,6 +51,7 @@ public class JDMNTckTest implements DmnTckVendorTestSuite {
     static final File CL2_FOLDER = new File("TestCases/compliance-level-2");
     static final File CL3_FOLDER = new File("TestCases/compliance-level-3");
     static final File NON_COMPLIANT_FOLDER = new File("TestCases/non-compliant");
+    private static final boolean IGNORE_ERROR_FLAG = false;
 
     @Override
     public List<URL> getTestCases() {
@@ -126,10 +122,14 @@ public class JDMNTckTest implements DmnTckVendorTestSuite {
                     expectedValue = tckUtil.makeValue(res.getExpected(), decisionType);
                     actualOutput = interpreter.evaluate(decisionName, runtimeEnvironment);
                 } catch (Throwable e) {
-                    if (!res.isErrorResult()) {
-                        e.printStackTrace();
-                        String errorMessage = String.format("Expected error for result node '%s' at position %d %s", res.getName(), i, e.getMessage());
-                        failures.add(errorMessage);
+                    e.printStackTrace();
+                    if (IGNORE_ERROR_FLAG) {
+                         actualOutput = null;
+                    } else {
+                        if (!res.isErrorResult()) {
+                            String errorMessage = String.format("Expected error for result node '%s' at position %d %s", res.getName(), i, e.getMessage());
+                            failures.add(errorMessage);
+                        }
                     }
                 }
                 if (!isEquals(expectedValue, actualOutput)) {
