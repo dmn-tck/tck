@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Contributed to DMN TCK by StrayAlien -->
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <modelName>0086-imports.dmn</modelName>
+    <labels>
+        <label>Compliance Level 3</label>
+        <label>Imports</label>
+    </labels>
+
+    <testCase id="001">
+        <description>Decision can reference an imported decision</description>
+        <resultNode name="decision_001" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">decision_001 in import1</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="002">
+        <description>Decision can reference an imported BKM</description>
+        <resultNode name="decision_002" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">foo</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+<!--    <testCase id="003">
+        <description>Reference an imported inputData</description>
+        <inputNode name="import1.inputData_001">
+            <value xsi:type="xsd:string">foo</value>
+        </inputNode>
+        <resultNode name="decision_003" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">foo</value>
+            </expected>
+        </resultNode>
+    </testCase>-->
+
+    <testCase id="004">
+        <description>Decision can reference an imported decisionService</description>
+        <!-- note that the imported DS uses a outputDecision ref for an id that exists both in the
+        imported AND importing model.  We expect the DS to use the 'local' decision  -->
+        <resultNode name="decision_004" type="decision">
+            <expected>
+                <component name="decision_001">
+                    <value xsi:type="xsd:string">decision_001 in import1</value>
+                </component>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="005">
+        <description>Decision can reference an imported decisionService passing param by name/positional</description>
+        <resultNode name="decision_005" type="decision">
+            <expected>
+                <component name="i.decision_002">
+                    <value xsi:type="xsd:string">foo</value>
+                </component>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="006">
+        <description>BKM can reference an imported BKM</description>
+        <resultNode name="decision_006" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">foo</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="007">
+        <description>BKM can reference an imported Decision Service</description>
+        <resultNode name="decision_007" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">decision_001 in import1</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="008">
+        <description>Decision can reference an imported typeRef</description>
+        <!-- imported type is a string list and the decision returns a string - so we're
+        expecting coercion -->
+        <resultNode name="decision_008" type="decision">
+            <expected>
+                <list>
+                    <item>
+                        <value xsi:type="xsd:string">foo</value>
+                    </item>
+                </list>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="009">
+        <description>Item definition can reference an imported typeRef</description>
+        <!-- imported type is a string list and the decision returns a string - so we're
+        expecting coercion -->
+        <resultNode name="decision_009" type="decision">
+            <expected>
+                <list>
+                    <item>
+                        <value xsi:type="xsd:string">foo</value>
+                    </item>
+                </list>
+            </expected>
+        </resultNode>
+    </testCase>
+
+</testCases>

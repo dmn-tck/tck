@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Contributed to DMN TCK by StrayAlien -->
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <modelName>0086-imports-02.dmn</modelName>
+    <labels>
+        <label>Compliance Level 3</label>
+        <label>Imports</label>
+    </labels>
+
+    <testCase id="001">
+        <description>Deeply reference imported decisions</description>
+        <resultNode name="decision_001" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">0 -> i1 -> i2 -> i3</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+
+</testCases>

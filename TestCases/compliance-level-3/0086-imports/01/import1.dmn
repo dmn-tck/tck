@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions namespace="https://github.com/agilepro/dmn-tck"
+             name="0001-input-data-string"
+             id="_0001-input-data-string"
+             xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/"
+             xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
+             xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/"
+             xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <itemDefinition name="tStringList" isCollection="true">
+        <typeRef>string</typeRef>
+    </itemDefinition>
+
+    <decision name="decision_001" id="_decision_001">
+        <variable name="decision_001" typeRef="string"/>
+        <literalExpression>
+            <text>"decision_001 in import1"</text>
+        </literalExpression>
+    </decision>
+
+    <businessKnowledgeModel name="bkm_001" id="_bkm_001">
+        <variable name="bkm_001" typeRef="string"/>
+        <encapsulatedLogic>
+            <formalParameter typeRef="string" name="val"/>
+            <literalExpression>
+                <text>val</text>
+            </literalExpression>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+
+    <inputData name="inputData_001" id="_inputData_001">
+        <variable name="inputData_001" typeRef="string"/>
+    </inputData>
+
+    <decisionService name="decisionService_001" id="_decisionService_001">
+        <variable name="decisionService_001"/>
+        <outputDecision href="#_decision_001"/>
+        <encapsulatedDecision href="#_decision_001"/>
+    </decisionService>
+
+    <!-- ********************** -->
+
+    <decision name="decision_002" id="_decision_002">
+        <variable name="decision_002" typeRef="string"/>
+        <informationRequirement>
+            <requiredDecision href="#_decision_003"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>decision_003</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision_003" id="_decision_003">
+        <variable name="decision_003" typeRef="string"/>
+        <literalExpression>
+            <text>"bar"</text>
+        </literalExpression>
+    </decision>
+
+
+</definitions>
+

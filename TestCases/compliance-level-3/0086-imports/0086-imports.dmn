@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions namespace="http://www.montera.com.au/spec/DMN/0086-imports"
+             name="0085-decision-services"
+             id="_i9fboPUUEeesLuP4RHs4vA"
+             xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/"
+             xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
+             xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/"
+             xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <description>Imports 01</description>
+
+    <import name="i"
+            namespace="http://montera.com.au/imports"
+            locationURI="01/import1.dmn"
+            importType="http://www.omg.org/spec/DMN/20180521/MODEL/"/>
+
+    <itemDefinition name="fooType" id="_fooType">
+        <typeRef>i.tStringList</typeRef>
+    </itemDefinition>
+
+    <!-- A decision using an imported decision -->
+
+    <decision name="decision_001" id="_decision_001">
+        <variable name="decision_001" typeRef="string"/>
+        <informationRequirement>
+            <requiredDecision href="http://montera.com.au/imports#_decision_001"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>i.decision_001</text>
+        </literalExpression>
+    </decision>
+
+    <!-- *************************** -->
+
+    <!-- A decision using an imported BKM -->
+
+    <decision name="decision_002" id="_decision_002">
+        <variable name="decision_002" typeRef="string"/>
+        <knowledgeRequirement>
+            <requiredKnowledge href="http://montera.com.au/imports#_bkm_001"/>
+        </knowledgeRequirement>
+        <literalExpression>
+            <text>i.bkm_001("foo")</text>
+        </literalExpression>
+    </decision>
+
+    <!-- *************************** -->
+
+    <!-- A decision using an imported InputData -->
+
+<!--
+    <decision name="decision_003" id="_decision_003">
+        <variable name="decision_003" typeRef="string"/>
+        <informationRequirement>
+            <requiredInput href="http://montera.com.au/imports#_inputData_001"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>i.inputData_001</text>
+        </literalExpression>
+    </decision>
+-->
+
+    <!-- *************************** -->
+
+    <!-- A decision using an imported Decision Service -->
+
+    <decision name="decision_004" id="_decision_004">
+        <variable name="decision_004"/>
+        <knowledgeRequirement>
+            <requiredKnowledge href="http://montera.com.au/imports#_decisionService_001"/>
+        </knowledgeRequirement>
+        <literalExpression>
+            <text>i.decisionService_001()</text>
+        </literalExpression>
+    </decision>
+
+    <!-- *************************** -->
+
+    <!-- A DS using an imported decision pass a param by name -->
+
+    <decisionService name="decisionService_005" id="_decisionService_005">
+        <variable name="decisionService_005"/>
+        <outputDecision href="http://montera.com.au/imports#_decision_002"/>
+        <encapsulatedDecision href="http://montera.com.au/imports#_decision_002"/>
+        <inputDecision href="http://montera.com.au/imports#_decision_003"/>
+    </decisionService>
+
+    <decision name="decision_005" id="_decision_005">
+        <variable name="decision_005"/>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#_decisionService_005"/>
+        </knowledgeRequirement>
+        <literalExpression>
+            <text>decisionService_005(i.decision_003: "foo")</text>
+        </literalExpression>
+    </decision>
+
+    <!-- *************************** -->
+
+    <!-- a BKM that using an imported BKM -->
+
+    <businessKnowledgeModel name="bkm_006" id="_bkm_006">
+        <variable name="bkm_006" typeRef="string"/>
+        <encapsulatedLogic>
+            <formalParameter typeRef="string" name="val"/>
+            <literalExpression>
+                <text>i.bkm_001(val)</text>
+            </literalExpression>
+        </encapsulatedLogic>
+        <knowledgeRequirement>
+            <requiredKnowledge href="http://montera.com.au/imports#_bkm_001"/>
+        </knowledgeRequirement>
+    </businessKnowledgeModel>
+
+    <decision name="decision_006" id="_decision_006">
+        <variable name="decision_006" typeRef="string"/>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#_bkm_006"/>
+        </knowledgeRequirement>
+        <literalExpression>
+            <!-- calls a BKM, that calls an imported BKM -->
+            <text>bkm_006("foo")</text>
+        </literalExpression>
+    </decision>
+
+    <!-- *************************** -->
+
+    <!-- a BKM using an imported DS -->
+
+    <businessKnowledgeModel name="bkm_007" id="_bkm_007">
+        <variable name="bkm_007" typeRef="string"/>
+        <encapsulatedLogic>
+            <literalExpression>
+                <text>i.decisionService_001().decision_001</text>
+            </literalExpression>
+        </encapsulatedLogic>
+        <knowledgeRequirement>
+            <requiredKnowledge href="http://montera.com.au/imports#_decisionService_001"/>
+        </knowledgeRequirement>
+    </businessKnowledgeModel>
+
+    <decision name="decision_007" id="_decision_007">
+        <variable name="decision_007" typeRef="string"/>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#_bkm_007"/>
+        </knowledgeRequirement>
+        <literalExpression>
+            <!-- calls a no-args BKM, that calls an imported (no-args) DS -->
+            <text>bkm_007()</text>
+        </literalExpression>
+    </decision>
+
+    <!-- *************************** -->
+
+    <!-- a Decision using an imported typeRef -->
+
+    <decision name="decision_008" id="_decision_008">
+        <variable name="decision_008" typeRef="i.tStringList"/>
+        <literalExpression>
+            <text>"foo"</text>
+        </literalExpression>
+    </decision>
+
+
+    <!-- *************************** -->
+
+    <!-- a Decision using a (local) typeRef that, in turn, uses imported typeRef -->
+
+    <decision name="decision_009" id="_decision_009">
+        <variable name="decision_009" typeRef="fooType"/>
+        <literalExpression>
+            <text>"foo"</text>
+        </literalExpression>
+    </decision>
+
+
+
+</definitions>
