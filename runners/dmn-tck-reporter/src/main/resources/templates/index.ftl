@@ -170,7 +170,7 @@
                                 </div>
                                 <div class="list-view-pf-additional-info">
                                     <div class="list-view-pf-additional-info-item">
-                                        Submitted:&nbsp;<b>${vendor.submitted}/${header.totalTests}</b>
+                                        Submitted:&nbsp;<b>${vendor.submitted?string.computer}/${header.totalTests?string.computer}</b>
                                     </div>
                                     <div class="list-view-pf-additional-info-item">
                                         Last Submission:&nbsp;<b>${vendor.lastUpdate}</b>
