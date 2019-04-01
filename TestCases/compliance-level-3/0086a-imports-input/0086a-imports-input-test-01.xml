@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Contributed to DMN TCK by StrayAlien -->
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <modelName>0086a-imports-input.dmn</modelName>
+    <labels>
+        <label>Compliance Level 3</label>
+        <label>Imports</label>
+    </labels>
+
+    <testCase id="001">
+        <description>
+            Model 'A' with a local decision with a local inputData and
+            references a decision in model 'B', that also has a local input and
+            references a decision in model 'C' that also has a local input.
+            Model A imports Model B with name 'i' and model B imports model C with name 'i'.
+            Model A _also_ imports Model C directly with name 'x' and references it.
+        </description>
+        <inputNode name="input_001">
+            <value xsi:type="xsd:string">modelA</value>
+        </inputNode>
+        <inputNode name="i.input_001">
+            <value xsi:type="xsd:string">modelB</value>
+        </inputNode>
+        <inputNode name="i.i.input_001">
+            <value xsi:type="xsd:string">modelC</value>
+        </inputNode>
+        <inputNode name="x.input_001">
+            <value xsi:type="xsd:string">x.modelC</value>
+        </inputNode>
+        <resultNode name="decision_001" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">modelA modelB modelB modelC modelC, x.modelC x.modelC</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+
+</testCases>

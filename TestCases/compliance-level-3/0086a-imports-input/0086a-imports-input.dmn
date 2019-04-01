@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions namespace="http://www.montera.com.au/spec/DMN/0086-imports"
+             name="0085-decision-services"
+             id="_i9fboPUUEeesLuP4RHs4vA"
+             xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/"
+             xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
+             xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/"
+             xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <description>Model 'A'</description>
+
+    <import name="i"
+            namespace="http://montera.com.au/imports"
+            locationURI="modelB.dmn"
+            importType="http://www.omg.org/spec/DMN/20180521/MODEL/"/>
+
+    <import name="x"
+            namespace="http://montera.com.au/import_c"
+            locationURI="modelC.dmn"
+            importType="http://www.omg.org/spec/DMN/20180521/MODEL/"/>
+
+    <inputData name="input_001" id="_input_001">
+        <variable name="input_001"/>
+    </inputData>
+
+    <decision name="decision_001" id="_decision_001">
+        <variable name="decision_001" typeRef="string"/>
+        <informationRequirement>
+            <requiredInput href="#_input_001"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="http://montera.com.au/imports#_input_001"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="http://montera.com.au/import_c#_input_001"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredDecision href="http://montera.com.au/imports#_decision_001"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredDecision href="http://montera.com.au/import_c#_decision_001"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>input_001 + " " + i.input_001 + " " + i.decision_001 + ", " + x.input_001 + " " + x.decision_001</text>
+        </literalExpression>
+    </decision>
+
+</definitions>
