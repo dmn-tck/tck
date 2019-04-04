@@ -61,7 +61,7 @@
         </literalExpression>
     </decision>
     <inputData name="numList" id="_b894ee22-f795-46f7-b713-77d69d07ae22">
-        <variable name="numList"/>
+        <variable typeRef="tNumList" name="numList"/>
     </inputData>
     <decision name="sum1" id="_d6b2c4a0-a147-44a1-a9f4-3575f1bb5695">
         <variable typeRef="number" name="sum1"/>
@@ -106,7 +106,7 @@
         </literalExpression>
     </decision>
     <decision name="sublist12" id="_95e0ad53-c08f-46af-baa0-9c36d69002f5">
-        <variable name="sublist12"/>
+        <variable typeRef="tStringList" name="sublist12"/>
         <informationRequirement id="a29945fa-45fe-4464-8d07-3e37c37f7069">
             <requiredInput href="#_86f5e710-a139-4cd5-8ac4-90b4671a75b8"/>
         </informationRequirement>
@@ -115,7 +115,7 @@
         </literalExpression>
     </decision>
     <decision name="sublistLast" id="_85f6330f-dcaa-47ca-96bb-1c0228da911f">
-        <variable name="sublistLast"/>
+        <variable typeRef="tStringList" name="sublistLast"/>
         <informationRequirement id="b3c894ac-a211-4265-991b-86ea9dc02101">
             <requiredInput href="#_86f5e710-a139-4cd5-8ac4-90b4671a75b8"/>
         </informationRequirement>
@@ -124,7 +124,7 @@
         </literalExpression>
     </decision>
     <decision name="append1" id="_845ea241-587e-43d8-a563-a1dd18693afe">
-        <variable name="append1"/>
+        <variable typeRef="tNumList" name="append1"/>
         <informationRequirement id="_2856a9f4-86e6-427c-8a12-74be070a9d7a">
             <requiredInput href="#_b894ee22-f795-46f7-b713-77d69d07ae22"/>
         </informationRequirement>
