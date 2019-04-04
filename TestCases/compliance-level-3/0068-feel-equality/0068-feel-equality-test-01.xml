@@ -7,6 +7,24 @@
         <label>FEEL equality</label>
     </labels>
 
+    <testCase id="null_001">
+        <description>null equals null</description>
+        <resultNode name="null_001" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="null_002">
+        <description>null not equals null</description>
+        <resultNode name="null_002" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
     <testCase id="boolean_001">
         <description>boolean true equal</description>
         <resultNode name="boolean_001" type="decision">
@@ -48,6 +66,42 @@
         <resultNode name="boolean_005" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="boolean_006">
+        <description>boolean true equals null</description>
+        <resultNode name="boolean_006" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="boolean_007">
+        <description>boolean false equals null</description>
+        <resultNode name="boolean_007" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="boolean_008">
+        <description>boolean false equals another type (0)</description>
+        <resultNode name="boolean_008" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="boolean_009">
+        <description>boolean true equals another type (1)</description>
+        <resultNode name="boolean_009" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
             </expected>
         </resultNode>
     </testCase>
@@ -97,6 +151,24 @@
         </resultNode>
     </testCase>
 
+    <testCase id="number_006">
+        <description>number equals null</description>
+        <resultNode name="number_006" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="number_007">
+        <description>number equals another type</description>
+        <resultNode name="number_007" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
     <testCase id="string_001">
         <description>string equals</description>
         <resultNode name="string_001" type="decision">
@@ -120,6 +192,24 @@
         <resultNode name="string_003" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="string_004">
+        <description>string equals null</description>
+        <resultNode name="string_004" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="string_005">
+        <description>string equals another type</description>
+        <resultNode name="string_005" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
             </expected>
         </resultNode>
     </testCase>
@@ -250,6 +340,24 @@
         </resultNode>
     </testCase>
 
+    <testCase id="list_015">
+        <description>list equals null</description>
+        <resultNode name="list_015" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="list_016">
+        <description>list equals another type</description>
+        <resultNode name="list_016" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
     <testCase id="context_001">
         <description>empty contexts equal</description>
         <resultNode name="context_001" type="decision">
@@ -295,6 +403,24 @@
         </resultNode>
     </testCase>
 
+    <testCase id="context_006">
+        <description>context equals null</description>
+        <resultNode name="context_006" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="context_007">
+        <description>context equals another type</description>
+        <resultNode name="context_007" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
     <testCase id="date_001">
         <description>same dates are equal</description>
         <resultNode name="date_001" type="decision">
@@ -309,6 +435,24 @@
         <resultNode name="date_002" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="date_003">
+        <description>date equals null</description>
+        <resultNode name="date_003" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="date_004">
+        <description>date equals another type</description>
+        <resultNode name="date_004" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
             </expected>
         </resultNode>
     </testCase>
@@ -403,6 +547,24 @@
         </resultNode>
     </testCase>
 
+    <testCase id="time_011">
+        <description>time equals null</description>
+        <resultNode name="time_011" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="time_012">
+        <description>time equals another type</description>
+        <resultNode name="time_012" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
     <testCase id="datetime_001">
         <description>same datetimes are equal</description>
         <resultNode name="datetime_001" type="decision">
@@ -484,6 +646,24 @@
         </resultNode>
     </testCase>
 
+    <testCase id="datetime_010">
+        <description>datetime equals null</description>
+        <resultNode name="datetime_010" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="datetime_011">
+        <description>datetime equals another type</description>
+        <resultNode name="datetime_011" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
     <testCase id="dt_duration_001">
         <description>same durations are equal</description>
         <resultNode name="dt_duration_001" type="decision">
@@ -525,6 +705,24 @@
         <resultNode name="dt_duration_005" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="dt_duration_006">
+        <description>dt duration equals null</description>
+        <resultNode name="dt_duration_006" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="dt_duration_007">
+        <description>dt duration equals another type</description>
+        <resultNode name="dt_duration_007" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
             </expected>
         </resultNode>
     </testCase>
@@ -576,9 +774,27 @@
 
     <testCase id="ym_duration_006">
         <description>years/months duration not equal to days/hours duration of same amount</description>
-        <resultNode name="ym_duration_006" type="decision">
+        <resultNode name="ym_duration_006" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="ym_duration_007">
+        <description>years/months duration equals null</description>
+        <resultNode name="ym_duration_007" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="ym_duration_008">
+        <description>years/months duration equals another type</description>
+        <resultNode name="ym_duration_008" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
             </expected>
         </resultNode>
     </testCase>
@@ -648,9 +864,9 @@
 
     <testCase id="singleton_001">
         <description>singleton array is not equal to element</description>
-        <resultNode name="singleton_001" type="decision">
+        <resultNode name="singleton_001" type="decision" errorResult="true">
             <expected>
-                <value xsi:type="xsd:boolean">false</value>
+                <value xsi:nil="true"/>
             </expected>
         </resultNode>
     </testCase>
