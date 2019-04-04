@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <definitions exporter="DMN Modeler; Method and Style trisofix.xslt" exporterVersion="5.0.33.1; 1.0" namespace="http://www.trisotech.com/definitions/_c0858816-af7b-40a1-8aa7-6e11b8761215" name="listFunctions" triso:logoChoice="Default" id="_c0858816-af7b-40a1-8aa7-6e11b8761215" xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <itemDefinition isCollection="true" name="tStringList" id="tStringList">
+        <typeRef>string</typeRef>
+    </itemDefinition>
+    <itemDefinition isCollection="true" name="tNumList" id="tNumList">
+        <typeRef>number</typeRef>
+    </itemDefinition>
+    <itemDefinition isCollection="true" name="tListOfLists" id="tListOfLists">
+        <typeRef>tStringList</typeRef>
+    </itemDefinition>
     <inputData name="list1" id="_86f5e710-a139-4cd5-8ac4-90b4671a75b8">
-        <variable name="list1"/>
+        <variable typeRef="tStringList" name="list1"/>
     </inputData>
     <inputData name="list2" id="_82d66f50-2d47-4849-b5fd-da179e0fec66">
-        <variable name="list2"/>
+        <variable typeRef="tStringList" name="list2"/>
     </inputData>
     <inputData name="string1" id="_1bbe9689-bd70-45d4-ab30-f3887cf46b28">
         <variable typeRef="string" name="string1"/>
@@ -130,7 +139,7 @@
         </literalExpression>
     </decision>
     <decision name="concatenate1" id="_c0c13a64-ef12-4e04-8e3f-fe9193bd72b9">
-        <variable name="concatenate1"/>
+        <variable typeRef="tStringList" name="concatenate1"/>
         <informationRequirement id="_11e474f0-81c2-46d1-af6a-8003a07af3af">
             <requiredInput href="#_86f5e710-a139-4cd5-8ac4-90b4671a75b8"/>
         </informationRequirement>
@@ -142,7 +151,7 @@
         </literalExpression>
     </decision>
     <decision name="insertBefore1" id="_2064fd78-72aa-4851-9813-8d56674b3936">
-        <variable name="insertBefore1"/>
+        <variable typeRef="tStringList" name="insertBefore1"/>
         <informationRequirement id="cae9c51a-b8fd-4f39-81e5-46ae70f43d8f">
             <requiredInput href="#_82d66f50-2d47-4849-b5fd-da179e0fec66"/>
         </informationRequirement>
@@ -154,7 +163,7 @@
         </literalExpression>
     </decision>
     <decision name="remove2nd" id="_ffd2b93c-2bca-4979-9a65-357ca8ba92ff">
-        <variable name="remove2nd"/>
+        <variable typeRef="tStringList" name="remove2nd"/>
         <informationRequirement id="fc58a8c9-b83d-4df6-a63b-4fe1fda6ca38">
             <requiredInput href="#_82d66f50-2d47-4849-b5fd-da179e0fec66"/>
         </informationRequirement>
@@ -163,7 +172,7 @@
         </literalExpression>
     </decision>
     <decision name="reverse1" id="_673c3497-f8e7-4340-827d-99d8d08664db">
-        <variable name="reverse1"/>
+        <variable typeRef="tStringList" name="reverse1"/>
         <informationRequirement id="f5aa6eb4-f77b-4f33-b256-e26db5d7a6a4">
             <requiredDecision href="#_c0c13a64-ef12-4e04-8e3f-fe9193bd72b9"/>
         </informationRequirement>
@@ -172,19 +181,19 @@
         </literalExpression>
     </decision>
     <decision name="appendListItem" id="_d12d9a82-b182-4c15-9fce-d22cdc53dbc4">
-        <variable name="appendListItem"/>
+        <variable typeRef="tStringList" name="appendListItem"/>
         <informationRequirement id="cacbbbb5-5e23-4089-a48d-af62e0c605b9">
             <requiredInput href="#_86f5e710-a139-4cd5-8ac4-90b4671a75b8"/>
         </informationRequirement>
         <informationRequirement id="_6ea238a4-45e4-42f1-bbc3-a6032c3ee89e">
-            <requiredInput href="#_82d66f50-2d47-4849-b5fd-da179e0fec66"/>
+            <requiredInput href="#_1bbe9689-bd70-45d4-ab30-f3887cf46b28"/>
         </informationRequirement>
         <literalExpression>
-            <text>append(list1,list2)</text>
+            <text>append(list1,string1)</text>
         </literalExpression>
     </decision>
     <decision name="indexOf1" id="_3c7aef83-002c-4c61-9297-e822a7d4e829">
-        <variable name="indexOf1"/>
+        <variable typeRef="tNumList" name="indexOf1"/>
         <informationRequirement id="cbf43b3f-1452-4a47-95e7-6b4f0f80651a">
             <requiredInput href="#_82d66f50-2d47-4849-b5fd-da179e0fec66"/>
         </informationRequirement>
@@ -196,7 +205,7 @@
         </literalExpression>
     </decision>
     <decision name="union1" id="_0dee9e3c-ef4e-4853-b182-bdf8bff1d20b">
-        <variable name="union1"/>
+        <variable typeRef="tStringList" name="union1"/>
         <informationRequirement id="_27a059d8-41a3-4dbf-b1d3-e5f38a7dfa88">
             <requiredDecision href="#_c0c13a64-ef12-4e04-8e3f-fe9193bd72b9"/>
         </informationRequirement>
@@ -208,7 +217,7 @@
         </literalExpression>
     </decision>
     <decision name="distinctVals" id="_0bbaa2a8-b265-49d4-9540-28b1bddac540">
-        <variable name="distinctVals"/>
+        <variable typeRef="tStringList" name="distinctVals"/>
         <informationRequirement id="c9bc506f-643e-4d68-bdd4-f2a2bab981c1">
             <requiredDecision href="#_2064fd78-72aa-4851-9813-8d56674b3936"/>
         </informationRequirement>
@@ -217,12 +226,15 @@
         </literalExpression>
     </decision>
     <decision name="flatten1" id="_ef7d1df2-8a1c-47cf-ae2e-928f71e2c460">
-        <variable name="flatten1"/>
-        <informationRequirement id="_883c9eb4-1f4f-4885-82c0-234f9ac9a1d7">
-            <requiredDecision href="#_d12d9a82-b182-4c15-9fce-d22cdc53dbc4"/>
+        <variable typeRef="tStringList" name="flatten1"/>
+        <informationRequirement>
+            <requiredInput href="#_86f5e710-a139-4cd5-8ac4-90b4671a75b8"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#_82d66f50-2d47-4849-b5fd-da179e0fec66"/>
         </informationRequirement>
         <literalExpression>
-            <text>flatten(appendListItem)</text>
+            <text>flatten(append(list1, list2))</text>
         </literalExpression>
     </decision>
     <dmndi:DMNDI>
