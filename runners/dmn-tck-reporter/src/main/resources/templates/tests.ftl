@@ -77,12 +77,12 @@
                 <div class="row">
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Tests:</strong> ${header.totalTests}</p>
+                            <p><strong>Tests:</strong> ${header.totalTests?string.computer}</p>
                         </small>
                     </div>
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Labels:</strong> ${header.totalLabels}</p>
+                            <p><strong>Labels:</strong> ${header.totalLabels?string.computer}</p>
                         </small>
                     </div>
                 </div>
