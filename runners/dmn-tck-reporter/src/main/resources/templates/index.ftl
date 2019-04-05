@@ -63,7 +63,7 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    ${vendor.succeeded}, ${vendor.failed}, ${vendor.ignored}, ${header.totalTests - vendor.succeeded - vendor.failed - vendor.ignored}
+                    ${vendor.succeeded?string.computer}, ${vendor.failed?string.computer}, ${vendor.ignored?string.computer}, ${(header.totalTests - vendor.succeeded - vendor.failed - vendor.ignored)?string.computer}
                 ]
             }
         ]
@@ -192,12 +192,12 @@
                             <div class="col-md-10">
                                 <dl class="dl-horizontal">
                                     <dt>Last Submission: </dt><dd>${vendor.lastUpdate}</dd>
-                                    <dt>Tests: </dt><dd>${header.totalTests}</dd>
-                                    <dt>Labels: </dt><dd>${header.totalLabels}</dd>
-                                    <dt>Succeeded: </dt><dd>${vendor.succeeded}</dd>
-                                    <dt>Failed: </dt><dd>${vendor.failed}</dd>
-                                    <dt>Not Supported: </dt><dd>${vendor.ignored}</dd>
-                                    <dt>Missing: </dt><dd>${header.totalTests - vendor.succeeded - vendor.failed - vendor.ignored}</dd>
+                                    <dt>Tests: </dt><dd>${header.totalTests?string.computer}</dd>
+                                    <dt>Labels: </dt><dd>${header.totalLabels?string.computer}</dd>
+                                    <dt>Succeeded: </dt><dd>${vendor.succeeded?string.computer}</dd>
+                                    <dt>Failed: </dt><dd>${vendor.failed?string.computer}</dd>
+                                    <dt>Not Supported: </dt><dd>${vendor.ignored?string.computer}</dd>
+                                    <dt>Missing: </dt><dd>${(header.totalTests - vendor.succeeded - vendor.failed - vendor.ignored)?string.computer}</dd>
                                     <dt>Info: </dt><dd>${vendor.comment}</dd>
                                     <dt>Instructions: </dt><dd>
                                                                 <#if vendor.instructionsUrl?has_content>
