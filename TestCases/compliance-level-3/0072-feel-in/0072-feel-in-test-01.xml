@@ -1809,25 +1809,6 @@
         </resultNode>
     </testCase>
 
-    <testCase id="list_014_b">
-        <description>list: e1 in unary tests</description>
-        <resultNode name="list_014_b" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">true</value>
-            </expected>
-        </resultNode>
-    </testCase>
-
-    <testCase id="list_015">
-        <description>list: e1 in list in parentheses</description>
-        <resultNode name="list_015" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">false</value>
-            </expected>
-        </resultNode>
-    </testCase>
-
-
     <testCase id="context_001">
         <description>context: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="context_001" type="decision">
