@@ -3,9 +3,6 @@
     <description>FEEL path and qualified names</description>
 
     <decision name="nested_list_001" id="_nested_list_001">
-        <description>Tests FEEL expression: 'string()' and expects result: 'null (string)'</description>
-        <question>Result of FEEL expression 'string()'?</question>
-        <allowedAnswers>null (string)</allowedAnswers>
         <variable name="nested_list_001"/>
         <literalExpression>
             <text>
@@ -16,9 +13,6 @@
     </decision>
 
     <decision name="nested_list_002" id="_nested_list_002">
-        <description>Tests FEEL expression: 'string()' and expects result: 'null (string)'</description>
-        <question>Result of FEEL expression 'string()'?</question>
-        <allowedAnswers>null (string)</allowedAnswers>
         <variable name="nested_list_002"/>
         <literalExpression>
             <text>
