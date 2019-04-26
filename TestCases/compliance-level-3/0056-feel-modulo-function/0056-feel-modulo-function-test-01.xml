@@ -21,7 +21,7 @@
         <description>Assert on negative divisor</description>
         <resultNode name="decision001_a" type="decision">
             <expected>
-                <value xsi:type="xsd:decimal">2</value>
+                <value xsi:type="xsd:decimal">-2</value>
             </expected>
         </resultNode>
     </testCase>
@@ -29,7 +29,7 @@
         <description>Assert on negative dividend</description>
         <resultNode name="decision002" type="decision">
             <expected>
-                <value xsi:type="xsd:decimal">-2</value>
+                <value xsi:type="xsd:decimal">2</value>
             </expected>
         </resultNode>
     </testCase>
@@ -169,5 +169,68 @@
             </expected>
         </resultNode>
     </testCase>
-
+    <testCase id="016a">
+        <description>Example from the DMN Specification, ref DMN13-125</description>
+        <resultNode name="decision016a" type="decision">
+            <expected>
+                <value xsi:type="xsd:decimal">2</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="016b">
+        <description>Example from the DMN Specification, ref DMN13-125</description>
+        <resultNode name="decision016b" type="decision">
+            <expected>
+                <value xsi:type="xsd:decimal">3</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="016c">
+        <description>Example from the DMN Specification, ref DMN13-125</description>
+        <resultNode name="decision016c" type="decision">
+            <expected>
+                <value xsi:type="xsd:decimal">-3</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="016d">
+        <description>Example from the DMN Specification, ref DMN13-125</description>
+        <resultNode name="decision016d" type="decision">
+            <expected>
+                <value xsi:type="xsd:decimal">-2</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="017a">
+        <description>Example from the DMN Specification, ref DMN13-125</description>
+        <resultNode name="decision017a" type="decision">
+            <expected>
+                <value xsi:type="xsd:decimal">1.1</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="017b">
+        <description>Example from the DMN Specification, ref DMN13-125</description>
+        <resultNode name="decision017b" type="decision">
+            <expected>
+                <value xsi:type="xsd:decimal">3.4</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="017c">
+        <description>Example from the DMN Specification, ref DMN13-125</description>
+        <resultNode name="decision017c" type="decision">
+            <expected>
+                <value xsi:type="xsd:decimal">-3.4</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="017d">
+        <description>Example from the DMN Specification, ref DMN13-125</description>
+        <resultNode name="decision017d" type="decision">
+            <expected>
+                <value xsi:type="xsd:decimal">-1.1</value>
+            </expected>
+        </resultNode>
+    </testCase>
 </testCases>
