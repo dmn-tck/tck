@@ -14,6 +14,26 @@
 
 package org.omg.dmn.tck.runner.junit4;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
+import java.util.stream.Collectors;
+
+import javax.xml.bind.JAXBException;
+
 import org.junit.runner.Description;
 import org.junit.runner.notification.Failure;
 import org.junit.runner.notification.RunNotifier;
@@ -23,16 +43,6 @@ import org.omg.dmn.tck.marshaller.TckMarshallingHelper;
 import org.omg.dmn.tck.marshaller._20160719.TestCases;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import javax.xml.bind.JAXBException;
-import java.io.*;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
 
 public class DmnTckRunner
         extends ParentRunner<TestCases.TestCase> {
@@ -46,6 +56,7 @@ public class DmnTckRunner
     private       TestSuiteContext      context;
     private       TestCases             tcd;
     private       URL                   modelURL;
+    private       Collection<URL>       additionalModels = new ArrayList<>();
     private       FileWriter            resultFile;
     private       String                folder = "<unknown>";
 
@@ -57,6 +68,25 @@ public class DmnTckRunner
             tcd = TckMarshallingHelper.load( new FileInputStream( tcfile ) );
             String parent = tcfile.getParent();
             modelURL = new File( parent != null ? parent + "/" + tcd.getModelName() : tcd.getModelName() ).toURI().toURL();
+            if (Paths.get(parent) != null) {
+                try {
+                    List<File> allDMNFiles = Files.walk(Paths.get(parent))
+                                                  .map(Path::toFile)
+                                                  .filter(File::isFile)
+                                                  .filter(f -> f.getName().endsWith(".dmn"))
+                                                  .collect(Collectors.toList());
+                    for (File f : allDMNFiles) {
+                        try {
+                            additionalModels.add(f.toURI().toURL());
+                        } catch (Throwable e) {
+                            e.printStackTrace(); //and continue to next file
+                        }
+                    }
+                    additionalModels.remove(modelURL);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
             folder = parent != null ? parent.substring( parent.lastIndexOf( '/', parent.lastIndexOf( '/' ) - 1 ) + 1 ) : "<unknown>";
             String tcdname = tcfile.getName();
             tcdname = tcdname.substring( 0, tcdname.lastIndexOf( '.' ) ).replaceAll( "\\.", "/" );
@@ -109,7 +139,7 @@ public class DmnTckRunner
                 return;
             }
             try {
-                vendorSuite.beforeTestCases( context, tcd, modelURL );
+                vendorSuite.beforeTestCases( context, tcd, modelURL, additionalModels );
             } catch ( Throwable e ) {
                 logger.error( "Error running 'beforeTestCases()' for model " + modelURL, e );
                 notifier.fireTestFailure( new Failure( descr, e ) );
