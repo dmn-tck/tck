@@ -11,18 +11,18 @@
         </literalExpression>
     </decision>
     <decision name="decision001_a" id="_decision001_a">
-        <description>Tests FEEL expression: 'modulo(10, -4)' and expects result: '2 (number)'</description>
+        <description>Tests FEEL expression: 'modulo(10, -4)' and expects result: '-2 (number)'</description>
         <question>Result of FEEL expression 'modulo(10, -4)'?</question>
-        <allowedAnswers>2 (number)</allowedAnswers>
+        <allowedAnswers>-2 (number)</allowedAnswers>
         <variable typeRef="number" name="decision001_a"/>
         <literalExpression>
             <text>modulo(10, -4)</text>
         </literalExpression>
     </decision>
     <decision name="decision002" id="_decision002">
-        <description>Tests FEEL expression: 'modulo(-10, 4)' and expects result: '-2 (number)'</description>
+        <description>Tests FEEL expression: 'modulo(-10, 4)' and expects result: '2 (number)'</description>
         <question>Result of FEEL expression 'modulo(v)'?</question>
-        <allowedAnswers>-2 (number)</allowedAnswers>
+        <allowedAnswers>2 (number)</allowedAnswers>
         <variable typeRef="number" name="decision002"/>
         <literalExpression>
             <text>modulo(-10, 4)</text>
@@ -181,5 +181,62 @@
             <text>modulo(date and time("2018-12-06T00:00:00"), 4)</text>
         </literalExpression>
     </decision>
+    <decision name="decision016a" id="_decision016a">
+        <description>Example from the DMN Specification, ref DMN13-125</description>
+        <variable typeRef="number" name="decision016a"/>
+        <literalExpression>
+            <text>modulo(12, 5)</text>
+        </literalExpression>
+    </decision>
+    <decision name="decision016b" id="_decision016b">
+        <description>Example from the DMN Specification, ref DMN13-125</description>
+        <variable typeRef="number" name="decision016b"/>
+        <literalExpression>
+            <text>modulo(-12, 5)</text>
+        </literalExpression>
+    </decision>
+    <decision name="decision016c" id="_decision016c">
+        <description>Example from the DMN Specification, ref DMN13-125</description>
+        <variable typeRef="number" name="decision016c"/>
+        <literalExpression>
+            <text>modulo(12, -5)</text>
+        </literalExpression>
+    </decision>
+    <decision name="decision016d" id="_decision016d">
+        <description>Example from the DMN Specification, ref DMN13-125</description>
+        <variable typeRef="number" name="decision016d"/>
+        <literalExpression>
+            <text>modulo(-12, -5)</text>
+        </literalExpression>
+    </decision>
+    <decision name="decision017a" id="_decision017a">
+        <description>Example from the DMN Specification, ref DMN13-125</description>
+        <variable typeRef="number" name="decision017a"/>
+        <literalExpression>
+            <text>modulo(10.1, 4.5)</text>
+        </literalExpression>
+    </decision>
+    <decision name="decision017b" id="_decision017b">
+        <description>Example from the DMN Specification, ref DMN13-125</description>
+        <variable typeRef="number" name="decision017b"/>
+        <literalExpression>
+            <text>modulo(-10.1, 4.5)</text>
+        </literalExpression>
+    </decision>
+    <decision name="decision017c" id="_decision017c">
+        <description>Example from the DMN Specification, ref DMN13-125</description>
+        <variable typeRef="number" name="decision017c"/>
+        <literalExpression>
+            <text>modulo(10.1, -4.5)</text>
+        </literalExpression>
+    </decision>
+    <decision name="decision017d" id="_decision017d">
+        <description>Example from the DMN Specification, ref DMN13-125</description>
+        <variable typeRef="number" name="decision017d"/>
+        <literalExpression>
+            <text>modulo(-10.1, -4.5)</text>
+        </literalExpression>
+    </decision>
+    
 </definitions>
 
