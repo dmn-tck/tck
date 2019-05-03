@@ -181,15 +181,15 @@
         </literalExpression>
     </decision>
     <decision name="appendListItem" id="_d12d9a82-b182-4c15-9fce-d22cdc53dbc4">
-        <variable typeRef="tListOfLists" name="appendListItem"/>
+        <variable typeRef="tStringList" name="appendListItem"/>
         <informationRequirement id="cacbbbb5-5e23-4089-a48d-af62e0c605b9">
             <requiredInput href="#_86f5e710-a139-4cd5-8ac4-90b4671a75b8"/>
         </informationRequirement>
         <informationRequirement id="_6ea238a4-45e4-42f1-bbc3-a6032c3ee89e">
-            <requiredInput href="#_82d66f50-2d47-4849-b5fd-da179e0fec66"/>
+            <requiredInput href="#_1bbe9689-bd70-45d4-ab30-f3887cf46b28"/>
         </informationRequirement>
         <literalExpression>
-            <text>append(list1,list2)</text>
+            <text>append(list1,string1)</text>
         </literalExpression>
     </decision>
     <decision name="indexOf1" id="_3c7aef83-002c-4c61-9297-e822a7d4e829">
@@ -227,11 +227,14 @@
     </decision>
     <decision name="flatten1" id="_ef7d1df2-8a1c-47cf-ae2e-928f71e2c460">
         <variable typeRef="tStringList" name="flatten1"/>
-        <informationRequirement id="_883c9eb4-1f4f-4885-82c0-234f9ac9a1d7">
-            <requiredDecision href="#_d12d9a82-b182-4c15-9fce-d22cdc53dbc4"/>
+        <informationRequirement>
+            <requiredInput href="#_86f5e710-a139-4cd5-8ac4-90b4671a75b8"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#_82d66f50-2d47-4849-b5fd-da179e0fec66"/>
         </informationRequirement>
         <literalExpression>
-            <text>flatten(appendListItem)</text>
+            <text>flatten(append(list1, list2))</text>
         </literalExpression>
     </decision>
     <dmndi:DMNDI>
