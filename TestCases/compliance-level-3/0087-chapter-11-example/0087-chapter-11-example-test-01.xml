@@ -168,7 +168,7 @@
     </inputNode>
     <resultNode name="Application risk score" type="decision">
       <expected>
-        <value xsi:type="xsd:number">138</value>
+        <value xsi:type="xsd:double">138</value>
       </expected>
     </resultNode>
   </testCase>
