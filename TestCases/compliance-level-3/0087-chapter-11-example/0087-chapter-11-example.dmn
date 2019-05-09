@@ -4,13 +4,11 @@
 					  xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
 					  xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/"
 					  xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/"
-					  xmlns:include1="http://www.trisotech.com/dmn/definitions/_5e8e877a-af87-434b-9c36-ed51c8d6b514"
 					  xmlns="http://www.trisotech.com/definitions/_9d01a0c4-f529-4ad8-ad8e-ec5fb5d96ad4"
 					  id="_9d01a0c4-f529-4ad8-ad8e-ec5fb5d96ad4"
 					  namespace="http://www.trisotech.com/definitions/_9d01a0c4-f529-4ad8-ad8e-ec5fb5d96ad4"
 					  exporter="DMN Modeler" exporterVersion="6.0.7" name="Chapter 11 Example">
 	<semantic:extensionElements/>
-	<semantic:import namespace="http://www.trisotech.com/dmn/definitions/_5e8e877a-af87-434b-9c36-ed51c8d6b514" name="Financial" locationURI="financial.dmn" importType="http://www.omg.org/spec/DMN/20180521/MODEL/"/>
 	<semantic:itemDefinition isCollection="false" name="tStrategy" label="tStrategy">
 		<semantic:typeRef>string</semantic:typeRef>
 		<semantic:allowedValues>
@@ -1467,7 +1465,7 @@
 				<semantic:contextEntry id="_f4156a0c-ea28-475d-8025-9e209280bd2c">
 					<semantic:variable name="Monthly Repayment" id="_594996b3-1aea-4557-bf8e-f3bc91470fee" typeRef="number"/>
 					<semantic:literalExpression id="_27a56668-bc99-4a6a-8f4f-5b67ab4e3df3">
-						<semantic:text>Financial.PMT(Rate, Term, Amount)</semantic:text>
+						<semantic:text>PMT(Rate, Term, Amount)</semantic:text>
 					</semantic:literalExpression>
 				</semantic:contextEntry>
 				<semantic:contextEntry id="_cebe4ac7-7aa7-4ef9-ae70-b6caf6cbb593">
@@ -1478,7 +1476,7 @@
 			</semantic:context>
 		</semantic:encapsulatedLogic>
 		<semantic:knowledgeRequirement id="_f0a6536d-0e7f-44d3-a9bb-5213478173da">
-			<semantic:requiredKnowledge href="http://www.trisotech.com/dmn/definitions/_5e8e877a-af87-434b-9c36-ed51c8d6b514#_a30c75ec-7d81-4606-802c-b31ea308392d"/>
+			<semantic:requiredKnowledge href="#_a30c75ec-7d81-4606-802c-b31ea308392d"/>
 		</semantic:knowledgeRequirement>
 	</semantic:businessKnowledgeModel>
 	<semantic:decisionService id="_7befd964-eefa-4d8f-908d-8f6ad8d22c67" name="Bureau Strategy Decision Service">
@@ -1634,7 +1632,7 @@
 				<dc:Bounds x="945" y="941.4786796569824" width="152" height="59"/>
 				<dmndi:DMNLabel sharedStyle="LS_9d01a0c4-f529-4ad8-ad8e-ec5fb5d96ad4_0"/>
 			</dmndi:DMNShape>
-			<dmndi:DMNShape id="_ed20d744-541f-44b7-a3f9-45d10371c6d6" dmnElementRef="include1:_a30c75ec-7d81-4606-802c-b31ea308392d">
+			<dmndi:DMNShape id="_ed20d744-541f-44b7-a3f9-45d10371c6d6" dmnElementRef="_a30c75ec-7d81-4606-802c-b31ea308392d">
 				<dc:Bounds x="1157" y="941.4786796569824" width="152" height="59"/>
 				<dmndi:DMNLabel sharedStyle="LS_9d01a0c4-f529-4ad8-ad8e-ec5fb5d96ad4_0"/>
 			</dmndi:DMNShape>
@@ -1947,7 +1945,7 @@
 				<dc:Bounds x="187.5" y="170" width="153" height="60"/>
 				<dmndi:DMNLabel sharedStyle="LS_9d01a0c4-f529-4ad8-ad8e-ec5fb5d96ad4_0"/>
 			</dmndi:DMNShape>
-			<dmndi:DMNShape id="_e935455f-efe1-494c-b9a5-1d8c37219e06" dmnElementRef="include1:_a30c75ec-7d81-4606-802c-b31ea308392d">
+			<dmndi:DMNShape id="_e935455f-efe1-494c-b9a5-1d8c37219e06" dmnElementRef="_a30c75ec-7d81-4606-802c-b31ea308392d">
 				<dc:Bounds x="777.8080854415894" y="857.5" width="152" height="59"/>
 				<dmndi:DMNLabel sharedStyle="LS_9d01a0c4-f529-4ad8-ad8e-ec5fb5d96ad4_0"/>
 			</dmndi:DMNShape>
