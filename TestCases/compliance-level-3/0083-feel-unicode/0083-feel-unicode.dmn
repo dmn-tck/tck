@@ -107,24 +107,63 @@
     <decision name="substring_001" id="_substring_001">
         <variable name="substring_001"/>
         <literalExpression>
+        <!-- *assuming* string length("\uD83D\uDC0E") is 2 as per https://github.com/dmn-tck/tck/pull/239#issuecomment-489116665
+             in other words string length over the FEEL string for "🐎" results in 2,
+             then this FEEL string is: foo🐎bar😀 
+             so total string length is 3+2+3+2
+             it descend necessarily that for this literal expression to result in the face emoji by substring, you must skip the first 8 characters
+             index of FEEL `substring` is 1-based
+             foo🐎bar😀
+             1||| ||||
+              2|| ||||
+               3| ||||
+                4 ||||
+                  6|||
+                   7||
+                    8|
+                     9
+            INDEX
+            1: f
+            2: o
+            3: o
+            4: start of horse emoji
+            6: b
+            7: a
+            8: r
+            9: start of face emoji
+         -->
             <!-- horse + grinning face emoji -->
-            <text>substring("foo\ud83d\udc0ebar\uD83D\uDE00", 8)</text>
+            <text>substring("foo\ud83d\udc0ebar\uD83D\uDE00", 9)</text>
         </literalExpression>
     </decision>
 
     <decision name="substring_002" id="_substring_002">
         <variable name="substring_002"/>
         <literalExpression>
+        <!-- *assuming* string length("\uD83D\uDC0E") is 2 as per https://github.com/dmn-tck/tck/pull/239#issuecomment-489116665
+             in other words string length over the FEEL string for "🐎" results in 2,
+             then this FEEL string is: foo🐎bar😀 
+             so total string length is 3+2+3+2
+             it descend necessarily that for this literal expression to result in the horse emoji by substring, 
+             you start at index 4 and ask for 2 characters.
+             -->
             <!-- horse + grinning face emoji -->
-            <text>substring("foo\ud83d\udc0ebar\uD83D\uDE00", 4, 1)</text>
+            <text>substring("foo\ud83d\udc0ebar\uD83D\uDE00", 4, 2)</text>
         </literalExpression>
     </decision>
 
     <decision name="substring_003" id="_substring_003">
         <variable name="substring_003"/>
         <literalExpression>
+        <!-- *assuming* string length("\uD83D\uDC0E") is 2 as per https://github.com/dmn-tck/tck/pull/239#issuecomment-489116665
+             in other words string length over the FEEL string for "🐎" results in 2,
+             then this FEEL string is: foo🐎bar😀 
+             so total string length is 3+2+3+2
+             it descend necessarily that for this literal expression to result in the horse emoji + "bar" by substring,
+             you start at index 4 and ask for 2 characters of the horse emoji, +3 of "bar", resulting in asking for 5 characters.
+             -->
             <!-- horse + grinning face emoji -->
-            <text>substring("foo\ud83d\udc0ebar\uD83D\uDE00", 4, 4)</text>
+            <text>substring("foo\ud83d\udc0ebar\uD83D\uDE00", 4, 5)</text>
         </literalExpression>
     </decision>
 
