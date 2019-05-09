@@ -8,62 +8,62 @@
 	
 	<itemDefinition id="_tFlight" name="tFlight">
 		<itemComponent id="_tFlight_Flight" name="Flight Number">
-			<typeRef>string</typeRef>
+			<typeRef>feel:string</typeRef>
 		</itemComponent>
 		<itemComponent id="_tFlight_From" name="From">
-			<typeRef>string</typeRef>
+			<typeRef>feel:string</typeRef>
 		</itemComponent>
 		<itemComponent id="_tFlight_To" name="To">
-			<typeRef>string</typeRef>
+			<typeRef>feel:string</typeRef>
 		</itemComponent>
 		<itemComponent id="_tFlight_Dep" name="Departure">
-			<typeRef>dateTime</typeRef>
+			<typeRef>feel:dateTime</typeRef>
 		</itemComponent>
 		<itemComponent id="_tFlight_Arr" name="Arrival">
-			<typeRef>dateTime</typeRef>
+			<typeRef>feel:dateTime</typeRef>
 		</itemComponent>
 		<itemComponent id="_tFlight_Capacity" name="Capacity">
-			<typeRef>number</typeRef>
+			<typeRef>feel:number</typeRef>
 		</itemComponent>
 		<itemComponent id="_tFlight_Status" name="Status">
-			<typeRef>string</typeRef>
+			<typeRef>feel:string</typeRef>
 		</itemComponent>
 	</itemDefinition>
 	<itemDefinition id="_tFlightTable" isCollection="true" name="tFlightTable">
-		<typeRef>tFlight</typeRef>
+		<typeRef>kie:tFlight</typeRef>
 	</itemDefinition>
 	
 	<itemDefinition id="_tPassenger" name="tPassenger">
 		<itemComponent id="_tPassenger_Name" name="Name">
-			<typeRef>string</typeRef>
+			<typeRef>feel:string</typeRef>
 		</itemComponent>
 		<itemComponent id="_tPassenger_Status" name="Status">
-			<typeRef>string</typeRef>
+			<typeRef>feel:string</typeRef>
 		</itemComponent>
 		<itemComponent id="_tPassenger_Miles" name="Miles">
-			<typeRef>number</typeRef>
+			<typeRef>feel:number</typeRef>
 		</itemComponent>
 		<itemComponent id="_tPassenger_Flight" name="Flight Number">
-			<typeRef>string</typeRef>
+			<typeRef>feel:string</typeRef>
 		</itemComponent>
 	</itemDefinition>
 	<itemDefinition id="_tPassengerTable" isCollection="true" name="tPassengerTable">
-		<typeRef>tPassenger</typeRef>
+		<typeRef>kie:tPassenger</typeRef>
 	</itemDefinition>
     <itemDefinition id="_tFlightNumberList" isCollection="true" name="tFlightNumberList">
-        <typeRef>string</typeRef>
+        <typeRef>feel:string</typeRef>
     </itemDefinition>
 	
 	<inputData id="i_Flight_List" name="Flight List">
-		<variable name="Flight List" typeRef="tFlightTable"/>
+		<variable name="Flight List" typeRef="kie:tFlightTable"/>
 	</inputData>
 	
 	<inputData id="i_Passenger_List" name="Passenger List">
-		<variable name="Passenger List" typeRef="tPassengerTable"/>
+		<variable name="Passenger List" typeRef="kie:tPassengerTable"/>
 	</inputData>
     
 	<decision name="Prioritized Waiting List" id="d_PrioritizedWaitingList">
-		<variable name="Prioritized Waiting List" typeRef="tPassengerTable"/>
+		<variable name="Prioritized Waiting List" typeRef="kie:tPassengerTable"/>
 		<informationRequirement>
 			<requiredInput href="#i_Passenger_List"/>
 		</informationRequirement>
@@ -75,13 +75,13 @@
 		</knowledgeRequirement>
 		<context>
 			<contextEntry>
-				<variable name="Cancelled Flights" typeRef="tFlightNumberList"/>
+				<variable name="Cancelled Flights" typeRef="kie:tFlightNumberList"/>
 				<literalExpression>
 					<text>Flight List[ Status = "cancelled" ].Flight Number</text>
 				</literalExpression>
 			</contextEntry>
 			<contextEntry>
-				<variable name="Waiting List" typeRef="tPassengerTable"/>
+				<variable name="Waiting List" typeRef="kie:tPassengerTable"/>
 				<literalExpression>
 					<text>Passenger List[ list contains( Cancelled Flights, Flight Number ) ]</text>
 				</literalExpression>
@@ -95,7 +95,7 @@
 	</decision>
 	
 	<decision name="Rebooked Passengers" id="d_RebookedPassengers">
-		<variable name="Rebooked Passengers" typeRef="tPassengerTable"/>
+		<variable name="Rebooked Passengers" typeRef="kie:tPassengerTable"/>
 		<informationRequirement>
 			<requiredDecision href="#d_PrioritizedWaitingList"/>
 		</informationRequirement>
@@ -131,13 +131,13 @@
 	</decision>
 	
 	<businessKnowledgeModel id="b_PassengerPriority" name="passenger priority">
-		<variable name="passenger priority" typeRef="boolean"/>
+		<variable name="passenger priority" typeRef="feel:boolean"/>
 		<encapsulatedLogic>
-			<formalParameter name="Passenger1" typeRef="tPassenger"/>
-		    <formalParameter name="Passenger2" typeRef="tPassenger"/>
+			<formalParameter name="Passenger1" typeRef="kie:tPassenger"/>
+		    <formalParameter name="Passenger2" typeRef="kie:tPassenger"/>
 		    <decisionTable hitPolicy="UNIQUE">
 				<input id="b_Passenger_Priority_dt_i_P1_Status" label="Passenger1.Status">
-					<inputExpression typeRef="string">
+					<inputExpression typeRef="feel:string">
 						<text>Passenger1.Status</text>
 					</inputExpression>
 					<inputValues>
@@ -145,7 +145,7 @@
 					</inputValues>
 				</input>
 		        <input id="b_Passenger_Priority_dt_i_P2_Status" label="Passenger2.Status">
-		            <inputExpression typeRef="string">
+		            <inputExpression typeRef="feel:string">
 		                <text>Passenger2.Status</text>
 		            </inputExpression>
 		            <inputValues>
@@ -153,7 +153,7 @@
 		            </inputValues>
 		        </input>
 		        <input id="b_Passenger_Priority_dt_i_P1_Miles" label="Passenger1.Miles">
-		            <inputExpression typeRef="number">
+		            <inputExpression typeRef="feel:string">
 		                <text>Passenger1.Miles</text>
 		            </inputExpression>
 		        </input>
@@ -240,26 +240,26 @@
 	</businessKnowledgeModel>
 	
 	<businessKnowledgeModel id="b_ReassignNextPassenger" name="reassign next passenger">
-	    <variable name="reassign next passenger" typeRef="tPassengerTable"/>
+	    <variable name="reassign next passenger" typeRef="kie:tPassengerTable"/>
 	    <encapsulatedLogic>
-			<formalParameter name="Waiting List" typeRef="tPassengerTable"/>
-			<formalParameter name="Reassigned Passengers List" typeRef="tPassengerTable"/>
-			<formalParameter name="Flights" typeRef="tFlightTable"/>
+			<formalParameter name="Waiting List" typeRef="kie:tPassengerTable"/>
+			<formalParameter name="Reassigned Passengers List" typeRef="kie:tPassengerTable"/>
+			<formalParameter name="Flights" typeRef="kie:tFlightTable"/>
 			<context>
 				<contextEntry>
-					<variable name="Next Passenger" typeRef="tPassenger"/>
+					<variable name="Next Passenger" typeRef="kie:tPassenger"/>
 					<literalExpression>
 						<text>Waiting List[1]</text>
 					</literalExpression>
 				</contextEntry>
 				<contextEntry>
-					<variable name="Original Flight" typeRef="tFlight"/>
+					<variable name="Original Flight" typeRef="kie:tFlight"/>
 					<literalExpression>
 						<text>Flights[ Flight Number = Next Passenger.Flight Number ][1]</text>
 					</literalExpression>
 				</contextEntry>
 				<contextEntry>
-					<variable name="Best Alternate Flight" typeRef="tFlight"/>
+					<variable name="Best Alternate Flight" typeRef="kie:tFlight"/>
 					<literalExpression>
 						<text>Flights[ From = Original Flight.From and 
 							           To = Original Flight.To and
@@ -269,34 +269,34 @@
 					</literalExpression>
 				</contextEntry>
 				<contextEntry>
-					<variable name="Reassigned Passenger" typeRef="tPassenger"/>
+					<variable name="Reassigned Passenger" typeRef="kie:tPassenger"/>
 					<context>
 						<contextEntry>
-							<variable name="Name" typeRef="string"/>
+							<variable name="Name" typeRef="feel:string"/>
 							<literalExpression><text>Next Passenger.Name</text></literalExpression>
 						</contextEntry>
 						<contextEntry>
-							<variable name="Status" typeRef="string"/>
+							<variable name="Status" typeRef="feel:string"/>
 							<literalExpression><text>Next Passenger.Status</text></literalExpression>
 						</contextEntry>
 						<contextEntry>
-							<variable name="Miles" typeRef="number"/>
+							<variable name="Miles" typeRef="feel:number"/>
 							<literalExpression><text>Next Passenger.Miles</text></literalExpression>
 						</contextEntry>
 						<contextEntry>
-							<variable name="Flight Number" typeRef="string"/>
+							<variable name="Flight Number" typeRef="feel:string"/>
 							<literalExpression><text>Best Alternate Flight.Flight Number</text></literalExpression>
 						</contextEntry>
 					</context>
 				</contextEntry>
 			    <contextEntry>
-			        <variable name="Remaining Waiting List" typeRef="tPassengerTable"/>
+			        <variable name="Remaining Waiting List" typeRef="kie:tPassengerTable"/>
 			        <literalExpression>
 			            <text>remove( Waiting List, 1 )</text>
 			        </literalExpression>
 			    </contextEntry>
 			    <contextEntry>
-			        <variable name="Updated Reassigned Passengers List" typeRef="tPassengerTable"/>
+			        <variable name="Updated Reassigned Passengers List" typeRef="kie:tPassengerTable"/>
 			        <literalExpression>
 			            <text>append( Reassigned Passengers List, Reassigned Passenger )</text>
 			        </literalExpression>
@@ -321,10 +321,10 @@
 	</businessKnowledgeModel>
     
     <businessKnowledgeModel id="b_HasCapacity" name="has capacity">
-        <variable name="has capacity" typeRef="boolean"/>
+        <variable name="has capacity" typeRef="feel:boolean"/>
         <encapsulatedLogic>
-            <formalParameter name="flight" typeRef="tFlight"/>
-            <formalParameter name="rebooked list" typeRef="tPassengerTable"/>
+            <formalParameter name="flight" typeRef="kie:tFlight"/>
+            <formalParameter name="rebooked list" typeRef="kie:tPassengerTable"/>
             <literalExpression>
                 <text> flight.Capacity > count( rebooked list[ Flight Number = flight.Flight Number ] ) </text>
             </literalExpression>
