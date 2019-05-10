@@ -12,6 +12,7 @@
 package org.omg.dmn.tck.runner.drools;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FilenameFilter;
@@ -31,6 +32,8 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -53,12 +56,14 @@ import org.kie.dmn.api.core.DMNRuntime;
 import org.kie.dmn.api.core.DMNType;
 import org.kie.dmn.api.core.ast.DecisionNode;
 import org.kie.dmn.api.core.ast.InputDataNode;
+import org.kie.dmn.backend.marshalling.v1x.DMNMarshallerFactory;
 import org.kie.dmn.core.compiler.DMNTypeRegistryV12;
 import org.kie.dmn.core.impl.BaseDMNTypeImpl;
 import org.kie.dmn.core.impl.SimpleTypeImpl;
 import org.kie.dmn.feel.lang.Type;
 import org.kie.dmn.feel.lang.types.BuiltInType;
 import org.kie.dmn.feel.util.EvalHelper;
+import org.kie.dmn.model.api.Definitions;
 import org.kie.internal.utils.KieHelper;
 import org.omg.dmn.tck.marshaller._20160719.TestCases;
 import org.omg.dmn.tck.marshaller._20160719.ValueType;
@@ -178,13 +183,28 @@ public class DroolsTCKTest
       logger.info("Creating context.");
       return new DroolsContext();
    }
+    @Override
+    public void beforeTestCases(TestSuiteContext context, TestCases testCases, URL modelURL, Collection<? extends URL> additionalModels) {
+        logger.info("Creating runtime for model: {} and additional models {}\n", modelURL, additionalModels);
+        DroolsContext ctx = (DroolsContext) context;
+        ctx.runtime = createRuntime(modelURL, additionalModels);
+        if (ctx.runtime.getModels().isEmpty()) {
+            throw new RuntimeException("Unable to load model for URL '" + modelURL + "'");
+        }
+        try {
+            Definitions mainModelXML = DMNMarshallerFactory.newDefaultMarshaller().unmarshal(new FileReader(modelURL.getFile()));
+            ctx.dmnmodel = ctx.runtime.getModel(mainModelXML.getNamespace(), mainModelXML.getName());
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException("Unable to locate file for model for URL '" + modelURL + "'");
+        }
+    }
 
    @Override
    public void beforeTestCases(TestSuiteContext context, TestCases testCases, URL modelURL)
    {
       logger.info("Creating runtime for model: {}\n", modelURL);
       DroolsContext ctx = (DroolsContext) context;
-      ctx.runtime = createRuntime(modelURL);
+      ctx.runtime = createRuntime(modelURL, Collections.emptyList());
       if (ctx.runtime.getModels().isEmpty())
       {
          throw new RuntimeException("Unable to load model for URL '" + modelURL + "'");
@@ -369,12 +389,14 @@ public class DroolsTCKTest
       return "../../TestResults/Drools/" + props.getProperty("product.version") + "/tck_results.csv";
    }
 
-   protected DMNRuntime createRuntime(URL modelUrl)
+   protected DMNRuntime createRuntime(URL modelUrl, Collection<? extends URL> additionalModels)
    {
       KieServices ks = KieServices.Factory.get();
-      KieContainer kieContainer = new KieHelper()
-         .addResource(ks.getResources().newUrlResource(modelUrl))
-         .getKieContainer();
+      KieHelper kieHelper = new KieHelper().addResource(ks.getResources().newUrlResource(modelUrl));
+      for (URL a : additionalModels) {
+          kieHelper.addResource(ks.getResources().newUrlResource(a));
+      }
+      KieContainer kieContainer = kieHelper.getKieContainer();
 
       DMNRuntime runtime = kieContainer.newKieSession().getKieRuntime(DMNRuntime.class);
       if (runtime == null)
