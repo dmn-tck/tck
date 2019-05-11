@@ -104,10 +104,10 @@
         </literalExpression>
     </decision>
 
-    <decision name="substring_001" id="_substring_001">
+<!--     <decision name="substring_001" id="_substring_001">
         <variable name="substring_001"/>
         <literalExpression>
-            <!-- horse + grinning face emoji -->
+            horse + grinning face emoji
             <text>substring("foo\ud83d\udc0ebar\uD83D\uDE00", 8)</text>
         </literalExpression>
     </decision>
@@ -115,7 +115,7 @@
     <decision name="substring_002" id="_substring_002">
         <variable name="substring_002"/>
         <literalExpression>
-            <!-- horse + grinning face emoji -->
+            horse + grinning face emoji
             <text>substring("foo\ud83d\udc0ebar\uD83D\uDE00", 4, 1)</text>
         </literalExpression>
     </decision>
@@ -123,10 +123,10 @@
     <decision name="substring_003" id="_substring_003">
         <variable name="substring_003"/>
         <literalExpression>
-            <!-- horse + grinning face emoji -->
+            horse + grinning face emoji
             <text>substring("foo\ud83d\udc0ebar\uD83D\uDE00", 4, 4)</text>
         </literalExpression>
-    </decision>
+    </decision> -->
 
 
 </definitions>

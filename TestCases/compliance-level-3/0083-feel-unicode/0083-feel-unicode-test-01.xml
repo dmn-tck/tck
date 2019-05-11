@@ -111,7 +111,7 @@
         </resultNode>
     </testCase>
 
-    <testCase id="substring_001">
+<!--     <testCase id="substring_001">
         <description>literal unicode - substring with mixed chars and supplementary chars</description>
         <resultNode name="substring_001" type="decision">
             <expected>
@@ -136,6 +136,6 @@
                 <value xsi:type="xsd:string">🐎bar</value>
             </expected>
         </resultNode>
-    </testCase>
+    </testCase> -->
 
 </testCases>
