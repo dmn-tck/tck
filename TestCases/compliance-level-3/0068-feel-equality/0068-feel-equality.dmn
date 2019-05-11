@@ -503,7 +503,7 @@
     </decision>
 
 
-    <decision name="time_001" id="_time_001">
+<!--     <decision name="time_001" id="_time_001">
         <description>Tests FEEL expression: 'time("10:30:00") = time("10:30:00")' and expects result: 'true (boolean)'</description>
         <question>Result of FEEL expression 'time("10:30:00") = time("10:30:00")'?</question>
         <allowedAnswers>true (boolean)</allowedAnswers>
@@ -731,7 +731,7 @@
         <literalExpression>
             <text>date and time("2018-12-08T00:00:00") = 100</text>
         </literalExpression>
-    </decision>
+    </decision> -->
 
     <decision name="dt_duration_001" id="_dt_duration_001">
         <description>Tests FEEL expression: 'duration("P1D") = duration("P1D")' and expects result: 'true (boolean)'</description>
@@ -953,7 +953,7 @@
         </literalExpression>
     </decision>
 
-    <decision name="singleton_001" id="_singleton_001">
+<!--     <decision name="singleton_001" id="_singleton_001">
         <description>Tests FEEL expression: '[100] = 100' and expects result: 'null (boolean)'</description>
         <question>Result of FEEL expression '[100] = 100'?</question>
         <allowedAnswers>null (boolean)</allowedAnswers>
@@ -961,7 +961,7 @@
         <literalExpression>
             <text>[100] = 100</text>
         </literalExpression>
-    </decision>
+    </decision> -->
 
 </definitions>
 

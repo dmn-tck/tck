@@ -457,7 +457,7 @@
         </resultNode>
     </testCase>
 
-    <testCase id="time_001">
+<!--     <testCase id="time_001">
         <description>same times are equal</description>
         <resultNode name="time_001" type="decision">
             <expected>
@@ -662,7 +662,7 @@
                 <value xsi:nil="true"/>
             </expected>
         </resultNode>
-    </testCase>
+    </testCase> -->
 
     <testCase id="dt_duration_001">
         <description>same durations are equal</description>
@@ -862,13 +862,13 @@
         </resultNode>
     </testCase>
 
-    <testCase id="singleton_001">
+<!--     <testCase id="singleton_001">
         <description>singleton array is not equal to element</description>
         <resultNode name="singleton_001" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
         </resultNode>
-    </testCase>
+    </testCase> -->
 
 </testCases>
