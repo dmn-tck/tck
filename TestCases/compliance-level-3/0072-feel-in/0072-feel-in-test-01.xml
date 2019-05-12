@@ -1764,14 +1764,14 @@
         </resultNode>
     </testCase>
 
-    <testCase id="list_011">
+<!--     <testCase id="list_011">
         <description>list: e1 in e2</description>
         <resultNode name="list_011" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
             </expected>
         </resultNode>
-    </testCase>
+    </testCase> -->
 
     <testCase id="list_011_a">
         <description>list: e1 in e2</description>

@@ -1394,14 +1394,14 @@
         </literalExpression>
     </decision>
 
-    <decision name="list_011" id="_list_011">
+<!--     <decision name="list_011" id="_list_011">
         <variable name="list_011"/>
         <literalExpression>
-            <!-- looks like it should be an equals form left to right .. but the list [1,2,3] does not
-            equal 1, 2 or 3] values -->
+            looks like it should be an equals form left to right .. but the list [1,2,3] does not
+            equal 1, 2 or 3] values
             <text>[1,2,3] in [1,2,3]</text>
         </literalExpression>
-    </decision>
+    </decision> -->
 
     <decision name="list_011_a" id="_list_011_a">
         <variable name="list_011_a"/>
