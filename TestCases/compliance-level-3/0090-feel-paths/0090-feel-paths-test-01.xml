@@ -25,5 +25,23 @@
             </expected>
         </resultNode>
     </testCase>
+    
+    <testCase id="nested_list_003">
+        <description>Spec 'nested list' example - DMN13-133</description>
+        <resultNode name="nested_list_003" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="nested_list_004">
+        <description>Spec 'nested list' example - DMN13-133</description>
+        <resultNode name="nested_list_004" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
 
 </testCases>
