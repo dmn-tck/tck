@@ -5,7 +5,7 @@
   <version>1.0.0-SNAPSHOT</version>
   <name>DMN :: TCK :: jUnit Runner :: Drools</name>
   <properties>
-    <drools.version>7.20.0.Final</drools.version>
+    <drools.version>7.22.0.t042</drools.version>
   </properties>
   <repositories>
     <repository>
