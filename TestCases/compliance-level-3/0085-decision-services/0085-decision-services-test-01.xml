@@ -9,28 +9,24 @@
         <label>Decision Services</label>
     </labels>
 
-    <testCase id="001">
+    <testCase id="001" decisionServiceName="decisionService_001" type="decisionService">
         <description>Direct invocation: with no params</description>
-        <resultNode name="decisionService_001" type="decisionService">
+        <resultNode name="decision_001">
             <expected>
-                <component name="decision_001">
                     <value xsi:type="xsd:string">foo</value>
-                </component>
             </expected>
         </resultNode>
     </testCase>
 
-    <testCase id="002">
+    <testCase id="002" decisionServiceName="decisionService_002" type="decisionService">
         <description>Direct invocation: with an input decision</description>
         <!-- we expect the input param value to 'override' the actual impl of 'decision_002_input' -->
         <inputNode name="decision_002_input">
             <value xsi:type="xsd:string">baz</value>
         </inputNode>
-        <resultNode name="decisionService_002" type="decisionService">
+        <resultNode name="decision_002">
             <expected>
-                <component name="decision_002">
                     <value xsi:type="xsd:string">foo baz</value>
-                </component>
             </expected>
         </resultNode>
     </testCase>
@@ -39,47 +35,43 @@
     and the global input data will actually have the same value - so a little difficult to assert where input data value
     came from - param or global input -->
 
-    <testCase id="002_a">
+    <testCase id="002_a" decisionServiceName="decisionService_002" type="decisionService" >
         <description>Direct invocation:  with an input decision but supplying no param</description>
         <!-- requires decision_002_input but we're not providing it-->
-        <resultNode name="decisionService_002" type="decisionService" errorResult="true">
+        <resultNode name="decision_002" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
         </resultNode>
     </testCase>
 
-    <testCase id="002_b">
+    <testCase id="002_b" decisionServiceName="decisionService_002" type="decisionService" >
         <description>Direct invocation: with an input decision - but supplying a null value</description>
         <inputNode name="decision_002_input">
             <value xsi:nil="true"/>
         </inputNode>
         <!-- errorResult is true because of the string + null operation -->
-        <resultNode name="decisionService_002" type="decisionService" errorResult="true">
+        <resultNode name="decision_002" errorResult="true">
             <expected>
-                <component name="decision_002">
                     <value xsi:nil="true"/>
-                </component>
             </expected>
         </resultNode>
     </testCase>
 
-    <testCase id="002_c">
+    <testCase id="002_c" decisionServiceName="decisionService_002" type="decisionService" >
         <description>Direct invocation: with an input decision - but supplying an incorrect param type</description>
         <!-- decision_002_input is a string type but we're providing a number so we expect it to be null-coerced -->
         <inputNode name="decision_002_input">
             <value xsi:type="xsd:decimal">1234</value>
         </inputNode>
-        <resultNode name="decisionService_002" type="decisionService" errorResult="true">
+        <resultNode name="decision_002" errorResult="true">
             <expected>
-                <component name="decision_002">
                     <value xsi:nil="true"/>
-                </component>
             </expected>
         </resultNode>
     </testCase>
 
-    <testCase id="003">
+    <testCase id="003" decisionServiceName="decisionService_003" type="decisionService">
         <description>Direct invocation: with two input decisions and an input data</description>
         <!-- positive test -->
         <inputNode name="decision_003_input_1">
@@ -91,11 +83,9 @@
         <inputNode name="inputData_003">
             <value xsi:type="xsd:string">D</value>
         </inputNode>
-        <resultNode name="decisionService_003" type="decisionService">
+        <resultNode name="decision_003">
             <expected>
-                <component name="decision_003">
                     <value xsi:type="xsd:string">A B C D</value>
-                </component>
             </expected>
         </resultNode>
     </testCase>
