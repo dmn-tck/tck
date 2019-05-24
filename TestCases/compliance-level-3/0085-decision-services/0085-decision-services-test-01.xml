@@ -9,7 +9,7 @@
         <label>Decision Services</label>
     </labels>
 
-    <testCase id="001" decisionServiceName="decisionService_001" type="decisionService">
+    <testCase id="001" invocableName="decisionService_001" type="decisionService">
         <description>Direct invocation: with no params</description>
         <resultNode name="decision_001">
             <expected>
@@ -18,7 +18,7 @@
         </resultNode>
     </testCase>
 
-    <testCase id="002" decisionServiceName="decisionService_002" type="decisionService">
+    <testCase id="002" invocableName="decisionService_002" type="decisionService">
         <description>Direct invocation: with an input decision</description>
         <!-- we expect the input param value to 'override' the actual impl of 'decision_002_input' -->
         <inputNode name="decision_002_input">
@@ -35,7 +35,7 @@
     and the global input data will actually have the same value - so a little difficult to assert where input data value
     came from - param or global input -->
 
-    <testCase id="002_a" decisionServiceName="decisionService_002" type="decisionService" >
+    <testCase id="002_a" invocableName="decisionService_002" type="decisionService" >
         <description>Direct invocation:  with an input decision but supplying no param</description>
         <!-- requires decision_002_input but we're not providing it-->
         <resultNode name="decision_002" errorResult="true">
@@ -45,7 +45,7 @@
         </resultNode>
     </testCase>
 
-    <testCase id="002_b" decisionServiceName="decisionService_002" type="decisionService" >
+    <testCase id="002_b" invocableName="decisionService_002" type="decisionService" >
         <description>Direct invocation: with an input decision - but supplying a null value</description>
         <inputNode name="decision_002_input">
             <value xsi:nil="true"/>
@@ -58,7 +58,7 @@
         </resultNode>
     </testCase>
 
-    <testCase id="002_c" decisionServiceName="decisionService_002" type="decisionService" >
+    <testCase id="002_c" invocableName="decisionService_002" type="decisionService" >
         <description>Direct invocation: with an input decision - but supplying an incorrect param type</description>
         <!-- decision_002_input is a string type but we're providing a number so we expect it to be null-coerced -->
         <inputNode name="decision_002_input">
@@ -71,7 +71,7 @@
         </resultNode>
     </testCase>
 
-    <testCase id="003" decisionServiceName="decisionService_003" type="decisionService">
+    <testCase id="003" invocableName="decisionService_003" type="decisionService">
         <description>Direct invocation: with two input decisions and an input data</description>
         <!-- positive test -->
         <inputNode name="decision_003_input_1">
