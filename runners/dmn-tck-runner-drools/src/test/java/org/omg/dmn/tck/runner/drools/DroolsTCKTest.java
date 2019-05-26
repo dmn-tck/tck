@@ -477,13 +477,14 @@ public class DroolsTCKTest
         } else if (isDMNCompositeType(dmnType)) {
             Map<String, Object> result = new HashMap<>();
             for (ValueType.Component component : value.getComponent()) {
-                if (!dmnType.getFields().containsKey(component.getName())) {
-                    throw new RuntimeException("Error parsing input: unknown field '" + component.getName() + "' for type '" + dmnType.getName() + "'");
-                }
                 DMNType fieldType = dmnType.getFields().get(component.getName());
+                if (!dmnType.getFields().containsKey(component.getName())) {
+                    logger.warn("Error TCK Runner type check: unknown field '" + component.getName() + "' for type '" + dmnType.getName() + "'. This usually happens when a TCK test leverages coercion.");
+                    fieldType = REGISTRY.unknown();
+                }
                 if (fieldType == null) {
                     throw new RuntimeException("Error parsing input: unknown type for field '" + component.getName() + "' on type " + dmnType.getName() + "'");
-               }
+                }
                 Object fieldValue = parseType(component, fieldType);
                 result.put(component.getName(), fieldValue);
             }
