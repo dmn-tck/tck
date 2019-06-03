@@ -14,11 +14,12 @@
 
 package org.omg.dmn.tck.runner.junit4;
 
+import java.net.URL;
+import java.util.Collection;
+import java.util.List;
+
 import org.junit.runner.Description;
 import org.omg.dmn.tck.marshaller._20160719.TestCases;
-
-import java.net.URL;
-import java.util.List;
 
 /**
  * An interface to allow the TCK runner integration
@@ -64,9 +65,25 @@ public interface DmnTckVendorTestSuite {
      *                call.
      * @param testCases the parsed content of a test file.
      *
-     * @param modelURI the resolved URI to the DMN model file.
+     * @param modelURL the resolved URL to the DMN model file.
+     * @deprecated To support DMN features involving multiple models, see {@link #beforeTestCases(TestSuiteContext, TestCases, URL, List)}
      */
+    @Deprecated
     void beforeTestCases(TestSuiteContext context, TestCases testCases, URL modelURL );
+
+    /**
+     * A callback to give vendors an opportunity for initialization
+     * before running each test file.
+     *
+     * @param context the context created by the <code>createContext()</code>
+     *                call.
+     * @param testCases the parsed content of a test file.
+     *
+     * @param modelURL the resolved URL to the DMN model file.
+     */
+    default void beforeTestCases(TestSuiteContext context, TestCases testCases, URL modelURL, Collection<? extends URL> additionalModels) {
+        beforeTestCases(context, testCases, modelURL);
+    }
 
     /**
      * A callback to give vendors an opportunity to prepare for a
