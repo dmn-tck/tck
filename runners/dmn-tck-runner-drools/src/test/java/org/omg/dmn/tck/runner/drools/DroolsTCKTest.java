@@ -65,6 +65,7 @@ import org.kie.dmn.feel.lang.types.BuiltInType;
 import org.kie.dmn.feel.util.EvalHelper;
 import org.kie.dmn.model.api.Definitions;
 import org.kie.internal.utils.KieHelper;
+import org.omg.dmn.tck.marshaller._20160719.TestCaseType;
 import org.omg.dmn.tck.marshaller._20160719.TestCases;
 import org.omg.dmn.tck.marshaller._20160719.ValueType;
 import org.omg.dmn.tck.runner.junit4.DmnTckSuite;
@@ -244,7 +245,12 @@ public class DroolsTCKTest
          try
          {
             String name = rn.getName();
-            DMNResult dmnResult = ctx.runtime.evaluateDecisionByName(ctx.dmnmodel, name, resultctx);
+            DMNResult dmnResult = null;
+            if (testCase.getType() == TestCaseType.DECISION_SERVICE) {
+                dmnResult = ctx.runtime.evaluateDecisionService(ctx.dmnmodel, resultctx, testCase.getInvocableName());
+            } else {
+                dmnResult = ctx.runtime.evaluateByName(ctx.dmnmodel, resultctx, name);
+            }
             if (!dmnResult.getMessages().isEmpty())
             {
                logger.info("Messages: \n-----\n{}-----\n", dmnResult.getMessages().stream().map(m -> m.toString()).collect(Collectors.joining("\n")));
@@ -254,9 +260,10 @@ public class DroolsTCKTest
             Object actual = resultctx.get(name);
             if (rn.isErrorResult())
             {
-               if (actual != null) {
-                  failures.add("FAILURE: '" + name + "' expected error but found='" + actual + "'");
-               }
+                for (DMNMessage msg : dmnResult.getMessages(DMNMessage.Severity.ERROR))
+                {
+                    logger.info("TEST CASE is error Result, message reported is to be expected: {}", msg);
+                }
             } else {
                if (dmnResult.hasErrors())
                {
@@ -265,10 +272,10 @@ public class DroolsTCKTest
                      failures.add(msg.toString());
                   }
                }
-               if (!isEquals(expected, actual))
-               {
-                  failures.add("FAILURE: '" + name + "' expected='" + expected + "' but found='" + actual + "'");
-               }
+            }
+            if (!isEquals(expected, actual))
+            {
+               failures.add("FAILURE: '" + name + "' expected='" + expected + "' but found='" + actual + "'");
             }
          }
          catch (Throwable t)
@@ -498,6 +505,9 @@ public class DroolsTCKTest
             }
         } else if (isDMNCompositeType(dmnType)) {
             Map<String, Object> result = new HashMap<>();
+            if (value.getComponent().size() == 0) {
+                return null;
+            }
             for (ValueType.Component component : value.getComponent()) {
                 DMNType fieldType = dmnType.getFields().get(component.getName());
                 if (!dmnType.getFields().containsKey(component.getName())) {
