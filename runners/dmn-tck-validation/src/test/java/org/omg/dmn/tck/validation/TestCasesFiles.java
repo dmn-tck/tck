@@ -4,9 +4,14 @@ package org.omg.dmn.tck.validation;
 import java.io.File;
 import java.io.FileFilter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import javax.xml.XMLConstants;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
@@ -15,6 +20,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.xml.sax.SAXException;
 
 @RunWith(Parameterized.class)
@@ -59,6 +66,29 @@ public class TestCasesFiles {
     public void testDMNFileIsValid() throws Exception {
         for (File dmnFile : basedir.listFiles((dir, name) -> name.matches(".*\\.dmn$"))) {
             dmnSchema.newValidator().validate(new StreamSource(dmnFile));
+        }
+    }
+
+    @Test
+    public void testDMNFilesUniqueInNamespace() throws Exception {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        Map<String, List<File>> namespaceToFiles = new HashMap<>();
+        for (File dmnFile : basedir.listFiles((dir, name) -> name.matches(".*\\.dmn$"))) {
+            Document document = builder.parse(dmnFile);
+            Element definitions = document.getDocumentElement();
+            String dmnNamespace = definitions.getAttribute("namespace"); // DMN specification, Definitions element, namespace attribute;
+            namespaceToFiles.computeIfAbsent(dmnNamespace, x -> new ArrayList<>()).add(dmnFile);
+        }
+        for (Entry<String, List<File>> e : namespaceToFiles.entrySet()) {
+            if (e.getValue().size() > 1) {
+                throw new RuntimeException("There are 2 or more files with the same DMN namespace: " +
+                                           e.getKey() +
+                                           "\nin the folder: " +
+                                           basedir +
+                                           "\nthese files are: " +
+                                           e.getValue());
+            }
         }
     }
 
