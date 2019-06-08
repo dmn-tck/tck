@@ -236,7 +236,7 @@
     </decision>
 
     <decision name="invoke_002" id="_invoke_002">
-        <variable name="invoke_002"/>
+        <variable name="invoke_002" typeRef="string"/>
         <knowledgeRequirement>
             <requiredKnowledge href="#_bkm_001"/>
         </knowledgeRequirement>
@@ -255,7 +255,7 @@
     </decision>
 
     <decision name="invoke_003" id="_invoke_003">
-        <variable name="invoke_003"/>
+        <variable name="invoke_003" typeRef="tNumberList"/>
         <knowledgeRequirement>
             <requiredKnowledge href="#_bkm_005"/>
         </knowledgeRequirement>
@@ -273,7 +273,7 @@
     </decision>
 
     <decision name="invoke_004" id="_invoke_004">
-        <variable name="invoke_004"/>
+        <variable name="invoke_004" typeRef="tNumberList"/>
         <knowledgeRequirement>
             <requiredKnowledge href="#_bkm_005"/>
         </knowledgeRequirement>
@@ -292,7 +292,7 @@
 
 
     <decision name="invoke_005" id="_invoke_005">
-        <variable name="invoke_005"/>
+        <variable name="invoke_005" typeRef="number"/>
         <knowledgeRequirement>
             <requiredKnowledge href="#_bkm_005"/>
         </knowledgeRequirement>
@@ -310,7 +310,7 @@
     </decision>
 
     <decision name="invoke_006" id="_invoke_006">
-        <variable name="invoke_006"/>
+        <variable name="invoke_006" typeRef="number"/>
         <knowledgeRequirement>
             <requiredKnowledge href="#_bkm_005"/>
         </knowledgeRequirement>
@@ -363,42 +363,42 @@
     </decision>
 
     <decision name="literal_001" id="_literal_001">
-        <variable name="literal_001"/>
+        <variable name="literal_001" typeRef="number"/>
         <literalExpression typeRef="number">
             <text>5+5</text>
         </literalExpression>
     </decision>
 
     <decision name="literal_002" id="_literal_002">
-        <variable name="literal_002"/>
+        <variable name="literal_002" typeRef="number"/>
         <literalExpression typeRef="number">
             <text>"foo"</text>
         </literalExpression>
     </decision>
 
     <decision name="literal_003" id="_literal_003">
-        <variable name="literal_003"/>
+        <variable name="literal_003" typeRef="tNumberList"/>
         <literalExpression typeRef="tNumberList">
             <text>10</text>
         </literalExpression>
     </decision>
 
     <decision name="literal_004" id="_literal_004">
-        <variable name="literal_004"/>
+        <variable name="literal_004" typeRef="tNumberList"/>
         <literalExpression typeRef="tNumberList">
             <text>"foo"</text>
         </literalExpression>
     </decision>
 
     <decision name="literal_005" id="_literal_005">
-        <variable name="literal_005"/>
+        <variable name="literal_005" typeRef="number"/>
         <literalExpression typeRef="number">
             <text>[10]</text>
         </literalExpression>
     </decision>
 
     <decision name="literal_006" id="_literal_006">
-        <variable name="literal_006"/>
+        <variable name="literal_006" typeRef="number"/>
         <literalExpression typeRef="number">
             <text>["foo"]</text>
         </literalExpression>

@@ -335,25 +335,23 @@
         </resultNode>
     </testCase>
 
-    <testCase id="decisionService_001">
+    <testCase id="decisionService_001" invocableName="decisionService_001" type="decisionService">
         <description>Direct invocation: Decision service returns context that does not confirm to type</description>
-        <resultNode errorResult="true" name="decisionService_001" type="decisionService">
+        <resultNode errorResult="true" name="decision_ds_001">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
         </resultNode>
     </testCase>
 
-    <testCase id="decisionService_002">
+    <testCase id="decisionService_002" invocableName="decisionService_002" type="decisionService">
         <description>Direct invocation: Decision service has string input but we pass incorrect type - input is coerced to null</description>
         <inputNode name="decisionService_002_input_1">
             <value xsi:type="xsd:decimal">10</value>
         </inputNode>
-        <resultNode errorResult="true" name="decisionService_002" type="decisionService">
+        <resultNode errorResult="true" name="decision_ds_002">
             <expected>
-                <component name="decision_ds_002">
                     <value xsi:nil="true"/>
-                </component>
             </expected>
         </resultNode>
     </testCase>
@@ -369,7 +367,7 @@
         </resultNode>
     </testCase>
 
-    <testCase id="decisionService_002_b">
+    <testCase id="decisionService_002_b" invocableName="decisionService_002" type="decisionService" >
         <description>Direct invocation: Decision service has string input but we pass in singleton list of correct type - input is coerced to string</description>
         <inputNode name="decisionService_002_input_1">
             <list>
@@ -378,11 +376,9 @@
                 </item>
             </list>
         </inputNode>
-        <resultNode name="decisionService_002" type="decisionService">
+        <resultNode name="decision_ds_002">
             <expected>
-                <component name="decision_ds_002">
                     <value xsi:type="xsd:string">foo</value>
-                </component>
             </expected>
         </resultNode>
     </testCase>
@@ -398,20 +394,18 @@
         </resultNode>
     </testCase>
 
-    <testCase id="decisionService_003">
+    <testCase id="decisionService_003" invocableName="decisionService_003" type="decisionService">
         <description>Decision service has string list input but we pass string - input is coerced to string list</description>
         <inputNode name="decisionService_003_input_1">
             <value xsi:type="xsd:string">foo</value>
         </inputNode>
-        <resultNode name="decisionService_003" type="decisionService">
+        <resultNode name="decision_ds_003">
             <expected>
-                <component name="decision_ds_003">
                     <list>
                         <item>
                             <value xsi:type="xsd:string">foo</value>
                         </item>
                     </list>
-                </component>
             </expected>
         </resultNode>
     </testCase>
