@@ -12,8 +12,6 @@
 package org.omg.dmn.tck.runner.jdmn;
 
 import com.gs.dmn.dialect.StandardDMNDialectDefinition;
-import com.gs.dmn.feel.analysis.semantics.environment.Environment;
-import com.gs.dmn.feel.analysis.semantics.type.Type;
 import com.gs.dmn.feel.lib.StandardFEELLib;
 import com.gs.dmn.log.BuildLogger;
 import com.gs.dmn.log.Slf4jBuildLogger;
@@ -34,7 +32,6 @@ import org.omg.dmn.tck.runner.junit4.DmnTckSuite;
 import org.omg.dmn.tck.runner.junit4.DmnTckVendorTestSuite;
 import org.omg.dmn.tck.runner.junit4.TestResult;
 import org.omg.dmn.tck.runner.junit4.TestSuiteContext;
-import org.omg.spec.dmn._20180521.model.TDecision;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
@@ -48,9 +45,9 @@ import java.util.stream.Collectors;
 public class JDMNTckTest implements DmnTckVendorTestSuite {
     private static final BuildLogger LOGGER = new Slf4jBuildLogger(LoggerFactory.getLogger(JDMNTckTest.class));
 
-    static final File CL2_FOLDER = new File("TestCases/compliance-level-2");
-    static final File CL3_FOLDER = new File("TestCases/compliance-level-3");
-    static final File NON_COMPLIANT_FOLDER = new File("TestCases/non-compliant");
+    private static final File CL2_FOLDER = new File("TestCases/compliance-level-2");
+    private static final File CL3_FOLDER = new File("TestCases/compliance-level-3");
+    private static final File NON_COMPLIANT_FOLDER = new File("TestCases/non-compliant");
     private static final boolean IGNORE_ERROR_FLAG = false;
 
     @Override
@@ -107,24 +104,18 @@ public class JDMNTckTest implements DmnTckVendorTestSuite {
             DMNInterpreter interpreter = gsContext.getInterpreter();
             TCKUtil tckUtil = new TCKUtil(basicTransformer, lib);
 
-            RuntimeEnvironment runtimeEnvironment =  tckUtil.makeEnvironment(testCase);
-
             List<ResultNode> resultNode = testCase.getResultNode();
             for (int i = 0; i < resultNode.size(); i++) {
                 ResultNode res = resultNode.get(i);
                 Object expectedValue = null;
-                Object actualOutput = null;
+                Object actualValue = null;
                 try {
-                    String decisionName = res.getName();
-                    TDecision decision = (TDecision) basicTransformer.getDMNModelRepository().findDRGElementByName(decisionName);
-                    Environment environment = basicTransformer.makeEnvironment(decision);
-                    Type decisionType = basicTransformer.drgElementOutputFEELType(decision, environment);
-                    expectedValue = tckUtil.makeValue(res.getExpected(), decisionType);
-                    actualOutput = interpreter.evaluate(decisionName, runtimeEnvironment);
+                    expectedValue = tckUtil.expectedValue(testCase, res);
+                    actualValue = tckUtil.evaluate(interpreter, testCase, res);
                 } catch (Throwable e) {
                     e.printStackTrace();
                     if (IGNORE_ERROR_FLAG) {
-                         actualOutput = null;
+                         actualValue = null;
                     } else {
                         if (!res.isErrorResult()) {
                             String errorMessage = String.format("Expected error for result node '%s' at position %d %s", res.getName(), i, e.getMessage());
@@ -132,8 +123,8 @@ public class JDMNTckTest implements DmnTckVendorTestSuite {
                         }
                     }
                 }
-                if (!isEquals(expectedValue, actualOutput)) {
-                    String errorMessage = String.format("Decision '%s' output mismatch, expected '%s' actual '%s'", res.getName(), expectedValue, actualOutput);
+                if (!isEquals(expectedValue, actualValue)) {
+                    String errorMessage = String.format("Decision '%s' output mismatch, expected '%s' actual '%s'", res.getName(), expectedValue, actualValue);
                     failures.add(errorMessage);
                 }
             }
