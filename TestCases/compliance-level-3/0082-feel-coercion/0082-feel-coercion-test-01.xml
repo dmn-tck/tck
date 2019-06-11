@@ -245,10 +245,23 @@
     </testCase>
 
     <testCase id="invoke_005">
-        <description>invocation type is a non-list and invoked bkm returns singleton array of conforming value - coercion to value</description>
-        <resultNode name="invoke_005" type="decision">
+        <description>Ref https://github.com/dmn-tck/tck/pull/238#issuecomment-497744315
+        <!-- 
+bkm_005([10])
+
+where bkm_005 is a BKM analogous to:
+
+function bkm_005( arg ) [arg]
+
+so by subsitution we have:
+bkm_005([10])
+[[10]]
+null   // BKM variable's typeRef is number.
+ -->
+        </description>
+        <resultNode name="invoke_005" type="decision" errorResult="true">
             <expected>
-                <value xsi:type="xsd:decimal">10</value>
+                <value xsi:nil="true"/>
             </expected>
         </resultNode>
     </testCase>
