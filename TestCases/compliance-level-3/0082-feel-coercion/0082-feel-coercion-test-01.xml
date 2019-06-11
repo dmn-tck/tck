@@ -71,7 +71,8 @@
             </expected>
         </resultNode>
     </testCase>
-
+<!-- Ref: https://github.com/dmn-tck/tck/pull/238#issuecomment-497744315 
+     Expected result is a wrapped element not justified with DMN spec
     <testCase id="decision_006">
         <description>decision returns value but type is list - coercion to list</description>
         <resultNode name="decision_006" type="decision">
@@ -83,7 +84,7 @@
                 </list>
             </expected>
         </resultNode>
-    </testCase>
+    </testCase> -->
 
     <testCase id="decision_006_a">
         <description>decision type is list but return val is non-conforming val - coercion to null</description>
@@ -148,7 +149,8 @@
             </expected>
         </resultNode>
     </testCase>
-
+<!-- Ref: https://github.com/dmn-tck/tck/pull/238#issuecomment-497744315 
+     Expected result is a wrapped element not justified with DMN spec
     <testCase id="decision_bkm_004">
         <description>bkm type is list and bkm logic returns conforming (non-list) value - coercion val to list</description>
         <resultNode name="decision_bkm_004" type="decision">
@@ -160,7 +162,7 @@
                 </list>
             </expected>
         </resultNode>
-    </testCase>
+    </testCase> -->
 
     <testCase id="decision_bkm_004_a">
         <description>bkm type is list and bkm logic returns non-conforming (non-list) value - coercion to null</description>
@@ -218,7 +220,8 @@
             </expected>
         </resultNode>
     </testCase>
-
+<!-- Ref: https://github.com/dmn-tck/tck/pull/238#issuecomment-497744315 
+     Expected result is a wrapped element not justified with DMN spec
     <testCase id="invoke_003">
         <description>invocation type is a list and invoked bkm returns single conforming value - coercion to list</description>
         <resultNode name="invoke_003" type="decision">
@@ -230,7 +233,7 @@
                 </list>
             </expected>
         </resultNode>
-    </testCase>
+    </testCase> -->
 
     <testCase id="invoke_004">
         <description>invocation type is a list and invoked bkm returns single non-conforming value - coercion to null</description>
@@ -294,7 +297,8 @@
             </expected>
         </resultNode>
     </testCase>
-
+<!-- Ref: https://github.com/dmn-tck/tck/pull/238#issuecomment-497744315 
+     Expected result is a wrapped element not justified with DMN spec
     <testCase id="literal_003">
         <description>literal expression has list typeRef and result is conforming value - coercion to list</description>
         <resultNode name="literal_003" type="decision">
@@ -306,7 +310,7 @@
                 </list>
             </expected>
         </resultNode>
-    </testCase>
+    </testCase> -->
 
     <testCase id="literal_004">
         <description>literal expression has list typeRef and result is non-conforming value - coercion to null</description>
@@ -393,7 +397,8 @@
             </expected>
         </resultNode>
     </testCase>
-
+<!-- Ref: https://github.com/dmn-tck/tck/pull/238#issuecomment-497744315 
+     Expected result is a wrapped element not justified with DMN spec
     <testCase id="decisionService_003" invocableName="decisionService_003" type="decisionService">
         <description>Decision service has string list input but we pass string - input is coerced to string list</description>
         <inputNode name="decisionService_003_input_1">
@@ -408,8 +413,9 @@
                     </list>
             </expected>
         </resultNode>
-    </testCase>
-
+    </testCase> -->
+<!-- Ref: https://github.com/dmn-tck/tck/pull/238#issuecomment-497744315 
+     Expected result is a wrapped element not justified with DMN spec
     <testCase id="decisionService_003_a">
         <description>Indirect invocation: Decision service has string list input but we pass in string - input is coerced to string list</description>
         <resultNode name="ds_invoke_003_with_string" type="decision">
@@ -423,6 +429,6 @@
                 </component>
             </expected>
         </resultNode>
-    </testCase>
+    </testCase> -->
 
 </testCases>
