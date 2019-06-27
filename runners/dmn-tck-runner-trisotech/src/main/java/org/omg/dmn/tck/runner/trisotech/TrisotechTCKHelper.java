@@ -29,6 +29,7 @@ import java.nio.file.Files;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Properties;
+import java.util.UUID;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -74,14 +75,14 @@ public class TrisotechTCKHelper {
 
     }
 
-    public static boolean pushTestCase(String groupId, String artifactId, File dmnFile, Properties properties)
+    public static boolean pushTestCase(String groupId, String artifactId, Properties properties, File... dmnFiles)
             throws MalformedURLException, IOException, SAXException {
 
         String publishURL = properties.getProperty("url");
         if (!publishURL.endsWith("/")) {
-            publishURL += "/";
+            publishURL = publishURL + "/";
         }
-        publishURL += "execution/deployment/dmn/" + properties.getProperty("repo") + "/" + groupId + "/";
+        publishURL = publishURL + "execution/deployment/dmn/" + properties.getProperty("repo") + "/" + groupId + "/";
 
         String version = "/" + properties.getProperty("version");
 
@@ -89,10 +90,21 @@ public class TrisotechTCKHelper {
         connection.setDoOutput(true);
         connection.setRequestMethod("POST");
         connection.setRequestProperty("Authorization", "Bearer " + properties.getProperty("bearer"));
-        connection.setRequestProperty("Content-Type", "text/xml; charset=utf-8");
+        String boundary = "===" + UUID.randomUUID() + "===";
+        connection.setRequestProperty("Content-Type", "multipart/form-data; boundary=" + boundary);
 
         OutputStream output = connection.getOutputStream();
-        Files.copy(dmnFile.toPath(), output);
+        for (File dmnFile : dmnFiles) {
+            output.write(("--" + boundary + "\r\n").getBytes());
+            output.write(("Content-Disposition: form-data; name=\"" + dmnFile.getName() + "\"; filename=\"" + dmnFile.getName() + "\"\r\n").getBytes());
+            output.write("Content-Type: text/xml; charset=utf-8\r\n".getBytes());
+            output.write("Content-Transfer-Encoding: binary\r\n".getBytes());
+            output.write("\r\n".getBytes());
+            Files.copy(dmnFile.toPath(), output);
+            output.write("\r\n".getBytes());
+        }
+        output.write(("--" + boundary + "--\r\n").getBytes());
+
         output.flush();
 
         if (connection.getResponseCode() != 200) {
