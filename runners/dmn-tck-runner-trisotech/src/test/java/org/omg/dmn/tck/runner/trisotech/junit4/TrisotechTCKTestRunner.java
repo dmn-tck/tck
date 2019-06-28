@@ -120,8 +120,18 @@ public class TrisotechTCKTestRunner extends ParentRunner<TrisotechTCKTest> {
     @Override
     public void run(RunNotifier notifier) {
         Map<String, Boolean> results = null;
+
+        LinkedList<File> dmnFiles = new LinkedList<>();
+        dmnFiles.add(new File(testCaseFile.getParentFile(), modelName));
+
+        for (File fileInDirectory : testCaseFile.getParentFile().listFiles()) {
+            if ((fileInDirectory.getName().endsWith(".dmn")) && (!fileInDirectory.getName().equals(modelName))) {
+                dmnFiles.add(fileInDirectory);
+            }
+        }
+
         try {
-            if (TrisotechTCKHelper.pushTestCase(category, testId, new File(testCaseFile.getParentFile(), modelName), properties)) {
+            if (TrisotechTCKHelper.pushTestCase(category, testId, properties, dmnFiles.toArray(new File[dmnFiles.size()]))) {
                 results = TrisotechTCKHelper.runTestCase(category, testId, testCaseFile, properties);
             } else {
                 for (TrisotechTCKTest test : testCases) {

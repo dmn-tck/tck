@@ -25,6 +25,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FilenameFilter;
 import java.io.IOException;
+import java.util.LinkedList;
 import java.util.Map;
 import java.util.Properties;
 
@@ -118,9 +119,18 @@ public class CommandLineRunner {
                         TestCases tcs = TckMarshallingHelper.load(new FileInputStream(testCaseFile));
                         String modelName = tcs.getModelName();
 
+                        LinkedList<File> dmnFiles = new LinkedList<>();
+                        dmnFiles.add(new File(testCaseFile.getParentFile(), modelName));
+
+                        for (File fileInDirectory : testCaseFile.getParentFile().listFiles()) {
+                            if ((fileInDirectory.getName().endsWith(".dmn")) && (!fileInDirectory.getName().equals(modelName))) {
+                                dmnFiles.add(fileInDirectory);
+                            }
+                        }
+
                         AnsiConsole.out.print(testCaseFile.getName() + " ");
                         try {
-                            if (TrisotechTCKHelper.pushTestCase(category, testId, new File(testCaseFile.getParentFile(), modelName), properties)) {
+                            if (TrisotechTCKHelper.pushTestCase(category, testId, properties, dmnFiles.toArray(new File[dmnFiles.size()]))) {
                                 Map<String, Boolean> results = TrisotechTCKHelper.runTestCase(category, testId, testCaseFile, properties);
                                 int total = 0;
                                 int passed = 0;
