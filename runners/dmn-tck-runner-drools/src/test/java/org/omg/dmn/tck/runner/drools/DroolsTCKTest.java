@@ -234,7 +234,8 @@ public class DroolsTCKTest
             } else if (decision != null) {
                 dmnctx.set(in.getName(), parseValue(in, decision)); // the test case offers a pre-evaluated Decision 
             } else {
-                throw new RuntimeException("Unable to locate InputData node or a Decision node for name: " + in.getName());
+                logger.warn("Override input name {} with value {}", in.getName(), in);
+                dmnctx.set(in.getName(), parseType(in, REGISTRY.unknown()));
             }
       });
 

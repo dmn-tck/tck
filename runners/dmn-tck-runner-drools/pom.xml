@@ -5,7 +5,7 @@
   <version>1.0.0-SNAPSHOT</version>
   <name>DMN :: TCK :: jUnit Runner :: Drools</name>
   <properties>
-    <drools.version>7.22.0.Final</drools.version>
+    <drools.version>7.24.0.t043</drools.version>
   </properties>
   <repositories>
     <repository>
@@ -82,6 +82,15 @@
         <configuration>
           <source>1.8</source>
           <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <systemPropertyVariables>
+            <org.kie.dmn.strictConformance>true</org.kie.dmn.strictConformance>
+          </systemPropertyVariables>
         </configuration>
       </plugin>
     </plugins>
