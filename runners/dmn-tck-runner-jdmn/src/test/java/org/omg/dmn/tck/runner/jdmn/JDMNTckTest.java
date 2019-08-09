@@ -16,7 +16,7 @@ import com.gs.dmn.feel.lib.StandardFEELLib;
 import com.gs.dmn.log.BuildLogger;
 import com.gs.dmn.log.Slf4jBuildLogger;
 import com.gs.dmn.runtime.interpreter.DMNInterpreter;
-import com.gs.dmn.runtime.interpreter.environment.RuntimeEnvironment;
+import com.gs.dmn.runtime.interpreter.Result;
 import com.gs.dmn.serialization.DMNReader;
 import com.gs.dmn.serialization.DMNWriter;
 import com.gs.dmn.tck.TCKUtil;
@@ -38,6 +38,8 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -83,8 +85,14 @@ public class JDMNTckTest implements DmnTckVendorTestSuite {
     }
 
     @Override
+    public void beforeTestCases(TestSuiteContext context, TestCases testCases, URL modelURL, Collection<? extends URL> additionalModels) {
+        ((JDMNTestContext)context).prepareModel(modelURL, additionalModels, LOGGER);
+        ((JDMNTestContext)context).clean(testCases);
+    }
+
+    @Override
     public void beforeTestCases(TestSuiteContext context, TestCases testCases, URL modelURL) {
-        ((JDMNTestContext)context).prepareModel(modelURL, LOGGER);
+        ((JDMNTestContext)context).prepareModel(modelURL, Collections.emptyList(), LOGGER);
         ((JDMNTestContext)context).clean(testCases);
     }
 
@@ -108,10 +116,12 @@ public class JDMNTckTest implements DmnTckVendorTestSuite {
             for (int i = 0; i < resultNode.size(); i++) {
                 ResultNode res = resultNode.get(i);
                 Object expectedValue = null;
+                Result actualResult = null;
                 Object actualValue = null;
                 try {
                     expectedValue = tckUtil.expectedValue(testCase, res);
-                    actualValue = tckUtil.evaluate(interpreter, testCase, res);
+                    actualResult = tckUtil.evaluate(interpreter, testCase, res);
+                    actualValue = Result.value(actualResult);
                 } catch (Throwable e) {
                     e.printStackTrace();
                     if (IGNORE_ERROR_FLAG) {

@@ -15,14 +15,15 @@ import com.gs.dmn.DMNModelRepository;
 import com.gs.dmn.dialect.DMNDialectDefinition;
 import com.gs.dmn.feel.analysis.semantics.environment.DefaultDMNEnvironmentFactory;
 import com.gs.dmn.feel.analysis.semantics.environment.EnvironmentFactory;
-import com.gs.dmn.feel.lib.FEELLib;
 import com.gs.dmn.feel.lib.StandardFEELLib;
 import com.gs.dmn.log.BuildLogger;
 import com.gs.dmn.log.NopBuildLogger;
+import com.gs.dmn.runtime.Pair;
 import com.gs.dmn.runtime.interpreter.DMNInterpreter;
 import com.gs.dmn.serialization.DMNNamespacePrefixMapper;
 import com.gs.dmn.serialization.DMNReader;
 import com.gs.dmn.serialization.DMNWriter;
+import com.gs.dmn.serialization.PrefixNamespaceMappings;
 import com.gs.dmn.tck.TestCasesReader;
 import com.gs.dmn.transformation.DMNTransformer;
 import com.gs.dmn.transformation.ToQuotedNameTransformer;
@@ -35,8 +36,7 @@ import org.omg.spec.dmn._20180521.model.TDefinitions;
 
 import java.io.File;
 import java.net.URL;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 public class JDMNTestContext implements TestSuiteContext {
     private static final boolean DEBUG_TRANSFORMER = false;
@@ -77,14 +77,22 @@ public class JDMNTestContext implements TestSuiteContext {
         return environmentFactory;
     }
 
-    public void prepareModel(URL modelURL, BuildLogger logger) {
-        DMNModelRepository repository = new DMNModelRepository();
+    public void prepareModel(URL modelURL, Collection<? extends URL> additionalModelURLs, BuildLogger logger) {
+        Map<URL, TDefinitions> modelMap = new LinkedHashMap<>();
         if (modelURL != null) {
-            repository = dmnReader.read(modelURL);
+            Pair<TDefinitions, PrefixNamespaceMappings> pair = dmnReader.read(modelURL);
+            modelMap.put(modelURL, pair.getLeft());
         }
+        for (URL url: additionalModelURLs) {
+            Pair<TDefinitions, PrefixNamespaceMappings> pair = dmnReader.read(url);
+            modelMap.put(url, pair.getLeft());
+        }
+        DMNModelRepository repository = new DMNModelRepository(new ArrayList<>(modelMap.values()), new PrefixNamespaceMappings());
         this.dmnTransformer.transform(repository);
         if (DEBUG_TRANSFORMER) {
-            save(modelURL, repository.getDefinitions());
+            for (Map.Entry<URL, TDefinitions> entry: modelMap.entrySet()) {
+                save(entry.getKey(), entry.getValue());
+            }
         }
         this.interpreter = dialectDefinition.createDMNInterpreter(repository);
         this.basicToJavaTransformer = dialectDefinition.createBasicTransformer(repository, new NopLazyEvaluationDetector(), new LinkedHashMap<>());
