@@ -29,7 +29,7 @@
 				</item>
 				<item>
 					<component name="id">
-						<value xsi:type="xsd:decimal">7934</value>
+						<value xsi:type="xsd:string">7934</value>
 					</component>
 					<component name="deptNum">
 						<value xsi:type="xsd:decimal">10</value>
