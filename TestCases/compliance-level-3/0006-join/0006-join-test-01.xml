@@ -18,7 +18,7 @@
 			<list>
 				<item>
 					<component name="id">
-						<value xsi:type="xsd:decimal">7792</value>
+						<value xsi:type="xsd:string">7792</value>
 					</component>
 					<component name="deptNum">
 						<value xsi:type="xsd:decimal">10</value>
