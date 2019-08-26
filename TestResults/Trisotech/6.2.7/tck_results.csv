@@ -1169,6 +1169,7 @@
 "compliance-level-3/0087-chapter-11-example","0087-chapter-11-example-test-01","003e","SUCCESS",""
 "compliance-level-3/0087-chapter-11-example","0087-chapter-11-example-test-01","004","SUCCESS",""
 "compliance-level-3/0088-no-decision-logic","0088-no-decision-logic-test-01","001","SUCCESS",""
+"compliance-level-3/0089-nested-inputdata-imports","0089-nested-inputdata-imports-test-01","001","SUCCESS",""
 "compliance-level-3/0090-feel-paths","0090-feel-paths-test-01","nested_list_001","SUCCESS",""
 "compliance-level-3/0090-feel-paths","0090-feel-paths-test-01","nested_list_002","SUCCESS",""
 "compliance-level-3/0090-feel-paths","0090-feel-paths-test-01","nested_list_003","SUCCESS",""

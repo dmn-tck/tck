@@ -122,7 +122,7 @@ public class TrisotechTCKHelper {
         publishURL += "execution/dmn/api/test/" + properties.getProperty("repo") + "/" + groupId + "/";
 
         String version = "/" + properties.getProperty("version");
-        HttpURLConnection connection = (HttpURLConnection) new URL(publishURL + artifactId + version).openConnection();
+        HttpURLConnection connection = (HttpURLConnection) new URL(publishURL + artifactId + version+"?strict=true").openConnection();
         connection.setDoOutput(true);
         connection.setRequestMethod("POST");
         connection.setRequestProperty("Authorization", "Bearer " + properties.getProperty("bearer"));
