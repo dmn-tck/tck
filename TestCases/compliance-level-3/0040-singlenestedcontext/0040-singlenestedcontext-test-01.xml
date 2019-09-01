@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<modelName>0040-singlenestedcontext.dmn</modelName>
 	<labels>
 		<label>Compliance Level 3</label>
@@ -8,10 +8,10 @@
 	</labels>
 	<testCase id="001">
 	    <inputNode name="Principal">
-			<value>600000</value>
+			<value xsi:type="xsd:decimal">600000</value>
 		</inputNode>
 		<inputNode name="Term">
-			<value>360</value>
+			<value xsi:type="xsd:decimal">360</value>
 		</inputNode>
 		<resultNode name="Boxed Context" type="decision">
 			<expected>
@@ -21,10 +21,10 @@
 	</testCase>
 	<testCase id="002">
 	    <inputNode name="Principal">
-			<value>30000</value>
+			<value xsi:type="xsd:decimal">30000</value>
 		</inputNode>
 		<inputNode name="Term">
-			<value>60</value>
+			<value xsi:type="xsd:decimal">60</value>
 		</inputNode>
 		<resultNode name="Boxed Context" type="decision">
 			<expected>
@@ -34,10 +34,10 @@
 	</testCase>
 	<testCase id="003">
 	    <inputNode name="Principal">
-			<value>600000</value>
+			<value xsi:type="xsd:decimal">600000</value>
 		</inputNode>
 		<inputNode name="Term">
-			<value>365</value>
+			<value xsi:type="xsd:decimal">365</value>
 		</inputNode>
 		<resultNode name="Boxed Context" type="decision">
 			<expected>

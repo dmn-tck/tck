@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!-- Contributed to DMN TCK by ACTICO GmbH https://actico.com -->
-<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="">
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="">
     <modelName>1116-feel-time-function.dmn</modelName>
     <labels>
         <label>Compliance Level 3</label>
@@ -108,7 +108,7 @@
     <testCase id="015_376d693a79">
         <resultNode name="feel-time-function_015_376d693a79" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">12:00:00</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">12:00:00</value>
             </expected>
         </resultNode>
     </testCase>
@@ -122,259 +122,259 @@
     <testCase id="017_f3683885f5">
         <resultNode name="feel-time-function_017_f3683885f5" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">01:02:03</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">01:02:03</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="018_35f1f2cce8">
         <resultNode name="feel-time-function_018_35f1f2cce8" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">00:00:00</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">00:00:00</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="019_879be89d63">
         <resultNode name="feel-time-function_019_879be89d63" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:22:33.444</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">11:22:33.444</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="020_72b421086e">
         <resultNode name="feel-time-function_020_72b421086e" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:22:33.123456789</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">11:22:33.123456789</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="021_5c50fa1dff">
         <resultNode name="feel-time-function_021_5c50fa1dff" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">23:59:00Z</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">23:59:00Z</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="022_55e76d3595">
         <resultNode name="feel-time-function_022_55e76d3595" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:00:00Z</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">11:00:00Z</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="023_5cbbb85435">
         <resultNode name="feel-time-function_023_5cbbb85435" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">00:00:00Z</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">00:00:00Z</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="024_5f7f735e8f">
         <resultNode name="feel-time-function_024_5f7f735e8f" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">13:20:00+02:00</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">13:20:00+02:00</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="025_139b25b795">
         <resultNode name="feel-time-function_025_139b25b795" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">13:20:00-05:00</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">13:20:00-05:00</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="026_c5208af118">
         <resultNode name="feel-time-function_026_c5208af118" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:22:33Z</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">11:22:33Z</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="027_45082fd26c">
         <resultNode name="feel-time-function_027_45082fd26c" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:22:33Z</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">11:22:33Z</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="028_eaea7a943c">
         <resultNode name="feel-time-function_028_eaea7a943c" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">00:01:00@Etc/UTC</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">00:01:00@Etc/UTC</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="029_f0d5c2c16a">
         <resultNode name="feel-time-function_029_f0d5c2c16a" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">00:01:00@Europe/Paris</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">00:01:00@Europe/Paris</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="030_390d4f4648">
         <resultNode name="feel-time-function_030_390d4f4648" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">10:20:00</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">10:20:00</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="031_4d086a3b59">
         <resultNode name="feel-time-function_031_4d086a3b59" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">10:20:00Z</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">10:20:00Z</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="032_d9b0d7f931">
         <resultNode name="feel-time-function_032_d9b0d7f931" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">10:20:00Z</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">10:20:00Z</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="033_8420160da1">
         <resultNode name="feel-time-function_033_8420160da1" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">10:20:00+01:00</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">10:20:00+01:00</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="034_13c312c376">
         <resultNode name="feel-time-function_034_13c312c376" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">10:20:00-01:00</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">10:20:00-01:00</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="035_fbfce88ac4">
         <resultNode name="feel-time-function_035_fbfce88ac4" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">10:20:00Z</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">10:20:00Z</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="036_eb05fabc01">
         <resultNode name="feel-time-function_036_eb05fabc01" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">10:20:00@Europe/Paris</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">10:20:00@Europe/Paris</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="037_eed195f693">
         <resultNode name="feel-time-function_037_eed195f693" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">11:20:00@Asia/Dhaka</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">11:20:00@Asia/Dhaka</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="038_05b311131c">
         <resultNode name="feel-time-function_038_05b311131c" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:59:45</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">11:59:45</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="039_5b65992f0d">
         <resultNode name="feel-time-function_039_5b65992f0d" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:59:45Z</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">11:59:45Z</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="040_6c9d17b491">
         <resultNode name="feel-time-function_040_6c9d17b491" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:59:45+02:00</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">11:59:45+02:00</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="041_29a448d57e">
         <resultNode name="feel-time-function_041_29a448d57e" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:59:45-02:00</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">11:59:45-02:00</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="042_00146f2977">
         <resultNode name="feel-time-function_042_00146f2977" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:59:00+02:01</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">11:59:00+02:01</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="043_2edfae8414">
         <resultNode name="feel-time-function_043_2edfae8414" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:59:00-02:01</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">11:59:00-02:01</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="044_3073ffd026">
         <resultNode name="feel-time-function_044_3073ffd026" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:59:00+02:01</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">11:59:00+02:01</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="045_ad1339e858">
         <resultNode name="feel-time-function_045_ad1339e858" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:59:00-02:01</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">11:59:00-02:01</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="046_7b80221ec1">
         <resultNode name="feel-time-function_046_7b80221ec1" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">11:59:45+02:45:55</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">11:59:45+02:45:55</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="047_33cd7b9b15">
         <resultNode name="feel-time-function_047_33cd7b9b15" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">11:59:45-02:45:55</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:string">11:59:45-02:45:55</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="048_9bedd52886">
         <resultNode name="feel-time-function_048_9bedd52886" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:59:45Z</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">11:59:45Z</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="049_617d9e09d6">
         <resultNode name="feel-time-function_049_617d9e09d6" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">23:59:01</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">23:59:01</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="050_524d9a8146">
         <resultNode name="feel-time-function_050_524d9a8146" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">23:59:01.987654321</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">23:59:01.987654321</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="051_a71d2a08f7">
         <resultNode name="feel-time-function_051_a71d2a08f7" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">09:15:30+02:00</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">09:15:30+02:00</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="052_d825d58888">
         <resultNode name="feel-time-function_052_d825d58888" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">09:15:30Z</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">09:15:30Z</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="053_3d956966c0">
         <resultNode name="feel-time-function_053_3d956966c0" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">00:00:00Z</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">00:00:00Z</value>
             </expected>
         </resultNode>
     </testCase>
@@ -563,28 +563,28 @@
     <testCase id="080_2bbb8c86af">
         <resultNode name="feel-time-function_080_2bbb8c86af" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">23:59:00</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">23:59:00</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="081_69f4e0231e">
         <resultNode name="feel-time-function_081_69f4e0231e" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">12:45:00</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">12:45:00</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="082_36a78e5396">
         <resultNode name="feel-time-function_082_36a78e5396" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:59:00+02:01</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">11:59:00+02:01</value>
             </expected>
         </resultNode>
     </testCase>
     <testCase id="083_6b608254c7">
         <resultNode name="feel-time-function_083_6b608254c7" type="decision">
             <expected>
-                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:time">11:59:00-02:00</value>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xsd:time">11:59:00-02:00</value>
             </expected>
         </resultNode>
     </testCase>

@@ -115,7 +115,7 @@
         <description>literal unicode - substring with mixed chars and supplementary chars</description>
         <resultNode name="substring_001" type="decision">
             <expected>
-                <value xsi:type="xsd:string">-->
+                <value xsi:type="xsd:decimal">-->
                 <!-- THE GRINNING FACE EMOJI --> <!-- ref: https://github.com/dmn-tck/tck/issues/299 why emoji was not preserved in the comment, if uncommenting please do restore original emojis --> 
                 <!--</value>
             </expected>
@@ -126,7 +126,7 @@
         <description>literal unicode - substring with mixed chars and supplementary chars</description>
         <resultNode name="substring_002" type="decision">
             <expected>
-                <value xsi:type="xsd:string">-->
+                <value xsi:type="xsd:decimal">-->
                 <!-- THE HORSE FACE EMOJI --> <!-- ref: https://github.com/dmn-tck/tck/issues/299 why emoji was not preserved in the comment, if uncommenting please do restore original emojis -->
                 <!--</value>
             </expected>
@@ -137,7 +137,7 @@
         <description>literal unicode - substring with mixed chars and supplementary chars</description>
         <resultNode name="substring_003" type="decision">
             <expected>
-                <value xsi:type="xsd:string">-->
+                <value xsi:type="xsd:decimal">-->
                 <!-- THE HORSE FACE EMOJI, followed by "bar" --> <!-- ref: https://github.com/dmn-tck/tck/issues/299 why emoji was not preserved in the comment, if uncommenting please do restore original emojis -->
                 <!--</value>
             </expected>
