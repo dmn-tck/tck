@@ -41,7 +41,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RunWith(DmnTckSuite.class)
 public class JDMNTckTest implements DmnTckVendorTestSuite {
@@ -50,7 +49,7 @@ public class JDMNTckTest implements DmnTckVendorTestSuite {
     private static final File CL2_FOLDER = new File("TestCases/compliance-level-2");
     private static final File CL3_FOLDER = new File("TestCases/compliance-level-3");
     private static final File NON_COMPLIANT_FOLDER = new File("TestCases/non-compliant");
-    private static final boolean IGNORE_ERROR_FLAG = false;
+    private static final boolean IGNORE_ERROR_FLAG = true;
 
     @Override
     public List<URL> getTestCases() {
@@ -146,11 +145,11 @@ public class JDMNTckTest implements DmnTckVendorTestSuite {
         String message = "";
         if (!failures.isEmpty()) {
             r = TestResult.Result.ERROR;
-            message = failures.stream().collect(Collectors.joining("\n"));
+            message = String.join("\n", failures);
         }
         if (!exceptions.isEmpty()) {
             r = TestResult.Result.ERROR;
-            message = exceptions.stream().collect(Collectors.joining("\n"));
+            message = String.join("\n", exceptions);
         }
         return new TestResult(r, message);
     }
