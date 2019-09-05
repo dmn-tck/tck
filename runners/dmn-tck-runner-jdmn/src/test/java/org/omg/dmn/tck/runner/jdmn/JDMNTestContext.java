@@ -79,15 +79,22 @@ public class JDMNTestContext implements TestSuiteContext {
 
     public void prepareModel(URL modelURL, Collection<? extends URL> additionalModelURLs, BuildLogger logger) {
         Map<URL, TDefinitions> modelMap = new LinkedHashMap<>();
+        TDefinitions rootDefinitions = null;
+        List<TDefinitions> importedDefinitions = new ArrayList<>();
+        PrefixNamespaceMappings prefixNamespaceMappings = new PrefixNamespaceMappings();
         if (modelURL != null) {
             Pair<TDefinitions, PrefixNamespaceMappings> pair = dmnReader.read(modelURL);
             modelMap.put(modelURL, pair.getLeft());
+            rootDefinitions = pair.getLeft();
+            prefixNamespaceMappings.merge(pair.getRight());
         }
         for (URL url: additionalModelURLs) {
             Pair<TDefinitions, PrefixNamespaceMappings> pair = dmnReader.read(url);
-            modelMap.put(url, pair.getLeft());
+            modelMap.put(modelURL, pair.getLeft());
+            importedDefinitions.add(pair.getLeft());
+            prefixNamespaceMappings.merge(pair.getRight());
         }
-        DMNModelRepository repository = new DMNModelRepository(new ArrayList<>(modelMap.values()), new PrefixNamespaceMappings());
+        DMNModelRepository repository = new DMNModelRepository(rootDefinitions, importedDefinitions, prefixNamespaceMappings);
         this.dmnTransformer.transform(repository);
         if (DEBUG_TRANSFORMER) {
             for (Map.Entry<URL, TDefinitions> entry: modelMap.entrySet()) {
