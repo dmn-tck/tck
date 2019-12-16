@@ -224,7 +224,7 @@
 	<xsd:complexType name="tExpression">
 		<xsd:complexContent>
 			<xsd:extension base="tDMNElement">
-				<xsd:attribute name="typeRef" type="xsd:string"/>
+				<xsd:attribute name="typeRef" type="xsd:string" use="optional"/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
@@ -500,7 +500,7 @@
 	</xsd:complexType>
 	<xsd:complexType name="tUnaryTests">
 		<xsd:complexContent>
-			<xsd:extension base="tDMNElement">
+			<xsd:extension base="tExpression">
 				<xsd:sequence>
 					<xsd:element name="text" type="xsd:string"/>
 				</xsd:sequence>
