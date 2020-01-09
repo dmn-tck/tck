@@ -116,22 +116,5 @@
 		</resultNode>
 	</testCase>
 
-	<testCase id="decision_015">
-		<description>every: 'in' may appear at start of list identifier</description>
-		<resultNode name="decision_015" type="decision">
-			<expected>
-				<value xsi:type="xsd:boolean">false</value>
-			</expected>
-		</resultNode>
-	</testCase>
-	<testCase id="decision_015a">
-		<description>some: 'in' may appear at start of list identifier</description>
-		<resultNode name="decision_015a" type="decision">
-			<expected>
-				<value xsi:type="xsd:boolean">true</value>
-			</expected>
-		</resultNode>
-	</testCase>
-
 
 </testCases>

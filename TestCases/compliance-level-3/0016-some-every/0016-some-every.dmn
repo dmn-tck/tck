@@ -130,33 +130,6 @@
         </literalExpression>
     </decision>
 
-    <decision name="in list values" id="_inListValues">
-        <variable name="in list values"/>
-        <literalExpression>
-            <text>[0, 1, 2, 3, 4, 5]</text>
-        </literalExpression>
-    </decision>
-
-    <decision name="decision_015" id="_decision_015">
-        <variable name="decision_015"/>
-        <informationRequirement>
-            <requiredDecision href="#_inListValues"/>
-        </informationRequirement>
-        <literalExpression>
-            <text>every i in in list values satisfies even(i)</text>
-        </literalExpression>
-    </decision>
-
-    <decision name="decision_015a" id="_decision_015a">
-        <variable name="decision_015a"/>
-        <informationRequirement>
-            <requiredDecision href="#_inListValues"/>
-        </informationRequirement>
-        <literalExpression>
-            <text>some i in in list values satisfies even(i)</text>
-        </literalExpression>
-    </decision>
-
     <dmndi:DMNDI>
         <dmndi:DMNDiagram id="_d7643a02-a8fc-4a6f-a8a9-5c2881afea70_D1">
             <dmndi:Size height="650.0" width="1310.0"/>
