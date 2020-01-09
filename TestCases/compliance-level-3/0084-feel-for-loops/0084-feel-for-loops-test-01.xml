@@ -144,4 +144,28 @@
         </resultNode>
     </testCase>
 
+    <testCase id="decision_014">
+        <description>'in' may appear in list identifier</description>
+        <resultNode name="decision_014" type="decision">
+            <expected>
+                <list>
+                    <item><value xsi:type="xsd:boolean">false</value></item>
+                    <item><value xsi:type="xsd:boolean">true</value></item>
+                </list>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="decision_015">
+        <description>'in' may appear at start of list identifier</description>
+        <resultNode name="decision_015" type="decision">
+            <expected>
+                <list>
+                    <item><value xsi:type="xsd:boolean">false</value></item>
+                    <item><value xsi:type="xsd:boolean">true</value></item>
+                </list>
+            </expected>
+        </resultNode>
+    </testCase>
+
 </testCases>

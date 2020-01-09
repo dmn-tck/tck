@@ -72,4 +72,38 @@
         </literalExpression>
     </decision>
 
+    <decision name="days in weekend" id="_daysInWeekend">
+        <variable name="days in weekend"/>
+        <literalExpression>
+            <text>["saturday", "sunday"]</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision_014" id="_decision_014">
+        <variable name="decision_014"/>
+        <informationRequirement>
+            <requiredDecision href="#_daysInWeekend"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>for i in days in weekend return if i = "sunday" then true else false</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="in a list" id="_inAList">
+        <variable name="in a list"/>
+        <literalExpression>
+            <text>["peter", "mary"]</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision_015" id="_decision_015">
+        <variable name="decision_015"/>
+        <informationRequirement>
+            <requiredDecision href="#_inAList"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>for i in in a list return if i = "mary" then true else false</text>
+        </literalExpression>
+    </decision>
+
 </definitions>
