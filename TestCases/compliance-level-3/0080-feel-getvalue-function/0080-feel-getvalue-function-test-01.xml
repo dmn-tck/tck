@@ -100,14 +100,22 @@
     </testCase>
 
     <testCase id="decision_011">
-        <description>null value stored in context</description>
-        <resultNode name="decision_011" type="decision">
+        <description>null map and key params</description>
+        <resultNode errorResult="true" name="decision_011" type="decision">
             <expected>
                 <value xsi:nil="true"></value>
             </expected>
         </resultNode>
     </testCase>
 
+    <testCase id="decision_012">
+        <description>null value stored in context</description>
+        <resultNode name="decision_012" type="decision">
+            <expected>
+                <value xsi:nil="true"></value>
+            </expected>
+        </resultNode>
+    </testCase>
 
 
 

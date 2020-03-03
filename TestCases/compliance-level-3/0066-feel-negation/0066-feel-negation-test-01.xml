@@ -32,7 +32,7 @@
     </testCase>
 
     <testCase id="003_b">
-        <resultNode name="decision003_b" type="decision">
+        <resultNode errorResult="true" name="decision003_b" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -40,7 +40,7 @@
     </testCase>
 
     <testCase id="003_c">
-        <resultNode name="decision003_c" type="decision">
+        <resultNode errorResult="true" name="decision003_c" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -48,7 +48,7 @@
     </testCase>
 
     <testCase id="003_d">
-        <resultNode name="decision003_d" type="decision">
+        <resultNode errorResult="true" name="decision003_d" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
