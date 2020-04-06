@@ -47,21 +47,21 @@
         </literalExpression>
     </decision>
     <decision name="decision006" id="_decision006">
-        <description>Tests FEEL expression: 'abs(number:-1)' and expects result: '1 (number)'</description>
-        <question>Result of FEEL expression 'abs(number:-1)'?</question>
+        <description>Tests FEEL expression: 'abs(n:-1)' and expects result: '1 (number)'</description>
+        <question>Result of FEEL expression 'abs(n:-1)'?</question>
         <allowedAnswers>1 (number)</allowedAnswers>
         <variable typeRef="number" name="decision006"/>
         <literalExpression>
-            <text>abs(number:-1)</text>
+            <text>abs(n:-1)</text>
         </literalExpression>
     </decision>
     <decision name="decision007" id="_decision007">
-        <description>Tests FEEL expression: 'abs(n:-1)' and expects result: 'null (number)'</description>
-        <question>Result of FEEL expression 'abs(n:-1)'?</question>
+        <description>Tests FEEL expression: 'abs(number:-1)' and expects result: 'null (number)'</description>
+        <question>Result of FEEL expression 'abs(number:-1)'?</question>
         <allowedAnswers>null (number)</allowedAnswers>
         <variable typeRef="number" name="decision007"/>
         <literalExpression>
-            <text>abs(n:-1)</text>
+            <text>abs(number:-1)</text>
         </literalExpression>
     </decision>
     <decision name="decision008" id="_decision008">
