@@ -30,7 +30,7 @@
         <description>encoded unicode - supplementary char (uppercase)</description>
         <resultNode name="decision_003" type="decision">
             <expected>
-                <value xsi:type="xsd:decimal">2</value>
+                <value xsi:type="xsd:decimal">1</value>
             </expected>
         </resultNode>
     </testCase>
@@ -39,7 +39,7 @@
         <description>encoded unicode - supplementary char (lowercase)</description>
         <resultNode name="decision_003_a" type="decision">
             <expected>
-                <value xsi:type="xsd:decimal">2</value>
+                <value xsi:type="xsd:decimal">1</value>
             </expected>
         </resultNode>
     </testCase>
@@ -48,7 +48,7 @@
         <description>encoded unicode - string literal with supplementary chars</description>
         <resultNode name="decision_004" type="decision">
             <expected>
-                <value xsi:type="xsd:decimal">4</value>
+                <value xsi:type="xsd:decimal">2</value>
             </expected>
         </resultNode>
     </testCase>
@@ -57,7 +57,7 @@
         <description>literal unicode - supplementary 2 char - in string literal</description>
         <resultNode name="decision_004_a" type="decision">
             <expected>
-                <value xsi:type="xsd:decimal">4</value>
+                <value xsi:type="xsd:decimal">2</value>
             </expected>
         </resultNode>
     </testCase>

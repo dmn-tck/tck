@@ -2,19 +2,19 @@
 <definitions xmlns:triso="http://www.trisotech.com/2015/triso/modeling"
                       xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" 
                       xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" 
-                      xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" 
-                      xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" 
+                      xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" 
+                      xmlns:feel="https://www.omg.org/spec/DMN/20191111/FEEL/" 
                       xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase"
                       xmlns:include1="http://www.trisotech.com/definitions/_f27bb64b-6fc7-4e1f-9848-11ba35e0df36" 
                       xmlns:trisofeed="http://trisotech.com/feed" 
                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
                       xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
-                      xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="_f27bb64b-6fc7-4e1f-9848-11ba35e0df36" 
+                      xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" id="_f27bb64b-6fc7-4e1f-9848-11ba35e0df36" 
                       namespace="http://www.trisotech.com/definitions/_c3e08836-7973-4e4d-af2b-d46b23725c13"          exporter="DMN Modeler" exporterVersion="6.2.1" 
                       name="Import BKM and have a Decision Ctx with DT" triso:logoChoice="Default">
     <import namespace="http://www.trisotech.com/definitions/_f27bb64b-6fc7-4e1f-9848-11ba35e0df36"
                      name="myimport"
-                     importType="http://www.omg.org/spec/DMN/20180521/MODEL/"
+                     importType="https://www.omg.org/spec/DMN/20191111/MODEL/"
                      />
     <inputData id="_9df2ca89-d100-4ba3-9a44-6a71cae5c001" name="A Person">
         <variable name="A Person" id="_9e1f6cbc-584f-41f6-8748-97f579a3df43" typeRef="myimport.tPerson"/>
