@@ -37,7 +37,7 @@
 
     <testCase id="004">
         <description>return null if any item is not true or false</description>
-        <resultNode name="decision004" type="decision">
+        <resultNode errorResult="true" name="decision004" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -73,7 +73,7 @@
 
     <testCase id="008">
         <description>return null for singleton null</description>
-        <resultNode name="decision008" type="decision">
+        <resultNode errorResult="true" name="decision008" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -82,7 +82,7 @@
 
     <testCase id="009">
         <description>return null for singleton non-boolean</description>
-        <resultNode name="decision009" type="decision">
+        <resultNode errorResult="true" name="decision009" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -118,7 +118,7 @@
 
     <testCase id="013">
         <description>return null if any vararg item is not true or false</description>
-        <resultNode name="decision013" type="decision">
+        <resultNode errorResult="true" name="decision013" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
