@@ -254,7 +254,7 @@ public class DroolsTCKTest
             }
             if (!dmnResult.getMessages().isEmpty())
             {
-               logger.info("Messages: \n-----\n{}-----\n", dmnResult.getMessages().stream().map(m -> m.toString()).collect(Collectors.joining("\n")));
+               logger.info("Messages: \n-----\n{}\n-----\n", dmnResult.getMessages().stream().map(m -> m.toString()).collect(Collectors.joining("\n")));
             }
             resultctx = dmnResult.getContext();
             Object expected = parseValue(rn, ctx.dmnmodel.getDecisionByName(name));
@@ -266,6 +266,12 @@ public class DroolsTCKTest
                     logger.info("TEST CASE is error Result, message reported is to be expected: {}", msg);
                 }
             } else {
+               if (expected == null && actual == null) {
+                   for (DMNMessage msg : dmnResult.getMessages(DMNMessage.Severity.ERROR))
+                   {
+                       logger.warn("TCK value comparison is correct, but TCK test case '{}' might be missing errorResult flag?", name);
+                   }
+               } else 
                if (dmnResult.hasErrors())
                {
                   for (DMNMessage msg : dmnResult.getMessages(DMNMessage.Severity.ERROR))
