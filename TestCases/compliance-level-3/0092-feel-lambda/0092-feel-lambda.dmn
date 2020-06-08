@@ -416,7 +416,7 @@
             <formalParameter name="fn2"/>
             <literalExpression>
                 <!-- DS invocations - with param.  Each DS invocation returns a context -->
-                <text>fn1(5).decision_013_2*fn2(10).decision_013_2</text>
+                <text>fn1(5)*fn2(10)</text>
             </literalExpression>
         </encapsulatedLogic>
     </businessKnowledgeModel>
