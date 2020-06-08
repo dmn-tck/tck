@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<definitions namespace="http://www.montera.com.au/spec/DMN/0092-feel-lambda" name="0092-feel-lambda" id="_i9fboPUUEeesLuP4RHs4vA" xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<definitions namespace="http://www.montera.com.au/spec/DMN/0092-feel-lambda"
+             name="0092-feel-lambda"
+             xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" >
     <description>FEEL lambda</description>
 
     <!-- decision returns a UDF lambda (no closures) -->
