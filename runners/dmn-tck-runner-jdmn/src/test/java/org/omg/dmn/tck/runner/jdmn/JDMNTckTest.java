@@ -23,6 +23,7 @@ import com.gs.dmn.tck.TCKUtil;
 import com.gs.dmn.transformation.DMNTransformer;
 import com.gs.dmn.transformation.ToSimpleNameTransformer;
 import com.gs.dmn.transformation.basic.BasicDMN2JavaTransformer;
+import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.junit.runner.Description;
 import org.junit.runner.RunWith;
 import org.omg.dmn.tck.marshaller._20160719.TestCases;
@@ -49,7 +50,7 @@ public class JDMNTckTest implements DmnTckVendorTestSuite {
     private static final File CL2_FOLDER = new File("TestCases/compliance-level-2");
     private static final File CL3_FOLDER = new File("TestCases/compliance-level-3");
     private static final File NON_COMPLIANT_FOLDER = new File("TestCases/non-compliant");
-    private static final boolean IGNORE_ERROR_FLAG = true;
+    private static final boolean IGNORE_ERROR = false;
 
     @Override
     public List<URL> getTestCases() {
@@ -87,12 +88,14 @@ public class JDMNTckTest implements DmnTckVendorTestSuite {
     public void beforeTestCases(TestSuiteContext context, TestCases testCases, URL modelURL, Collection<? extends URL> additionalModels) {
         ((JDMNTestContext)context).prepareModel(modelURL, additionalModels, LOGGER);
         ((JDMNTestContext)context).clean(testCases);
+        ((JDMNTestContext)context).setTestCases(testCases);
     }
 
     @Override
     public void beforeTestCases(TestSuiteContext context, TestCases testCases, URL modelURL) {
         ((JDMNTestContext)context).prepareModel(modelURL, Collections.emptyList(), LOGGER);
         ((JDMNTestContext)context).clean(testCases);
+        ((JDMNTestContext)context).setTestCases(testCases);
     }
 
     @Override
@@ -111,30 +114,29 @@ public class JDMNTckTest implements DmnTckVendorTestSuite {
             DMNInterpreter interpreter = gsContext.getInterpreter();
             TCKUtil tckUtil = new TCKUtil(basicTransformer, lib);
 
-            List<ResultNode> resultNode = testCase.getResultNode();
-            for (int i = 0; i < resultNode.size(); i++) {
-                ResultNode res = resultNode.get(i);
+            TestCases testCases = gsContext.getTestCases();
+            for (ResultNode res: testCase.getResultNode()) {
+                String testLocation = String.format("Unexpected result in test for model '%s', TestCase.id='%s', ResultNode.name='%s'.", testCases.getModelName(), testCase.getId(), res.getName());
                 Object expectedValue = null;
                 Result actualResult = null;
                 Object actualValue = null;
                 try {
-                    expectedValue = tckUtil.expectedValue(testCase, res);
-                    actualResult = tckUtil.evaluate(interpreter, testCase, res);
+                    expectedValue = tckUtil.expectedValue(testCases, testCase, res);
+                    actualResult = tckUtil.evaluate(interpreter, testCases, testCase, res);
                     actualValue = Result.value(actualResult);
+                    if (!isEquals(expectedValue, actualValue)) {
+                        String errorMessage = String.format("%s ResultNode '%s' output mismatch, expected '%s' actual '%s'", testLocation, res.getName(), expectedValue, actualValue);
+                        failures.add(errorMessage);
+                    }
                 } catch (Throwable e) {
-                    e.printStackTrace();
-                    if (IGNORE_ERROR_FLAG) {
-                         actualValue = null;
-                    } else {
-                        if (!res.isErrorResult()) {
-                            String errorMessage = String.format("Expected error for result node '%s' at position %d %s", res.getName(), i, e.getMessage());
+                    String stackTrace = ExceptionUtils.getStackTrace(e);
+                    LOGGER.error(stackTrace);
+                    if (!IGNORE_ERROR) {
+                        if (!isEquals(expectedValue, actualValue)) {
+                            String errorMessage = String.format("%s ResultNode '%s' output mismatch, expected '%s' actual '%s'", testLocation, res.getName(), expectedValue, actualValue);
                             failures.add(errorMessage);
                         }
                     }
-                }
-                if (!isEquals(expectedValue, actualValue)) {
-                    String errorMessage = String.format("Decision '%s' output mismatch, expected '%s' actual '%s'", res.getName(), expectedValue, actualValue);
-                    failures.add(errorMessage);
                 }
             }
         } catch (Throwable e) {

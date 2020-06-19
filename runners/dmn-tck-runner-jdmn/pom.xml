@@ -19,6 +19,10 @@
                     <groupId>ch.qos.logback</groupId>
                     <artifactId>logback-classic</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>org.omg.dmn</groupId>
+                    <artifactId>tck-marshaller</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
@@ -29,6 +33,10 @@
                 <exclusion>
                     <groupId>ch.qos.logback</groupId>
                     <artifactId>logback-classic</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.omg.dmn</groupId>
+                    <artifactId>tck-marshaller</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -57,7 +65,7 @@
         <dependency>
             <groupId>com.goldmansachs.jdmn</groupId>
             <artifactId>jdmn-core</artifactId>
-            <version>3.4.1</version>
+            <version>3.9.0</version>
         </dependency>
     </dependencies>
 
