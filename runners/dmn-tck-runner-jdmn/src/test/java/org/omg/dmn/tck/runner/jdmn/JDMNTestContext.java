@@ -13,17 +13,14 @@ package org.omg.dmn.tck.runner.jdmn;
 
 import com.gs.dmn.DMNModelRepository;
 import com.gs.dmn.dialect.DMNDialectDefinition;
-import com.gs.dmn.feel.analysis.semantics.environment.DefaultDMNEnvironmentFactory;
+import com.gs.dmn.feel.analysis.semantics.environment.StandardEnvironmentFactory;
 import com.gs.dmn.feel.analysis.semantics.environment.EnvironmentFactory;
 import com.gs.dmn.feel.lib.StandardFEELLib;
 import com.gs.dmn.log.BuildLogger;
 import com.gs.dmn.log.NopBuildLogger;
 import com.gs.dmn.runtime.Pair;
 import com.gs.dmn.runtime.interpreter.DMNInterpreter;
-import com.gs.dmn.serialization.DMNNamespacePrefixMapper;
-import com.gs.dmn.serialization.DMNReader;
-import com.gs.dmn.serialization.DMNWriter;
-import com.gs.dmn.serialization.PrefixNamespaceMappings;
+import com.gs.dmn.serialization.*;
 import com.gs.dmn.tck.TestCasesReader;
 import com.gs.dmn.transformation.DMNTransformer;
 import com.gs.dmn.transformation.ToQuotedNameTransformer;
@@ -51,6 +48,8 @@ public class JDMNTestContext implements TestSuiteContext {
 
     private DMNInterpreter interpreter;
     private BasicDMN2JavaTransformer basicToJavaTransformer;
+    private TestCases testCases;
+
     public JDMNTestContext(DMNReader dmnReader, DMNWriter dmnWriter, DMNTransformer<TestCases> dmnTransformer, DMNDialectDefinition dialectDefinition) {
         this.dmnReader = dmnReader;
         this.dmnWriter = dmnWriter;
@@ -58,7 +57,7 @@ public class JDMNTestContext implements TestSuiteContext {
         this.dmnTransformer = dmnTransformer;
         this.dialectDefinition = dialectDefinition;
         this.lib = (StandardFEELLib) dialectDefinition.createFEELLib();
-        this.environmentFactory = DefaultDMNEnvironmentFactory.instance();
+        this.environmentFactory = StandardEnvironmentFactory.instance();
     }
 
     public DMNInterpreter getInterpreter() {
@@ -79,35 +78,39 @@ public class JDMNTestContext implements TestSuiteContext {
 
     public void prepareModel(URL modelURL, Collection<? extends URL> additionalModelURLs, BuildLogger logger) {
         Map<URL, TDefinitions> modelMap = new LinkedHashMap<>();
-        TDefinitions rootDefinitions = null;
-        List<TDefinitions> importedDefinitions = new ArrayList<>();
+        List<Pair<TDefinitions, PrefixNamespaceMappings>> pairs = new ArrayList<>();
         PrefixNamespaceMappings prefixNamespaceMappings = new PrefixNamespaceMappings();
         if (modelURL != null) {
             Pair<TDefinitions, PrefixNamespaceMappings> pair = dmnReader.read(modelURL);
             modelMap.put(modelURL, pair.getLeft());
-            rootDefinitions = pair.getLeft();
-            prefixNamespaceMappings.merge(pair.getRight());
+            pairs.add(pair);
         }
         for (URL url: additionalModelURLs) {
             Pair<TDefinitions, PrefixNamespaceMappings> pair = dmnReader.read(url);
             modelMap.put(modelURL, pair.getLeft());
-            importedDefinitions.add(pair.getLeft());
-            prefixNamespaceMappings.merge(pair.getRight());
+            pairs.add(pair);
         }
-        DMNModelRepository repository = new DMNModelRepository(rootDefinitions, importedDefinitions, prefixNamespaceMappings);
+        DMNModelRepository repository = new DMNModelRepository(pairs);
         this.dmnTransformer.transform(repository);
         if (DEBUG_TRANSFORMER) {
             for (Map.Entry<URL, TDefinitions> entry: modelMap.entrySet()) {
                 save(entry.getKey(), entry.getValue());
             }
         }
-        this.interpreter = dialectDefinition.createDMNInterpreter(repository);
-        this.basicToJavaTransformer = dialectDefinition.createBasicTransformer(repository, new NopLazyEvaluationDetector(), new LinkedHashMap<>());
+        LinkedHashMap<String, String> inputParameters = getInputParameters();
+        this.interpreter = dialectDefinition.createDMNInterpreter(repository, inputParameters);
+        this.basicToJavaTransformer = dialectDefinition.createBasicTransformer(repository, new NopLazyEvaluationDetector(), inputParameters);
+    }
+
+    private LinkedHashMap<String, String> getInputParameters() {
+        LinkedHashMap<String, String> result = new LinkedHashMap<>();
+        result.put("singletonInputData", "false");
+        return result;
     }
 
     public void clean(TestCases testCases) {
         DMNModelRepository repository = basicToJavaTransformer.getDMNModelRepository();
-        this.dmnTransformer.transform(repository, testCases);
+        this.dmnTransformer.transform(repository, Arrays.asList(testCases));
         if (DEBUG_TRANSFORMER) {
             save(testCases);
         }
@@ -131,6 +134,14 @@ public class JDMNTestContext implements TestSuiteContext {
     private void save(TestCases testCases) {
         String tempFolder = TEMP_FOLDER.get(dmnTransformer.getClass());
         File tckFile = new File(tempFolder + testCases.getModelName().replace(".dmn", "") + "-test-01.xml");
-        this.tckReader.write(testCases, tckFile, new DMNNamespacePrefixMapper());
+        this.tckReader.write(testCases, tckFile, new TCKNamespacePrefixMapper());
+    }
+
+    public void setTestCases(TestCases testCases) {
+        this.testCases = testCases;
+    }
+
+    public TestCases getTestCases() {
+        return testCases;
     }
 }
