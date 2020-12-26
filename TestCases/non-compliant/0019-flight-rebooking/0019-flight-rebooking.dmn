@@ -132,7 +132,7 @@
 	
 	<businessKnowledgeModel id="b_PassengerPriority" name="passenger priority">
 		<variable name="passenger priority"/>
-		<encapsulatedLogic>
+		<encapsulatedLogic typeRef="boolean">
 			<formalParameter name="Passenger1" typeRef="tPassenger"/>
 		    <formalParameter name="Passenger2" typeRef="tPassenger"/>
 		    <decisionTable hitPolicy="UNIQUE">
@@ -241,7 +241,7 @@
 	
 	<businessKnowledgeModel id="b_ReassignNextPassenger" name="reassign next passenger">
 	    <variable name="reassign next passenger"/>
-	    <encapsulatedLogic>
+	    <encapsulatedLogic typeRef="tPassengerTable">
 			<formalParameter name="Waiting List" typeRef="tPassengerTable"/>
 			<formalParameter name="Reassigned Passengers List" typeRef="tPassengerTable"/>
 			<formalParameter name="Flights" typeRef="tFlightTable"/>
@@ -321,7 +321,7 @@
 	</businessKnowledgeModel>
     
     <businessKnowledgeModel id="b_HasCapacity" name="has capacity">
-        <variable name="has capacity"/>
+        <variable name="has capacity" typeRef="boolean"/>
         <encapsulatedLogic>
             <formalParameter name="flight" typeRef="tFlight"/>
             <formalParameter name="rebooked list" typeRef="tPassengerTable"/>
