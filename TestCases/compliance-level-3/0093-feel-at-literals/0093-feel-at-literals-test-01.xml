@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Contributed to DMN TCK by StrayAlien -->
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation=""
+           xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <modelName>0093-feel-at-literals.dmn</modelName>
+
+    <testCase id="test_001">
+        <description>invalid value has null value</description>
+        <resultNode name="test_001" type="decision" errorResult="true">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="date_001">
+        <description>will parse date to date type</description>
+        <resultNode name="date_001" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="date_002">
+        <description>will parse date value</description>
+        <resultNode name="date_002" type="decision">
+            <expected>
+                <value xsi:type="xsd:date">2019-03-31</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="datetime_001">
+        <description>will parse to date time type</description>
+        <resultNode name="datetime_001" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="datetime_002">
+        <description>will parse date time value</description>
+        <resultNode name="datetime_002" type="decision">
+            <expected>
+                <value xsi:type="xsd:dateTime">2018-12-08T10:30:11</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="time_001">
+        <description>will parse to time type</description>
+        <resultNode name="time_001" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="time_002">
+        <description>will parse time value</description>
+        <resultNode name="time_002" type="decision">
+            <expected>
+                <value xsi:type="xsd:time">10:30:11</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="dt_duration_001">
+        <description>will parse to days and time duration type</description>
+        <resultNode name="dt_duration_001" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="dt_duration_002">
+        <description>will parse days and time duration value</description>
+        <resultNode name="dt_duration_002" type="decision">
+            <expected>
+                <value xsi:type="xsd:duration">P10D</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="ym_duration_001">
+        <description>will parse to years and months duration type</description>
+        <resultNode name="ym_duration_001" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="ym_duration_002">
+        <description>will parse years and months duration value</description>
+        <resultNode name="ym_duration_002" type="decision">
+            <expected>
+                <value xsi:type="xsd:duration">P10Y</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+</testCases>
