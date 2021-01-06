@@ -803,6 +803,16 @@
         </literalExpression>
     </decision>
 
+    <decision name="dt_duration_008" id="_dt_duration_008">
+        <description>Tests FEEL expression: 'duration("P0D") = duration("P0Y")' and expects result: 'true (boolean)'</description>
+        <question>Result of FEEL expression 'duration("P0D") = duration("P0Y")'?</question>
+        <allowedAnswers>true (boolean)</allowedAnswers>
+        <variable typeRef="boolean" name="dt_duration_008"/>
+        <literalExpression>
+            <text>duration("P0D") = duration("P0Y")</text>
+        </literalExpression>
+    </decision>
+
     <decision name="ym_duration_001" id="_ym_duration_001">
         <description>Tests FEEL expression: 'duration("P1Y") = duration("P1Y")' and expects result: 'true (boolean)'</description>
         <question>Result of FEEL expression 'duration("P1Y") = duration("P1Y")'?</question>
@@ -953,6 +963,83 @@
         </literalExpression>
     </decision>
 
+    <decision name="fn_001" id="_fn_001">
+        <description>Tests FEEL expression: '(function() "foo") = (function() "foo")' and expects result: 'false (boolean)'</description>
+        <question>Tests FEEL expression: '(function() "foo") = (function() "foo")'?</question>
+        <allowedAnswers>false (boolean)</allowedAnswers>
+        <variable typeRef="boolean" name="fn_001"/>
+        <literalExpression>
+            <text>(function() "foo") = (function() "foo")</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="fn_002" id="_fn_002">
+        <description>Tests FEEL expression: "max = mean" and expects result: 'false (boolean)'</description>
+        <question>Tests FEEL expression: 'max = mean"?</question>
+        <allowedAnswers>false (boolean)</allowedAnswers>
+        <variable typeRef="boolean" name="fn_002"/>
+        <literalExpression>
+            <text>max = mean</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="fn_003" id="_fn_003">
+        <description>Tests FEEL expression: "count = count" and expects result: 'true (boolean)'</description>
+        <question>Tests FEEL expression: 'count = count"?</question>
+        <allowedAnswers>true (boolean)</allowedAnswers>
+        <variable typeRef="boolean" name="fn_003"/>
+        <literalExpression>
+            <text>count = count</text>
+        </literalExpression>
+    </decision>
+
+    <businessKnowledgeModel name="fn_bkm_001" id="_fn_bkm_001">
+        <variable name="fn_bkm_001"/>
+        <encapsulatedLogic>
+            <literalExpression>
+                <text>"foo"</text>
+            </literalExpression>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+
+    <businessKnowledgeModel name="fn_bkm_002" id="_fn_bkm_002">
+        <variable name="fn_bkm_002"/>
+        <encapsulatedLogic>
+            <literalExpression>
+                <text>"foo"</text>
+            </literalExpression>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+
+    <decision name="fn_004" id="_fn_004">
+        <description>Tests FEEL expression: "fn_bkm_001 = fn_bkm_001" and expects result: 'true (boolean)'</description>
+        <question>Tests FEEL expression: 'fn_bkm_001 = fn_bkm_001"?</question>
+        <allowedAnswers>true (boolean)</allowedAnswers>
+        <variable typeRef="boolean" name="fn_004"/>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#_fn_bkm_001"/>
+        </knowledgeRequirement>
+        <literalExpression>
+            <text>fn_bkm_001 = fn_bkm_001</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="fn_005" id="_fn_005">
+        <description>Tests FEEL expression: "fn_bkm_001 = fn_bkm_002" and expects result: 'false (boolean)'</description>
+        <question>Tests FEEL expression: 'fn_bkm_001 = fn_bkm_002"?</question>
+        <allowedAnswers>false (boolean)</allowedAnswers>
+        <variable typeRef="boolean" name="fn_005"/>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#_fn_bkm_001"/>
+        </knowledgeRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#_fn_bkm_002"/>
+        </knowledgeRequirement>
+        <literalExpression>
+            <text>fn_bkm_001 = fn_bkm_002</text>
+        </literalExpression>
+    </decision>
+
 <!--     <decision name="singleton_001" id="_singleton_001">
         <description>Tests FEEL expression: '[100] = 100' and expects result: 'null (boolean)'</description>
         <question>Result of FEEL expression '[100] = 100'?</question>
@@ -962,6 +1049,96 @@
             <text>[100] = 100</text>
         </literalExpression>
     </decision> -->
+
+    <decision name="range_001" id="_range_001">
+        <description>Tests FEEL expression: "[1..10] = [1..10]" and expects result: 'true (boolean)'</description>
+        <question>Tests FEEL expression: '[1..10] = [1..10]'?</question>
+        <allowedAnswers>true (boolean)</allowedAnswers>
+        <variable typeRef="boolean" name="range_001"/>
+        <literalExpression>
+            <text>[1..10] = [1..10]</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="range_002" id="_range_002">
+        <description>Tests FEEL expression: "[1..10] = [1..11]" and expects result: 'false (boolean)'</description>
+        <question>Tests FEEL expression: '[1..10] = [1..11]'?</question>
+        <allowedAnswers>true (boolean)</allowedAnswers>
+        <variable typeRef="boolean" name="range_002"/>
+        <literalExpression>
+            <text>[1..2] = [1..3]</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="range_003" id="_range_003">
+        <description>Tests FEEL expression: "[2..10] = [1..10]" and expects result: 'false (boolean)'</description>
+        <question>Tests FEEL expression: '[2..10] = [1..10]"?</question>
+        <allowedAnswers>true (boolean)</allowedAnswers>
+        <variable typeRef="boolean" name="range_003"/>
+        <literalExpression>
+            <text>[2..10] = [1..10]</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="range_004" id="_range_004">
+        <description>Tests FEEL expression: "(1..10] = ]1..10]" and expects result: 'true (boolean)'</description>
+        <question>Tests FEEL expression: '(1..10] = ]1..10]"?</question>
+        <allowedAnswers>true (boolean)</allowedAnswers>
+        <variable typeRef="boolean" name="range_004"/>
+        <literalExpression>
+            <text>(1..10] = ]1..10]</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="range_005" id="_range_005">
+        <description>Tests FEEL expression: "[1..10) = [1..10[" and expects result: 'true (boolean)'</description>
+        <question>Tests FEEL expression: '[1..10) = [1..10['?</question>
+        <allowedAnswers>true (boolean)</allowedAnswers>
+        <variable typeRef="boolean" name="range_005"/>
+        <literalExpression>
+            <text>[1..10) = [1..10[</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="range_006" id="_range_006">
+        <description>Tests FEEL expression: "(&lt; 10) = (null..10)" and expects result: 'true (boolean)'</description>
+        <question>Tests FEEL expression: '(&lt; 10) = (null..10)'?</question>
+        <allowedAnswers>true (boolean)</allowedAnswers>
+        <variable typeRef="boolean" name="range_006"/>
+        <literalExpression>
+            <text>(&lt; 10) = (null..10)</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="range_007" id="_range_007">
+        <description>Tests FEEL expression: "(&lt;= 10) = (null..10]" and expects result: 'true (boolean)'</description>
+        <question>Tests FEEL expression: '(&lt;= 10) = (null..10]'?</question>
+        <allowedAnswers>true (boolean)</allowedAnswers>
+        <variable typeRef="boolean" name="range_007"/>
+        <literalExpression>
+            <text>(&lt;= 10) = (null..10]</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="range_008" id="_range_008">
+        <description>Tests FEEL expression: "(&gt; 10) = (10..null)" and expects result: 'true (boolean)'</description>
+        <question>Tests FEEL expression: '(&gt; 10) = (10..null)'?</question>
+        <allowedAnswers>true (boolean)</allowedAnswers>
+        <variable typeRef="boolean" name="range_008"/>
+        <literalExpression>
+            <text>(&gt; 10) = (10..null)</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="range_009" id="_range_009">
+        <description>Tests FEEL expression: "(&gt;= 10) = [10..null)" and expects result: 'true (boolean)'</description>
+        <question>Tests FEEL expression: '(&gt;= 10) = [10..null)'?</question>
+        <allowedAnswers>true (boolean)</allowedAnswers>
+        <variable typeRef="boolean" name="range_009"/>
+        <literalExpression>
+            <text>(&gt;= 10) = [10..null)</text>
+        </literalExpression>
+    </decision>
 
 </definitions>
 
