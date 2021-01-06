@@ -249,5 +249,26 @@
         </literalExpression>
     </decision>
 
+    <decision name="null_001" id="_null_001">
+        <variable name="null_001"/>
+        <literalExpression>
+            <text>null between 1 and 10</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="null_002" id="_null_002">
+        <variable name="null_002"/>
+        <literalExpression>
+            <text>2 between null and 10</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="null_003" id="_null_003">
+        <variable name="null_003"/>
+        <literalExpression>
+            <text>2 between 1 and null</text>
+        </literalExpression>
+    </decision>
+
 </definitions>
 
