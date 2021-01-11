@@ -60,7 +60,6 @@
         </resultNode>
     </testCase>
 
-<!--
     <testCase id="decision_005">
         <description>named param</description>
         <resultNode name="decision_005" type="decision">
@@ -86,9 +85,7 @@
             </expected>
         </resultNode>
     </testCase>
--->
 
-<!--
     <testCase id="decision_006">
         <description>bad named param</description>
         <resultNode errorResult="true" name="decision_006" type="decision">
@@ -97,7 +94,6 @@
             </expected>
         </resultNode>
     </testCase>
--->
 
     <testCase id="decision_007">
         <description>not a map as param</description>
