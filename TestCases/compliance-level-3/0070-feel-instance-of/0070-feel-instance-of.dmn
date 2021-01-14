@@ -85,7 +85,7 @@
     <decision name="null_008" id="_null_008">
         <variable name="null_008"/>
         <literalExpression>
-            <text>null instance of list&lt;any&gt;</text>
+            <text>null instance of list&lt;Any&gt;</text>
         </literalExpression>
     </decision>
 
@@ -114,8 +114,8 @@
     <decision name="null_012" id="_null_012">
         <variable name="null_012"/>
         <literalExpression>
-            <!-- function<> -> any -->
-            <text>null instance of function&lt;&gt; -&gt; any</text>
+            <!-- function<> -> Any -->
+            <text>null instance of function&lt;&gt; -&gt; Any</text>
         </literalExpression>
     </decision>
 
@@ -171,7 +171,7 @@
     <decision name="number_008" id="_number_008">
         <variable name="number_008"/>
         <literalExpression>
-            <text>123.01 instance of list&lt;any&gt;</text>
+            <text>123.01 instance of list&lt;Any&gt;</text>
         </literalExpression>
     </decision>
 
@@ -199,7 +199,7 @@
     <decision name="number_012" id="_number_012">
         <variable name="number_012"/>
         <literalExpression>
-            <text>123.01 instance of function&lt;&gt;-&gt;any</text>
+            <text>123.01 instance of function&lt;&gt;-&gt;Any</text>
         </literalExpression>
     </decision>
 
@@ -263,7 +263,7 @@
     <decision name="string_008" id="_string_008">
         <variable name="string_008"/>
         <literalExpression>
-            <text>"foo" instance of list&lt;any&gt;</text>
+            <text>"foo" instance of list&lt;Any&gt;</text>
         </literalExpression>
     </decision>
 
@@ -291,7 +291,7 @@
     <decision name="string_012" id="_string_012">
         <variable name="string_012"/>
         <literalExpression>
-            <text>"foo" instance of function&lt;&gt;-&gt;any</text>
+            <text>"foo" instance of function&lt;&gt;-&gt;Any</text>
         </literalExpression>
     </decision>
 
@@ -356,7 +356,7 @@
     <decision name="boolean_008" id="_boolean_008">
         <variable name="boolean_008"/>
         <literalExpression>
-            <text>true instance of list&lt;any&gt;</text>
+            <text>true instance of list&lt;Any&gt;</text>
         </literalExpression>
     </decision>
 
@@ -386,7 +386,7 @@
     <decision name="boolean_012" id="_boolean_012">
         <variable name="boolean_012"/>
         <literalExpression>
-            <text>true instance of function&lt;&gt;-&gt;any</text>
+            <text>true instance of function&lt;&gt;-&gt;Any</text>
         </literalExpression>
     </decision>
 
@@ -443,7 +443,7 @@
     <decision name="date_008" id="_date_008">
         <variable name="date_008"/>
         <literalExpression>
-            <text>date("2018-12-08") instance of list&lt;any&gt;</text>
+            <text>date("2018-12-08") instance of list&lt;Any&gt;</text>
         </literalExpression>
     </decision>
 
@@ -471,7 +471,7 @@
     <decision name="date_012" id="_date_012">
         <variable name="date_012"/>
         <literalExpression>
-            <text>date("2018-12-08") instance of function&lt;&gt;-&gt;any</text>
+            <text>date("2018-12-08") instance of function&lt;&gt;-&gt;Any</text>
         </literalExpression>
     </decision>
 
@@ -527,7 +527,7 @@
     <decision name="time_008" id="_time_008">
         <variable name="time_008"/>
         <literalExpression>
-            <text>time("10:30:00") instance of list&lt;any&gt;</text>
+            <text>time("10:30:00") instance of list&lt;Any&gt;</text>
         </literalExpression>
     </decision>
 
@@ -555,7 +555,7 @@
     <decision name="time_012" id="_time_012">
         <variable name="time_012"/>
         <literalExpression>
-            <text>time("10:30:00") instance of function&lt;&gt;-&gt;any</text>
+            <text>time("10:30:00") instance of function&lt;&gt;-&gt;Any</text>
         </literalExpression>
     </decision>
 
@@ -640,7 +640,7 @@
     <decision name="list_012" id="_list_012">
         <variable name="list_012"/>
         <literalExpression>
-            <text>[1,2,3] instance of function&lt;&gt;-&gt;any</text>
+            <text>[1,2,3] instance of function&lt;&gt;-&gt;Any</text>
         </literalExpression>
     </decision>
 
@@ -770,7 +770,7 @@
     <decision name="ym_duration_008" id="_ym_duration_008">
         <variable name="ym_duration_008"/>
         <literalExpression>
-            <text>duration("P1Y") instance of list&lt;any&gt;</text>
+            <text>duration("P1Y") instance of list&lt;Any&gt;</text>
         </literalExpression>
     </decision>
 
@@ -798,7 +798,7 @@
     <decision name="ym_duration_012" id="_ym_duration_012">
         <variable name="ym_duration_012"/>
         <literalExpression>
-            <text>duration("P1Y") instance of function&lt;&gt;-&gt;any</text>
+            <text>duration("P1Y") instance of function&lt;&gt;-&gt;Any</text>
         </literalExpression>
     </decision>
 
@@ -855,7 +855,7 @@
     <decision name="dt_duration_008" id="_dt_duration_008">
         <variable name="dt_duration_008"/>
         <literalExpression>
-            <text>duration("P1D") instance of list&lt;any&gt;</text>
+            <text>duration("P1D") instance of list&lt;Any&gt;</text>
         </literalExpression>
     </decision>
 
@@ -883,7 +883,7 @@
     <decision name="dt_duration_012" id="_dt_duration_012">
         <variable name="dt_duration_012"/>
         <literalExpression>
-            <text>duration("P1D") instance of function&lt;&gt;-&gt;any</text>
+            <text>duration("P1D") instance of function&lt;&gt;-&gt;Any</text>
         </literalExpression>
     </decision>
 
@@ -940,7 +940,7 @@
     <decision name="context_008" id="_context_008">
         <variable name="context_008"/>
         <literalExpression>
-            <text>{a: "foo"} instance of list&lt;any&gt;</text>
+            <text>{a: "foo"} instance of list&lt;Any&gt;</text>
         </literalExpression>
     </decision>
 
@@ -968,7 +968,7 @@
     <decision name="context_012" id="_context_012">
         <variable name="context_012"/>
         <literalExpression>
-            <text>{a: "foo"} instance of function&lt;&gt;-&gt;any</text>
+            <text>{a: "foo"} instance of function&lt;&gt;-&gt;Any</text>
         </literalExpression>
     </decision>
 
@@ -1124,7 +1124,7 @@
     <decision name="function_008" id="_function_008">
         <variable name="function_008"/>
         <literalExpression>
-            <text>(function() "foo") instance of list&lt;any&gt;</text>
+            <text>(function() "foo") instance of list&lt;Any&gt;</text>
         </literalExpression>
     </decision>
 
@@ -1153,7 +1153,7 @@
         <variable name="function_012"/>
         <literalExpression>
             <!-- true: covariant return type -->
-            <text>(function() "foo") instance of function&lt;&gt;-&gt;any</text>
+            <text>(function() "foo") instance of function&lt;&gt;-&gt;Any</text>
         </literalExpression>
     </decision>
 
