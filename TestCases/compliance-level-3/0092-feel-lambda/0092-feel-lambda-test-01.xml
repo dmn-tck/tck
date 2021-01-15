@@ -52,7 +52,7 @@
         </resultNode>
     </testCase>
 
-    <testCase id="005">
+    <testCase id="006">
         <description>A BKM may return a Function Definition lambda with a closed over formal param</description>
         <resultNode name="decision_006_1" type="decision">
             <expected>
