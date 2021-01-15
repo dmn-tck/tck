@@ -99,4 +99,22 @@
 			</expected>
 		</resultNode>
 	</testCase>
+	<testCase id="decision_014">
+		<description>every: 'in' may appear in list identifier</description>
+		<resultNode name="decision_014" type="decision">
+			<expected>
+				<value xsi:type="xsd:boolean">false</value>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="decision_014a">
+		<description>some: 'in' may appear in list identifier</description>
+		<resultNode name="decision_014a" type="decision">
+			<expected>
+				<value xsi:type="xsd:boolean">true</value>
+			</expected>
+		</resultNode>
+	</testCase>
+
+
 </testCases>
