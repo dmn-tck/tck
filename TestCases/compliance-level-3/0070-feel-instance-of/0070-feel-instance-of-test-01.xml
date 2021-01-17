@@ -330,7 +330,7 @@
                 <value xsi:type="xsd:boolean">false</value>
             </expected>
         </resultNode>
-    </testCase-->>
+    </testCase-->
 
     <testCase id="string_012">
         <description>string instance of function is false</description>
