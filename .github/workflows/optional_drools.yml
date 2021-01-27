@@ -1,4 +1,4 @@
-name: "OPTIONAL Drools Runner"
+name: "[OPTIONAL] Drools Runner"
 
 on:
   [ push, pull_request ]

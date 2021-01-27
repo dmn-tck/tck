@@ -1,4 +1,4 @@
-name: "OPTIONAL Camunda Runner"
+name: "[OPTIONAL] Camunda Runner"
 
 on:
   [ push, pull_request ]
