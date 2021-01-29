@@ -222,13 +222,11 @@ const add = {
         [TYPE_YM_DURATION]: [ // <date> + <years and month duration>.  Commutative.
             ['@"P1Y"', '@"2021-01-01"', "2022-01-01", SCHEMA_TYPE_DATE],
             ['@"P1M"', '@"2021-01-01"', "2021-02-01", SCHEMA_TYPE_DATE],
-            // TODO
         ],
         [TYPE_DT_DURATION]: [ // <date> + <days and time duration>.  Commutative.
             ['@"2021-01-01"', '@"P1D"', "2021-01-02", SCHEMA_TYPE_DATE],
             ['@"2021-01-01"', '@"PT36H"', "2021-01-02", SCHEMA_TYPE_DATE, "Date + 1.5 days (in hours) gives date + 1 day"],
             ['@"2021-01-01"', '@"PT48H"', "2021-01-03", SCHEMA_TYPE_DATE, "Date + 2 days (in hours) gives date + 2 days"],
-            // TODO
         ]
     },
 
@@ -272,7 +270,6 @@ const add = {
         [TYPE_DT_DURATION]: [ // <days and time duration> + <days and time duration>
             ['@"P1D"', '@"P2D"', "P3D", SCHEMA_TYPE_DURATION],
             ['@"PT24H"', '@"P1D"', "P2D", SCHEMA_TYPE_DURATION],
-            // TODO
         ],
         [TYPE_DATE_AND_TIME]: [ // <days and time duration> + <date time>. commutative
             ['@"P1DT1H"', '@"2021-01-12T10:10:10"', "2021-01-13T11:10:10", SCHEMA_TYPE_DATE_TIME],
