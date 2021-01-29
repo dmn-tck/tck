@@ -515,6 +515,15 @@
         </resultNode>
     </testCase>
 
+    <testCase id="range_012_a">
+        <description>range - start: ambiguous 'no operation syntax' gives null </description>
+        <resultNode name="range_012_a" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
     <testCase id="range_013">
         <description>range - end: LT unary syntax</description>
         <resultNode name="range_013" type="decision">
@@ -545,6 +554,15 @@
     <testCase id="range_016">
         <description>range - end: GE unary syntax</description>
         <resultNode name="range_016" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="range_016_a">
+        <description>range - end: ambiguous 'no operation syntax' gives null </description>
+        <resultNode name="range_016_a" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -587,6 +605,15 @@
         </resultNode>
     </testCase>
 
+    <testCase id="range_020_a">
+        <description>range - start included: ambiguous 'no operation syntax' gives null </description>
+        <resultNode name="range_020_a" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
     <testCase id="range_021">
         <description>range - end included: LT unary syntax</description>
         <resultNode name="range_021" type="decision">
@@ -619,6 +646,15 @@
         <resultNode name="range_024" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="range_024_a">
+        <description>range - end included: ambiguous 'no operation syntax' gives null </description>
+        <resultNode name="range_024_a" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
             </expected>
         </resultNode>
     </testCase>
