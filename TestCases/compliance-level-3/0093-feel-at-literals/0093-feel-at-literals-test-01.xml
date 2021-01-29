@@ -52,17 +52,35 @@
     </testCase>
 
     <testCase id="datetime_003">
-        <description>will parse date time value with zone</description>
+        <description>will parse to date time with zone</description>
         <resultNode name="datetime_003" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="datetime_004">
+        <description>will parse date time value with zone</description>
+        <resultNode name="datetime_004" type="decision">
             <expected>
                 <value xsi:type="xsd:string">2018-12-08T10:30:11@Australia/Melbourne</value>
             </expected>
         </resultNode>
     </testCase>
 
-    <testCase id="datetime_004">
+    <testCase id="datetime_005">
+        <description>will parse to date time value with offset</description>
+        <resultNode name="datetime_005" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="datetime_006">
         <description>will parse date time value with offset</description>
-        <resultNode name="datetime_004" type="decision">
+        <resultNode name="datetime_006" type="decision">
             <expected>
                 <value xsi:type="xsd:dateTime">2018-12-08T10:30:11+11:00</value>
             </expected>
@@ -88,17 +106,35 @@
     </testCase>
 
     <testCase id="time_003">
-        <description>will parse time value + offset</description>
+        <description>will parse to time + offset</description>
         <resultNode name="time_003" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="time_004">
+        <description>will parse time value + offset</description>
+        <resultNode name="time_004" type="decision">
             <expected>
                 <value xsi:type="xsd:time">10:30:11+11:00</value>
             </expected>
         </resultNode>
     </testCase>
 
-    <testCase id="time_004">
+    <testCase id="time_005">
+        <description>will parse to time + zone</description>
+        <resultNode name="time_005" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="time_006">
         <description>will parse time value + zone</description>
-        <resultNode name="time_004" type="decision">
+        <resultNode name="time_006" type="decision">
             <expected>
                 <value xsi:type="xsd:string">10:30:11@Australia/Melbourne</value>
             </expected>

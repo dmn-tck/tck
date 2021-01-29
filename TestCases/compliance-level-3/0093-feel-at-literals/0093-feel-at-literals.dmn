@@ -47,12 +47,26 @@
     <decision name="datetime_003" id="_datetime_003">
         <variable name="datetime_003"/>
         <literalExpression>
-            <text>string(@"2018-12-08T10:30:11@Australia/Melbourne")</text>
+            <text>@"2018-12-08T10:30:11@Australia/Melbourne" instance of date and time</text>
         </literalExpression>
     </decision>
 
     <decision name="datetime_004" id="_datetime_004">
         <variable name="datetime_004"/>
+        <literalExpression>
+            <text>string(@"2018-12-08T10:30:11@Australia/Melbourne")</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="datetime_005" id="_datetime_005">
+        <variable name="datetime_005"/>
+        <literalExpression>
+            <text>@"2018-12-08T10:30:11+11:00" instance of date and time</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="datetime_006" id="_datetime_006">
+        <variable name="datetime_006"/>
         <literalExpression>
             <text>@"2018-12-08T10:30:11+11:00"</text>
         </literalExpression>
@@ -75,12 +89,26 @@
     <decision name="time_003" id="_time_003">
         <variable name="time_003"/>
         <literalExpression>
-            <text>@"10:30:11+11:00"</text>
+            <text>@"10:30:11+11:00" instance of time</text>
         </literalExpression>
     </decision>
 
     <decision name="time_004" id="_time_004">
         <variable name="time_004"/>
+        <literalExpression>
+            <text>@"10:30:11+11:00"</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="time_005" id="_time_005">
+        <variable name="time_005"/>
+        <literalExpression>
+            <text>@"10:30:11@Australia/Melbourne" instance of time</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="time_006" id="_time_006">
+        <variable name="time_006"/>
         <literalExpression>
             <text>string(@"10:30:11@Australia/Melbourne")</text>
         </literalExpression>
