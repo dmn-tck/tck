@@ -1207,7 +1207,7 @@
         <description>subtract_lhs_dateAndTime_minus_rhs_dtDuration_003</description>
         <resultNode name="subtract_lhs_dateAndTime_minus_rhs_dtDuration_003" type="decision" >
             <expected>
-                <value xsi:type="xsd:dateTime">2020-12-31T10:10:10+11:00</value>
+                <value xsi:type="xsd:dateTime">2021-01-01T23:00:00</value>
             </expected>
         </resultNode>
     </testCase>
@@ -1215,6 +1215,15 @@
     <testCase id="subtract_lhs_dateAndTime_minus_rhs_dtDuration_004">
         <description>subtract_lhs_dateAndTime_minus_rhs_dtDuration_004</description>
         <resultNode name="subtract_lhs_dateAndTime_minus_rhs_dtDuration_004" type="decision" >
+            <expected>
+                <value xsi:type="xsd:dateTime">2020-12-31T10:10:10+11:00</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="subtract_lhs_dateAndTime_minus_rhs_dtDuration_005">
+        <description>subtract_lhs_dateAndTime_minus_rhs_dtDuration_005</description>
+        <resultNode name="subtract_lhs_dateAndTime_minus_rhs_dtDuration_005" type="decision" >
             <expected>
                 <value xsi:type="xsd:string">2020-12-31T10:10:10@Australia/Melbourne</value>
             </expected>
@@ -1315,7 +1324,7 @@
         <description>subtract_lhs_date_minus_rhs_dtDuration_002</description>
         <resultNode name="subtract_lhs_date_minus_rhs_dtDuration_002" type="decision" >
             <expected>
-                <value xsi:type="xsd:date">2021-01-02</value>
+                <value xsi:type="xsd:date">2021-01-01</value>
             </expected>
         </resultNode>
     </testCase>
@@ -1324,7 +1333,7 @@
         <description>subtract_lhs_date_minus_rhs_dtDuration_003</description>
         <resultNode name="subtract_lhs_date_minus_rhs_dtDuration_003" type="decision" >
             <expected>
-                <value xsi:type="xsd:date">2021-01-01</value>
+                <value xsi:type="xsd:date">2021-01-02</value>
             </expected>
         </resultNode>
     </testCase>
@@ -1332,6 +1341,42 @@
     <testCase id="subtract_lhs_date_minus_rhs_dtDuration_004">
         <description>subtract_lhs_date_minus_rhs_dtDuration_004</description>
         <resultNode name="subtract_lhs_date_minus_rhs_dtDuration_004" type="decision" >
+            <expected>
+                <value xsi:type="xsd:date">2021-01-01</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="subtract_lhs_date_minus_rhs_dtDuration_005">
+        <description>subtract_lhs_date_minus_rhs_dtDuration_005</description>
+        <resultNode name="subtract_lhs_date_minus_rhs_dtDuration_005" type="decision" >
+            <expected>
+                <value xsi:type="xsd:date">2020-12-31</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="subtract_lhs_date_minus_rhs_dtDuration_006">
+        <description>subtract_lhs_date_minus_rhs_dtDuration_006</description>
+        <resultNode name="subtract_lhs_date_minus_rhs_dtDuration_006" type="decision" >
+            <expected>
+                <value xsi:type="xsd:date">2021-01-03</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="subtract_lhs_date_minus_rhs_dtDuration_007">
+        <description>subtract_lhs_date_minus_rhs_dtDuration_007</description>
+        <resultNode name="subtract_lhs_date_minus_rhs_dtDuration_007" type="decision" >
+            <expected>
+                <value xsi:type="xsd:date">2021-01-03</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="subtract_lhs_date_minus_rhs_dtDuration_008">
+        <description>subtract_lhs_date_minus_rhs_dtDuration_008</description>
+        <resultNode name="subtract_lhs_date_minus_rhs_dtDuration_008" type="decision" >
             <expected>
                 <value xsi:type="xsd:date">2020-02-29</value>
             </expected>

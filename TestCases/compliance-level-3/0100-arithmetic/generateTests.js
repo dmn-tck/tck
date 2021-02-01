@@ -344,6 +344,7 @@ const subtract = {
         [TYPE_DT_DURATION]: [ // <date and time> - <days and time duration>
             ['@"2021-01-01T10:10:10"', '@"P1D"', "2020-12-31T10:10:10", SCHEMA_TYPE_DATE_TIME],
             ['@"2021-01-01T10:10:10"', '@"PT1H"', "2021-01-01T09:10:10", SCHEMA_TYPE_DATE_TIME],
+            ['@"2021-01-02T00:00:00"', '@"PT1H"', "2021-01-01T23:00:00", SCHEMA_TYPE_DATE_TIME],
             ['@"2021-01-01T10:10:10+11:00"', '@"P1D"', "2020-12-31T10:10:10+11:00", SCHEMA_TYPE_DATE_TIME],
             ['@"2021-01-01T10:10:10@Australia/Melbourne"', '@"P1D"', "2020-12-31T10:10:10@Australia/Melbourne", SCHEMA_TYPE_STRING],
         ]
@@ -367,8 +368,12 @@ const subtract = {
         ],
         [TYPE_DT_DURATION]: [ // <date> - <days and time duration>
             ['@"2021-01-02"', '@"P1D"', "2021-01-01", SCHEMA_TYPE_DATE],
-            ['@"2021-01-02"', '@"PT1H"', "2021-01-02", SCHEMA_TYPE_DATE],
+            ['@"2021-01-02"', '@"PT1H"', "2021-01-01", SCHEMA_TYPE_DATE],
+            ['@"2021-01-02"', '@"-PT1H"', "2021-01-02", SCHEMA_TYPE_DATE],
             ['@"2021-01-02"', '@"PT24H"', "2021-01-01", SCHEMA_TYPE_DATE],
+            ['@"2021-01-02"', '@"PT25H"', "2020-12-31", SCHEMA_TYPE_DATE],
+            ['@"2021-01-02"', '@"-PT25H"', "2021-01-03", SCHEMA_TYPE_DATE],
+            ['@"2021-01-02"', '@"-PT24H"', "2021-01-03", SCHEMA_TYPE_DATE],
             ['@"2020-03-01"', '@"PT24H"', "2020-02-29", SCHEMA_TYPE_DATE],
         ]
     },
