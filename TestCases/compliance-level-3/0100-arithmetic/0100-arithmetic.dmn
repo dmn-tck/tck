@@ -1334,10 +1334,10 @@
 
     <decision name="subtract_lhs_date_minus_rhs_dtDuration_003" id="_subtract_lhs_date_minus_rhs_dtDuration_003">
         <description>subtract_lhs_date_minus_rhs_dtDuration_003</description>
-        <allowedAnswers>2021-01-02 (date)</allowedAnswers>
+        <allowedAnswers>2021-01-01 (date)</allowedAnswers>
         <variable name="subtract_lhs_date_minus_rhs_dtDuration_003"/>
         <literalExpression>
-            <text>@"2021-01-02" - @"-PT1H"</text>
+            <text>@"2021-01-02" - @"PT1M"</text>
         </literalExpression>
     </decision>
 
@@ -1346,41 +1346,77 @@
         <allowedAnswers>2021-01-01 (date)</allowedAnswers>
         <variable name="subtract_lhs_date_minus_rhs_dtDuration_004"/>
         <literalExpression>
-            <text>@"2021-01-02" - @"PT24H"</text>
+            <text>@"2021-01-02" - @"PT1S"</text>
         </literalExpression>
     </decision>
 
     <decision name="subtract_lhs_date_minus_rhs_dtDuration_005" id="_subtract_lhs_date_minus_rhs_dtDuration_005">
         <description>subtract_lhs_date_minus_rhs_dtDuration_005</description>
-        <allowedAnswers>2020-12-31 (date)</allowedAnswers>
+        <allowedAnswers>2021-01-02 (date)</allowedAnswers>
         <variable name="subtract_lhs_date_minus_rhs_dtDuration_005"/>
         <literalExpression>
-            <text>@"2021-01-02" - @"PT25H"</text>
+            <text>@"2021-01-02" - @"-PT1H"</text>
         </literalExpression>
     </decision>
 
     <decision name="subtract_lhs_date_minus_rhs_dtDuration_006" id="_subtract_lhs_date_minus_rhs_dtDuration_006">
         <description>subtract_lhs_date_minus_rhs_dtDuration_006</description>
-        <allowedAnswers>2021-01-03 (date)</allowedAnswers>
+        <allowedAnswers>2021-01-02 (date)</allowedAnswers>
         <variable name="subtract_lhs_date_minus_rhs_dtDuration_006"/>
         <literalExpression>
-            <text>@"2021-01-02" - @"-PT25H"</text>
+            <text>@"2021-01-02" - @"-PT1M"</text>
         </literalExpression>
     </decision>
 
     <decision name="subtract_lhs_date_minus_rhs_dtDuration_007" id="_subtract_lhs_date_minus_rhs_dtDuration_007">
         <description>subtract_lhs_date_minus_rhs_dtDuration_007</description>
-        <allowedAnswers>2021-01-03 (date)</allowedAnswers>
+        <allowedAnswers>2021-01-02 (date)</allowedAnswers>
         <variable name="subtract_lhs_date_minus_rhs_dtDuration_007"/>
         <literalExpression>
-            <text>@"2021-01-02" - @"-PT24H"</text>
+            <text>@"2021-01-02" - @"-PT1S"</text>
         </literalExpression>
     </decision>
 
     <decision name="subtract_lhs_date_minus_rhs_dtDuration_008" id="_subtract_lhs_date_minus_rhs_dtDuration_008">
         <description>subtract_lhs_date_minus_rhs_dtDuration_008</description>
-        <allowedAnswers>2020-02-29 (date)</allowedAnswers>
+        <allowedAnswers>2021-01-01 (date)</allowedAnswers>
         <variable name="subtract_lhs_date_minus_rhs_dtDuration_008"/>
+        <literalExpression>
+            <text>@"2021-01-02" - @"PT24H"</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="subtract_lhs_date_minus_rhs_dtDuration_009" id="_subtract_lhs_date_minus_rhs_dtDuration_009">
+        <description>subtract_lhs_date_minus_rhs_dtDuration_009</description>
+        <allowedAnswers>2020-12-31 (date)</allowedAnswers>
+        <variable name="subtract_lhs_date_minus_rhs_dtDuration_009"/>
+        <literalExpression>
+            <text>@"2021-01-02" - @"PT25H"</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="subtract_lhs_date_minus_rhs_dtDuration_010" id="_subtract_lhs_date_minus_rhs_dtDuration_010">
+        <description>subtract_lhs_date_minus_rhs_dtDuration_010</description>
+        <allowedAnswers>2021-01-03 (date)</allowedAnswers>
+        <variable name="subtract_lhs_date_minus_rhs_dtDuration_010"/>
+        <literalExpression>
+            <text>@"2021-01-02" - @"-PT25H"</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="subtract_lhs_date_minus_rhs_dtDuration_011" id="_subtract_lhs_date_minus_rhs_dtDuration_011">
+        <description>subtract_lhs_date_minus_rhs_dtDuration_011</description>
+        <allowedAnswers>2021-01-03 (date)</allowedAnswers>
+        <variable name="subtract_lhs_date_minus_rhs_dtDuration_011"/>
+        <literalExpression>
+            <text>@"2021-01-02" - @"-PT24H"</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="subtract_lhs_date_minus_rhs_dtDuration_012" id="_subtract_lhs_date_minus_rhs_dtDuration_012">
+        <description>subtract_lhs_date_minus_rhs_dtDuration_012</description>
+        <allowedAnswers>2020-02-29 (date)</allowedAnswers>
+        <variable name="subtract_lhs_date_minus_rhs_dtDuration_012"/>
         <literalExpression>
             <text>@"2020-03-01" - @"PT24H"</text>
         </literalExpression>

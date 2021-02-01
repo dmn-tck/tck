@@ -369,7 +369,11 @@ const subtract = {
         [TYPE_DT_DURATION]: [ // <date> - <days and time duration>
             ['@"2021-01-02"', '@"P1D"', "2021-01-01", SCHEMA_TYPE_DATE],
             ['@"2021-01-02"', '@"PT1H"', "2021-01-01", SCHEMA_TYPE_DATE],
+            ['@"2021-01-02"', '@"PT1M"', "2021-01-01", SCHEMA_TYPE_DATE],
+            ['@"2021-01-02"', '@"PT1S"', "2021-01-01", SCHEMA_TYPE_DATE],
             ['@"2021-01-02"', '@"-PT1H"', "2021-01-02", SCHEMA_TYPE_DATE],
+            ['@"2021-01-02"', '@"-PT1M"', "2021-01-02", SCHEMA_TYPE_DATE],
+            ['@"2021-01-02"', '@"-PT1S"', "2021-01-02", SCHEMA_TYPE_DATE],
             ['@"2021-01-02"', '@"PT24H"', "2021-01-01", SCHEMA_TYPE_DATE],
             ['@"2021-01-02"', '@"PT25H"', "2020-12-31", SCHEMA_TYPE_DATE],
             ['@"2021-01-02"', '@"-PT25H"', "2021-01-03", SCHEMA_TYPE_DATE],
