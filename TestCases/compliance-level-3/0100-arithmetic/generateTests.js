@@ -84,14 +84,14 @@ const DMN_TYPES_FROM_SCHEMA = {
 const multiply = {
 
     [TYPE_NUMBER]: {
-        [TYPE_NUMBER]: [ // <number> * <number>
+        [TYPE_NUMBER]: [ // <number> * <number>. Commutative
             // leftVal, rightVal, result, result XSD type, <optional> description
             [10, 10, 100, SCHEMA_TYPE_DECIMAL],
             [10, -10, -100, SCHEMA_TYPE_DECIMAL],
             [-10, -10, 100, SCHEMA_TYPE_DECIMAL],
             [10, 0, 0, SCHEMA_TYPE_DECIMAL]
         ],
-        [TYPE_DT_DURATION]: [ // <number> * <days and time duration>
+        [TYPE_DT_DURATION]: [ // <number> * <days and time duration>. Commutative
             [10, '@"P1D"', "P10D", SCHEMA_TYPE_DURATION],
             [10, '@"-P1D"', "-P10D", SCHEMA_TYPE_DURATION],
             [-10, '@"-P1D"', "P10D", SCHEMA_TYPE_DURATION],
@@ -101,7 +101,7 @@ const multiply = {
             [1.5, '@"P4DT1H"', "P6DT1H30M", SCHEMA_TYPE_DURATION],
             [2.5, '@"PT23H"', "P2DT9H30M", SCHEMA_TYPE_DURATION]
         ],
-        [TYPE_YM_DURATION]: [ // <number> * <years and months duration>
+        [TYPE_YM_DURATION]: [ // <number> * <years and months duration>. Commutative
             [10, '@"P1Y"', "P10Y", SCHEMA_TYPE_DURATION],
             [10, '@"-P1Y"', "-P10Y", SCHEMA_TYPE_DURATION],
             [-10, '@"-P1Y"', "P10Y", SCHEMA_TYPE_DURATION],
@@ -116,16 +116,14 @@ const multiply = {
     },
 
     [TYPE_YM_DURATION]: {
-        [TYPE_NUMBER]: [ // <years and months duration> * <number>. commutative.
-            ['@"P1Y"', 10, "P10Y", SCHEMA_TYPE_DURATION],
-            ['@"-P1Y"', 10, "-P10Y", SCHEMA_TYPE_DURATION]
+        [TYPE_NUMBER]: [ // <years and months duration> * <number>. Commutative.
+            // Commutative tests auto-generated
         ],
     },
 
     [TYPE_DT_DURATION]: {
-        [TYPE_NUMBER]: [ // <days and time duration> * <number>.  commutative.
-            ['@"P1D"', 10, "P10D", SCHEMA_TYPE_DURATION],
-            ['@"-P1D"', 10, "-P10D", SCHEMA_TYPE_DURATION]
+        [TYPE_NUMBER]: [ // <days and time duration> * <number>.  Commutative.
+            // Commutative tests auto-generated
         ]
     }
 }
@@ -196,6 +194,14 @@ const add = {
             ['@"2021-01-01T10:10:10+11:00"', '@"P1M"', "2021-02-01T10:10:10+11:00", SCHEMA_TYPE_DATE_TIME],
             ['@"2021-01-01T10:10:10+11:00"', '@"-P1M"', "2020-12-01T10:10:10+11:00", SCHEMA_TYPE_DATE_TIME],
             ['@"2021-01-01T10:10:10@Australia/Melbourne"', '@"P1M"', "2021-02-01T10:10:10@Australia/Melbourne", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10+11:00"', '@"P1M"', "-2021-02-01T10:10:10+11:00", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10+11:00"', '@"P1Y"', "-2020-01-01T10:10:10+11:00", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10+11:00"', '@"-P1M"', "-2022-12-01T10:10:10+11:00", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10+11:00"', '@"-P1Y"', "-2022-01-01T10:10:10+11:00", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10@Australia/Melbourne"', '@"P1M"', "-2021-02-01T10:10:10@Australia/Melbourne", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10@Australia/Melbourne"', '@"P1Y"', "-2020-01-01T10:10:10@Australia/Melbourne", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10@Australia/Melbourne"', '@"-P1M"', "-2022-12-01T10:10:10@Australia/Melbourne", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10@Australia/Melbourne"', '@"-P1Y"', "-2022-01-01T10:10:10@Australia/Melbourne", SCHEMA_TYPE_STRING],
         ],
         [TYPE_DT_DURATION]: [ // <date and time> + <days and time duration >
             ['@"2021-01-12T10:10:10"', '@"P1DT1H"', "2021-01-13T11:10:10", SCHEMA_TYPE_DATE_TIME],
@@ -206,9 +212,19 @@ const add = {
             ['@"2021-01-01T10:10:10"', '@"-PT1H"', "2021-01-01T09:10:10", SCHEMA_TYPE_DATE_TIME],
             ['@"2021-01-01T10:10:10"', '@"P0D"', "2021-01-01T10:10:10", SCHEMA_TYPE_DATE_TIME],
             ['@"2021-01-01T10:10:10"', '@"PT0H"', "2021-01-01T10:10:10", SCHEMA_TYPE_DATE_TIME],
+            ['@"2021-01-01T24:00:00"', '@"PT1S"', "2021-01-02T00:00:01", SCHEMA_TYPE_DATE_TIME],
+            ['@"2021-01-01T24:00:00"', '@"-PT1S"', "2021-01-01T23:59:59", SCHEMA_TYPE_DATE_TIME],
             ['@"2021-01-01T10:10:10+11:00"', '@"PT1H"', "2021-01-01T11:10:10+11:00", SCHEMA_TYPE_DATE_TIME],
             ['@"2021-01-01T10:10:10+11:00"', '@"-PT1H"', "2021-01-01T09:10:10+11:00", SCHEMA_TYPE_DATE_TIME],
             ['@"2021-01-12T10:10:10@Australia/Melbourne"', '@"P1DT1H"', "2021-01-13T11:10:10@Australia/Melbourne", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10+11:00"', '@"PT1H"', "-2021-01-01T11:10:10+11:00", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10+11:00"', '@"P1D"', "-2021-01-02T10:10:10+11:00", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10+11:00"', '@"-PT1H"', "-2021-01-01T09:10:10+11:00", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10+11:00"', '@"-P1D"', "-2022-12-31T10:10:10+11:00", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10@Australia/Melbourne"', '@"PT1H"', "-2021-01-01T11:10:10@Australia/Melbourne", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10@Australia/Melbourne"', '@"P1D"', "-2021-01-02T10:10:10@Australia/Melbourne", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10@Australia/Melbourne"', '@"-PT1H"', "-2021-01-01T09:10:10@Australia/Melbourne", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10@Australia/Melbourne"', '@"-P1D"', "-2022-12-31T10:10:10@Australia/Melbourne", SCHEMA_TYPE_STRING],
         ]
     },
 
@@ -239,6 +255,9 @@ const add = {
             ['@"10:15:00"', '@"P1D"', "10:15:00", SCHEMA_TYPE_TIME, "Time + days duration gives time"],
             ['@"10:15:00+11:00"', '@"P1D"', "10:15:00+11:00", SCHEMA_TYPE_TIME],
             ['@"10:15:00@Australia/Melbourne"', '@"P1D"', "10:15:00@Australia/Melbourne", SCHEMA_TYPE_STRING],
+            ['@"10:15:00@Australia/Melbourne"', '@"-P1D"', "10:15:00@Australia/Melbourne", SCHEMA_TYPE_STRING],
+            ['@"10:15:00@Australia/Melbourne"', '@"PT1H"', "11:15:00@Australia/Melbourne", SCHEMA_TYPE_STRING],
+            ['@"10:15:00@Australia/Melbourne"', '@"-PT1H"', "09:15:00@Australia/Melbourne", SCHEMA_TYPE_STRING],
         ]
     },
 
@@ -251,18 +270,11 @@ const add = {
             ['@"P1Y"', '@"P0M"', "P1Y", SCHEMA_TYPE_DURATION],
             ['@"P1Y"', '@"-P0M"', "P1Y", SCHEMA_TYPE_DURATION],
         ],
-        [TYPE_DATE_AND_TIME]: [ // <years and months duration> + <days and time duration>
-            ['@"P1Y"', '@"2021-01-01T10:10:10"', "2022-01-01T10:10:10", SCHEMA_TYPE_DATE_TIME],
-            ['@"P1M"', '@"2021-01-01T10:10:10"', "2021-02-01T10:10:10", SCHEMA_TYPE_DATE_TIME],
-            ['@"-P1Y"', '@"2021-01-01T10:10:10"', "2020-01-01T10:10:10", SCHEMA_TYPE_DATE_TIME],
-            ['@"-P1M"', '@"2021-01-01T10:10:10"', "2020-12-01T10:10:10", SCHEMA_TYPE_DATE_TIME],
-            ['@"P0Y"', '@"2021-01-01T10:10:10"', "2021-01-01T10:10:10", SCHEMA_TYPE_DATE_TIME],
-            ['@"P0M"', '@"2021-01-01T10:10:10"', "2021-01-01T10:10:10", SCHEMA_TYPE_DATE_TIME],
-            ['@"P1M"', '@"2021-01-01T10:10:10+11:00"', "2021-02-01T10:10:10+11:00", SCHEMA_TYPE_DATE_TIME],
-            ['@"P1M"', '@"2021-01-01T10:10:10@Australia/Melbourne"', "2021-02-01T10:10:10@Australia/Melbourne", SCHEMA_TYPE_STRING],
+        [TYPE_DATE_AND_TIME]: [ // <years and months duration> + <days and time duration>. Commutative
+            // Commutative tests auto-generated
         ],
-        [TYPE_DATE]: [ // <years and months duration> + <date>.  commutative.
-            ['@"2021-01-01"', '@"P1Y"', "2022-01-01", SCHEMA_TYPE_DATE],
+        [TYPE_DATE]: [ // <years and months duration> + <date>.  Commutative.
+            // Commutative tests auto-generated
         ]
     },
 
@@ -271,28 +283,20 @@ const add = {
             ['@"P1D"', '@"P2D"', "P3D", SCHEMA_TYPE_DURATION],
             ['@"PT24H"', '@"P1D"', "P2D", SCHEMA_TYPE_DURATION],
         ],
-        [TYPE_DATE_AND_TIME]: [ // <days and time duration> + <date time>. commutative
-            ['@"P1DT1H"', '@"2021-01-12T10:10:10"', "2021-01-13T11:10:10", SCHEMA_TYPE_DATE_TIME],
-            ['@"P1DT1H"', '@"2021-01-12T10:10:10+11:00"', "2021-01-13T11:10:10+11:00", SCHEMA_TYPE_DATE_TIME],
-            ['@"P1DT1H"', '@"2021-01-12T10:10:10@Australia/Melbourne"', "2021-01-13T11:10:10@Australia/Melbourne", SCHEMA_TYPE_STRING],
+        [TYPE_DATE_AND_TIME]: [ // <days and time duration> + <date time>.
+            // Commutative tests auto-generated
         ],
-        [TYPE_TIME]: [ // <days and time duration> + <time>.  commutative.
-            ['@"PT1H"', '@"10:15:00"', "11:15:00", SCHEMA_TYPE_TIME],
-            ['@"P1D"', '@"10:15:00"', "10:15:00", SCHEMA_TYPE_TIME],
-            ['@"P1D"', '@"10:15:00+11:00"', "10:15:00+11:00", SCHEMA_TYPE_TIME],
-            ['@"P1D"', '@"10:15:00@Australia/Melbourne"', "10:15:00@Australia/Melbourne", SCHEMA_TYPE_STRING],
-            ['@"-P1D"', '@"10:15:00@Australia/Melbourne"', "10:15:00@Australia/Melbourne", SCHEMA_TYPE_STRING],
-            ['@"PT1H"', '@"10:15:00@Australia/Melbourne"', "11:15:00@Australia/Melbourne", SCHEMA_TYPE_STRING],
-            ['@"-PT1H"', '@"10:15:00@Australia/Melbourne"', "09:15:00@Australia/Melbourne", SCHEMA_TYPE_STRING],
+        [TYPE_TIME]: [ // <days and time duration> + <time>.  Commutative.
+            // Commutative tests auto-generated
         ],
-        [TYPE_DATE]: [ // <days and time duration> + <date>\
-            ['@"P1D"', '@"2021-01-01"', "2021-01-02", SCHEMA_TYPE_DATE],
+        [TYPE_DATE]: [ // <days and time duration> + <date>
+            // Commutative tests auto-generated
         ]
     },
 
     [TYPE_STRING]: {
         [TYPE_STRING]: [ // <string> + <string>
-            ['"foo"','"bar"', "foobar", SCHEMA_TYPE_STRING],
+            ['"foo"', '"bar"', "foobar", SCHEMA_TYPE_STRING],
             ['"1"', '"1"', "11", SCHEMA_TYPE_STRING],
         ]
     }
@@ -325,6 +329,8 @@ const subtract = {
             ['@"2021-01-02T10:10:10+01:00"', '@"2021-01-01T10:10:10@Europe/Paris"', "P1D", SCHEMA_TYPE_DURATION, "Offset datetime is UTC and datetime has zone"],
             ['@"2021-01-02T10:10:10+01:00"', '@"2021-01-01T10:10:10"', "null", SCHEMA_TYPE_NIL, "Offset datetime is UTC and datetime has no zone"],
             ['@"2021-01-02T00:00:00Z"', '@"2021-01-02"', "P0D", SCHEMA_TYPE_DURATION, "Date is implicitly UTC 00:00:00"],
+            ['@"2021-01-02T10:10:10@Europe/Paris"', '@"1995-01-01T10:10:10@Europe/Paris"', "P9498D", SCHEMA_TYPE_DURATION, "year differences are expressed as days and time duration"],
+            ['@"2021-01-02T10:10:10@Europe/Paris"', '@"1995-01-01T10:10:10@Asia/Dhaka"', "P9498DT5H", SCHEMA_TYPE_DURATION, "year differences are expressed as days and time duration"],
         ],
         [TYPE_YM_DURATION]: [ // <date and time> - <years and months duration>
             ['@"2021-01-01T10:10:10"', '@"P1Y"', "2020-01-01T10:10:10", SCHEMA_TYPE_DATE_TIME],
@@ -335,18 +341,40 @@ const subtract = {
             ['@"2021-01-01T10:10:10"', '@"P0M"', "2021-01-01T10:10:10", SCHEMA_TYPE_DATE_TIME],
             ['@"2021-01-01T10:10:10+11:00"', '@"P1Y"', "2020-01-01T10:10:10+11:00", SCHEMA_TYPE_DATE_TIME],
             ['@"2021-01-01T10:10:10@Australia/Melbourne"', '@"P1Y"', "2020-01-01T10:10:10@Australia/Melbourne", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10+11:00"', '@"P1M"', "-2022-12-01T10:10:10+11:00", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10+11:00"', '@"P1Y"', "-2022-01-01T10:10:10+11:00", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10+11:00"', '@"-P1M"', "-2021-02-01T10:10:10+11:00", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10+11:00"', '@"-P1Y"', "-2020-01-01T10:10:10+11:00", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10@Australia/Melbourne"', '@"P1M"', "-2022-12-01T10:10:10@Australia/Melbourne", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10@Australia/Melbourne"', '@"P1Y"', "-2022-01-01T10:10:10@Australia/Melbourne", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10@Australia/Melbourne"', '@"-P1M"', "-2021-02-01T10:10:10@Australia/Melbourne", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10@Australia/Melbourne"', '@"-P1Y"', "-2020-01-01T10:10:10@Australia/Melbourne", SCHEMA_TYPE_STRING],
         ],
         [TYPE_DATE]: [ // <date and time> - <date>
             ['@"2021-01-01T00:00:00"', '@"2021-01-02"', "null", SCHEMA_TYPE_NIL, "Both must have zone info and date implies UTC"],
             ['@"2021-01-02T10:10:10@Europe/Paris"', '@"2021-01-01"', "P1DT9H10M10S", SCHEMA_TYPE_DURATION, "datetime has zone and date implies UTC"],
             ['@"2021-01-02T10:10:10+01:00"', '@"2021-01-01"', "P1DT9H10M10S", SCHEMA_TYPE_DURATION, "Offset datetime is UTC and date implies UTC"],
+            ['@"2021-01-02T10:10:10@Europe/Paris"', '@"1995-01-01"', "P9498DT9H10M10S", SCHEMA_TYPE_DURATION, "year differences are expressed as days and time duration"],
+            ['@"2021-01-02T10:10:10+01:00"', '@"1995-01-01"', "P9498DT9H10M10S", SCHEMA_TYPE_DURATION, "year differences are expressed as days and time duration"],
         ],
         [TYPE_DT_DURATION]: [ // <date and time> - <days and time duration>
             ['@"2021-01-01T10:10:10"', '@"P1D"', "2020-12-31T10:10:10", SCHEMA_TYPE_DATE_TIME],
             ['@"2021-01-01T10:10:10"', '@"PT1H"', "2021-01-01T09:10:10", SCHEMA_TYPE_DATE_TIME],
             ['@"2021-01-02T00:00:00"', '@"PT1H"', "2021-01-01T23:00:00", SCHEMA_TYPE_DATE_TIME],
             ['@"2021-01-01T10:10:10+11:00"', '@"P1D"', "2020-12-31T10:10:10+11:00", SCHEMA_TYPE_DATE_TIME],
+            ['@"2021-01-01T24:00:00"', '@"PT1S"', "2021-01-01T23:59:59", SCHEMA_TYPE_DATE_TIME],
+            ['@"2021-01-01T24:00:00"', '@"-PT1S"', "2021-01-02T00:00:01", SCHEMA_TYPE_DATE_TIME],
             ['@"2021-01-01T10:10:10@Australia/Melbourne"', '@"P1D"', "2020-12-31T10:10:10@Australia/Melbourne", SCHEMA_TYPE_STRING],
+            ['@"2021-01-01T24:00:00"', '@"PT1S"', "2021-01-01T23:59:59", SCHEMA_TYPE_DATE_TIME],
+            ['@"2021-01-01T24:00:00"', '@"-PT1S"', "2021-01-02T00:00:01", SCHEMA_TYPE_DATE_TIME],
+            ['@"-2021-01-01T10:10:10+11:00"', '@"PT1H"', "-2021-01-01T09:10:10+11:00", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10+11:00"', '@"P1D"', "-2022-12-31T10:10:10+11:00", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10+11:00"', '@"-PT1H"', "-2021-01-01T11:10:10+11:00", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10+11:00"', '@"-P1D"', "-2021-01-02T10:10:10+11:00", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10@Australia/Melbourne"', '@"PT1H"', "-2021-01-01T09:10:10@Australia/Melbourne", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10@Australia/Melbourne"', '@"P1D"', "-2022-12-31T10:10:10@Australia/Melbourne", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10@Australia/Melbourne"', '@"-PT1H"', "-2021-01-01T11:10:10@Australia/Melbourne", SCHEMA_TYPE_STRING],
+            ['@"-2021-01-01T10:10:10@Australia/Melbourne"', '@"-P1D"', "-2021-01-02T10:10:10@Australia/Melbourne", SCHEMA_TYPE_STRING],
         ]
     },
 
@@ -356,9 +384,12 @@ const subtract = {
             ['@"2021-01-02"', '@"2021-01-01T10:10:10+11:00"', "P1DT49M50S", SCHEMA_TYPE_DURATION],
             ['@"2021-01-02"', '@"2021-01-01T10:10:10@Australia/Melbourne"', "P1DT49M50S", SCHEMA_TYPE_DURATION],
             ['@"2021-01-02"', '@"2021-01-02T00:00:00Z"', "P0D", SCHEMA_TYPE_DURATION, "Date is implicitly UTC 00:00:00"],
+            ['@"2021-01-02"', '@"1995-01-01T10:10:10@Australia/Melbourne"', "P9498DT49M50S", SCHEMA_TYPE_DURATION],
         ],
         [TYPE_DATE]: [ // <date > - <date> with date converted to datetime UTC 0H
             ['@"2021-01-02"', '@"2021-01-01"', "P1D", SCHEMA_TYPE_DURATION],
+            ['@"2021-01-02"', '@"1995-01-01"', "P9498D", SCHEMA_TYPE_DURATION],
+            ['@"2021-01-02"', '@"1995-01-01"', "P9498D", SCHEMA_TYPE_DURATION],
         ],
         [TYPE_YM_DURATION]: [ // <date> - <years and months duration>
             ['@"2021-01-02"', '@"P1Y"', "2020-01-02", SCHEMA_TYPE_DATE],
@@ -540,6 +571,10 @@ function generateModel(decisions) {
 </definitions>`;
 }
 
+function isCommutative(op) {
+    return op == "add" || op == "multiply"
+}
+
 function main() {
 
     let tests = [];
@@ -559,30 +594,48 @@ function main() {
 
             Object.entries(rhsTypes).forEach(([rhsType, testsArray]) => {
 
-                testsArray.forEach((test, i) => {
+                function genTests(testArr, lhs, rhs) {
 
-                    // translate (say) 'multiply' into '*'
-                    const opSymbol = OP_SYMBOLS[op];
-                    const opWord = OP_WORDS[op];
+                    testArr.forEach((testData, i) => {
 
-                    // an index number for the test name padded with zeroes
-                    const idxStr = (++i).toString().padStart(3, '0');
-                    const name = `${op}_lhs_${lhsType}_${opWord}_rhs_${rhsType}_${idxStr}`;
+                        // translate (say) 'multiply' into '*'
+                        const opSymbol = OP_SYMBOLS[op];
+                        const opWord = OP_WORDS[op];
 
-                    const description = test.length == 5 ? test[4] : name;
+                        // an index number for the test name padded with zeroes
+                        const idxStr = (i+1).toString().padStart(3, '0');
+                        const name = `${op}_lhs_${lhs}_${opWord}_rhs_${rhs}_${idxStr}`;
 
-                    // create the test and associated decision XML from template
-                    tests.push(generateTest(name, description, test));
-                    decisions.push(generateDecision(name, description, opSymbol, test));
+                        const description = testData.length == 5 ? testData[4] : name;
 
-                    // note the combination of lhs/rhs types
-                    let matrixEntry = operationMatrix[op][lhsType];
-                    if (matrixEntry.indexOf(rhsType) == -1) {
-                        matrixEntry.push(rhsType);
-                    }
+                        // create the test and associated decision XML from template
+                        tests.push(generateTest(name, description, testData));
+                        decisions.push(generateDecision(name, description, opSymbol, testData));
 
-                    testCount++;
-                })
+                        // note the combination of lhs/rhs types
+                        let matrixEntry = operationMatrix[op][lhs];
+                        if (matrixEntry.indexOf(rhs) == -1) {
+                            matrixEntry.push(rhs);
+                        }
+
+                        testCount++;
+                    });
+                }
+
+                genTests(testsArray, lhsType, rhsType);
+
+                // for commutative operations, copy the tests, flipping the operands, and
+                // generate test tests again.
+                if (lhsType != rhsType && isCommutative(op)) {
+                    let flippedTests = testsArray.map( t => {
+                        let flippedTest = t.slice();
+                        const temp = flippedTest[0];
+                        flippedTest[0] = flippedTest[1];
+                        flippedTest[1] = temp;
+                        return flippedTest;
+                    });
+                    genTests(flippedTests, rhsType, lhsType);
+                }
             })
         })
     })
@@ -603,7 +656,7 @@ function main() {
                     const testData = [SAMPLE_DATA[lhsType], SAMPLE_DATA[rhsType], "null", SCHEMA_TYPE_NIL];
                     const description = "invalid arithmetic combination";
                     tests.push(generateTest(name, description, testData));
-                    decisions.push(generateDecision(name, description, opSymbol, testData ));
+                    decisions.push(generateDecision(name, description, opSymbol, testData));
                     nullTestCount++;
                 }
             })
