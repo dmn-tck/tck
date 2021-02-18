@@ -30,6 +30,7 @@ import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -62,6 +63,7 @@ import org.kie.dmn.core.impl.BaseDMNTypeImpl;
 import org.kie.dmn.core.impl.SimpleTypeImpl;
 import org.kie.dmn.feel.lang.Type;
 import org.kie.dmn.feel.lang.types.BuiltInType;
+import org.kie.dmn.feel.lang.types.impl.ComparablePeriod;
 import org.kie.dmn.feel.util.EvalHelper;
 import org.kie.dmn.model.api.Definitions;
 import org.kie.internal.utils.KieHelper;
@@ -497,7 +499,11 @@ public class DroolsTCKTest
                         } else {
                             // no DMN type information from the DMN model
                             if (dateTimeOrDurationValue instanceof Duration) {
-                                return java.time.Duration.parse(dateTimeOrDurationValue.toString());
+                                try {
+                                    return java.time.Duration.parse(dateTimeOrDurationValue.toString());
+                                } catch (DateTimeParseException e) {
+                                    return ComparablePeriod.parse(dateTimeOrDurationValue.toString());
+                                }
                             } else if (dateTimeOrDurationValue instanceof XMLGregorianCalendar) {
                                 return ((XMLGregorianCalendar) dateTimeOrDurationValue).toGregorianCalendar();
                             } else {
