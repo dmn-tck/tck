@@ -4,35 +4,50 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation=""
            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <modelName>0096-day-of-week-function.dmn</modelName>
+    <modelName>0097-feel-month-of-year-function.dmn</modelName>
 
     <testCase id="date_001">
-        <description>date: day of week</description>
+        <description>date: month of year</description>
         <inputNode name="date_input_001">
-            <value xsi:type="xsd:date">2021-01-11</value>
+            <value xsi:type="xsd:date">2021-01-01</value>
         </inputNode>
         <resultNode name="date_001" type="decision">
             <expected>
-                <component name="2021-01-11">
-                    <value xsi:type="xsd:string">Monday</value>
+                <component name="2021-01-01">
+                    <value xsi:type="xsd:string">January</value>
                 </component>
-                <component name="2021-01-12">
-                    <value xsi:type="xsd:string">Tuesday</value>
+                <component name="2021-02-01">
+                    <value xsi:type="xsd:string">February</value>
                 </component>
-                <component name="2021-01-13">
-                    <value xsi:type="xsd:string">Wednesday</value>
+                <component name="2021-03-01">
+                    <value xsi:type="xsd:string">March</value>
                 </component>
-                <component name="2021-01-14">
-                    <value xsi:type="xsd:string">Thursday</value>
+                <component name="2021-04-01">
+                    <value xsi:type="xsd:string">April</value>
                 </component>
-                <component name="2021-01-15">
-                    <value xsi:type="xsd:string">Friday</value>
+                <component name="2021-05-01">
+                    <value xsi:type="xsd:string">May</value>
                 </component>
-                <component name="2021-01-16">
-                    <value xsi:type="xsd:string">Saturday</value>
+                <component name="2021-06-01">
+                    <value xsi:type="xsd:string">June</value>
                 </component>
-                <component name="2021-01-17">
-                    <value xsi:type="xsd:string">Sunday</value>
+                <component name="2021-07-01">
+                    <value xsi:type="xsd:string">July</value>
+                </component>
+                <component name="2021-08-01">
+                    <value xsi:type="xsd:string">August</value>
+                </component>
+                <component name="2021-09-01">
+                    <value xsi:type="xsd:string">September</value>
+                </component>
+                <component name="2021-10-01">
+                    <value xsi:type="xsd:string">October</value>
+                </component>
+                <component name="2021-11-01">
+                    <value xsi:type="xsd:string">November</value>
+                </component>
+                <component name="2021-12-01">
+                    <value xsi:type="xsd:string">December</value>
                 </component>
             </expected>
         </resultNode>
@@ -42,38 +57,53 @@
         <description>date: will accept date as named param</description>
         <resultNode name="date_002" type="decision">
             <expected>
-                <value xsi:type="xsd:string">Tuesday</value>
+                <value xsi:type="xsd:string">September</value>
             </expected>
         </resultNode>
     </testCase>
 
     <testCase id="datetime_001">
-        <description>date: day of week</description>
+        <description>datetime: month of year</description>
         <inputNode name="date_input_001">
-            <value xsi:type="xsd:dateTime">2021-01-11T10:10:10</value>
+            <value xsi:type="xsd:dateTime">2021-01-01T10:10:10</value>
         </inputNode>
         <resultNode name="date_001" type="decision">
             <expected>
-                <component name="2021-01-11">
-                    <value xsi:type="xsd:string">Monday</value>
+                <component name="2021-01-01">
+                    <value xsi:type="xsd:string">January</value>
                 </component>
-                <component name="2021-01-12">
-                    <value xsi:type="xsd:string">Tuesday</value>
+                <component name="2021-02-01">
+                    <value xsi:type="xsd:string">February</value>
                 </component>
-                <component name="2021-01-13">
-                    <value xsi:type="xsd:string">Wednesday</value>
+                <component name="2021-03-01">
+                    <value xsi:type="xsd:string">March</value>
                 </component>
-                <component name="2021-01-14">
-                    <value xsi:type="xsd:string">Thursday</value>
+                <component name="2021-04-01">
+                    <value xsi:type="xsd:string">April</value>
                 </component>
-                <component name="2021-01-15">
-                    <value xsi:type="xsd:string">Friday</value>
+                <component name="2021-05-01">
+                    <value xsi:type="xsd:string">May</value>
                 </component>
-                <component name="2021-01-16">
-                    <value xsi:type="xsd:string">Saturday</value>
+                <component name="2021-06-01">
+                    <value xsi:type="xsd:string">June</value>
                 </component>
-                <component name="2021-01-17">
-                    <value xsi:type="xsd:string">Sunday</value>
+                <component name="2021-07-01">
+                    <value xsi:type="xsd:string">July</value>
+                </component>
+                <component name="2021-08-01">
+                    <value xsi:type="xsd:string">August</value>
+                </component>
+                <component name="2021-09-01">
+                    <value xsi:type="xsd:string">September</value>
+                </component>
+                <component name="2021-10-01">
+                    <value xsi:type="xsd:string">October</value>
+                </component>
+                <component name="2021-11-01">
+                    <value xsi:type="xsd:string">November</value>
+                </component>
+                <component name="2021-12-01">
+                    <value xsi:type="xsd:string">December</value>
                 </component>
             </expected>
         </resultNode>
@@ -83,7 +113,7 @@
         <description>date: will accept datetime as named param</description>
         <resultNode name="datetime_002" type="decision">
             <expected>
-                <value xsi:type="xsd:string">Tuesday</value>
+                <value xsi:type="xsd:string">September</value>
             </expected>
         </resultNode>
     </testCase>
