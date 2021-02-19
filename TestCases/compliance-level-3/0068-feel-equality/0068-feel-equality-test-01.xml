@@ -727,6 +727,8 @@
         </resultNode>
     </testCase>
 
+    <!-- commented out pending RTF resolution of whether P0D == P0Y for FEEL (not SFEEL).-->
+<!--
     <testCase id="dt_duration_008">
         <description>zero dt duration equals zero ym duration</description>
         <resultNode name="dt_duration_008" type="decision">
@@ -735,6 +737,7 @@
             </expected>
         </resultNode>
     </testCase>
+-->
 
     <testCase id="ym_duration_001">
         <description>same durations are equal</description>

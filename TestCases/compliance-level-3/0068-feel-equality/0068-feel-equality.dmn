@@ -803,6 +803,7 @@
         </literalExpression>
     </decision>
 
+<!--
     <decision name="dt_duration_008" id="_dt_duration_008">
         <description>Tests FEEL expression: 'duration("P0D") = duration("P0Y")' and expects result: 'true (boolean)'</description>
         <question>Result of FEEL expression 'duration("P0D") = duration("P0Y")'?</question>
@@ -812,6 +813,7 @@
             <text>duration("P0D") = duration("P0Y")</text>
         </literalExpression>
     </decision>
+-->
 
     <decision name="ym_duration_001" id="_ym_duration_001">
         <description>Tests FEEL expression: 'duration("P1Y") = duration("P1Y")' and expects result: 'true (boolean)'</description>
