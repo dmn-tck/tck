@@ -963,7 +963,10 @@
         </literalExpression>
     </decision>
 
-    <decision name="fn_001" id="_fn_001">
+    <!-- 2021-02-19: function tests commented out until equality is resolved at RTF.  How to determine the
+    equality of a function body is not described, nor is whether built-in functions can equal equal
+    themselves given many of them are overloaded -->
+<!--    <decision name="fn_001" id="_fn_001">
         <description>Tests FEEL expression: '(function() "foo") = (function() "foo")' and expects result: 'false (boolean)'</description>
         <question>Tests FEEL expression: '(function() "foo") = (function() "foo")'?</question>
         <allowedAnswers>false (boolean)</allowedAnswers>
@@ -1038,7 +1041,7 @@
         <literalExpression>
             <text>fn_bkm_001 = fn_bkm_002</text>
         </literalExpression>
-    </decision>
+    </decision>-->
 
 <!--     <decision name="singleton_001" id="_singleton_001">
         <description>Tests FEEL expression: '[100] = 100' and expects result: 'null (boolean)'</description>
