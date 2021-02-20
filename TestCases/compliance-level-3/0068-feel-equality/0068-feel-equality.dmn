@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-`<definitions namespace="http://www.montera.com.au/spec/DMN/0068-feel-equality" name="0068-feel-equality"
+<definitions namespace="http://www.montera.com.au/spec/DMN/0068-feel-equality" name="0068-feel-equality"
              id="_i9fboPUUEeesLuP4RHs4vA" xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/"
              xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
              xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
@@ -613,7 +613,27 @@
         <allowedAnswers>true (boolean)</allowedAnswers>
         <variable name="time_009"/>
         <literalExpression>
+            <text>time("10:30:00+01:00") = time("10:30:00@Europe/Paris")</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="time_009_a" id="_time_009_a">
+        <description>Tests FEEL expression: 'time("10:30:00+02:00") = time("10:30:00@Europe/Paris")' and expects result: 'false (boolean)'</description>
+        <question>Result of FEEL expression 'time("10:30:00+02:00") = time("10:30:00@Europe/Paris")'?</question>
+        <allowedAnswers>true (boolean)</allowedAnswers>
+        <variable name="time_009_a"/>
+        <literalExpression>
             <text>time("10:30:00+02:00") = time("10:30:00@Europe/Paris")</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="time_009_b" id="_time_009_b">
+        <description>Tests FEEL expression: 'time("10:30:00+02:00") = time("10:30:00+01:00")' and expects result: 'false (boolean)'</description>
+        <question>Result of FEEL expression 'time("10:30:00+02:00") = time("10:30:00+01:00")'?</question>
+        <allowedAnswers>true (boolean)</allowedAnswers>
+        <variable name="time_009_b"/>
+        <literalExpression>
+            <text>time("10:30:00+02:00") = time("10:30:00+01:00")</text>
         </literalExpression>
     </decision>
 
