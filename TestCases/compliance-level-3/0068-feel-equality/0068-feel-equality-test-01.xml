@@ -763,9 +763,9 @@
         </resultNode>
     </testCase>
 
-    <testCase id="datetime_014">
+    <testCase id="datetime_015">
         <description>datetime equals another type</description>
-        <resultNode name="datetime_014" type="decision">
+        <resultNode name="datetime_015" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
             </expected>
