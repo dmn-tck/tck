@@ -745,15 +745,6 @@
         </resultNode>
     </testCase>
 
-    <testCase id="datetime_013">
-        <description>datetime: a date is equal to the same date at UTC zone</description>
-        <resultNode name="datetime_013" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">true</value>
-            </expected>
-        </resultNode>
-    </testCase>
-
     <testCase id="datetime_014">
         <description>datetime: a date is equal to the same date at zero offset</description>
         <resultNode name="datetime_014" type="decision">
