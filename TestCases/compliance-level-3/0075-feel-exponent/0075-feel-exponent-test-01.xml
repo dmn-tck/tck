@@ -27,6 +27,33 @@
         </resultNode>
     </testCase>
 
+    <testCase id="decision_001_b">
+        <description>exponent may not have decimals</description>
+        <resultNode name="decision_001_b" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="decision_001_c">
+        <description>exponent may have decimals if zero</description>
+        <resultNode name="decision_001_c" type="decision">
+            <expected>
+                <value xsi:type="xsd:decimal">9</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="decision_001_d">
+        <description>base may be a decimal number</description>
+        <resultNode name="decision_001_d" type="decision">
+            <expected>
+                <value xsi:type="xsd:decimal">10.3684</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
     <testCase id="decision_002">
         <description>string exponent is null</description>
         <resultNode errorResult="true" name="decision_002" type="decision">

@@ -16,6 +16,27 @@
         </literalExpression>
     </decision>
 
+    <decision name="decision_001_b" id="_decision_001_b">
+        <variable name="decision_001_b"/>
+        <literalExpression>
+            <text>3 ** 2.55</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision_001_c" id="_decision_001_c">
+        <variable name="decision_001_c"/>
+        <literalExpression>
+            <text>3 ** 2.00</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision_001_d" id="_decision_001_d">
+        <variable name="decision_001_d"/>
+        <literalExpression>
+            <text>3.22 ** 2</text>
+        </literalExpression>
+    </decision>
+
     <decision name="decision_002" id="_decision_002">
         <variable name="decision_002"/>
         <literalExpression>
