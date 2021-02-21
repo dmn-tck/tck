@@ -482,6 +482,12 @@ const exponent = {
         [TYPE_NUMBER]: [ // <number> ** <number>
             [5, 2, 25, SCHEMA_TYPE_DECIMAL],
             [5, -2, 0.04, SCHEMA_TYPE_DECIMAL],
+            // a bit hack, but still generates the test okay as 3 ** 4 ** 5
+            [3, "4 ** 5", 3486784401, SCHEMA_TYPE_DECIMAL, "exponent is left associative"],
+            [-5, 2, 25, SCHEMA_TYPE_DECIMAL, "-a**b parses as (-a)**b not -(a**b)"],
+            [5, 2.55, null, SCHEMA_TYPE_NIL, "decimal exponent not permitted"],
+            [5, 2.00, 25, SCHEMA_TYPE_DECIMAL, "decimal exponent permitted if integer"],
+            [5.5, 2.00, 30.25, SCHEMA_TYPE_DECIMAL, "base may be a decimal number"],
         ]
     },
 }
