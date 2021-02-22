@@ -2503,8 +2503,8 @@
     </decision>
 
     <decision name="exponent_lhs_number_exp_rhs_number_005" id="_exponent_lhs_number_exp_rhs_number_005">
-        <description>decimal exponent not permitted</description>
-        <allowedAnswers>null (null)</allowedAnswers>
+        <description>decimal exponent</description>
+        <allowedAnswers>60.58617166606 (number)</allowedAnswers>
         <variable name="exponent_lhs_number_exp_rhs_number_005"/>
         <literalExpression>
             <text>5 ** 2.55</text>

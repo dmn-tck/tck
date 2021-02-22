@@ -2500,10 +2500,10 @@
     </testCase>
 
     <testCase id="exponent_lhs_number_exp_rhs_number_005">
-        <description>decimal exponent not permitted</description>
-        <resultNode name="exponent_lhs_number_exp_rhs_number_005" type="decision" errorResult="true">
+        <description>decimal exponent</description>
+        <resultNode name="exponent_lhs_number_exp_rhs_number_005" type="decision" >
             <expected>
-                <value xsi:nil="true"></value>
+                <value xsi:type="xsd:decimal">60.58617166606</value>
             </expected>
         </resultNode>
     </testCase>
