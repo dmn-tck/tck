@@ -10,7 +10,7 @@
         <description>invalid value has null value</description>
         <resultNode name="test_001" type="decision" errorResult="true">
             <expected>
-                <value xsi:type="xsd:boolean">true</value>
+                <value xsi:nil="true"/>
             </expected>
         </resultNode>
     </testCase>

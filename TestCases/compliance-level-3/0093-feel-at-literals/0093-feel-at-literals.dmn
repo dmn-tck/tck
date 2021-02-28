@@ -12,7 +12,7 @@
     <decision name="test_001" id="_test_001">
         <variable name="test_001"/>
         <literalExpression>
-            <text>@"foo" = null</text>
+            <text>@"foo"</text>
         </literalExpression>
     </decision>
 
