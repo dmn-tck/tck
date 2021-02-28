@@ -15,17 +15,17 @@
         </resultNode>
     </testCase>
 
-    <testCase id="002">
+<!--    <testCase id="002">
         <description>will return zero when empty list</description>
         <resultNode name="decision002" type="decision">
             <expected>
                 <value xsi:type="xsd:decimal">0</value>
             </expected>
         </resultNode>
-    </testCase>
+    </testCase>-->
 
     <testCase id="003">
-        <description>will return zero when no params</description>
+        <description>will return null when no params</description>
         <resultNode errorResult="true" name="decision003" type="decision">
             <expected>
                 <value xsi:nil="true"/>
