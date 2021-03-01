@@ -75,12 +75,12 @@
                 <div class="row">
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Tests:</strong> 1602</p>
+                            <p><strong>Tests:</strong> 1637</p>
                         </small>
                     </div>
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Labels:</strong> 71</p>
+                            <p><strong>Labels:</strong> 73</p>
                         </small>
                     </div>
                 </div>
@@ -868,7 +868,7 @@
                             <td scope="row"></td>
                         </tr>
                         <tr>
-                                <td class="text-nowrap" scope="row" rowspan="1,486" style="vertical-align:middle">compliance-level-3</td>
+                                <td class="text-nowrap" scope="row" rowspan="1,521" style="vertical-align:middle">compliance-level-3</td>
                                 <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0001-filter-test-01</td>
                                 <td align="center" rowspan="1" style="vertical-align:middle">
                                     <a target="_blank" href="https://github.com/dmn-tck/tck/blob/master/TestCases/compliance-level-3/0001-filter/0001-filter.pdf">
@@ -1574,11 +1574,11 @@
                             <td scope="row"></td>
                         </tr>
                         <tr>
-                                <td class="text-nowrap" scope="row" rowspan="15" style="vertical-align:middle">0050-feel-abs-function-test-01</td>
-                                <td align="center" rowspan="15" style="vertical-align:middle">
+                                <td class="text-nowrap" scope="row" rowspan="17" style="vertical-align:middle">0050-feel-abs-function-test-01</td>
+                                <td align="center" rowspan="17" style="vertical-align:middle">
                                     <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
                                 </td>
-                                <td align="center" rowspan="15" style="vertical-align:middle">
+                                <td align="center" rowspan="17" style="vertical-align:middle">
                                     <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/0050-feel-abs-function">
                                         <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
                                     </a>
@@ -1624,11 +1624,19 @@
                         </tr>
                         <tr>
                             <td class="text-nowrap" scope="row">011</td>
-                            <td scope="row">Assert with days duration param</td>
+                            <td scope="row">Assert with negative days duration param</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">011_a</td>
+                            <td scope="row">Assert with positive days duration param</td>
                         </tr>
                         <tr>
                             <td class="text-nowrap" scope="row">012</td>
-                            <td scope="row">Assert with months duration param</td>
+                            <td scope="row">Assert with negative months duration param</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">012_a</td>
+                            <td scope="row">Assert with positive months duration param</td>
                         </tr>
                         <tr>
                             <td class="text-nowrap" scope="row">013</td>
@@ -5826,6 +5834,91 @@
                             <td scope="row">Spec 'nested list' example - DMN13-133</td>
                         </tr>
                         <tr>
+                                <td class="text-nowrap" scope="row" rowspan="19" style="vertical-align:middle">0092-feel-lambda-test-01</td>
+                                <td align="center" rowspan="19" style="vertical-align:middle">
+                                    <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="19" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/0092-feel-lambda">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td scope="row">A decision may return a user-defined-function (UDF) lambda</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td scope="row">A decision may return a Function Definition lambda</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003</td>
+                            <td scope="row">A BKM may return a UDF lambda</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">004</td>
+                            <td scope="row">A BKM may return a Function Definition lambda</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">005</td>
+                            <td scope="row">A BKM may return a UDF lambda with a closed over formal param</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">006</td>
+                            <td scope="row">A BKM may return a Function Definition lambda with a closed over formal param</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">007</td>
+                            <td scope="row">A decision may return a UDF lambda with a closed over info requirement value</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">008</td>
+                            <td scope="row">A lambda's named params take precedence over scope values where the lambda is created</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">009</td>
+                            <td scope="row">A lambda's named params take precedence over scope values where the lambda is invoked</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">010</td>
+                            <td scope="row">lambdas (UDF) and closures may go more than one level deep - (currying)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">010_a</td>
+                            <td scope="row">lambdas (func defn) and closures may go more than one level deep - (currying)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">011</td>
+                            <td scope="row">lambdas (with closures) may be passed as params</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">012</td>
+                            <td scope="row">BKM may be passed as lambda</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">013</td>
+                            <td scope="row">Decision Service may be passed as lambda</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">014</td>
+                            <td scope="row">Built-in function may be passed as lambda</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">015</td>
+                            <td scope="row">Overloaded built-in function may be passed as lambda</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">016</td>
+                            <td scope="row">Invoking passed lambda with incorrect params still gives error</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">017</td>
+                            <td scope="row">Local decision scope values may be closed over and used in built-in func</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">018</td>
+                            <td scope="row">BKM may be passed to sort func</td>
+                        </tr>
+                        <tr>
                                 <td class="text-nowrap" scope="row" rowspan="10" style="vertical-align:middle">1100-feel-decimal-function-test-01</td>
                                 <td align="center" rowspan="10" style="vertical-align:middle">
                                     <a target="_blank" href="https://github.com/dmn-tck/tck/blob/master/TestCases/compliance-level-3/1100-feel-decimal-function/Readme.md">
@@ -7689,6 +7782,71 @@
                             <td class="text-nowrap" scope="row">036_f8c8b02ba3</td>
                             <td scope="row"></td>
                         </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="14" style="vertical-align:middle">1130-feel-interval-test-01</td>
+                                <td align="center" rowspan="14" style="vertical-align:middle">
+                                    <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="14" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/1130-feel-interval">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">during</td>
+                            <td scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">after</td>
+                            <td scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">started by</td>
+                            <td scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">includes</td>
+                            <td scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">met by</td>
+                            <td scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">before</td>
+                            <td scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">overlaps</td>
+                            <td scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">overlaps before</td>
+                            <td scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">finishes</td>
+                            <td scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">finished by</td>
+                            <td scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">starts</td>
+                            <td scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">coincides</td>
+                            <td scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">overlaps after</td>
+                            <td scope="row"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">mmets</td>
+                            <td scope="row"></td>
+                        </tr>
                         </tbody>
                     </table>
                 </div>
@@ -7699,7 +7857,7 @@
 <!-- pre-footer -->
 <div class="pre-footer">
     <div class="last-updated">
-        <p>Last updated:</strong> Feb 1, 2021 9:33:09 PM</p>
+        <p>Last updated:</strong> Mar 1, 2021, 5:20:05 PM</p>
     </div>
 </div>
 <div class="footer">
