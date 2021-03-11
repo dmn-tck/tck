@@ -1340,6 +1340,13 @@
         </literalExpression>
     </decision>
 
+    <decision name="function_031" id="_function_031">
+        <variable name="function_031"/>
+        <literalExpression>
+            <text>[(function(a: string, b: number) "123"), "foo"] instance of tListOfFunctions</text>
+        </literalExpression>
+    </decision>
+
 
 </definitions>
 

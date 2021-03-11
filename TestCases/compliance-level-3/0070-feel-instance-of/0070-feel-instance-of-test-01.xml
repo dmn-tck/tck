@@ -1580,4 +1580,13 @@
         </resultNode>
     </testCase>
 
+    <testCase id="function_031">
+        <description>mixed list of type does not conform to a list function type</description>
+        <resultNode name="function_031" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
 </testCases>
