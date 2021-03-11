@@ -459,7 +459,7 @@
         </tc:testCases>
     </semantic:extensionElements>
     <semantic:decisionService id="_4dacb45e-9b17-48e0-9518-8cd1b47d445b_DS" name="Whole Model Decision Service" triso:dynamicDecisionService="true" triso:wholeModelService="true">
-        <semantic:variable name="Whole Model Decision Service" id="_4dacb45e-9b17-48e0-9518-8cd1b47d445b_DS_VAR" typeRef="Any"/>
+        <semantic:variable name="Whole Model Decision Service" id="_4dacb45e-9b17-48e0-9518-8cd1b47d445b_DS_VAR"/>
         <semantic:outputDecision href="#_80e62ec8-7db3-4ef1-ad00-115058ee1cf7"/>
         <semantic:outputDecision href="#_fac80212-e8cf-4940-9f0e-49b6edaf30c1"/>
         <semantic:outputDecision href="#_5724b910-e954-403b-aba8-411035af6792"/>
@@ -476,7 +476,7 @@
         <semantic:outputDecision href="#_028a365e-be96-4311-b7a3-80b1786e18e3"/>
     </semantic:decisionService>
     <semantic:decisionService id="_0715f55f-40c7-43b1-a32a-e2cfce010f20_DS" name="Diagram DMN13" triso:dynamicDecisionService="true">
-        <semantic:variable name="Diagram DMN13" id="_0715f55f-40c7-43b1-a32a-e2cfce010f20_DS_VAR" typeRef="Any"/>
+        <semantic:variable name="Diagram DMN13" id="_0715f55f-40c7-43b1-a32a-e2cfce010f20_DS_VAR"/>
         <semantic:outputDecision href="#_80e62ec8-7db3-4ef1-ad00-115058ee1cf7"/>
         <semantic:outputDecision href="#_fac80212-e8cf-4940-9f0e-49b6edaf30c1"/>
         <semantic:outputDecision href="#_5724b910-e954-403b-aba8-411035af6792"/>
