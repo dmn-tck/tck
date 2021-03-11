@@ -858,7 +858,7 @@
         </resultNode>
     </testCase>
 
-    <testCase id="list_20">
+    <testCase id="list_020">
         <description>list is an instance of inline list of inline context type</description>
         <resultNode name="list_020" type="decision">
             <expected>
@@ -867,7 +867,7 @@
         </resultNode>
     </testCase>
 
-    <testCase id="list_21">
+    <testCase id="list_021">
         <description>list is an instance of inline function types</description>
         <resultNode name="list_021" type="decision">
             <expected>
@@ -1486,6 +1486,96 @@
         <resultNode name="function_020" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="function_021">
+        <description>conforms to basic FunctionItem type</description>
+        <resultNode name="function_021" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="function_022">
+        <description>conforms to basic FunctionItem type with return type</description>
+        <resultNode name="function_022" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="function_023">
+        <description>does not conforms to basic FunctionItem type with return type</description>
+        <resultNode name="function_023" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="function_024">
+        <description>conforms to basic FunctionItem type with untyped params</description>
+        <resultNode name="function_024" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="function_025">
+        <description>conforms to basic FunctionItem type with simple typed params</description>
+        <resultNode name="function_025" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="function_026">
+        <description>does not conform to basic FunctionItem type with simple typed params</description>
+        <resultNode name="function_026" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="function_027">
+        <description>conform to list of function items</description>
+        <resultNode name="function_027" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="function_028">
+        <description>does not conform to list of function items</description>
+        <resultNode name="function_028" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="function_029">
+        <description>conforms to a context type with a function property</description>
+        <resultNode name="function_029" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="function_030">
+        <description>does not conform to a context type with a function property</description>
+        <resultNode name="function_030" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">false</value>
             </expected>
         </resultNode>
     </testCase>
