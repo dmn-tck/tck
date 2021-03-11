@@ -1,6 +1,5 @@
 ![TCK Validation](https://github.com/dmn-tck/tck/actions/workflows/global_validation.yml/badge.svg?branch=master)
 
-# dmn-tck
 # Technology Compatibility Kit for the Decision Model and Notation (DMN) standard
 
 ## Current Result Web Site
