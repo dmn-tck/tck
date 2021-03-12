@@ -326,5 +326,32 @@
         </resultNode>
     </testCase>
 
+    <testCase id="null_001">
+        <description>null test value</description>
+        <resultNode errorResult="true" name="null_001" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="null_002">
+        <description>null start value</description>
+        <resultNode errorResult="true" name="null_002" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="null_003">
+        <description>null end value</description>
+        <resultNode errorResult="true" name="null_003" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
 
 </testCases>
