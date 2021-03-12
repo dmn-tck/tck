@@ -3,11 +3,14 @@ package org.omg.dmn.tck.validation;
 
 import java.io.File;
 import java.io.FileFilter;
+import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilder;
@@ -20,9 +23,14 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+import org.omg.dmn.tck.marshaller.TckMarshallingHelper;
+import org.omg.dmn.tck.marshaller._20160719.TestCases;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.xml.sax.SAXException;
+
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 @RunWith(Parameterized.class)
 public class TestCasesFiles {
@@ -96,6 +104,15 @@ public class TestCasesFiles {
     public void testCaseFileIsValid() throws Exception {
         for (File dmnFile : basedir.listFiles((dir, name) -> name.matches(".*\\.xml$"))) {
             testCasesSchema.newValidator().validate(new StreamSource(dmnFile));
+
+            TestCases testCases = TckMarshallingHelper.load(new FileInputStream(dmnFile));
+            Map<String, Long> idCounting = testCases.getTestCase()
+                                                    .stream()
+                                                    .map(TestCases.TestCase::getId)
+                                                    .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+            for (Entry<String, Long> kv : idCounting.entrySet()) {
+                assertThat("The id '" + kv.getKey() + "' is occuring more than one time in the file " + dmnFile, kv.getValue(), is(1L));
+            }
         }
     }
 }
