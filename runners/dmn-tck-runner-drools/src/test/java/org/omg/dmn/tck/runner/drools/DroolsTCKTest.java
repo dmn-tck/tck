@@ -28,6 +28,10 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.OffsetTime;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -42,6 +46,7 @@ import java.util.Properties;
 import java.util.stream.Collectors;
 
 import javax.xml.bind.JAXBElement;
+import javax.xml.datatype.DatatypeConstants;
 import javax.xml.datatype.Duration;
 import javax.xml.datatype.XMLGregorianCalendar;
 
@@ -505,7 +510,19 @@ public class DroolsTCKTest
                                     return ComparablePeriod.parse(dateTimeOrDurationValue.toString());
                                 }
                             } else if (dateTimeOrDurationValue instanceof XMLGregorianCalendar) {
-                                return ((XMLGregorianCalendar) dateTimeOrDurationValue).toGregorianCalendar();
+                                XMLGregorianCalendar xmlCal = (XMLGregorianCalendar) dateTimeOrDurationValue;
+                                if (xmlCal.getTimezone() != DatatypeConstants.FIELD_UNDEFINED && xmlCal.getXMLSchemaType() == DatatypeConstants.DATETIME) {
+                                    return ZonedDateTime.parse(xmlCal.toXMLFormat());
+                                } else if (xmlCal.getTimezone() != DatatypeConstants.FIELD_UNDEFINED && xmlCal.getXMLSchemaType() == DatatypeConstants.TIME) {
+                                    return OffsetTime.parse(xmlCal.toXMLFormat());
+                                } else if (xmlCal.getXMLSchemaType() == DatatypeConstants.DATETIME) {
+                                    return LocalDateTime.of(LocalDate.of(xmlCal.getYear(), xmlCal.getMonth(), xmlCal.getDay()), LocalTime.of(xmlCal.getHour(), xmlCal.getMinute(), xmlCal.getSecond()));
+                                } else if (xmlCal.getXMLSchemaType() == DatatypeConstants.DATE) {
+                                    return LocalDate.of(xmlCal.getYear(), xmlCal.getMonth(), xmlCal.getDay());
+                                } else if (xmlCal.getXMLSchemaType() == DatatypeConstants.TIME) {
+                                    return LocalTime.parse(xmlCal.toXMLFormat());
+                                }
+                                return xmlCal.toGregorianCalendar();
                             } else {
                                 return dateTimeOrDurationValue;
                             }
