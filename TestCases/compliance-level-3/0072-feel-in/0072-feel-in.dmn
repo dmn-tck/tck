@@ -2065,6 +2065,7 @@
         </decision>
     -->
 
+<!--
     <decision name="null_002" id="_null_002">
         <variable name="null_002"/>
         <informationRequirement>
@@ -2105,6 +2106,7 @@
         </literalExpression>
     </decision>
 
+-->
 
 </definitions>
 

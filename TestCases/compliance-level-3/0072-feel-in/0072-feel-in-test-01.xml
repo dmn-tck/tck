@@ -2589,13 +2589,14 @@
     </testCase>
 -->
 
+<!--
     <testCase id="null_002">
-        <!-- as null is a valid value for a range start, this test asserts that a null start caused by a
-        invalid type coercion is not the same as simply supplying a null value -->
+        &lt;!&ndash; as null is a valid value for a range start, this test asserts that a null start caused by a
+        invalid type coercion is not the same as simply supplying a null value &ndash;&gt;
         <description>range - invalid inclusive start type coerces to null and makes range check invalid</description>
 
-        <!-- invalid value provided as input so compiler type inference (if any) is not relevant -->
-        <!-- the range has a number end and we're supplying a list as the start -->
+        &lt;!&ndash; invalid value provided as input so compiler type inference (if any) is not relevant &ndash;&gt;
+        &lt;!&ndash; the range has a number end and we're supplying a list as the start &ndash;&gt;
         <inputNode name="input_for_null_tests">
             <list></list>
         </inputNode>
@@ -2608,12 +2609,12 @@
     </testCase>
 
     <testCase id="null_003">
-        <!-- as null is a valid value for a range start, this test asserts that a null start caused by a
-        invalid type coercion is not the same as simply supplying a null value -->
+        &lt;!&ndash; as null is a valid value for a range start, this test asserts that a null start caused by a
+        invalid type coercion is not the same as simply supplying a null value &ndash;&gt;
         <description>range - invalid non-inclusive start type coerces to null and makes range check invalid</description>
 
-        <!-- invalid value provided as input so compiler type inference (if any) is not relevant -->
-        <!-- the range has a number end and we're supplying a list as the start -->
+        &lt;!&ndash; invalid value provided as input so compiler type inference (if any) is not relevant &ndash;&gt;
+        &lt;!&ndash; the range has a number end and we're supplying a list as the start &ndash;&gt;
         <inputNode name="input_for_null_tests">
             <list></list>
         </inputNode>
@@ -2626,12 +2627,12 @@
     </testCase>
 
     <testCase id="null_004">
-        <!-- as null is a valid value for a range end, this test asserts that a null end caused by a
-        invalid type coercion is not the same as simply supplying a null value -->
+        &lt;!&ndash; as null is a valid value for a range end, this test asserts that a null end caused by a
+        invalid type coercion is not the same as simply supplying a null value &ndash;&gt;
         <description>range - invalid inclusive end type coerces to null and makes range check invalid</description>
 
-        <!-- invalid value provided as input so compiler type inference (if any) is not relevant -->
-        <!-- the range has a number start and we're supplying a list as the end -->
+        &lt;!&ndash; invalid value provided as input so compiler type inference (if any) is not relevant &ndash;&gt;
+        &lt;!&ndash; the range has a number start and we're supplying a list as the end &ndash;&gt;
         <inputNode name="input_for_null_tests">
             <list></list>
         </inputNode>
@@ -2646,8 +2647,8 @@
     <testCase id="null_005">
         <description>range - invalid non-inclusive end type coerces to null and makes range check invalid</description>
 
-        <!-- invalid value provided as input so compiler type inference (if any) is not relevant -->
-        <!-- the range has a number start and we're supplying a list as the end -->
+        &lt;!&ndash; invalid value provided as input so compiler type inference (if any) is not relevant &ndash;&gt;
+        &lt;!&ndash; the range has a number start and we're supplying a list as the end &ndash;&gt;
         <inputNode name="input_for_null_tests">
             <list></list>
         </inputNode>
@@ -2658,5 +2659,6 @@
             </expected>
         </resultNode>
     </testCase>
+-->
 
 </testCases>
