@@ -2542,6 +2542,7 @@
         </resultNode>
     </testCase>
 
+<!--
     <testCase id="null_001">
         <description>range null test value</description>
         <resultNode errorResult="true" name="null_001" type="decision">
@@ -2586,13 +2587,15 @@
             </expected>
         </resultNode>
     </testCase>
+-->
 
     <testCase id="null_002">
         <!-- as null is a valid value for a range start, this test asserts that a null start caused by a
         invalid type coercion is not the same as simply supplying a null value -->
-        <description>range - invalid start type coerces to null and makes range check invalid</description>
+        <description>range - invalid inclusive start type coerces to null and makes range check invalid</description>
 
         <!-- invalid value provided as input so compiler type inference (if any) is not relevant -->
+        <!-- the range has a number end and we're supplying a list as the start -->
         <inputNode name="input_for_null_tests">
             <list></list>
         </inputNode>
@@ -2605,11 +2608,12 @@
     </testCase>
 
     <testCase id="null_003">
-        <!-- as null is a valid value for a range end, this test asserts that a null end caused by a
+        <!-- as null is a valid value for a range start, this test asserts that a null start caused by a
         invalid type coercion is not the same as simply supplying a null value -->
-        <description>range - invalid end type coerces to null and makes range check invalid</description>
+        <description>range - invalid non-inclusive start type coerces to null and makes range check invalid</description>
 
         <!-- invalid value provided as input so compiler type inference (if any) is not relevant -->
+        <!-- the range has a number end and we're supplying a list as the start -->
         <inputNode name="input_for_null_tests">
             <list></list>
         </inputNode>
@@ -2622,15 +2626,33 @@
     </testCase>
 
     <testCase id="null_004">
-        <description>range - incomparable end point types makes range check invalid</description>
+        <!-- as null is a valid value for a range end, this test asserts that a null end caused by a
+        invalid type coercion is not the same as simply supplying a null value -->
+        <description>range - invalid inclusive end type coerces to null and makes range check invalid</description>
 
         <!-- invalid value provided as input so compiler type inference (if any) is not relevant -->
-        <!-- the range has a number start and we're supplying a string as the end -->
+        <!-- the range has a number start and we're supplying a list as the end -->
         <inputNode name="input_for_null_tests">
-            <value xsi:type="xsd:string">foo</value>
+            <list></list>
         </inputNode>
 
         <resultNode errorResult="true" name="null_004" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="null_005">
+        <description>range - invalid non-inclusive end type coerces to null and makes range check invalid</description>
+
+        <!-- invalid value provided as input so compiler type inference (if any) is not relevant -->
+        <!-- the range has a number start and we're supplying a list as the end -->
+        <inputNode name="input_for_null_tests">
+            <list></list>
+        </inputNode>
+
+        <resultNode errorResult="true" name="null_005" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
