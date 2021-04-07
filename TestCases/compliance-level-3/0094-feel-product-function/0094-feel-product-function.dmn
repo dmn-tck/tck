@@ -56,7 +56,7 @@
         <allowedAnswers>null (list)</allowedAnswers>
         <variable name="decision004"/>
         <literalExpression>
-            <text>product()</text>
+            <text>product([1,2,null,4])</text>
         </literalExpression>
     </decision>
 
