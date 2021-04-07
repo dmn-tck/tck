@@ -20,15 +20,15 @@
         </literalExpression>
     </decision>
 
-<!--    <decision name="decision002" id="_decision002">
-        <description>Tests FEEL expression: 'product([])' and expects result: '0 (number)'</description>
+    <decision name="decision002" id="_decision002">
+        <description>Tests FEEL expression: 'product([])' and expects result: 'null (number)'</description>
         <question>Result of FEEL expression 'product([])'?</question>
-        <allowedAnswers>0 (number)</allowedAnswers>
+        <allowedAnswers>null (number)</allowedAnswers>
         <variable name="decision002"/>
         <literalExpression>
             <text>product([])</text>
         </literalExpression>
-    </decision>-->
+    </decision>
 
     <decision name="decision003" id="_decision003">
         <description>Tests FEEL expression: 'product()' and expects result: 'null (number)'</description>
