@@ -11,7 +11,7 @@
     <description>FEEL built-in function 'product(list)' in category list functions</description>
 
     <decision name="decision001" id="_decision001">
-        <description>Tests FEEL expression: 'product([6, 3, 9, 6, 6])' and expects result: '[6] (list)'</description>
+        <description>Tests FEEL expression: 'product([6, 3, 9, 6, 6])' and expects result: '5832 (number)'</description>
         <question>Result of FEEL expression 'product([6, 3, 9, 6, 6])'?</question>
         <allowedAnswers>5832 (number)</allowedAnswers>
         <variable name="decision001"/>
@@ -141,4 +141,3 @@
     </decision>
 
 </definitions>
-
