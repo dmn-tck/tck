@@ -113,7 +113,7 @@
     <decision name="decision011" id="_decision011">
         <description>Tests FEEL expression: 'product(list:[6, 3, 9, 6, 6])' and expects result: '5832 (number)'</description>
         <question>Result of FEEL expression 'product(list:[6, 3, 9, 6, 6])'?</question>
-        <allowedAnswers>[6] (list)</allowedAnswers>
+        <allowedAnswers>5832 (number)</allowedAnswers>
         <variable name="decision011"/>
         <literalExpression>
             <text>product(list:[6, 3, 9, 6, 6])</text>
