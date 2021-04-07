@@ -73,7 +73,7 @@
     <decision name="decision006" id="_decision006">
         <description>Tests FEEL expression: 'product([2.5, 1, 2.5, 3])' and expects result: '18.75 (number)'</description>
         <question>Result of FEEL expression 'product([2.5, 1, 2.5, 3])'?</question>
-        <allowedAnswers>2.5 (number)</allowedAnswers>
+        <allowedAnswers>18.75 (number)</allowedAnswers>
         <variable name="decision006"/>
         <literalExpression>
             <text>product([2.5, 1, 2.5, 3])</text>
