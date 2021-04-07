@@ -111,7 +111,7 @@
     </decision>
 
     <decision name="decision011" id="_decision011">
-        <description>Tests FEEL expression: 'product(list:[6, 3, 9, 6, 6])' and expects result: '[6] (list)'</description>
+        <description>Tests FEEL expression: 'product(list:[6, 3, 9, 6, 6])' and expects result: '5832 (number)'</description>
         <question>Result of FEEL expression 'product(list:[6, 3, 9, 6, 6])'?</question>
         <allowedAnswers>[6] (list)</allowedAnswers>
         <variable name="decision011"/>
