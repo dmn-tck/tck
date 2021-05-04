@@ -23,52 +23,53 @@ import com.gs.dmn.runtime.interpreter.DMNInterpreter;
 import com.gs.dmn.serialization.*;
 import com.gs.dmn.tck.TestCasesReader;
 import com.gs.dmn.transformation.DMNTransformer;
+import com.gs.dmn.transformation.InputParameters;
 import com.gs.dmn.transformation.ToQuotedNameTransformer;
 import com.gs.dmn.transformation.ToSimpleNameTransformer;
-import com.gs.dmn.transformation.basic.BasicDMN2JavaTransformer;
+import com.gs.dmn.transformation.basic.BasicDMNToJavaTransformer;
 import com.gs.dmn.transformation.lazy.NopLazyEvaluationDetector;
 import org.omg.dmn.tck.marshaller._20160719.TestCases;
 import org.omg.dmn.tck.runner.junit4.TestSuiteContext;
-import org.omg.spec.dmn._20180521.model.TDefinitions;
+import org.omg.spec.dmn._20191111.model.TDefinitions;
 
 import java.io.File;
 import java.net.URL;
 import java.util.*;
 
-public class JDMNTestContext implements TestSuiteContext {
+public class JDMNTestContext<NUMBER, DATE, TIME, DATE_TIME, DURATION> implements TestSuiteContext {
     private static final boolean DEBUG_TRANSFORMER = false;
 
     private final DMNReader dmnReader;
     private final DMNWriter dmnWriter;
     private final TestCasesReader tckReader;
     private final DMNTransformer<TestCases> dmnTransformer;
-    private final DMNDialectDefinition dialectDefinition;
-    private final StandardFEELLib lib;
+    private final DMNDialectDefinition<NUMBER, DATE, TIME, DATE_TIME, DURATION, TestCases> dialectDefinition;
+    private final StandardFEELLib<NUMBER, DATE, TIME, DATE_TIME, DURATION> lib;
     private final EnvironmentFactory environmentFactory;
 
-    private DMNInterpreter interpreter;
-    private BasicDMN2JavaTransformer basicToJavaTransformer;
+    private DMNInterpreter<NUMBER, DATE, TIME, DATE_TIME, DURATION> interpreter;
+    private BasicDMNToJavaTransformer basicToJavaTransformer;
     private TestCases testCases;
 
-    public JDMNTestContext(DMNReader dmnReader, DMNWriter dmnWriter, DMNTransformer<TestCases> dmnTransformer, DMNDialectDefinition dialectDefinition) {
+    public JDMNTestContext(DMNReader dmnReader, DMNWriter dmnWriter, DMNTransformer<TestCases> dmnTransformer, DMNDialectDefinition<NUMBER, DATE, TIME, DATE_TIME, DURATION, TestCases> dialectDefinition) {
         this.dmnReader = dmnReader;
         this.dmnWriter = dmnWriter;
         this.tckReader = new TestCasesReader(new NopBuildLogger());
         this.dmnTransformer = dmnTransformer;
         this.dialectDefinition = dialectDefinition;
-        this.lib = (StandardFEELLib) dialectDefinition.createFEELLib();
+        this.lib = (StandardFEELLib<NUMBER, DATE, TIME, DATE_TIME, DURATION>) dialectDefinition.createFEELLib();
         this.environmentFactory = StandardEnvironmentFactory.instance();
     }
 
-    public DMNInterpreter getInterpreter() {
+    public DMNInterpreter<NUMBER, DATE, TIME, DATE_TIME, DURATION> getInterpreter() {
         return interpreter;
     }
 
-    public StandardFEELLib getLib() {
+    public StandardFEELLib<NUMBER, DATE, TIME, DATE_TIME, DURATION> getLib() {
         return lib;
     }
 
-    public BasicDMN2JavaTransformer getBasicToJavaTransformer() {
+    public BasicDMNToJavaTransformer getBasicToJavaTransformer() {
         return basicToJavaTransformer;
     }
 
@@ -79,7 +80,6 @@ public class JDMNTestContext implements TestSuiteContext {
     public void prepareModel(URL modelURL, Collection<? extends URL> additionalModelURLs, BuildLogger logger) {
         Map<URL, TDefinitions> modelMap = new LinkedHashMap<>();
         List<Pair<TDefinitions, PrefixNamespaceMappings>> pairs = new ArrayList<>();
-        PrefixNamespaceMappings prefixNamespaceMappings = new PrefixNamespaceMappings();
         if (modelURL != null) {
             Pair<TDefinitions, PrefixNamespaceMappings> pair = dmnReader.read(modelURL);
             modelMap.put(modelURL, pair.getLeft());
@@ -97,15 +97,15 @@ public class JDMNTestContext implements TestSuiteContext {
                 save(entry.getKey(), entry.getValue());
             }
         }
-        LinkedHashMap<String, String> inputParameters = getInputParameters();
+        InputParameters inputParameters = getInputParameters();
         this.interpreter = dialectDefinition.createDMNInterpreter(repository, inputParameters);
         this.basicToJavaTransformer = dialectDefinition.createBasicTransformer(repository, new NopLazyEvaluationDetector(), inputParameters);
     }
 
-    private LinkedHashMap<String, String> getInputParameters() {
-        LinkedHashMap<String, String> result = new LinkedHashMap<>();
-        result.put("singletonInputData", "false");
-        return result;
+    private InputParameters getInputParameters() {
+        LinkedHashMap<String, String> map = new LinkedHashMap<>();
+        map.put("singletonInputData", "false");
+        return new InputParameters(map);
     }
 
     public void clean(TestCases testCases) {
