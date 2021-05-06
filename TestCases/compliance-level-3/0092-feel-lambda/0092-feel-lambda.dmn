@@ -150,7 +150,7 @@
     <!-- -->
 
     <inputData name="input_007_1" id="_input_007_1">
-        <variable name="input_007_1" typeRef="number"/>
+        <variable name="input_007_1" typeRef="number" />
     </inputData>
 
     <!-- decision returns a UDF lambda that closes over an info requirement input data value -->
