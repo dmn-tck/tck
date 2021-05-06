@@ -22,7 +22,7 @@ import com.gs.dmn.serialization.DMNWriter;
 import com.gs.dmn.tck.TCKUtil;
 import com.gs.dmn.transformation.DMNTransformer;
 import com.gs.dmn.transformation.ToSimpleNameTransformer;
-import com.gs.dmn.transformation.basic.BasicDMN2JavaTransformer;
+import com.gs.dmn.transformation.basic.BasicDMNToJavaTransformer;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.junit.runner.Description;
 import org.junit.runner.RunWith;
@@ -50,7 +50,7 @@ public class JDMNTckTest implements DmnTckVendorTestSuite {
     private static final File CL2_FOLDER = new File("TestCases/compliance-level-2");
     private static final File CL3_FOLDER = new File("TestCases/compliance-level-3");
     private static final File NON_COMPLIANT_FOLDER = new File("TestCases/non-compliant");
-    private static final boolean IGNORE_ERROR = false;
+    private static final boolean IGNORE_ERROR_FLAG = true;
 
     @Override
     public List<URL> getTestCases() {
@@ -81,21 +81,21 @@ public class JDMNTckTest implements DmnTckVendorTestSuite {
         DMNWriter dmnWriter = new DMNWriter(LOGGER);
         DMNTransformer<TestCases> dmnTransformer = new ToSimpleNameTransformer(LOGGER);
         StandardDMNDialectDefinition dialectDefinition = new StandardDMNDialectDefinition();
-        return new JDMNTestContext(dmnReader, dmnWriter, dmnTransformer, dialectDefinition);
+        return new JDMNTestContext<>(dmnReader, dmnWriter, dmnTransformer, dialectDefinition);
     }
 
     @Override
     public void beforeTestCases(TestSuiteContext context, TestCases testCases, URL modelURL, Collection<? extends URL> additionalModels) {
-        ((JDMNTestContext)context).prepareModel(modelURL, additionalModels, LOGGER);
-        ((JDMNTestContext)context).clean(testCases);
-        ((JDMNTestContext)context).setTestCases(testCases);
+        ((JDMNTestContext<?, ?, ?, ?, ?>) context).prepareModel(modelURL, additionalModels, LOGGER);
+        ((JDMNTestContext<?, ?, ?, ?, ?>) context).clean(testCases);
+        ((JDMNTestContext<?, ?, ?, ?, ?>) context).setTestCases(testCases);
     }
 
     @Override
     public void beforeTestCases(TestSuiteContext context, TestCases testCases, URL modelURL) {
-        ((JDMNTestContext)context).prepareModel(modelURL, Collections.emptyList(), LOGGER);
-        ((JDMNTestContext)context).clean(testCases);
-        ((JDMNTestContext)context).setTestCases(testCases);
+        ((JDMNTestContext) context).prepareModel(modelURL, Collections.emptyList(), LOGGER);
+        ((JDMNTestContext) context).clean(testCases);
+        ((JDMNTestContext) context).setTestCases(testCases);
     }
 
     @Override
@@ -109,7 +109,7 @@ public class JDMNTckTest implements DmnTckVendorTestSuite {
 
         try {
             JDMNTestContext gsContext = (JDMNTestContext) context;
-            BasicDMN2JavaTransformer basicTransformer = gsContext.getBasicToJavaTransformer();
+            BasicDMNToJavaTransformer basicTransformer = gsContext.getBasicToJavaTransformer();
             StandardFEELLib lib = gsContext.getLib();
             DMNInterpreter interpreter = gsContext.getInterpreter();
             TCKUtil tckUtil = new TCKUtil(basicTransformer, lib);
@@ -128,15 +128,17 @@ public class JDMNTckTest implements DmnTckVendorTestSuite {
                         String errorMessage = String.format("%s ResultNode '%s' output mismatch, expected '%s' actual '%s'", testLocation, res.getName(), expectedValue, actualValue);
                         failures.add(errorMessage);
                     }
+                    if (!IGNORE_ERROR_FLAG) {
+                        String errorFlagMessage = String.format("%s ResultNode '%s' error flag mismatch", testLocation, res.getName());
+                        if (!isEquals(res.isErrorResult(), actualResult.hasErrors())) {
+                            failures.add(errorFlagMessage);
+                        }
+                    }
                 } catch (Throwable e) {
                     String stackTrace = ExceptionUtils.getStackTrace(e);
                     LOGGER.error(stackTrace);
-                    if (!IGNORE_ERROR) {
-                        if (!isEquals(expectedValue, actualValue)) {
-                            String errorMessage = String.format("%s ResultNode '%s' output mismatch, expected '%s' actual '%s'", testLocation, res.getName(), expectedValue, actualValue);
-                            failures.add(errorMessage);
-                        }
-                    }
+                    String errorMessage = String.format("%s ResultNode '%s' output mismatch, expected '%s' actual '%s'", testLocation, res.getName(), expectedValue, actualValue);
+                    exceptions.add(errorMessage + ". Exception thrown while testing");
                 }
             }
         } catch (Throwable e) {
@@ -160,7 +162,7 @@ public class JDMNTckTest implements DmnTckVendorTestSuite {
         try {
             com.gs.dmn.runtime.Assert.assertEquals(expectedValue, actualValue);
             return true;
-        } catch (Exception e) {
+        } catch (Throwable e) {
             return false;
         }
     }
