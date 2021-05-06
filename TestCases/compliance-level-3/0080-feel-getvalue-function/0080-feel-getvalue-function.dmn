@@ -10,7 +10,7 @@
     <description>FEEL built-in function 'get value(m, key)' in unspecified category</description>
 
     <inputData name="input_001" id="_input_001">
-        <variable name="input_001"/>
+        <variable name="input_001" typeRef="Any"/> <!-- used to externally supply FEEL:string or other type of values defined in the TCK test file -->
     </inputData>
 
     <decision name="decision_001" id="_decision_001">
