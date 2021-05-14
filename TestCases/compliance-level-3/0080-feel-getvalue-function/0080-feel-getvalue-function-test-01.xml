@@ -61,7 +61,6 @@
         </resultNode>
     </testCase>
 
-<!--
     <testCase id="decision_007">
         <description>named params</description>
         <resultNode name="decision_007" type="decision">
@@ -79,7 +78,6 @@
             </expected>
         </resultNode>
     </testCase>
--->
 
     <testCase id="decision_009">
         <description>null map param</description>
@@ -100,8 +98,8 @@
     </testCase>
 
     <testCase id="decision_011">
-        <description>null map and key params</description>
-        <resultNode errorResult="true" name="decision_011" type="decision">
+        <description>null context param</description>
+        <resultNode name="decision_011" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"></value>
             </expected>
@@ -109,13 +107,38 @@
     </testCase>
 
     <testCase id="decision_012">
-        <description>null value stored in context</description>
+        <description>null item value stored in context</description>
         <resultNode name="decision_012" type="decision">
             <expected>
                 <value xsi:nil="true"></value>
             </expected>
         </resultNode>
     </testCase>
+
+    <testCase id="decision_013">
+        <description>non literal key of string type</description>
+        <inputNode name="input_001">
+            <value xsi:type="xsd:string">a</value>
+        </inputNode>
+        <resultNode name="decision_013" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">foo</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="decision_014">
+        <description>non literal key of incorrect type</description>
+        <inputNode name="input_001">
+            <value xsi:type="xsd:decimal">12</value>
+        </inputNode>
+        <resultNode name="decision_013" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"></value>
+            </expected>
+        </resultNode>
+    </testCase>
+
 
 
 

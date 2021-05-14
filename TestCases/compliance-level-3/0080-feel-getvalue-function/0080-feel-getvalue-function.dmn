@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<definitions namespace="http://www.montera.com.au/spec/DMN/0080-feel-getvalue-function" name="0080-feel-getvalue-function" id="_i9fboPUUEeesLuP4RHs4vA" xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<definitions namespace="http://www.montera.com.au/spec/DMN/0080-feel-getvalue-function"
+             name="0080-feel-getvalue-function"
+             id="_i9fboPUUEeesLuP4RHs4vA"
+             xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/"
+             xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
+             xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/"
+             xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <description>FEEL built-in function 'get value(m, key)' in unspecified category</description>
+
+    <inputData name="input_001" id="_input_001">
+        <variable name="input_001" typeRef="Any"/> <!-- used to externally supply FEEL:string or other type of values defined in the TCK test file -->
+    </inputData>
 
     <decision name="decision_001" id="_decision_001">
         <description>Tests FEEL expression: 'get value()' and expects result: 'null'</description>
@@ -62,7 +73,6 @@
         </literalExpression>
     </decision>
 
-<!--
     <decision name="decision_007" id="_decision_007">
         <description>Tests FEEL expression: 'get value(key:"a", m:{a: "foo"})' and expects result: 'foo'</description>
         <question>Result of FEEL expression 'get value(key:"a", m:{a: "foo"})'?</question>
@@ -82,7 +92,6 @@
             <text>get value(k:"a", m:{a: "foo"})</text>
         </literalExpression>
     </decision>
--->
 
     <decision name="decision_009" id="_decision_009">
         <description>Tests FEEL expression: 'get value(null, "a")' and expects result: 'null'</description>
@@ -121,6 +130,20 @@
         <variable typeRef="string" name="decision_012"/>
         <literalExpression>
             <text>get value({a: null}, "a")</text>
+        </literalExpression>
+    </decision>
+
+
+    <decision name="decision_013" id="_decision_013">
+        <description>Tests FEEL expression: 'get value({a: "foo"}, input_001)' and expects result: 'foo'</description>
+        <question>Result of FEEL expression 'get value({a: "foo"}, input_001)'?</question>
+        <allowedAnswers>null</allowedAnswers>
+        <variable typeRef="string" name="decision_013"/>
+        <informationRequirement>
+            <requiredInput href="#_input_001"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>get value({a: "foo"}, input_001)</text>
         </literalExpression>
     </decision>
 
