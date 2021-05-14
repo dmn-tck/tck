@@ -150,7 +150,7 @@
     <!-- -->
 
     <inputData name="input_007_1" id="_input_007_1">
-        <variable name="input_007_1"/>
+        <variable name="input_007_1" typeRef="number" />
     </inputData>
 
     <!-- decision returns a UDF lambda that closes over an info requirement input data value -->
@@ -331,7 +331,7 @@
     </businessKnowledgeModel>
 
     <inputData name="input_011_1" id="_input_011_1">
-        <variable name="input_011_1"/>
+        <variable name="input_011_1" typeRef="number" />
     </inputData>
 
     <decision name="decision_011_1" id="_decision_011_1">
@@ -521,7 +521,7 @@
     </businessKnowledgeModel>
 
     <inputData name="input_017_1" id="_input_017_1">
-        <variable name="input_017_1"/>
+        <variable name="input_017_1" typeRef="string" />
     </inputData>
 
     <decision name="decision_017_1" id="_decision_017_1">
