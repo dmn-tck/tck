@@ -15,9 +15,6 @@
 package org.omg.dmn.tck.runner.camunda;
 
 import java.io.File;
-import java.io.FilenameFilter;
-import java.io.IOException;
-import java.io.InputStream;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.MathContext;
@@ -27,127 +24,140 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.OffsetDateTime;
+import java.time.OffsetTime;
 import java.time.Period;
 import java.time.ZoneOffset;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicLong;
+import java.util.Optional;
 import java.util.stream.Collectors;
-
+import javax.xml.bind.JAXBElement;
 import javax.xml.datatype.DatatypeConstants;
 import javax.xml.datatype.Duration;
 import javax.xml.datatype.XMLGregorianCalendar;
 import javax.xml.namespace.QName;
-
-import org.camunda.dmn.DmnEngine;
-import org.camunda.dmn.DmnEngine.EvalResult;
-import org.camunda.dmn.DmnEngine.Failure;
-import org.camunda.dmn.DmnEngine.Result;
-import org.camunda.dmn.parser.ParsedDmn;
-import org.camunda.feel.datatype.ZonedTime;
+import org.camunda.bpm.dmn.engine.DmnDecision;
+import org.camunda.bpm.dmn.engine.DmnDecisionResult;
+import org.camunda.bpm.dmn.engine.DmnEngine;
+import org.camunda.bpm.dmn.engine.impl.DefaultDmnEngineConfiguration;
 import org.junit.runner.Description;
 import org.junit.runner.RunWith;
 import org.omg.dmn.tck.marshaller._20160719.TestCases;
+import org.omg.dmn.tck.marshaller._20160719.TestCases.TestCase.ResultNode;
 import org.omg.dmn.tck.marshaller._20160719.ValueType;
 import org.omg.dmn.tck.marshaller._20160719.ValueType.Component;
 import org.omg.dmn.tck.runner.junit4.DmnTckSuite;
 import org.omg.dmn.tck.runner.junit4.DmnTckVendorTestSuite;
 import org.omg.dmn.tck.runner.junit4.TestResult;
+import org.omg.dmn.tck.runner.junit4.TestResult.Result;
 import org.omg.dmn.tck.runner.junit4.TestSuiteContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Node;
 
-import scala.collection.JavaConverters;
-import scala.util.Either;
-
 @RunWith(DmnTckSuite.class)
 public class CamundaTCKTest implements DmnTckVendorTestSuite {
 
-	public static class CamundaContext implements TestSuiteContext {
-		public DmnEngine engine;
-		public ParsedDmn dmnModel;
-	}
+	private static final File CL2_FOLDER = new File("../../TestCases/compliance-level-2");
+	private static final File CL3_FOLDER = new File("../../TestCases/compliance-level-3");
 
-	@Override
-	public String getResultFileName() {
-		String resultDirectory = "../../TestResults/Camunda/7.9.0";
-		new File(resultDirectory).mkdirs();
-		return resultDirectory + "/" + DmnTckVendorTestSuite.super.getResultFileName();
-	}
+	private static final BigDecimal NUMBER_COMPARISON_PRECISION = new BigDecimal("0.00000001");
+	private static final boolean IGNORE_ERRORS = true;
 
 	private static final Logger logger = LoggerFactory.getLogger(CamundaTCKTest.class);
-	private static final boolean LOG_DETAILS = false;
-	public static final BigDecimal NUMBER_COMPARISON_PRECISION = new BigDecimal("0.00000001");
 
 	@Override
 	public List<URL> getTestCases() {
-		List<URL> testCases = new ArrayList<>();
-		File cl2parent = new File("../../TestCases/compliance-level-2");
-		FilenameFilter filenameFilter = (dir, name) -> name.matches("\\d\\d\\d\\d-.*");
-//		 FilenameFilter filenameFilter = (dir, inputName) -> inputName.matches( "000[1-4]-.*" );
-//		 FilenameFilter filenameFilter = (dir, inputName) -> inputName.matches( "0004.*" );
-		for (File file : cl2parent.listFiles(filenameFilter)) {
-			try {
-				testCases.add(file.toURI().toURL());
-			} catch (MalformedURLException e) {
-				e.printStackTrace();
-			}
-		}
+		final List<URL> testCases = new ArrayList<>();
 
-		File cl3parent = new File("../../TestCases/compliance-level-3");
-		for (File file : cl3parent.listFiles(filenameFilter)) {
-			try {
-				testCases.add(file.toURI().toURL());
-			} catch (MalformedURLException e) {
-				e.printStackTrace();
-			}
-		}
-		java.util.Collections.sort(testCases, (URL url1, URL url2) -> url1.getPath().compareTo(url2.getPath()));
+		testCases.addAll(getFiles(CL2_FOLDER));
+		testCases.addAll(getFiles(CL3_FOLDER));
+
+		testCases.sort(Comparator.comparing(URL::getPath));
+
 		return testCases;
 	}
 
 	@Override
 	public TestSuiteContext createContext() {
-		logger.info("Creating context.");
-		final CamundaContext context = new CamundaContext();
-		context.engine = new DmnEngine(new DmnEngine.Configuration(true, true));
-
-		return context;
+		return new CamundaContext();
 	}
 
 	@Override
 	public void beforeTestCases(TestSuiteContext context, TestCases testCases, URL modelURL) {
-		logger.info("Creating runtime for model: {}\n", modelURL);
-		CamundaContext ctx = (CamundaContext) context;
+		final CamundaContext ctx = (CamundaContext) context;
+
+		final DefaultDmnEngineConfiguration configuration = new DefaultDmnEngineConfiguration();
+		ctx.runtime = configuration.buildEngine();
+
+		logger.info("Parse DMN file: {}", modelURL);
 
 		try {
-		  InputStream inputStream =  modelURL.openStream();
+			//      final InputStream inputStream = modelURL.openStream();
+			final EscapeAmbiguousNamesInputStream inputStream =
+					new EscapeAmbiguousNamesInputStream(modelURL.openStream());
 
-			final Either<Failure, ParsedDmn> parseResult = ctx.engine.parse(inputStream);
+			final List<DmnDecision> decisions = ctx.runtime.parseDecisions(inputStream);
 
-			if (parseResult.isLeft()) {
-				final Failure failure = parseResult.left().get();
-				throw new RuntimeException("Failed to parse DMN '" + modelURL + "': " + failure.message());
-			} else {
-				ctx.dmnModel = parseResult.right().get();
-			}
+			ctx.decisionsByName =
+					decisions.stream()
+							.collect(
+									Collectors.toMap(
+											decision -> removeEscapedCharacters(decision.getName()),
+											decision -> decision));
 
-		} catch (IOException e) {
-			throw new RuntimeException("Failed to read DMN: " + modelURL, e);
+		} catch (Exception e) {
+			ctx.parserException = e;
+
+			logger.error("Failed to parse DMN file: {}", modelURL, e);
 		}
 	}
 
 	@Override
-	public void beforeTest(Description description, TestSuiteContext context, TestCases.TestCase testCase) {
+	public void beforeTest(
+			Description description, TestSuiteContext context, TestCases.TestCase testCase) {
 		// nothing to do
 	}
 
 	@Override
-	public void afterTest(Description description, TestSuiteContext context, TestCases.TestCase testCase) {
+	public TestResult executeTest(
+			Description description, TestSuiteContext context, TestCases.TestCase testCase) {
+		final CamundaContext ctx = (CamundaContext) context;
+
+		if (ctx.parserException != null) {
+			return ignoreTest("Parser Exception: " + getExceptionMessageRecursive(ctx.parserException));
+		}
+
+		if (ctx.decisionsByName.isEmpty()) {
+			return ignoreTest("No parsable decision found.");
+		}
+
+		logger.info(
+				"Executing test '{} / {}'\n", description.getClassName(), description.getMethodName());
+
+		final Map<String, Object> inputVariables = new HashMap<>();
+		testCase
+				.getInputNode()
+				.forEach(inputNode -> inputVariables.put(inputNode.getName(), getValue(inputNode)));
+
+		final List<TestResult> results =
+				testCase.getResultNode().stream()
+						.map(resultNode -> evaluate(ctx, inputVariables, resultNode))
+						.collect(Collectors.toList());
+
+		return results.stream()
+				.filter(testResult -> testResult.getResult() != Result.SUCCESS)
+				.findFirst()
+				.orElse(TestResult.success(""));
+	}
+
+	@Override
+	public void afterTest(
+			Description description, TestSuiteContext context, TestCases.TestCase testCase) {
 		// nothing to do
 	}
 
@@ -157,257 +167,347 @@ public class CamundaTCKTest implements DmnTckVendorTestSuite {
 	}
 
 	@Override
-	public TestResult executeTest(Description description, TestSuiteContext context, TestCases.TestCase testCase) {
+	public String getResultFileName() {
+		final String version = DmnEngine.class.getPackage().getImplementationVersion();
+		String resultDirectory = "../../TestResults/Camunda/" + version;
+		new File(resultDirectory).mkdirs();
+		return resultDirectory + "/" + DmnTckVendorTestSuite.super.getResultFileName();
+	}
 
-		CamundaContext ctx = (CamundaContext) context;
-		logger.info("Executing test '{} / {}'\n", description.getClassName(), description.getMethodName());
+	private TestResult evaluate(
+			final CamundaContext ctx, final Map<String, Object> inputVariables, final ResultNode result) {
 
-		Map<String, Object> variables = new HashMap<>();
+		final String decisionName = result.getName();
 
-		testCase.getInputNode().forEach(in -> {
-		  variables.put(in.getName(), getValue(in));
-		});
+		if (!ctx.decisionsByName.containsKey(decisionName)) {
+			return ignoreTest(
+					String.format(
+							"No decision found with name '%s'. Parsed decisions: '%s'",
+							decisionName, ctx.decisionsByName.keySet()));
+		}
 
-		List<String> failures = new ArrayList<>();
-		testCase.getResultNode().forEach(rn -> {
-			try {
-				String name = rn.getName();
+		final DmnDecision decision = ctx.decisionsByName.get(decisionName);
+		final Object expectedResult = getValue(result.getExpected());
 
-				Either<Failure, EvalResult> result = ctx.engine.evalByName(ctx.dmnModel, name, variables);
+		try {
+			final DmnDecisionResult decisionResult =
+					ctx.runtime.evaluateDecision(decision, inputVariables);
 
-				Object expected = getValue(rn.getExpected());
+			final Object actual = extractDecisionResult(decisionResult, decisionName);
 
-				if (rn.isErrorResult()) {
-					if (result.isRight() && (expected == null && !result.right().get().isNil())) {
-						failures.add("FAILURE: '" + name + "' expected error but found='" + result.right().get() + "'");
-					}
-				} else {
-					if (result.isLeft()) {
-						failures.add(result.left().get().message());
-					} else {
-						EvalResult evalResult = result.right().get();
+			if (isEquals(expectedResult, actual)) {
+				return TestResult.success("");
 
-						Object actual = null;
+			} else if (result.isErrorResult() && actual != null) {
+				return failTest(String.format("Expected error but found '%s'", actual));
 
-						if (evalResult instanceof Result) {
-							actual = ((Result) evalResult).value();
-						}
-
-						if (!isEquals(expected, actual)) {
-							failures.add(
-									"FAILURE: '" + name + "' expected='" + expected + "' but found='" + actual + "'");
-						}
-					}
-				}
-
-			} catch (Throwable t) {
-				failures.add("FAILURE: unnexpected exception executing test case '" + description.getClassName() + " / "
-						+ description.getMethodName() + "': " + t.getClass().getName());
-				logger.error("FAILURE: unnexpected exception executing test case '{} / {}'", description.getClassName(),
-						description.getMethodName(), t);
+			} else {
+				return failTest(String.format("Expected '%s' but was '%s'", expectedResult, actual));
 			}
-		});
 
-		TestResult.Result r = !failures.isEmpty() ? (LOG_DETAILS ? TestResult.Result.ERROR : TestResult.Result.IGNORED)
-				: TestResult.Result.SUCCESS;
-    // list of test cases that are unsupported by test runner or engine
-    if (r == TestResult.Result.IGNORED) {
-      switch (description.toString()) {
-      case "001(0021-singleton-list-test-01)":
-      case "_a217c840-6ead-4cb7-a3e1-ad9df9c0c584(0039-dt-list-semantics-test-01)":
-      case "_07726176-a1a0-4e9e-9de2-16dba51556e2(0039-dt-list-semantics-test-01)":
-        r = TestResult.Result.IGNORED;
-        break;
-      default:
-        r = TestResult.Result.ERROR;
-      }
-    }
-		return new TestResult(r, (LOG_DETAILS ? failures.stream().collect(Collectors.joining("; ")) : ""));
+		} catch (Exception e) {
+
+			if (result.isErrorResult()) {
+				return TestResult.success("");
+
+			} else {
+				return failTest(
+						String.format(
+								"Expected '%s' but an error is thrown: %s",
+								expectedResult, getExceptionMessageRecursive(e)));
+			}
+		}
+	}
+
+	private TestResult failTest(final String reason) {
+		if (IGNORE_ERRORS) {
+			logger.debug("Test failure: {}", reason);
+			return TestResult.ignore("");
+
+		} else {
+			return TestResult.error(reason);
+		}
+	}
+
+	private Object extractDecisionResult(
+			final DmnDecisionResult decisionResult, final String decisionName) {
+
+		Object actual = null;
+		if (decisionResult.getResultList().size() == 1) {
+			actual = decisionResult.getFirstResult().get(decisionName);
+		} else {
+			actual = decisionResult.collectEntries(decisionName);
+		}
+
+		if (actual == null) {
+			// workaround: currently the decision result has a wrong structure
+			final Map<String, Object> entryMap = decisionResult.getFirstResult().getEntryMap();
+			if (entryMap.size() == 1) {
+				actual = entryMap.values().iterator().next();
+			} else {
+				actual = entryMap;
+			}
+		}
+		return actual;
+	}
+
+	private TestResult ignoreTest(String reason) {
+		if (IGNORE_ERRORS) {
+			logger.debug("Ignore test case: {}", reason);
+			return TestResult.ignore("");
+
+		} else {
+			logger.info("Ignore test case: {}", reason);
+			return TestResult.ignore(reason);
+		}
+	}
+
+	private List<URL> getFiles(File folder) {
+		final List<URL> urls = new ArrayList<>();
+
+		for (File file : folder.listFiles()) {
+			try {
+				urls.add(file.toURI().toURL());
+			} catch (MalformedURLException e) {
+				e.printStackTrace();
+			}
+		}
+		return urls;
+	}
+
+	private String getExceptionMessageRecursive(Throwable e) {
+		String msg = e.getClass().getSimpleName() + ": " + e.getMessage();
+		if (e.getCause() != null) {
+			msg = msg + " – Caused by: " + getExceptionMessageRecursive(e.getCause());
+		}
+		return msg.replaceAll("\"", "&quot;").replace('\n', ' ');
 	}
 
 	private Object getValue(ValueType valueType) {
-		if (valueType.getValue() != null && !(valueType.getValue().getValue() instanceof Node)) {
-			Object value = valueType.getValue().getValue();
+		final JAXBElement<Object> value = valueType.getValue();
+		final JAXBElement<ValueType.List> listValue = valueType.getList();
+		final List<Component> componentValue = valueType.getComponent();
 
-			// transform XML date / time / duration types
-			if (value instanceof XMLGregorianCalendar) {
-				value = transformDateTime((XMLGregorianCalendar) value);
-			} else if (value instanceof Duration) {
-				value = transformDuration((Duration) value);
-			}
-
-			return value;
+		if (value == null && listValue == null && componentValue == null) {
+			return null;
 		}
-		Object value = null;
-		if (valueType.getValue() != null && ((Node) valueType.getValue().getValue()).getFirstChild() != null) {
-			String text = ((Node) valueType.getValue().getValue()).getFirstChild().getTextContent();
-			try {
-				value = Long.valueOf(text);
-			} catch (NumberFormatException e) {
-				try {
-					value = Double.valueOf(text);
-				} catch (NumberFormatException e2) {
-					boolean booleanValue = Boolean.valueOf(text);
-					if (booleanValue || "false".equals(text)) {
-						value = booleanValue;
-					} else {
-						value = text;
-					}
-				}
-			}
-		} else if (valueType.getList() != null) {
-			List<Object> list = new ArrayList<>();
-			for (ValueType item : valueType.getList().getValue().getItem()) {
+
+		if (listValue != null) {
+			final List<Object> list = new ArrayList<>();
+			for (ValueType item : listValue.getValue().getItem()) {
 				list.add(getValue(item));
 			}
-			value = list;
-		} else if (value instanceof String[]) {
-			List<String> list = new ArrayList<>();
-			String[] array = (String[]) value;
-			for (String string : array) {
-				list.add(string);
-			}
-			value = list;
-		} else if (valueType.getComponent() != null && !valueType.getComponent().isEmpty()) {
-			Map<String, Object> context = new HashMap<>();
-			for (Component component : valueType.getComponent()) {
+			return list;
+		}
+
+		if (componentValue != null && !componentValue.isEmpty()) {
+			final Map<String, Object> context = new HashMap<>();
+			for (Component component : componentValue) {
 				final Object compValue = getValue(component);
 				context.put(component.getName(), compValue);
-
 			}
-			value = context;
+			return context;
 		}
-		return value;
+
+		if (value instanceof Node) {
+			final Node node = (Node) value;
+			final String text = node.getFirstChild().getTextContent();
+
+			if ("true".equalsIgnoreCase(text) || "false".equalsIgnoreCase(text)) {
+				return Boolean.valueOf(text);
+			}
+
+			try {
+				return Long.valueOf(text);
+			} catch (NumberFormatException e) {
+			}
+
+			try {
+				return Double.valueOf(text);
+			} catch (NumberFormatException e) {
+			}
+
+			return text;
+		}
+
+		if (value != null) {
+			final Object singleValue = value.getValue();
+
+			if (singleValue instanceof XMLGregorianCalendar) {
+				return transformDateTime((XMLGregorianCalendar) singleValue);
+			}
+
+			if (singleValue instanceof Duration) {
+				return transformDuration((Duration) singleValue);
+			}
+
+			if (singleValue instanceof String[]) {
+				String[] array = (String[]) singleValue;
+				return Arrays.asList(array);
+			}
+
+			return singleValue;
+		}
+
+		throw new RuntimeException(String.format("Unexpected value: '%s'", valueType));
 	}
 
 	private Object transformDateTime(final XMLGregorianCalendar cal) {
-		Object result = null;
 
-		final QName type = cal.getXMLSchemaType();
-
-		final BigDecimal fractionalSecond = cal.getFractionalSecond();
-		int nanoSeconds = 0;
-		if (fractionalSecond != null) {
-			nanoSeconds = fractionalSecond.movePointRight(9).intValue();
-		}
+		final int nanoSeconds =
+				Optional.ofNullable(cal.getFractionalSecond())
+						.map(fraction -> fraction.movePointRight(9).intValue())
+						.orElse(0);
 
 		final int timezone = cal.getTimezone();
+
 		final boolean hasOffset = timezone != DatatypeConstants.FIELD_UNDEFINED;
 		final ZoneOffset offset = hasOffset ? ZoneOffset.ofTotalSeconds(timezone * 60) : null;
 
+		final QName type = cal.getXMLSchemaType();
+
 		if (type == DatatypeConstants.DATE) {
-			result = LocalDate.of(cal.getYear(), cal.getMonth(), cal.getDay());
-		} else if (type == DatatypeConstants.TIME) {
-			final LocalTime localTime = LocalTime.of(cal.getHour(), cal.getMinute(), cal.getSecond(), nanoSeconds);
-			result = localTime;
+			return LocalDate.of(cal.getYear(), cal.getMonth(), cal.getDay());
+		}
+
+		if (type == DatatypeConstants.TIME) {
+			final LocalTime localTime =
+					LocalTime.of(cal.getHour(), cal.getMinute(), cal.getSecond(), nanoSeconds);
 
 			if (hasOffset) {
-				result = ZonedTime.of(localTime, offset);
-			}
-		} else if (type == DatatypeConstants.DATETIME) {
-			final LocalDateTime locateDateTime = LocalDateTime.of(cal.getYear(), cal.getMonth(), cal.getDay(),
-					cal.getHour(), cal.getMinute(), cal.getSecond(), nanoSeconds);
-			result = locateDateTime;
-
-			if (hasOffset) {
-				result = OffsetDateTime.of(locateDateTime, offset).toZonedDateTime();
+				return OffsetTime.of(localTime, offset);
+			} else {
+				return localTime;
 			}
 		}
-		return result;
+
+		if (type == DatatypeConstants.DATETIME) {
+			final LocalDateTime locateDateTime =
+					LocalDateTime.of(
+							cal.getYear(),
+							cal.getMonth(),
+							cal.getDay(),
+							cal.getHour(),
+							cal.getMinute(),
+							cal.getSecond(),
+							nanoSeconds);
+
+			if (hasOffset) {
+				return OffsetDateTime.of(locateDateTime, offset).toZonedDateTime();
+			} else {
+				return locateDateTime;
+			}
+		}
+
+		throw new RuntimeException(String.format("Unexpected calendar value: '%s'", cal));
 	}
 
 	private Object transformDuration(final Duration duration) {
-		final boolean isYourMonthDuration = duration.isSet(DatatypeConstants.YEARS) || duration.isSet(DatatypeConstants.MONTHS);
-		final boolean isNeg = duration.getSign() < 0;
-		final int n = isNeg ? -1 : 1;
+
+		final boolean isYourMonthDuration =
+				duration.isSet(DatatypeConstants.YEARS) || duration.isSet(DatatypeConstants.MONTHS);
+
+		final boolean isNegative = duration.getSign() < 0;
+		final int factor = isNegative ? -1 : 1;
 
 		if (isYourMonthDuration) {
-			return Period.of(n * duration.getYears(), n * duration.getMonths(), n * duration.getDays());
-		} else {
-			long nanos = 0L;
-
-			if (duration.isSet(DatatypeConstants.SECONDS))
-			{
-				final Number seconds = duration.getField(DatatypeConstants.SECONDS);
-				final BigDecimal fractionSeconds = BigDecimal.valueOf(seconds.doubleValue()).remainder(BigDecimal.ONE);
-				nanos = fractionSeconds.movePointRight(9).longValue();
-			}
-
-			return java.time.Duration.ofDays(n * duration.getDays()).plusHours(n * duration.getHours())
-					.plusMinutes(n * duration.getMinutes()).plusSeconds(n * duration.getSeconds()).plusNanos(nanos);
+			return Period.of(
+					factor * duration.getYears(), factor * duration.getMonths(), factor * duration.getDays());
 		}
+
+		final long nanos;
+		if (duration.isSet(DatatypeConstants.SECONDS)) {
+			final Number seconds = duration.getField(DatatypeConstants.SECONDS);
+			final BigDecimal fractionSeconds =
+					BigDecimal.valueOf(seconds.doubleValue())
+							.subtract(BigDecimal.valueOf(seconds.longValue()));
+			nanos = fractionSeconds.movePointRight(9).longValue();
+		} else {
+			nanos = 0;
+		}
+
+		return java.time.Duration.ofDays(factor * duration.getDays())
+				.plusHours(factor * duration.getHours())
+				.plusMinutes(factor * duration.getMinutes())
+				.plusSeconds(factor * duration.getSeconds())
+				.plusNanos(nanos);
 	}
 
 	private boolean isEquals(Object expected, Object actual) {
+
 		if (expected == actual) {
-			// this includes both being null
 			return true;
 		}
-		if ((expected == null && actual != null) || (expected != null && actual == null)) {
+
+		if (expected == null || actual == null) {
 			return false;
 		}
+
 		if (expected instanceof Number && actual instanceof Number) {
-			BigDecimal expectedBD = getBigDecimalOrNull(expected);
-			BigDecimal actualBD = getBigDecimalOrNull(actual);
-			return expectedBD.subtract(actualBD).abs().compareTo(NUMBER_COMPARISON_PRECISION) < 0;
+			final BigDecimal expectedNumber = toBigDecimal((Number) expected);
+			final BigDecimal actualNumber = toBigDecimal((Number) actual);
+
+			return expectedNumber.subtract(actualNumber).abs().compareTo(NUMBER_COMPARISON_PRECISION) < 0;
 		}
-		if (actual instanceof scala.collection.immutable.List) {
-			actual = JavaConverters.bufferAsJavaListConverter(((scala.collection.immutable.List) actual).toBuffer())
-					.asJava();
-		}
-		if (actual instanceof scala.collection.immutable.Map) {
-			actual = JavaConverters.mapAsJavaMapConverter((scala.collection.immutable.Map) actual).asJava();
-		}
+
 		if (expected instanceof List && actual instanceof List) {
-			List e = (List) expected;
-			List a = (List) actual;
-			if (e.size() != a.size()) {
+			final List<Object> expectedList = (List<Object>) expected;
+			final List<Object> actualList = (List<Object>) actual;
+
+			if (expectedList.size() != actualList.size()) {
 				return false;
 			}
-			for (int i = 0; i < e.size(); i++) {
-				if (!isEquals(e.get(i), a.get(i))) {
+
+			for (int i = 0; i < expectedList.size(); i++) {
+				if (!isEquals(expectedList.get(i), actualList.get(i))) {
 					return false;
 				}
 			}
 			return true;
 		}
+
 		if (expected instanceof Map && actual instanceof Map) {
-			Map<Object, Object> e = (Map<Object, Object>) expected;
-			Map<Object, Object> a = (Map<Object, Object>) actual;
-			if (e.size() != a.size()) {
+			final Map<Object, Object> expectedContext = (Map<Object, Object>) expected;
+			final Map<Object, Object> actualContext = (Map<Object, Object>) actual;
+
+			if (expectedContext.size() != actualContext.size()) {
 				return false;
 			}
-			for (Map.Entry entry : e.entrySet()) {
-				if (!isEquals(entry.getValue(), a.get(entry.getKey()))) {
+
+			for (Map.Entry<Object, Object> entry : expectedContext.entrySet()) {
+				if (!isEquals(entry.getValue(), actualContext.get(entry.getKey()))) {
 					return false;
 				}
 			}
 			return true;
 		}
-		if (!expected.getClass().isAssignableFrom(actual.getClass())) {
-			return false;
-		}
+
 		return expected.equals(actual);
 	}
 
-	public static BigDecimal getBigDecimalOrNull(Object value) {
-		if (!(value instanceof Number || value instanceof String)) {
-			return null;
+	public static BigDecimal toBigDecimal(Number value) {
+
+		if (value instanceof BigDecimal) {
+			return (BigDecimal) value;
 		}
-		if (!BigDecimal.class.isAssignableFrom(value.getClass())) {
-			if (value instanceof Long || value instanceof Integer || value instanceof Short || value instanceof Byte
-					|| value instanceof AtomicLong || value instanceof AtomicInteger) {
-				value = new BigDecimal(((Number) value).longValue(), MathContext.DECIMAL128);
-			} else if (value instanceof BigInteger) {
-				value = new BigDecimal(((BigInteger) value).toString(), MathContext.DECIMAL128);
-			} else if (value instanceof String) {
-				// we need to remove leading zeros to prevent octal conversion
-				value = new BigDecimal(((String) value).replaceFirst("^0+(?!$)", ""), MathContext.DECIMAL128);
-			} else {
-				value = new BigDecimal(((Number) value).doubleValue(), MathContext.DECIMAL128);
-			}
+
+		if (value instanceof BigInteger) {
+			return new BigDecimal((BigInteger) value, MathContext.DECIMAL128);
 		}
-		return (BigDecimal) value;
+
+		final double doubleValue = value.doubleValue();
+		return new BigDecimal(doubleValue, MathContext.DECIMAL128);
 	}
 
+	private String removeEscapedCharacters(String name) {
+		return name.replaceAll(EscapeAmbiguousNamesInputStream.ESCAPE_CHARACTER, "");
+	}
+
+	private static final class CamundaContext implements TestSuiteContext {
+
+		public DmnEngine runtime;
+		public Map<String, DmnDecision> decisionsByName;
+
+		public Exception parserException;
+	}
 }
