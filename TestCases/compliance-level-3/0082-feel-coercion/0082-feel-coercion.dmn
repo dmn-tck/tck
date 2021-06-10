@@ -148,9 +148,9 @@
 
     <businessKnowledgeModel name="bkm_004" id="_bkm_004">
         <variable name="bkm_004"/>
-        <encapsulatedLogic typeRef="tNumberList">
+        <encapsulatedLogic>
             <formalParameter name="arg"/>
-            <literalExpression>
+            <literalExpression typeRef="tNumberList">
                 <text>arg</text>
             </literalExpression>
         </encapsulatedLogic>
@@ -158,9 +158,9 @@
 
     <businessKnowledgeModel name="bkm_005" id="_bkm_005">
         <variable name="bkm_005"/>
-        <encapsulatedLogic typeRef="number">
+        <encapsulatedLogic>
             <formalParameter name="arg"/>
-            <literalExpression>
+            <literalExpression typeRef="number">
                 <text>[arg]</text>
             </literalExpression>
         </encapsulatedLogic>
