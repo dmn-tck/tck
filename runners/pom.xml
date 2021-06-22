@@ -71,6 +71,17 @@
         <module>dmn-tck-runner-camunda</module>
       </modules>
     </profile>
+    <profile>
+      <id>dmn-scala</id>
+      <activation>
+        <file>
+          <exists>enable-dmn-scala.flag</exists>
+        </file>
+      </activation>
+      <modules>
+        <module>dmn-tck-runner-dmn-scala</module>
+      </modules>
+    </profile>
   </profiles>
 
   <build>
