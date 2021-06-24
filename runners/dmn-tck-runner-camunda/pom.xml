@@ -7,11 +7,23 @@
   <name>DMN :: TCK :: jUnit Runner :: Camunda</name>
 
   <properties>
-    <dmn-scala.version>1.1.0</dmn-scala.version>
+    <camunda.version>7.15.0</camunda.version>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.camunda.bpm.dmn</groupId>
+        <artifactId>camunda-engine-dmn-bom</artifactId>
+        <version>${camunda.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <dependencies>
     <dependency>
@@ -46,13 +58,18 @@
     </dependency>
 
     <!-- Camunda dependencies -->
-  
     <dependency>
-      <groupId>org.camunda.bpm.extension.dmn.scala</groupId>
-      <artifactId>dmn-engine</artifactId>
-      <version>${dmn-scala.version}</version>
+      <!-- decision engine -->
+      <groupId>org.camunda.bpm.dmn</groupId>
+      <artifactId>camunda-engine-dmn</artifactId>
+      <scope>provided</scope>
     </dependency>
-    
+
+    <dependency>
+      <groupId>io.inbot</groupId>
+      <artifactId>inbot-utils</artifactId>
+      <version>1.26</version>
+    </dependency>
   </dependencies>
 
   <repositories>
@@ -62,4 +79,5 @@
       <url>https://app.camunda.com/nexus/content/groups/public</url>
     </repository>
   </repositories>
+
 </project>
