@@ -515,6 +515,8 @@
         </resultNode>
     </testCase>
 
+<!--
+    https://github.com/dmn-tck/tck/pull/394#issuecomment-858583811
     <testCase id="range_012_a">
         <description>range - start: ambiguous 'no operation syntax' gives null </description>
         <resultNode name="range_012_a" type="decision" errorResult="true">
@@ -523,6 +525,7 @@
             </expected>
         </resultNode>
     </testCase>
+-->
 
     <testCase id="range_013">
         <description>range - end: LT unary syntax</description>
@@ -560,6 +563,8 @@
         </resultNode>
     </testCase>
 
+<!--
+    https://github.com/dmn-tck/tck/pull/394#issuecomment-858583811
     <testCase id="range_016_a">
         <description>range - end: ambiguous 'no operation syntax' gives null </description>
         <resultNode name="range_016_a" type="decision" errorResult="true">
@@ -568,6 +573,7 @@
             </expected>
         </resultNode>
     </testCase>
+-->
 
     <testCase id="range_017">
         <description>range - start included: LT unary syntax</description>
@@ -605,6 +611,8 @@
         </resultNode>
     </testCase>
 
+<!--
+    https://github.com/dmn-tck/tck/pull/394#issuecomment-858583811
     <testCase id="range_020_a">
         <description>range - start included: ambiguous 'no operation syntax' gives null </description>
         <resultNode name="range_020_a" type="decision" errorResult="true">
@@ -613,6 +621,7 @@
             </expected>
         </resultNode>
     </testCase>
+-->
 
     <testCase id="range_021">
         <description>range - end included: LT unary syntax</description>
@@ -650,6 +659,8 @@
         </resultNode>
     </testCase>
 
+<!--
+    https://github.com/dmn-tck/tck/pull/394#issuecomment-858583811
     <testCase id="range_024_a">
         <description>range - end included: ambiguous 'no operation syntax' gives null </description>
         <resultNode name="range_024_a" type="decision" errorResult="true">
@@ -658,5 +669,6 @@
             </expected>
         </resultNode>
     </testCase>
+-->
 
 </testCases>

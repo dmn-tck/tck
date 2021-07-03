@@ -422,12 +422,15 @@
         </literalExpression>
     </decision>
 
+<!--
+    https://github.com/dmn-tck/tck/pull/394#issuecomment-858583811
     <decision name="range_012_a" id="_range_012_a">
         <variable name="range_012_a"/>
         <literalExpression>
             <text>(10).start</text>
         </literalExpression>
     </decision>
+-->
 
     <decision name="range_013" id="_range_013">
         <variable name="range_013"/>
@@ -457,12 +460,15 @@
         </literalExpression>
     </decision>
 
+<!--
+    https://github.com/dmn-tck/tck/pull/394#issuecomment-858583811
     <decision name="range_016_a" id="_range_016_a">
         <variable name="range_016_a"/>
         <literalExpression>
             <text>(10).end</text>
         </literalExpression>
     </decision>
+-->
 
     <decision name="range_017" id="_range_017">
         <variable name="range_017"/>
@@ -492,12 +498,15 @@
         </literalExpression>
     </decision>
 
+<!--
+    https://github.com/dmn-tck/tck/pull/394#issuecomment-858583811
     <decision name="range_020_a" id="_range_020_a">
         <variable name="range_020_a"/>
         <literalExpression>
             <text>(10).start included</text>
         </literalExpression>
     </decision>
+-->
 
     <decision name="range_021" id="_range_021">
         <variable name="range_021"/>
@@ -527,12 +536,15 @@
         </literalExpression>
     </decision>
 
+<!--
+    https://github.com/dmn-tck/tck/pull/394#issuecomment-858583811
     <decision name="range_024_a" id="_range_024_a">
         <variable name="range_024_a"/>
         <literalExpression>
             <text>(10).end included</text>
         </literalExpression>
     </decision>
+-->
 
 
 
