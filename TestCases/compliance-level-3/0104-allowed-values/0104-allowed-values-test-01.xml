@@ -585,7 +585,7 @@
     <!-- LIST -->
 
     <testCase id="list_001">
-        <description>complies with list type with contained item type</description>
+        <description>complies with list type with constrained item type</description>
         <resultNode name="list_001" type="decision">
             <expected>
                 <list>
@@ -604,7 +604,7 @@
     </testCase>
 
     <testCase id="list_002">
-        <description>does not comply with list type with contained item type</description>
+        <description>does not comply with list type with constrained item type</description>
         <resultNode name="list_002" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"></value>
@@ -612,8 +612,53 @@
         </resultNode>
     </testCase>
 
+    <testCase id="list_003">
+        <description>singleton value complies with list type with constrained item type</description>
+        <resultNode name="list_003" type="decision">
+            <expected>
+                <list>
+                    <item>
+                        <value xsi:type="xsd:string">foo</value>
+                    </item>
+                </list>
+            </expected>
+        </resultNode>
+    </testCase>
+
+
+    <testCase id="list_004">
+        <description>singleton value does not comply with list type with constrained item type</description>
+        <resultNode name="list_004" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"></value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+
+    <testCase id="list_005">
+        <description>singleton list complies with constrained item type</description>
+        <resultNode name="list_005" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">foo</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+
+    <testCase id="list_006">
+        <description>singleton list does not comply with constained item type</description>
+        <resultNode name="list_006" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"></value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+
+
     <testCase id="list_boxed_001">
-        <description>complies with list type with contained item type</description>
+        <description>complies with list type with constrained item type</description>
         <resultNode name="list_boxed_001" type="decision">
             <expected>
                 <list>
@@ -632,7 +677,7 @@
     </testCase>
 
     <testCase id="list_boxed_002">
-        <description>does not comply with list type with contained item type</description>
+        <description>does not comply with list type with constrained item type</description>
         <resultNode name="list_boxed_002" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"></value>
@@ -643,7 +688,7 @@
     <!-- CONTEXT -->
 
     <testCase id="context_001">
-        <description>complies with context type with contained property type</description>
+        <description>complies with context type with constrained property type</description>
         <resultNode name="context_001" type="decision">
             <expected>
                 <component name="prop1">
@@ -654,7 +699,7 @@
     </testCase>
 
     <testCase id="context_002">
-        <description>does not comply with context type with contained property type</description>
+        <description>does not comply with context type with constrained property type</description>
         <resultNode name="context_002" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"></value>
@@ -663,7 +708,7 @@
     </testCase>
 
     <testCase id="context_boxed_001">
-        <description>complies with context type with contained property type</description>
+        <description>complies with context type with constrained property type</description>
         <resultNode name="context_boxed_001" type="decision">
             <expected>
                 <component name="prop1">
@@ -674,7 +719,7 @@
     </testCase>
 
     <testCase id="context_boxed_002">
-        <description>does not comply with context type with contained property type</description>
+        <description>does not comply with context type with constrained property type</description>
         <resultNode name="context_boxed_002" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"></value>
@@ -683,7 +728,7 @@
     </testCase>
 
     <testCase id="context_003">
-        <description>complies with context type with contained list property type</description>
+        <description>complies with context type with constrained list property type</description>
         <resultNode name="context_003" type="decision">
             <expected>
                 <component name="prop1">
@@ -704,8 +749,26 @@
     </testCase>
 
     <testCase id="context_004">
-        <description>does not comply with context type with contained list property type</description>
+        <description>does not comply with context type with constrained list property type</description>
         <resultNode name="context_004" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"></value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="context_005">
+        <description>does not comply with context type with constrained property type - no singleton list unbox</description>
+        <resultNode name="context_005" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"></value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="context_006">
+        <description>does not comply with context type with constrained property type - no singleton list boxing</description>
+        <resultNode name="context_006" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"></value>
             </expected>

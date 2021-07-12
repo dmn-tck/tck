@@ -696,6 +696,39 @@
         </dmn:list>
     </dmn:decision>
 
+    <!-- compliant assignment of single value to 'list' variable type with constrained element type  -->
+    <dmn:decision name="list_003" id="_list_003">
+        <dmn:variable name="list_003" typeRef="tFooBarList"/>
+        <dmn:literalExpression>
+            <dmn:text>"foo"</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
+
+    <!-- non-compliant assignment of single value to 'list' variable type with constrained element type  -->
+    <dmn:decision name="list_004" id="_list_004">
+        <dmn:variable name="list_004" typeRef="tFooBarList"/>
+        <dmn:literalExpression>
+            <dmn:text>"baz"</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
+
+    <!-- compliant assignment of singleton list value to string constrained element type  -->
+    <dmn:decision name="list_005" id="_list_005">
+        <dmn:variable name="list_005" typeRef="tFooBarString"/>
+        <dmn:literalExpression>
+            <dmn:text>["foo"]</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
+
+    <!-- non-compliant assignment of singleton list value to string constrained element type  -->
+    <dmn:decision name="list_006" id="_list_006">
+        <dmn:variable name="list_006" typeRef="tFooBarString"/>
+        <dmn:literalExpression>
+            <dmn:text>["baz"]</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
+
+
     <!-- decision echo value for an input that is a list with a constrained element type -->
     <dmn:decision name="list_input_decision_001" id="list_input_decision_001">
         <dmn:variable name="list_input_decision_001"/>
@@ -757,6 +790,26 @@
         <dmn:variable name="context_004" typeRef="tFooBarListContext"/>
         <dmn:literalExpression>
             <dmn:text>{prop1: ["foo", "foo", "baz"]}</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
+
+    <!-- non-compliant assignment to 'context' variable type with constrained property type
+    The intention here is to show that singleton list conversion/equality does not take place
+    inside a structure -->
+    <dmn:decision name="context_005" id="_context_005">
+        <dmn:variable name="context_005" typeRef="tFooBarContext"/>
+        <dmn:literalExpression>
+            <dmn:text>{prop1: ["foo"]}</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
+
+    <!-- non-compliant assignment to 'context' variable type with constrained property type
+        The intention here is to show that singleton list conversion/equality does not take place
+        inside a structure -->
+    <dmn:decision name="context_006" id="_context_006">
+        <dmn:variable name="context_006" typeRef="tFooBarListContext"/>
+        <dmn:literalExpression>
+            <dmn:text>{prop1: "foo"}</dmn:text>
         </dmn:literalExpression>
     </dmn:decision>
 
