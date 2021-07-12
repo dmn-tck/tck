@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<definitions namespace="http://www.montera.com.au/spec/DMN/0104-allowed-values"
+<dmn:definitions namespace="http://www.montera.com.au/spec/DMN/0104-allowed-values"
              name="0104-allowed-values"
              id="_i9fboPUUEeesLuP4RHs4vA"
-             xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/"
+             xmlns="http://www.montera.com.au/spec/DMN/0104-allowed-values"
+             xmlns:dmn="https://www.omg.org/spec/DMN/20191111/MODEL/"
              xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
              xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
              xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <description>allowed values</description>
+    <dmn:description>allowed values</dmn:description>
 
     <!--
 
@@ -44,986 +45,995 @@
     -->
 
     <!-- a context type with a constrained property -->
-    <itemDefinition name="tFooBarContext">
-        <itemComponent name="prop1">
-            <typeRef>tFooBarString</typeRef>
-        </itemComponent>
-    </itemDefinition>
+    <dmn:itemDefinition name="tFooBarContext">
+        <dmn:itemComponent name="prop1">
+            <dmn:typeRef>tFooBarString</dmn:typeRef>
+        </dmn:itemComponent>
+    </dmn:itemDefinition>
 
     <!-- a context type with a constrained list property -->
-    <itemDefinition name="tFooBarListContext">
-        <itemComponent name="prop1">
-            <typeRef>tFooBarList</typeRef>
-        </itemComponent>
-    </itemDefinition>
+    <dmn:itemDefinition name="tFooBarListContext">
+        <dmn:itemComponent name="prop1">
+            <dmn:typeRef>tFooBarList</dmn:typeRef>
+        </dmn:itemComponent>
+    </dmn:itemDefinition>
 
     <!-- a type suitable for a relation - a list of contexts, though
     each with a contrained property -->
-    <itemDefinition name="tFooBarRelation" isCollection="true">
-        <itemComponent name="col1">
-            <typeRef>tFooBarString</typeRef>
-        </itemComponent>
-    </itemDefinition>
+    <dmn:itemDefinition name="tFooBarRelation" isCollection="true">
+        <dmn:itemComponent name="col1">
+            <dmn:typeRef>tFooBarString</dmn:typeRef>
+        </dmn:itemComponent>
+    </dmn:itemDefinition>
 
     <!-- a list with a contrained string type -->
-    <itemDefinition name="tFooBarList" isCollection="true">
-        <typeRef>tFooBarString</typeRef>
-    </itemDefinition>
+    <dmn:itemDefinition name="tFooBarList" isCollection="true">
+        <dmn:typeRef>tFooBarString</dmn:typeRef>
+    </dmn:itemDefinition>
 
-    <itemDefinition name="tFooBarString">
-        <typeRef>string</typeRef>
-        <allowedValues>
-            <text>"foo", "bar"</text>
-        </allowedValues>
-    </itemDefinition>
+    <dmn:itemDefinition name="tFooBarString">
+        <dmn:typeRef>string</dmn:typeRef>
+        <dmn:allowedValues>
+            <dmn:text>"foo", "bar"</dmn:text>
+        </dmn:allowedValues>
+    </dmn:itemDefinition>
 
-    <itemDefinition name="tFooBarString_copy">
+    <dmn:itemDefinition name="tFooBarString_copy">
         <!-- note we're using the tFooBarString as a base type here and not providing
         allowedValue.  We expect the allowed values of tFooBarString to pertain to
         this type as well -->
-        <typeRef>tFooBarString</typeRef>
-    </itemDefinition>
+        <dmn:typeRef>tFooBarString</dmn:typeRef>
+    </dmn:itemDefinition>
 
     <!-- function type with constrained return type -->
-    <itemDefinition name="tFooBarFunction">
-        <functionItem outputTypeRef="tFooBarString">
-            <parameters name="a"/>
-        </functionItem>
-    </itemDefinition>
+    <dmn:itemDefinition name="tFooBarFunction">
+        <dmn:functionItem outputTypeRef="tFooBarString">
+            <dmn:parameters name="a"/>
+        </dmn:functionItem>
+    </dmn:itemDefinition>
 
     <!-- function type for decision service with untyped param and constrained return type -->
-    <itemDefinition name="tFooBarDSFunctionWithTypedReturn">
-        <functionItem outputTypeRef="tFooBarString">
-            <parameters name="tUntypedInput"/>
-        </functionItem>
-    </itemDefinition>
+    <dmn:itemDefinition name="tFooBarDSFunctionWithTypedReturn">
+        <dmn:functionItem outputTypeRef="tFooBarString">
+            <dmn:parameters name="tUntypedInput"/>
+        </dmn:functionItem>
+    </dmn:itemDefinition>
 
     <!-- function type for decision service with constrained param and no return type -->
-    <itemDefinition name="tFooBarDSFunctionWithTypedParam">
-        <functionItem>
-            <parameters name="ds_inputdecision" typeRef="tFooBarString"/>
-        </functionItem>
-    </itemDefinition>
+    <dmn:itemDefinition name="tFooBarDSFunctionWithTypedParam">
+        <dmn:functionItem>
+            <dmn:parameters name="ds_inputdecision" typeRef="tFooBarString"/>
+        </dmn:functionItem>
+    </dmn:itemDefinition>
 
     <!-- function type with a constrained parameter type -->
-    <itemDefinition name="tTypedParamFooBarFunction">
-        <functionItem>
-            <parameters name="a" typeRef="tFooBarString"/>
-        </functionItem>
-    </itemDefinition>
+    <dmn:itemDefinition name="tTypedParamFooBarFunction">
+        <dmn:functionItem>
+            <dmn:parameters name="a" typeRef="tFooBarString"/>
+        </dmn:functionItem>
+    </dmn:itemDefinition>
 
-    <itemDefinition name="tDirectionsString">
+    <dmn:itemDefinition name="tDirectionsString">
         <!-- note this type uses another string type as a base.  We expect
         the allowed values to be 'overridden' here.  That is, the allowed values
         in tFooBarString will not longer apply -->
-        <typeRef>tFooBarString</typeRef>
-        <allowedValues>
-            <text>"left", "right"</text>
-        </allowedValues>
-    </itemDefinition>
+        <dmn:typeRef>tFooBarString</dmn:typeRef>
+        <dmn:allowedValues>
+            <dmn:text>"left", "right"</dmn:text>
+        </dmn:allowedValues>
+    </dmn:itemDefinition>
 
     <!-- a constrained number type -->
-    <itemDefinition name="tNumberRangeType">
-        <typeRef>number</typeRef>
-        <allowedValues>
-            <text>[13..19]</text>
-        </allowedValues>
-    </itemDefinition>
+    <dmn:itemDefinition name="tNumberRangeType">
+        <dmn:typeRef>number</dmn:typeRef>
+        <dmn:allowedValues>
+            <dmn:text>[13..19]</dmn:text>
+        </dmn:allowedValues>
+    </dmn:itemDefinition>
 
     <!-- a constrained date type -->
-    <itemDefinition name="tDateRangeType">
-        <typeRef>date</typeRef>
-        <allowedValues>
-            <text>[@"1960-01-01" .. @"1969-12-31"]</text>
-        </allowedValues>
-    </itemDefinition>
+    <dmn:itemDefinition name="tDateRangeType">
+        <dmn:typeRef>date</dmn:typeRef>
+        <dmn:allowedValues>
+            <dmn:text>[@"1960-01-01" .. @"1969-12-31"]</dmn:text>
+        </dmn:allowedValues>
+    </dmn:itemDefinition>
 
     <!-- a constrained dateTime type -->
-    <itemDefinition name="tDateTimeRangeType">
-        <typeRef>dateTime</typeRef>
-        <allowedValues>
-            <text>[@"1960-01-01T00:00:00" .. @"1969-12-31T23:59:59"]</text>
-        </allowedValues>
-    </itemDefinition>
+    <dmn:itemDefinition name="tDateTimeRangeType">
+        <dmn:typeRef>dateTime</dmn:typeRef>
+        <dmn:allowedValues>
+            <dmn:text>[@"1960-01-01T00:00:00" .. @"1969-12-31T23:59:59"]</dmn:text>
+        </dmn:allowedValues>
+    </dmn:itemDefinition>
 
     <!-- a constrained time type -->
-    <itemDefinition name="tTimeRangeType">
-        <typeRef>time</typeRef>
-        <allowedValues>
-            <text>&lt;@"12:00:00"</text>
-        </allowedValues>
-    </itemDefinition>
+    <dmn:itemDefinition name="tTimeRangeType">
+        <dmn:typeRef>time</dmn:typeRef>
+        <dmn:allowedValues>
+            <dmn:text>&lt;@"12:00:00"</dmn:text>
+        </dmn:allowedValues>
+    </dmn:itemDefinition>
 
     <!-- a constrained years and months duration type -->
-    <itemDefinition name="tYmdRangeType">
-        <typeRef>years and months duration</typeRef>
-        <allowedValues>
-            <text>[@"P1Y"..@"P5Y"]</text>
-        </allowedValues>
-    </itemDefinition>
+    <dmn:itemDefinition name="tYmdRangeType">
+        <dmn:typeRef>years and months duration</dmn:typeRef>
+        <dmn:allowedValues>
+            <dmn:text>[@"P1Y"..@"P5Y"]</dmn:text>
+        </dmn:allowedValues>
+    </dmn:itemDefinition>
 
     <!-- a constrained days and time duration type -->
-    <itemDefinition name="tDtdRangeType">
-        <typeRef>days and time duration</typeRef>
-        <allowedValues>
-            <text>[@"P1D"..@"P5D"]</text>
-        </allowedValues>
-    </itemDefinition>
+    <dmn:itemDefinition name="tDtdRangeType">
+        <dmn:typeRef>days and time duration</dmn:typeRef>
+        <dmn:allowedValues>
+            <dmn:text>[@"P1D"..@"P5D"]</dmn:text>
+        </dmn:allowedValues>
+    </dmn:itemDefinition>
 
     <!-- a means to provide untyped input to decisions -->
-    <inputData name="tUntypedInput" id="_tUntypedInput">
-        <variable name="tUntypedInput"/>
-    </inputData>
+    <dmn:inputData name="tUntypedInput" id="_tUntypedInput">
+        <dmn:variable name="tUntypedInput"/>
+    </dmn:inputData>
 
-    <inputData name="tFooBarStringInput" id="_tFooBarStringInput">
-        <variable name="tFooBarStringInput" typeRef="tFooBarString"/>
-    </inputData>
+    <dmn:inputData name="tFooBarStringInput" id="_tFooBarStringInput">
+        <dmn:variable name="tFooBarStringInput" typeRef="tFooBarString"/>
+    </dmn:inputData>
 
-    <inputData name="tNumberRangeTypeInput" id="_tNumberRangeTypeInput">
-        <variable name="tNumberRangeTypeInput" typeRef="tNumberRangeType"/>
-    </inputData>
+    <dmn:inputData name="tNumberRangeTypeInput" id="_tNumberRangeTypeInput">
+        <dmn:variable name="tNumberRangeTypeInput" typeRef="tNumberRangeType"/>
+    </dmn:inputData>
 
-    <inputData name="tTimeRangeTypeInput" id="_tTimeRangeTypeInput">
-        <variable name="tTimeRangeTypeInput" typeRef="tTimeRangeType"/>
-    </inputData>
+    <dmn:inputData name="tTimeRangeTypeInput" id="_tTimeRangeTypeInput">
+        <dmn:variable name="tTimeRangeTypeInput" typeRef="tTimeRangeType"/>
+    </dmn:inputData>
 
-    <inputData name="tDateRangeTypeInput" id="_tDateRangeTypeInput">
-        <variable name="tDateRangeTypeInput" typeRef="tDateRangeType"/>
-    </inputData>
+    <dmn:inputData name="tDateRangeTypeInput" id="_tDateRangeTypeInput">
+        <dmn:variable name="tDateRangeTypeInput" typeRef="tDateRangeType"/>
+    </dmn:inputData>
 
-    <inputData name="tDateTimeRangeTypeInput" id="_tDateTimeRangeTypeInput">
-        <variable name="tDateTimeRangeTypeInput" typeRef="tDateTimeRangeType"/>
-    </inputData>
+    <dmn:inputData name="tDateTimeRangeTypeInput" id="_tDateTimeRangeTypeInput">
+        <dmn:variable name="tDateTimeRangeTypeInput" typeRef="tDateTimeRangeType"/>
+    </dmn:inputData>
 
-    <inputData name="tYmdRangeTypeInput" id="_tYmdRangeTypeInput">
-        <variable name="tYmdRangeTypeInput" typeRef="tYmdRangeType"/>
-    </inputData>
+    <dmn:inputData name="tYmdRangeTypeInput" id="_tYmdRangeTypeInput">
+        <dmn:variable name="tYmdRangeTypeInput" typeRef="tYmdRangeType"/>
+    </dmn:inputData>
 
-    <inputData name="tDtdRangeTypeInput" id="_tDtdRangeTypeInput">
-        <variable name="tDtdRangeTypeInput" typeRef="tDtdRangeType"/>
-    </inputData>
+    <dmn:inputData name="tDtdRangeTypeInput" id="_tDtdRangeTypeInput">
+        <dmn:variable name="tDtdRangeTypeInput" typeRef="tDtdRangeType"/>
+    </dmn:inputData>
 
-    <inputData name="tFooBarContextInput" id="_tFooBarContextInput">
-        <variable name="tFooBarContextInput" typeRef="tFooBarContext"/>
-    </inputData>
+    <dmn:inputData name="tFooBarContextInput" id="_tFooBarContextInput">
+        <dmn:variable name="tFooBarContextInput" typeRef="tFooBarContext"/>
+    </dmn:inputData>
 
-    <inputData name="tFooBarListInput" id="_tFooBarListInput">
-        <variable name="tFooBarListInput" typeRef="tFooBarList"/>
-    </inputData>
+    <dmn:inputData name="tFooBarListInput" id="_tFooBarListInput">
+        <dmn:variable name="tFooBarListInput" typeRef="tFooBarList"/>
+    </dmn:inputData>
 
     <!-- STRING -->
 
     <!-- compliant assignment to variable -->
-    <decision name="decision_string_001" id="_decision_string_001">
-        <variable name="decision_string_001" typeRef="tFooBarString"/>
-        <literalExpression>
-            <text>"foo"</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="decision_string_001" id="_decision_string_001">
+        <dmn:variable name="decision_string_001" typeRef="tFooBarString"/>
+        <dmn:literalExpression>
+            <dmn:text>"foo"</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- non-compliant assignment to variable -->
-    <decision name="decision_string_002" id="_decision_string_002">
-        <variable name="decision_string_002" typeRef="tFooBarString"/>
-        <literalExpression>
-            <text>"baz"</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="decision_string_002" id="_decision_string_002">
+        <dmn:variable name="decision_string_002" typeRef="tFooBarString"/>
+        <dmn:literalExpression>
+            <dmn:text>"baz"</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- decision accepting typed input and echoping the value -->
-    <decision name="decision_tFooBarInput_001" id="_decision_tFooBarInput_001">
-        <variable name="decision_tFooBarInput_001" typeRef="tFooBarString"/>
-        <informationRequirement>
-            <requiredInput href="#_tFooBarStringInput"/>
-        </informationRequirement>
-        <literalExpression>
-            <text>tFooBarStringInput</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="decision_tFooBarInput_001" id="_decision_tFooBarInput_001">
+        <dmn:variable name="decision_tFooBarInput_001" typeRef="tFooBarString"/>
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tFooBarStringInput"/>
+        </dmn:informationRequirement>
+        <dmn:literalExpression>
+            <dmn:text>tFooBarStringInput</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- compliant assignment to variable typed with copy of constrained type -->
-    <decision name="decision_string_003" id="_decision_string_003">
-        <variable name="decision_string_003" typeRef="tFooBarString_copy"/>
-        <literalExpression>
-            <text>"foo"</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="decision_string_003" id="_decision_string_003">
+        <dmn:variable name="decision_string_003" typeRef="tFooBarString_copy"/>
+        <dmn:literalExpression>
+            <dmn:text>"foo"</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- non-compliant to variable typed with copy of constrained type -->
-    <decision name="decision_string_004" id="_decision_string_004">
-        <variable name="decision_string_004" typeRef="tFooBarString_copy"/>
-        <literalExpression>
-            <text>"baz"</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="decision_string_004" id="_decision_string_004">
+        <dmn:variable name="decision_string_004" typeRef="tFooBarString_copy"/>
+        <dmn:literalExpression>
+            <dmn:text>"baz"</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- NUMBER -->
 
     <!-- compliant assignment to variable -->
-    <decision name="number_001" id="_number_001">
-        <variable name="number_001" typeRef="tNumberRangeType"/>
-        <literalExpression>
-            <text>17</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="number_001" id="_number_001">
+        <dmn:variable name="number_001" typeRef="tNumberRangeType"/>
+        <dmn:literalExpression>
+            <dmn:text>17</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- non-compliant assignment to variable -->
-    <decision name="number_002" id="_number_002">
-        <variable name="number_002" typeRef="tNumberRangeType"/>
-        <literalExpression>
-            <text>20</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="number_002" id="_number_002">
+        <dmn:variable name="number_002" typeRef="tNumberRangeType"/>
+        <dmn:literalExpression>
+            <dmn:text>20</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- decision accepting typed input -->
-    <decision name="decision_tNumberRangeType_001" id="_decision_tNumberRangeType_001">
-        <variable name="decision_tNumberRangeType_001" typeRef="tNumberRangeType"/>
-        <informationRequirement>
-            <requiredInput href="#_tNumberRangeTypeInput"/>
-        </informationRequirement>
-        <literalExpression>
-            <text>tNumberRangeTypeInput</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="decision_tNumberRangeType_001" id="_decision_tNumberRangeType_001">
+        <dmn:variable name="decision_tNumberRangeType_001" typeRef="tNumberRangeType"/>
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tNumberRangeTypeInput"/>
+        </dmn:informationRequirement>
+        <dmn:literalExpression>
+            <dmn:text>tNumberRangeTypeInput</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
 
     <!-- DATE -->
 
     <!-- compliant assignment to variable -->
-    <decision name="date_001" id="_date_001">
-        <variable name="date_001" typeRef="tDateRangeType"/>
-        <literalExpression>
-            <text>date("1960-02-01")</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="date_001" id="_date_001">
+        <dmn:variable name="date_001" typeRef="tDateRangeType"/>
+        <dmn:literalExpression>
+            <dmn:text>date("1960-02-01")</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- non-compliant assignment to variable -->
-    <decision name="date_002" id="_date_002">
-        <variable name="date_002" typeRef="tDateRangeType"/>
-        <literalExpression>
-            <text>date("1970-01-01")</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="date_002" id="_date_002">
+        <dmn:variable name="date_002" typeRef="tDateRangeType"/>
+        <dmn:literalExpression>
+            <dmn:text>date("1970-01-01")</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- decision accepting typed input -->
-    <decision name="decision_tDateRangeType_001" id="_decision_tDateRangeType_001">
-        <variable name="decision_tDateRangeType_001" typeRef="tDateRangeType"/>
-        <informationRequirement>
-            <requiredInput href="#_tDateRangeTypeInput"/>
-        </informationRequirement>
-        <literalExpression>
-            <text>tDateRangeTypeInput</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="decision_tDateRangeType_001" id="_decision_tDateRangeType_001">
+        <dmn:variable name="decision_tDateRangeType_001" typeRef="tDateRangeType"/>
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tDateRangeTypeInput"/>
+        </dmn:informationRequirement>
+        <dmn:literalExpression>
+            <dmn:text>tDateRangeTypeInput</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
 
     <!-- DATE TIME -->
 
     <!-- compliant assignment to variable -->
-    <decision name="dateTime_001" id="_dateTime_001">
-        <variable name="dateTime_001" typeRef="tDateTimeRangeType"/>
-        <literalExpression>
-            <text>date and time("1960-01-01T00:00:01")</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="dateTime_001" id="_dateTime_001">
+        <dmn:variable name="dateTime_001" typeRef="tDateTimeRangeType"/>
+        <dmn:literalExpression>
+            <dmn:text>date and time("1960-01-01T00:00:01")</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- non-compliant assignment to variable -->
-    <decision name="dateTime_002" id="_dateTime_002">
-        <variable name="dateTime_002" typeRef="tDateTimeRangeType"/>
-        <literalExpression>
-            <text>date and time("1970-01-01T00:00:00")</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="dateTime_002" id="_dateTime_002">
+        <dmn:variable name="dateTime_002" typeRef="tDateTimeRangeType"/>
+        <dmn:literalExpression>
+            <dmn:text>date and time("1970-01-01T00:00:00")</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- decision accepting typed input -->
-    <decision name="decision_tDateTimeRangeType_001" id="_decision_tDateTimeRangeType_001">
-        <variable name="decision_tDateTimeRangeType_001" typeRef="tDateTimeRangeType"/>
-        <informationRequirement>
-            <requiredInput href="#_tDateTimeRangeTypeInput"/>
-        </informationRequirement>
-        <literalExpression>
-            <text>tDateTimeRangeTypeInput</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="decision_tDateTimeRangeType_001" id="_decision_tDateTimeRangeType_001">
+        <dmn:variable name="decision_tDateTimeRangeType_001" typeRef="tDateTimeRangeType"/>
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tDateTimeRangeTypeInput"/>
+        </dmn:informationRequirement>
+        <dmn:literalExpression>
+            <dmn:text>tDateTimeRangeTypeInput</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
 
     <!-- TIME -->
 
     <!-- compliant assignment to variable -->
-    <decision name="time_001" id="_time_001">
-        <variable name="time_001" typeRef="tTimeRangeType"/>
-        <literalExpression>
-            <text>time("10:00:00")</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="time_001" id="_time_001">
+        <dmn:variable name="time_001" typeRef="tTimeRangeType"/>
+        <dmn:literalExpression>
+            <dmn:text>time("10:00:00")</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- non-compliant assignment to variable -->
-    <decision name="time_002" id="_time_002">
-        <variable name="time_002" typeRef="tTimeRangeType"/>
-        <literalExpression>
-            <text>time("13:00:00")</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="time_002" id="_time_002">
+        <dmn:variable name="time_002" typeRef="tTimeRangeType"/>
+        <dmn:literalExpression>
+            <dmn:text>time("13:00:00")</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- decision accepting typed input -->
-    <decision name="decision_tTimeRangeType_001" id="_decision_tTimeRangeType_001">
-        <variable name="decision_tTimeRangeType_001" typeRef="tTimeRangeType"/>
-        <informationRequirement>
-            <requiredInput href="#_tTimeRangeTypeInput"/>
-        </informationRequirement>
-        <literalExpression>
-            <text>tTimeRangeTypeInput</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="decision_tTimeRangeType_001" id="_decision_tTimeRangeType_001">
+        <dmn:variable name="decision_tTimeRangeType_001" typeRef="tTimeRangeType"/>
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tTimeRangeTypeInput"/>
+        </dmn:informationRequirement>
+        <dmn:literalExpression>
+            <dmn:text>tTimeRangeTypeInput</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
 
     <!-- YEARS AND MONTHS DURATION -->
 
     <!-- compliant assignment to variable -->
-    <decision name="ymd_001" id="_ymd_001">
-        <variable name="ymd_001" typeRef="tYmdRangeType"/>
-        <literalExpression>
-            <text>duration("P2Y")</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="ymd_001" id="_ymd_001">
+        <dmn:variable name="ymd_001" typeRef="tYmdRangeType"/>
+        <dmn:literalExpression>
+            <dmn:text>duration("P2Y")</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- non-compliant assignment to variable -->
-    <decision name="ymd_002" id="_ymd_002">
-        <variable name="ymd_002" typeRef="tYmdRangeType"/>
-        <literalExpression>
-            <text>duration("P6Y")</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="ymd_002" id="_ymd_002">
+        <dmn:variable name="ymd_002" typeRef="tYmdRangeType"/>
+        <dmn:literalExpression>
+            <dmn:text>duration("P6Y")</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- decision accepting typed input -->
-    <decision name="decision_tYmdRangeType_001" id="_decision_tYmdRangeType_001">
-        <variable name="decision_tYmdRangeType_001" typeRef="tYmdRangeType"/>
-        <informationRequirement>
-            <requiredInput href="#_tYmdRangeTypeInput"/>
-        </informationRequirement>
-        <literalExpression>
-            <text>tYmdRangeTypeInput</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="decision_tYmdRangeType_001" id="_decision_tYmdRangeType_001">
+        <dmn:variable name="decision_tYmdRangeType_001" typeRef="tYmdRangeType"/>
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tYmdRangeTypeInput"/>
+        </dmn:informationRequirement>
+        <dmn:literalExpression>
+            <dmn:text>tYmdRangeTypeInput</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
 
     <!-- DAYS AND TIME DURATION -->
 
     <!-- compliant assignment to variable -->
-    <decision name="dtd_001" id="_dtd_001">
-        <variable name="dtd_001" typeRef="tDtdRangeType"/>
-        <literalExpression>
-            <text>duration("P2D")</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="dtd_001" id="_dtd_001">
+        <dmn:variable name="dtd_001" typeRef="tDtdRangeType"/>
+        <dmn:literalExpression>
+            <dmn:text>duration("P2D")</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- non-compliant assignment to variable -->
-    <decision name="dtd_002" id="_dtd_002">
-        <variable name="dtd_002" typeRef="tDtdRangeType"/>
-        <literalExpression>
-            <text>duration("P6D")</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="dtd_002" id="_dtd_002">
+        <dmn:variable name="dtd_002" typeRef="tDtdRangeType"/>
+        <dmn:literalExpression>
+            <dmn:text>duration("P6D")</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- decision accepting typed input -->
-    <decision name="decision_tDtdRangeType_001" id="_decision_tDtdRangeType_001">
-        <variable name="decision_tDtdRangeType_001" typeRef="tDtdRangeType"/>
-        <informationRequirement>
-            <requiredInput href="#_tDtdRangeTypeInput"/>
-        </informationRequirement>
-        <literalExpression>
-            <text>tDtdRangeTypeInput</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="decision_tDtdRangeType_001" id="_decision_tDtdRangeType_001">
+        <dmn:variable name="decision_tDtdRangeType_001" typeRef="tDtdRangeType"/>
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tDtdRangeTypeInput"/>
+        </dmn:informationRequirement>
+        <dmn:literalExpression>
+            <dmn:text>tDtdRangeTypeInput</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- LAMBDA -->
 
-    <decision name="decision_lambda_expression_001" id="_decision_lambda_expression_001">
-        <variable name="decision_lambda_expression_001" />
-        <informationRequirement>
-            <requiredInput href="#_tUntypedInput"/>
-        </informationRequirement>
-        <literalExpression>
-            <text>(function(a: tFooBarString) a)(tUntypedInput)</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="decision_lambda_expression_001" id="_decision_lambda_expression_001">
+        <dmn:variable name="decision_lambda_expression_001" />
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tUntypedInput"/>
+        </dmn:informationRequirement>
+        <dmn:literalExpression>
+            <dmn:text>(function(a: tFooBarString) a)(tUntypedInput)</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
-    <decision name="a_function_typed_lambda" id="_a_function_typed_lambda">
-        <variable name="a_function_typed_lambda" />
+    <dmn:decision name="a_function_typed_lambda" id="_a_function_typed_lambda">
+        <dmn:variable name="a_function_typed_lambda" />
         <!-- the literal expression (that returns a lambda) is typed with a function type -->
-        <literalExpression typeRef="tFooBarFunction">
-            <text>(function(a: tFooBarString) a)</text>
-        </literalExpression>
-    </decision>
+        <dmn:literalExpression typeRef="tFooBarFunction">
+            <dmn:text>(function(a: tFooBarString) a)</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
-    <decision name="decision_lambda_expression_002" id="_decision_lambda_expression_002">
-        <variable name="decision_lambda_expression_002" />
-        <informationRequirement>
-            <requiredInput href="#_tUntypedInput"/>
-        </informationRequirement>
-        <informationRequirement>
-            <requiredDecision href="#_a_function_typed_lambda"/>
-        </informationRequirement>
-        <literalExpression>
-            <text>a_function_typed_lambda(tUntypedInput)</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="decision_lambda_expression_002" id="_decision_lambda_expression_002">
+        <dmn:variable name="decision_lambda_expression_002" />
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tUntypedInput"/>
+        </dmn:informationRequirement>
+        <dmn:informationRequirement>
+            <dmn:requiredDecision href="#_a_function_typed_lambda"/>
+        </dmn:informationRequirement>
+        <dmn:literalExpression>
+            <dmn:text>a_function_typed_lambda(tUntypedInput)</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- FUNCTION DEFINITION -->
 
-    <decision name="a_funcdef_with_typed_param" id="_a_funcdef_with_typed_param">
-        <variable name="a_funcdef_with_typed_param" />
+    <dmn:decision name="a_funcdef_with_typed_param" id="_a_funcdef_with_typed_param">
+        <dmn:variable name="a_funcdef_with_typed_param" />
         <!-- a function definition parameter is typed  -->
-        <functionDefinition>
-            <formalParameter name="a" typeRef="tFooBarString"/>
-            <literalExpression>
-                <text>a</text>
-            </literalExpression>
-        </functionDefinition>
-    </decision>
+        <dmn:functionDefinition>
+            <dmn:formalParameter name="a" typeRef="tFooBarString"/>
+            <dmn:literalExpression>
+                <dmn:text>a</dmn:text>
+            </dmn:literalExpression>
+        </dmn:functionDefinition>
+    </dmn:decision>
 
-    <decision name="decision_funcdef_expression_001" id="_decision_funcdef_expression_001">
-        <variable name="decision_funcdef_expression_001" />
-        <informationRequirement>
-            <requiredInput href="#_tUntypedInput"/>
-        </informationRequirement>
-        <informationRequirement>
-            <requiredDecision href="#_a_funcdef_with_typed_param"/>
-        </informationRequirement>
-        <literalExpression>
-            <text>a_funcdef_with_typed_param(tUntypedInput)</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="decision_funcdef_expression_001" id="_decision_funcdef_expression_001">
+        <dmn:variable name="decision_funcdef_expression_001" />
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tUntypedInput"/>
+        </dmn:informationRequirement>
+        <dmn:informationRequirement>
+            <dmn:requiredDecision href="#_a_funcdef_with_typed_param"/>
+        </dmn:informationRequirement>
+        <dmn:literalExpression>
+            <dmn:text>a_funcdef_with_typed_param(tUntypedInput)</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
-    <decision name="a_function_typed_funcdef" id="_a_function_typed_funcdef">
-        <variable name="a_function_typed_funcdef" />
+    <dmn:decision name="a_function_typed_funcdef" id="_a_function_typed_funcdef">
+        <dmn:variable name="a_function_typed_funcdef" />
         <!-- the function definition is typed with a function type -->
-        <functionDefinition typeRef="tFooBarFunction">
-            <formalParameter name="a"/>
-            <literalExpression>
-                <text>a</text>
-            </literalExpression>
-        </functionDefinition>
-    </decision>
+        <dmn:functionDefinition typeRef="tFooBarFunction">
+            <dmn:formalParameter name="a"/>
+            <dmn:literalExpression>
+                <dmn:text>a</dmn:text>
+            </dmn:literalExpression>
+        </dmn:functionDefinition>
+    </dmn:decision>
 
-    <decision name="decision_funcdef_expression_002" id="_decision_funcdef_expression_002">
-        <variable name="decision_funcdef_expression_002" />
-        <informationRequirement>
-            <requiredInput href="#_tUntypedInput"/>
-        </informationRequirement>
-        <informationRequirement>
-            <requiredDecision href="#_a_function_typed_funcdef"/>
-        </informationRequirement>
-        <literalExpression>
-            <text>a_function_typed_funcdef(tUntypedInput)</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="decision_funcdef_expression_002" id="_decision_funcdef_expression_002">
+        <dmn:variable name="decision_funcdef_expression_002" />
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tUntypedInput"/>
+        </dmn:informationRequirement>
+        <dmn:informationRequirement>
+            <dmn:requiredDecision href="#_a_function_typed_funcdef"/>
+        </dmn:informationRequirement>
+        <dmn:literalExpression>
+            <dmn:text>a_function_typed_funcdef(tUntypedInput)</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- BKM -->
 
     <!-- BKM accepting a param of tFooBarString and echoing it.  Encapsulated logic and
     variable are untyped.  Used to assert argument assignment compatibility  -->
-    <businessKnowledgeModel name="a_bkm_with_typed_param" id="_a_bkm_with_typed_param">
-        <variable name="a_bkm_with_typed_param" />
-        <encapsulatedLogic>
-            <formalParameter typeRef="tFooBarString" name="a"/>
-            <literalExpression>
-                <text>a</text>
-            </literalExpression>
-        </encapsulatedLogic>
-    </businessKnowledgeModel>
+    <dmn:businessKnowledgeModel name="a_bkm_with_typed_param" id="_a_bkm_with_typed_param">
+        <dmn:variable name="a_bkm_with_typed_param" />
+        <dmn:encapsulatedLogic>
+            <dmn:formalParameter typeRef="tFooBarString" name="a"/>
+            <dmn:literalExpression>
+                <dmn:text>a</dmn:text>
+            </dmn:literalExpression>
+        </dmn:encapsulatedLogic>
+    </dmn:businessKnowledgeModel>
 
     <!-- BKM with a function typed encapsulatedLogic.  Used to assert on return type
     compatibility -->
-    <businessKnowledgeModel name="a_bkm_with_function_typed_logic" id="_a_bkm_with_function_typed_logic">
-        <variable name="a_bkm_with_function_typed_logic" />
-        <encapsulatedLogic typeRef="tFooBarFunction">
-            <formalParameter name="a"/>
-            <literalExpression>
-                <text>a</text>
-            </literalExpression>
-        </encapsulatedLogic>
-    </businessKnowledgeModel>
+    <dmn:businessKnowledgeModel name="a_bkm_with_function_typed_logic" id="_a_bkm_with_function_typed_logic">
+        <dmn:variable name="a_bkm_with_function_typed_logic" />
+        <dmn:encapsulatedLogic typeRef="tFooBarFunction">
+            <dmn:formalParameter name="a"/>
+            <dmn:literalExpression>
+                <dmn:text>a</dmn:text>
+            </dmn:literalExpression>
+        </dmn:encapsulatedLogic>
+    </dmn:businessKnowledgeModel>
 
     <!-- BKM with a function typed typeRef.  Used to assert on return type
     compatibility -->
-    <businessKnowledgeModel name="a_bkm_with_function_typed_typeRef" id="_a_bkm_with_function_typed_typeRef">
-        <variable name="a_bkm_with_function_typed_typeRef" typeRef="tFooBarFunction" />
-        <encapsulatedLogic>
-            <formalParameter name="a"/>
-            <literalExpression>
-                <text>a</text>
-            </literalExpression>
-        </encapsulatedLogic>
-    </businessKnowledgeModel>
+    <dmn:businessKnowledgeModel name="a_bkm_with_function_typed_typeRef" id="_a_bkm_with_function_typed_typeRef">
+        <dmn:variable name="a_bkm_with_function_typed_typeRef" typeRef="tFooBarFunction" />
+        <dmn:encapsulatedLogic>
+            <dmn:formalParameter name="a"/>
+            <dmn:literalExpression>
+                <dmn:text>a</dmn:text>
+            </dmn:literalExpression>
+        </dmn:encapsulatedLogic>
+    </dmn:businessKnowledgeModel>
 
     <!-- decision invoking a_bkm_with_typed_param passing it input data. The
       function argument will be checked against constrained BKM param type -->
-    <decision name="decision_bkm_001" id="_decision_bkm_001">
-        <variable name="decision_bkm_001"/>
-        <informationRequirement>
-            <requiredInput href="#_tFooBarStringInput"/>
-        </informationRequirement>
-        <knowledgeRequirement>
-            <requiredKnowledge href="#_a_bkm_with_typed_param"/>
-        </knowledgeRequirement>
-        <literalExpression>
-            <text>a_bkm_with_typed_param(tFooBarStringInput)</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="decision_bkm_001" id="_decision_bkm_001">
+        <dmn:variable name="decision_bkm_001"/>
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tFooBarStringInput"/>
+        </dmn:informationRequirement>
+        <dmn:knowledgeRequirement>
+            <dmn:requiredKnowledge href="#_a_bkm_with_typed_param"/>
+        </dmn:knowledgeRequirement>
+        <dmn:literalExpression>
+            <dmn:text>a_bkm_with_typed_param(tFooBarStringInput)</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- decision invoking a_bkm_with_function_typed_logic passing it input data. The function
        return result will be checked against constrained function return type -->
-    <decision name="decision_bkm_002" id="_decision_bkm_002">
-        <variable name="decision_bkm_002"/>
-        <informationRequirement>
-            <requiredInput href="#_tFooBarStringInput"/>
-        </informationRequirement>
-        <knowledgeRequirement>
-            <requiredKnowledge href="#_a_bkm_with_function_typed_logic"/>
-        </knowledgeRequirement>
-        <literalExpression>
-            <text>a_bkm_with_function_typed_logic(tFooBarStringInput)</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="decision_bkm_002" id="_decision_bkm_002">
+        <dmn:variable name="decision_bkm_002"/>
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tFooBarStringInput"/>
+        </dmn:informationRequirement>
+        <dmn:knowledgeRequirement>
+            <dmn:requiredKnowledge href="#_a_bkm_with_function_typed_logic"/>
+        </dmn:knowledgeRequirement>
+        <dmn:literalExpression>
+            <dmn:text>a_bkm_with_function_typed_logic(tFooBarStringInput)</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- decision invoking a_bkm_with_function_typed_typeRef passing it input data. The function
        return result will be checked against constrained typeRef function return type -->
-    <decision name="decision_bkm_003" id="_decision_bkm_003">
-        <variable name="decision_bkm_003"/>
-        <informationRequirement>
-            <requiredInput href="#_tFooBarStringInput"/>
-        </informationRequirement>
-        <knowledgeRequirement>
-            <requiredKnowledge href="#_a_bkm_with_function_typed_typeRef"/>
-        </knowledgeRequirement>
-        <literalExpression>
-            <text>a_bkm_with_function_typed_typeRef(tFooBarStringInput)</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="decision_bkm_003" id="_decision_bkm_003">
+        <dmn:variable name="decision_bkm_003"/>
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tFooBarStringInput"/>
+        </dmn:informationRequirement>
+        <dmn:knowledgeRequirement>
+            <dmn:requiredKnowledge href="#_a_bkm_with_function_typed_typeRef"/>
+        </dmn:knowledgeRequirement>
+        <dmn:literalExpression>
+            <dmn:text>a_bkm_with_function_typed_typeRef(tFooBarStringInput)</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- DECISION SERVICE -->
-    <decision name="ds_echo_from_inputdata_decision" id="_ds_echo_from_inputdata_decision">
-        <variable name="ds_echo_from_inputdata_decision" />
-        <informationRequirement>
-            <requiredInput href="#_tUntypedInput"/>
-        </informationRequirement>
-        <literalExpression>
-            <text>tUntypedInput</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="ds_echo_from_inputdata_decision" id="_ds_echo_from_inputdata_decision">
+        <dmn:variable name="ds_echo_from_inputdata_decision" />
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tUntypedInput"/>
+        </dmn:informationRequirement>
+        <dmn:literalExpression>
+            <dmn:text>tUntypedInput</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- Decision service accepting an untyped param echoing it.  The DS variable is a constrained type.
     Used to assert the return value of a DS -->
-    <decisionService name="a_decisionservice_with_typed_result" id="_a_decisionservice_with_typed_result">
-        <variable name="a_decisionservice_with_typed_result" typeRef="tFooBarDSFunctionWithTypedReturn"/>
-        <outputDecision href="#_ds_echo_from_inputdata_decision"/>
-        <inputData href="#_tUntypedInput"/>
-    </decisionService>
+    <dmn:decisionService name="a_decisionservice_with_typed_result" id="_a_decisionservice_with_typed_result">
+        <dmn:variable name="a_decisionservice_with_typed_result" typeRef="tFooBarDSFunctionWithTypedReturn"/>
+        <dmn:outputDecision href="#_ds_echo_from_inputdata_decision"/>
+        <dmn:inputData href="#_tUntypedInput"/>
+    </dmn:decisionService>
 
-    <decision name="ds_inputdecision" id="_ds_inputdecision">
-        <variable name="ds_inputdecision" />
-        <literalExpression>
-            <text>"never called"</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="ds_inputdecision" id="_ds_inputdecision">
+        <dmn:variable name="ds_inputdecision" />
+        <dmn:literalExpression>
+            <dmn:text>"never called"</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
-    <decision name="ds_echo_from_inputdecision_decision" id="_ds_echo_from_inputdecision_decision">
-        <variable name="ds_echo_from_inputdecision_decision" />
-        <informationRequirement>
-            <requiredDecision href="#_ds_inputdecision"/>
-        </informationRequirement>
-        <literalExpression>
-            <text>ds_inputdecision</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="ds_echo_from_inputdecision_decision" id="_ds_echo_from_inputdecision_decision">
+        <dmn:variable name="ds_echo_from_inputdecision_decision" />
+        <dmn:informationRequirement>
+            <dmn:requiredDecision href="#_ds_inputdecision"/>
+        </dmn:informationRequirement>
+        <dmn:literalExpression>
+            <dmn:text>ds_inputdecision</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- Decision service accepting an contrained param and echoing it.  The DS variable has no return type -->
-    <decisionService name="a_decisionservice_with_typed_param" id="_a_decisionservice_with_typed_param">
-        <variable name="a_decisionservice_with_typed_param" typeRef="tFooBarDSFunctionWithTypedParam"/>
-        <outputDecision href="#_ds_echo_from_inputdecision_decision"/>
-        <inputDecision href="#_ds_inputdecision"/>
-    </decisionService>
+    <dmn:decisionService name="a_decisionservice_with_typed_param" id="_a_decisionservice_with_typed_param">
+        <dmn:variable name="a_decisionservice_with_typed_param" typeRef="tFooBarDSFunctionWithTypedParam"/>
+        <dmn:outputDecision href="#_ds_echo_from_inputdecision_decision"/>
+        <dmn:inputDecision href="#_ds_inputdecision"/>
+    </dmn:decisionService>
 
     <!-- Content / list cases + some esoteric stuff -->
 
     <!-- compliant assignment to 'overridden' variable type.  -->
-    <decision name="override_001" id="_override_001">
-        <variable name="override_001" typeRef="tDirectionsString"/>
-        <literalExpression>
-            <text>"left"</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="override_001" id="_override_001">
+        <dmn:variable name="override_001" typeRef="tDirectionsString"/>
+        <dmn:literalExpression>
+            <dmn:text>"left"</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- non-compliant assignment to to 'overridden' variable type -->
-    <decision name="override_004" id="_override_004">
-        <variable name="override_004" typeRef="tDirectionsString"/>
-        <literalExpression>
-            <text>"foo"</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="override_002" id="_override_002">
+        <dmn:variable name="override_002" typeRef="tDirectionsString"/>
+        <dmn:literalExpression>
+            <dmn:text>"foo"</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- compliant assignment to 'list' variable type with constrained element type -->
-    <decision name="list_001" id="_list_001">
-        <variable name="list_001" typeRef="tFooBarList"/>
-        <literalExpression>
-            <text>["foo", "foo", "bar"]</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="list_001" id="_list_001">
+        <dmn:variable name="list_001" typeRef="tFooBarList"/>
+        <dmn:literalExpression>
+            <dmn:text>["foo", "foo", "bar"]</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
-    <decision name="list_boxed_001" id="_list_box_001">
-        <variable name="list_boxed_001" typeRef="tFooBarList"/>
-        <list>
-            <literalExpression><text>"foo"</text></literalExpression>
-            <literalExpression><text>"foo"</text></literalExpression>
-            <literalExpression><text>"bar"</text></literalExpression>
-        </list>
-    </decision>
+    <dmn:decision name="list_boxed_001" id="_list_box_001">
+        <dmn:variable name="list_boxed_001" typeRef="tFooBarList"/>
+        <dmn:list>
+            <dmn:literalExpression><dmn:text>"foo"</dmn:text></dmn:literalExpression>
+            <dmn:literalExpression><dmn:text>"foo"</dmn:text></dmn:literalExpression>
+            <dmn:literalExpression><dmn:text>"bar"</dmn:text></dmn:literalExpression>
+        </dmn:list>
+    </dmn:decision>
 
     <!-- non-compliant assignment to 'list' variable type with constrained element type -->
-    <decision name="list_002" id="_list_002">
-        <variable name="list_002" typeRef="tFooBarList"/>
-        <literalExpression>
-            <text>["foo", "baz"]</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="list_002" id="_list_002">
+        <dmn:variable name="list_002" typeRef="tFooBarList"/>
+        <dmn:literalExpression>
+            <dmn:text>["foo", "baz"]</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
-    <decision name="list_boxed_002" id="_list_box_002">
-        <variable name="list_boxed_002" typeRef="tFooBarList"/>
-        <list>
-            <literalExpression><text>"foo"</text></literalExpression>
-            <literalExpression><text>"baz"</text></literalExpression>
-        </list>
-    </decision>
+    <dmn:decision name="list_boxed_002" id="_list_box_002">
+        <dmn:variable name="list_boxed_002" typeRef="tFooBarList"/>
+        <dmn:list>
+            <dmn:literalExpression><dmn:text>"foo"</dmn:text></dmn:literalExpression>
+            <dmn:literalExpression><dmn:text>"baz"</dmn:text></dmn:literalExpression>
+        </dmn:list>
+    </dmn:decision>
 
     <!-- decision echo value for an input that is a list with a constrained element type -->
-    <decision name="list_input_decision_001" id="list_input_decision_001">
-        <variable name="list_input_decision_001"/>
-        <informationRequirement>
-            <requiredInput href="#_tFooBarListInput"/>
-        </informationRequirement>
-        <literalExpression>
-            <text>tFooBarListInput</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="list_input_decision_001" id="list_input_decision_001">
+        <dmn:variable name="list_input_decision_001"/>
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tFooBarListInput"/>
+        </dmn:informationRequirement>
+        <dmn:literalExpression>
+            <dmn:text>tFooBarListInput</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- compliant assignment to 'context' variable type with constrained property type -->
-    <decision name="context_001" id="_context_001">
-        <variable name="context_001" typeRef="tFooBarContext"/>
-        <literalExpression>
-            <text>{prop1: "foo"}</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="context_001" id="_context_001">
+        <dmn:variable name="context_001" typeRef="tFooBarContext"/>
+        <dmn:literalExpression>
+            <dmn:text>{prop1: "foo"}</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
-    <decision name="context_boxed_001" id="_context_boxed_001">
-        <variable name="context_boxed_001" typeRef="tFooBarContext"/>
-        <context>
-            <contextEntry>
-                <variable name="prop1"/>
-                <literalExpression><text>"foo"</text></literalExpression>
-            </contextEntry>
-        </context>
-    </decision>
+    <dmn:decision name="context_boxed_001" id="_context_boxed_001">
+        <dmn:variable name="context_boxed_001" typeRef="tFooBarContext"/>
+        <dmn:context>
+            <dmn:contextEntry>
+                <dmn:variable name="prop1"/>
+                <dmn:literalExpression><dmn:text>"foo"</dmn:text></dmn:literalExpression>
+            </dmn:contextEntry>
+        </dmn:context>
+    </dmn:decision>
 
     <!-- non-compliant assignment to 'context' variable type with constrained property type -->
-    <decision name="context_002" id="_context_002">
-        <variable name="context_002" typeRef="tFooBarContext"/>
-        <literalExpression>
-            <text>{prop1: "baz"}</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="context_002" id="_context_002">
+        <dmn:variable name="context_002" typeRef="tFooBarContext"/>
+        <dmn:literalExpression>
+            <dmn:text>{prop1: "baz"}</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
+
+    <dmn:decision name="context_boxed_002" id="_context_boxed_002">
+        <dmn:variable name="context_boxed_002" typeRef="tFooBarContext"/>
+        <dmn:context>
+            <dmn:contextEntry>
+                <dmn:variable name="prop1"/>
+                <dmn:literalExpression><dmn:text>"baz"</dmn:text></dmn:literalExpression>
+            </dmn:contextEntry>
+        </dmn:context>
+    </dmn:decision>
 
 
     <!-- compliant assignment to 'context' variable type with constrained list property type -->
-    <decision name="context_003" id="_context_003">
-        <variable name="context_003" typeRef="tFooBarListContext"/>
-        <literalExpression>
-            <text>{prop1: ["foo", "foo", "bar"]}</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="context_003" id="_context_003">
+        <dmn:variable name="context_003" typeRef="tFooBarListContext"/>
+        <dmn:literalExpression>
+            <dmn:text>{prop1: ["foo", "foo", "bar"]}</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- non-compliant assignment to 'context' variable type with constrained list property type -->
-    <decision name="context_004" id="_context_004">
-        <variable name="context_004" typeRef="tFooBarListContext"/>
-        <literalExpression>
-            <text>{prop1: ["foo", "foo", "baz"]}</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="context_004" id="_context_004">
+        <dmn:variable name="context_004" typeRef="tFooBarListContext"/>
+        <dmn:literalExpression>
+            <dmn:text>{prop1: ["foo", "foo", "baz"]}</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- decision echo value for an input that is a context with a constrained property type -->
-    <decision name="context_input_decision_001" id="_context_input_decision_001">
-        <variable name="context_input_decision_001"/>
-        <informationRequirement>
-            <requiredInput href="#_tFooBarContextInput"/>
-        </informationRequirement>
-        <literalExpression>
-            <text>tFooBarContextInput</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="context_input_decision_001" id="_context_input_decision_001">
+        <dmn:variable name="context_input_decision_001"/>
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tFooBarContextInput"/>
+        </dmn:informationRequirement>
+        <dmn:literalExpression>
+            <dmn:text>tFooBarContextInput</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
     <!-- decision with typed literal expression echoing an (untyped) input -->
-    <decision name="decision_literal_expression_001" id="_decision_literal_expression_001">
-        <variable name="decision_literal_expression_001" />
-        <informationRequirement>
-            <requiredInput href="#_tUntypedInput"/>
-        </informationRequirement>
-        <literalExpression typeRef="tFooBarString">
-            <text>tUntypedInput</text>
-        </literalExpression>
-    </decision>
+    <dmn:decision name="decision_literal_expression_001" id="_decision_literal_expression_001">
+        <dmn:variable name="decision_literal_expression_001" />
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tUntypedInput"/>
+        </dmn:informationRequirement>
+        <dmn:literalExpression typeRef="tFooBarString">
+            <dmn:text>tUntypedInput</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
 
-    <decision name="decision_context_expression_001" id="_decision_context_expression_001">
-        <variable name="decision_context_expression_001" />
-        <informationRequirement>
-            <requiredInput href="#_tUntypedInput"/>
-        </informationRequirement>
+    <dmn:decision name="decision_context_expression_001" id="_decision_context_expression_001">
+        <dmn:variable name="decision_context_expression_001" />
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tUntypedInput"/>
+        </dmn:informationRequirement>
         <!-- return context is typed -->
-        <context typeRef="tFooBarContext">
-            <contextEntry >
-                <variable name="prop1"/>
-                <literalExpression>
-                    <text>tUntypedInput</text>
-                </literalExpression>
-            </contextEntry>
-        </context>
-    </decision>
+        <dmn:context typeRef="tFooBarContext">
+            <dmn:contextEntry >
+                <dmn:variable name="prop1"/>
+                <dmn:literalExpression>
+                    <dmn:text>tUntypedInput</dmn:text>
+                </dmn:literalExpression>
+            </dmn:contextEntry>
+        </dmn:context>
+    </dmn:decision>
 
-    <decision name="decision_contextentry_expression_001" id="_decision_contextentry_expression_001">
-        <variable name="decision_contextentry_expression_001" />
-        <informationRequirement>
-            <requiredInput href="#_tUntypedInput"/>
-        </informationRequirement>
+    <dmn:decision name="decision_contextentry_expression_001" id="_decision_contextentry_expression_001">
+        <dmn:variable name="decision_contextentry_expression_001" />
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tUntypedInput"/>
+        </dmn:informationRequirement>
         <!-- return context is untyped -->
-        <context>
+        <dmn:context>
             <!-- but context entry is typed -->
-            <contextEntry>
-                <variable name="prop1" typeRef="tFooBarString"/>
-                <literalExpression>
-                    <text>tUntypedInput</text>
-                </literalExpression>
-            </contextEntry>
-        </context>
-    </decision>
+            <dmn:contextEntry>
+                <dmn:variable name="prop1" typeRef="tFooBarString"/>
+                <dmn:literalExpression>
+                    <dmn:text>tUntypedInput</dmn:text>
+                </dmn:literalExpression>
+            </dmn:contextEntry>
+        </dmn:context>
+    </dmn:decision>
 
-    <decision name="decision_list_expression_001" id="_decision_list_expression_001">
-        <variable name="decision_list_expression_001" />
-        <informationRequirement>
-            <requiredInput href="#_tUntypedInput"/>
-        </informationRequirement>
+    <dmn:decision name="decision_list_expression_001" id="_decision_list_expression_001">
+        <dmn:variable name="decision_list_expression_001" />
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tUntypedInput"/>
+        </dmn:informationRequirement>
         <!-- return list is typed -->
-        <list typeRef="tFooBarList">
-            <literalExpression>
-                <text>tUntypedInput</text>
-            </literalExpression>
-        </list>
-    </decision>
+        <dmn:list typeRef="tFooBarList">
+            <dmn:literalExpression>
+                <dmn:text>tUntypedInput</dmn:text>
+            </dmn:literalExpression>
+        </dmn:list>
+    </dmn:decision>
 
-    <decision name="decision_list_expression_002" id="_decision_list_expression_002">
-        <variable name="decision_list_expression_002" />
-        <informationRequirement>
-            <requiredInput href="#_tUntypedInput"/>
-        </informationRequirement>
-        <list>
+    <dmn:decision name="decision_list_expression_002" id="_decision_list_expression_002">
+        <dmn:variable name="decision_list_expression_002" />
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tUntypedInput"/>
+        </dmn:informationRequirement>
+        <dmn:list>
             <!-- list element is typed -->
-            <literalExpression typeRef="tFooBarString">
-                <text>tUntypedInput</text>
-            </literalExpression>
-        </list>
-    </decision>
+            <dmn:literalExpression typeRef="tFooBarString">
+                <dmn:text>tUntypedInput</dmn:text>
+            </dmn:literalExpression>
+        </dmn:list>
+    </dmn:decision>
 
-    <decision name="decision_relation_expression_001" id="_decision_relation_expression_001">
-        <variable name="decision_relation_expression_001" />
-        <informationRequirement>
-            <requiredInput href="#_tUntypedInput"/>
-        </informationRequirement>
+    <dmn:decision name="decision_relation_expression_001" id="_decision_relation_expression_001">
+        <dmn:variable name="decision_relation_expression_001" />
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tUntypedInput"/>
+        </dmn:informationRequirement>
         <!-- return relation is typed -->
-        <relation typeRef="tFooBarRelation">
-            <column name="col1"/>
-            <row>
-                <literalExpression>
-                    <text>tUntypedInput</text>
-                </literalExpression>
-            </row>
-        </relation>
-    </decision>
+        <dmn:relation typeRef="tFooBarRelation">
+            <dmn:column name="col1"/>
+            <dmn:row>
+                <dmn:literalExpression>
+                    <dmn:text>tUntypedInput</dmn:text>
+                </dmn:literalExpression>
+            </dmn:row>
+        </dmn:relation>
+    </dmn:decision>
 
-    <decision name="decision_relationrow_expression_001" id="_decision_relationrow_expression_001">
-        <variable name="decision_relationrow_expression_001" />
-        <informationRequirement>
-            <requiredInput href="#_tUntypedInput"/>
-        </informationRequirement>
-        <relation>
+    <dmn:decision name="decision_relationrow_expression_001" id="_decision_relationrow_expression_001">
+        <dmn:variable name="decision_relationrow_expression_001" />
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tUntypedInput"/>
+        </dmn:informationRequirement>
+        <dmn:relation>
             <!-- relation column is typed -->
-            <column name="col1" typeRef="tFooBarString"/>
-            <row>
-                <literalExpression>
-                    <text>tUntypedInput</text>
-                </literalExpression>
-            </row>
-        </relation>
-    </decision>
+            <dmn:column name="col1" typeRef="tFooBarString"/>
+            <dmn:row>
+                <dmn:literalExpression>
+                    <dmn:text>tUntypedInput</dmn:text>
+                </dmn:literalExpression>
+            </dmn:row>
+        </dmn:relation>
+    </dmn:decision>
 
     <!-- DECISION TABLES -->
 
     <!-- decision with a single output decision table having no inputs that just echoes a given
     input as an output entry.  The DT has a variable typeRef so we can assert on
     the decision out -->
-    <decision name="decision_dt_expression_001" id="_decision_dt_expression_001">
-        <variable name="decision_dt_expression_001"/>
-        <informationRequirement>
-            <requiredInput href="#_tUntypedInput"/>
-        </informationRequirement>
-        <decisionTable typeRef="tFooBarString">
-            <output/>
-            <rule>
-                <outputEntry>
-                    <text>tUntypedInput</text>
-                </outputEntry>
-            </rule>
-        </decisionTable>
-    </decision>
+    <dmn:decision name="decision_dt_expression_001" id="_decision_dt_expression_001">
+        <dmn:variable name="decision_dt_expression_001"/>
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tUntypedInput"/>
+        </dmn:informationRequirement>
+        <dmn:decisionTable typeRef="tFooBarString">
+            <dmn:output/>
+            <dmn:rule>
+                <dmn:outputEntry>
+                    <dmn:text>tUntypedInput</dmn:text>
+                </dmn:outputEntry>
+            </dmn:rule>
+        </dmn:decisionTable>
+    </dmn:decision>
 
 
     <!-- a decision with a multiple output decision table having no inputs that just echoes a given
     input as an output entries.  One output entry has a constrained typeRef -->
-    <decision name="decision_dt_expression_002" id="_decision_dt_expression_002">
-        <variable name="decision_dt_expression_002"/>
-        <informationRequirement>
-            <requiredInput href="#_tUntypedInput"/>
-        </informationRequirement>
-        <decisionTable>
-            <output name="col1"/>
-            <output name="col2"/>
-            <rule>
-                <outputEntry typeRef="tFooBarString">
-                    <text>tUntypedInput</text>
-                </outputEntry>
-                <outputEntry>
-                    <text>tUntypedInput</text>
-                </outputEntry>
-            </rule>
-        </decisionTable>
-    </decision>
+    <dmn:decision name="decision_dt_expression_002" id="_decision_dt_expression_002">
+        <dmn:variable name="decision_dt_expression_002"/>
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tUntypedInput"/>
+        </dmn:informationRequirement>
+        <dmn:decisionTable>
+            <dmn:output name="col1"/>
+            <dmn:output name="col2"/>
+            <dmn:rule>
+                <dmn:outputEntry typeRef="tFooBarString">
+                    <dmn:text>tUntypedInput</dmn:text>
+                </dmn:outputEntry>
+                <dmn:outputEntry>
+                    <dmn:text>tUntypedInput</dmn:text>
+                </dmn:outputEntry>
+            </dmn:rule>
+        </dmn:decisionTable>
+    </dmn:decision>
 
 
     <!-- a decision with a multiple output decision table having no inputs that just echoes a given
     input as an output entries.  One output clause has a constrained typeRef -->
-    <decision name="decision_dt_expression_003" id="_decision_dt_expression_003">
-        <variable name="decision_dt_expression_003"/>
-        <informationRequirement>
-            <requiredInput href="#_tUntypedInput"/>
-        </informationRequirement>
-        <decisionTable>
-            <output name="col1"  typeRef="tFooBarString"/>
-            <output name="col2"/>
-            <rule>
-                <outputEntry>
-                    <text>tUntypedInput</text>
-                </outputEntry>
-                <outputEntry>
-                    <text>tUntypedInput</text>
-                </outputEntry>
-            </rule>
-        </decisionTable>
-    </decision>
+    <dmn:decision name="decision_dt_expression_003" id="_decision_dt_expression_003">
+        <dmn:variable name="decision_dt_expression_003"/>
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tUntypedInput"/>
+        </dmn:informationRequirement>
+        <dmn:decisionTable>
+            <dmn:output name="col1"  typeRef="tFooBarString"/>
+            <dmn:output name="col2"/>
+            <dmn:rule>
+                <dmn:outputEntry>
+                    <dmn:text>tUntypedInput</dmn:text>
+                </dmn:outputEntry>
+                <dmn:outputEntry>
+                    <dmn:text>tUntypedInput</dmn:text>
+                </dmn:outputEntry>
+            </dmn:rule>
+        </dmn:decisionTable>
+    </dmn:decision>
 
 
     <!-- a decision with a single output decision table having a single input with
     a constrained type.  -->
-    <decision name="decision_dt_expression_004" id="_decision_dt_expression_004">
-        <variable name="decision_dt_expression_004"/>
-        <informationRequirement>
-            <requiredInput href="#_tUntypedInput"/>
-        </informationRequirement>
-        <decisionTable>
-            <input>
-                <inputExpression>
-                    <text>tUntypedInput</text>
-                </inputExpression>
-                <inputValues>
-                    <text>"foo", "bar"</text>
-                </inputValues>
-            </input>
-            <output/>
-            <rule>
+    <dmn:decision name="decision_dt_expression_004" id="_decision_dt_expression_004">
+        <dmn:variable name="decision_dt_expression_004"/>
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tUntypedInput"/>
+        </dmn:informationRequirement>
+        <dmn:decisionTable>
+            <dmn:input>
+                <dmn:inputExpression>
+                    <dmn:text>tUntypedInput</dmn:text>
+                </dmn:inputExpression>
+                <dmn:inputValues>
+                    <dmn:text>"foo", "bar"</dmn:text>
+                </dmn:inputValues>
+            </dmn:input>
+            <dmn:output/>
+            <dmn:rule>
                 <!-- complies with constrained input -->
-                <inputEntry>
-                    <text>"foo"</text>
-                </inputEntry>
-                <outputEntry>
-                    <text>"complies"</text>
-                </outputEntry>
-            </rule>
-            <rule>
+                <dmn:inputEntry>
+                    <dmn:text>"foo"</dmn:text>
+                </dmn:inputEntry>
+                <dmn:outputEntry>
+                    <dmn:text>"complies"</dmn:text>
+                </dmn:outputEntry>
+            </dmn:rule>
+            <dmn:rule>
                 <!-- does not comply with constrained input -->
-                <inputEntry>
-                    <text>null</text>
-                </inputEntry>
-                <outputEntry>
-                    <text>"does not comply"</text>
-                </outputEntry>
-            </rule>
-        </decisionTable>
-    </decision>
+                <dmn:inputEntry>
+                    <dmn:text>null</dmn:text>
+                </dmn:inputEntry>
+                <dmn:outputEntry>
+                    <dmn:text>"does not comply"</dmn:text>
+                </dmn:outputEntry>
+            </dmn:rule>
+        </dmn:decisionTable>
+    </dmn:decision>
 
     <!-- decision with a single output decision table having no inputs that just echoes a given
     input as an output entry.  The output clause is constrained by outputValues -->
-    <decision name="decision_dt_expression_005" id="_decision_dt_expression_005">
-        <variable name="decision_dt_expression_005"/>
-        <informationRequirement>
-            <requiredInput href="#_tUntypedInput"/>
-        </informationRequirement>
-        <decisionTable typeRef="tFooBarString">
-            <output>
-                <outputValues>
-                    <text>"foo", "bar"</text>
-                </outputValues>
-            </output>
-            <rule>
-                <outputEntry>
-                    <text>tUntypedInput</text>
-                </outputEntry>
-            </rule>
-        </decisionTable>
-    </decision>
+    <dmn:decision name="decision_dt_expression_005" id="_decision_dt_expression_005">
+        <dmn:variable name="decision_dt_expression_005"/>
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tUntypedInput"/>
+        </dmn:informationRequirement>
+        <dmn:decisionTable typeRef="tFooBarString">
+            <dmn:output>
+                <dmn:outputValues>
+                    <dmn:text>"foo", "bar"</dmn:text>
+                </dmn:outputValues>
+            </dmn:output>
+            <dmn:rule>
+                <dmn:outputEntry>
+                    <dmn:text>tUntypedInput</dmn:text>
+                </dmn:outputEntry>
+            </dmn:rule>
+        </dmn:decisionTable>
+    </dmn:decision>
 
     <!-- INVOCATION -->
 
     <!-- invocation defines a constrained param type -->
-    <decision name="decision_invocation_expression_001" id="_decision_invocation_expression_001">
-        <variable name="decision_invocation_expression_001"/>
-        <informationRequirement>
-            <requiredInput href="#_tUntypedInput"/>
-        </informationRequirement>
-        <invocation>
-            <literalExpression>
-                <text>function(a) a</text>
-            </literalExpression>
-            <binding>
-                <parameter name="a" typeRef="tFooBarString"/>
-                <literalExpression><text>tUntypedInput</text></literalExpression>
-            </binding>
-        </invocation>
-    </decision>
+    <dmn:decision name="decision_invocation_expression_001" id="_decision_invocation_expression_001">
+        <dmn:variable name="decision_invocation_expression_001"/>
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tUntypedInput"/>
+        </dmn:informationRequirement>
+        <dmn:invocation>
+            <dmn:literalExpression>
+                <dmn:text>function(a) a</dmn:text>
+            </dmn:literalExpression>
+            <dmn:binding>
+                <dmn:parameter name="a" typeRef="tFooBarString"/>
+                <dmn:literalExpression><dmn:text>tUntypedInput</dmn:text></dmn:literalExpression>
+            </dmn:binding>
+        </dmn:invocation>
+    </dmn:decision>
 
     <!-- invocation defines a constrained return type -->
-    <decision name="decision_invocation_expression_002" id="_decision_invocation_expression_002">
-        <variable name="decision_invocation_expression_002"/>
-        <informationRequirement>
-            <requiredInput href="#_tUntypedInput"/>
-        </informationRequirement>
-        <invocation typeRef="tFooBarString">
-            <literalExpression>
-                <text>function(a) a</text>
-            </literalExpression>
-            <binding>
-                <parameter name="a"/>
-                <literalExpression><text>tUntypedInput</text></literalExpression>
-            </binding>
-        </invocation>
-    </decision>
+    <dmn:decision name="decision_invocation_expression_002" id="_decision_invocation_expression_002">
+        <dmn:variable name="decision_invocation_expression_002"/>
+        <dmn:informationRequirement>
+            <dmn:requiredInput href="#_tUntypedInput"/>
+        </dmn:informationRequirement>
+        <dmn:invocation typeRef="tFooBarString">
+            <dmn:literalExpression>
+                <dmn:text>function(a) a</dmn:text>
+            </dmn:literalExpression>
+            <dmn:binding>
+                <dmn:parameter name="a"/>
+                <dmn:literalExpression><dmn:text>tUntypedInput</dmn:text></dmn:literalExpression>
+            </dmn:binding>
+        </dmn:invocation>
+    </dmn:decision>
 
 
 
 
-</definitions>
-
+</dmn:definitions>
