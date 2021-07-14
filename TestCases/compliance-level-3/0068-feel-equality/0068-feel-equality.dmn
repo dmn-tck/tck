@@ -541,7 +541,7 @@
         </literalExpression>
     </decision>
 
-    <decision name="time_002_b " id="_time_002_b">
+    <decision name="time_002_b" id="_time_002_b">
         <description>Tests FEEL expression: 'time("10:30:01") = time("10:30:00")' and expects result: 'false (boolean)'</description>
         <question>Result of FEEL expression 'time("10:30:01") = time("10:30:00")'?</question>
         <allowedAnswers>false (boolean)</allowedAnswers>
