@@ -18,6 +18,11 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpression;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,6 +32,8 @@ import org.omg.dmn.tck.marshaller.TckMarshallingHelper;
 import org.omg.dmn.tck.marshaller._20160719.TestCases;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -64,16 +71,43 @@ public class TestCasesFiles {
     private String testCaseID;
 
     private File basedir;
+    private XPath xPath = XPathFactory.newInstance().newXPath();
+    private XPathExpression inputDataVarMissingTypeRef;
+    private DocumentBuilder builder;
 
     public TestCasesFiles(String testCaseID, File basedir) {
         this.testCaseID = testCaseID;
         this.basedir = basedir;
+        try {
+            inputDataVarMissingTypeRef = xPath.compile("/*[local-name()='definitions']/*[local-name()='inputData']/*[local-name()='variable' and not(@*[local-name()='typeRef'])]/../@*[local-name()='name']");
+            builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+        } catch (Exception e) {
+            throw new RuntimeException("This JDK does not correctly support XPath", e);
+        }
     }
 
     @Test
     public void testDMNFileIsValid() throws Exception {
         for (File dmnFile : basedir.listFiles((dir, name) -> name.matches(".*\\.dmn$"))) {
             dmnSchema.newValidator().validate(new StreamSource(dmnFile));
+            checkInputDataHasTypeRef(dmnFile);
+        }
+    }
+
+    private void checkInputDataHasTypeRef(File dmnFile) throws Exception {
+        Document xmlDocument = builder.parse(dmnFile);
+        NodeList xpathResults = (NodeList) inputDataVarMissingTypeRef.evaluate(xmlDocument, XPathConstants.NODESET);
+        List<String> problems = new ArrayList<>();
+        if (xpathResults.getLength() > 0) {
+            for(int i = 0; i< xpathResults.getLength(); i++) {
+                Node item = xpathResults.item(i);
+                String problem = String.format("%s: InputData node '%s' variable missing typeRef", dmnFile.getName(), item);
+                System.err.println(problem);
+                problems.add(problem);
+            }
+        }
+        if (!problems.isEmpty()) {
+            throw new RuntimeException(problems.stream().collect(Collectors.joining(", "))+". Consider explicity typeRef for the specific test case value or typeRef='Any' if necessary.");
         }
     }
 
