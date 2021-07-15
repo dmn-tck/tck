@@ -11,9 +11,8 @@
     </itemDefinition>
 
     <itemDefinition name="tDS_001">
-        <itemComponent name="decision_ds_001">
-            <typeRef>string</typeRef>
-        </itemComponent>
+        <functionItem outputTypeRef="string">
+        </functionItem>
     </itemDefinition>
 
     <itemDefinition name="tNameAndAge">
@@ -127,10 +126,10 @@
 
     <!-- has an explicit context return type but return boolean -->
     <businessKnowledgeModel name="bkm_002" id="_bkm_002">
-        <variable typeRef="tNameAndAge" name="bkm_002"/>
+        <variable name="bkm_002" />
         <encapsulatedLogic>
             <formalParameter name="nameAndAge" typeRef="tNameAndAge"/>
-            <literalExpression>
+            <literalExpression typeRef="tNameAndAge">
                 <text>nameAndAge != null</text>
             </literalExpression>
         </encapsulatedLogic>

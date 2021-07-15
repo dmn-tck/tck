@@ -321,11 +321,11 @@
 	</businessKnowledgeModel>
     
     <businessKnowledgeModel id="b_HasCapacity" name="has capacity">
-        <variable name="has capacity" typeRef="boolean"/>
+        <variable name="has capacity"/>
         <encapsulatedLogic>
             <formalParameter name="flight" typeRef="tFlight"/>
             <formalParameter name="rebooked list" typeRef="tPassengerTable"/>
-            <literalExpression>
+            <literalExpression typeRef="boolean">
                 <text> flight.Capacity > count( rebooked list[ Flight Number = flight.Flight Number ] ) </text>
             </literalExpression>
         </encapsulatedLogic>
