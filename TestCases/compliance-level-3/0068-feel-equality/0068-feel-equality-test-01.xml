@@ -1074,6 +1074,9 @@
 
     <testCase id="range_006">
         <description>equal ranges though syntactically different: LT </description>
+        <inputNode name="null_input">
+            <value xsi:nil="true"/>
+        </inputNode>
         <resultNode name="range_006" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1083,6 +1086,9 @@
 
     <testCase id="range_007">
         <description>equal ranges though syntactically different: LE </description>
+        <inputNode name="null_input">
+            <value xsi:nil="true"/>
+        </inputNode>
         <resultNode name="range_007" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1092,6 +1098,9 @@
 
     <testCase id="range_008">
         <description>equal ranges though syntactically different: GT </description>
+        <inputNode name="null_input">
+            <value xsi:nil="true"/>
+        </inputNode>
         <resultNode name="range_008" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
@@ -1101,6 +1110,9 @@
 
     <testCase id="range_009">
         <description>equal ranges though syntactically different: GE </description>
+        <inputNode name="null_input">
+            <value xsi:nil="true"/>
+        </inputNode>
         <resultNode name="range_009" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>

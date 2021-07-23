@@ -7,7 +7,7 @@
     <description>FEEL equality</description>
 
     <inputData name="null_input" id="_null_input">
-        <variable name="null_input"/>
+        <variable name="null_input" typeRef="Any"/> <!-- some test cases always supply value `null` for this InputData -->
     </inputData>
 
     <decision name="null_001" id="_null_001">
@@ -1289,4 +1289,3 @@
     </decision>
 
 </definitions>
-
