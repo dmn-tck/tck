@@ -79,7 +79,7 @@
         </file>
       </activation>
       <modules>
-        <module>dmn-tck-runner-dmn-scala</module>
+        <module>dmn-tck-runner-camunda-dmn-scala</module>
       </modules>
     </profile>
   </profiles>
