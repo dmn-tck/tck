@@ -236,7 +236,21 @@ public class CamundaTCKTest implements DmnTckVendorTestSuite {
 		if (decisionResult.getResultList().size() == 1) {
 			actual = decisionResult.getFirstResult().get(decisionName);
 		} else {
-			actual = decisionResult.collectEntries(decisionName);
+			final List<Object> entries = decisionResult.collectEntries(decisionName);
+
+			if (!entries.isEmpty()) {
+				actual = entries;
+
+			} else {
+				// in case the output name is `null`
+				final List<String> outputNames = decisionResult.getResultList().stream()
+						.flatMap(r -> r.keySet().stream()).distinct().collect(Collectors.toList());
+
+				if (outputNames.size() == 1) {
+					final String outputName = outputNames.get(0);
+					actual = decisionResult.collectEntries(outputName);
+				}
+			}
 		}
 
 		if (actual == null) {
