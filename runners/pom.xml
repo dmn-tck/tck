@@ -72,7 +72,7 @@
       </modules>
     </profile>
     <profile>
-      <id>dmn-scala</id>
+      <id>camunda-dmn-scala</id>
       <activation>
         <file>
           <exists>enable-dmn-scala.flag</exists>
