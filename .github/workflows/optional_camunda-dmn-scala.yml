@@ -1,4 +1,4 @@
-name: "[OPTIONAL] DMN-Scala Runner"
+name: "[OPTIONAL] Camunda DMN-Scala Runner"
 
 on:
   [ push, pull_request ]
@@ -19,4 +19,4 @@ jobs:
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
     - name: Run OPTIONAL DMN-Scala Runner
-      run: cd runners && mvn verify --batch-mode --update-snapshots -Pdmn-scala
+      run: cd runners && mvn verify --batch-mode --update-snapshots -Pcamunda-dmn-scala

@@ -173,7 +173,7 @@ public class DmnScalaTCKTest implements DmnTckVendorTestSuite {
 	@Override
 	public String getResultFileName() {
 		final String version = DmnEngine.class.getPackage().getImplementationVersion();
-		String resultDirectory = "../../TestResults/DmnScala/" + version;
+		String resultDirectory = "../../TestResults/CamundaDmnScala/" + version;
 		new File(resultDirectory).mkdirs();
 		return resultDirectory + "/" + DmnTckVendorTestSuite.super.getResultFileName();
 	}

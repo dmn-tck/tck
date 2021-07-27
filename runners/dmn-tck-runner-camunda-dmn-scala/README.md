@@ -7,7 +7,7 @@ This repository contains the DMN TCK runner for the DMN engine.
 
 ## How to build and execute this runner
 
-From this directory (`dmn-tck-runner-dmn-scala/`) with Maven:
+From this directory (`dmn-tck-runner-camunda-dmn-scala/`) with Maven:
 
 ```
 $ mvn clean install
