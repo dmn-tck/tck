@@ -114,7 +114,7 @@
                 };
 
                 var color = Chart.helpers.color;
-                var cbl5_data = {
+                var cbl6_data = {
                     labels: [
                         "Aggregator: COUNT","Aggregator: MIN","Aggregator: SUM","Business Knowledge Model","Compliance Level 2","Compliance Level 3","Context","DMN Import","Data Type : String","Data Type: Boolean","Data Type: Collection","Data Type: Context","Data Type: Date","Data Type: Date and Time","Data Type: Days and Time Duration","Data Type: Function","Data Type: List","Data Type: Number","Data Type: String","Data Type: Structure","Data Type: Text","Data Type: Time","Data Type: Years and Months Duration","Data Type: any","Decision Services","Decision Table: Multiple Output","Decision Table: Multiple Output Columns","Decision Table: Single Output","FEEL Arithmetic","FEEL Conditionals","FEEL Constants","FEEL External Java","FEEL Filter (10.3.2.5)","FEEL Function Literals","FEEL Functions: conversion","FEEL Functions: date and time","FEEL Functions: lambda","FEEL Functions: list","FEEL Functions: lists","FEEL Functions: map","FEEL Functions: negation","FEEL Functions: number","FEEL Functions: numeric","FEEL Functions: string","FEEL Functions: strings","FEEL Iteration","FEEL List","FEEL List Operator","FEEL Paths","FEEL Qualified Names","FEEL Quantifiers","FEEL Relation","FEEL Special-character Names","FEEL TYpe Conformance","FEEL comments","FEEL equality","FEEL properties","FEEL: Interval functions","Feel : any","Function Definition","Function Invocation","Hit Policy: ANY","Hit Policy: COLLECT","Hit Policy: Collect","Hit Policy: FIRST","Hit Policy: OUTPUT ORDER","Hit Policy: PRIORITY","Hit Policy: RULE ORDER","Hit Policy: UNIQUE","Item Definition","Literal Expression","Literal Function Invocation","Relation","[no label]"
                     ],
@@ -449,7 +449,7 @@
                         }
                     ]
                 };
-                var cblp5_data = {
+                var cblp6_data = {
                     labels: [
                         "Aggregator: COUNT","Aggregator: MIN","Aggregator: SUM","Business Knowledge Model","Compliance Level 2","Compliance Level 3","Context","DMN Import","Data Type : String","Data Type: Boolean","Data Type: Collection","Data Type: Context","Data Type: Date","Data Type: Date and Time","Data Type: Days and Time Duration","Data Type: Function","Data Type: List","Data Type: Number","Data Type: String","Data Type: Structure","Data Type: Text","Data Type: Time","Data Type: Years and Months Duration","Data Type: any","Decision Services","Decision Table: Multiple Output","Decision Table: Multiple Output Columns","Decision Table: Single Output","FEEL Arithmetic","FEEL Conditionals","FEEL Constants","FEEL External Java","FEEL Filter (10.3.2.5)","FEEL Function Literals","FEEL Functions: conversion","FEEL Functions: date and time","FEEL Functions: lambda","FEEL Functions: list","FEEL Functions: lists","FEEL Functions: map","FEEL Functions: negation","FEEL Functions: number","FEEL Functions: numeric","FEEL Functions: string","FEEL Functions: strings","FEEL Iteration","FEEL List","FEEL List Operator","FEEL Paths","FEEL Qualified Names","FEEL Quantifiers","FEEL Relation","FEEL Special-character Names","FEEL TYpe Conformance","FEEL comments","FEEL equality","FEEL properties","FEEL: Interval functions","Feel : any","Function Definition","Function Invocation","Hit Policy: ANY","Hit Policy: COLLECT","Hit Policy: Collect","Hit Policy: FIRST","Hit Policy: OUTPUT ORDER","Hit Policy: PRIORITY","Hit Policy: RULE ORDER","Hit Policy: UNIQUE","Item Definition","Literal Expression","Literal Function Invocation","Relation","[no label]"
                     ],
@@ -787,10 +787,10 @@
 
                 window.onload = function() {
                     // chart by test numbers
-                    var ctx = document.getElementById("cbl5").getContext("2d");
-                    window.cbl5 = new Chart(ctx, {
+                    var ctx = document.getElementById("cbl6").getContext("2d");
+                    window.cbl6 = new Chart(ctx, {
                         type: 'horizontalBar',
-                        data: cbl5_data,
+                        data: cbl6_data,
                         options: {
                             // Elements options apply to all of the options unless overridden in a dataset
                             // In this case, we are setting the border of each horizontal bar to be 2px wide
@@ -819,10 +819,10 @@
                     });
 
                     // chart by test percentage
-                    var ctxp = document.getElementById("cblp5").getContext("2d");
-                    window.cblp5 = new Chart(ctxp, {
+                    var ctxp = document.getElementById("cblp6").getContext("2d");
+                    window.cblp6 = new Chart(ctxp, {
                         type: 'horizontalBar',
-                        data: cblp5_data,
+                        data: cblp6_data,
                         options: {
                             // Elements options apply to all of the options unless overridden in a dataset
                             // In this case, we are setting the border of each horizontal bar to be 2px wide
@@ -863,12 +863,12 @@
             <div class="tab-content">
                 <div id="tab1" class="tab-pane fade active in">
                     <div id="chart_by_percent" style="width: 100%;">
-                        <canvas id="cblp5"></canvas>
+                        <canvas id="cblp6"></canvas>
                     </div>
                 </div>
                 <div id="tab2" class="tab-pane fade">
                     <div id="chart_by_numbers" style="width: 100%;">
-                        <canvas id="cbl5"></canvas>
+                        <canvas id="cbl6"></canvas>
                     </div>
                 </div>
                 <div id="tab3" class="tab-pane fade">
@@ -1352,7 +1352,7 @@
 <!-- pre-footer -->
 <div class="pre-footer">
     <div class="last-updated">
-        <p>Last updated:</strong> Jul 1, 2021, 9:51:59 AM</p>
+        <p>Last updated:</strong> Aug 1, 2021, 10:54:44 AM</p>
     </div>
 </div>
 <div class="footer">
