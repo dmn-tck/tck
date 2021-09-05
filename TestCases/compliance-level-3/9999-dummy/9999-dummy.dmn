@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<semantic:definitions xmlns:semantic="https://www.omg.org/spec/DMN/20191111/MODEL/"  xmlns:triso="http://www.trisotech.com/2015/triso/modeling"  xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"  xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"  xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"  xmlns:trisodmn="http://www.trisotech.com/2016/triso/dmn"  xmlns:feel="https://www.omg.org/spec/DMN/20191111/FEEL/"  xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase"  xmlns:drools="http://www.drools.org/kie/dmn/1.1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:rss="http://purl.org/rss/2.0/"  xmlns:openapi="https://openapis.org/omg/extension/1.0"  xmlns:xsd="http://www.w3.org/2001/XMLSchema"  xmlns:boxedext="https://www.trisotech.com/spec/DMN/20191111/EXT/"   xmlns:i18n="http://www.omg.org/spec/BPMN/non-normative/extensions/i18n/1.0"  xmlns="http://www.trisotech.com/definitions/_c3083b2e-4d1e-47c7-89b6-dc8e30ecb741" id="_c3083b2e-4d1e-47c7-89b6-dc8e30ecb741" name="Drawing 1" namespace="http://www.trisotech.com/definitions/_c3083b2e-4d1e-47c7-89b6-dc8e30ecb741" exporter="Decision Modeler" exporterVersion="7.10.3" xml:lang="en" triso:logoChoice="Default">
+    <semantic:extensionElements/>
+    <semantic:businessKnowledgeModel id="_3d2117c2-b375-4d75-a335-14e0d6640ef8" name="bkm1">
+        <semantic:variable name="bkm1" id="_c1e83ee9-48a2-47f2-b093-e246d391762a" typeRef="boolean"/>
+        <semantic:encapsulatedLogic id="_f392f09f-71a0-4758-bc76-f2183cb83ac6" kind="FEEL" triso:descriptionVisible="false" typeRef="boolean" triso:expressionId="_19118c1d-5fb3-44c0-aeca-5c5b41e2d659">
+          <semantic:literalExpression id="_cebcfa0e-e8b3-474f-af78-461e64768f6c" typeRef="boolean">
+              <semantic:text>"hello"</semantic:text>
+          </semantic:literalExpression>
+        </semantic:encapsulatedLogic>
+    </semantic:businessKnowledgeModel>
+</semantic:definitions>
