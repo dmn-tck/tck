@@ -1,0 +1,21 @@
+<tc:testCases xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <tc:modelName>9999-wrong.dmn</tc:modelName>
+    <tc:labels>
+        <tc:label>Compliance Level 3</tc:label>
+    </tc:labels>
+    <tc:testCase id="wrong">
+        <tc:resultNode type="decision" name="wrong">
+            <tc:expected>
+                <tc:component name="a">
+                    <tc:value xsi:type="xsd:boolean">true</tc:value>
+                </tc:component>
+                <tc:component name="b">
+                    <tc:value xsi:type="xsd:boolean">false</tc:value>
+                </tc:component>
+                <tc:component name="c">
+                    <tc:value xsi:type="xsd:boolean">true</tc:value>
+                </tc:component>
+            </tc:expected>
+        </tc:resultNode>
+    </tc:testCase>
+</tc:testCases>

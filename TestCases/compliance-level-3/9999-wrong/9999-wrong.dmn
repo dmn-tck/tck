@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<semantic:definitions xmlns:semantic="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:trisodmn="http://www.trisotech.com/2016/triso/dmn" xmlns:feel="https://www.omg.org/spec/DMN/20191111/FEEL/" xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:drools="http://www.drools.org/kie/dmn/1.1" xmlns:openapi="https://openapis.org/omg/extension/1.0" xmlns:dmn11="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:rss="http://purl.org/rss/2.0/" xmlns:trisofeed="http://trisotech.com/feed" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"               xmlns:xsd="http://www.w3.org/2001/XMLSchema"  xmlns="http://www.trisotech.com/definitions/_4dacb45e-9b17-48e0-9518-8cd1b47d445b" id="_4dacb45e-9b17-48e0-9518-8cd1b47d445b" name="DMN13 Intervals" namespace="http://www.trisotech.com/definitions/_4dacb45e-9b17-48e0-9518-8cd1b47d445b" exporter="Decision Modeler" exporterVersion="6.11.3" triso:logoChoice="Default">
+    <semantic:decision id="_f181d437-9211-4cb1-9231-4a94ca467a2c" name="wrong">
+        <semantic:variable name="wrong" id="_89605bcf-8bcd-436b-8807-2101bdc00595" typeRef="string"/>
+        <semantic:literalExpression id="_52d673bb-3424-4842-a2af-d92dc30c011e" typeRef="string">
+            <semantic:text>"Hello wrong"</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+</semantic:definitions>
