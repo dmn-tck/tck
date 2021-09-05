@@ -1,6 +1,9 @@
 
 package org.omg.dmn.tck.validation;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 import java.io.File;
 import java.io.FileFilter;
 import java.io.FileInputStream;
@@ -18,10 +21,10 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
+import javax.xml.validation.Validator;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpression;
-import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
 import org.junit.Test;
@@ -35,9 +38,6 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 @RunWith(Parameterized.class)
 public class TestCasesFiles {
@@ -89,7 +89,10 @@ public class TestCasesFiles {
     @Test
     public void testDMNFileIsValid() throws Exception {
         for (File dmnFile : basedir.listFiles((dir, name) -> name.matches(".*\\.dmn$"))) {
-            dmnSchema.newValidator().validate(new StreamSource(dmnFile));
+            Validator validator = dmnSchema.newValidator();
+            validator.setProperty(XMLConstants.ACCESS_EXTERNAL_DTD, "");
+            validator.setProperty(XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");
+            validator.validate(new StreamSource(dmnFile));
             checkInputDataHasTypeRef(dmnFile);
         }
     }
@@ -137,7 +140,10 @@ public class TestCasesFiles {
     @Test
     public void testCaseFileIsValid() throws Exception {
         for (File dmnFile : basedir.listFiles((dir, name) -> name.matches(".*\\.xml$"))) {
-            testCasesSchema.newValidator().validate(new StreamSource(dmnFile));
+            Validator validator = testCasesSchema.newValidator();
+            validator.setProperty(XMLConstants.ACCESS_EXTERNAL_DTD, "");
+            validator.setProperty(XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");
+            validator.validate(new StreamSource(dmnFile));
 
             TestCases testCases = TckMarshallingHelper.load(new FileInputStream(dmnFile));
             Map<String, Long> idCounting = testCases.getTestCase()
