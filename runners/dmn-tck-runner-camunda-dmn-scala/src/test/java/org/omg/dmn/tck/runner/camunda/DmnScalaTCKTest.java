@@ -42,6 +42,7 @@ import javax.xml.datatype.Duration;
 import javax.xml.datatype.XMLGregorianCalendar;
 import javax.xml.namespace.QName;
 import org.camunda.dmn.DmnEngine;
+import org.camunda.dmn.DmnEngine.EvalFailure;
 import org.camunda.dmn.DmnEngine.EvalResult;
 import org.camunda.dmn.DmnEngine.Failure;
 import org.camunda.dmn.parser.ParsedDmn;
@@ -90,6 +91,7 @@ public class DmnScalaTCKTest implements DmnTckVendorTestSuite {
 		context.engine = new DmnEngine.Builder()
 				.escapeNamesWithSpaces(true)
 				.escapeNamesWithDashes(true)
+				.lazyEvaluation(true)
 				.build();
 		return context;
 	}
@@ -193,7 +195,7 @@ public class DmnScalaTCKTest implements DmnTckVendorTestSuite {
 		final Object expectedResult = getValue(result.getExpected());
 
 		try {
-			final Either<DmnEngine.Failure, DmnEngine.EvalResult> decisionResult = ctx.engine.evalByName(ctx.dmnModel, decisionName, inputVariables);
+			final Either<DmnEngine.EvalFailure, DmnEngine.EvalResult> decisionResult = ctx.engine.evalByName(ctx.dmnModel, decisionName, inputVariables);
 
 			final Object actual = extractDecisionResult(decisionResult, decisionName);
 
@@ -232,7 +234,7 @@ public class DmnScalaTCKTest implements DmnTckVendorTestSuite {
 	}
 
 	private Object extractDecisionResult(
-			final Either<Failure, EvalResult> decisionResult, final String decisionName) {
+			final Either<EvalFailure, EvalResult> decisionResult, final String decisionName) {
 
 			if (decisionResult.isLeft()) {
 				return null;
