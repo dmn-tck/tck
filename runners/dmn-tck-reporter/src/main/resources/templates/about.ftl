@@ -151,8 +151,8 @@
                         should
                         and should not generally be true.</li>
                     <li>We will include only test cases that are known to pass on at least one implementation.
-                        <del>Caveat:
-                            at the
+                        Caveat:
+                        <del>at the
                             current</del> at the very beginning of this project, there were no known implementations at
                         conformance level
                         3, so necessarily there has been tests that no implementation could run, but once CL3 has been
