@@ -62,6 +62,9 @@
                     <li>
                         <a href="tests.html">Tests</a>
                     </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
 
                 </ul>
             </div>
