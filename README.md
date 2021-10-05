@@ -2,6 +2,14 @@
 
 # Technology Compatibility Kit for the Decision Model and Notation (DMN) standard
 
+The **Decision Model and Notation Technology Compatibility Kit** (DMN TCK) is a community-led proposal for a verifiable and executable method to demonstrate the Conformance level of support provided by a Vendor-supplied DMN implementation.
+
+In addition, this method provides more finer-grained details on the actual support for specific DMN constructs for each implementation.
+
+The DMN TCK working group is composed by vendors and practitioners of DMN, with the goal to assist and ensure Conformance to the specification, by defining test cases and expected results, by providing tools to run these tests and validate results; the outcome also represent an additional and pragmatical way to recognize and publicize vendor success.
+
+Joining the TCK is free, it also holds regular conference calls, and new members are always welcome.
+
 ## Current Result Web Site
 
 * https://dmn-tck.github.io/tck/
@@ -22,7 +30,18 @@ ReferenceTests - the actual collection of reference tests.
 
 Eventually we will have folders for every tool (software product, SaaS service, etc) that claims conformance that will hold the output of their test run.
 
+## Scope of work
 
+Goals:
+* 📝 Define a set of test cases
+* 🔬 Carefully assure conformance to the spec
+* 🛠️ Provide tools to run the tests
+* 👏 Recognize vendor successes
+
+NON-Goals:
+* 🚫 Extend or enhance the DMN Spec; instead, RTF is responsible for that
+* 🚫 Focus on esoteric features; instead, focus Only features that exist in one or more implementations
+* 🚫 Favor an implementation over another; instead, Remain technology and vendor neutral
 
 For this effort, here are the goals to achieve in order to consider this a success
 
