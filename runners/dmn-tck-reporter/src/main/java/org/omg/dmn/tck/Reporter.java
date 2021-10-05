@@ -75,6 +75,7 @@ public class Reporter {
         }
         TestsGenerator.generatePage( params, cfg, header, tableAllTests );
         GlossaryGenerator.generatePage( params, cfg, header );
+        AboutGenerator.generatePage( params, cfg, header );
     }
 
     private static ReportHeader createReportHeader(Map<String, TestCasesData> tests, Map<String, List<TestCasesData>> labels, Map<String, Vendor> results) {
