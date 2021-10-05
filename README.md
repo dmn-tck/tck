@@ -62,7 +62,8 @@ To be clear, there are several things that are not the goals of this group
 
 * We will not be involved in defining or extending the DMN specification -- this is the job of the OMG committee.
 * We will focus on concrete input and output examples. We will avoid general discussion about what should and should not generally be true.
-* We will include only test cases that are known to pass on at least one implementation. Caveat: at the current time there are no known implementations at conformance level 3, so necessarily there are tests that no implementation can run today, but once CL3 has been attained it will not be our practice to invent new, far-reaching tests for abstract situations.
+* We will include only test cases that are known to pass on at least one implementation.
+Caveat: ~~at the current~~ at the very beginning of this project, there were no known implementations at conformance level 3, so necessarily there has been tests that no implementation could run, but once CL3 has been attained it will not be our practice to invent new, far-reaching tests for abstract situations.
 * We will strive to get close to the spec, but if parts of the spec prove impossible to implement, we will not get involved correcting the specification.
 * Similarly, we strive to implement as much of the spec as possible, but if the spec is too expansive we may limit the scope to a subset that we all agree upon.
 * If the spec is ambiguous, we will make an interpretation of the spec according to what can actually be realized in running code, document that, and remain consistent to that in the future.
