@@ -68,6 +68,12 @@ Caveat: ~~at the current~~ at the very beginning of this project, there were no 
 * Similarly, we strive to implement as much of the spec as possible, but if the spec is too expansive we may limit the scope to a subset that we all agree upon.
 * If the spec is ambiguous, we will make an interpretation of the spec according to what can actually be realized in running code, document that, and remain consistent to that in the future.
 
+Reasons to be interested in this community-led project:
+
+* A way for Vendors to **demonstrate** their compliance to the Standard
+* Provide files to **help** Vendors test for error and become compliant
+* A way for Customers and Users to **assess** how compliant a Vendor is
+
 ## How to run the tests youself
 
 A couple of vendors provide [Java-based runners](/runners), which you can run using the following steps:
