@@ -87,3 +87,11 @@ $ mvn clean install -P camunda,drools,jdmn
 5. Check the log output for errors or exceptions and compare number of errors or skipped tests reported for each vendor with what's on the [TCK website](https://dmn-tck.github.io/tck/). For details on failed tests you can also look into the `target/surefire-reports` directory within each executed runner's sub-directory.
 
 If you have trouble executing a runner consult the `README.md` file in its sub-directory or contact the vendor.
+
+## Some DMN TCK presentations
+
+* Keith Swenson: Close is not Close Enough ([DecisionCamp 2019](https://decisioncamp2019.wordpress.com/program/#KeithSwenson))
+* Keith Swenson: DMN TCK Working Group ([bpmNEXT 2019](https://www.youtube.com/watch?v=75fk-i3K9U0))
+* Matteo Mortari: Introduction and Updates on DMN TCK ([DecisionCamp 2018](https://decisioncamp2018.wordpress.com/program/#DMNTCK))
+* Keith Swenson: DMN Technology Compatiability Toolkit (TCK) ([bpmNEXT 2018](https://www.youtube.com/watch?v=MqSbBtY2dKQ))
+* Keith Swenson: Making the Standard Real: The DMN TCK ([bpmNEXT 2017](https://www.youtube.com/watch?v=M8goCq72lbo))
