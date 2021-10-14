@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileFilter;
 import java.io.FileInputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,13 +16,14 @@ import java.util.stream.Collectors;
 import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
+import javax.xml.validation.Validator;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpression;
-import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
 import org.junit.Test;
@@ -32,6 +34,7 @@ import org.omg.dmn.tck.marshaller.TckMarshallingHelper;
 import org.omg.dmn.tck.marshaller._20160719.TestCases;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
@@ -46,7 +49,12 @@ public class TestCasesFiles {
     static Schema testCasesSchema;
     static {
         try {
-            dmnSchema = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI).newSchema(new File("../../TestCases/DMN13.xsd"));
+            dmnSchema = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI)
+                    .newSchema(new Source[]{new StreamSource(new File("../../TestCases/DC.xsd")),
+                                            new StreamSource(new File("../../TestCases/DI.xsd")),
+                                            new StreamSource(new File("../../TestCases/DMNDI13.xsd")),
+                                            new StreamSource(new File("../../TestCases/DMN13.xsd"))
+                    });
             testCasesSchema = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI).newSchema(new File("../../TestCases/testCases.xsd"));
         } catch (SAXException e) {
             throw new RuntimeException("Unable to initialize correctly.", e);
@@ -73,6 +81,13 @@ public class TestCasesFiles {
     private File basedir;
     private XPath xPath = XPathFactory.newInstance().newXPath();
     private XPathExpression inputDataVarMissingTypeRef;
+    private XPathExpression bkmVariable;
+    private XPathExpression bkmEncapsulatedLogic;
+    /**
+     * Spec 7.3.3 ItemDefinition metamodel, except `Any`.
+     */
+    private static final List<String> BUILTIN_NAMES_EXCEPT_ANY = Arrays.asList("number", "string", "boolean",
+            "days and time duration", "years and months duration", "date", "time", "date and time");
     private DocumentBuilder builder;
 
     public TestCasesFiles(String testCaseID, File basedir) {
@@ -80,6 +95,8 @@ public class TestCasesFiles {
         this.basedir = basedir;
         try {
             inputDataVarMissingTypeRef = xPath.compile("/*[local-name()='definitions']/*[local-name()='inputData']/*[local-name()='variable' and not(@*[local-name()='typeRef'])]/../@*[local-name()='name']");
+            bkmVariable = xPath.compile("/*[local-name()='definitions']/*[local-name()='businessKnowledgeModel']/*[local-name()='variable']");
+            bkmEncapsulatedLogic = xPath.compile("/*[local-name()='definitions']/*[local-name()='businessKnowledgeModel']/*[local-name()='encapsulatedLogic']");
             builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
         } catch (Exception e) {
             throw new RuntimeException("This JDK does not correctly support XPath", e);
@@ -89,9 +106,48 @@ public class TestCasesFiles {
     @Test
     public void testDMNFileIsValid() throws Exception {
         for (File dmnFile : basedir.listFiles((dir, name) -> name.matches(".*\\.dmn$"))) {
-            dmnSchema.newValidator().validate(new StreamSource(dmnFile));
+            Validator validator = dmnSchema.newValidator();
+            validator.setProperty(XMLConstants.ACCESS_EXTERNAL_DTD, "");
+            validator.setProperty(XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");
+            validator.validate(new StreamSource(dmnFile));
             checkInputDataHasTypeRef(dmnFile);
+            checkBKMTypeRef(dmnFile);
         }
+    }
+
+    private void checkBKMTypeRef(File dmnFile) throws Exception {
+        Document xmlDocument = builder.parse(dmnFile);
+        List<String> problems = new ArrayList<>();
+        problems.addAll(checkBKMXPathTypeRef(dmnFile, xmlDocument, bkmVariable, "variable", "name"));
+        problems.addAll(checkBKMXPathTypeRef(dmnFile, xmlDocument, bkmEncapsulatedLogic, "encapsulatedLogic", "id"));
+        if (!problems.isEmpty()) {
+            throw new RuntimeException(problems.stream().collect(Collectors.joining(", ")));
+        }
+    }
+
+    private List<String> checkBKMXPathTypeRef(File dmnFile, Document xmlDocument, XPathExpression xpath, String elementName, String extractor) throws Exception {
+        List<String> problems = new ArrayList<>();
+        NodeList xPathVariables = (NodeList) xpath.evaluate(xmlDocument, XPathConstants.NODESET);
+        if (xPathVariables.getLength() > 0) {
+            for (int i = 0; i < xPathVariables.getLength(); i++) {
+                Node variableNode = xPathVariables.item(i);
+                NamedNodeMap variableAttributes = variableNode.getAttributes();
+                Node typeRefAttribute = variableAttributes.getNamedItem("typeRef");
+                if (typeRefAttribute != null ) {
+                    String typeRefValue = typeRefAttribute.getNodeValue();
+                    if (BUILTIN_NAMES_EXCEPT_ANY.contains(typeRefValue)) {                    
+                        String problem = String.format("%s: BKM node %s '%s' typeRef is not a function (detected as: '%s' and expecting a function type instead)",
+                                                       dmnFile.getName(),
+                                                       elementName,
+                                                       variableAttributes.getNamedItem(extractor),
+                                                       typeRefValue);
+                        System.err.println(problem);
+                        problems.add(problem);
+                    }                    
+                }
+            }
+        }
+        return problems;
     }
 
     private void checkInputDataHasTypeRef(File dmnFile) throws Exception {
@@ -137,7 +193,10 @@ public class TestCasesFiles {
     @Test
     public void testCaseFileIsValid() throws Exception {
         for (File dmnFile : basedir.listFiles((dir, name) -> name.matches(".*\\.xml$"))) {
-            testCasesSchema.newValidator().validate(new StreamSource(dmnFile));
+            Validator validator = testCasesSchema.newValidator();
+            validator.setProperty(XMLConstants.ACCESS_EXTERNAL_DTD, "");
+            validator.setProperty(XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");
+            validator.validate(new StreamSource(dmnFile));
 
             TestCases testCases = TckMarshallingHelper.load(new FileInputStream(dmnFile));
             Map<String, Long> idCounting = testCases.getTestCase()
