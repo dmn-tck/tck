@@ -105,6 +105,7 @@ public class JDMNTestContext<NUMBER, DATE, TIME, DATE_TIME, DURATION> implements
     private InputParameters getInputParameters() {
         LinkedHashMap<String, String> map = new LinkedHashMap<>();
         map.put("singletonInputData", "false");
+        map.put("strongTyping", "false");
         return new InputParameters(map);
     }
 
