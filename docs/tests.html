@@ -78,7 +78,7 @@
                 <div class="row">
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Tests:</strong> 1743</p>
+                            <p><strong>Tests:</strong> 1779</p>
                         </small>
                     </div>
                     <div class="col-md-2">
@@ -871,7 +871,7 @@
                             <td scope="row"></td>
                         </tr>
                         <tr>
-                                <td class="text-nowrap" scope="row" rowspan="1,627" style="vertical-align:middle">compliance-level-3</td>
+                                <td class="text-nowrap" scope="row" rowspan="1,663" style="vertical-align:middle">compliance-level-3</td>
                                 <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0001-filter-test-01</td>
                                 <td align="center" rowspan="1" style="vertical-align:middle">
                                     <a target="_blank" href="https://github.com/dmn-tck/tck/blob/master/TestCases/compliance-level-3/0001-filter/0001-filter.pdf">
@@ -2867,11 +2867,11 @@
                             <td scope="row">Assert with null params</td>
                         </tr>
                         <tr>
-                                <td class="text-nowrap" scope="row" rowspan="72" style="vertical-align:middle">0068-feel-equality-test-01</td>
-                                <td align="center" rowspan="72" style="vertical-align:middle">
+                                <td class="text-nowrap" scope="row" rowspan="108" style="vertical-align:middle">0068-feel-equality-test-01</td>
+                                <td align="center" rowspan="108" style="vertical-align:middle">
                                     <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
                                 </td>
-                                <td align="center" rowspan="72" style="vertical-align:middle">
+                                <td align="center" rowspan="108" style="vertical-align:middle">
                                     <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/0068-feel-equality">
                                         <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
                                     </a>
@@ -3076,6 +3076,114 @@
                             <td scope="row">date equals another type</td>
                         </tr>
                         <tr>
+                            <td class="text-nowrap" scope="row">time_001</td>
+                            <td scope="row">same times are equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_002</td>
+                            <td scope="row">different times are not equal: hours</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_002_a</td>
+                            <td scope="row">different times are not equal: minutes</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_002_b</td>
+                            <td scope="row">different times are not equal: seconds</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_003</td>
+                            <td scope="row">same times with zero milliseconds are equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_004</td>
+                            <td scope="row">same times with same milliseconds are equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_005</td>
+                            <td scope="row">same times with different milliseconds are equal as value resolution is seconds</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_006</td>
+                            <td scope="row">same times in same zone are equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_009</td>
+                            <td scope="row">same times = one with offset, the other with zone are equal if offsets are equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_010</td>
+                            <td scope="row">same times = one with Z zone, the other with UTC are equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_011</td>
+                            <td scope="row">time equals null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_012</td>
+                            <td scope="row">time equals another type</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_001</td>
+                            <td scope="row">same datetimes are equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_002</td>
+                            <td scope="row">datetimes with no time is equal to datetime with zero time</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_003</td>
+                            <td scope="row">datetimes with same milliseconds are equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_003_a</td>
+                            <td scope="row">datetimes with different milliseconds are equal as resolution is to the second</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_004</td>
+                            <td scope="row">different datetimes are not equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_005</td>
+                            <td scope="row">same datetimes in same zone are equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_006</td>
+                            <td scope="row">same datetimes in different zones are not equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_008</td>
+                            <td scope="row">same datetimes, one with offset and the other with zone are equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_008_a</td>
+                            <td scope="row">same datetimes, one with offset and the other with zone are equal - DST</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_008_b</td>
+                            <td scope="row">same datetimes, with same offsets but different zones equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_009</td>
+                            <td scope="row">datetime with zero offset is equal to utc zone</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_010</td>
+                            <td scope="row">datetime equals null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_011</td>
+                            <td scope="row">datetime equals another type</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_012</td>
+                            <td scope="row">datetime: different times in different zones can be equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_013</td>
+                            <td scope="row">datetime: different times in different zones can be equal (with negative offset)</td>
+                        </tr>
+                        <tr>
                             <td class="text-nowrap" scope="row">dt_duration_001</td>
                             <td scope="row">same durations are equal</td>
                         </tr>
@@ -3162,6 +3270,42 @@
                         <tr>
                             <td class="text-nowrap" scope="row">deep_007</td>
                             <td scope="row">deep context in-equality</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">range_001</td>
+                            <td scope="row">ranges with same endpoint and inclusivity are equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">range_002</td>
+                            <td scope="row">ranges with different upper endpoints are not equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">range_003</td>
+                            <td scope="row">ranges with different lower endpoints are not equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">range_004</td>
+                            <td scope="row">ranges with same endpoints, but same though syntactically different lower inclusivity are equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">range_005</td>
+                            <td scope="row">ranges with same endpoints, but same though syntactically different upper inclusivity are equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">range_006</td>
+                            <td scope="row">equal ranges though syntactically different: LT </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">range_007</td>
+                            <td scope="row">equal ranges though syntactically different: LE </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">range_008</td>
+                            <td scope="row">equal ranges though syntactically different: GT </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">range_009</td>
+                            <td scope="row">equal ranges though syntactically different: GE </td>
                         </tr>
                         <tr>
                                 <td class="text-nowrap" scope="row" rowspan="27" style="vertical-align:middle">0069-feel-list-test-01</td>
@@ -8338,7 +8482,7 @@
 <!-- pre-footer -->
 <div class="pre-footer">
     <div class="last-updated">
-        <p>Last updated:</strong> Oct 5, 2021, 3:00:30 PM</p>
+        <p>Last updated:</strong> Nov 1, 2021, 10:07:47 PM</p>
     </div>
 </div>
 <div class="footer">
