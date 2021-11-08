@@ -120,11 +120,9 @@
 
     <testCase id="008">
         <description>later duplicate name overwrites previous</description>
-        <resultNode name="decision008" type="decision">
+        <resultNode errorResult="true" name="decision008" type="decision">
             <expected>
-                <component name="foo">
-                    <value xsi:type="xsd:string">baz</value>
-                </component>
+                <value xsi:nil="true"/>
             </expected>
         </resultNode>
     </testCase>
