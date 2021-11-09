@@ -23,33 +23,37 @@
         </literalExpression>
     </decision>
 
-    <decision name="decision_003" id="_decision_003">
-        <variable name="decision_003"/>
-        <literalExpression>
-            <text>-@"P1D"</text>
-        </literalExpression>
-    </decision>
+    <!-- commented as per https://github.com/dmn-tck/tck/pull/401#issuecomment-962982239 -->
+<!--    <decision name="decision_003" id="_decision_003">-->
+<!--        <variable name="decision_003"/>-->
+<!--        <literalExpression>-->
+<!--            <text>-@"P1D"</text>-->
+<!--        </literalExpression>-->
+<!--    </decision>-->
 
-    <decision name="decision_003_a" id="_decision_003_a">
-        <variable name="decision_003_a"/>
-        <literalExpression>
-            <text>-@"-P1D"</text>
-        </literalExpression>
-    </decision>
+    <!-- commented as per https://github.com/dmn-tck/tck/pull/401#issuecomment-962982239 -->
+<!--    <decision name="decision_003_a" id="_decision_003_a">-->
+<!--        <variable name="decision_003_a"/>-->
+<!--        <literalExpression>-->
+<!--            <text>-@"-P1D"</text>-->
+<!--        </literalExpression>-->
+<!--    </decision>-->
 
-    <decision name="decision_004" id="_decision_004">
-        <variable name="decision_004"/>
-        <literalExpression>
-            <text>-@"P1Y"</text>
-        </literalExpression>
-    </decision>
+    <!-- commented as per https://github.com/dmn-tck/tck/pull/401#issuecomment-962982239 -->
+<!--    <decision name="decision_004" id="_decision_004">-->
+<!--        <variable name="decision_004"/>-->
+<!--        <literalExpression>-->
+<!--            <text>-@"P1Y"</text>-->
+<!--        </literalExpression>-->
+<!--    </decision>-->
 
-    <decision name="decision_004_a" id="_decision_004_a">
-        <variable name="decision_004_a"/>
-        <literalExpression>
-            <text>-@"-P1Y"</text>
-        </literalExpression>
-    </decision>
+    <!-- commented as per https://github.com/dmn-tck/tck/pull/401#issuecomment-962982239 -->
+<!--    <decision name="decision_004_a" id="_decision_004_a">-->
+<!--        <variable name="decision_004_a"/>-->
+<!--        <literalExpression>-->
+<!--            <text>-@"-P1Y"</text>-->
+<!--        </literalExpression>-->
+<!--    </decision>-->
 
     <decision name="decision_005" id="_decision_005">
         <variable name="decision_005"/>
