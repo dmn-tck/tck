@@ -13,7 +13,7 @@
     <testCase id="001">
         <description>qualified hrefs using model-local namespace</description>
         <inputNode name="input_001">
-            <value>input_001</value>
+            <value xsi:type="xsd:string">input_001</value>
         </inputNode>
         <resultNode name="decision_002" type="decision">
             <expected>
