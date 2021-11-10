@@ -120,7 +120,7 @@
 
     <testCase id="008">
         <description>duplicate context entry keys not allowed (DMN14-178), results in null</description>
-        <resultNode errorResult="true" name="decision008" type="decision">
+        <resultNode name="decision008" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
