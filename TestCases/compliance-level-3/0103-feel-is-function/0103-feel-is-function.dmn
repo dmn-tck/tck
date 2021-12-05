@@ -487,9 +487,9 @@
     </decision>
 
     <decision name="named_params_002" id="named_params_002">
-        <description>Tests FEEL expression: 'is(value2: @"2021-02-13")' and expects result: 'true (boolean)'</description>
-        <question>Result of FEEL expression 'is(value2: @"2021-02-13")'?</question>
-        <allowedAnswers>true (boolean)</allowedAnswers>
+        <description>Tests FEEL expression: 'is(value1: @"2021-02-13")' and expects result: 'false (boolean)'</description>
+        <question>Result of FEEL expression 'is(value1: @"2021-02-13")'?</question>
+        <allowedAnswers>false (boolean)</allowedAnswers>
         <variable name="named_params_002"/>
         <literalExpression>
             <text>is(value1: @"2021-02-13")</text>
@@ -497,12 +497,12 @@
     </decision>
 
     <decision name="named_params_003" id="named_params_003">
-        <description>Tests FEEL expression: 'is(value1: @"2021-02-13")' and expects result: 'true (boolean)'</description>
-        <question>Result of FEEL expression 'is(value1: @"2021-02-13")'?</question>
-        <allowedAnswers>true (boolean)</allowedAnswers>
+        <description>Tests FEEL expression: 'is(value2: @"2021-02-13")' and expects result: 'false (boolean)'</description>
+        <question>Result of FEEL expression 'is(value2: @"2021-02-13")'?</question>
+        <allowedAnswers>false (boolean)</allowedAnswers>
         <variable name="named_params_003"/>
         <literalExpression>
-            <text>is(value1: @"2021-02-13")</text>
+            <text>is(value2: @"2021-02-13")</text>
         </literalExpression>
     </decision>
 

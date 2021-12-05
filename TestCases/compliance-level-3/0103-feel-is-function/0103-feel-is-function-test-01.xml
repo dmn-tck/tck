@@ -430,19 +430,19 @@
     </testCase>
 
     <testCase id="named_params_002">
-        <description>null: is not a permitted value1 type</description>
-        <resultNode name="named_params_002" type="decision" errorResult="true">
+        <description>value1 param is nullable</description>
+        <resultNode name="named_params_002" type="decision">
             <expected>
-                <value xsi:nil="true"></value>
+                <value xsi:type="xsd:boolean">false</value>
             </expected>
         </resultNode>
     </testCase>
 
     <testCase id="named_params_003">
-        <description>null: is not a permitted value2 type</description>
-        <resultNode name="named_params_003" type="decision" errorResult="true">
+        <description>value2 param is nullable</description>
+        <resultNode name="named_params_003" type="decision">
             <expected>
-                <value xsi:nil="true"></value>
+                <value xsi:type="xsd:boolean">false</value>
             </expected>
         </resultNode>
     </testCase>
