@@ -21,7 +21,7 @@ import com.gs.dmn.serialization.DMNReader;
 import com.gs.dmn.serialization.DMNWriter;
 import com.gs.dmn.tck.TCKUtil;
 import com.gs.dmn.transformation.DMNTransformer;
-import com.gs.dmn.transformation.ToSimpleNameTransformer;
+import com.gs.dmn.transformation.ToQuotedNameTransformer;
 import com.gs.dmn.transformation.basic.BasicDMNToJavaTransformer;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.junit.runner.Description;
@@ -79,7 +79,7 @@ public class JDMNTckTest implements DmnTckVendorTestSuite {
     public TestSuiteContext createContext() {
         DMNReader dmnReader = new DMNReader(LOGGER, false);
         DMNWriter dmnWriter = new DMNWriter(LOGGER);
-        DMNTransformer<TestCases> dmnTransformer = new ToSimpleNameTransformer(LOGGER);
+        DMNTransformer<TestCases> dmnTransformer = new ToQuotedNameTransformer(LOGGER);
         StandardDMNDialectDefinition dialectDefinition = new StandardDMNDialectDefinition();
         return new JDMNTestContext<>(dmnReader, dmnWriter, dmnTransformer, dialectDefinition);
     }
