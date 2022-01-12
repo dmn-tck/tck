@@ -326,6 +326,25 @@
         </invocation>
     </decision>
 
+    <decision name="invoke_007" id="_invoke_007">
+        <variable name="invoke_007"/>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#_bkm_005"/>
+        </knowledgeRequirement>
+        <invocation>
+            <literalExpression>
+                <text>bkm_005</text>
+            </literalExpression>
+            <binding>
+                <!-- correctly passes a number, but the named parameter is unknown - should be 'arg' -->
+                <parameter name="arg1"/>
+                <literalExpression>
+                    <text>123</text>
+                </literalExpression>
+            </binding>
+        </invocation>
+    </decision>
+
     <decision name="fd_001" id="_fd_001">
         <variable name="fd_001"/>
         <context>
