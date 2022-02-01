@@ -78,7 +78,7 @@
                 <div class="row">
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Tests:</strong> 1813</p>
+                            <p><strong>Tests:</strong> 1863</p>
                         </small>
                     </div>
                     <div class="col-md-2">
@@ -871,7 +871,7 @@
                             <td scope="row"></td>
                         </tr>
                         <tr>
-                                <td class="text-nowrap" scope="row" rowspan="1,697" style="vertical-align:middle">compliance-level-3</td>
+                                <td class="text-nowrap" scope="row" rowspan="1,747" style="vertical-align:middle">compliance-level-3</td>
                                 <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0001-filter-test-01</td>
                                 <td align="center" rowspan="1" style="vertical-align:middle">
                                     <a target="_blank" href="https://github.com/dmn-tck/tck/blob/master/TestCases/compliance-level-3/0001-filter/0001-filter.pdf">
@@ -6689,6 +6689,215 @@
                             <td scope="row">negate expression result</td>
                         </tr>
                         <tr>
+                                <td class="text-nowrap" scope="row" rowspan="50" style="vertical-align:middle">0103-feel-is-function-test-01</td>
+                                <td align="center" rowspan="50" style="vertical-align:middle">
+                                    <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="50" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/0103-feel-is-function">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">number_001</td>
+                            <td scope="row">number: is equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">number_002</td>
+                            <td scope="row">number: is not equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">boolean_001</td>
+                            <td scope="row">boolean: is equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">boolean_002</td>
+                            <td scope="row">boolean: is not equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">string_001</td>
+                            <td scope="row">string: is equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">string_002</td>
+                            <td scope="row">string: is not equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">date_001</td>
+                            <td scope="row">date: is equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">date_002</td>
+                            <td scope="row">date: is not equal when year differs</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">date_003</td>
+                            <td scope="row">date: is not equal when months differs</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">date_004</td>
+                            <td scope="row">date: is not equal when days differs</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">date_005</td>
+                            <td scope="row">date: is not equal to UTC zero time of same date</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_001</td>
+                            <td scope="row">time: is equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_002</td>
+                            <td scope="row">time: is equal with same offset</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_003</td>
+                            <td scope="row">time: is equal with same timezone</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_004</td>
+                            <td scope="row">time: is equal - UTC zone and UTC offset</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_005</td>
+                            <td scope="row">time: is not equal - no zone time vs UTC zone time</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_006</td>
+                            <td scope="row">time: is not equal - @ zone time with same offset zone time</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_007</td>
+                            <td scope="row">time: is not equal - @ GMT vs zero offset zone time</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_008</td>
+                            <td scope="row">time: is not equal when hour differs</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_009</td>
+                            <td scope="row">time: is not equal when minute differs</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_010</td>
+                            <td scope="row">time: is not equal when second differs</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_011</td>
+                            <td scope="row">time: is not equal when offset differs</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_012</td>
+                            <td scope="row">time: is not equal when zone differs but offset is same</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">time_013</td>
+                            <td scope="row">time: is not equal when equivalent time in different zones</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_001</td>
+                            <td scope="row">datetime: is equal with same date and time</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_002</td>
+                            <td scope="row">datetime: is equal with same date and time and offset</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_003</td>
+                            <td scope="row">datetime: is equal with same date and time and timezone</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_004</td>
+                            <td scope="row">datetime: not equals despite being equal points in time</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_005</td>
+                            <td scope="row">datetime: not equals despite being equal points in time</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_006</td>
+                            <td scope="row">datetime: not equals despite being equal points in time</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_007</td>
+                            <td scope="row">datetime: not equals when year differs</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_008</td>
+                            <td scope="row">datetime: not equals when month differs</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_009</td>
+                            <td scope="row">datetime: not equals when day differs</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_010</td>
+                            <td scope="row">datetime: not equals when hour differs</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_011</td>
+                            <td scope="row">datetime: not equals when minute differs</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_012</td>
+                            <td scope="row">datetime: not equals when seconds differs</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_013</td>
+                            <td scope="row">datetime: not equals when offset differs</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_014</td>
+                            <td scope="row">datetime: not equals when region differs even though offset is same</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_015</td>
+                            <td scope="row">datetime: is equal - UTC zone vs UTC offset</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_016</td>
+                            <td scope="row">datetime: is not equal - zone vs offset - DST</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">datetime_017</td>
+                            <td scope="row">datetime: is not equal - zone vs offset - outside DST</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">dt_duration_001</td>
+                            <td scope="row">days and time duration: same stuff is equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">dt_duration_002</td>
+                            <td scope="row">days and time duration: same duration in different units is equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">ym_duration_001</td>
+                            <td scope="row">years and months duration: not a permitted type</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">ym_duration_002</td>
+                            <td scope="row">years and months duration: same duration in different units is equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">zero_duration_001</td>
+                            <td scope="row">zero durations are not equal</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">named_params_001</td>
+                            <td scope="row">correct names params okay</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">named_params_002</td>
+                            <td scope="row">value1 param is nullable</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">named_params_003</td>
+                            <td scope="row">value2 param is nullable</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">named_params_004</td>
+                            <td scope="row">will return null when unknown named params</td>
+                        </tr>
+                        <tr>
                                 <td class="text-nowrap" scope="row" rowspan="10" style="vertical-align:middle">1100-feel-decimal-function-test-01</td>
                                 <td align="center" rowspan="10" style="vertical-align:middle">
                                     <a target="_blank" href="https://github.com/dmn-tck/tck/blob/master/TestCases/compliance-level-3/1100-feel-decimal-function/Readme.md">
@@ -8627,7 +8836,7 @@
 <!-- pre-footer -->
 <div class="pre-footer">
     <div class="last-updated">
-        <p>Last updated:</strong> Jan 1, 2022, 6:17:01 PM</p>
+        <p>Last updated:</strong> Feb 1, 2022, 10:28:08 AM</p>
     </div>
 </div>
 <div class="footer">
