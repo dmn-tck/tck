@@ -867,6 +867,7 @@
         </resultNode>
     </testCase>
 
+    <!-- comment out as per: https://github.com/dmn-tck/tck/pull/390#issuecomment-1053664450
     <testCase id="list_021">
         <description>list is an instance of inline function types</description>
         <resultNode name="list_021" type="decision">
@@ -875,6 +876,7 @@
             </expected>
         </resultNode>
     </testCase>
+    -->
 
     <testCase id="ym_duration_001">
         <description>years and months duration instance of Any is true</description>
@@ -1409,6 +1411,7 @@
         </resultNode>
     </testCase>-->
 
+    <!-- comment out as per: https://github.com/dmn-tck/tck/pull/390#issuecomment-1053664450
     <testCase id="function_012">
         <description>conforms when no params and covariant return type</description>
         <resultNode name="function_012" type="decision">
@@ -1588,5 +1591,6 @@
             </expected>
         </resultNode>
     </testCase>
+    -->
 
 </testCases>
