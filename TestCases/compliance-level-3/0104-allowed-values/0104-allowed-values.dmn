@@ -59,14 +59,14 @@
     </dmn:itemDefinition>
 
     <!-- a type suitable for a relation - a list of contexts, though
-    each with a contrained property -->
+    each with a constrained property -->
     <dmn:itemDefinition name="tFooBarRelation" isCollection="true">
         <dmn:itemComponent name="col1">
             <dmn:typeRef>tFooBarString</dmn:typeRef>
         </dmn:itemComponent>
     </dmn:itemDefinition>
 
-    <!-- a list with a contrained string type -->
+    <!-- a list with a constrained string type -->
     <dmn:itemDefinition name="tFooBarList" isCollection="true">
         <dmn:typeRef>tFooBarString</dmn:typeRef>
     </dmn:itemDefinition>
@@ -116,7 +116,7 @@
     <dmn:itemDefinition name="tDirectionsString">
         <!-- note this type uses another string type as a base.  We expect
         the allowed values to be 'overridden' here.  That is, the allowed values
-        in tFooBarString will not longer apply -->
+        in tFooBarString will no longer apply -->
         <dmn:typeRef>tFooBarString</dmn:typeRef>
         <dmn:allowedValues>
             <dmn:text>"left", "right"</dmn:text>
@@ -449,7 +449,7 @@
     </dmn:decision>
 
     <dmn:decision name="a_function_typed_lambda" id="_a_function_typed_lambda">
-        <dmn:variable name="a_function_typed_lambda" />
+        <dmn:variable name="a_function_typed_lambda" typeRef="tFooBarFunction" />
         <!-- the literal expression (that returns a lambda) is typed with a function type -->
         <dmn:literalExpression typeRef="tFooBarFunction">
             <dmn:text>(function(a: tFooBarString) a)</dmn:text>
@@ -496,7 +496,7 @@
     </dmn:decision>
 
     <dmn:decision name="a_function_typed_funcdef" id="_a_function_typed_funcdef">
-        <dmn:variable name="a_function_typed_funcdef" />
+        <dmn:variable name="a_function_typed_funcdef" typeRef="tFooBarFunction" />
         <!-- the function definition is typed with a function type -->
         <dmn:functionDefinition typeRef="tFooBarFunction">
             <dmn:formalParameter name="a"/>
@@ -638,7 +638,7 @@
         </dmn:literalExpression>
     </dmn:decision>
 
-    <!-- Decision service accepting an contrained param and echoing it.  The DS variable has no return type -->
+    <!-- Decision service accepting an constrained param and echoing it.  The DS variable has no return type -->
     <dmn:decisionService name="a_decisionservice_with_typed_param" id="_a_decisionservice_with_typed_param">
         <dmn:variable name="a_decisionservice_with_typed_param" typeRef="tFooBarDSFunctionWithTypedParam"/>
         <dmn:outputDecision href="#_ds_echo_from_inputdecision_decision"/>
@@ -826,7 +826,7 @@
 
     <!-- decision with typed literal expression echoing an (untyped) input -->
     <dmn:decision name="decision_literal_expression_001" id="_decision_literal_expression_001">
-        <dmn:variable name="decision_literal_expression_001" />
+        <dmn:variable name="decision_literal_expression_001" typeRef="tFooBarString" />
         <dmn:informationRequirement>
             <dmn:requiredInput href="#_tUntypedInput"/>
         </dmn:informationRequirement>
@@ -836,7 +836,7 @@
     </dmn:decision>
 
     <dmn:decision name="decision_context_expression_001" id="_decision_context_expression_001">
-        <dmn:variable name="decision_context_expression_001" />
+        <dmn:variable name="decision_context_expression_001" typeRef="tFooBarContext"/>
         <dmn:informationRequirement>
             <dmn:requiredInput href="#_tUntypedInput"/>
         </dmn:informationRequirement>
@@ -869,7 +869,7 @@
     </dmn:decision>
 
     <dmn:decision name="decision_list_expression_001" id="_decision_list_expression_001">
-        <dmn:variable name="decision_list_expression_001" />
+        <dmn:variable name="decision_list_expression_001" typeRef="tFooBarList" />
         <dmn:informationRequirement>
             <dmn:requiredInput href="#_tUntypedInput"/>
         </dmn:informationRequirement>
@@ -895,7 +895,7 @@
     </dmn:decision>
 
     <dmn:decision name="decision_relation_expression_001" id="_decision_relation_expression_001">
-        <dmn:variable name="decision_relation_expression_001" />
+        <dmn:variable name="decision_relation_expression_001" typeRef="tFooBarRelation"/>
         <dmn:informationRequirement>
             <dmn:requiredInput href="#_tUntypedInput"/>
         </dmn:informationRequirement>
@@ -932,7 +932,7 @@
     input as an output entry.  The DT has a variable typeRef so we can assert on
     the decision out -->
     <dmn:decision name="decision_dt_expression_001" id="_decision_dt_expression_001">
-        <dmn:variable name="decision_dt_expression_001"/>
+        <dmn:variable name="decision_dt_expression_001" typeRef="tFooBarString"/>
         <dmn:informationRequirement>
             <dmn:requiredInput href="#_tUntypedInput"/>
         </dmn:informationRequirement>
@@ -1032,7 +1032,7 @@
     <!-- decision with a single output decision table having no inputs that just echoes a given
     input as an output entry.  The output clause is constrained by outputValues -->
     <dmn:decision name="decision_dt_expression_005" id="_decision_dt_expression_005">
-        <dmn:variable name="decision_dt_expression_005"/>
+        <dmn:variable name="decision_dt_expression_005" typeRef="tFooBarString"/>
         <dmn:informationRequirement>
             <dmn:requiredInput href="#_tUntypedInput"/>
         </dmn:informationRequirement>
@@ -1071,7 +1071,7 @@
 
     <!-- invocation defines a constrained return type -->
     <dmn:decision name="decision_invocation_expression_002" id="_decision_invocation_expression_002">
-        <dmn:variable name="decision_invocation_expression_002"/>
+        <dmn:variable name="decision_invocation_expression_002" typeRef="tFooBarString"/>
         <dmn:informationRequirement>
             <dmn:requiredInput href="#_tUntypedInput"/>
         </dmn:informationRequirement>
