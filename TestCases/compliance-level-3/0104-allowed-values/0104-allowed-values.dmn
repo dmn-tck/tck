@@ -536,7 +536,7 @@
     <!-- BKM with a function typed encapsulatedLogic.  Used to assert on return type
     compatibility -->
     <dmn:businessKnowledgeModel name="a_bkm_with_function_typed_logic" id="_a_bkm_with_function_typed_logic">
-        <dmn:variable name="a_bkm_with_function_typed_logic" />
+        <dmn:variable name="a_bkm_with_function_typed_logic" typeRef="tFooBarFunction" />
         <dmn:encapsulatedLogic typeRef="tFooBarFunction">
             <dmn:formalParameter name="a"/>
             <dmn:literalExpression>
