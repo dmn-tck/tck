@@ -14,11 +14,6 @@
                 <div class="panel-body">
                     <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
                         <div style="display:inline-block; margin-top:10px;">
-                            <a href="https://www.actico.com" target="_newtab">
-                                <img alt="actico" class="img-thumbnail" src="images/actico-logo.png" style="height: 60px"/>
-                            </a>
-                        </div>
-                        <div style="display:inline-block; margin-top:10px;">
                             <a href="http://www.camunda.com" target="_newtab">
                                 <img alt="camunda" class="img-thumbnail" src="images/camunda_logo.png" style="height: 60px"/>
                             </a>
