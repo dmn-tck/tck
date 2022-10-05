@@ -115,6 +115,13 @@ public class DroolsTCKTest
       assert versions != null;
       Arrays.sort(versions);
       propsFile = new File("../../TestResults/Drools/" + versions[versions.length - 1] + "/tck_results.properties");
+      if (!propsFile.exists()) {
+        try {
+            propsFile.createNewFile();
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
+        }
+      }
       if (versions.length > 1) {
          for (int i = 0; i < versions.length - 1; i++) {
             Path toRemove = Paths.get("../../TestResults/Drools/" + versions[i]);
