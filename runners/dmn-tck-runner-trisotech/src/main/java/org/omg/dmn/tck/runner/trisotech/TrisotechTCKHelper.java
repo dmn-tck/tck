@@ -108,7 +108,12 @@ public class TrisotechTCKHelper {
         output.flush();
 
         if (connection.getResponseCode() != 200) {
+            connection.getInputStream().transferTo(System.out);
             throw new IOException("Could not deploy to the cloud: " + connection.getResponseCode() + " " + connection.getResponseMessage());
+        }
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
         }
         return true;
     }
