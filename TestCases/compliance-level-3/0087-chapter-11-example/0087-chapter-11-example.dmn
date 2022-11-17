@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<semantic:definitions xmlns:semantic="https://www.omg.org/spec/DMN/20191111/MODEL/"
+<semantic:definitions xmlns:semantic="https://www.omg.org/spec/DMN/20211108/MODEL/"
 					  xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
 					  xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
 					  xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
-					  xmlns:feel="https://www.omg.org/spec/DMN/20191111/FEEL/"
+					  xmlns:feel="https://www.omg.org/spec/DMN/20211108/FEEL/"
 					  xmlns="http://www.trisotech.com/definitions/_9d01a0c4-f529-4ad8-ad8e-ec5fb5d96ad4"
 					  id="_9d01a0c4-f529-4ad8-ad8e-ec5fb5d96ad4"
 					  namespace="http://www.trisotech.com/definitions/_9d01a0c4-f529-4ad8-ad8e-ec5fb5d96ad4"
