@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<definitions namespace="http://www.montera.com.au/spec/DMN/0079-feel-string-function" name="0079-feel-string-function" id="_i9fboPUUEeesLuP4RHs4vA" xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<definitions namespace="http://www.montera.com.au/spec/DMN/0079-feel-string-function" name="0079-feel-string-function" id="_i9fboPUUEeesLuP4RHs4vA" xmlns="https://www.omg.org/spec/DMN/20211108/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <description>FEEL built-in function 'string(any)' in category conversion functions</description>
 
     <decision name="decision_001" id="_decision_001">
