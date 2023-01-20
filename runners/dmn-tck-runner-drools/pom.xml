@@ -5,7 +5,7 @@
   <version>1.0.0-SNAPSHOT</version>
   <name>DMN :: TCK :: jUnit Runner :: Drools</name>
   <properties>
-    <drools.version>7.73.0.Final</drools.version>
+    <drools.version>8.31.0.Final</drools.version>
   </properties>
   <repositories>
     <repository>
@@ -80,8 +80,8 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
+          <source>11</source>
+          <target>11</target>
         </configuration>
       </plugin>
       <plugin>

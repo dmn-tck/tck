@@ -420,9 +420,9 @@ public class DroolsTCKTest
    protected DMNRuntime createRuntime(URL modelUrl, Collection<? extends URL> additionalModels)
    {
       KieServices ks = KieServices.Factory.get();
-      KieHelper kieHelper = new KieHelper().addResource(ks.getResources().newUrlResource(modelUrl));
+       KieHelper kieHelper = new KieHelper().addResource(ks.getResources().newFileSystemResource(modelUrl.getFile()));
       for (URL a : additionalModels) {
-          kieHelper.addResource(ks.getResources().newUrlResource(a));
+          kieHelper.addResource(ks.getResources().newFileSystemResource(a.getFile()));
       }
       KieContainer kieContainer = kieHelper.getKieContainer();
 
