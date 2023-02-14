@@ -269,6 +269,48 @@
         </literalExpression>
     </decision>
 
+     <decision name="number_014_b" id="number_014_b">
+        <variable name="number_014_b"/>
+        <literalExpression>
+            <text>10 in (1, 5, !=9)</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="number_014_c" id="number_014_c">
+        <variable name="number_014_c"/>
+        <literalExpression>
+            <text>10 in (1, 5, =9)</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="number_014_d" id="number_014_d">
+        <variable name="number_014_d"/>
+        <literalExpression>
+            <text>10 in (1, 5, =10))</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="number_014_e" id="number_014_e">
+        <variable name="number_014_e"/>
+        <literalExpression>
+            <text>10 in ( not(1, 5, =9)</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="number_014_f" id="number_014_f">
+        <variable name="number_014_f"/>
+        <literalExpression>
+            <text>10 in ( not(1, 5, !=9)</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="number_014_g" id="number_014_g">
+        <variable name="number_014_g"/>
+        <literalExpression>
+            <text>10 in (1, 5, =10))</text>
+        </literalExpression>
+    </decision>
+
 
     <decision name="string_001" id="_string_001">
         <variable name="string_001"/>

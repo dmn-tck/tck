@@ -368,6 +368,60 @@
         </resultNode>
     </testCase>
 
+    <testCase id="number_014_b">
+        <description>number: e1 in unary tests</description>
+        <resultNode name="number_014_b" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="number_014_c">
+        <description>number: e1 in unary tests</description>
+        <resultNode name="number_014_c" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="number_014_d">
+        <description>number: e1 in unary tests</description>
+        <resultNode name="number_014_d" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="number_014_e">
+        <description>number: e1 in unary tests</description>
+        <resultNode name="number_014_e" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="number_014_f">
+        <description>number: e1 in unary tests</description>
+        <resultNode name="number_014_f" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="number_014_g">
+        <description>number: e1 in unary tests</description>
+        <resultNode name="number_014_g" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
     <testCase id="string_001">
         <description>string: e1 in [e2,e3,…] (endpoints)</description>
         <resultNode name="string_001" type="decision">
