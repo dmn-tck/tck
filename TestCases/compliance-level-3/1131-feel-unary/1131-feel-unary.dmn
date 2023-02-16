@@ -1,28 +1,88 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <definitions namespace="http://www.montera.com.au/spec/DMN/0072-feel-in" name="1131-feel-unary" id="_i9fboPUUEeesLuP4RHs4vA" xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <description>FEEL in</description>
-    <decision name="number_01" id="number_01">
-        <variable name="number_01"/>
+    <decision name="number_not_equal" id="number_not_equal">
+        <variable name="number_not_equal"/>
         <literalExpression>
-            <text>10 in (1, 5, !=9)</text>
+            <text>10 in !=9</text>
         </literalExpression>
     </decision>
-    <decision name="number_02" id="number_02">
-        <variable name="number_02"/>
+    <decision name="number_not_equal_a" id="number_not_equal_a">
+        <variable name="number_not_equal_a"/>
         <literalExpression>
-            <text>10 in (1, 5, =9)</text>
+            <text>10 in !=10</text>
         </literalExpression>
     </decision>
-    <decision name="number_03" id="number_03">
-        <variable name="number_03"/>
+    <decision name="number_equal" id="number_equal">
+        <variable name="number_equal"/>
         <literalExpression>
-            <text>10 in (1, 5, =10)</text>
+            <text>10 in =10</text>
         </literalExpression>
     </decision>
-    <decision name="number_04" id="number_04">
-        <variable name="number_04"/>
+    <decision name="number_equal_a" id="number_equal_a">
+        <variable name="number_equal_a"/>
         <literalExpression>
-            <text>10 in (1, 5, !=10)</text>
+            <text>10 in !=10</text>
+        </literalExpression>
+    </decision>
+    <decision name="number_greater_than_or_equal" id="number_greater_than_or_equal">
+        <variable name="number_greater_than_or_equal"/>
+        <literalExpression>
+            <text>10 in >=11</text>
+        </literalExpression>
+    </decision>
+    <decision name="number_greater_than_or_equal_a" id="number_greater_than_or_equal_a">
+        <variable name="number_greater_than_or_equal_a"/>
+        <literalExpression>
+            <text>10 in >=10</text>
+        </literalExpression>
+    </decision>
+    <decision name="number_greater_than_or_equal_b" id="number_greater_than_or_equal_b">
+        <variable name="number_greater_than_or_equal_b"/>
+        <literalExpression>
+            <text>10 in >=9</text>
+        </literalExpression>
+    </decision>
+    <decision name="number_less_than_or_equal" id="number_less_than_or_equal">
+        <variable name="number_less_than_or_equal"/>
+        <literalExpression>
+            <text>10 in &lt;=9</text>
+        </literalExpression>
+    </decision>
+    <decision name="number_less_than_or_equal_a" id="number_less_than_or_equal_a">
+        <variable name="number_less_than_or_equal_a"/>
+        <literalExpression>
+            <text>10 in &lt;=10</text>
+        </literalExpression>
+    </decision>
+    <decision name="number_less_than_or_equal_b" id="number_less_than_or_equal_b">
+        <variable name="number_less_than_or_equal_b"/>
+        <literalExpression>
+            <text>10 in &lt;=11</text>
+        </literalExpression>
+    </decision>
+    <decision name="number_greater_than" id="number_greater_than">
+        <variable name="number_greater_than"/>
+        <literalExpression>
+            <text>10 in >9</text>
+        </literalExpression>
+    </decision>
+    <decision name="number_greater_than_a" id="number_greater_than_a">
+        <variable name="number_greater_than_a"/>
+        <literalExpression>
+            <text>10 in >10</text>
+        </literalExpression>
+    </decision>
+    <decision name="number_less_than" id="number_less_than">
+        <variable name="number_less_than"/>
+        <literalExpression>
+            <text>10 in &lt;11</text>
+        </literalExpression>
+    </decision>
+    <decision name="number_less_than_a" id="number_less_than_a">
+        <variable name="number_less_than_a"/>
+        <literalExpression>
+            <text>10 in &lt;10</text>
         </literalExpression>
     </decision>
 </definitions>

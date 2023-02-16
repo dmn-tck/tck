@@ -5,33 +5,113 @@
         <label>Compliance Level 3</label>
         <label>FEEL unary</label>
     </labels>    
-    <testCase id="number_01">
+    <testCase id="number_not_equal">
         <description>number: e1 in unary tests</description>
-        <resultNode name="number_01" type="decision">
+        <resultNode name="number_not_equal" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
             </expected>
         </resultNode>
     </testCase>
-    <testCase id="number_02">
+    <testCase id="number_not_equal_a">
         <description>number: e1 in unary tests</description>
-        <resultNode name="number_02" type="decision">
+        <resultNode name="number_not_equal_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
             </expected>
         </resultNode>
     </testCase>
-    <testCase id="number_03">
+    <testCase id="number_equal">
         <description>number: e1 in unary tests</description>
-        <resultNode name="number_03" type="decision">
+        <resultNode name="number_equal" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
             </expected>
         </resultNode>
     </testCase>
-    <testCase id="number_04">
+    <testCase id="number_equal_a">
         <description>number: e1 in unary tests</description>
-        <resultNode name="number_04" type="decision">
+        <resultNode name="number_equal_a" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="number_greater_than_or_equal">
+        <description>number: e1 in unary tests</description>
+        <resultNode name="number_greater_than_or_equal" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="number_greater_than_or_equal_a">
+        <description>number: e1 in unary tests</description>
+        <resultNode name="number_greater_than_or_equal_a" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="number_greater_than_or_equal_b">
+        <description>number: e1 in unary tests</description>
+        <resultNode name="number_greater_than_or_equal_b" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="number_less_than_or_equal">
+        <description>number: e1 in unary tests</description>
+        <resultNode name="number_less_than_or_equal" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="number_less_than_or_equal_a">
+        <description>number: e1 in unary tests</description>
+        <resultNode name="number_less_than_or_equal_a" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="number_less_than_or_equal_b">
+        <description>number: e1 in unary tests</description>
+        <resultNode name="number_less_than_or_equal_b" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="number_greater_than">
+        <description>number: e1 in unary tests</description>
+        <resultNode name="number_greater_than" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="number_greater_than_a">
+        <description>number: e1 in unary tests</description>
+        <resultNode name="number_greater_than_a" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">false</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="number_less_than">
+        <description>number: e1 in unary tests</description>
+        <resultNode name="number_less_than" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="number_less_than_a">
+        <description>number: e1 in unary tests</description>
+        <resultNode name="number_less_than_a" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">false</value>
             </expected>
