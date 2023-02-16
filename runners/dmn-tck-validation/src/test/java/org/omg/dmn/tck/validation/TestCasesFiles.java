@@ -53,7 +53,7 @@ public class TestCasesFiles {
                     .newSchema(new Source[]{new StreamSource(new File("../../TestCases/DC.xsd")),
                                             new StreamSource(new File("../../TestCases/DI.xsd")),
                                             new StreamSource(new File("../../TestCases/DMNDI13.xsd")),
-                                            new StreamSource(new File("../../TestCases/DMN13.xsd"))
+                                            new StreamSource(new File("../../TestCases/DMN14.xsd"))
                     });
             testCasesSchema = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI).newSchema(new File("../../TestCases/testCases.xsd"));
         } catch (SAXException e) {
