@@ -11,7 +11,7 @@
 
 package org.omg.dmn.tck.runner.jdmn;
 
-import com.gs.dmn.dialect.StandardDMNDialectDefinition;
+import com.gs.dmn.dialect.PureJavaTimeDMNDialectDefinition;
 import com.gs.dmn.feel.lib.StandardFEELLib;
 import com.gs.dmn.log.BuildLogger;
 import com.gs.dmn.log.Slf4jBuildLogger;
@@ -72,7 +72,7 @@ public class JDMNTckTest implements JDmnTckVendorTestSuite {
 
     @Override
     public TestSuiteContext createContext() {
-        StandardDMNDialectDefinition dialectDefinition = new StandardDMNDialectDefinition();
+        PureJavaTimeDMNDialectDefinition dialectDefinition = new PureJavaTimeDMNDialectDefinition();
         DMNSerializer dmnSerializer = dialectDefinition.createDMNSerializer(LOGGER, makeInputParameters());
         DMNTransformer<TestCases> dmnTransformer = new ToQuotedNameTransformer(LOGGER);
         return new JDMNTestContext<>(dmnSerializer, dmnTransformer, dialectDefinition);
