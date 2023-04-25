@@ -20,16 +20,15 @@ import com.gs.dmn.feel.lib.StandardFEELLib;
 import com.gs.dmn.log.BuildLogger;
 import com.gs.dmn.log.NopBuildLogger;
 import com.gs.dmn.runtime.interpreter.DMNInterpreter;
-import com.gs.dmn.serialization.*;
+import com.gs.dmn.serialization.DMNSerializer;
 import com.gs.dmn.tck.TCKSerializer;
+import com.gs.dmn.tck.ast.TestCases;
 import com.gs.dmn.tck.serialization.xstream.XMLTCKSerializer;
 import com.gs.dmn.transformation.DMNTransformer;
 import com.gs.dmn.transformation.InputParameters;
 import com.gs.dmn.transformation.ToQuotedNameTransformer;
-import com.gs.dmn.transformation.ToSimpleNameTransformer;
 import com.gs.dmn.transformation.basic.BasicDMNToJavaTransformer;
 import com.gs.dmn.transformation.lazy.NopLazyEvaluationDetector;
-import com.gs.dmn.tck.ast.TestCases;
 import org.omg.dmn.tck.runner.junit4.TestSuiteContext;
 
 import java.io.File;
@@ -117,7 +116,6 @@ public class JDMNTestContext<NUMBER, DATE, TIME, DATE_TIME, DURATION> implements
 
     private static Map<Object, String> TEMP_FOLDER = new LinkedHashMap<>();
     static {
-        TEMP_FOLDER.put(ToSimpleNameTransformer.class, "target/to-java-name/");
         TEMP_FOLDER.put(ToQuotedNameTransformer.class, "target/to-quoted-name/");
     }
 
