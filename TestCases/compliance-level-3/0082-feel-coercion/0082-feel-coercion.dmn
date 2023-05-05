@@ -32,7 +32,7 @@
     </decision>
 
 <!--    <decision name="decision_002" id="_decision_002">
-        <variable typeRef="list" name="decision_002"/>
+        <variable typeRef="tStringList" name="decision_002"/>
         <literalExpression>
             <text>[1,2,"foo"]</text>
         </literalExpression>
