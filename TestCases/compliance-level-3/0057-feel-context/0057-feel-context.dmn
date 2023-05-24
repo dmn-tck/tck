@@ -72,5 +72,12 @@
         </literalExpression>
     </decision>
 
+    <decision name="decision010" id="_decision010">
+        <variable name="decision010"/>
+        <literalExpression>
+            <text>null.b</text>
+        </literalExpression>
+    </decision>
+
 </definitions>
 
