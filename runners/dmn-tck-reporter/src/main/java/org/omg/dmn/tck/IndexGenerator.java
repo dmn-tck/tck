@@ -26,6 +26,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -34,7 +35,7 @@ import java.util.Map;
 public class IndexGenerator {
     private static final Logger logger = LoggerFactory.getLogger( IndexGenerator.class);
 
-    public static void generatePage(Reporter.Parameters params, Configuration cfg, ReportHeader header, Map<String, Vendor> results) {
+    public static void generatePage(Reporter.Parameters params, Configuration cfg, ReportHeader header, List<Vendor> results) {
         logger.info( "Generating index.html" );
         try {
             Template temp = cfg.getTemplate( "/templates/index.ftl" );

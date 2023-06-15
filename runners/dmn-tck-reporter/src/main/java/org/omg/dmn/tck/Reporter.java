@@ -53,7 +53,8 @@ public class Reporter {
 
     private static void runReport(Parameters params) {
         Map<String, TestCasesData> tests = loadTestCases( params );
-        Map<String, Vendor> results = loadTestResults( params, tests );
+        List<Vendor> results = loadTestResults( params, tests );
+        results = sortVendors(results);
         Map<String, List<TestCasesData>> labels = sortTestsByLabel( tests );
 
         ReportHeader header = createReportHeader( tests, labels, results );
@@ -68,7 +69,7 @@ public class Reporter {
         Configuration cfg = createFreemarkerConfiguration();
 
         IndexGenerator.generatePage( params, cfg, header, results );
-        for( Vendor vendor : results.values() ) {
+        for( Vendor vendor : results ) {
             OverviewGenerator.generatePage( params, cfg, vendor, header, tableByLabels.get( vendor.getFileNameId() ),
                                             chartByLabels.get( vendor.getFileNameId() ), chartByLabelsPercent.get( vendor.getFileNameId() ) );
             DetailGenerator.generatePage( params, cfg, vendor, header, tableAllTestsByVendor.get( vendor.getFileNameId() ), tableIndividualLabels.get( vendor.getFileNameId() ) );
@@ -78,7 +79,35 @@ public class Reporter {
         AboutGenerator.generatePage( params, cfg, header );
     }
 
-    private static ReportHeader createReportHeader(Map<String, TestCasesData> tests, Map<String, List<TestCasesData>> labels, Map<String, Vendor> results) {
+    private static List<Vendor> sortVendors(List<Vendor> results) {
+        results.sort(new Comparator<Vendor>() {
+
+            @Override
+            public int compare(Vendor v1, Vendor v2) {
+                
+                // First criteria is that the vendor submitted a result in the last 12 months
+                boolean v1Recent = LocalDate.now().minusYears(1).isBefore(v1.getLastUpdate());
+                boolean v2Recent = LocalDate.now().minusYears(1).isBefore(v2.getLastUpdate());                
+                if (v1Recent && !v2Recent) {
+                    return -1;
+                }
+                if (v2Recent && !v1Recent) {
+                    return 1;
+                }
+                
+                // Second criteria based on the succeeded number
+                if (v1.getSucceeded() - v2.getSucceeded() != 0) {
+                    return (int) (v2.getSucceeded() - v1.getSucceeded());
+                }
+                
+                // The alphabetically
+                return v1.getName().compareTo(v2.getName());
+            }
+        });
+        return results;
+    }
+
+    private static ReportHeader createReportHeader(Map<String, TestCasesData> tests, Map<String, List<TestCasesData>> labels, List<Vendor> results) {
         ReportHeader header = new ReportHeader(  );
         int totalTests = 0;
         for( TestCasesData tcd : tests.values() ) {
@@ -90,7 +119,7 @@ public class Reporter {
         return header;
     }
 
-    private static Map<String, List<ReportTable>> createTableByIndividualLabels(Parameters params, Map<String, List<TestCasesData>> tests, Map<String, Vendor> results) {
+    private static Map<String, List<ReportTable>> createTableByIndividualLabels(Parameters params, Map<String, List<TestCasesData>> tests, List<Vendor> results) {
         Map<String, List<ReportTable>> tables = new HashMap<>(  );
 
         for( Map.Entry<String, List<TestCasesData>> entry : tests.entrySet() ) {
@@ -144,9 +173,9 @@ public class Reporter {
         return table;
     }
 
-    private static Map<String, ReportTable> createTableAllTestsByVendor(Parameters params, Collection<TestCasesData> tests, Map<String, Vendor> results) {
+    private static Map<String, ReportTable> createTableAllTestsByVendor(Parameters params, Collection<TestCasesData> tests, List<Vendor> results) {
         Map<String, ReportTable> tables = new HashMap<>(  );
-        for( Vendor vendor : results.values() ) {
+        for( Vendor vendor : results ) {
             ReportTable table = new ReportTable(  );
             ReportHelper.addHeader( table, "Compliance", "" );
             ReportHelper.addHeader( table, "Test Case", "" );
@@ -236,9 +265,9 @@ public class Reporter {
         }
     }
 
-    private static Map<String, ReportChart> createChartByLabels(Map<String, List<TestCasesData>> labels, Map<String, Vendor> results) {
+    private static Map<String, ReportChart> createChartByLabels(Map<String, List<TestCasesData>> labels, List<Vendor> results) {
         Map<String, ReportChart> charts = new HashMap<>(  );
-        for( Vendor v : results.values() ) {
+        for( Vendor v : results ) {
             ReportChart chart = new ReportChart();
             chart.setName( "cbl"+charts.size() );
             chart.setTitle( v.getName() + " " + v.getVersion() );
@@ -252,7 +281,7 @@ public class Reporter {
             int[] total = new int[results.size()];
             calculateTotals( results, lbl, success, ignored, failed, total );
             int i = 0;
-            for( Vendor vendor : results.values() ) {
+            for( Vendor vendor : results ) {
                 ReportChart.DataPoint row = new ReportChart.DataPoint(  );
                 row.setLabel( lbl.getKey() );
                 row.getData().add( success[i] );
@@ -267,9 +296,9 @@ public class Reporter {
         return charts;
     }
 
-    private static Map<String, ReportChart> createChartByLabelsPercent(Map<String, List<TestCasesData>> labels, Map<String, Vendor> results) {
+    private static Map<String, ReportChart> createChartByLabelsPercent(Map<String, List<TestCasesData>> labels, List<Vendor> results) {
         Map<String, ReportChart> charts = new HashMap<>(  );
-        for( Vendor v : results.values() ) {
+        for( Vendor v : results ) {
             ReportChart chart = new ReportChart();
             chart.setName( "cblp"+charts.size() );
             chart.setTitle( v.getName() + " " + v.getVersion() );
@@ -283,7 +312,7 @@ public class Reporter {
             int[] total = new int[results.size()];
             calculateTotals( results, lbl, success, ignored, failed, total );
             int i = 0;
-            for( Vendor vendor : results.values() ) {
+            for( Vendor vendor : results ) {
                 ReportChart.DataPoint row = new ReportChart.DataPoint(  );
                 row.setLabel( lbl.getKey() );
                 int sp = (int) (((double) success[i] / (double) total[i]) * 100);
@@ -311,11 +340,11 @@ public class Reporter {
         return charts;
     }
 
-    private static void calculateTotals(Map<String, Vendor> results, Map.Entry<String, List<TestCasesData>> lbl, int[] success, int[] ignored, int[] failed, int[] total) {
+    private static void calculateTotals(List<Vendor> results, Map.Entry<String, List<TestCasesData>> lbl, int[] success, int[] ignored, int[] failed, int[] total) {
         for( TestCasesData tcd : lbl.getValue() ) {
             for( TestCases.TestCase tc : tcd.model.getTestCase() ) {
                 int index = 0;
-                for( Vendor v : results.values() ) {
+                for( Vendor v : results ) {
                     String key = createTestKey( tcd.folder, tcd.testCaseName, tc.getId() );
                     TestResult r = v.getResults().get( key );
                     if( r != null && r.getResult() == TestResult.Result.SUCCESS ) {
@@ -332,17 +361,17 @@ public class Reporter {
         }
     }
 
-    private static Map<String, ReportTable> createTableByLabels(Map<String, List<TestCasesData>> labels, Map<String, Vendor> results) {
+    private static Map<String, ReportTable> createTableByLabels(Map<String, List<TestCasesData>> labels, List<Vendor> results) {
         Map<String, ReportTable> rt = new HashMap<>(  );
 
-        for( Vendor v : results.values() ) {
+        for( Vendor v : results ) {
             ReportTable table = new ReportTable(  );
             ReportHelper.addHeader( table, "Label", "" );
             ReportHelper.addHeader( table, v.getName(), v.getVersion() );
             rt.put( v.getFileNameId(), table );
         }
         for( Map.Entry<String, List<TestCasesData>> lbl : labels.entrySet() ) {
-            for( Vendor v : results.values() ) {
+            for( Vendor v : results ) {
                 ReportTable table = rt.get( v.getFileNameId() );
                 TableRow row = new TableRow(  );
                 ReportHelper.addRowCell( row, lbl.getKey(), "" );
@@ -467,9 +496,9 @@ public class Reporter {
         }
     }
 
-    private static Map<String, Vendor> loadTestResults(Parameters params, Map<String, TestCasesData> tests) {
+    private static List<Vendor> loadTestResults(Parameters params, Map<String, TestCasesData> tests) {
         logger.info( "Loading test results from folder "+params.input.getName() );
-        Map< String, Vendor > results = new TreeMap<>(  );
+        List< Vendor > results = new LinkedList<>(  );
 
         File[] vendors = params.input.listFiles( (dir, name) -> !name.startsWith( "." ) && !name.endsWith( ".html" ) );
         for( File vendor : vendors ) {
@@ -533,7 +562,7 @@ public class Reporter {
                                            testResults,
                                            lastUpdate,
                                            Optional.ofNullable(properties.getProperty("instructions.url")).map(String::trim).orElse(null));
-                    results.put( v.getName()+" / "+v.getVersion(), v );
+                    results.add( v );
                     logger.info( testResults.size() + " test results loaded for vendor "+v );
                 }
             }
