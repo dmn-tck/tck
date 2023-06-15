@@ -123,13 +123,15 @@ public class Reporter {
         for( TestCasesData tcd : tests ) {
             for( TestCases.TestCase tc : tcd.model.getTestCase() ) {
                 TableRow row = new TableRow(  );
-                String[] split = tcd.folder.split( "/" );
-                ReportHelper.addRowCell( row, split[0], "" );
-                ReportHelper.addRowCell( row, split[1], "" );
+                File tcdFolder = new File(tcd.folder);
+                String complianceLevel = tcdFolder.getParentFile().getName();
+                String testCaseName = tcdFolder.getName();
+                ReportHelper.addRowCell( row, complianceLevel, "" );
+                ReportHelper.addRowCell( row, testCaseName, "" );
                 ReportHelper.addRowCell( row, tcd.testCaseName, "" );
-                if( Files.exists( params.testsFolder.resolve( tcd.folder+"/"+split[1]+".pdf" ) ) ) {
-                    ReportHelper.addRowCell(row, split[1] + ".pdf", "glyphicon glyphicon-book");
-                } else if( Files.exists( params.testsFolder.resolve( tcd.folder+"/Readme.md" ) ) ) {
+                if( Files.exists( params.testsFolder.resolve( tcd.folder+File.separator+testCaseName+".pdf" ) ) ) {
+                    ReportHelper.addRowCell(row, testCaseName + ".pdf", "glyphicon glyphicon-book");
+                } else if( Files.exists( params.testsFolder.resolve( tcd.folder+File.separator+"Readme.md" ) ) ) {
                     ReportHelper.addRowCell(row, "Readme.md", "glyphicon glyphicon-book");
                 } else {
                     ReportHelper.addRowCell( row, "NA", "glyphicon glyphicon-book" );
@@ -138,7 +140,7 @@ public class Reporter {
                 ReportHelper.addRowCell( row, tc.getId() != null ? tc.getId() : "[no ID]", "" );
                 ReportHelper.addRowCell( row, tc.getDescription() != null ? tc.getDescription() : "", "" );
                 table.getRows().add( row );
-                updateRowspan( text, parents, tcd, row, split );
+                updateRowspan( text, parents, tcd, row, new String[]{complianceLevel, testCaseName} );
             }
         }
         return table;
@@ -163,13 +165,15 @@ public class Reporter {
             for( TestCasesData tcd : tests ) {
                 for( TestCases.TestCase tc : tcd.model.getTestCase() ) {
                     TableRow row = new TableRow(  );
-                    String[] split = tcd.folder.split( "/" );
-                    ReportHelper.addRowCell( row, split[0], "" );
-                    ReportHelper.addRowCell( row, split[1], "" );
+                    File tcdFolder = new File(tcd.folder);
+                    String complianceLevel = tcdFolder.getParentFile().getName();
+                    String testCaseName = tcdFolder.getName();
+                    ReportHelper.addRowCell( row, complianceLevel, "" );
+                    ReportHelper.addRowCell( row, testCaseName, "" );
                     ReportHelper.addRowCell( row, tcd.testCaseName, "" );
-                    if( Files.exists( params.testsFolder.resolve( tcd.folder+"/"+split[1]+".pdf" ) ) ) {
-                        ReportHelper.addRowCell(row, split[1] + ".pdf", "glyphicon glyphicon-book");
-                    } else if( Files.exists( params.testsFolder.resolve( tcd.folder+"/Readme.md" ) ) ) {
+                    if( Files.exists( params.testsFolder.resolve( tcd.folder+File.separator+testCaseName+".pdf" ) ) ) {
+                        ReportHelper.addRowCell(row, testCaseName + ".pdf", "glyphicon glyphicon-book");
+                    } else if( Files.exists( params.testsFolder.resolve( tcd.folder+File.separator+"Readme.md" ) ) ) {
                         ReportHelper.addRowCell(row, "Readme.md", "glyphicon glyphicon-book");
                     } else {
                         ReportHelper.addRowCell( row, "NA", "glyphicon glyphicon-book" );
@@ -200,7 +204,7 @@ public class Reporter {
                     total++;
                     table.getRows().add( row );
 
-                    updateRowspan( text, parents, tcd, row, split );
+                    updateRowspan( text, parents, tcd, row, new String[]{complianceLevel, testCaseName} );
                 }
             }
             table.getTotals().add( succeeded+"/"+total );
@@ -542,11 +546,13 @@ public class Reporter {
     }
 
     private static String createTestCaseKey(String testFolder, String testSuit) {
-        return testFolder+"/"+testSuit;
+        File folder = new File(testFolder);
+        return folder.getParentFile().getName()+"/"+folder.getName()+"/"+testSuit;
     }
 
     private static String createTestKey(String folder, String testSuite, String test) {
-        return folder+"/"+testSuite+"/"+test;
+        File f = new File(folder);
+        return f.getParentFile().getName()+"/"+f.getName()+"/"+testSuite+"/"+test;
     }
 
     private static Parameters parseCommandLine(String[] args) {
