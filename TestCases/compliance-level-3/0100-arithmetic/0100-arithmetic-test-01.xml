@@ -91,7 +91,7 @@
         <description>multiply_lhs_number_by_rhs_dtDuration_006</description>
         <resultNode name="multiply_lhs_number_by_rhs_dtDuration_006" type="decision" >
             <expected>
-                <value xsi:type="xsd:duration">P0D</value>
+                <value xsi:type="xsd:duration">PT0S</value>
             </expected>
         </resultNode>
     </testCase>
@@ -163,7 +163,7 @@
         <description>multiply_lhs_dtDuration_by_rhs_number_006</description>
         <resultNode name="multiply_lhs_dtDuration_by_rhs_number_006" type="decision" >
             <expected>
-                <value xsi:type="xsd:duration">P0D</value>
+                <value xsi:type="xsd:duration">PT0S</value>
             </expected>
         </resultNode>
     </testCase>
@@ -244,7 +244,7 @@
         <description>multiply_lhs_number_by_rhs_ymDuration_007</description>
         <resultNode name="multiply_lhs_number_by_rhs_ymDuration_007" type="decision" >
             <expected>
-                <value xsi:type="xsd:duration">P0Y</value>
+                <value xsi:type="xsd:duration">P0M</value>
             </expected>
         </resultNode>
     </testCase>
@@ -334,7 +334,7 @@
         <description>multiply_lhs_ymDuration_by_rhs_number_007</description>
         <resultNode name="multiply_lhs_ymDuration_by_rhs_number_007" type="decision" >
             <expected>
-                <value xsi:type="xsd:duration">P0Y</value>
+                <value xsi:type="xsd:duration">P0M</value>
             </expected>
         </resultNode>
     </testCase>
@@ -1666,7 +1666,7 @@
         <description>Date is implicitly UTC 00:00:00</description>
         <resultNode name="subtract_lhs_dateAndTime_minus_rhs_dateAndTime_010" type="decision" >
             <expected>
-                <value xsi:type="xsd:duration">P0D</value>
+                <value xsi:type="xsd:duration">PT0S</value>
             </expected>
         </resultNode>
     </testCase>
@@ -2062,7 +2062,7 @@
         <description>Date is implicitly UTC 00:00:00</description>
         <resultNode name="subtract_lhs_date_minus_rhs_dateAndTime_004" type="decision" >
             <expected>
-                <value xsi:type="xsd:duration">P0D</value>
+                <value xsi:type="xsd:duration">PT0S</value>
             </expected>
         </resultNode>
     </testCase>
