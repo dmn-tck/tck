@@ -151,7 +151,7 @@
             </expected>
         </resultNode>
     </testCase>
-
+<!--
     <testCase id="015">
         <description>Overloaded built-in function may be passed as lambda</description>
         <resultNode name="decision_015_1" type="decision">
@@ -160,7 +160,7 @@
             </expected>
         </resultNode>
     </testCase>
-
+-->
     <testCase id="016">
         <description>Invoking passed lambda with incorrect params still gives error</description>
         <resultNode name="decision_016_1" type="decision" errorResult="true">

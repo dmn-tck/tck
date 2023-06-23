@@ -16,7 +16,7 @@ Joining the TCK is free, it also holds regular conference calls, and new members
 
 ## Collaboration Site
 
-* https://s06.circleweaver.com/weaver/t/wfmc/dmn-reference-implementation/frontPage.htm
+* https://docs.google.com/document/d/1GnXZcwSczIbyNtMDM8ZnITVNgpIVi9nGbyt-0WzKxec/edit
 
 ## How to join
 

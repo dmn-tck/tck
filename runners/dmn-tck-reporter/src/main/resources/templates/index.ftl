@@ -1,5 +1,5 @@
 <#-- @ftlvariable name="header" type="org.omg.dmn.tck.ReportHeader" -->
-<#-- @ftlvariable name="vendors" type="java.util.Map<java.lang.String,org.omg.dmn.tck.Vendor>" -->
+<#-- @ftlvariable name="vendors" type="java.util.List<org.omg.dmn.tck.Vendor>" -->
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
@@ -42,7 +42,7 @@
 
     var color = Chart.helpers.color;
 
-<#list vendors?values as vendor>
+<#list vendors as vendor>
         var c_data${vendor_index} = {
         labels: [
             "Succeeded", "Failed", "Not Supported", "Missing"
@@ -71,7 +71,7 @@
 </#list>
 
     window.onload = function() {
-<#list vendors?values as vendor>
+<#list vendors as vendor>
         var ctx = document.getElementById("chart${vendor_index}").getContext("2d");
         window.chart${vendor_index} = new Chart(ctx, {
             type: 'doughnut',
@@ -137,7 +137,7 @@
 
             <div class="list-group list-view-pf list-view-pf-view">
 
-            <#list vendors?values as vendor>
+            <#list vendors as vendor>
                 <!-- ${vendor.product} ${vendor.version} -->
                 <div class="list-group-item">
                     <div class="list-group-item-header">
@@ -173,7 +173,7 @@
                                 </div>
                                 <div class="list-view-pf-additional-info">
                                     <div class="list-view-pf-additional-info-item">
-                                        Submitted:&nbsp;<b>${vendor.submitted?string.computer}/${header.totalTests?string.computer}</b>
+                                        Succeeded:&nbsp;<b>${vendor.succeeded?string.computer}/${header.totalTests?string.computer}</b>
                                     </div>
                                     <div class="list-view-pf-additional-info-item">
                                         Last Submission:&nbsp;<b>${vendor.lastUpdate}</b>

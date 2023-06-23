@@ -123,14 +123,14 @@
                     <#list tAllTests.rows as row>
                     <tr>
                         <#if row.rowspan[0] gt 0 >
-                            <td class="text-nowrap" scope="row" rowspan="${row.rowspan[0]}" style="vertical-align:middle">${row.text[0]}</td>
+                            <td class="text-nowrap" scope="row" rowspan="${row.rowspan[0]?string.computer}" style="vertical-align:middle">${row.text[0]}</td>
                         </#if>
                         <#if false && row.rowspan[1] gt 0 >
-                            <td class="text-nowrap" scope="row" rowspan="${row.rowspan[1]}" style="vertical-align:middle">${row.text[1]}</td>
+                            <td class="text-nowrap" scope="row" rowspan="${row.rowspan[1]?string.computer}" style="vertical-align:middle">${row.text[1]}</td>
                         </#if>
                         <#if row.rowspan[2] gt 0 >
-                            <td class="text-nowrap" scope="row" rowspan="${row.rowspan[2]}" style="vertical-align:middle">${row.text[2]}</td>
-                            <td align="center" rowspan="${row.rowspan[2]}" style="vertical-align:middle">
+                            <td class="text-nowrap" scope="row" rowspan="${row.rowspan[2]?string.computer}" style="vertical-align:middle">${row.text[2]}</td>
+                            <td align="center" rowspan="${row.rowspan[2]?string.computer}" style="vertical-align:middle">
                                 <#if row.text[3] == "NA">
                                     <span class="${row.icons[3]} text-muted" aria-hidden="true"></span>
                                 <#else>
@@ -139,7 +139,7 @@
                                     </a>
                                 </#if>
                             </td>
-                            <td align="center" rowspan="${row.rowspan[2]}" style="vertical-align:middle">
+                            <td align="center" rowspan="${row.rowspan[2]?string.computer}" style="vertical-align:middle">
                                 <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/${row.text[0]}/${row.text[1]}">
                                     <span class="${row.icons[4]}" aria-hidden="true"></span>
                                 </a>
