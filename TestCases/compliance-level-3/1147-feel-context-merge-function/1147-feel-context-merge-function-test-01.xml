@@ -16,7 +16,7 @@
         <resultNode name="decision001" type="decision">
             <expected>
                 <component name="a">
-                    <value xsi:type="xsd:double">1</value>
+                    <value xsi:type="xsd:decimal">1</value>
                 </component>
             </expected>
         </resultNode>
@@ -36,10 +36,10 @@
         <resultNode name="decision002" type="decision">
             <expected>
                 <component name="a">
-                    <value xsi:type="xsd:double">1</value>
+                    <value xsi:type="xsd:decimal">1</value>
                 </component>
                 <component name="b">
-                    <value xsi:type="xsd:double">2</value>
+                    <value xsi:type="xsd:decimal">2</value>
                 </component>
             </expected>
         </resultNode>
@@ -50,7 +50,7 @@
         <resultNode name="decision003" type="decision">
             <expected>
                 <component name="a">
-                    <value xsi:type="xsd:double">2</value>
+                    <value xsi:type="xsd:decimal">2</value>
                 </component>
             </expected>
         </resultNode>
@@ -62,7 +62,7 @@
             <expected>
                 <component name="a">
                     <component name="bb">
-                        <value xsi:type="xsd:double">2</value>
+                        <value xsi:type="xsd:decimal">2</value>
                     </component>
                 </component>
             </expected>
@@ -101,7 +101,7 @@
         <resultNode name="decision008" type="decision">
             <expected>
                 <component name="a">
-                    <value xsi:type="xsd:double">1</value>
+                    <value xsi:type="xsd:decimal">1</value>
                 </component>
             </expected>
         </resultNode>
@@ -139,7 +139,7 @@
         <resultNode name="decision012" type="decision">
             <expected>
                 <component name="a">
-                    <value xsi:type="xsd:double">1</value>
+                    <value xsi:type="xsd:decimal">1</value>
                 </component>
             </expected>
         </resultNode>
@@ -150,7 +150,7 @@
         <resultNode name="decision013" type="decision">
             <expected>
                 <component name="a">
-                    <value xsi:type="xsd:double">1</value>
+                    <value xsi:type="xsd:decimal">1</value>
                 </component>
             </expected>
         </resultNode>
