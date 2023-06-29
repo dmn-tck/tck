@@ -16,7 +16,7 @@
         <resultNode name="decision001" type="decision">
             <expected>
                 <component name="a">
-                    <value xsi:type="xsd:double">1</value>
+                    <value xsi:type="xsd:decimal">1</value>
                 </component>
             </expected>
         </resultNode>
@@ -32,7 +32,7 @@
                             <value xsi:type="xsd:string">a</value>
                         </component>
                         <component name="value">
-                            <value xsi:type="xsd:double">1</value>
+                            <value xsi:type="xsd:decimal">1</value>
                         </component>
                     </item>
                     <item>
@@ -40,7 +40,7 @@
                             <value xsi:type="xsd:string">b</value>
                         </component>
                         <component name="value">
-                            <value xsi:type="xsd:double">2</value>
+                            <value xsi:type="xsd:decimal">2</value>
                         </component>
                     </item>
                 </list>
@@ -53,7 +53,7 @@
         <resultNode name="decision003" type="decision">
             <expected>
                 <component name="a">
-                    <value xsi:type="xsd:double">2</value>
+                    <value xsi:type="xsd:decimal">2</value>
                 </component>
             </expected>
         </resultNode>
@@ -64,13 +64,13 @@
         <resultNode name="decision003_a" type="decision">
             <expected>
                 <component name="a">
-                    <value xsi:type="xsd:double">1</value>
+                    <value xsi:type="xsd:decimal">1</value>
                 </component>
                 <component name="b">
-                    <value xsi:type="xsd:double">3</value>
+                    <value xsi:type="xsd:decimal">3</value>
                 </component>
                 <component name="c">
-                    <value xsi:type="xsd:double">3</value>
+                    <value xsi:type="xsd:decimal">3</value>
                 </component>
             </expected>
         </resultNode>
@@ -81,7 +81,7 @@
         <resultNode name="decision004" type="decision">
             <expected>
                 <component name="">
-                    <value xsi:type="xsd:double">1</value>
+                    <value xsi:type="xsd:decimal">1</value>
                 </component>
             </expected>
         </resultNode>
@@ -139,7 +139,7 @@
         <resultNode name="decision010" type="decision">
             <expected>
                 <component name="a">
-                    <value xsi:type="xsd:double">1</value>
+                    <value xsi:type="xsd:decimal">1</value>
                 </component>
             </expected>
         </resultNode>
@@ -177,7 +177,7 @@
         <resultNode name="decision014" type="decision">
             <expected>
                 <component name="a">
-                    <value xsi:type="xsd:double">2</value>
+                    <value xsi:type="xsd:decimal">2</value>
                 </component>
             </expected>
         </resultNode>
@@ -190,13 +190,13 @@
                 <!-- the original boxed context should be unchanged -->
                 <component name="context01">
                     <component name="a">
-                        <value xsi:type="xsd:double">1</value>
+                        <value xsi:type="xsd:decimal">1</value>
                     </component>
                 </component>
                 <!-- the copied / mutated boxed context -->
                 <component name="copied">
                     <component name="a">
-                        <value xsi:type="xsd:double">2</value>
+                        <value xsi:type="xsd:decimal">2</value>
                     </component>
                 </component>
             </expected>
@@ -210,13 +210,13 @@
                 <!-- the original literal context should be unchanged -->
                 <component name="original">
                     <component name="a">
-                        <value xsi:type="xsd:double">1</value>
+                        <value xsi:type="xsd:decimal">1</value>
                     </component>
                 </component>
                 <!-- the copied / mutated literal context -->
                 <component name="copied">
                     <component name="a">
-                        <value xsi:type="xsd:double">2</value>
+                        <value xsi:type="xsd:decimal">2</value>
                     </component>
                 </component>
             </expected>
@@ -228,11 +228,11 @@
         <resultNode name="nested001" type="decision">
             <expected>
                 <component name="x">
-                    <value xsi:type="xsd:double">1</value>
+                    <value xsi:type="xsd:decimal">1</value>
                 </component>
                 <component name="y">
                     <component name="a">
-                        <value xsi:type="xsd:double">2</value>
+                        <value xsi:type="xsd:decimal">2</value>
                     </component>
                 </component>
             </expected>
@@ -244,14 +244,14 @@
         <resultNode name="nested001_a" type="decision">
             <expected>
                 <component name="x">
-                    <value xsi:type="xsd:double">1</value>
+                    <value xsi:type="xsd:decimal">1</value>
                 </component>
                 <component name="y">
                     <component name="a">
-                        <value xsi:type="xsd:double">0</value>
+                        <value xsi:type="xsd:decimal">0</value>
                     </component>
                     <component name="b">
-                        <value xsi:type="xsd:double">2</value>
+                        <value xsi:type="xsd:decimal">2</value>
                     </component>
                 </component>
             </expected>
@@ -299,13 +299,13 @@
         <resultNode name="nested006" type="decision">
             <expected>
                 <component name="x">
-                    <value xsi:type="xsd:double">1</value>
+                    <value xsi:type="xsd:decimal">1</value>
                 </component>
                 <component name="y">
                     <component name="a">
                         <component name="b">
                             <component name="c">
-                                <value xsi:type="xsd:double">2</value>
+                                <value xsi:type="xsd:decimal">2</value>
                             </component>
                         </component>
                     </component>
@@ -319,11 +319,11 @@
         <resultNode name="nested007" type="decision">
             <expected>
                 <component name="x">
-                    <value xsi:type="xsd:double">1</value>
+                    <value xsi:type="xsd:decimal">1</value>
                 </component>
                 <component name="y">
                     <component name="a">
-                        <value xsi:type="xsd:double">2</value>
+                        <value xsi:type="xsd:decimal">2</value>
                     </component>
                 </component>
             </expected>
@@ -354,7 +354,7 @@
             <expected>
                 <component name="a">
                     <component name="b">
-                        <value xsi:type="xsd:double">2</value>
+                        <value xsi:type="xsd:decimal">2</value>
                     </component>
                 </component>
             </expected>
@@ -369,7 +369,7 @@
                 <component name="nestedContext01">
                     <component name="a">
                         <component name="b">
-                            <value xsi:type="xsd:double">1</value>
+                            <value xsi:type="xsd:decimal">1</value>
                         </component>
                     </component>
                 </component>
@@ -377,7 +377,7 @@
                 <component name="copied">
                     <component name="a">
                         <component name="b">
-                            <value xsi:type="xsd:double">2</value>
+                            <value xsi:type="xsd:decimal">2</value>
                         </component>
                     </component>
                 </component>
@@ -393,7 +393,7 @@
                 <component name="original">
                     <component name="a">
                         <component name="b">
-                            <value xsi:type="xsd:double">1</value>
+                            <value xsi:type="xsd:decimal">1</value>
                         </component>
                     </component>
                 </component>
@@ -401,7 +401,7 @@
                 <component name="copied">
                     <component name="a">
                         <component name="b">
-                            <value xsi:type="xsd:double">2</value>
+                            <value xsi:type="xsd:decimal">2</value>
                         </component>
                     </component>
                 </component>
