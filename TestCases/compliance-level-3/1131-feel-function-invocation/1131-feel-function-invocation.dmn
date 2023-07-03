@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions namespace="http://camunda.com/spec/DMN/1131-feel-function-invocation" name="1131-feel-function-invocation" id="_i9fboPUasda" xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <description>FEEL invocation</description>
+    <decision name="decision001" id="_decision001">
+        <description>Tests invocation of non-existing function evaluates to null (DMN Spec 10.3.2.13.2)</description>
+        <variable name="decision_001"/>
+        <literalExpression>
+            <text>non_existing_function()</text>
+        </literalExpression>
+    </decision>
+</definitions>
+
