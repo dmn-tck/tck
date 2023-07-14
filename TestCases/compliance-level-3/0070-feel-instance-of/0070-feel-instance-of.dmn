@@ -141,13 +141,13 @@
         </dmn:literalExpression>
     </dmn:decision>
 
-    <!--    <dmn:decision name="null_011" id="_null_011">
-            <dmn:variable name="null_011"/>
-            <dmn:literalExpression>
-                &lt;!&ndash; context<> &ndash;&gt;
-                <dmn:text>null instance of context&lt;&gt;</dmn:text>
-            </dmn:literalExpression>
-        </dmn:decision>-->
+<!--    <dmn:decision name="null_011" id="_null_011">
+        <dmn:variable name="null_011"/>
+        <dmn:literalExpression>
+            &lt;!&ndash; context<> &ndash;&gt;
+            <dmn:text>null instance of context&lt;&gt;</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>-->
 
     <dmn:decision name="null_012" id="_null_012">
         <dmn:variable name="null_012"/>
@@ -227,12 +227,12 @@
         </dmn:literalExpression>
     </dmn:decision>
 
-    <!--    <dmn:decision name="number_011" id="_number_011">
-            <dmn:variable name="number_011"/>
-            <dmn:literalExpression>
-                <dmn:text>123.01 instance of context&lt;&gt;</dmn:text>
-            </dmn:literalExpression>
-        </dmn:decision>-->
+<!--    <dmn:decision name="number_011" id="_number_011">
+        <dmn:variable name="number_011"/>
+        <dmn:literalExpression>
+            <dmn:text>123.01 instance of context&lt;&gt;</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>-->
 
     <dmn:decision name="number_012" id="_number_012">
         <dmn:variable name="number_012"/>
@@ -319,12 +319,12 @@
         </dmn:literalExpression>
     </dmn:decision>
 
-    <!--    <dmn:decision name="string_011" id="_string_011">
-            <dmn:variable name="string_011"/>
-            <dmn:literalExpression>
-                <dmn:text>"foo" instance of context&lt;&gt;</dmn:text>
-            </dmn:literalExpression>
-        </dmn:decision>-->
+<!--    <dmn:decision name="string_011" id="_string_011">
+        <dmn:variable name="string_011"/>
+        <dmn:literalExpression>
+            <dmn:text>"foo" instance of context&lt;&gt;</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>-->
 
     <dmn:decision name="string_012" id="_string_012">
         <dmn:variable name="string_012"/>
@@ -412,14 +412,14 @@
         </dmn:literalExpression>
     </dmn:decision>
 
-    <!--
-        <dmn:decision name="boolean_011" id="_boolean_011">
-            <dmn:variable name="boolean_011"/>
-            <dmn:literalExpression>
-                <dmn:text>true instance of context&lt;&gt;</dmn:text>
-            </dmn:literalExpression>
-        </dmn:decision>
-    -->
+<!--
+    <dmn:decision name="boolean_011" id="_boolean_011">
+        <dmn:variable name="boolean_011"/>
+        <dmn:literalExpression>
+            <dmn:text>true instance of context&lt;&gt;</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>
+-->
 
     <dmn:decision name="boolean_012" id="_boolean_012">
         <dmn:variable name="boolean_012"/>
@@ -499,12 +499,12 @@
         </dmn:literalExpression>
     </dmn:decision>
 
-    <!--    <dmn:decision name="date_011" id="_date_011">
-            <dmn:variable name="date_011"/>
-            <dmn:literalExpression>
-                <dmn:text>date("2018-12-08") instance of context&lt;&gt;</dmn:text>
-            </dmn:literalExpression>
-        </dmn:decision>-->
+<!--    <dmn:decision name="date_011" id="_date_011">
+        <dmn:variable name="date_011"/>
+        <dmn:literalExpression>
+            <dmn:text>date("2018-12-08") instance of context&lt;&gt;</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>-->
 
     <dmn:decision name="date_012" id="_date_012">
         <dmn:variable name="date_012"/>
@@ -583,12 +583,12 @@
         </dmn:literalExpression>
     </dmn:decision>
 
-    <!--    <dmn:decision name="time_011" id="_time_011">
-            <dmn:variable name="time_011"/>
-            <dmn:literalExpression>
-                <dmn:text>time("10:30:00") instance of context&lt;&gt;</dmn:text>
-            </dmn:literalExpression>
-        </dmn:decision>-->
+<!--    <dmn:decision name="time_011" id="_time_011">
+        <dmn:variable name="time_011"/>
+        <dmn:literalExpression>
+            <dmn:text>time("10:30:00") instance of context&lt;&gt;</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>-->
 
     <dmn:decision name="time_012" id="_time_012">
         <dmn:variable name="time_012"/>
@@ -668,12 +668,12 @@
         </dmn:literalExpression>
     </dmn:decision>
 
-    <!--    <dmn:decision name="list_011" id="_list_011">
-            <dmn:variable name="list_011"/>
-            <dmn:literalExpression>
-                <dmn:text>[1,2,3] instance of context&lt;&gt;</dmn:text>
-            </dmn:literalExpression>
-        </dmn:decision>-->
+<!--    <dmn:decision name="list_011" id="_list_011">
+        <dmn:variable name="list_011"/>
+        <dmn:literalExpression>
+            <dmn:text>[1,2,3] instance of context&lt;&gt;</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>-->
 
     <dmn:decision name="list_012" id="_list_012">
         <dmn:variable name="list_012"/>
@@ -828,12 +828,12 @@
         </dmn:literalExpression>
     </dmn:decision>
 
-    <!--    <dmn:decision name="ym_duration_011" id="_ym_duration_011">
-            <dmn:variable name="ym_duration_011"/>
-            <dmn:literalExpression>
-                <dmn:text>duration("P1Y") instance of context&lt;&gt;</dmn:text>
-            </dmn:literalExpression>
-        </dmn:decision>-->
+<!--    <dmn:decision name="ym_duration_011" id="_ym_duration_011">
+        <dmn:variable name="ym_duration_011"/>
+        <dmn:literalExpression>
+            <dmn:text>duration("P1Y") instance of context&lt;&gt;</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>-->
 
     <dmn:decision name="ym_duration_012" id="_ym_duration_012">
         <dmn:variable name="ym_duration_012"/>
@@ -913,12 +913,12 @@
         </dmn:literalExpression>
     </dmn:decision>
 
-    <!--    <dmn:decision name="dt_duration_011" id="_dt_duration_011">
-            <dmn:variable name="dt_duration_011"/>
-            <dmn:literalExpression>
-                <dmn:text>duration("P1D") instance of context&lt;&gt;</dmn:text>
-            </dmn:literalExpression>
-        </dmn:decision>-->
+<!--    <dmn:decision name="dt_duration_011" id="_dt_duration_011">
+        <dmn:variable name="dt_duration_011"/>
+        <dmn:literalExpression>
+            <dmn:text>duration("P1D") instance of context&lt;&gt;</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>-->
 
     <dmn:decision name="dt_duration_012" id="_dt_duration_012">
         <dmn:variable name="dt_duration_012"/>
@@ -998,12 +998,12 @@
         </dmn:literalExpression>
     </dmn:decision>
 
-    <!--    <dmn:decision name="context_011" id="_context_011">
-            <dmn:variable name="context_011"/>
-            <dmn:literalExpression>
-                <dmn:text>{a: "foo"} instance of context&lt;&gt;</dmn:text>
-            </dmn:literalExpression>
-        </dmn:decision>-->
+<!--    <dmn:decision name="context_011" id="_context_011">
+        <dmn:variable name="context_011"/>
+        <dmn:literalExpression>
+            <dmn:text>{a: "foo"} instance of context&lt;&gt;</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>-->
 
     <dmn:decision name="context_012" id="_context_012">
         <dmn:variable name="context_012"/>
@@ -1040,13 +1040,13 @@
         </dmn:literalExpression>
     </dmn:decision>
 
-    <!--    <dmn:decision name="context_017" id="_context_017">
-            <dmn:variable name="context_017"/>
-            <dmn:literalExpression>
-                &lt;!&ndash; true &ndash;&gt;
-                <dmn:text>{} instance of context&lt;&gt;</dmn:text>
-            </dmn:literalExpression>
-        </dmn:decision>-->
+<!--    <dmn:decision name="context_017" id="_context_017">
+        <dmn:variable name="context_017"/>
+        <dmn:literalExpression>
+            &lt;!&ndash; true &ndash;&gt;
+            <dmn:text>{} instance of context&lt;&gt;</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>-->
 
     <dmn:decision name="context_018" id="_context_018">
         <dmn:variable name="context_018"/>
@@ -1182,12 +1182,12 @@
         </dmn:literalExpression>
     </dmn:decision>
 
-    <!--    <dmn:decision name="function_011" id="_function_011">
-            <dmn:variable name="function_011"/>
-            <dmn:literalExpression>
-                <dmn:text>(function() "foo") instance of context&lt;&gt;</dmn:text>
-            </dmn:literalExpression>
-        </dmn:decision>-->
+<!--    <dmn:decision name="function_011" id="_function_011">
+        <dmn:variable name="function_011"/>
+        <dmn:literalExpression>
+            <dmn:text>(function() "foo") instance of context&lt;&gt;</dmn:text>
+        </dmn:literalExpression>
+    </dmn:decision>-->
 
     <!-- comment out as per: https://github.com/dmn-tck/tck/pull/390#issuecomment-1053664450
     <dmn:decision name="function_012" id="_function_012">
