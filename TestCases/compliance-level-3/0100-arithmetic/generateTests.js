@@ -566,7 +566,7 @@ function generateModel(decisions) {
 <definitions namespace="http://www.montera.com.au/spec/DMN/0100-arithmetic"
      name="0100-arithmetic"
      id="_i9fboPUUEeesLuP4RHs4vA"
-     xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/"
+     xmlns="https://www.omg.org/spec/DMN/20211108/MODEL/"
      xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
      xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
      xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
