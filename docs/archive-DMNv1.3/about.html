@@ -1,0 +1,263 @@
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <!-- PatternFly Styles -->
+    <link href="css/patternfly.min.css" rel="stylesheet" media="screen, print">
+    <link href="css/patternfly-additions.min.css" rel="stylesheet" media="screen, print">
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- PatternFly -->
+    <script src="js/patternfly.min.js"></script>
+    <!-- c3 -->
+    <script src="js/c3.min.js"></script>
+    <!-- c3 -->
+    <script src="js/d3.min.js"></script>
+    <!-- jquery max height -->
+    <script src="js/jquery.matchHeight-min.js"></script>
+
+    <!-- site libs -->
+    <script src="js/lib.js"></script>
+    <link href="css/lib.css" rel="stylesheet" media="screen, print">
+
+    <title>DMN TCK Glossary</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="header">
+            <nav class="navbar navbar-default navbar-pf" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo.png" alt="DMN Technology Compatibility Kit" />
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-primary">
+                        <li>
+                            <a href="index.html">Submitters</a>
+                        </li>
+                        <li>
+                            <a href="glossary.html">Glossary</a>
+                        </li>
+                        <li>
+                            <a href="tests.html">Tests</a>
+                        </li>
+                        <li class="active">
+                            <a href="about.html">About</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+            <div class="breadcrumbs">
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="active"><strong>About</strong></li>
+                </ol>
+            </div>
+        </div>
+        <div class="container" style="font-size: larger;">
+            <div class="row">
+                <h1>Technology Compatibility Kit for the Decision Model and Notation (DMN) standard
+                </h1>
+                <p class="lead">The Decision Model and Notation Technology Compatibility Kit (DMN TCK) is a
+                    community-led proposal for a verifiable and executable method to demonstrate the Conformance level
+                    of support provided by a Vendor-supplied DMN implementation.
+                </p>
+                <p>In addition, this method provides more finer-grained details on the actual support for specific DMN
+                    constructs for each implementation.
+                </p>
+                <p>The DMN TCK working group is composed by vendors and practitioners of DMN, with the goal to assist
+                    and ensure Conformance to the specification, by defining test cases and expected results, by
+                    providing tools to run these tests and validate results; the outcome also represent an additional
+                    and pragmatical way to recognize and publicize vendor success.
+                </p>
+                <p>Joining the TCK is free, it also holds regular conference calls, and new members are always welcome.
+                </p>
+            </div>
+            <div class="row">
+                <h2>Scope of work
+                </h2>
+                <p>Goals:
+                <ul>
+                    <li>📝 Define a set of test cases</li>
+                    <li>🔬 Carefully assure conformance to the spec</li>
+                    <li>🛠️ Provide tools to run the tests</li>
+                    <li>👏 Recognize vendor successes</li>
+                </ul>
+                NON-Goals:
+                <ul>
+                    <li>🚫 Extend or enhance the DMN Spec; instead, RTF is responsible for that</li>
+                    <li>🚫 Focus on esoteric features; instead, focus Only features that exist in one or more
+                        implementations</li>
+                    <li>🚫 Favor an implementation over another; instead, Remain technology and vendor neutral</li>
+                </ul>
+                For this effort, here are the goals to achieve in order to consider this a success
+
+                <ul>
+                    <li><strong>Deliverables</strong>: We will collect and organize test cases that can be used by
+                        implementers to
+                        demonstrate compliance to the spec when evaluating a DMN model.</li>
+                    <li><strong>Format</strong>: A single DMN model might be tested with any number of different inputs,
+                        and each
+                        combination of model and input data is considered a test case.. A test case consists of
+                        <ul>
+                            <li>Some document on what the test is designed to test,
+                            <li>Human readible / end user visual representation of the decision: a screen shot at the
+                                minimum,
+                                <ul>
+                                    <li>a serialized DMN model,
+                                    <li>a serialized set of input data,</li>
+                                    <li>serialized set of output/response data.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><strong>Availability</strong>: Test cases will be files that can be accessed freely by anyone
+                        using a creative
+                        commons Share-Alike-With-Attribution license.</li>
+                    <li><strong>Conformance</strong>: Test cases will be associated to specific elements of the spec so
+                        it is clear what
+                        aspect of conformance is being tested.</li>
+                    <li><strong>Promotion</strong>: We will promote the tests in order to assure that potential users of
+                        DMN are aware.
+                    </li>
+                    <li><strong>Completeness</strong>: we will aim to test all aspects of conformance level 3.</li>
+                    <li><strong>Uniformity</strong>: We will strive to eliminate contradictory tests. That is, if there
+                        is a test which
+                        according to two different parts of the spec would produce two different outputs, then the
+                        correct test output will be chosen so that a single consistent implementation might generate all
+                        the test responses.</li>
+                </ul>
+                To be clear, there are several things that are not the goals of this group
+                <ul>
+                    <li>We will not be involved in defining or extending the DMN specification -- this is the job of the
+                        OMG
+                        committee.</li>
+                    <li>We will focus on concrete input and output examples. We will avoid general discussion about what
+                        should
+                        and should not generally be true.</li>
+                    <li>We will include only test cases that are known to pass on at least one implementation.
+                        Caveat:
+                        <del>at the
+                            current</del> at the very beginning of this project, there were no known implementations at
+                        conformance level
+                        3, so necessarily there has been tests that no implementation could run, but once CL3 has been
+                        attained
+                        it will not be our practice to invent new, far-reaching tests for abstract situations.
+                    </li>
+                    <li>We will strive to get close to the spec, but if parts of the spec prove impossible to implement,
+                        we will
+                        not get involved correcting the specification.</li>
+                    <li>Similarly, we strive to implement as much of the spec as possible, but if the spec is too
+                        expansive we
+                        may limit the scope to a subset that we all agree upon.</li>
+                    <li>If the spec is ambiguous, we will make an interpretation of the spec according to what can
+                        actually be
+                        realized in running code, document that, and remain consistent to that in the future.</li>
+                </ul>
+                Reasons to be interested in this community-led project:
+                <ul>
+                    <li>A way for Vendors to <strong>demonstrate</strong> their compliance to the Standard</li>
+                    <li>Provide files to <strong>help</strong> Vendors test for error and become compliant</li>
+                    <li>A way for Customers and Users to <strong>assess</strong> how compliant a Vendor is</li>
+                </ul>
+                </p>
+            </div>
+            <div class="row">
+                <h2>Some DMN TCK presentations
+                </h2>
+                <p>
+                <ul>
+                    <li>Keith Swenson: Close is not Close Enough (<a
+                            href="https://decisioncamp2019.wordpress.com/program/#KeithSwenson">DecisionCamp 2019</a>)
+                    </li>
+                    <li>Keith Swenson: DMN TCK Working Group (<a
+                            href="https://www.youtube.com/watch?v=75fk-i3K9U0)">bpmNEXT 2019</a>)</li>
+                    <li>Matteo Mortari: Introduction and Updates on DMN TCK (<a
+                            href="https://decisioncamp2018.wordpress.com/program/#DMNTCK">DecisionCamp 2018</a>)</li>
+                    <li>Keith Swenson: DMN Technology Compatiability Toolkit (TCK) (<a
+                            href="https://www.youtube.com/watch?v=MqSbBtY2dKQ">bpmNEXT 2018</a>)</li>
+                    <li>Keith Swenson: Making the Standard Real: The DMN TCK (<a
+                            href="https://www.youtube.com/watch?v=M8goCq72lbo">bpmNEXT 2017</a>)</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+        <!-- pre-footer -->
+<div class="pre-footer">
+    <div class="last-updated">
+        <p>Last updated:</strong> Jul 1, 2023, 12:54:16 AM</p>
+    </div>
+</div>
+<div class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container-fluid">
+                <div class="panel-heading">
+                    <h3 class="panel-title">The DMN TCK is supported by:</h3>
+                </div>
+                <div class="panel-body">
+                    <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+                        <div style="display:inline-block; margin-top:10px;">
+                            <a href="http://www.camunda.com" target="_newtab">
+                                <img alt="camunda" class="img-thumbnail" src="images/camunda_logo.png" style="height: 60px"/>
+                            </a>
+                        </div>
+                        <div style="display:inline-block; margin-top:10px;">
+                            <a href="http://www.fujitsu.com/" target="_newtab">
+                                <img alt="fujitsu" class="img-thumbnail" src="images/Fujitsu.jpg" style="height: 60px"/>
+                            </a>
+                        </div>
+                        <div style="display:inline-block; margin-top:10px;">
+                            <a href="http://methodandstyle.com/" target="_newtab">
+                                <img alt="methodandstyle" class="img-thumbnail" src="images/MSlogo4x.jpg" style="height: 60px"/>
+                            </a>
+                        </div>
+                        <div style="display:inline-block; margin-top:10px;">
+                            <a href="http://openrules.com/" target="_newtab">
+                                <img alt="openrules" class="img-thumbnail" src="images/openruleslogo.jpg" style="height: 60px"/>
+                            </a>
+                        </div>
+                        <div style="display:inline-block; margin-top:10px;">
+                            <a href="http://oracle.com/" target="_newtab">
+                                <img alt="oracle" class="img-thumbnail" src="images/oracle.png" style="height: 60px"/>
+                            </a>
+                        </div>
+                        <div style="display:inline-block; margin-top:10px;">
+                            <a href="http://www.redhat.com" target="_newtab">
+                                <img alt="redhat" class="img-thumbnail" src="images/redhat3.png" style="height: 60px"/>
+                            </a>
+                        </div>
+                        <div style="display:inline-block; margin-top:10px;">
+                            <a href="http://www.trisotech.com" target="_newtab">
+                                <img alt="trisotech" class="img-thumbnail" src="images/trisotech3.jpg" style="height: 60px"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- container -->
+</div>
+<!-- footer -->
+
+    </div>
+</body>
+
+</html>

@@ -219,7 +219,7 @@
             <div class="row">
               <div class="container-fluid">
                 <div class="panel-body">
-                  <p>This website is updated to reflect DMNv1.3.<br />For archived versions of the website you can refer to: <a href="archive-DMNv1.2/index.html">Archived DMNv1.2</a>, <a href="archive-DMNv1.1/index.html">Archived DMNv1.1</a>.</p>
+                  <p>This website is updated to reflect DMNv1.4.<br />For archived versions of the website you can refer to: <a href="archive-DMNv1.3/index.html">Archived DMNv1.3</a>, <a href="archive-DMNv1.2/index.html">Archived DMNv1.2</a>, <a href="archive-DMNv1.1/index.html">Archived DMNv1.1</a>.</p>
                 </div>
               </div>
             </div>
