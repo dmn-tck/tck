@@ -78,12 +78,12 @@
                 <div class="row">
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Tests:</strong> 3003</p>
+                            <p><strong>Tests:</strong> 3017</p>
                         </small>
                     </div>
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Labels:</strong> 75</p>
+                            <p><strong>Labels:</strong> 78</p>
                         </small>
                     </div>
                 </div>
@@ -871,7 +871,7 @@
                             <td scope="row"></td>
                         </tr>
                         <tr>
-                                <td class="text-nowrap" scope="row" rowspan="2887" style="vertical-align:middle">compliance-level-3</td>
+                                <td class="text-nowrap" scope="row" rowspan="2901" style="vertical-align:middle">compliance-level-3</td>
                                 <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0001-filter-test-01</td>
                                 <td align="center" rowspan="1" style="vertical-align:middle">
                                     <a target="_blank" href="https://github.com/dmn-tck/tck/blob/master/TestCases/compliance-level-3/0001-filter/0001-filter.pdf">
@@ -6098,11 +6098,11 @@
                             <td scope="row">escape 6 digit unicode substring</td>
                         </tr>
                         <tr>
-                                <td class="text-nowrap" scope="row" rowspan="11" style="vertical-align:middle">0084-feel-for-loops-test-01</td>
-                                <td align="center" rowspan="11" style="vertical-align:middle">
+                                <td class="text-nowrap" scope="row" rowspan="13" style="vertical-align:middle">0084-feel-for-loops-test-01</td>
+                                <td align="center" rowspan="13" style="vertical-align:middle">
                                     <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
                                 </td>
-                                <td align="center" rowspan="11" style="vertical-align:middle">
+                                <td align="center" rowspan="13" style="vertical-align:middle">
                                     <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/0084-feel-for-loops">
                                         <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
                                     </a>
@@ -6149,6 +6149,14 @@
                         <tr>
                             <td class="text-nowrap" scope="row">decision_014</td>
                             <td scope="row">'in' may appear in list identifier</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">decision_015</td>
+                            <td scope="row">for loop with second iterator depending on first iterator</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">decision_016</td>
+                            <td scope="row">nested loops</td>
                         </tr>
                         <tr>
                                 <td class="text-nowrap" scope="row" rowspan="17" style="vertical-align:middle">0085-decision-services-test-01</td>
@@ -13404,6 +13412,81 @@
                             <td class="text-nowrap" scope="row">mmets</td>
                             <td scope="row"></td>
                         </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="8" style="vertical-align:middle">1131-feel-function-invocation-test-01</td>
+                                <td align="center" rowspan="8" style="vertical-align:middle">
+                                    <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="8" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/1131-feel-function-invocation">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td scope="row">Non existing function evaluates to null (10.3.2.13.2)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td scope="row">null evaluates to null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003</td>
+                            <td scope="row">string evaluates to null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">004</td>
+                            <td scope="row">string (same name function in scope) evaluates to null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">005</td>
+                            <td scope="row">date evaluates to null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">006</td>
+                            <td scope="row">number evaluates to null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">007</td>
+                            <td scope="row">true evaluates to null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">008</td>
+                            <td scope="row">false evaluates to null</td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="2" style="vertical-align:middle">1148-feel-now-function-test-01</td>
+                                <td align="center" rowspan="2" style="vertical-align:middle">
+                                    <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="2" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/1148-feel-now-function">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td scope="row">Will give date and time</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td scope="row">Too many params gives null</td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="2" style="vertical-align:middle">1149-feel-today-function-test-01</td>
+                                <td align="center" rowspan="2" style="vertical-align:middle">
+                                    <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="2" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/1149-feel-today-function">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td scope="row">Will give date</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td scope="row">Too many params gives null</td>
+                        </tr>
                         </tbody>
                     </table>
                 </div>
@@ -13414,7 +13497,7 @@
 <!-- pre-footer -->
 <div class="pre-footer">
     <div class="last-updated">
-        <p>Last updated:</strong> Jul 1, 2023, 12:54:16 AM</p>
+        <p>Last updated:</strong> Aug 1, 2023, 12:46:42 AM</p>
     </div>
 </div>
 <div class="footer">
