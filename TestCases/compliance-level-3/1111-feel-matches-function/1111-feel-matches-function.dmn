@@ -63,7 +63,7 @@
         </literalExpression>
     </decision>
 
-    <decision name="fn-matches-32" covers="regex-non-capturing regex-q-flag">
+    <decision name="fn-matches-32">
         <description> Evaluation of matches function with "q" flag (allowed in XQuery 3.0) </description>
         <variable typeRef="boolean" name="fn-matches-32"/>
         <literalExpression>
@@ -71,7 +71,7 @@
         </literalExpression>
     </decision>
 
-    <decision name="fn-matches-33" covers="regex-q-flag">
+    <decision name="fn-matches-33">
         <description> Evaluation of matches function with "q" flag (allowed in XQuery 3.0) </description>
         <variable typeRef="boolean" name="fn-matches-33"/>
         <literalExpression>
@@ -79,7 +79,7 @@
         </literalExpression>
     </decision>
 
-    <decision name="fn-matches-34" covers="regex-q-flag">
+    <decision name="fn-matches-34">
         <description> Evaluation of matches function with "q" and "i" flags (allowed in XQuery 3.0) </description>
         <variable typeRef="boolean" name="fn-matches-34"/>
         <literalExpression>
@@ -87,7 +87,7 @@
         </literalExpression>
     </decision>
 
-    <decision name="fn-matches-45" covers="regex-dot-matching-cr">
+    <decision name="fn-matches-45">
         <description> "." does NOT match CR in default mode</description>
         <variable typeRef="boolean" name="fn-matches-45"/>
         <literalExpression>
