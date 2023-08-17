@@ -146,14 +146,15 @@
         </resultNode>
     </testCase>
 
-    <testCase id="015">
+    <!-- comment decimal scale tests for now, subject to clarification -->
+<!--    <testCase id="015">
         <description>Non integer scale param gives null</description>
         <resultNode errorResult="true" name="decision015" type="decision">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
         </resultNode>
-    </testCase>
+    </testCase>-->
 
 <!--
     what is expected for a negative scale?
