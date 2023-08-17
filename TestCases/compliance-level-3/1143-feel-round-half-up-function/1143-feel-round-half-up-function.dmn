@@ -114,19 +114,25 @@
         </literalExpression>
     </decision>
 
+    <!-- comment decimal scale tests for now, subject to clarification -->
+<!--
     <decision name="decision015" id="_decision015">
         <variable name="decision015"/>
         <literalExpression>
             <text>round half up(5.5, 1.1)</text>
         </literalExpression>
     </decision>
+-->
 
+    <!-- comment negative scale tests for now, subject to clarification -->
+<!--
     <decision name="decision016_a" id="_decision016_a">
         <variable name="decision016_a"/>
         <literalExpression>
             <text>round half up(5.5, -6111)</text>
         </literalExpression>
     </decision>
+-->
 
     <decision name="decision016_b" id="_decision016_b">
         <variable name="decision016_b"/>
