@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<semantic:definitions xmlns:semantic="https://www.omg.org/spec/DMN/20211108/MODEL/"  xmlns:triso="http://www.trisotech.com/2015/triso/modeling"  xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"  xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"  xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"  xmlns:trisodmn="http://www.trisotech.com/2016/triso/dmn"  xmlns:feel="https://www.omg.org/spec/DMN/20211108/FEEL/"  xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase"  xmlns:drools="http://www.drools.org/kie/dmn/1.1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:rss="http://purl.org/rss/2.0/"  xmlns:openapi="https://openapis.org/omg/extension/1.0"  xmlns:xsd="http://www.w3.org/2001/XMLSchema"   xmlns:i18n="http://www.omg.org/spec/BPMN/non-normative/extensions/i18n/1.0"  xmlns="http://www.trisotech.com/definitions/_c16dc288-4b31-4b0a-a2fe-5dc9077cb5f8" id="_c16dc288-4b31-4b0a-a2fe-5dc9077cb5f8" name="Drawing 1" namespace="http://www.trisotech.com/definitions/_c16dc288-4b31-4b0a-a2fe-5dc9077cb5f8" exporter="Decision Modeler" exporterVersion="8.10.1-pre.15.117950c" xml:lang="en" triso:logoChoice="Default">
+    <semantic:decision id="_e6627f1b-7f84-4b93-ab15-7e065510332d" name="Range output" triso:readOnly="false">
+        <semantic:variable name="Range output" id="_af062c2a-327d-4c4f-a936-591dfe24f624" typeRef="Any"/>
+        <semantic:informationRequirement id="_e9c3f107-f889-40a0-b83f-a76eddfaef8d" triso:readOnly="false">
+            <semantic:requiredDecision href="#_0ab4cd55-1bb5-4897-b13a-bdf4b0de6b5f"/>
+        </semantic:informationRequirement>
+        <semantic:informationRequirement id="_ccbae221-1595-4eb4-8f41-b8263327d5b8" triso:readOnly="false">
+            <semantic:requiredInput href="#_14bae938-adfa-4486-bfdb-04c542e215eb"/>
+        </semantic:informationRequirement>
+        <semantic:informationRequirement id="_4e79e9d7-be8a-4c2c-83d1-7e628b0091e9" triso:readOnly="false">
+            <semantic:requiredInput href="#_0d032646-6ce8-48c8-a0de-54b6c03899c2"/>
+        </semantic:informationRequirement>
+        <semantic:context id="_81a844d3-4e22-4a24-bf09-3233ebfb17f0" triso:descriptionVisible="false" typeRef="Any" triso:expressionId="_c0bd6cc5-328f-47cd-80b3-bb396b8d40c3">
+            <semantic:contextEntry id="_29a524d8-0c38-40c6-bcdc-bf61a6a11555">
+                <semantic:variable name="start" id="_c2d51e5c-e7fb-4142-8459-2ccdae116fa0" typeRef="Any"/>
+                <semantic:literalExpression id="_c270880f-c33f-4aaf-9758-676efdab8441" triso:descriptionVisible="false">
+                    <semantic:text>Range.start</semantic:text>
+                </semantic:literalExpression>
+            </semantic:contextEntry>
+            <semantic:contextEntry id="_f24d12ae-f79d-4bc8-b036-a52d35e61b86">
+                <semantic:variable name="end" id="_fa6f67ff-18d7-465d-bb20-ef86ebbe8e24" typeRef="Any"/>
+                <semantic:literalExpression id="_1f596d8e-7b45-4402-b119-310884d6d571" triso:descriptionVisible="false">
+                    <semantic:text>Range.end</semantic:text>
+                </semantic:literalExpression>
+            </semantic:contextEntry>
+            <semantic:contextEntry id="_8ad97e80-5166-423c-83dc-f301ae8dfc44">
+                <semantic:variable name="start included" id="_00705ea6-c227-483f-82ca-cac7cf9baedc" typeRef="boolean"/>
+                <semantic:literalExpression id="_fa7bdafe-8382-4ad9-a657-41271b38d163" triso:descriptionVisible="false">
+                    <semantic:text>Range.start included</semantic:text>
+                </semantic:literalExpression>
+            </semantic:contextEntry>
+            <semantic:contextEntry id="_7e4a8f64-d565-48f3-9563-a7d810f49cf1">
+                <semantic:variable name="end included" id="_5786ab3b-478f-4c7e-955d-dc650436cd1a" typeRef="boolean"/>
+                <semantic:literalExpression id="_ae0cffef-e940-4fad-9403-4e3d8af0a61d" triso:descriptionVisible="false">
+                    <semantic:text>Range.end included</semantic:text>
+                </semantic:literalExpression>
+            </semantic:contextEntry>
+            <semantic:contextEntry id="_0bed67d8-1075-4e1d-bd9c-611f18f404b8">
+                <semantic:variable name="included" id="_73e6aafb-4433-484f-a833-8e13aed9bce4" typeRef="boolean"/>
+                <semantic:literalExpression id="_8bb688a0-c20c-4368-a1ad-1326934c5f06" triso:descriptionVisible="false">
+                    <semantic:text>Value Included in Range</semantic:text>
+                </semantic:literalExpression>
+            </semantic:contextEntry>
+            <semantic:contextEntry id="_ef5d7558-9803-4050-ab29-05c0f2f21be3">
+                <semantic:variable name="excluded" id="_51b58131-d9de-4bb0-af7c-b78982dbc3ba" typeRef="boolean"/>
+                <semantic:literalExpression id="_cdb677c8-ca61-4c48-8356-4c38df94dc83" triso:descriptionVisible="false">
+                    <semantic:text>not(Value Excluded in Range)</semantic:text>
+                </semantic:literalExpression>
+            </semantic:contextEntry>
+            <semantic:contextEntry id="_a9c8d41b-dc0f-4efa-b9ad-01e92e560295">
+                <semantic:variable name="range of number" id="_49b9ae59-3d84-4739-bc5b-d0760e017855" typeRef="boolean"/>
+                <semantic:literalExpression id="_3bb25fa7-5721-49e4-8a6c-2275dc9a2ada" triso:descriptionVisible="false">
+                    <semantic:text>Range instance of range&lt;number&gt;</semantic:text>
+                </semantic:literalExpression>
+            </semantic:contextEntry>
+            <semantic:contextEntry id="_f6c5f6fb-4893-4c78-9c18-de136297b57e">
+                <semantic:variable name="range of date" id="_848807b3-c13d-47fb-87b8-c22ca0c9ac2a" typeRef="boolean"/>
+                <semantic:literalExpression id="_4fcecbaf-0407-42b2-9d92-c20ccdd79ec7" triso:descriptionVisible="false">
+                    <semantic:text>Range instance of range&lt;date&gt;</semantic:text>
+                </semantic:literalExpression>
+            </semantic:contextEntry>
+            <semantic:contextEntry id="_1133ab6f-a102-48ed-b4ad-299d66ea28e7">
+                <semantic:variable name="range of date and time" id="_2bcdf9ef-b341-4a11-a9df-ed50c404205d" typeRef="boolean"/>
+                <semantic:literalExpression id="_98d29ff5-83f2-41bd-b683-2c0c4cd862d0" triso:descriptionVisible="false">
+                    <semantic:text>Range instance of range&lt;date and time&gt;</semantic:text>
+                </semantic:literalExpression>
+            </semantic:contextEntry>
+            <semantic:contextEntry id="_0f0198a6-10b4-4ca9-ba2e-e45f2cc9afcb">
+                <semantic:variable name="range of ym duration" id="_30cf032f-90d5-4bb2-baa0-e1a48bd2aa38" typeRef="boolean"/>
+                <semantic:literalExpression id="_b7a99b43-3d11-4e9d-a17e-5cfe23951db0" triso:unparsed="true" triso:descriptionVisible="false">
+                    <semantic:text>Range instance of range&lt;years and months duration&gt;</semantic:text>
+                </semantic:literalExpression>
+            </semantic:contextEntry>
+            <semantic:contextEntry id="_d6dcb041-4296-49eb-bb72-b92f412dd100">
+                <semantic:variable name="range of dt duration" id="_bc5a73be-450e-4be1-99dd-5750c866a9f3" typeRef="boolean"/>
+                <semantic:literalExpression id="_755b97cb-09ac-476a-9676-18033c6fc402" triso:unparsed="true" triso:descriptionVisible="false">
+                    <semantic:text>Range instance of range&lt;days and time duration&gt;</semantic:text>
+                </semantic:literalExpression>
+            </semantic:contextEntry>
+            <semantic:contextEntry id="_77df911f-59ce-4266-84a5-4bc1081689d5">
+                <semantic:variable name="range of time" id="_3b324f95-10ab-4e96-bc25-6b538ba11c35" typeRef="boolean"/>
+                <semantic:literalExpression id="_5587c869-28bd-4ae5-9722-b8581ccce3d4" triso:descriptionVisible="false">
+                    <semantic:text>Range instance of range&lt;time&gt;</semantic:text>
+                </semantic:literalExpression>
+            </semantic:contextEntry>
+            <semantic:contextEntry id="_846cb562-8fc5-4f3f-9077-3d81da090bd3">
+                <semantic:variable name="range of string" id="_d1c923f5-c6da-442f-9ad8-769810382c69" typeRef="boolean"/>
+                <semantic:literalExpression id="_894e3556-cc69-4811-8462-33bb911f900d" triso:descriptionVisible="false">
+                    <semantic:text>Range instance of range&lt;string&gt;</semantic:text>
+                </semantic:literalExpression>
+            </semantic:contextEntry>
+        </semantic:context>
+    </semantic:decision>
+    <semantic:inputData id="_866bfc40-1bb8-450c-8635-c5c58e9ff249" name="Range as string" triso:readOnly="false">
+        <semantic:variable name="Range as string" id="_b83b7691-3df0-41ac-bf03-05f540766226" typeRef="string"/>
+    </semantic:inputData>
+    <semantic:decision id="_0ab4cd55-1bb5-4897-b13a-bdf4b0de6b5f" name="Range" triso:readOnly="false">
+        <semantic:variable name="Range" id="_5c840349-6178-42b2-8d53-834c148c1909" typeRef="range"/>
+        <semantic:informationRequirement id="_3e48e11f-c0b2-4f55-ab1f-4e3d89ee6ccd" triso:readOnly="false">
+            <semantic:requiredInput href="#_866bfc40-1bb8-450c-8635-c5c58e9ff249"/>
+        </semantic:informationRequirement>
+        <semantic:literalExpression id="_1a1fc85d-4dae-4b3a-adac-9c9c943f96b5" triso:descriptionVisible="true" typeRef="range" triso:expressionId="_6cb0373a-03bd-47ee-a7fe-4749bb2846d0">
+            <semantic:description>The range text is parsed as a range type</semantic:description>
+            <semantic:text>range(Range as string)</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:inputData id="_14bae938-adfa-4486-bfdb-04c542e215eb" name="Value Included" triso:readOnly="false">
+        <semantic:variable name="Value Included" id="_5a985e49-f107-4d87-9297-2ebac0765f7b" typeRef="Any"/>
+    </semantic:inputData>
+    <semantic:inputData id="_0d032646-6ce8-48c8-a0de-54b6c03899c2" name="Value Excluded" triso:readOnly="false">
+        <semantic:variable name="Value Excluded" id="_84e7be7c-4273-47c2-a88c-7934c7168c06" typeRef="Any"/>
+    </semantic:inputData>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="_d046d2cb-398b-4575-bed3-aaccb8fa29f6" triso:modelElementRef="_432975ad-a29d-4b55-a024-1cb70ef72324" name="Page 1">
+            <di:extension/>
+            <dmndi:Size height="1050" width="1485"/>
+            <dmndi:DMNShape id="_7e7dc401-d17e-44b2-aff7-ba810cc7f5a4" dmnElementRef="_e6627f1b-7f84-4b93-ab15-7e065510332d">
+                <dc:Bounds x="144.5" y="59" width="153" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_c16dc288-4b31-4b0a-a2fe-5dc9077cb5f8_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_8b722417-6850-4956-8522-86c8ed0d80e7" dmnElementRef="_866bfc40-1bb8-450c-8635-c5c58e9ff249">
+                <dc:Bounds x="153.2588291168213" y="298.99999618530273" width="135.48234176635742" height="60.00000762939453"/>
+                <dmndi:DMNLabel sharedStyle="LS_c16dc288-4b31-4b0a-a2fe-5dc9077cb5f8_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_3dfa0a7c-2fdb-4af0-b7bd-a281a89c733e" dmnElementRef="_0ab4cd55-1bb5-4897-b13a-bdf4b0de6b5f">
+                <dc:Bounds x="144.5" y="182" width="153" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_c16dc288-4b31-4b0a-a2fe-5dc9077cb5f8_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_9bd89058-4419-495e-9dec-c5d09eeb88df" dmnElementRef="_14bae938-adfa-4486-bfdb-04c542e215eb">
+                <dc:Bounds x="390.2588291168213" y="298.99999618530273" width="135.48234176635742" height="60.00000762939453"/>
+                <dmndi:DMNLabel sharedStyle="LS_c16dc288-4b31-4b0a-a2fe-5dc9077cb5f8_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_02fb346c-7aa7-4538-9c93-6bb80007bd72" dmnElementRef="_0d032646-6ce8-48c8-a0de-54b6c03899c2">
+                <dc:Bounds x="557" y="298.99999618530273" width="135.48234176635742" height="60.00000762939453"/>
+                <dmndi:DMNLabel sharedStyle="LS_c16dc288-4b31-4b0a-a2fe-5dc9077cb5f8_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="_5f911196-4dc7-4a87-ab84-04f81bc7010a" dmnElementRef="_3e48e11f-c0b2-4f55-ab1f-4e3d89ee6ccd">
+                <di:waypoint x="220.99680137634277" y="298.99999618530273"/>
+                <di:waypoint x="221" y="242"/>
+                <dmndi:DMNLabel sharedStyle="LS_c16dc288-4b31-4b0a-a2fe-5dc9077cb5f8_0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="_df76cc2d-da44-45b8-8b1a-11edd4b80a7e" dmnElementRef="_e9c3f107-f889-40a0-b83f-a76eddfaef8d">
+                <di:waypoint x="221" y="182"/>
+                <di:waypoint x="221.04885572686112" y="119"/>
+                <dmndi:DMNLabel sharedStyle="LS_c16dc288-4b31-4b0a-a2fe-5dc9077cb5f8_0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="_0547c4dd-d6d2-43e9-bf4d-0b5efb0fe2cb" dmnElementRef="_ccbae221-1595-4eb4-8f41-b8263327d5b8">
+                <di:waypoint x="457.9968013763428" y="298.99999618530273"/>
+                <di:waypoint x="261" y="119"/>
+                <dmndi:DMNLabel sharedStyle="LS_c16dc288-4b31-4b0a-a2fe-5dc9077cb5f8_0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="_9a6110b3-5e77-4c4d-86f4-67c16cca3dde" dmnElementRef="_4e79e9d7-be8a-4c2c-83d1-7e628b0091e9">
+                <di:waypoint x="614.7379722595215" y="298.99999618530273"/>
+                <di:waypoint x="281" y="119"/>
+                <dmndi:DMNLabel sharedStyle="LS_c16dc288-4b31-4b0a-a2fe-5dc9077cb5f8_0"/>
+            </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+        <dmndi:DMNStyle id="LS_c16dc288-4b31-4b0a-a2fe-5dc9077cb5f8_0" fontFamily="arial,helvetica,sans-serif" fontSize="11" fontBold="false" fontItalic="false" fontUnderline="false" fontStrikeThrough="false"/>
+    </dmndi:DMNDI>
+</semantic:definitions>
