@@ -25,22 +25,22 @@
     </itemDefinition>
 
     <itemDefinition name="exactContextType" label="ExactContextType" id="_exactContextType">
-        <itemComponent name="a" id="_a">
+        <itemComponent name="a" id="_ae">
             <typeRef>number</typeRef>
         </itemComponent>
-        <itemComponent name="b" id="_b">
+        <itemComponent name="b" id="_be">
             <typeRef>number</typeRef>
         </itemComponent>
     </itemDefinition>
 
     <itemDefinition name="superContextType" label="SuperContextType" id="_superContextType">
-        <itemComponent name="a" id="_a">
+        <itemComponent name="a" id="_as">
             <typeRef>number</typeRef>
         </itemComponent>
     </itemDefinition>
 
     <itemDefinition name="otherContextType" label="OtherContextType" id="_otherContextType">
-        <itemComponent name="a" id="_a">
+        <itemComponent name="a" id="_ao">
             <typeRef>number</typeRef>
         </itemComponent>
         <itemComponent name="b" id="_b">
