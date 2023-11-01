@@ -78,12 +78,12 @@
                 <div class="row">
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Tests:</strong> 3017</p>
+                            <p><strong>Tests:</strong> 3104</p>
                         </small>
                     </div>
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Labels:</strong> 78</p>
+                            <p><strong>Labels:</strong> 79</p>
                         </small>
                     </div>
                 </div>
@@ -871,7 +871,7 @@
                             <td scope="row"></td>
                         </tr>
                         <tr>
-                                <td class="text-nowrap" scope="row" rowspan="2901" style="vertical-align:middle">compliance-level-3</td>
+                                <td class="text-nowrap" scope="row" rowspan="2988" style="vertical-align:middle">compliance-level-3</td>
                                 <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0001-filter-test-01</td>
                                 <td align="center" rowspan="1" style="vertical-align:middle">
                                     <a target="_blank" href="https://github.com/dmn-tck/tck/blob/master/TestCases/compliance-level-3/0001-filter/0001-filter.pdf">
@@ -13454,6 +13454,378 @@
                             <td scope="row">false evaluates to null</td>
                         </tr>
                         <tr>
+                                <td class="text-nowrap" scope="row" rowspan="22" style="vertical-align:middle">1140-feel-string-join-function-test-01</td>
+                                <td align="center" rowspan="22" style="vertical-align:middle">
+                                    <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="22" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/1140-feel-string-join-function">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td scope="row">Will join</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td scope="row">Will join (with delimiter)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003</td>
+                            <td scope="row">Will join with empty delimiter</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">004</td>
+                            <td scope="row">Will join with null delimiter</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">005_a</td>
+                            <td scope="row">Will join single element list</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">005_b</td>
+                            <td scope="row">Will join single element list (with delimiter)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">006_a</td>
+                            <td scope="row">Will ignore null elements in list</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">006_b</td>
+                            <td scope="row">Will ignore null elements in list (with delimiter)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">007_a</td>
+                            <td scope="row">Will join empty list as ""</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">007_b</td>
+                            <td scope="row">Will join empty list as "" (with delimiter)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">008</td>
+                            <td scope="row">No params gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">009</td>
+                            <td scope="row">Too many params gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">010_a</td>
+                            <td scope="row">Join with named param</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">010_b</td>
+                            <td scope="row">Join with named params (with delimiter) </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">011_a</td>
+                            <td scope="row">Incorrect named delimiter param gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">011_b</td>
+                            <td scope="row">Incorrect named list param gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">012_a</td>
+                            <td scope="row">null list gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">012_b</td>
+                            <td scope="row">null list gives null (with delimiter)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">013</td>
+                            <td scope="row">Incorrect list type gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">014</td>
+                            <td scope="row">Non-list non-string list param gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">015</td>
+                            <td scope="row">Non-list string list param is coerced to list</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">016</td>
+                            <td scope="row">Non-list string named list param is coerced to list</td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="18" style="vertical-align:middle">1145-feel-context-function-test-01</td>
+                                <td align="center" rowspan="18" style="vertical-align:middle">
+                                    <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="18" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/1145-feel-context-function">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td scope="row">Will create context from entries</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td scope="row">Will create context from single entry</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003</td>
+                            <td scope="row">Will return null when duplicate entry keys</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">004</td>
+                            <td scope="row">Will create empty context for empty entries array</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">005</td>
+                            <td scope="row">Will coerce single entry to list</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">006</td>
+                            <td scope="row">Will return null when entry is missing key</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">007</td>
+                            <td scope="row">Will return null when entry key value is null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">008</td>
+                            <td scope="row">Will return null when entry is missing value</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">009</td>
+                            <td scope="row">Will permit null value</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">010</td>
+                            <td scope="row">Will permit empty string as key</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">011</td>
+                            <td scope="row">Null entries list gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">012</td>
+                            <td scope="row">Too few params gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">013</td>
+                            <td scope="row">Too many params gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">014_a</td>
+                            <td scope="row">named params</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">014_b</td>
+                            <td scope="row">will coerce non-list named param to list</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">015</td>
+                            <td scope="row">Incorrect named param gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">016</td>
+                            <td scope="row">Incorrect 'entries' type gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">017</td>
+                            <td scope="row">Will ignore extra fields beyond 'key' and 'value'</td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="30" style="vertical-align:middle">1146-feel-context-put-function-test-01</td>
+                                <td align="center" rowspan="30" style="vertical-align:middle">
+                                    <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="30" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/1146-feel-context-put-function">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td scope="row">Will add context entry</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td scope="row">Will add entry to end of context</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003</td>
+                            <td scope="row">Will overwrite existing context entry</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003_a</td>
+                            <td scope="row">Will maintain key order when overwriting existing context entry</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">004</td>
+                            <td scope="row">Will permit empty key param</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">005</td>
+                            <td scope="row">Null key param gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">006</td>
+                            <td scope="row">Null context param gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">007</td>
+                            <td scope="row">Will permit null value param</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">008</td>
+                            <td scope="row">Too few params gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">009</td>
+                            <td scope="row">Too many params gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">010</td>
+                            <td scope="row">named params</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">011</td>
+                            <td scope="row">Incorrect named param gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">012</td>
+                            <td scope="row">Incorrect 'context' type gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">013</td>
+                            <td scope="row">Will return null when key is not a string</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">014</td>
+                            <td scope="row">Will operate on boxed context</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">015</td>
+                            <td scope="row">Will create new copy of boxed context, not mutate it</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">016</td>
+                            <td scope="row">Will create new copy of literal context, not mutate it</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">nested001</td>
+                            <td scope="row">will overwrite value in nested context</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">nested001_a</td>
+                            <td scope="row">will add value to nested context</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">nested002</td>
+                            <td scope="row">null key gives null (1)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">nested003</td>
+                            <td scope="row">null key gives null (2)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">nested004</td>
+                            <td scope="row">null key gives null (3)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">nested005</td>
+                            <td scope="row">empty keys array gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">nested006</td>
+                            <td scope="row">will recurse into nested contexts</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">nested007</td>
+                            <td scope="row">named params - with 'keys'</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">nested008</td>
+                            <td scope="row">named params - array value for 'key' gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">nested009</td>
+                            <td scope="row">named params - array value for 'key' gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">nested010</td>
+                            <td scope="row">Will operate on boxed context</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">nested011</td>
+                            <td scope="row">Will create new copy of nested boxed context, not mutate it</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">nested012</td>
+                            <td scope="row">Will create new copy of nested literal context, not mutate it</td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="14" style="vertical-align:middle">1147-feel-context-merge-function-test-01</td>
+                                <td align="center" rowspan="14" style="vertical-align:middle">
+                                    <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="14" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/1147-feel-context-merge-function">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td scope="row">Will merge a context</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">001_a</td>
+                            <td scope="row">Will merge empty context</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td scope="row">Will merge multiple contexts</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003</td>
+                            <td scope="row">Will overwrite existing context entry</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">004</td>
+                            <td scope="row">Will overwrite (not merge) nested contexts</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">005</td>
+                            <td scope="row">Null contexts param gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">006</td>
+                            <td scope="row">Too few params gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">007</td>
+                            <td scope="row">Too many params gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">008</td>
+                            <td scope="row">named params</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">009</td>
+                            <td scope="row">Incorrect named param gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">010</td>
+                            <td scope="row">Incorrect 'contexts' type gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">011</td>
+                            <td scope="row">Non-context entry in 'contexts' gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">012</td>
+                            <td scope="row">Will coerce single context to list</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">013</td>
+                            <td scope="row">Will coerce single name param entry to list</td>
+                        </tr>
+                        <tr>
                                 <td class="text-nowrap" scope="row" rowspan="2" style="vertical-align:middle">1148-feel-now-function-test-01</td>
                                 <td align="center" rowspan="2" style="vertical-align:middle">
                                     <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
@@ -13487,6 +13859,27 @@
                             <td class="text-nowrap" scope="row">002</td>
                             <td scope="row">Too many params gives null</td>
                         </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="3" style="vertical-align:middle">1150-boxed-conditional-test-01</td>
+                                <td align="center" rowspan="3" style="vertical-align:middle">
+                                    <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="3" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/1150-boxed-conditional">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td scope="row">Will return 'then' expression result when if expr is true</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td scope="row">Will return 'else' expression result when if expr is false</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003</td>
+                            <td scope="row">Will return 'null' when if expression is not boolean</td>
+                        </tr>
                         </tbody>
                     </table>
                 </div>
@@ -13497,7 +13890,7 @@
 <!-- pre-footer -->
 <div class="pre-footer">
     <div class="last-updated">
-        <p>Last updated:</strong> Oct 1, 2023, 12:40:06 AM</p>
+        <p>Last updated:</strong> Nov 1, 2023, 12:37:36 AM</p>
     </div>
 </div>
 <div class="footer">
