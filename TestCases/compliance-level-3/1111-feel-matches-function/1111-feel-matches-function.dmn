@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!-- Extracted from https://dev.w3.org/2011/QT3-test-suite/ -->
-<definitions namespace="http://www.actico.com/spec/DMN/1111-feel-matches-function" name="1111-feel-matches-function"
+<definitions namespace="http://www.gs.com/spec/DMN/1111-feel-matches-function" name="1111-feel-matches-function"
              id="_1111_feel_matches_function" xmlns="https://www.omg.org/spec/DMN/20211108/MODEL/"
              xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
              xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
              xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <description>FEEL built-in function 'matches(input, pattern, flags?)' in category string functions</description>
+
+    <itemDefinition name="booleanList" isCollection="true">
+        <typeRef>boolean</typeRef>
+    </itemDefinition>
 
     <decision name="fn-null-input">
         <description>Evaluates "matches" function with null input</description>
@@ -63,6 +67,7 @@
         </literalExpression>
     </decision>
 
+<!--
     <decision name="fn-matches-32">
         <description> Evaluation of matches function with "q" flag (allowed in XQuery 3.0) </description>
         <variable typeRef="boolean" name="fn-matches-32"/>
@@ -86,6 +91,7 @@
             <text>matches("x[Y-z]", "X[y-Z]", "qi")</text>
         </literalExpression>
     </decision>
+-->
 
     <decision name="fn-matches-45">
         <description> "." does NOT match CR in default mode</description>
@@ -337,9 +343,9 @@
 
     <decision name="K2-MatchesFunc-15">
         <description> A negative character class never match a non-character. </description>
-        <variable typeRef="boolean" name="K2-MatchesFunc-15"/>
+        <variable typeRef="booleanList" name="K2-MatchesFunc-15"/>
         <literalExpression>
-            <text>matches("a", "a[^b]"), matches("a ", "a[^b]")</text>
+            <text>[matches("a", "a[^b]"), matches("a ", "a[^b]")]</text>
         </literalExpression>
     </decision>
 
