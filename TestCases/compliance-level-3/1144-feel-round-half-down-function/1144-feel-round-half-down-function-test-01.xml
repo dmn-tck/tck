@@ -56,6 +56,8 @@
         </resultNode>
     </testCase>
 
+    <!-- commented out pending RTF.  https://github.com/dmn-tck/tck/pull/592#issuecomment-1769761733 -->
+<!--
     <testCase id="006">
         <description>Missing scale param gives null</description>
         <resultNode errorResult="true" name="decision006" type="decision">
@@ -64,6 +66,7 @@
             </expected>
         </resultNode>
     </testCase>
+-->
 
     <testCase id="007">
         <description>null number gives null</description>
