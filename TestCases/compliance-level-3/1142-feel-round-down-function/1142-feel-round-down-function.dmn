@@ -44,12 +44,15 @@
         </literalExpression>
     </decision>
 
+    <!-- commented out pending RTF.  https://github.com/dmn-tck/tck/pull/592#issuecomment-1769761733 -->
+<!--
     <decision name="decision006" id="_decision006">
         <variable name="decision006"/>
         <literalExpression>
             <text>round down(1234)</text>
         </literalExpression>
     </decision>
+-->
 
     <decision name="decision007" id="_decision007">
         <variable name="decision007"/>
