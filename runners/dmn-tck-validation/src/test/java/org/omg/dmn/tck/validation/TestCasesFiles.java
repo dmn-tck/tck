@@ -76,10 +76,43 @@ public class TestCasesFiles {
         return testCases;
     }
 
+    private static Node extractChild(Node parent, String tag) {
+        if (parent == null) {
+            return null;
+        }
+        NodeList childNodes = parent.getChildNodes();
+        for (int i = 0; i < childNodes.getLength(); i++) {
+            Node item = childNodes.item(i);
+            if (tag.equals(item.getNodeName())) {
+                return item;
+            }
+        }
+        return null;
+    }
+
+    private static String extractStringAttribute(Node node, String attributeName) {
+        if (node == null) {
+            return null;
+        }
+        NamedNodeMap attributes = node.getAttributes();
+        Node attribute = attributes.getNamedItem(attributeName);
+        String value = null;
+        if (attribute != null ) {
+            value = attribute.getNodeValue();
+        }
+        return value;
+    }
+
     private String testCaseID;
 
     private File basedir;
     private XPath xPath = XPathFactory.newInstance().newXPath();
+
+    private XPathExpression input;
+    private XPathExpression decision;
+    private XPathExpression bkm;
+    private XPathExpression ds;
+
     private XPathExpression inputDataVarMissingTypeRef;
     private XPathExpression bkmVariable;
     private XPathExpression bkmEncapsulatedLogic;
@@ -94,6 +127,11 @@ public class TestCasesFiles {
         this.testCaseID = testCaseID;
         this.basedir = basedir;
         try {
+            input = xPath.compile("/*[local-name()='definitions']/*[local-name()='inputData']");
+            decision = xPath.compile("/*[local-name()='definitions']/*[local-name()='decision']");
+            bkm = xPath.compile("/*[local-name()='definitions']/*[local-name()='businessKnowledgeModel']");
+            ds = xPath.compile("/*[local-name()='definitions']/*[local-name()='decisionService']");
+
             inputDataVarMissingTypeRef = xPath.compile("/*[local-name()='definitions']/*[local-name()='inputData']/*[local-name()='variable' and not(@*[local-name()='typeRef'])]/../@*[local-name()='name']");
             bkmVariable = xPath.compile("/*[local-name()='definitions']/*[local-name()='businessKnowledgeModel']/*[local-name()='variable']");
             bkmEncapsulatedLogic = xPath.compile("/*[local-name()='definitions']/*[local-name()='businessKnowledgeModel']/*[local-name()='encapsulatedLogic']");
@@ -110,6 +148,7 @@ public class TestCasesFiles {
             validator.setProperty(XMLConstants.ACCESS_EXTERNAL_DTD, "");
             validator.setProperty(XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");
             validator.validate(new StreamSource(dmnFile));
+            checkDRGElementVariable(dmnFile);
             checkInputDataHasTypeRef(dmnFile);
             checkBKMTypeRef(dmnFile);
         }
@@ -165,6 +204,61 @@ public class TestCasesFiles {
         if (!problems.isEmpty()) {
             throw new RuntimeException(problems.stream().collect(Collectors.joining(", "))+". Consider explicity typeRef for the specific test case value or typeRef='Any' if necessary.");
         }
+    }
+
+    // DRGElement.name == DRGElement.variable.name and DRGElement.typeRef == DRGElement.variable.typeRef
+    private void checkDRGElementVariable(File dmnFile) throws Exception {
+        Document xmlDocument = builder.parse(dmnFile);
+        List<String> problems = new ArrayList<>();
+        problems.addAll(checkDRGElementVariable(dmnFile, xmlDocument, input, "input"));
+        problems.addAll(checkDRGElementVariable(dmnFile, xmlDocument, decision, "decision"));
+        problems.addAll(checkDRGElementVariable(dmnFile, xmlDocument, bkm, "businessKnowledgeModel"));
+        problems.addAll(checkDRGElementVariable(dmnFile, xmlDocument, ds, "decisionService"));
+        if (!problems.isEmpty()) {
+            throw new RuntimeException(problems.stream().collect(Collectors.joining(", ")));
+        }
+    }
+
+    private List<String> checkDRGElementVariable(File dmnFile, Document xmlDocument, XPathExpression drgElementPath, String elementName) throws Exception {
+        List<String> problems = new ArrayList<>();
+        // For every DRG Element
+        NodeList xPathVariables = (NodeList) drgElementPath.evaluate(xmlDocument, XPathConstants.NODESET);
+        if (xPathVariables.getLength() > 0) {
+            for (int i = 0; i < xPathVariables.getLength(); i++) {
+                Node drgElementNode = xPathVariables.item(i);
+                // Extract and compare values
+                String name = extractStringAttribute(drgElementNode, "name");
+                String typeRef = extractStringAttribute(drgElementNode, "typeRef");
+                Node variableNode = extractChild(drgElementNode, "variable");
+                String variableName = extractStringAttribute(variableNode, "name");
+                String variableTypeRef = extractStringAttribute(variableNode, "typeRef");
+                // Check name
+                if (name != null && variableName != null) {
+                    if (!name.equals(variableName)) {
+                        String problem = String.format("%s: DRGElement node %s name '%s' is the same with the variable name '%s'",
+                                dmnFile.getName(),
+                                elementName,
+                                name,
+                                variableName);
+                        System.err.println(problem);
+                        problems.add(problem);
+                    }
+                }
+                // Check typeRef
+                if (typeRef != null && variableTypeRef != null) {
+                    if (!typeRef.equals(variableTypeRef)) {
+                        String problem = String.format("%s: DRGElement node %s typeRef '%s' is the same with the variable typeRef '%s'",
+                                dmnFile.getName(),
+                                elementName,
+                                name,
+                                variableName);
+                        System.err.println(problem);
+                        problems.add(problem);
+                    }
+                }
+            }
+        }
+        return problems;
     }
 
     @Test
