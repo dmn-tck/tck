@@ -113,6 +113,8 @@
         </resultNode>
     </testCase>
 
+    <!-- comment pending RTF.  https://github.com/dmn-tck/tck/pull/592#issuecomment-1769761733 -->
+<!--
     <testCase id="011_b">
         <description>Missing 'scale' named param gives null </description>
         <resultNode errorResult="true" name="decision011_b" type="decision">
@@ -121,6 +123,7 @@
             </expected>
         </resultNode>
     </testCase>
+-->
 
     <testCase id="012">
         <description>Incorrect named param gives null</description>
