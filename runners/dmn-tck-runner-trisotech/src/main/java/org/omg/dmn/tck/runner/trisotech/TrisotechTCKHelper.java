@@ -86,7 +86,7 @@ public class TrisotechTCKHelper {
 
         String version = "/" + properties.getProperty("version");
 
-        HttpURLConnection connection = (HttpURLConnection) new URL(publishURL + artifactId + version + "?strict=true").openConnection();
+        HttpURLConnection connection = (HttpURLConnection) new URL(publishURL + artifactId + version + "?strict=true&prop_regexMode=xquery").openConnection();
         connection.setDoOutput(true);
         connection.setRequestMethod("POST");
         connection.setRequestProperty("Authorization", "Bearer " + properties.getProperty("bearer"));
