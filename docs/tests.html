@@ -78,7 +78,7 @@
                 <div class="row">
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Tests:</strong> 3104</p>
+                            <p><strong>Tests:</strong> 3249</p>
                         </small>
                     </div>
                     <div class="col-md-2">
@@ -871,7 +871,7 @@
                             <td scope="row"></td>
                         </tr>
                         <tr>
-                                <td class="text-nowrap" scope="row" rowspan="2988" style="vertical-align:middle">compliance-level-3</td>
+                                <td class="text-nowrap" scope="row" rowspan="3133" style="vertical-align:middle">compliance-level-3</td>
                                 <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0001-filter-test-01</td>
                                 <td align="center" rowspan="1" style="vertical-align:middle">
                                     <a target="_blank" href="https://github.com/dmn-tck/tck/blob/master/TestCases/compliance-level-3/0001-filter/0001-filter.pdf">
@@ -5886,11 +5886,11 @@
                             <td scope="row">empty map as param</td>
                         </tr>
                         <tr>
-                                <td class="text-nowrap" scope="row" rowspan="33" style="vertical-align:middle">0082-feel-coercion-test-01</td>
-                                <td align="center" rowspan="33" style="vertical-align:middle">
+                                <td class="text-nowrap" scope="row" rowspan="36" style="vertical-align:middle">0082-feel-coercion-test-01</td>
+                                <td align="center" rowspan="36" style="vertical-align:middle">
                                     <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
                                 </td>
-                                <td align="center" rowspan="33" style="vertical-align:middle">
+                                <td align="center" rowspan="36" style="vertical-align:middle">
                                     <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/0082-feel-coercion">
                                         <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
                                     </a>
@@ -6031,6 +6031,18 @@
                         <tr>
                             <td class="text-nowrap" scope="row">decisionService_002_c</td>
                             <td scope="row">Indirect invocation: Decision service has string input but we pass in singleton list of correct type - input is coerced to string</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">decision_context_01</td>
+                            <td scope="row">Value of context() equivalentTo the decision typeRef</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">decision_context_02</td>
+                            <td scope="row">Value of context() conformsTo the decision typeRef</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">decision_context_03</td>
+                            <td scope="row">Value of context() does not conformsTo the decision typeRef</td>
                         </tr>
                         <tr>
                                 <td class="text-nowrap" scope="row" rowspan="14" style="vertical-align:middle">0083-feel-unicode-test-01</td>
@@ -11535,74 +11547,162 @@
                             <td scope="row"></td>
                         </tr>
                         <tr>
-                                <td class="text-nowrap" scope="row" rowspan="6" style="vertical-align:middle">1101-feel-floor-function-test-01</td>
-                                <td align="center" rowspan="6" style="vertical-align:middle">
+                                <td class="text-nowrap" scope="row" rowspan="17" style="vertical-align:middle">1101-feel-floor-function-test-01</td>
+                                <td align="center" rowspan="17" style="vertical-align:middle">
                                     <a target="_blank" href="https://github.com/dmn-tck/tck/blob/master/TestCases/compliance-level-3/1101-feel-floor-function/Readme.md">
                                         <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
                                     </a>
                                 </td>
-                                <td align="center" rowspan="6" style="vertical-align:middle">
+                                <td align="center" rowspan="17" style="vertical-align:middle">
                                     <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/1101-feel-floor-function">
                                         <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
                                     </a>
                                 </td>
-                            <td class="text-nowrap" scope="row">001_75592d0dee</td>
-                            <td scope="row"></td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td scope="row">Will round down positive number to nearest integer when no scale</td>
                         </tr>
                         <tr>
-                            <td class="text-nowrap" scope="row">002_6fea586853</td>
-                            <td scope="row"></td>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td scope="row">Will round down negative number to nearest integer when no scale</td>
                         </tr>
                         <tr>
-                            <td class="text-nowrap" scope="row">003_cbae05445d</td>
-                            <td scope="row"></td>
+                            <td class="text-nowrap" scope="row">003</td>
+                            <td scope="row">Will round down negative number to nearest integer when no scale</td>
                         </tr>
                         <tr>
-                            <td class="text-nowrap" scope="row">004_30f6d26798</td>
-                            <td scope="row"></td>
+                            <td class="text-nowrap" scope="row">004</td>
+                            <td scope="row">Will round down positive decimal to given scale</td>
                         </tr>
                         <tr>
-                            <td class="text-nowrap" scope="row">005_dd970ad275</td>
-                            <td scope="row"></td>
+                            <td class="text-nowrap" scope="row">005</td>
+                            <td scope="row">Will round down negative decimal to given scale</td>
                         </tr>
                         <tr>
-                            <td class="text-nowrap" scope="row">006_1223620d9c</td>
-                            <td scope="row"></td>
+                            <td class="text-nowrap" scope="row">006</td>
+                            <td scope="row">Will give null when 'n' is null</td>
                         </tr>
                         <tr>
-                                <td class="text-nowrap" scope="row" rowspan="6" style="vertical-align:middle">1102-feel-ceiling-function-test-01</td>
-                                <td align="center" rowspan="6" style="vertical-align:middle">
+                            <td class="text-nowrap" scope="row">007</td>
+                            <td scope="row">Will give null when named param 'n' is null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">008</td>
+                            <td scope="row">Will give null when 'scale' is null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">009</td>
+                            <td scope="row">Will give null when named param 'scale' is null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">010</td>
+                            <td scope="row">No params gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">011</td>
+                            <td scope="row">Too many params gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">012</td>
+                            <td scope="row">Additional unknown named param gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">013</td>
+                            <td scope="row">Unknown named param gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">014</td>
+                            <td scope="row">Invalid type for 'n' gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">015</td>
+                            <td scope="row">Invalid type for named param 'n' gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">016</td>
+                            <td scope="row">Invalid type for 'scale' gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">017</td>
+                            <td scope="row">Invalid type for named param 'scale' gives null</td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="17" style="vertical-align:middle">1102-feel-ceiling-function-test-01</td>
+                                <td align="center" rowspan="17" style="vertical-align:middle">
                                     <a target="_blank" href="https://github.com/dmn-tck/tck/blob/master/TestCases/compliance-level-3/1102-feel-ceiling-function/Readme.md">
                                         <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
                                     </a>
                                 </td>
-                                <td align="center" rowspan="6" style="vertical-align:middle">
+                                <td align="center" rowspan="17" style="vertical-align:middle">
                                     <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/1102-feel-ceiling-function">
                                         <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
                                     </a>
                                 </td>
-                            <td class="text-nowrap" scope="row">001_3df249d9c6</td>
-                            <td scope="row"></td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td scope="row">Will round up positive number to nearest integer when no scale</td>
                         </tr>
                         <tr>
-                            <td class="text-nowrap" scope="row">002_1052993cd8</td>
-                            <td scope="row"></td>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td scope="row">Will round up negative number to nearest integer when no scale</td>
                         </tr>
                         <tr>
-                            <td class="text-nowrap" scope="row">003_ca33989df5</td>
-                            <td scope="row"></td>
+                            <td class="text-nowrap" scope="row">003</td>
+                            <td scope="row">Will round up negative number to nearest integer when no scale</td>
                         </tr>
                         <tr>
-                            <td class="text-nowrap" scope="row">004_be4a3e809c</td>
-                            <td scope="row"></td>
+                            <td class="text-nowrap" scope="row">004</td>
+                            <td scope="row">Will round up positive decimal to given scale</td>
                         </tr>
                         <tr>
-                            <td class="text-nowrap" scope="row">005_cc56ed5373</td>
-                            <td scope="row"></td>
+                            <td class="text-nowrap" scope="row">005</td>
+                            <td scope="row">Will round up negative decimal to given scale</td>
                         </tr>
                         <tr>
-                            <td class="text-nowrap" scope="row">006_bbdf3bf8d7</td>
-                            <td scope="row"></td>
+                            <td class="text-nowrap" scope="row">006</td>
+                            <td scope="row">Will give null when 'n' is null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">007</td>
+                            <td scope="row">Will give null when named param 'n' is null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">008</td>
+                            <td scope="row">Will give null when 'scale' is null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">009</td>
+                            <td scope="row">Will give null when named param 'scale' is null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">010</td>
+                            <td scope="row">No params gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">011</td>
+                            <td scope="row">Too many params gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">012</td>
+                            <td scope="row">Additional unknown named param gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">013</td>
+                            <td scope="row">Unknown named param gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">014</td>
+                            <td scope="row">Invalid type for 'n' gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">015</td>
+                            <td scope="row">Invalid type for named param 'n' gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">016</td>
+                            <td scope="row">Invalid type for 'scale' gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">017</td>
+                            <td scope="row">Invalid type for named param 'scale' gives null</td>
                         </tr>
                         <tr>
                                 <td class="text-nowrap" scope="row" rowspan="11" style="vertical-align:middle">1103-feel-substring-function-test-01</td>
@@ -12055,6 +12155,184 @@
                         <tr>
                             <td class="text-nowrap" scope="row">010_9ae03e0e59</td>
                             <td scope="row"></td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="40" style="vertical-align:middle">1111-feel-matches-function-test-01</td>
+                                <td align="center" rowspan="40" style="vertical-align:middle">
+                                    <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="40" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/1111-feel-matches-function">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">fn-null-input</td>
+                            <td scope="row">Evaluates "matches" function with null input</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">fn-null-pattern</td>
+                            <td scope="row">Evaluates "matches" function with null pattern</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">fn-null-flags</td>
+                            <td scope="row">Evaluates "matches" function with null flags</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">fn-matches2args-1</td>
+                            <td scope="row">Evaluates The "matches" function with the arguments set as follows: $input = xs:string(lower bound)
+            $pattern = xs:string(lower bound)
+        </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">fn-matchesErr-1</td>
+                            <td scope="row">Invalid flag for third argument of matches.</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">fn-matches-27</td>
+                            <td scope="row">Check for the correct behavior of ^ and $ in multi-line mode This test case was motivated by the
+            resolution of Bug Report 4543
+        </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">fn-matches-28</td>
+                            <td scope="row">Check for the correct behavior of ^ and $ in multi-line mode This test case was motivated by the
+            resolution of Bug Report 4543
+        </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">fn-matches-45</td>
+                            <td scope="row">"." does NOT match CR in default mode</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">caselessmatch01</td>
+                            <td scope="row">Simple call of matches() with "i" flag</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">caselessmatch02</td>
+                            <td scope="row">Call of matches() with "i" flag and a character range</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">caselessmatch03</td>
+                            <td scope="row">Call of matches() with "i" flag and a character range</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">caselessmatch07</td>
+                            <td scope="row">Call of matches() with "i" flag and Kelvin sign Kelvin sign</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">caselessmatch08</td>
+                            <td scope="row">Call of matches() with "i" flag and range subtraction</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">caselessmatch09</td>
+                            <td scope="row">Call of matches() with "i" flag and range subtraction</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">caselessmatch10</td>
+                            <td scope="row">Call of matches() with "i" flag and range subtraction</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">caselessmatch11</td>
+                            <td scope="row">Call of matches() with "i" flag and range subtraction</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">caselessmatch12</td>
+                            <td scope="row">Call of matches() with "i" flag and negation</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">caselessmatch13</td>
+                            <td scope="row">Call of matches() with "i" flag and negation</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">K-MatchesFunc-1</td>
+                            <td scope="row">The pattern can't be the empty sequence.</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">K-MatchesFunc-2</td>
+                            <td scope="row">matches() takes at least two arguments, not one.</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">K-MatchesFunc-3</td>
+                            <td scope="row">The third argument cannot be the empty sequence.</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">K-MatchesFunc-4</td>
+                            <td scope="row">Only three arguments are accepted.</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">K-MatchesFunc-5</td>
+                            <td scope="row">The flags argument cannot contain whitespace.</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">K-MatchesFunc-6</td>
+                            <td scope="row">The flags argument cannot contain 'X'.</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">K2-MatchesFunc-1</td>
+                            <td scope="row">Whitespace in the regexp is collapsed.</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">K2-MatchesFunc-2</td>
+                            <td scope="row">Whitespace(before) in the regexp is collapsed, but not inside a character class.</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">K2-MatchesFunc-3</td>
+                            <td scope="row">Whitespace(after) in the regexp is collapsed, but not inside a character class.</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">K2-MatchesFunc-4</td>
+                            <td scope="row">Whitespace(in the middle) in the regexp is collapsed, but not inside a character class.
+        </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">K2-MatchesFunc-5</td>
+                            <td scope="row">whitespace in the regexp is collapsed, and should therefore compile.</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">K2-MatchesFunc-6</td>
+                            <td scope="row">whitespace in the regexp is collapsed completely, and should therefore compile and match.
+        </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">K2-MatchesFunc-7</td>
+                            <td scope="row">whitespace in the regexp is not collapsed, and should therefore not compile.</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">K2-MatchesFunc-8</td>
+                            <td scope="row">Since no string is captured by the back-reference, the single character is matched.</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">K2-MatchesFunc-9</td>
+                            <td scope="row">Since no string is captured by the back-reference, the single character is matched(#2).
+        </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">K2-MatchesFunc-10</td>
+                            <td scope="row">A non-matching backwards-reference matches the empty string.</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">K2-MatchesFunc-11</td>
+                            <td scope="row">Use a back reference inside a character class.</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">K2-MatchesFunc-12</td>
+                            <td scope="row">Use a back reference inside a character class(#2).</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">K2-MatchesFunc-13</td>
+                            <td scope="row">Use a back reference inside a character class(#3).</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">K2-MatchesFunc-14</td>
+                            <td scope="row">Use a back reference inside a character class(#3).</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">K2-MatchesFunc-15</td>
+                            <td scope="row"> A negative character class never match a non-character. </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">K2-MatchesFunc-17</td>
+                            <td scope="row">Caseless match with back-reference.</td>
                         </tr>
                         <tr>
                                 <td class="text-nowrap" scope="row" rowspan="52" style="vertical-align:middle">1115-feel-date-function-test-01</td>
@@ -13551,6 +13829,298 @@
                             <td scope="row">Non-list string named list param is coerced to list</td>
                         </tr>
                         <tr>
+                                <td class="text-nowrap" scope="row" rowspan="16" style="vertical-align:middle">1141-feel-round-up-function-test-01</td>
+                                <td align="center" rowspan="16" style="vertical-align:middle">
+                                    <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="16" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/1141-feel-round-up-function">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td scope="row">Will round to integer</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td scope="row">Will round to negative to integer</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003</td>
+                            <td scope="row">Will round positive to scale</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">004</td>
+                            <td scope="row">Will round negative to scale</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">005</td>
+                            <td scope="row">No params gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">007</td>
+                            <td scope="row">null number gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">008</td>
+                            <td scope="row">null scale gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">009</td>
+                            <td scope="row">Too many params gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">010</td>
+                            <td scope="row">named params</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">011_a</td>
+                            <td scope="row">Missing 'n' named param gives null </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">012</td>
+                            <td scope="row">Incorrect named param gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">013</td>
+                            <td scope="row">Incorrect 'n' type gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">014</td>
+                            <td scope="row">Incorrect 'scale' type gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">016_b</td>
+                            <td scope="row">less than min scale gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">017_a</td>
+                            <td scope="row">Max scale is 6176</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">017_b</td>
+                            <td scope="row">Greater than max scale gives null</td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="16" style="vertical-align:middle">1142-feel-round-down-function-test-01</td>
+                                <td align="center" rowspan="16" style="vertical-align:middle">
+                                    <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="16" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/1142-feel-round-down-function">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td scope="row">Will round to integer</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td scope="row">Will round to negative to integer</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003</td>
+                            <td scope="row">Will round positive to scale</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">004</td>
+                            <td scope="row">Will round negative to scale</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">005</td>
+                            <td scope="row">No params gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">007</td>
+                            <td scope="row">null number gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">008</td>
+                            <td scope="row">null scale gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">009</td>
+                            <td scope="row">Too many params gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">010</td>
+                            <td scope="row">named params</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">011_a</td>
+                            <td scope="row">Missing 'n' named param gives null </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">012</td>
+                            <td scope="row">Incorrect named param gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">013</td>
+                            <td scope="row">Incorrect 'n' type gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">014</td>
+                            <td scope="row">Incorrect 'scale' type gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">016_b</td>
+                            <td scope="row">less than min scale gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">017_a</td>
+                            <td scope="row">Max scale is 6176</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">017_b</td>
+                            <td scope="row">Greater than max scale gives null</td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="16" style="vertical-align:middle">1143-feel-round-half-up-function-test-01</td>
+                                <td align="center" rowspan="16" style="vertical-align:middle">
+                                    <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="16" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/1143-feel-round-half-up-function">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td scope="row">Will round to integer</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td scope="row">Will round to negative to integer</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003</td>
+                            <td scope="row">Will round positive to scale</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">004</td>
+                            <td scope="row">Will round negative to scale</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">005</td>
+                            <td scope="row">No params gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">007</td>
+                            <td scope="row">null number gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">008</td>
+                            <td scope="row">null scale gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">009</td>
+                            <td scope="row">Too many params gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">010</td>
+                            <td scope="row">named params</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">011_a</td>
+                            <td scope="row">Missing 'n' named param gives null </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">012</td>
+                            <td scope="row">Incorrect named param gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">013</td>
+                            <td scope="row">Incorrect 'n' type gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">014</td>
+                            <td scope="row">Incorrect 'scale' type gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">016_b</td>
+                            <td scope="row">less than min scale gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">017_a</td>
+                            <td scope="row">Max scale is 6176</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">017_b</td>
+                            <td scope="row">Greater than max scale gives null</td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="16" style="vertical-align:middle">1144-feel-round-half-down-function-test-01</td>
+                                <td align="center" rowspan="16" style="vertical-align:middle">
+                                    <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="16" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/1144-feel-round-half-down-function">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td scope="row">Will round to integer</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td scope="row">Will round to negative to integer</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003</td>
+                            <td scope="row">Will round positive to scale</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">004</td>
+                            <td scope="row">Will round negative to scale</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">005</td>
+                            <td scope="row">No params gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">007</td>
+                            <td scope="row">null number gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">008</td>
+                            <td scope="row">null scale gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">009</td>
+                            <td scope="row">Too many params gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">010</td>
+                            <td scope="row">named params</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">011_a</td>
+                            <td scope="row">Missing 'n' named param gives null </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">012</td>
+                            <td scope="row">Incorrect named param gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">013</td>
+                            <td scope="row">Incorrect 'n' type gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">014</td>
+                            <td scope="row">Incorrect 'scale' type gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">016_b</td>
+                            <td scope="row">less than min scale gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">017_a</td>
+                            <td scope="row">Max scale is 6176</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">017_b</td>
+                            <td scope="row">Greater than max scale gives null</td>
+                        </tr>
+                        <tr>
                                 <td class="text-nowrap" scope="row" rowspan="18" style="vertical-align:middle">1145-feel-context-function-test-01</td>
                                 <td align="center" rowspan="18" style="vertical-align:middle">
                                     <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
@@ -13880,6 +14450,106 @@
                             <td class="text-nowrap" scope="row">003</td>
                             <td scope="row">Will return 'null' when if expression is not boolean</td>
                         </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="4" style="vertical-align:middle">1151-boxed-filter-test-01</td>
+                                <td align="center" rowspan="4" style="vertical-align:middle">
+                                    <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="4" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/1151-boxed-filter">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td scope="row">Will filter 'in' values based on 'match' expression</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td scope="row">Will return an empty list when no values match</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">004</td>
+                            <td scope="row">Will return null when 'match' does not return boolean</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">005</td>
+                            <td scope="row">Will return null when any 'match' does not return boolean</td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="2" style="vertical-align:middle">1152-boxed-for-test-01</td>
+                                <td align="center" rowspan="2" style="vertical-align:middle">
+                                    <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="2" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/1152-boxed-for">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td scope="row">Will map 'in' values based on 'return' expression</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td scope="row">Will return an empty list when 'in' is empty</td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="5" style="vertical-align:middle">1153-boxed-some-test-01</td>
+                                <td align="center" rowspan="5" style="vertical-align:middle">
+                                    <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="5" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/1153-boxed-some">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td scope="row">Will report true when 'in' elements satisfy expression</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td scope="row">Will report false when no 'in' elements satisfy expression</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">005</td>
+                            <td scope="row">Will return null when 'satisfies' does not return boolean</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">006</td>
+                            <td scope="row">Will return null when any 'satisfies' does not return boolean</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">007</td>
+                            <td scope="row">Will return false for empty list</td>
+                        </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="5" style="vertical-align:middle">1154-boxed-every-test-01</td>
+                                <td align="center" rowspan="5" style="vertical-align:middle">
+                                    <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="5" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/1154-boxed-every">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td scope="row">Will report true when all 'in' elements satisfy expression</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td scope="row">Will report false when not all 'in' elements satisfy expression</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">005</td>
+                            <td scope="row">Will return null when 'satisfies' does not return boolean</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">006</td>
+                            <td scope="row">Will return null when any 'satisfies' does not return boolean</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">007</td>
+                            <td scope="row">Will return true for empty list</td>
+                        </tr>
                         </tbody>
                     </table>
                 </div>
@@ -13890,7 +14560,7 @@
 <!-- pre-footer -->
 <div class="pre-footer">
     <div class="last-updated">
-        <p>Last updated:</strong> Nov 2, 2023, 8:05:38 AM</p>
+        <p>Last updated:</strong> Dec 1, 2023, 12:40:44 AM</p>
     </div>
 </div>
 <div class="footer">

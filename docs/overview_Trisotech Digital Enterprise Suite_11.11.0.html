@@ -90,12 +90,12 @@
                 <div class="row">
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Date:</strong> 2023-10-19</p>
+                            <p><strong>Date:</strong> 2023-11-16</p>
                         </small>
                     </div>
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Tests:</strong> 3104</p>
+                            <p><strong>Tests:</strong> 3249</p>
                         </small>
                     </div>
                     <div class="col-md-2">
@@ -117,7 +117,7 @@
                 };
 
                 var color = Chart.helpers.color;
-                var cbl1_data = {
+                var cbl0_data = {
                     labels: [
                         "Aggregator: COUNT","Aggregator: MIN","Aggregator: SUM","Business Knowledge Model","Compliance Level 2","Compliance Level 3","Context","DMN Import","Data Type : String","Data Type: Boolean","Data Type: Collection","Data Type: Context","Data Type: Date","Data Type: Date and Time","Data Type: Days and Time Duration","Data Type: Function","Data Type: List","Data Type: Number","Data Type: String","Data Type: Structure","Data Type: Text","Data Type: Time","Data Type: Years and Months Duration","Data Type: any","Data Type: date","Data Type: date and time","Decision Services","Decision Table: Multiple Output","Decision Table: Multiple Output Columns","Decision Table: Single Output","FEEL Arithmetic","FEEL Conditionals","FEEL Constants","FEEL External Java","FEEL Filter (10.3.2.5)","FEEL Function Literals","FEEL Functions: context","FEEL Functions: conversion","FEEL Functions: date and time","FEEL Functions: lambda","FEEL Functions: list","FEEL Functions: lists","FEEL Functions: map","FEEL Functions: miscellaneous","FEEL Functions: negation","FEEL Functions: number","FEEL Functions: numeric","FEEL Functions: string","FEEL Functions: strings","FEEL Iteration","FEEL List","FEEL List Operator","FEEL Paths","FEEL Qualified Hrefs","FEEL Qualified Names","FEEL Quantifiers","FEEL Relation","FEEL Special-character Names","FEEL TYpe Conformance","FEEL comments","FEEL equality","FEEL properties","FEEL: Interval functions","Feel : any","Function Definition","Function Invocation","Hit Policy: ANY","Hit Policy: COLLECT","Hit Policy: Collect","Hit Policy: FIRST","Hit Policy: OUTPUT ORDER","Hit Policy: PRIORITY","Hit Policy: RULE ORDER","Hit Policy: UNIQUE","Item Definition","Literal Expression","Literal Function Invocation","Relation","[no label]"
                     ],
@@ -133,7 +133,7 @@
                                 3,
                                 24,
                                 116,
-                                1,690,
+                                1,819,
                                 17,
                                 2,
                                 6,
@@ -143,10 +143,10 @@
                                 14,
                                 3,
                                 3,
-                                138,
+                                149,
                                 109,
-                                356,
-                                238,
+                                442,
+                                278,
                                 67,
                                 3,
                                 4,
@@ -158,7 +158,7 @@
                                 18,
                                 3,
                                 67,
-                                253,
+                                275,
                                 323,
                                 44,
                                 18,
@@ -173,10 +173,10 @@
                                 23,
                                 4,
                                 6,
-                                149,
+                                235,
                                 7,
                                 72,
-                                102,
+                                142,
                                 19,
                                 34,
                                 6,
@@ -186,12 +186,12 @@
                                 3,
                                 1,
                                 43,
-                                33,
+                                36,
                                 3,
                                 108,
                                 67,
                                 14,
-                                427,
+                                430,
                                 5,
                                 9,
                                 6,
@@ -203,10 +203,10 @@
                                 6,
                                 21,
                                 121,
-                                524,
+                                564,
                                 8,
                                 4,
-                                1,244
+                                1,260
                             ]
                         },
                         {
@@ -472,7 +472,7 @@
                         }
                     ]
                 };
-                var cblp1_data = {
+                var cblp0_data = {
                     labels: [
                         "Aggregator: COUNT","Aggregator: MIN","Aggregator: SUM","Business Knowledge Model","Compliance Level 2","Compliance Level 3","Context","DMN Import","Data Type : String","Data Type: Boolean","Data Type: Collection","Data Type: Context","Data Type: Date","Data Type: Date and Time","Data Type: Days and Time Duration","Data Type: Function","Data Type: List","Data Type: Number","Data Type: String","Data Type: Structure","Data Type: Text","Data Type: Time","Data Type: Years and Months Duration","Data Type: any","Data Type: date","Data Type: date and time","Decision Services","Decision Table: Multiple Output","Decision Table: Multiple Output Columns","Decision Table: Single Output","FEEL Arithmetic","FEEL Conditionals","FEEL Constants","FEEL External Java","FEEL Filter (10.3.2.5)","FEEL Function Literals","FEEL Functions: context","FEEL Functions: conversion","FEEL Functions: date and time","FEEL Functions: lambda","FEEL Functions: list","FEEL Functions: lists","FEEL Functions: map","FEEL Functions: miscellaneous","FEEL Functions: negation","FEEL Functions: number","FEEL Functions: numeric","FEEL Functions: string","FEEL Functions: strings","FEEL Iteration","FEEL List","FEEL List Operator","FEEL Paths","FEEL Qualified Hrefs","FEEL Qualified Names","FEEL Quantifiers","FEEL Relation","FEEL Special-character Names","FEEL TYpe Conformance","FEEL comments","FEEL equality","FEEL properties","FEEL: Interval functions","Feel : any","Function Definition","Function Invocation","Hit Policy: ANY","Hit Policy: COLLECT","Hit Policy: Collect","Hit Policy: FIRST","Hit Policy: OUTPUT ORDER","Hit Policy: PRIORITY","Hit Policy: RULE ORDER","Hit Policy: UNIQUE","Item Definition","Literal Expression","Literal Function Invocation","Relation","[no label]"
                     ],
@@ -830,10 +830,10 @@
 
                 window.onload = function() {
                     // chart by test numbers
-                    var ctx = document.getElementById("cbl1").getContext("2d");
-                    window.cbl1 = new Chart(ctx, {
+                    var ctx = document.getElementById("cbl0").getContext("2d");
+                    window.cbl0 = new Chart(ctx, {
                         type: 'horizontalBar',
-                        data: cbl1_data,
+                        data: cbl0_data,
                         options: {
                             // Elements options apply to all of the options unless overridden in a dataset
                             // In this case, we are setting the border of each horizontal bar to be 2px wide
@@ -862,10 +862,10 @@
                     });
 
                     // chart by test percentage
-                    var ctxp = document.getElementById("cblp1").getContext("2d");
-                    window.cblp1 = new Chart(ctxp, {
+                    var ctxp = document.getElementById("cblp0").getContext("2d");
+                    window.cblp0 = new Chart(ctxp, {
                         type: 'horizontalBar',
-                        data: cblp1_data,
+                        data: cblp0_data,
                         options: {
                             // Elements options apply to all of the options unless overridden in a dataset
                             // In this case, we are setting the border of each horizontal bar to be 2px wide
@@ -906,12 +906,12 @@
             <div class="tab-content">
                 <div id="tab1" class="tab-pane fade active in">
                     <div id="chart_by_percent" style="width: 100%;">
-                        <canvas id="cblp1"></canvas>
+                        <canvas id="cblp0"></canvas>
                     </div>
                 </div>
                 <div id="tab2" class="tab-pane fade">
                     <div id="chart_by_numbers" style="width: 100%;">
-                        <canvas id="cbl1"></canvas>
+                        <canvas id="cbl0"></canvas>
                     </div>
                 </div>
                 <div id="tab3" class="tab-pane fade">
@@ -963,7 +963,7 @@
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech Digital Enterprise Suite_11.11.0.html', 'tb5','Compliance Level 3')">Compliance Level 3</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>1690/1690</small></span>
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>1819/1819</small></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -1023,7 +1023,7 @@
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech Digital Enterprise Suite_11.11.0.html', 'tb15','Data Type: Function')">Data Type: Function</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>138/138</small></span>
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>149/149</small></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -1035,13 +1035,13 @@
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech Digital Enterprise Suite_11.11.0.html', 'tb17','Data Type: Number')">Data Type: Number</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>356/356</small></span>
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>442/442</small></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech Digital Enterprise Suite_11.11.0.html', 'tb18','Data Type: String')">Data Type: String</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>238/238</small></span>
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>278/278</small></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -1113,7 +1113,7 @@
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech Digital Enterprise Suite_11.11.0.html', 'tb30','FEEL Arithmetic')">FEEL Arithmetic</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>253/253</small></span>
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>275/275</small></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -1203,7 +1203,7 @@
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech Digital Enterprise Suite_11.11.0.html', 'tb45','FEEL Functions: number')">FEEL Functions: number</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>149/149</small></span>
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>235/235</small></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -1221,7 +1221,7 @@
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech Digital Enterprise Suite_11.11.0.html', 'tb48','FEEL Functions: strings')">FEEL Functions: strings</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>102/102</small></span>
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>142/142</small></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -1281,7 +1281,7 @@
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech Digital Enterprise Suite_11.11.0.html', 'tb58','FEEL TYpe Conformance')">FEEL TYpe Conformance</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>33/33</small></span>
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>36/36</small></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -1311,7 +1311,7 @@
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech Digital Enterprise Suite_11.11.0.html', 'tb63','Feel : any')">Feel : any</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>427/427</small></span>
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>430/430</small></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -1383,7 +1383,7 @@
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech Digital Enterprise Suite_11.11.0.html', 'tb75','Literal Expression')">Literal Expression</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>524/524</small></span>
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>564/564</small></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -1401,7 +1401,7 @@
                                 <tr>
                                     <th class="text-nowrap text-small" scope="row"><a onclick="labelDetail('detail_Trisotech Digital Enterprise Suite_11.11.0.html', 'tb78','[no label]')">[no label]</a></th>
                                     <td align="center">
-                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>1244/1244</small></span>
+                                        <span class="glyphicon glyphicon-ok icon-green" aria-hidden="true"><br/><small>1260/1260</small></span>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -1425,7 +1425,7 @@
 <!-- pre-footer -->
 <div class="pre-footer">
     <div class="last-updated">
-        <p>Last updated:</strong> Nov 2, 2023, 8:05:38 AM</p>
+        <p>Last updated:</strong> Dec 1, 2023, 12:40:44 AM</p>
     </div>
 </div>
 <div class="footer">
