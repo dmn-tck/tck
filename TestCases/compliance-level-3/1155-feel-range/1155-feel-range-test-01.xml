@@ -1,0 +1,1143 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<modelName>1155-feel-range.dmn</modelName>
+	<labels>
+		<label>Compliance Level 3</label>
+		<label>Literal Expression</label>
+		<label>Data Type: Range</label>
+	</labels>
+	<testCase id="tc-1" name="Range of dates">
+		<inputNode name="Range as string">
+			<value xsi:type="xsd:string">[date("2021-01-01")..date("2021-05-01"))</value>
+		</inputNode>
+		<inputNode name="Value Included">
+			<value xsi:type="xsd:date">2021-02-01</value>
+		</inputNode>
+		<inputNode name="Value Excluded">
+			<value xsi:type="xsd:date">2023-01-01</value>
+		</inputNode>
+		<resultNode name="Range output" xsi:type="Range output">
+			<expected>
+				<component name="start">
+					<value xsi:type="xsd:date">2021-01-01</value>
+				</component>
+				<component name="end">
+					<value xsi:type="xsd:date">2021-05-01</value>
+				</component>
+				<component name="start included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="end included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of number">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="range of time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of string">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of dt duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date and time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of ym duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="excluded">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="tc-2" name="Less than date">
+		<inputNode name="Range as string">
+			<value xsi:type="xsd:string">&lt; date("2021-01-01")</value>
+		</inputNode>
+		<inputNode name="Value Included">
+			<value xsi:type="xsd:date">2020-02-01</value>
+		</inputNode>
+		<inputNode name="Value Excluded">
+			<value xsi:type="xsd:date">2023-01-01</value>
+		</inputNode>
+		<resultNode name="Range output" xsi:type="Range output">
+			<expected>
+				<component name="start">
+					<value xsi:type="xsd:date" xsi:nil="true"/>
+				</component>
+				<component name="end">
+					<value xsi:type="xsd:date">2021-01-01</value>
+				</component>
+				<component name="start included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="end included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of number">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="range of time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of string">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of dt duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date and time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of ym duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="excluded">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="tc-3" name="Greater or equal to a date">
+		<inputNode name="Range as string">
+			<value xsi:type="xsd:string">&gt;= date("2021-01-01")</value>
+		</inputNode>
+		<inputNode name="Value Included">
+			<value xsi:type="xsd:date">2021-01-01</value>
+		</inputNode>
+		<inputNode name="Value Excluded">
+			<value xsi:type="xsd:date">2020-01-01</value>
+		</inputNode>
+		<resultNode name="Range output" xsi:type="Range output">
+			<expected>
+				<component name="start">
+					<value xsi:type="xsd:date">2021-01-01</value>
+				</component>
+				<component name="end">
+					<value xsi:type="xsd:date" xsi:nil="true"/>
+				</component>
+				<component name="start included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="end included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of number">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="range of time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of string">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of dt duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date and time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of ym duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="excluded">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="tc-4" name="Range of numbers">
+		<inputNode name="Range as string">
+			<value xsi:type="xsd:string">(1 .. 100]</value>
+		</inputNode>
+		<inputNode name="Value Included">
+			<value xsi:type="xsd:integer">77</value>
+		</inputNode>
+		<inputNode name="Value Excluded">
+			<value xsi:type="xsd:integer">10000</value>
+		</inputNode>
+		<resultNode name="Range output" xsi:type="Range output">
+			<expected>
+				<component name="start">
+					<value xsi:type="xsd:integer">1</value>
+				</component>
+				<component name="end">
+					<value xsi:type="xsd:integer">100</value>
+				</component>
+				<component name="start included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="end included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="range of number">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="range of date">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of string">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of dt duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date and time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of ym duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="excluded">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="tc-5" name="Less or equal to number">
+		<inputNode name="Range as string">
+			<value xsi:type="xsd:string">&lt;=244</value>
+		</inputNode>
+		<inputNode name="Value Included">
+			<value xsi:type="xsd:integer">77</value>
+		</inputNode>
+		<inputNode name="Value Excluded">
+			<value xsi:type="xsd:integer">10000</value>
+		</inputNode>
+		<resultNode name="Range output" xsi:type="Range output">
+			<expected>
+				<component name="start">
+					<value xsi:type="xsd:integer" xsi:nil="true"/>
+				</component>
+				<component name="end">
+					<value xsi:type="xsd:integer">244</value>
+				</component>
+				<component name="start included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="end included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="range of number">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="range of date">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of string">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of dt duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date and time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of ym duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="excluded">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="tc-6" name="Greater then number">
+		<inputNode name="Range as string">
+			<value xsi:type="xsd:string">>566</value>
+		</inputNode>
+		<inputNode name="Value Included">
+			<value xsi:type="xsd:integer">700</value>
+		</inputNode>
+		<inputNode name="Value Excluded">
+			<value xsi:type="xsd:integer">566</value>
+		</inputNode>
+		<resultNode name="Range output" xsi:type="Range output">
+			<expected>
+				<component name="start">
+					<value xsi:type="xsd:integer">566</value>
+				</component>
+				<component name="end">
+					<value xsi:type="xsd:integer" xsi:nil="true"/>
+				</component>
+				<component name="start included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="end included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of number">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="range of date">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of string">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of dt duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date and time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of ym duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="excluded">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="tc-7" name="Range of date and time">
+		<inputNode name="Range as string">
+			<value xsi:type="xsd:string">[date and time(date(&quot;2021-01-01&quot;), time(&quot;01:01:01&quot;))..date and time(date(&quot;2021-01-02&quot;), time(&quot;02:02:02&quot;))]</value>
+		</inputNode>
+		<inputNode name="Value Included">
+			<value xsi:type="xsd:dateTime">2021-01-01T01:01:01</value>
+		</inputNode>
+		<inputNode name="Value Excluded">
+			<value xsi:type="xsd:dateTime">2018-01-01T01:01:01</value>
+		</inputNode>
+		<resultNode name="Range output" xsi:type="Range output">
+			<expected>
+				<component name="start">
+					<value xsi:type="xsd:dateTime">2021-01-01T01:01:01</value>
+				</component>
+				<component name="end">
+					<value xsi:type="xsd:dateTime">2021-01-02T02:02:02</value>
+				</component>
+				<component name="start included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="end included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="range of number">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of string">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of dt duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date and time">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="range of ym duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="excluded">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="tc-8" name="Less than date and time">
+		<inputNode name="Range as string">
+			<value xsi:type="xsd:string">&lt; date and time(date(&quot;2021-01-02&quot;), time(&quot;02:02:02&quot;))]</value>
+		</inputNode>
+		<inputNode name="Value Included">
+			<value xsi:type="xsd:dateTime">2020-01-01T01:01:01</value>
+		</inputNode>
+		<inputNode name="Value Excluded">
+			<value xsi:type="xsd:dateTime">2027-01-01T01:01:01</value>
+		</inputNode>
+		<resultNode name="Range output" xsi:type="Range output">
+			<expected>
+				<component name="start">
+					<value xsi:type="xsd:dateTime" xsi:nil="true"/>
+				</component>
+				<component name="end">
+					<value xsi:type="xsd:dateTime">2021-01-02T02:02:02</value>
+				</component>
+				<component name="start included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="end included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of number">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of string">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of dt duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date and time">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="range of ym duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="excluded">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="tc-9" name="Greater than date and time">
+		<inputNode name="Range as string">
+			<value xsi:type="xsd:string">&gt; date and time(date(&quot;2021-01-02&quot;), time(&quot;02:02:02&quot;))]</value>
+		</inputNode>
+		<inputNode name="Value Included">
+			<value xsi:type="xsd:dateTime">2025-01-01T01:01:01</value>
+		</inputNode>
+		<inputNode name="Value Excluded">
+			<value xsi:type="xsd:dateTime">2018-01-01T01:01:01</value>
+		</inputNode>
+		<resultNode name="Range output" xsi:type="Range output">
+			<expected>
+				<component name="start">
+					<value xsi:type="xsd:dateTime">2021-01-02T02:02:02</value>
+				</component>
+				<component name="end">
+					<value xsi:type="xsd:dateTime" xsi:nil="true"/>
+				</component>
+				<component name="start included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="end included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of number">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of string">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of dt duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date and time">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="range of ym duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="excluded">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="tc-10" name="Range time">
+		<inputNode name="Range as string">
+			<value xsi:type="xsd:string">[time(&quot;01:01:01&quot;)..time(&quot;02:02:02&quot;)]</value>
+		</inputNode>
+		<inputNode name="Value Included">
+			<value xsi:type="xsd:time">01:01:22</value>
+		</inputNode>
+		<inputNode name="Value Excluded">
+			<value xsi:type="xsd:time">06:01:22</value>
+		</inputNode>
+		<resultNode name="Range output" xsi:type="Range output">
+			<expected>
+				<component name="start">
+					<value xsi:type="xsd:time">01:01:01</value>
+				</component>
+				<component name="end">
+					<value xsi:type="xsd:time">02:02:02</value>
+				</component>
+				<component name="start included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="end included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="range of number">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of time">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="range of string">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of dt duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date and time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of ym duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="excluded">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="tc-11" name="Less than time">
+		<inputNode name="Range as string">
+			<value xsi:type="xsd:string">&lt; time(&quot;02:02:02&quot;)</value>
+		</inputNode>
+		<inputNode name="Value Included">
+			<value xsi:type="xsd:time">01:01:22</value>
+		</inputNode>
+		<inputNode name="Value Excluded">
+			<value xsi:type="xsd:time">06:01:22</value>
+		</inputNode>
+		<resultNode name="Range output" xsi:type="Range output">
+			<expected>
+				<component name="start">
+					<value xsi:type="xsd:time" xsi:nil="true"/>
+				</component>
+				<component name="end">
+					<value xsi:type="xsd:time">02:02:02</value>
+				</component>
+				<component name="start included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="end included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of number">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of time">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="range of string">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of dt duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date and time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of ym duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="excluded">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="tc-12" name="Greater or equal to time">
+		<inputNode name="Range as string">
+			<value xsi:type="xsd:string">&gt;= time(&quot;02:02:02&quot;)</value>
+		</inputNode>
+		<inputNode name="Value Included">
+			<value xsi:type="xsd:time">04:01:22</value>
+		</inputNode>
+		<inputNode name="Value Excluded">
+			<value xsi:type="xsd:time">01:01:22</value>
+		</inputNode>
+		<resultNode name="Range output" xsi:type="Range output">
+			<expected>
+				<component name="start">
+					<value xsi:type="xsd:time">02:02:02</value>
+				</component>
+				<component name="end">
+					<value xsi:type="xsd:time" xsi:nil="true"/>
+				</component>
+				<component name="start included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="end included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of number">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of time">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="range of string">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of dt duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date and time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of ym duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="excluded">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="tc-13" name="Range string">
+		<inputNode name="Range as string">
+			<value xsi:type="xsd:string">(&quot;a&quot;..&quot;k&quot;)</value>
+		</inputNode>
+		<inputNode name="Value Included">
+			<value xsi:type="xsd:string">c</value>
+		</inputNode>
+		<inputNode name="Value Excluded">
+			<value xsi:type="xsd:string">z</value>
+		</inputNode>
+		<resultNode name="Range output" xsi:type="Range output">
+			<expected>
+				<component name="start">
+					<value xsi:type="xsd:string">a</value>
+				</component>
+				<component name="end">
+					<value xsi:type="xsd:string">k</value>
+				</component>
+				<component name="start included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="end included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of number">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of string">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="range of dt duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date and time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of ym duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="excluded">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="tc-14" name="Greater than string">
+		<inputNode name="Range as string">
+			<value xsi:type="xsd:string">&gt; &quot;c&quot;</value>
+		</inputNode>
+		<inputNode name="Value Included">
+			<value xsi:type="xsd:string">k</value>
+		</inputNode>
+		<inputNode name="Value Excluded">
+			<value xsi:type="xsd:string">a</value>
+		</inputNode>
+		<resultNode name="Range output" xsi:type="Range output">
+			<expected>
+				<component name="start">
+					<value xsi:type="xsd:string">c</value>
+				</component>
+				<component name="end">
+					<value xsi:type="xsd:string" xsi:nil="true"/>
+				</component>
+				<component name="start included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="end included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of number">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of string">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="range of dt duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date and time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of ym duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="excluded">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="tc-15" name="Less than string">
+		<inputNode name="Range as string">
+			<value xsi:type="xsd:string">&lt; &quot;c&quot;</value>
+		</inputNode>
+		<inputNode name="Value Included">
+			<value xsi:type="xsd:string">a</value>
+		</inputNode>
+		<inputNode name="Value Excluded">
+			<value xsi:type="xsd:string">z</value>
+		</inputNode>
+		<resultNode name="Range output" xsi:type="Range output">
+			<expected>
+				<component name="start">
+					<value xsi:type="xsd:string" xsi:nil="true"/>
+				</component>
+				<component name="end">
+					<value xsi:type="xsd:string">c</value>
+				</component>
+				<component name="start included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="end included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of number">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of string">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="range of dt duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date and time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of ym duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="excluded">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="tc-16" name="Range of year month duration">
+		<inputNode name="Range as string">
+			<value xsi:type="xsd:string">(years and months duration(date(2021,1,1),date(2021,5,1))..years and months duration(date(2022,1,1),date(2023,1,1)))</value>
+		</inputNode>
+		<inputNode name="Value Included">
+			<value xsi:type="xsd:duration">P5M</value>
+		</inputNode>
+		<inputNode name="Value Excluded">
+			<value xsi:type="xsd:duration">P6Y</value>
+		</inputNode>		
+		<resultNode name="Range output" xsi:type="Range output">
+			<expected>
+				<component name="start">
+					<value xsi:type="xsd:duration">P4M</value>
+				</component>
+				<component name="end">
+					<value xsi:type="xsd:duration">P1Y</value>
+				</component>
+				<component name="start included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="end included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of number">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of string">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of dt duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date and time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of ym duration">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="excluded">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="tc-17" name="Greater than year month duration">
+		<inputNode name="Range as string">
+			<value xsi:type="xsd:string">&lt; years and months duration(date(2021,1,1),date(2021,5,1))</value>
+		</inputNode>
+		<inputNode name="Value Included">
+			<value xsi:type="xsd:duration">P0Y</value>
+		</inputNode>
+		<inputNode name="Value Excluded">
+			<value xsi:type="xsd:duration">P6Y</value>
+		</inputNode>		
+		<resultNode name="Range output" xsi:type="Range output">
+			<expected>
+				<component name="start">
+					<value xsi:type="xsd:duration" xsi:nil="true"/>
+				</component>
+				<component name="end">
+					<value xsi:type="xsd:duration">P4M</value>
+				</component>
+				<component name="start included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="end included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of number">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of string">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of dt duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date and time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of ym duration">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="excluded">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="tc-18" name="Less than year month duration">
+		<inputNode name="Range as string">
+			<value xsi:type="xsd:string">&gt; years and months duration(date(2021,1,1),date(2021,5,1))</value>
+		</inputNode>
+		<inputNode name="Value Included">
+			<value xsi:type="xsd:duration">P12Y</value>
+		</inputNode>
+		<inputNode name="Value Excluded">
+			<value xsi:type="xsd:duration">P3M</value>
+		</inputNode>		
+		<resultNode name="Range output" xsi:type="Range output">
+			<expected>
+				<component name="start">
+					<value xsi:type="xsd:duration">P4M</value>
+				</component>
+				<component name="end">
+					<value xsi:type="xsd:duration" xsi:nil="true"/>
+				</component>
+				<component name="start included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="end included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of number">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of string">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of dt duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date and time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of ym duration">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="excluded">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="tc-19" name="Range of days and time duration">
+		<inputNode name="Range as string">
+			<value xsi:type="xsd:string">(duration(&quot;PT2H&quot;)..duration(&quot;PT7H&quot;))</value>
+		</inputNode>
+		<inputNode name="Value Included">
+			<value xsi:type="xsd:duration">PT5H</value>
+		</inputNode>
+		<inputNode name="Value Excluded">
+			<value xsi:type="xsd:duration">PT12H</value>
+		</inputNode>		
+		<resultNode name="Range output" xsi:type="Range output">
+			<expected>
+				<component name="start">
+					<value xsi:type="xsd:duration">PT2H</value>
+				</component>
+				<component name="end">
+					<value xsi:type="xsd:duration">PT7H</value>
+				</component>
+				<component name="start included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="end included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of number">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of string">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of dt duration">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="range of date and time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of ym duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="excluded">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="tc-20" name="Less or equal to days and time duration">
+		<inputNode name="Range as string">
+			<value xsi:type="xsd:string">&lt;= duration(&quot;PT2H&quot;)</value>
+		</inputNode>
+		<inputNode name="Value Included">
+			<value xsi:type="xsd:duration">PT1H</value>
+		</inputNode>
+		<inputNode name="Value Excluded">
+			<value xsi:type="xsd:duration">PT12H</value>
+		</inputNode>		
+		<resultNode name="Range output" xsi:type="Range output">
+			<expected>
+				<component name="start">
+					<value xsi:type="xsd:duration" xsi:nil="true"/>
+				</component>
+				<component name="end">
+					<value xsi:type="xsd:duration">PT2H</value>
+				</component>
+				<component name="start included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="end included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="range of number">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of string">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of dt duration">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="range of date and time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of ym duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="excluded">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="tc-21" name="Greater or equal to days and time duration">
+		<inputNode name="Range as string">
+			<value xsi:type="xsd:string">&gt;= duration(&quot;PT2H&quot;)</value>
+		</inputNode>
+		<inputNode name="Value Included">
+			<value xsi:type="xsd:duration">PT2H</value>
+		</inputNode>
+		<inputNode name="Value Excluded">
+			<value xsi:type="xsd:duration">PT1H</value>
+		</inputNode>		
+		<resultNode name="Range output" xsi:type="Range output">
+			<expected>
+				<component name="start">
+					<value xsi:type="xsd:duration">PT2H</value>
+				</component>
+				<component name="end">
+					<value xsi:type="xsd:duration" xsi:nil="true"/>
+				</component>
+				<component name="start included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="end included">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of number">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of date">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of string">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of dt duration">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="range of date and time">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="range of ym duration">
+					<value xsi:type="xsd:boolean">false</value>
+				</component>
+				<component name="included">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+				<component name="excluded">
+					<value xsi:type="xsd:boolean">true</value>
+				</component>
+			</expected>
+		</resultNode>
+	</testCase>
+</testCases>
