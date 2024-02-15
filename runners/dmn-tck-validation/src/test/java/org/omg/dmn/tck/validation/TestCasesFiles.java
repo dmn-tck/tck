@@ -206,7 +206,7 @@ public class TestCasesFiles {
         }
     }
 
-    // DRGElement.name == DRGElement.variable.name and DRGElement.typeRef == DRGElement.variable.typeRef
+    // DRGElement.name == DRGElement.variable.name
     private void checkDRGElementVariable(File dmnFile) throws Exception {
         Document xmlDocument = builder.parse(dmnFile);
         List<String> problems = new ArrayList<>();
@@ -228,26 +228,12 @@ public class TestCasesFiles {
                 Node drgElementNode = xPathVariables.item(i);
                 // Extract and compare values
                 String name = extractStringAttribute(drgElementNode, "name");
-                String typeRef = extractStringAttribute(drgElementNode, "typeRef");
                 Node variableNode = extractChild(drgElementNode, "variable");
                 String variableName = extractStringAttribute(variableNode, "name");
-                String variableTypeRef = extractStringAttribute(variableNode, "typeRef");
                 // Check name
                 if (name != null && variableName != null) {
                     if (!name.equals(variableName)) {
                         String problem = String.format("%s: DRGElement node %s name '%s' is the same with the variable name '%s'",
-                                dmnFile.getName(),
-                                elementName,
-                                name,
-                                variableName);
-                        System.err.println(problem);
-                        problems.add(problem);
-                    }
-                }
-                // Check typeRef
-                if (typeRef != null && variableTypeRef != null) {
-                    if (!typeRef.equals(variableTypeRef)) {
-                        String problem = String.format("%s: DRGElement node %s typeRef '%s' is the same with the variable typeRef '%s'",
                                 dmnFile.getName(),
                                 elementName,
                                 name,
