@@ -11,7 +11,7 @@
 
     <testCase id="fn-null-input">
         <description>Evaluates "matches" function with null input</description>
-        <resultNode name="fn-null-input">
+        <resultNode name="fn-null-input" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -20,7 +20,7 @@
 
     <testCase id="fn-null-pattern">
         <description>Evaluates "matches" function with null pattern</description>
-        <resultNode name="fn-null-pattern">
+        <resultNode name="fn-null-pattern" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -49,7 +49,7 @@
 
     <testCase id="fn-matchesErr-1">
         <description>Invalid flag for third argument of matches.</description>
-        <resultNode name="fn-matchesErr-1">
+        <resultNode name="fn-matchesErr-1" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -208,7 +208,7 @@
 
     <testCase id="K-MatchesFunc-1">
         <description>The pattern can't be the empty sequence.</description>
-        <resultNode name="K-MatchesFunc-1">
+        <resultNode name="K-MatchesFunc-1" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -217,7 +217,7 @@
 
     <testCase id="K-MatchesFunc-2">
         <description>matches() takes at least two arguments, not one.</description>
-        <resultNode name="K-MatchesFunc-2">
+        <resultNode name="K-MatchesFunc-2" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -226,7 +226,7 @@
 
     <testCase id="K-MatchesFunc-3">
         <description>The third argument cannot be the empty sequence.</description>
-        <resultNode name="K-MatchesFunc-3">
+        <resultNode name="K-MatchesFunc-3" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -235,7 +235,7 @@
 
     <testCase id="K-MatchesFunc-4">
         <description>Only three arguments are accepted.</description>
-        <resultNode name="K-MatchesFunc-4">
+        <resultNode name="K-MatchesFunc-4" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -244,7 +244,7 @@
 
     <testCase id="K-MatchesFunc-5">
         <description>The flags argument cannot contain whitespace.</description>
-        <resultNode name="K-MatchesFunc-5">
+        <resultNode name="K-MatchesFunc-5" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -253,7 +253,7 @@
 
     <testCase id="K-MatchesFunc-6">
         <description>The flags argument cannot contain 'X'.</description>
-        <resultNode name="K-MatchesFunc-6">
+        <resultNode name="K-MatchesFunc-6" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -318,7 +318,7 @@
 
     <testCase id="K2-MatchesFunc-7">
         <description>whitespace in the regexp is not collapsed, and should therefore not compile.</description>
-        <resultNode name="K2-MatchesFunc-7">
+        <resultNode name="K2-MatchesFunc-7" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -327,7 +327,7 @@
 
     <testCase id="K2-MatchesFunc-8">
         <description>Since no string is captured by the back-reference, the single character is matched.</description>
-        <resultNode name="K2-MatchesFunc-8">
+        <resultNode name="K2-MatchesFunc-8" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -337,7 +337,7 @@
     <testCase id="K2-MatchesFunc-9">
         <description>Since no string is captured by the back-reference, the single character is matched(#2).
         </description>
-        <resultNode name="K2-MatchesFunc-9">
+        <resultNode name="K2-MatchesFunc-9" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -346,7 +346,7 @@
 
     <testCase id="K2-MatchesFunc-10">
         <description>A non-matching backwards-reference matches the empty string.</description>
-        <resultNode name="K2-MatchesFunc-10">
+        <resultNode name="K2-MatchesFunc-10" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -355,7 +355,7 @@
 
     <testCase id="K2-MatchesFunc-11">
         <description>Use a back reference inside a character class.</description>
-        <resultNode name="K2-MatchesFunc-11">
+        <resultNode name="K2-MatchesFunc-11" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -364,7 +364,7 @@
 
     <testCase id="K2-MatchesFunc-12">
         <description>Use a back reference inside a character class(#2).</description>
-        <resultNode name="K2-MatchesFunc-12">
+        <resultNode name="K2-MatchesFunc-12" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -373,7 +373,7 @@
 
     <testCase id="K2-MatchesFunc-13">
         <description>Use a back reference inside a character class(#3).</description>
-        <resultNode name="K2-MatchesFunc-13">
+        <resultNode name="K2-MatchesFunc-13" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
@@ -382,7 +382,7 @@
 
     <testCase id="K2-MatchesFunc-14">
         <description>Use a back reference inside a character class(#3).</description>
-        <resultNode name="K2-MatchesFunc-14">
+        <resultNode name="K2-MatchesFunc-14" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
