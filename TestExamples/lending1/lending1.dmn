@@ -2,7 +2,7 @@
 <!-- edited with XMLSpy v2013 rel. 2 sp2 (x64) (http://www.altova.com) by Bruce Silver (private) -->
 <?altova_sps ..\dmn60627.sps?>
 <?xml-stylesheet type="text/xsl" href="..\libgen 60803c.xslt"?>
-<definitions id="def01" name="Lending decision - Original" namespace="methodandstyle.com/lendingOriginal" xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:tns="methodandstyle.com/lendingOriginal" xmlns:feel="https://www.omg.org/spec/DMN/20230324/FEEL/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/DMN/20151101/dmn.xsd file:///C:/Users/Bruce/Documents/DMN/DMN1.1%20final/dmn.xsd">
+<definitions id="def01" name="Lending decision - Original" namespace="methodandstyle.com/lendingOriginal" xmlns="https://www.omg.org/spec/DMN/20230324/DMN15.xsd" xmlns:tns="methodandstyle.com/lendingOriginal" xmlns:feel="https://www.omg.org/spec/DMN/20230324/FEEL/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.omg.org/spec/DMN/20230324/DMN15.xsd file:///C:/Users/Bruce/Documents/DMN/DMN1.1%20final/dmn.xsd">
 	<itemDefinition name="tEligibility">
 		<typeRef>feel:string</typeRef>
 		<allowedValues>
