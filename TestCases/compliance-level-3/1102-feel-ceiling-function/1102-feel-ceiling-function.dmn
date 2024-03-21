@@ -2,7 +2,7 @@
 <definitions namespace="http://www.actico.com/spec/DMN/1102-feel-ceiling-function"
              name="1102-feel-ceiling-function"
              id="_i-UiEPUUEeesLuP4RHs4vA"
-             xmlns="https://www.omg.org/spec/DMN/20211108/MODEL/">
+             xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/">
     <description>FEEL built-in function 'ceiling(n, scale)' in category numeric functions</description>
 
     <decision name="decision001" id="_decision001">

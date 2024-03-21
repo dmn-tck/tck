@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <definitions namespace="http://www.montera.com.au/spec/DMN/0092-feel-lambda"
              name="0092-feel-lambda"
-             xmlns="https://www.omg.org/spec/DMN/20211108/MODEL/" >
+             xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/" >
     <description>FEEL lambda</description>
 
     <!-- function definitions -->

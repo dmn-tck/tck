@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20211108/MODEL/" xmlns:feel="https://www.omg.org/spec/DMN/20211108/FEEL/" xmlns:tns="http://www.trisotech.com/definitions/_0b25a236-f7a2-4845-b41e-73ab3e5ebd41" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" exporter="DMN Modeler; Method and Style trisofix.xslt" exporterVersion="5.0.34; 1.0" id="_0b25a236-f7a2-4845-b41e-73ab3e5ebd41" name="and-or" namespace="http://www.trisotech.com/definitions/_0b25a236-f7a2-4845-b41e-73ab3e5ebd41" triso:logoChoice="Default">
+<definitions xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/" xmlns:feel="https://www.omg.org/spec/DMN/20230324/FEEL/" xmlns:tns="http://www.trisotech.com/definitions/_0b25a236-f7a2-4845-b41e-73ab3e5ebd41" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" exporter="DMN Modeler; Method and Style trisofix.xslt" exporterVersion="5.0.34; 1.0" id="_0b25a236-f7a2-4845-b41e-73ab3e5ebd41" name="and-or" namespace="http://www.trisotech.com/definitions/_0b25a236-f7a2-4845-b41e-73ab3e5ebd41" triso:logoChoice="Default">
 	<itemDefinition id="tBoolList" isCollection="true" name="tBoolList">
 		<typeRef>boolean</typeRef>
 	</itemDefinition>

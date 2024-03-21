@@ -2,9 +2,9 @@
 <definitions namespace="http://www.montera.com.au/spec/DMN/1140-feel-string-join-function"
              name="1140-feel-string-join-function"
              id="_i9fboPUUEeesLuP4RHs4vA"
-             xmlns="https://www.omg.org/spec/DMN/20211108/MODEL/"
+             xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/"
              xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
-             xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
+             xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/"
              xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <description>FEEL built-in function 'string join(string,delimiter)' in category string functions</description>

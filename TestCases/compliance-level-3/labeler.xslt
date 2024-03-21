@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:n1="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:n2="http://www.omg.org/spec/DMN/20160719/testcase" xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:feel="http://www.omg.org/spec/FEEL/20140401">
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:n1="https://www.omg.org/spec/DMN/20230324/DMN15.xsd" xmlns:n2="http://www.omg.org/spec/DMN/20160719/testcase" xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:feel="https://www.omg.org/spec/DMN/20230324/FEEL/">
 	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 	<xsl:template match="/">
 		<xsl:variable name="foldername" select="substring-before(//n2:modelName,'.dmn')"/>

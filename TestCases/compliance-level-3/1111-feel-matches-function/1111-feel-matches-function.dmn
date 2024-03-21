@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!-- Extracted from https://dev.w3.org/2011/QT3-test-suite/ -->
 <definitions namespace="http://www.gs.com/spec/DMN/1111-feel-matches-function" name="1111-feel-matches-function"
-             id="_1111_feel_matches_function" xmlns="https://www.omg.org/spec/DMN/20211108/MODEL/"
+             id="_1111_feel_matches_function" xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/"
              xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
-             xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
+             xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/"
              xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <description>FEEL built-in function 'matches(input, pattern, flags?)' in category string functions</description>
 

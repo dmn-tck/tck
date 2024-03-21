@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<definitions exporter="DMN Modeler" exporterVersion="5.2.4.2" namespace="http://www.trisotech.com/definitions/_d458efc5-4a93-43f6-96d6-4e7d8c955259" name="for loops" triso:logoChoice="Default" id="_d458efc5-4a93-43f6-96d6-4e7d8c955259" xmlns="https://www.omg.org/spec/DMN/20211108/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<definitions exporter="DMN Modeler" exporterVersion="5.2.4.2" namespace="http://www.trisotech.com/definitions/_d458efc5-4a93-43f6-96d6-4e7d8c955259" name="for loops" triso:logoChoice="Default" id="_d458efc5-4a93-43f6-96d6-4e7d8c955259" xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <extensionElements/>
     <itemDefinition isCollection="true" name="ListOfNumbers" label="ListOfNumbers">
         <typeRef>number</typeRef>
