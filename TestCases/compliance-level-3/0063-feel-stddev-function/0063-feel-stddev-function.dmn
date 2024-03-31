@@ -87,12 +87,22 @@
     </decision>
 
     <decision name="decision008" id="_decision008">
-        <description>Tests FEEL expression: 'stddev(4)' and expects result: '4 (number)'</description>
-        <question>Result of FEEL expression 'stddev(4)'?</question>
-        <allowedAnswers>4 (number)</allowedAnswers>
+        <description>Tests FEEL expression: 'stddev(47)' and expects result: 'null (number)'</description>
+        <question>Result of FEEL expression 'stddev(47)'?</question>
+        <allowedAnswers>null (number)</allowedAnswers>
         <variable typeRef="number" name="decision008"/>
         <literalExpression>
-            <text>stddev(4)</text>
+            <text>stddev(47)</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision008_a" id="_decision008_a">
+        <description>Tests FEEL expression: 'stddev([47])' and expects result: 'null (number)'</description>
+        <question>Result of FEEL expression 'stddev([47])'?</question>
+        <allowedAnswers>null (number)</allowedAnswers>
+        <variable typeRef="number" name="decision008_a"/>
+        <literalExpression>
+            <text>stddev([47])</text>
         </literalExpression>
     </decision>
 
