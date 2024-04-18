@@ -10,13 +10,14 @@ The DMN TCK working group is composed by vendors and practitioners of DMN, with 
 
 Joining the TCK is free, it also holds regular conference calls, and new members are always welcome.
 
-## Current Result Web Site
+## Current Results Web Site
 
 * https://dmn-tck.github.io/tck/
 
-## Collaboration Site
+## Regular monthly call meeting notes
 
 * https://docs.google.com/document/d/1GnXZcwSczIbyNtMDM8ZnITVNgpIVi9nGbyt-0WzKxec/edit
+There is a regular monthly community call that happens on third Thursday of a month. Link to the call is in the meeting notes.  
 
 ## How to join
 
