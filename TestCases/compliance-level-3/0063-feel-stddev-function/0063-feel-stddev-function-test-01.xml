@@ -96,6 +96,15 @@
         </resultNode>
     </testCase>
 
+    <testCase id="008_a">
+        <description>will error when a list with a single item.</description>
+        <resultNode errorResult="true" name="decision008_a" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
     <testCase id="009">
         <description>will return stddev for varargs list</description>
         <resultNode name="decision009" type="decision">
