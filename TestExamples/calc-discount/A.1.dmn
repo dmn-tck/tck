@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<definitions namespace="http://onedecision.io/examples/" name="Calculate Price Decision Model" id="A.1" xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd">
+<definitions namespace="http://onedecision.io/examples/" name="Calculate Price Decision Model" id="A.1" xmlns="https://www.omg.org/spec/DMN/20230324/DMN15.xsd">
     <description>Implements the pricing model</description>
     <inputData name="age">
-        <variable typeRef="ns2:number" name="age" xmlns:ns2="http://www.omg.org/spec/FEEL/20140401">
+        <variable typeRef="ns2:number" name="age" xmlns:ns2="https://www.omg.org/spec/DMN/20230324/FEEL/">
             <description>The age of the applicant</description>
         </variable>
     </inputData>
     <inputData name="priority">
-        <variable typeRef="ns2:boolean" name="priority" xmlns:ns2="http://www.omg.org/spec/FEEL/20140401">
+        <variable typeRef="ns2:boolean" name="priority" xmlns:ns2="https://www.omg.org/spec/DMN/20230324/FEEL/">
             <description>Whether priority service was requested</description>
         </variable>
     </inputData>
     <decision name="Calculate Price Decision" id="calcPrice_d">
         <description>Determine price based on age of applicant and whether priority service requested</description>
-        <variable typeRef="ns2:number" name="price" xmlns:ns2="http://www.omg.org/spec/FEEL/20140401">
+        <variable typeRef="ns2:number" name="price" xmlns:ns2="https://www.omg.org/spec/DMN/20230324/FEEL/">
             <description>Price to charge customer</description>
         </variable>
         <decisionTable hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">

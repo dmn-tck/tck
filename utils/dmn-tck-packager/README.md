@@ -5,7 +5,7 @@ This utility can package/extract DMN TCK Test Cases file in DMN XML file extende
 The TCK test cases are packaged in the DMN model `definitions` level as an `extensionElements`.
 
 ```
-<semantic:definitions xmlns:semantic="https://www.omg.org/spec/DMN/20211108/MODEL/" xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase">
+<semantic:definitions xmlns:semantic="https://www.omg.org/spec/DMN/20230324/MODEL/" xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase">
     <semantic:extensionElements>
         <tc:testCases>
             <tc:testCase id="tc-1" name="Test Case 1">

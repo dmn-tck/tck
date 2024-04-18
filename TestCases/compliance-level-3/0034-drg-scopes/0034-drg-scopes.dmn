@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<definitions namespace="http://www.actico.com/spec/DMN/0.1.0/0034-drg-scopes" name="0034-drg-scopes" xsi:schemaLocation="http://www.omg.org/spec/DMN/20151101/dmn.xsd http://www.omg.org/spec/DMN/20151101/dmn.xsd" id="_7X638PQIEeecaNY7kk20yA" xmlns:layout="https://products.bfs-intra.net/milestones/vr/spec/20170328/dmndi.xsd" xmlns="https://www.omg.org/spec/DMN/20211108/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<definitions namespace="http://www.actico.com/spec/DMN/0.1.0/0034-drg-scopes" name="0034-drg-scopes" xsi:schemaLocation="https://www.omg.org/spec/DMN/20230324/DMN15.xsd https://www.omg.org/spec/DMN/20230324/DMN15.xsd" id="_7X638PQIEeecaNY7kk20yA" xmlns:layout="https://products.bfs-intra.net/milestones/vr/spec/20170328/dmndi.xsd" xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <extensionElements>
         <layout:container type="Dmn" name="0034-drg-scopes" id="_7ZtAoPQIEeecaNY7kk20yA" href="#_7X638PQIEeecaNY7kk20yA">
             <layout:node type="2003" id="_9020cPQIEeecaNY7kk20yA" href="#_9z0SoPQIEeecaNY7kk20yA">
@@ -59,91 +59,91 @@
             <layout:node type="2009" id="_tX_ckPQMEeecaNY7kk20yA" href="#_tX2SoPQMEeecaNY7kk20yA">
                 <layout:location y="648" x="252"/>
             </layout:node>
-            <layout:edge type="4001" target="#_DMwGMfQJEeecaNY7kk20yA" source="#_9020cPQIEeecaNY7kk20yA" id="_FTAoEPQJEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:InformationRequirement$_DMwGMPQJEeecaNY7kk20yA$_9z0SoPQIEeecaNY7kk20yA">
+            <layout:edge type="4001" target="#_DMwGMfQJEeecaNY7kk20yA" source="#_9020cPQIEeecaNY7kk20yA" id="_FTAoEPQJEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:InformationRequirement$_DMwGMPQJEeecaNY7kk20yA$_9z0SoPQIEeecaNY7kk20yA">
                 <layout:bendpoints points="[-10, 13, 69, -94]$[-91, 96, -12, -11]"/>
                 <layout:targetAnchor id="(0.392,0.2222222222222222)"/>
             </layout:edge>
-            <layout:edge type="4001" target="#_EL7rQfQJEeecaNY7kk20yA" source="#_9020cPQIEeecaNY7kk20yA" id="_FwjfsPQJEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:InformationRequirement$_EL7rQPQJEeecaNY7kk20yA$_9z0SoPQIEeecaNY7kk20yA">
+            <layout:edge type="4001" target="#_EL7rQfQJEeecaNY7kk20yA" source="#_9020cPQIEeecaNY7kk20yA" id="_FwjfsPQJEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:InformationRequirement$_EL7rQPQJEeecaNY7kk20yA$_9z0SoPQIEeecaNY7kk20yA">
                 <layout:bendpoints points="[30, 13, -240, -100]$[273, 134, 3, 21]"/>
             </layout:edge>
-            <layout:edge type="4001" target="#_EL7rQfQJEeecaNY7kk20yA" source="#_AV-tYfQJEeecaNY7kk20yA" id="_GLXzcPQJEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:InformationRequirement$_EL7rQPQJEeecaNY7kk20yA$_AV-tYPQJEeecaNY7kk20yA">
+            <layout:edge type="4001" target="#_EL7rQfQJEeecaNY7kk20yA" source="#_AV-tYfQJEeecaNY7kk20yA" id="_GLXzcPQJEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:InformationRequirement$_EL7rQPQJEeecaNY7kk20yA$_AV-tYPQJEeecaNY7kk20yA">
                 <layout:bendpoints points="[0, 13, -12, -84]$[0, 69, -12, -28]$[2, 74, -10, -23]"/>
                 <layout:sourceAnchor id="(0.576,0.8666666666666667)"/>
             </layout:edge>
-            <layout:edge type="4001" target="#_HQXsoPQJEeecaNY7kk20yA" source="#_DMwGMfQJEeecaNY7kk20yA" id="_IA8N8PQJEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:InformationRequirement$_HQN7oPQJEeecaNY7kk20yA$_DMwGMPQJEeecaNY7kk20yA">
+            <layout:edge type="4001" target="#_HQXsoPQJEeecaNY7kk20yA" source="#_DMwGMfQJEeecaNY7kk20yA" id="_IA8N8PQJEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:InformationRequirement$_HQN7oPQJEeecaNY7kk20yA$_DMwGMPQJEeecaNY7kk20yA">
                 <layout:bendpoints points="[-16, 21, 64, -89]$[-85, 101, -5, -9]"/>
                 <layout:targetAnchor id="(0.44,0.17777777777777778)"/>
             </layout:edge>
-            <layout:edge type="4001" target="#_HrMAYfQJEeecaNY7kk20yA" source="#_DMwGMfQJEeecaNY7kk20yA" id="_IXvkYPQJEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:InformationRequirement$_HrMAYPQJEeecaNY7kk20yA$_DMwGMPQJEeecaNY7kk20yA">
+            <layout:edge type="4001" target="#_HrMAYfQJEeecaNY7kk20yA" source="#_DMwGMfQJEeecaNY7kk20yA" id="_IXvkYPQJEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:InformationRequirement$_HrMAYPQJEeecaNY7kk20yA$_DMwGMPQJEeecaNY7kk20yA">
                 <layout:bendpoints points="[19, 21, -96, -104]$[99, 122, -16, -3]"/>
                 <layout:targetAnchor id="(0.128,0.3111111111111111)"/>
             </layout:edge>
-            <layout:edge type="4001" target="#_I_HtcfQJEeecaNY7kk20yA" source="#_EL7rQfQJEeecaNY7kk20yA" id="_KQxikPQJEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:InformationRequirement$_I_HtcPQJEeecaNY7kk20yA$_EL7rQPQJEeecaNY7kk20yA">
+            <layout:edge type="4001" target="#_I_HtcfQJEeecaNY7kk20yA" source="#_EL7rQfQJEeecaNY7kk20yA" id="_KQxikPQJEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:InformationRequirement$_I_HtcPQJEeecaNY7kk20yA$_EL7rQPQJEeecaNY7kk20yA">
                 <layout:bendpoints points="[6, 21, -30, -93]$[37, 135, 1, 21]"/>
             </layout:edge>
-            <layout:edge type="4001" target="#_JhYtAfQJEeecaNY7kk20yA" source="#_EL7rQfQJEeecaNY7kk20yA" id="_Kn3z8PQJEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:InformationRequirement$_JhYtAPQJEeecaNY7kk20yA$_EL7rQPQJEeecaNY7kk20yA">
+            <layout:edge type="4001" target="#_JhYtAfQJEeecaNY7kk20yA" source="#_EL7rQfQJEeecaNY7kk20yA" id="_Kn3z8PQJEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:InformationRequirement$_JhYtAPQJEeecaNY7kk20yA$_EL7rQPQJEeecaNY7kk20yA">
                 <layout:bendpoints points="[31, 21, -179, -93]$[148, 120, -62, 6]"/>
             </layout:edge>
-            <layout:edge type="4001" target="#_LGaxIPQJEeecaNY7kk20yA" source="#_HQXsoPQJEeecaNY7kk20yA" id="_LiIcwPQJEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:InformationRequirement$_LGRAIPQJEeecaNY7kk20yA$_HQN7oPQJEeecaNY7kk20yA">
+            <layout:edge type="4001" target="#_LGaxIPQJEeecaNY7kk20yA" source="#_HQXsoPQJEeecaNY7kk20yA" id="_LiIcwPQJEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:InformationRequirement$_LGRAIPQJEeecaNY7kk20yA$_HQN7oPQJEeecaNY7kk20yA">
                 <layout:bendpoints points="[23, 21, -89, -76]$[103, 86, -9, -11]"/>
                 <layout:targetAnchor id="(0.424,0.2222222222222222)"/>
             </layout:edge>
-            <layout:edge type="4001" target="#_LGaxIPQJEeecaNY7kk20yA" source="#_HrMAYfQJEeecaNY7kk20yA" id="_L9BpAPQJEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:InformationRequirement$_LGRAIPQJEeecaNY7kk20yA$_HrMAYPQJEeecaNY7kk20yA">
+            <layout:edge type="4001" target="#_LGaxIPQJEeecaNY7kk20yA" source="#_HrMAYfQJEeecaNY7kk20yA" id="_L9BpAPQJEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:InformationRequirement$_LGRAIPQJEeecaNY7kk20yA$_HrMAYPQJEeecaNY7kk20yA">
                 <layout:bendpoints points="[-10, 21, 44, -92]$[-52, 90, 2, -23]"/>
             </layout:edge>
-            <layout:edge type="4001" target="#_Mk9LsfQJEeecaNY7kk20yA" source="#_I_HtcfQJEeecaNY7kk20yA" id="_M_VakPQJEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:InformationRequirement$_Mk9LsPQJEeecaNY7kk20yA$_I_HtcPQJEeecaNY7kk20yA">
+            <layout:edge type="4001" target="#_Mk9LsfQJEeecaNY7kk20yA" source="#_I_HtcfQJEeecaNY7kk20yA" id="_M_VakPQJEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:InformationRequirement$_Mk9LsPQJEeecaNY7kk20yA$_I_HtcPQJEeecaNY7kk20yA">
                 <layout:bendpoints points="[19, 21, -82, -87]$[73, 97, -28, -11]"/>
                 <layout:targetAnchor id="(0.28,0.24444444444444444)"/>
             </layout:edge>
-            <layout:edge type="4001" target="#_Mk9LsfQJEeecaNY7kk20yA" source="#_JhYtAfQJEeecaNY7kk20yA" id="_NUytMPQJEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:InformationRequirement$_Mk9LsPQJEeecaNY7kk20yA$_JhYtAPQJEeecaNY7kk20yA">
+            <layout:edge type="4001" target="#_Mk9LsfQJEeecaNY7kk20yA" source="#_JhYtAfQJEeecaNY7kk20yA" id="_NUytMPQJEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:InformationRequirement$_Mk9LsPQJEeecaNY7kk20yA$_JhYtAPQJEeecaNY7kk20yA">
                 <layout:bendpoints points="[-4, 14, 17, -87]$[-38, 89, -17, -12]"/>
                 <layout:sourceAnchor id="(0.176,0.6444444444444445)"/>
                 <layout:targetAnchor id="(0.376,0.24444444444444444)"/>
             </layout:edge>
-            <layout:edge type="4001" target="#_OWzj0fQJEeecaNY7kk20yA" source="#_LGaxIPQJEeecaNY7kk20yA" id="_Oviz8PQJEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:InformationRequirement$_OWzj0PQJEeecaNY7kk20yA$_LGRAIPQJEeecaNY7kk20yA">
+            <layout:edge type="4001" target="#_OWzj0fQJEeecaNY7kk20yA" source="#_LGaxIPQJEeecaNY7kk20yA" id="_Oviz8PQJEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:InformationRequirement$_OWzj0PQJEeecaNY7kk20yA$_LGRAIPQJEeecaNY7kk20yA">
                 <layout:bendpoints points="[38, 21, -180, -92]$[156, 104, -62, -9]"/>
             </layout:edge>
-            <layout:edge type="4001" target="#_OWzj0fQJEeecaNY7kk20yA" source="#_Mk9LsfQJEeecaNY7kk20yA" id="_PHFxQPQJEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:InformationRequirement$_OWzj0PQJEeecaNY7kk20yA$_Mk9LsPQJEeecaNY7kk20yA">
+            <layout:edge type="4001" target="#_OWzj0fQJEeecaNY7kk20yA" source="#_Mk9LsfQJEeecaNY7kk20yA" id="_PHFxQPQJEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:InformationRequirement$_OWzj0PQJEeecaNY7kk20yA$_Mk9LsPQJEeecaNY7kk20yA">
                 <layout:bendpoints points="[-23, 21, 85, -79]$[-119, 90, -11, -10]"/>
                 <layout:targetAnchor id="(0.384,0.2)"/>
             </layout:edge>
-            <layout:edge type="4002" target="#_UL_1kfQJEeecaNY7kk20yA" source="#_U6fTQfQJEeecaNY7kk20yA" id="_VZVycPQJEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:KnowledgeRequirement$_UL_1kPQJEeecaNY7kk20yA$_U6fTQPQJEeecaNY7kk20yA">
+            <layout:edge type="4002" target="#_UL_1kfQJEeecaNY7kk20yA" source="#_U6fTQfQJEeecaNY7kk20yA" id="_VZVycPQJEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:KnowledgeRequirement$_UL_1kPQJEeecaNY7kk20yA$_U6fTQPQJEeecaNY7kk20yA">
                 <layout:bendpoints points="[-61, 19, 189, -56]$[-188, 70, 62, -5]"/>
             </layout:edge>
-            <layout:edge type="4002" target="#_UL_1kfQJEeecaNY7kk20yA" source="#_UgthUfQJEeecaNY7kk20yA" id="_V6uBMPQJEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:KnowledgeRequirement$_UL_1kPQJEeecaNY7kk20yA$_UgthUPQJEeecaNY7kk20yA">
+            <layout:edge type="4002" target="#_UL_1kfQJEeecaNY7kk20yA" source="#_UgthUfQJEeecaNY7kk20yA" id="_V6uBMPQJEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:KnowledgeRequirement$_UL_1kPQJEeecaNY7kk20yA$_UgthUPQJEeecaNY7kk20yA">
                 <layout:bendpoints points="[-23, -4, 181, 27]$[-196, -54, 8, -23]"/>
                 <layout:sourceAnchor id="(0.184,0.7333333333333333)"/>
             </layout:edge>
-            <layout:edge type="4002" target="#_UgthUfQJEeecaNY7kk20yA" source="#_U6fTQfQJEeecaNY7kk20yA" id="_WXHpUPQJEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:KnowledgeRequirement$_UgthUPQJEeecaNY7kk20yA$_U6fTQPQJEeecaNY7kk20yA">
+            <layout:edge type="4002" target="#_UgthUfQJEeecaNY7kk20yA" source="#_U6fTQfQJEeecaNY7kk20yA" id="_WXHpUPQJEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:KnowledgeRequirement$_UgthUPQJEeecaNY7kk20yA$_U6fTQPQJEeecaNY7kk20yA">
                 <layout:bendpoints points="[-3, 21, 4, -74]$[-11, 72, -4, -23]"/>
             </layout:edge>
-            <layout:edge type="4002" target="#_XsZaMfQJEeecaNY7kk20yA" source="#_UL_1kfQJEeecaNY7kk20yA" id="_YmDmEPQJEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:KnowledgeRequirement$_XsZaMPQJEeecaNY7kk20yA$_UL_1kPQJEeecaNY7kk20yA">
+            <layout:edge type="4002" target="#_XsZaMfQJEeecaNY7kk20yA" source="#_UL_1kfQJEeecaNY7kk20yA" id="_YmDmEPQJEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:KnowledgeRequirement$_XsZaMPQJEeecaNY7kk20yA$_UL_1kPQJEeecaNY7kk20yA">
                 <layout:bendpoints points="[-54, -21, 107, 42]$[-131, -73, 30, -10]"/>
                 <layout:targetAnchor id="(0.752,0.28888888888888886)"/>
             </layout:edge>
-            <layout:edge type="4002" target="#_ZgB7APQJEeecaNY7kk20yA" source="#_TCzY4fQJEeecaNY7kk20yA" id="_Z4KuMPQJEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:KnowledgeRequirement$_Zf4KAPQJEeecaNY7kk20yA$_TCzY4PQJEeecaNY7kk20yA">
+            <layout:edge type="4002" target="#_ZgB7APQJEeecaNY7kk20yA" source="#_TCzY4fQJEeecaNY7kk20yA" id="_Z4KuMPQJEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:KnowledgeRequirement$_Zf4KAPQJEeecaNY7kk20yA$_TCzY4PQJEeecaNY7kk20yA">
                 <layout:bendpoints points="[-47, -12, 69, 13]$[-54, -25, 62, 0]"/>
                 <layout:sourceAnchor id="(0.376,0.8222222222222222)"/>
             </layout:edge>
-            <layout:edge type="4001" target="#_ZgB7APQJEeecaNY7kk20yA" source="#_OWzj0fQJEeecaNY7kk20yA" id="_1rN-YPQJEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:InformationRequirement$_Zf4KAPQJEeecaNY7kk20yA$_OWzj0PQJEeecaNY7kk20yA">
+            <layout:edge type="4001" target="#_ZgB7APQJEeecaNY7kk20yA" source="#_OWzj0fQJEeecaNY7kk20yA" id="_1rN-YPQJEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:InformationRequirement$_Zf4KAPQJEeecaNY7kk20yA$_OWzj0PQJEeecaNY7kk20yA">
                 <layout:bendpoints points="[-4, 21, -4, -75]$[-4, 117, -4, 21]"/>
             </layout:edge>
-            <layout:edge type="4001" target="#_XsZaMfQJEeecaNY7kk20yA" source="#_ZgB7APQJEeecaNY7kk20yA" id="_188nkPQJEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:InformationRequirement$_XsZaMPQJEeecaNY7kk20yA$_Zf4KAPQJEeecaNY7kk20yA">
+            <layout:edge type="4001" target="#_XsZaMfQJEeecaNY7kk20yA" source="#_ZgB7APQJEeecaNY7kk20yA" id="_188nkPQJEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:InformationRequirement$_XsZaMPQJEeecaNY7kk20yA$_Zf4KAPQJEeecaNY7kk20yA">
                 <layout:bendpoints points="[0, 21, 0, -71]$[-1, 99, -1, 7]"/>
                 <layout:targetAnchor id="(0.496,0.8)"/>
             </layout:edge>
-            <layout:edge type="4001" target="#_OWzj0fQJEeecaNY7kk20yA" source="#_3kDvUfQJEeecaNY7kk20yA" id="_5XD-APQJEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:InformationRequirement$_OWzj0PQJEeecaNY7kk20yA$_3kDvUPQJEeecaNY7kk20yA">
+            <layout:edge type="4001" target="#_OWzj0fQJEeecaNY7kk20yA" source="#_3kDvUfQJEeecaNY7kk20yA" id="_5XD-APQJEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:InformationRequirement$_OWzj0PQJEeecaNY7kk20yA$_3kDvUPQJEeecaNY7kk20yA">
                 <layout:bendpoints points="[-21, 5, 335, -78]$[-360, 60, -4, -23]"/>
                 <layout:sourceAnchor id="(0.416,0.7666666666666667)"/>
             </layout:edge>
-            <layout:edge type="4001" target="#_tX_ckPQMEeecaNY7kk20yA" source="#_XsZaMfQJEeecaNY7kk20yA" id="_wqUwAPQMEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:InformationRequirement$_tX2SoPQMEeecaNY7kk20yA$_XsZaMPQJEeecaNY7kk20yA">
+            <layout:edge type="4001" target="#_tX_ckPQMEeecaNY7kk20yA" source="#_XsZaMfQJEeecaNY7kk20yA" id="_wqUwAPQMEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:InformationRequirement$_tX2SoPQMEeecaNY7kk20yA$_XsZaMPQJEeecaNY7kk20yA">
                 <layout:bendpoints points="[5, 23, 5, -61]$[5, 107, 5, 23]"/>
             </layout:edge>
-            <layout:edge type="4002" target="#_TCzY4fQJEeecaNY7kk20yA" source="#_UL_1kfQJEeecaNY7kk20yA" id="_VbTSkPQPEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:KnowledgeRequirement$_TCzY4PQJEeecaNY7kk20yA$_UL_1kPQJEeecaNY7kk20yA">
+            <layout:edge type="4002" target="#_TCzY4fQJEeecaNY7kk20yA" source="#_UL_1kfQJEeecaNY7kk20yA" id="_VbTSkPQPEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:KnowledgeRequirement$_TCzY4PQJEeecaNY7kk20yA$_UL_1kPQJEeecaNY7kk20yA">
                 <layout:bendpoints points="[8, -6, 4, 58]$[8, -90, 4, -26]"/>
                 <layout:sourceAnchor id="(0.464,0.1)"/>
             </layout:edge>
-            <layout:edge type="4001" target="#_Mk9LsfQJEeecaNY7kk20yA" source="#_LGaxIPQJEeecaNY7kk20yA" id="_iZgOYPQPEeecaNY7kk20yA" href="#http://www.omg.org/spec/DMN/20151101/dmn.xsd:InformationRequirement$_Mk9LsPQJEeecaNY7kk20yA$_LGRAIPQJEeecaNY7kk20yA">
+            <layout:edge type="4001" target="#_Mk9LsfQJEeecaNY7kk20yA" source="#_LGaxIPQJEeecaNY7kk20yA" id="_iZgOYPQPEeecaNY7kk20yA" href="#https://www.omg.org/spec/DMN/20230324/DMN15.xsd:InformationRequirement$_Mk9LsPQJEeecaNY7kk20yA$_LGRAIPQJEeecaNY7kk20yA">
                 <layout:bendpoints points="[62, -3, -256, -3]$[309, -26, -9, -26]"/>
             </layout:edge>
         </layout:container>
