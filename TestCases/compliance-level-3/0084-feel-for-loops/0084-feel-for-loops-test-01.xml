@@ -192,4 +192,30 @@
         </resultNode>
     </testCase>
 
+    <testCase id="decision_017">
+        <description>date range increment upwards</description>
+        <resultNode name="decision_017" type="decision">
+            <expected>
+                <list>
+                    <item><value xsi:type="xsd:date">1980-01-01</value></item>
+                    <item><value xsi:type="xsd:date">1980-01-02</value></item>
+                    <item><value xsi:type="xsd:date">1980-01-03</value></item>
+                </list>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="decision_018">
+        <description>date range increment downwards</description>
+        <resultNode name="decision_018" type="decision">
+            <expected>
+                <list>
+                    <item><value xsi:type="xsd:date">1980-01-03</value></item>
+                    <item><value xsi:type="xsd:date">1980-01-02</value></item>
+                    <item><value xsi:type="xsd:date">1980-01-01</value></item>
+                </list>
+            </expected>
+        </resultNode>
+    </testCase>
+
 </testCases>
