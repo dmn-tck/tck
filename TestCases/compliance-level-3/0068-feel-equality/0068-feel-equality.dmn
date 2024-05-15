@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<definitions namespace="http://www.montera.com.au/spec/DMN/0068-feel-equality" name="0068-feel-equality"
-             id="_i9fboPUUEeesLuP4RHs4vA" xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/"
-             xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
-             xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/"
-             xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<definitions namespace="http://www.montera.com.au/spec/DMN/0068-feel-equality"
+             name="0068-feel-equality"
+             id="_i9fboPUUEeesLuP4RHs4vA"
+             xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/"
+>
     <description>FEEL equality</description>
 
     <inputData name="null_input" id="_null_input">
@@ -187,6 +187,36 @@
         <variable name="number_007"/>
         <literalExpression>
             <text>100 = "100"</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="number_008" id="_number_008">
+        <description>Tests FEEL expression: '12300 = 1.23e4' and expects result: 'true (boolean)'</description>
+        <question>Result of FEEL expression '12300 = 1.23e4'?</question>
+        <allowedAnswers>true (boolean)</allowedAnswers>
+        <variable name="number_008"/>
+        <literalExpression>
+            <text>12300 = 1.23e4</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="number_009" id="_number_009">
+        <description>Tests FEEL expression: '12300 = 1.23e+4' and expects result: 'true (boolean)'</description>
+        <question>Result of FEEL expression '12300 = 1.23e+4'?</question>
+        <allowedAnswers>true (boolean)</allowedAnswers>
+        <variable name="number_009"/>
+        <literalExpression>
+            <text>12300 = 1.23e+4</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="number_010" id="_number_010">
+        <description>Tests FEEL expression: '0.000123 = 1.23e-4' and expects result: 'true (boolean)'</description>
+        <question>Result of FEEL expression '0.000123 = 1.23e-4'?</question>
+        <allowedAnswers>true (boolean)</allowedAnswers>
+        <variable name="number_010"/>
+        <literalExpression>
+            <text>0.000123 = 1.23e-4</text>
         </literalExpression>
     </decision>
 
