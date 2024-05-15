@@ -3,10 +3,7 @@
              name="0099-arithmetic-negation"
              id="_i9fboPUUEeesLuP4RHs4vA"
              xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/"
-             xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"
-             xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/"
-             xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+>
     <description>arithmetic negation</description>
 
     <decision name="decision_001" id="_decision_001">
@@ -23,37 +20,33 @@
         </literalExpression>
     </decision>
 
-    <!-- commented as per https://github.com/dmn-tck/tck/pull/401#issuecomment-962982239 -->
-<!--    <decision name="decision_003" id="_decision_003">-->
-<!--        <variable name="decision_003"/>-->
-<!--        <literalExpression>-->
-<!--            <text>-@"P1D"</text>-->
-<!--        </literalExpression>-->
-<!--    </decision>-->
+    <decision name="decision_003" id="_decision_003">
+        <variable name="decision_003"/>
+        <literalExpression>
+            <text>-@"P1D"</text>
+        </literalExpression>
+    </decision>
 
-    <!-- commented as per https://github.com/dmn-tck/tck/pull/401#issuecomment-962982239 -->
-<!--    <decision name="decision_003_a" id="_decision_003_a">-->
-<!--        <variable name="decision_003_a"/>-->
-<!--        <literalExpression>-->
-<!--            <text>-@"-P1D"</text>-->
-<!--        </literalExpression>-->
-<!--    </decision>-->
+    <decision name="decision_003_a" id="_decision_003_a">
+        <variable name="decision_003_a"/>
+        <literalExpression>
+            <text>-@"-P1D"</text>
+        </literalExpression>
+    </decision>
 
-    <!-- commented as per https://github.com/dmn-tck/tck/pull/401#issuecomment-962982239 -->
-<!--    <decision name="decision_004" id="_decision_004">-->
-<!--        <variable name="decision_004"/>-->
-<!--        <literalExpression>-->
-<!--            <text>-@"P1Y"</text>-->
-<!--        </literalExpression>-->
-<!--    </decision>-->
+    <decision name="decision_004" id="_decision_004">
+        <variable name="decision_004"/>
+        <literalExpression>
+            <text>-@"P1Y"</text>
+        </literalExpression>
+    </decision>
 
-    <!-- commented as per https://github.com/dmn-tck/tck/pull/401#issuecomment-962982239 -->
-<!--    <decision name="decision_004_a" id="_decision_004_a">-->
-<!--        <variable name="decision_004_a"/>-->
-<!--        <literalExpression>-->
-<!--            <text>-@"-P1Y"</text>-->
-<!--        </literalExpression>-->
-<!--    </decision>-->
+    <decision name="decision_004_a" id="_decision_004_a">
+        <variable name="decision_004_a"/>
+        <literalExpression>
+            <text>-@"-P1Y"</text>
+        </literalExpression>
+    </decision>
 
     <decision name="decision_005" id="_decision_005">
         <variable name="decision_005"/>
