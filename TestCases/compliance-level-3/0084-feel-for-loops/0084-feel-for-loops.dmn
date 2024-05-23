@@ -121,4 +121,92 @@
         </literalExpression>
     </decision>
 
+    <decision name="decision_019" id="_decision_019">
+        <!-- string iteration content type gives null -->
+        <variable name="decision_019"/>
+        <literalExpression>
+            <text>for i in "a".."z" return i</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision_019_a" id="_decision_019_a">
+        <!-- string range iteration context type gives null -->
+        <variable name="decision_019_a"/>
+        <literalExpression>
+            <text>for i in ["a".."z"] return i</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision_020" id="_decision_020">
+        <!-- datetime iteration content type gives null -->
+        <variable name="decision_020"/>
+        <literalExpression>
+            <text>for i in @"1980-01-03T00:00:00"..@"1980-01-01T00:00:00" return i</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision_020_a" id="_decision_020_a">
+        <!-- datetime range iteration context type gives null -->
+        <variable name="decision_020_a"/>
+        <literalExpression>
+            <text>for i in [@"1980-01-03T00:00:00"..@"1980-01-01T00:00:00"] return i</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision_021" id="_decision_021">
+        <!-- time iteration content type gives null -->
+        <variable name="decision_021"/>
+        <literalExpression>
+            <text>for i in @"00:00:00"..@"00:00:00" return i</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision_021_a" id="_decision_021_a">
+        <!-- time range iteration context type gives null -->
+        <variable name="decision_021_a"/>
+        <literalExpression>
+            <text>for i in [@"00:00:00"..@"00:00:00"] return i</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision_022" id="_decision_022">
+        <!-- duration iteration content type gives null -->
+        <variable name="decision_022"/>
+        <literalExpression>
+            <text>for i in @"P1D"..@"P2D" return i</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision_022_a" id="_decision_022_a">
+        <!-- duration range iteration context type gives null -->
+        <variable name="decision_022_a"/>
+        <literalExpression>
+            <text>for i in [@"P1D"..@"P2D"] return i</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision_023" id="_decision_023">
+        <!-- a valid numeric range is permitted as iteration context -->
+        <variable name="decision_023"/>
+        <literalExpression>
+            <text>for i in [1..2] return i</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision_024" id="_decision_024">
+        <!-- a valid date range is permitted as iteration context -->
+        <variable name="decision_024"/>
+        <literalExpression>
+            <text>for i in [@"1980-01-01"..@"1980-01-03"] return i</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision_025" id="_decision_025">
+        <!-- invalid range gives null (ranges may be descending) -->
+        <variable name="decision_025"/>
+        <literalExpression>
+            <text>for i in [2..1] return i</text>
+        </literalExpression>
+    </decision>
+
 </definitions>
