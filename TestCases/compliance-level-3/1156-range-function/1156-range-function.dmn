@@ -452,6 +452,71 @@
         </literalExpression>
     </decision>
 
+    <decision name="decision020" id="_decision020">
+        <!-- a descending numeric range gives null -->
+        <variable name="decision020"/>
+        <literalExpression>
+            <text>range("[3..1]")</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision021" id="_decision021">
+        <!-- a descending date range gives null -->
+        <variable name="decision021"/>
+        <literalExpression>
+            <text>range("[@\"1970-01-02\"..@\"1970-01-01\"]")</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision022" id="_decision022">
+        <!-- a descending date time range gives null -->
+        <variable name="decision022"/>
+        <literalExpression>
+            <text>range("[@\"1970-01-02T00:00:00\"..@\"1970-01-01T00:00:00\"]")</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision023" id="_decision023">
+        <!-- a descending string range gives null -->
+        <variable name="decision023"/>
+        <literalExpression>
+            <text>range("[\"z\"..\"a\"]")</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision024" id="_decision024">
+        <!-- a descending date duration range gives null -->
+        <variable name="decision024"/>
+        <literalExpression>
+            <text>range("[@\"P2D\"..@\"P1D\"]")</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision025" id="_decision025">
+        <!-- a descending years duration range gives null -->
+        <variable name="decision025"/>
+        <literalExpression>
+            <text>range("[@\"P2Y\"..@\"P1Y\"]")</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision026" id="_decision026">
+        <!-- a descending time range gives null -->
+        <variable name="decision026"/>
+        <literalExpression>
+            <text>range("[@\"02:00:00\"..@\"01:00:00\"]")</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision027" id="_decision027">
+        <!-- both null endpoints gives null -->
+        <variable name="decision027"/>
+        <literalExpression>
+            <text>range("[null..null]")</text>
+        </literalExpression>
+    </decision>
+
+
 
 </definitions>
 

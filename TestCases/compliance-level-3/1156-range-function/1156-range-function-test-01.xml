@@ -469,8 +469,8 @@
     </testCase>
 
     <testCase id="019_a">
-        <!-- 10.3.2.7 Ranges  "endpoints must be of equivalent types" -->
-        <description>date and date and time end points are not equivalent and give null</description>
+        <!-- 10.3.2.7 Ranges "endpoints must be of equivalent types" -->
+        <description>date and date and time end points are not equivalent and gives null</description>
         <resultNode name="decision019_a" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
@@ -480,8 +480,80 @@
 
     <testCase id="019_b">
         <!-- 10.3.2.7 Ranges  "endpoints must be of equivalent types" -->
-        <description>date and date and time end points are not equivalent and give null</description>
+        <description>date and date and time end points are not equivalent and gives null</description>
         <resultNode name="decision019_b" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="020">
+        <description>descending numeric range gives null</description>
+        <resultNode name="decision020" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="021">
+        <description>descending date range gives null</description>
+        <resultNode name="decision021" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="022">
+        <description>descending date time range gives null</description>
+        <resultNode name="decision022" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="023">
+        <description>descending string range gives null</description>
+        <resultNode name="decision023" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="024">
+        <description>descending date duration range gives null</description>
+        <resultNode name="decision024" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="025">
+        <description>descending year duration range gives null</description>
+        <resultNode name="decision025" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="026">
+        <description>descending time range gives null</description>
+        <resultNode name="decision026" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="027">
+        <description>both null endpoints gives null</description>
+        <resultNode name="decision027" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
             </expected>
