@@ -88,7 +88,7 @@
     </testCase>
 
     <testCase id="002">
-        <description>Foo</description>
+        <description>sanity check using a non-literal string expression </description>
         <resultNode name="decision002" type="decision">
             <expected>
                 <value xsi:type="xsd:boolean">true</value>
