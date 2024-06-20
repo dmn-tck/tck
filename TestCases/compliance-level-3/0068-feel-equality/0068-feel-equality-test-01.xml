@@ -169,6 +169,33 @@
         </resultNode>
     </testCase>
 
+    <testCase id="number_008">
+        <description>number equals literal 'e' exponent number with default sign</description>
+        <resultNode name="number_008" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="number_009">
+        <description>number equals literal 'e' exponent number with '+' sign</description>
+        <resultNode name="number_009" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="number_010">
+        <description>number equals literal 'e' exponent number with '-' sign</description>
+        <resultNode name="number_010" type="decision">
+            <expected>
+                <value xsi:type="xsd:boolean">true</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
     <testCase id="string_001">
         <description>string equals</description>
         <resultNode name="string_001" type="decision">
