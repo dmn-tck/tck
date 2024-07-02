@@ -24,45 +24,41 @@
         </resultNode>
     </testCase>
 
-    <!-- commented as per https://github.com/dmn-tck/tck/pull/401#issuecomment-962982239 -->
-<!--    <testCase id="decision_003">-->
-<!--        <description>negate days and time duration</description>-->
-<!--        <resultNode name="decision_003" type="decision">-->
-<!--            <expected>-->
-<!--                <value xsi:type="xsd:duration">-P1D</value>-->
-<!--            </expected>-->
-<!--        </resultNode>-->
-<!--    </testCase>-->
+    <testCase id="decision_003">
+        <description>negate days and time duration</description>
+        <resultNode name="decision_003" type="decision">
+            <expected>
+                <value xsi:type="xsd:duration">-P1D</value>
+            </expected>
+        </resultNode>
+    </testCase>
 
-    <!-- commented as per https://github.com/dmn-tck/tck/pull/401#issuecomment-962982239 -->
-<!--    <testCase id="decision_003_a">-->
-<!--        <description>negate a negative days and time duration</description>-->
-<!--        <resultNode name="decision_003_a" type="decision">-->
-<!--            <expected>-->
-<!--                <value xsi:type="xsd:duration">P1D</value>-->
-<!--            </expected>-->
-<!--        </resultNode>-->
-<!--    </testCase>-->
+    <testCase id="decision_003_a">
+        <description>negate a negative days and time duration</description>
+        <resultNode name="decision_003_a" type="decision">
+            <expected>
+                <value xsi:type="xsd:duration">P1D</value>
+            </expected>
+        </resultNode>
+    </testCase>
 
-    <!-- commented as per https://github.com/dmn-tck/tck/pull/401#issuecomment-962982239 -->
-<!--    <testCase id="decision_004">-->
-<!--        <description>negate years and months duration</description>-->
-<!--        <resultNode name="decision_004" type="decision">-->
-<!--            <expected>-->
-<!--                <value xsi:type="xsd:duration">-P1Y</value>-->
-<!--            </expected>-->
-<!--        </resultNode>-->
-<!--    </testCase>-->
+    <testCase id="decision_004">
+        <description>negate years and months duration</description>
+        <resultNode name="decision_004" type="decision">
+            <expected>
+                <value xsi:type="xsd:duration">-P1Y</value>
+            </expected>
+        </resultNode>
+    </testCase>
 
-    <!-- commented as per https://github.com/dmn-tck/tck/pull/401#issuecomment-962982239 -->
-<!--    <testCase id="decision_004_a">-->
-<!--        <description>negate a negative years and months duration</description>-->
-<!--        <resultNode name="decision_004_a" type="decision">-->
-<!--            <expected>-->
-<!--                <value xsi:type="xsd:duration">P1Y</value>-->
-<!--            </expected>-->
-<!--        </resultNode>-->
-<!--    </testCase>-->
+    <testCase id="decision_004_a">
+        <description>negate a negative years and months duration</description>
+        <resultNode name="decision_004_a" type="decision">
+            <expected>
+                <value xsi:type="xsd:duration">P1Y</value>
+            </expected>
+        </resultNode>
+    </testCase>
 
     <testCase id="decision_005">
         <description>negate date gives null</description>
