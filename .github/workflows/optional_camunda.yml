@@ -1,4 +1,4 @@
-name: "[OPTIONAL] Camunda Runner"
+name: "[OPTIONAL] Camunda 7 Runner"
 
 on:
   [ push, pull_request ]
@@ -18,5 +18,5 @@ jobs:
         path: ~/.m2
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
-    - name: Run OPTIONAL Camunda Runner
+    - name: Run OPTIONAL Camunda 7 Runner
       run: cd runners && mvn verify --batch-mode --update-snapshots -Pcamunda
