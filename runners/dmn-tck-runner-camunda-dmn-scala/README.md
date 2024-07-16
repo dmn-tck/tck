@@ -1,7 +1,7 @@
 # DMN TCK DMN-Scala runner
 
-[DMN-Scala](https://github.com/camunda-community-hub/dmn-scala) is an open source DMN engine that is
-build as a community extension for the Camunda Platform. It is based on Camunda's FEEL engine.
+[DMN-Scala](https://github.com/camunda/dmn-scala) is an open source DMN engine for Camunda 8's automation
+platform for business processes based on BPMN and DMN.
 
 This repository contains the DMN TCK runner for the DMN engine.
 
