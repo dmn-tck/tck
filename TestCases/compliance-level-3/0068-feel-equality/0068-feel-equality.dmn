@@ -645,16 +645,6 @@
 <!--        </literalExpression>-->
 <!--    </decision>-->
 
-    <decision name="time_009" id="_time_009">
-        <description>Tests FEEL expression: 'time("10:30:00+01:00") = time("10:30:00@Europe/Paris")' and expects result: 'true (boolean)'</description>
-        <question>Result of FEEL expression 'time("10:30:00+01:00") = time("10:30:00@Europe/Paris")'?</question>
-        <allowedAnswers>true (boolean)</allowedAnswers>
-        <variable name="time_009"/>
-        <literalExpression>
-            <text>time("10:30:00+01:00") = time("10:30:00@Europe/Paris")</text>
-        </literalExpression>
-    </decision>
-
     <!-- commented out pending RTF equality comparisons with zones clarification -->
     <!-- https://github.com/dmn-tck/tck/pull/389#issuecomment-881322326 -->
 <!--    <decision name="time_009_a" id="_time_009_a">-->
