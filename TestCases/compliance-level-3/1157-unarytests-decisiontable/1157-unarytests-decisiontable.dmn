@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions namespace="http://www.montera.com.au/spec/DMN/1157-unarytests-decisiontable"
+             name="1157-unarytests-decisiontable"
+             id="_i9fboPUUEeesLuP4RHs4vA"
+             xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/"
+>
+    <description>UnaryTests for decision tables</description>
+
+    <!--
+        input expression against allow values pos, neg, and '-'
+    -->
+
+    <decision name="decision001" id="_decision001">
+        <!-- input expression is valid against input values - positive unary tests -->
+        <!-- input expression 123 will match unary tests and thus the rule for 123 will match -->
+        <variable name="decision001"/>
+        <decisionTable>
+            <input>
+                <inputExpression>
+                    <text>123</text>
+                </inputExpression>
+                <inputValues>
+                    <text>123,456</text>
+                </inputValues>
+            </input>
+            <output/>
+            <rule>
+                <inputEntry>
+                    <text>123</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"success"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+
+    <decision name="decision002" id="_decision002">
+        <!-- input expression is valid against input values - range -->
+        <!-- input expression 123 will match unary tests and thus the rule for 123 will match -->
+        <variable name="decision002"/>
+        <decisionTable>
+            <input>
+                <inputExpression>
+                    <text>123</text>
+                </inputExpression>
+                <inputValues>
+                    <text>[1..1000]</text>
+                </inputValues>
+            </input>
+            <output/>
+            <rule>
+                <inputEntry>
+                    <text>123</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"success"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+
+    <decision name="decision003" id="_decision003">
+        <!-- input expression is valid against input values - '-' char -->
+        <!-- input expression 123 will match unary tests and thus the rule for 123 will match -->
+        <variable name="decision003"/>
+        <decisionTable>
+            <input>
+                <inputExpression>
+                    <text>123</text>
+                </inputExpression>
+                <inputValues>
+                    <text>-</text>
+                </inputValues>
+            </input>
+            <output/>
+            <rule>
+                <inputEntry>
+                    <text>123</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"success"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+
+    <decision name="decision004" id="_decision004">
+        <!-- input expression is valid against input values - negation using not() -->
+        <!-- input expression 123 will match unary tests and thus the rule for 123 will match -->
+        <variable name="decision004"/>
+        <decisionTable>
+            <input>
+                <inputExpression>
+                    <text>123</text>
+                </inputExpression>
+                <inputValues>
+                    <text>not(456,789)</text>
+                </inputValues>
+            </input>
+            <output/>
+            <rule>
+                <inputEntry>
+                    <text>123</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"success"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+
+
+    <decision name="decision005" id="_decision005">
+        <!-- input expression is not valid against input values and will become null -->
+        <!-- input expression 123 will not match unary tests and thus the rule for null will match -->
+        <variable name="decision005"/>
+        <decisionTable>
+            <input>
+                <inputExpression>
+                    <text>123</text>
+                </inputExpression>
+                <inputValues>
+                    <text>not(123)</text>
+                </inputValues>
+            </input>
+            <output/>
+            <rule>
+                <inputEntry>
+                    <text>null</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"success"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+
+    <decision name="decision006" id="_decision006">
+        <!-- input expression is valid against input values - '?' symbol with built-in function-->
+        <!-- input expression "foo" will match unary tests and thus the rule for 123 will match -->
+        <variable name="decision006"/>
+        <decisionTable>
+            <input>
+                <inputExpression>
+                    <text>"foo"</text>
+                </inputExpression>
+                <inputValues>
+                    <text>"bar", string length(?) = 3</text>
+                </inputValues>
+            </input>
+            <output/>
+            <rule>
+                <inputEntry>
+                    <text>"foo"</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"success"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+
+    <decision name="decision006_a" id="_decision006_a">
+        <!-- input expression is not valid against input values - '?' symbol inside literal string -->
+        <!-- in this case, the `string length("?") = 1` does evaluate to true, but, true !== "foo" and the
+        vagueness of "applied to" comes in - the expression "string length("?") = 1" does not use the
+        special char "?", not is it a unary comparison .. so it is a mismatch -->
+        <!-- input expression "foo" will not match unary tests and thus the rule for null will match -->
+        <variable name="decision006_a"/>
+        <decisionTable>
+            <input>
+                <inputExpression>
+                    <text>"foo"</text>
+                </inputExpression>
+                <inputValues>
+                    <text>"bar", string length("?") = 1</text>
+                </inputValues>
+            </input>
+            <output/>
+            <rule>
+                <inputEntry>
+                    <text>null</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"success"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+
+    <decision name="decision006_b" id="_decision006_b">
+        <!-- input expression is not valid against input values - '?' symbol inside literal string -->
+        <!-- in this case, the `string length("?") = 1` does evaluate to true, but, true !== "foo" so
+        it is a mismatch -->
+        <!-- input expression 123 will not match unary tests and thus the rule for null will match -->
+        <variable name="decision006_b"/>
+        <decisionTable>
+            <input>
+                <inputExpression>
+                    <text>123</text>
+                </inputExpression>
+                <inputValues>
+                    <text>?</text>
+                </inputValues>
+            </input>
+            <output/>
+            <rule>
+                <inputEntry>
+                    <text>123</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"success"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+
+    <decision name="decision006_c" id="_decision006_c">
+        <!-- '?' symbol  -->
+        <!-- input expression "foo" will match "?" and thus the rule for "123"" will match -->
+        <variable name="decision006_c"/>
+        <decisionTable>
+            <input>
+                <inputExpression>
+                    <text>"foo"</text>
+                </inputExpression>
+                <inputValues>
+                    <text>?</text>
+                </inputValues>
+            </input>
+            <output/>
+            <rule>
+                <inputEntry>
+                    <text>"foo"</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"success"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+
+    <decision name="decision007" id="_decision007">
+        <!-- input expression is valid against input values - input value has no text-->
+        <!-- spec says text is optional -->
+        <!-- input expression 123 will match unary tests and thus the rule for 123 will match -->
+        <variable name="decision007"/>
+        <decisionTable>
+            <input>
+                <inputExpression>
+                    <text>123</text>
+                </inputExpression>
+                <inputValues>
+                    <text></text>
+                </inputValues>
+            </input>
+            <output/>
+            <rule>
+                <inputEntry>
+                    <text>123</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"success"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+
+    <decision name="decision008" id="_decision008">
+        <!-- Odd handling for boolean. 'true' is an expression. Unary tests permit expressions but
+         in this case the input expression false will not match unary tests and thus the
+         rule for null will match -->
+        <variable name="decision008"/>
+        <decisionTable>
+            <input>
+                <inputExpression>
+                    <text>false</text>
+                </inputExpression>
+                <inputValues>
+                    <text>("123", true)</text>
+                </inputValues>
+            </input>
+            <output/>
+            <rule>
+                <inputEntry>
+                    <text>null</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"success"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+
+    <decision name="decision009" id="_decision009">
+        <!-- table result matches output values -->
+        <variable name="decision009"/>
+        <decisionTable>
+            <input>
+                <inputExpression>
+                    <text>123</text>
+                </inputExpression>
+            </input>
+            <output>
+                <outputValues>
+                    <text>"success","failure"</text>
+                </outputValues>
+            </output>
+            <rule>
+                <inputEntry>
+                    <text>123</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"success"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+
+    <decision name="decision010" id="_decision010">
+        <!-- table result "foo" does not match output values "success" or "failure". Result
+        is null coerced -->
+        <variable name="decision010"/>
+        <decisionTable>
+            <input>
+                <inputExpression>
+                    <text>123</text>
+                </inputExpression>
+            </input>
+            <output>
+                <outputValues>
+                    <text>"success","failure"</text>
+                </outputValues>
+            </output>
+            <rule>
+                <inputEntry>
+                    <text>123</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"foo"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+
+    <decision name="decision011" id="_decision011">
+        <!-- output values text may be empty -->
+        <variable name="decision011"/>
+        <decisionTable>
+            <input>
+                <inputExpression>
+                    <text>123</text>
+                </inputExpression>
+            </input>
+            <output>
+                <outputValues>
+                    <text></text>
+                </outputValues>
+            </output>
+            <rule>
+                <inputEntry>
+                    <text>123</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"success"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+
+    <decision name="decision012" id="_decision012">
+        <!-- output values text may be '-' char -->
+        <variable name="decision012"/>
+        <decisionTable>
+            <input>
+                <inputExpression>
+                    <text>123</text>
+                </inputExpression>
+            </input>
+            <output>
+                <outputValues>
+                    <text>-</text>
+                </outputValues>
+            </output>
+            <rule>
+                <inputEntry>
+                    <text>123</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"success"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+
+    <decision name="decision013" id="_decision013">
+        <!-- multiple output columns all match -->
+        <variable name="decision013"/>
+        <decisionTable>
+            <input>
+                <inputExpression>
+                    <text>123</text>
+                </inputExpression>
+            </input>
+            <output name="col1">
+                <outputValues>
+                    <text>"foo", "bar"</text>
+                </outputValues>
+            </output>
+            <output name="col2">
+                <outputValues>
+                    <text>"foo", "bar"</text>
+                </outputValues>
+            </output>
+            <rule>
+                <inputEntry>
+                    <text>123</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"foo"</text>
+                </outputEntry>
+                <outputEntry>
+                    <text>"bar"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+
+    <decision name="decision014" id="_decision014">
+        <!-- multiple output columns - one column mismatch -->
+        <variable name="decision014"/>
+        <decisionTable>
+            <input>
+                <inputExpression>
+                    <text>123</text>
+                </inputExpression>
+            </input>
+            <output name="col1">
+                <outputValues>
+                    <text>"foo", "bar"</text>
+                </outputValues>
+            </output>
+            <output name="col2">
+                <outputValues>
+                    <text>"foo", "bar"</text>
+                </outputValues>
+            </output>
+            <rule>
+                <inputEntry>
+                    <text>123</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"foo"</text>
+                </outputEntry>
+                <outputEntry>
+                    <text>"baz"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+
+    <decision name="decision015" id="_decision015">
+        <!-- ? used in output values - match -->
+        <variable name="decision015"/>
+        <decisionTable>
+            <input>
+                <inputExpression>
+                    <text>123</text>
+                </inputExpression>
+            </input>
+            <output>
+                <outputValues>
+                    <text>string length(?) >= 3</text>
+                </outputValues>
+            </output>
+            <rule>
+                <inputEntry>
+                    <text>123</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"foo"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+
+    <decision name="decision016" id="_decision016">
+        <!-- ? used in output values - mismatch -->
+        <variable name="decision016"/>
+        <decisionTable>
+            <input>
+                <inputExpression>
+                    <text>123</text>
+                </inputExpression>
+            </input>
+            <output>
+                <outputValues>
+                    <text>string length(?) >= 3</text>
+                </outputValues>
+            </output>
+            <rule>
+                <inputEntry>
+                    <text>123</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"a"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+
+</definitions>
+
