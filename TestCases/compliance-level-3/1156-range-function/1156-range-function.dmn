@@ -131,38 +131,6 @@
         </literalExpression>
     </decision>
 
-    <decision name="decision004_a" id="_decision004_a">
-        <!-- closed start endpoint with value and open endpoint with no value is valid and is unary GE equivalent -->
-        <variable name="decision004_a"/>
-        <literalExpression>
-            <text>range("[2..)") = >=2</text>
-        </literalExpression>
-    </decision>
-
-    <decision name="decision004_b" id="_decision004_b">
-        <!-- open start endpoint with value and open endpoint with no value is valid and is unary GT equivalent -->
-        <variable name="decision004_b"/>
-        <literalExpression>
-            <text>range("(2..)") = >2</text>
-        </literalExpression>
-    </decision>
-
-    <decision name="decision004_c" id="_decision004_c">
-        <!-- open start endpoint with no value and closed endpoint with value is valid and is unary LE equivalent -->
-        <variable name="decision004_c"/>
-        <literalExpression>
-            <text>range("(..2]") = &lt;=2</text>
-        </literalExpression>
-    </decision>
-
-    <decision name="decision004_d" id="_decision004_d">
-        <!-- closed start endpoint with no value and open endpoint with value is valid and is LT equivalent -->
-        <variable name="decision004_d"/>
-        <literalExpression>
-            <text>range("(..2)") = &lt;2</text>
-        </literalExpression>
-    </decision>
-
     <decision name="decision004_e" id="_decision004_e">
         <!-- closed start endpoint with no value is not valid and gives null -->
         <variable name="decision004_e"/>

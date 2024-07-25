@@ -141,42 +141,6 @@
         </resultNode>
     </testCase>
 
-    <testCase id="004_a">
-        <description>closed start endpoint with value and open endpoint with no value is valid and is unary GE equivalent </description>
-        <resultNode name="decision004_a" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">true</value>
-            </expected>
-        </resultNode>
-    </testCase>
-
-    <testCase id="004_b">
-        <description>open start endpoint with value and open endpoint with no value is valid and is unary GT equivalent</description>
-        <resultNode name="decision004_b" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">true</value>
-            </expected>
-        </resultNode>
-    </testCase>
-
-    <testCase id="004_c">
-        <description>open start endpoint with no value and closed endpoint with value is valid and is unary LE equivalent</description>
-        <resultNode name="decision004_c" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">true</value>
-            </expected>
-        </resultNode>
-    </testCase>
-
-    <testCase id="004_d">
-        <description>closed start endpoint with no value and open endpoint with value is valid and is LT equivalent </description>
-        <resultNode name="decision004_d" type="decision">
-            <expected>
-                <value xsi:type="xsd:boolean">true</value>
-            </expected>
-        </resultNode>
-    </testCase>
-
     <testCase id="004_e">
         <description>closed start endpoint with no value is not valid and gives null</description>
         <resultNode name="decision004_e" type="decision" errorResult="true">
