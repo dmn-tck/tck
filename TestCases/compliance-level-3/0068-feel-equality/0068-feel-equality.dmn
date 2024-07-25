@@ -6,10 +6,6 @@
 >
     <description>FEEL equality</description>
 
-    <inputData name="null_input" id="_null_input">
-        <variable name="null_input" typeRef="Any"/> <!-- some test cases always supply value `null` for this InputData -->
-    </inputData>
-
     <decision name="null_001" id="_null_001">
         <description>Tests FEEL expression: 'null = null' and expects result: 'true (boolean)'</description>
         <question>Result of FEEL expression 'null = null'?</question>
@@ -1263,62 +1259,82 @@
     </decision>
 
     <decision name="range_006" id="_range_006">
-        <description>Tests FEEL expression: "(&lt; 10) = (null_input..10)" and expects result: 'true (boolean)'</description>
-        <question>Tests FEEL expression: '(&lt; 10) = (null_input..10)'?</question>
-        <allowedAnswers>true (boolean)</allowedAnswers>
+        <description>Tests FEEL expression: "(&lt; 10) = (null..10)" and expects result: 'false (boolean)'</description>
+        <question>Tests FEEL expression: '(&lt; 10) = (null..10)'?</question>
+        <allowedAnswers>false (boolean)</allowedAnswers>
         <variable name="range_006"/>
-        <!-- to provide null as a range endpoint.  As at DMN 1.3, a literal null is
-        not grammatically permitted -->
-        <informationRequirement>
-            <requiredInput href="#_null_input"/>
-        </informationRequirement>
         <literalExpression>
-            <text>(&lt; 10) = (null_input..10)</text>
+            <text>(&lt; 10) = (null..10)</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="range_006_a" id="_range_006_a">
+        <description>Tests FEEL expression: "(&lt; 10) = (&lt; 10)" and expects result: 'true (boolean)'</description>
+        <question>Tests FEEL expression: '(&lt; 10) = (&lt; 10)'?</question>
+        <allowedAnswers>true (boolean)</allowedAnswers>
+        <variable name="range_006_a"/>
+        <literalExpression>
+            <text>(&lt; 10) = (&lt; 10)</text>
         </literalExpression>
     </decision>
 
     <decision name="range_007" id="_range_007">
-        <description>Tests FEEL expression: "(&lt;= 10) = (null_input..10]" and expects result: 'true (boolean)'</description>
-        <question>Tests FEEL expression: '(&lt;= 10) = (null_input..10]'?</question>
-        <allowedAnswers>true (boolean)</allowedAnswers>
+        <description>Tests FEEL expression: "(&lt;= 10) = (null..10]" and expects result: 'false (boolean)'</description>
+        <question>Tests FEEL expression: '(&lt;= 10) = (null..10]'?</question>
+        <allowedAnswers>false (boolean)</allowedAnswers>
         <variable name="range_007"/>
-        <!-- to provide null as a range endpoint.  As at DMN 1.3, a literal null is
-        not grammatically permitted -->
-        <informationRequirement>
-            <requiredInput href="#_null_input"/>
-        </informationRequirement>
         <literalExpression>
-            <text>(&lt;= 10) = (null_input..10]</text>
+            <text>(&lt;= 10) = (null..10]</text>
         </literalExpression>
     </decision>
 
     <decision name="range_008" id="_range_008">
-        <description>Tests FEEL expression: "(&gt; 10) = (10..null_input)" and expects result: 'true (boolean)'</description>
-        <question>Tests FEEL expression: '(&gt; 10) = (10..null_input)'?</question>
-        <allowedAnswers>true (boolean)</allowedAnswers>
+        <description>Tests FEEL expression: "(&gt; 10) = (10..null)" and expects result: 'false (boolean)'</description>
+        <question>Tests FEEL expression: '(&gt; 10) = (10..null)'?</question>
+        <allowedAnswers>false (boolean)</allowedAnswers>
         <variable name="range_008"/>
-        <!-- to provide null as a range endpoint.  As at DMN 1.3, a literal null is
-        not grammatically permitted -->
-        <informationRequirement>
-            <requiredInput href="#_null_input"/>
-        </informationRequirement>
         <literalExpression>
-            <text>(&gt; 10) = (10..null_input)</text>
+            <text>(&gt; 10) = (10..null)</text>
         </literalExpression>
     </decision>
 
     <decision name="range_009" id="_range_009">
-        <description>Tests FEEL expression: "(&gt;= 10) = [10..null_input)" and expects result: 'true (boolean)'</description>
-        <question>Tests FEEL expression: '(&gt;= 10) = [10..null_input)'?</question>
-        <allowedAnswers>true (boolean)</allowedAnswers>
+        <description>Tests FEEL expression: "(&gt;= 10) = [10..null)" and expects result: 'false (boolean)'</description>
+        <question>Tests FEEL expression: '(&gt;= 10) = [10..null)'?</question>
+        <allowedAnswers>false (boolean)</allowedAnswers>
         <variable name="range_009"/>
-        <!-- to provide null as a range endpoint.  As at DMN 1.3, a literal null is
-        not grammatically permitted -->
-        <informationRequirement>
-            <requiredInput href="#_null_input"/>
-        </informationRequirement>
         <literalExpression>
-            <text>(&gt;= 10) = [10..null_input)</text>
+            <text>(&gt;= 10) = [10..null)</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="range_010" id="_range_010">
+        <description>Tests FEEL expression: "(=10) = [10..10]" and expects result: 'false (boolean)'</description>
+        <question>Tests FEEL expression: '(=10) = [10..10]'?</question>
+        <allowedAnswers>false (boolean)</allowedAnswers>
+        <variable name="range_010"/>
+        <literalExpression>
+            <text>(=10) = [10..10]</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="range_011" id="_range_011">
+        <description>Tests FEEL expression: "(=10) = (=10)" and expects result: 'true (boolean)'</description>
+        <question>Tests FEEL expression: '(=10) = (=10)'?</question>
+        <allowedAnswers>true (boolean)</allowedAnswers>
+        <variable name="range_011"/>
+        <literalExpression>
+            <text>(=10) = (=10)</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="range_012" id="_range_012">
+        <description>Tests FEEL expression: "(!=10) = (!=10)" and expects result: 'true (boolean)'</description>
+        <question>Tests FEEL expression: '(!=10) = (!=10)'?</question>
+        <allowedAnswers>true (boolean)</allowedAnswers>
+        <variable name="range_012"/>
+        <literalExpression>
+            <text>(!=10) = (!=10)</text>
         </literalExpression>
     </decision>
 
