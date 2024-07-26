@@ -12,7 +12,7 @@
 
     <decision name="decision001" id="_decision001">
         <!-- input expression is valid against input values - positive unary tests -->
-        <!-- input expression 123 will match unary tests and thus the rule for 123 will match -->
+        <!-- input expression 123 will satisfy unary tests and thus the rule for 123 will be satisfied -->
         <variable name="decision001"/>
         <decisionTable>
             <input>
@@ -37,7 +37,7 @@
 
     <decision name="decision002" id="_decision002">
         <!-- input expression is valid against input values - range -->
-        <!-- input expression 123 will match unary tests and thus the rule for 123 will match -->
+        <!-- input expression 123 will satisfy unary tests and thus the rule for 123 will be satisfied -->
         <variable name="decision002"/>
         <decisionTable>
             <input>
@@ -62,7 +62,7 @@
 
     <decision name="decision003" id="_decision003">
         <!-- input expression is valid against input values - '-' char -->
-        <!-- input expression 123 will match unary tests and thus the rule for 123 will match -->
+        <!-- input expression 123 will satisfy unary tests and thus the rule for 123 will be satisfied -->
         <variable name="decision003"/>
         <decisionTable>
             <input>
@@ -87,7 +87,7 @@
 
     <decision name="decision004" id="_decision004">
         <!-- input expression is valid against input values - negation using not() -->
-        <!-- input expression 123 will match unary tests and thus the rule for 123 will match -->
+        <!-- input expression 123 will satisfy unary tests and thus the rule for 123 will be satisfied -->
         <variable name="decision004"/>
         <decisionTable>
             <input>
@@ -113,7 +113,7 @@
 
     <decision name="decision005" id="_decision005">
         <!-- input expression is not valid against input values and will become null -->
-        <!-- input expression 123 will not match unary tests and thus the rule for null will match -->
+        <!-- input expression 123 will not satisfy unary tests and thus the rule for null will be satisfied -->
         <variable name="decision005"/>
         <decisionTable>
             <input>
@@ -138,7 +138,7 @@
 
     <decision name="decision006" id="_decision006">
         <!-- input expression is valid against input values - '?' symbol with built-in function-->
-        <!-- input expression "foo" will match unary tests and thus the rule for 123 will match -->
+        <!-- input expression "foo" will satisfy unary tests and thus the rule for 123 will be satisfied -->
         <variable name="decision006"/>
         <decisionTable>
             <input>
@@ -165,8 +165,8 @@
         <!-- input expression is not valid against input values - '?' symbol inside literal string -->
         <!-- in this case, the `string length("?") = 1` does evaluate to true, but, true !== "foo" and the
         vagueness of "applied to" comes in - the expression "string length("?") = 1" does not use the
-        special char "?", not is it a unary comparison .. so it is a mismatch -->
-        <!-- input expression "foo" will not match unary tests and thus the rule for null will match -->
+        special char "?", not is it a unary comparison .. so it is not satisfied -->
+        <!-- input expression "foo" will not satisfy unary tests and thus the rule for null will be satisfied -->
         <variable name="decision006_a"/>
         <decisionTable>
             <input>
@@ -190,15 +190,14 @@
     </decision>
 
     <decision name="decision006_b" id="_decision006_b">
-        <!-- input expression is not valid against input values - '?' symbol inside literal string -->
-        <!-- in this case, the `string length("?") = 1` does evaluate to true, but, true !== "foo" so
-        it is a mismatch -->
-        <!-- input expression 123 will not match unary tests and thus the rule for null will match -->
+        <!-- '?' symbol  -->
+        <!-- input expression "foo" executed against "?" does not return true and thus the rule for null will be satisfied -->
+        <!-- spec states that an expression with "?" must return a boolean "true" for it to be satisfied -->
         <variable name="decision006_b"/>
         <decisionTable>
             <input>
                 <inputExpression>
-                    <text>123</text>
+                    <text>"foo"</text>
                 </inputExpression>
                 <inputValues>
                     <text>?</text>
@@ -207,7 +206,7 @@
             <output/>
             <rule>
                 <inputEntry>
-                    <text>123</text>
+                    <text>null</text>
                 </inputEntry>
                 <outputEntry>
                     <text>"success"</text>
@@ -218,12 +217,13 @@
 
     <decision name="decision006_c" id="_decision006_c">
         <!-- '?' symbol  -->
-        <!-- input expression "foo" will match "?" and thus the rule for "123"" will match -->
+        <!-- input expression `true` executed against "?" returns true and thus the rule for true will be satisfied -->
+        <!-- spec states that an expression with "?" must return a boolean "true" for it to be satisfied -->
         <variable name="decision006_c"/>
         <decisionTable>
             <input>
                 <inputExpression>
-                    <text>"foo"</text>
+                    <text>true</text>
                 </inputExpression>
                 <inputValues>
                     <text>?</text>
@@ -232,7 +232,7 @@
             <output/>
             <rule>
                 <inputEntry>
-                    <text>"foo"</text>
+                    <text>true</text>
                 </inputEntry>
                 <outputEntry>
                     <text>"success"</text>
@@ -244,7 +244,7 @@
     <decision name="decision007" id="_decision007">
         <!-- input expression is valid against input values - input value has no text-->
         <!-- spec says text is optional -->
-        <!-- input expression 123 will match unary tests and thus the rule for 123 will match -->
+        <!-- input expression 123 will satisfy unary tests and thus the rule for 123 will be satisfied -->
         <variable name="decision007"/>
         <decisionTable>
             <input>
@@ -269,8 +269,8 @@
 
     <decision name="decision008" id="_decision008">
         <!-- Odd handling for boolean. 'true' is an expression. Unary tests permit expressions but
-         in this case the input expression false will not match unary tests and thus the
-         rule for null will match -->
+         in this case the input expression false will not satisfy unary tests and thus the
+         rule for null will be satisfied -->
         <variable name="decision008"/>
         <decisionTable>
             <input>
@@ -293,8 +293,39 @@
         </decisionTable>
     </decision>
 
+    <decision name="decision008_a" id="_decision008_a">
+        <!-- Odd handling for boolean. 'true' is an expression. Unary tests permit expressions but
+         in this case the input expression false will not satisfy unary tests and thus the
+         rule for null will be satisfied -->
+        <variable name="decision008_a"/>
+        <decisionTable>
+            <input>
+                <inputExpression>
+                    <text>false</text>
+                </inputExpression>
+            </input>
+            <output/>
+            <rule>
+                <inputEntry>
+                    <text>true</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"fail"</text>
+                </outputEntry>
+            </rule>
+            <rule>
+                <inputEntry>
+                    <text>false</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"success"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+
     <decision name="decision009" id="_decision009">
-        <!-- table result matches output values -->
+        <!-- table result satisfies output values -->
         <variable name="decision009"/>
         <decisionTable>
             <input>
@@ -319,7 +350,7 @@
     </decision>
 
     <decision name="decision010" id="_decision010">
-        <!-- table result "foo" does not match output values "success" or "failure". Result
+        <!-- table result "foo" does not satisfy output values "success" or "failure". Result
         is null coerced -->
         <variable name="decision010"/>
         <decisionTable>
@@ -395,7 +426,7 @@
     </decision>
 
     <decision name="decision013" id="_decision013">
-        <!-- multiple output columns all match -->
+        <!-- multiple output columns all satisfied -->
         <variable name="decision013"/>
         <decisionTable>
             <input>
@@ -428,7 +459,7 @@
     </decision>
 
     <decision name="decision014" id="_decision014">
-        <!-- multiple output columns - one column mismatch -->
+        <!-- multiple output columns - one column not satisfied -->
         <variable name="decision014"/>
         <decisionTable>
             <input>
@@ -461,7 +492,7 @@
     </decision>
 
     <decision name="decision015" id="_decision015">
-        <!-- ? used in output values - match -->
+        <!-- ? used in output values - satisfied -->
         <variable name="decision015"/>
         <decisionTable>
             <input>
@@ -486,7 +517,7 @@
     </decision>
 
     <decision name="decision016" id="_decision016">
-        <!-- ? used in output values - mismatch -->
+        <!-- ? used in output values - not satisfied -->
         <variable name="decision016"/>
         <decisionTable>
             <input>

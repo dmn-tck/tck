@@ -71,7 +71,7 @@
     </testCase>
 
     <testCase id="006_b">
-        <description>input values: input expression is valid against input values - '?' inside literal string</description>
+        <description>input values: "?" symbol alone is not satisfied</description>
         <resultNode name="decision006_b" type="decision">
             <expected>
                 <value xsi:type="xsd:string">success</value>
@@ -80,7 +80,7 @@
     </testCase>
 
     <testCase id="006_c">
-        <description>input values: "?" symbol alone always is a match</description>
+        <description>input values: "?" symbol alone will be satisfied a true value</description>
         <resultNode name="decision006_c" type="decision">
             <expected>
                 <value xsi:type="xsd:string">success</value>
@@ -101,8 +101,8 @@
         <!-- "One of the expressions in the UnaryTests evaluates to true when the implicit value
         is applied to it." -->
         <!-- this test is to exercise the vagueness of 'applied to'.  One of the expressions is simply
-        "true".  Which, as an expression always evaluates to true.  So ... should match.  But, in practice,
-        the value of "false" applied against unary tests "("123", true)" should not match any of them.  My
+        "true".  Which, as an expression always evaluates to true.  So ... should satisfy.  But, in practice,
+        the value of "false" applied against unary tests "("123", true)" should not satisfy any of them.  My
         interpretation is that "applied to" is meant for unary comparisons. -->
         <description>input values: boolean expression is weird</description>
         <resultNode name="decision008" type="decision">
@@ -112,8 +112,19 @@
         </resultNode>
     </testCase>
 
+    <testCase id="008_a">
+        <!-- further to 008, an input expression of boolean "false" will not be satisfied against a rule
+         unary test of boolean constant "true"-->
+        <description>input values: boolean expression is weird</description>
+        <resultNode name="decision008_a" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">success</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
     <testCase id="009">
-        <description>output values: result matches output values</description>
+        <description>output values: result satisfies output values</description>
         <resultNode name="decision009" type="decision">
             <expected>
                 <value xsi:type="xsd:string">success</value>
@@ -122,7 +133,7 @@
     </testCase>
 
     <testCase id="010">
-        <description>output values: result does not matches output values</description>
+        <description>output values: result does not satisfy output values</description>
         <resultNode name="decision010" type="decision" errorResult="true">
             <expected>
                 <value xsi:nil="true"/>
@@ -149,7 +160,7 @@
     </testCase>
 
     <testCase id="013">
-        <description>output values: multiple columns - all match</description>
+        <description>output values: multiple columns - all satisfied</description>
         <resultNode name="decision013" type="decision">
             <expected>
                 <component name="col1">
@@ -163,7 +174,7 @@
     </testCase>
 
     <testCase id="014">
-        <description>output values: multiple columns - column mismatch</description>
+        <description>output values: multiple columns - column not satisfied</description>
         <resultNode name="decision014" type="decision">
             <expected>
                 <component name="col1">
@@ -177,7 +188,7 @@
     </testCase>
 
     <testCase id="015">
-        <description>output values: ? used in tests - match</description>
+        <description>output values: ? used in tests - satisfied</description>
         <resultNode name="decision015" type="decision">
             <expected>
                 <value xsi:type="xsd:string">foo</value>
@@ -186,7 +197,7 @@
     </testCase>
 
     <testCase id="016">
-        <description>output values: ? used in tests - mismatch</description>
+        <description>output values: ? used in tests - not satisfied</description>
         <resultNode name="decision016" type="decision">
             <expected>
                 <value xsi:nil="true"/>
