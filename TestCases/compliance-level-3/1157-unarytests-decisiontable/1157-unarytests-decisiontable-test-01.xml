@@ -123,6 +123,17 @@
         </resultNode>
     </testCase>
 
+    <testCase id="008_b">
+        <!-- further to 008, an input expression of boolean "false" will not be satisfied against a rule
+         unary test of that evaluates to true -->
+        <description>input values: boolean expression is weird</description>
+        <resultNode name="decision008_b" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">success</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
     <testCase id="009">
         <description>output values: result satisfies output values</description>
         <resultNode name="decision009" type="decision">
@@ -201,6 +212,15 @@
         <resultNode name="decision016" type="decision">
             <expected>
                 <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="017">
+        <description>input values: ? used in expression outside of unary tests expressions</description>
+        <resultNode name="decision017" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">success</value>
             </expected>
         </resultNode>
     </testCase>

@@ -191,8 +191,7 @@
 
     <decision name="decision006_b" id="_decision006_b">
         <!-- '?' symbol  -->
-        <!-- input expression "foo" executed against "?" does not return true and thus the rule for null will be satisfied -->
-        <!-- spec states that an expression with "?" must return a boolean "true" for it to be satisfied -->
+        <!-- input expression "foo" executed against "?" does not return true but, does satisfy an equality check -->
         <variable name="decision006_b"/>
         <decisionTable>
             <input>
@@ -206,7 +205,7 @@
             <output/>
             <rule>
                 <inputEntry>
-                    <text>null</text>
+                    <text>"foo"</text>
                 </inputEntry>
                 <outputEntry>
                     <text>"success"</text>
@@ -233,6 +232,32 @@
             <rule>
                 <inputEntry>
                     <text>true</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"success"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+
+    <decision name="decision006_d" id="_decision006_d">
+        <!-- '?' symbol  -->
+        <!-- input expression `false` executed against "?" returns false and thus an equality check is satisfied -->
+        <!-- spec states that an expression with "?" must return a boolean "true" for it to be satisfied -->
+        <variable name="decision006_d"/>
+        <decisionTable>
+            <input>
+                <inputExpression>
+                    <text>false</text>
+                </inputExpression>
+                <inputValues>
+                    <text>?</text>
+                </inputValues>
+            </input>
+            <output/>
+            <rule>
+                <inputEntry>
+                    <text>false</text>
                 </inputEntry>
                 <outputEntry>
                     <text>"success"</text>
@@ -316,6 +341,32 @@
             <rule>
                 <inputEntry>
                     <text>false</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"success"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+
+    <decision name="decision008_b" id="_decision008_b">
+        <!-- Odd handling for boolean. 'true' is an expression. Unary tests permit expressions but
+         in this case the input expression false will not satisfy unary tests and thus the
+         rule for null will be satisfied -->
+        <variable name="decision008_b"/>
+        <decisionTable>
+            <input>
+                <inputExpression>
+                    <text>false</text>
+                </inputExpression>
+                <inputValues>
+                    <text>1==1</text>
+                </inputValues>
+            </input>
+            <output/>
+            <rule>
+                <inputEntry>
+                    <text>null</text>
                 </inputEntry>
                 <outputEntry>
                     <text>"success"</text>
@@ -524,18 +575,41 @@
                 <inputExpression>
                     <text>123</text>
                 </inputExpression>
-            </input>
-            <output>
-                <outputValues>
+                <inputValues>
                     <text>string length(?) >= 3</text>
-                </outputValues>
-            </output>
+                </inputValues>
+            </input>
+            <output/>
             <rule>
                 <inputEntry>
                     <text>123</text>
                 </inputEntry>
                 <outputEntry>
                     <text>"a"</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+
+    <decision name="decision017" id="_decision017">
+        <!-- ? is used in an expression, but is not one of the unary tests expressions -->
+        <variable name="decision017"/>
+        <decisionTable>
+            <input>
+                <inputExpression>
+                    <text>123</text>
+                </inputExpression>
+                <inputValues>
+                    <text>[345, ? = 123, 456]</text>
+                </inputValues>
+            </input>
+            <output/>
+            <rule>
+                <inputEntry>
+                    <text>null</text>
+                </inputEntry>
+                <outputEntry>
+                    <text>"success"</text>
                 </outputEntry>
             </rule>
         </decisionTable>
