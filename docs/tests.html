@@ -78,7 +78,7 @@
                 <div class="row">
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Tests:</strong> 3250</p>
+                            <p><strong>Tests:</strong> 3306</p>
                         </small>
                     </div>
                     <div class="col-md-2">
@@ -871,7 +871,7 @@
                             <td scope="row"></td>
                         </tr>
                         <tr>
-                                <td class="text-nowrap" scope="row" rowspan="3134" style="vertical-align:middle">compliance-level-3</td>
+                                <td class="text-nowrap" scope="row" rowspan="3190" style="vertical-align:middle">compliance-level-3</td>
                                 <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0001-filter-test-01</td>
                                 <td align="center" rowspan="1" style="vertical-align:middle">
                                     <a target="_blank" href="https://github.com/dmn-tck/tck/blob/master/TestCases/compliance-level-3/0001-filter/0001-filter.pdf">
@@ -14554,6 +14554,239 @@
                             <td class="text-nowrap" scope="row">007</td>
                             <td scope="row">Will return true for empty list</td>
                         </tr>
+                        <tr>
+                                <td class="text-nowrap" scope="row" rowspan="56" style="vertical-align:middle">1156-range-function-test-01</td>
+                                <td align="center" rowspan="56" style="vertical-align:middle">
+                                    <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="56" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/1156-range-function">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td scope="row">Sanity check something is in range</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">001_a</td>
+                            <td scope="row">range(number) instance of range<number></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">001_b</td>
+                            <td scope="row">range(number) instance of range<number></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">001_c</td>
+                            <td scope="row">range(string) instance of range<string></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">001_d</td>
+                            <td scope="row">range(date) instance of range<date></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">001_e</td>
+                            <td scope="row">range(date and time) instance of range<date and time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">001_g</td>
+                            <td scope="row">range(time) instance of range<time></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">001_h</td>
+                            <td scope="row">range(days and time duration) instance of range<days and time duration></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">001_i</td>
+                            <td scope="row">range(years and months duration) instance of range<years and months duration></td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td scope="row">sanity check using a non-literal string expression </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003_a</td>
+                            <td scope="row">range() function result equals FEEL range: [..]</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003_b</td>
+                            <td scope="row">range() function result equals FEEL range: (..]</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003_c</td>
+                            <td scope="row">range() function result equals FEEL range: ]..]</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003_d</td>
+                            <td scope="row">range() function result equals FEEL range: [..)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003_e</td>
+                            <td scope="row">range() function result equals FEEL range: [..[</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">004_e</td>
+                            <td scope="row">closed start endpoint with no value is not valid and gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">004_f</td>
+                            <td scope="row">closed end endpoint with no value is not valid and gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">005_a</td>
+                            <td scope="row">range(string) function equals a unary FEEL range: string </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">005_b</td>
+                            <td scope="row">range(date) function equals a unary FEEL range: date </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">005_c</td>
+                            <td scope="row">range(date and time) function equals a unary FEEL range: date and time </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">005_d</td>
+                            <td scope="row">range(time) function equals a unary FEEL range: time </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">005_e</td>
+                            <td scope="row">range(days and time duration) function equals a unary FEEL range: days and time duration </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">005_f</td>
+                            <td scope="row">range(years and months duration) function equals a unary FEEL range: years and months duration </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">006</td>
+                            <td scope="row">will ignore whitespace when parsing</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">007_a</td>
+                            <td scope="row">use of date() function literal is permitted</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">007_b</td>
+                            <td scope="row">use of date() function as non literal is not permitted and gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">007_c</td>
+                            <td scope="row">use of date() function as non literal is not permitted and gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">008_a</td>
+                            <td scope="row">use of date and time() function literal is permitted</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">008_b</td>
+                            <td scope="row">use of date and time() function as non literal is not permitted and gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">008_c</td>
+                            <td scope="row">use of date and time() function as non literal is not permitted and gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">009_a</td>
+                            <td scope="row">use of time() function literal is permitted</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">009_b</td>
+                            <td scope="row">use of time() function as non literal is not permitted and gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">009_c</td>
+                            <td scope="row">use of time() function as non literal is not permitted and gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">010_a</td>
+                            <td scope="row">use of duration() function literal is permitted</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">010_b</td>
+                            <td scope="row">use of duration() function as non literal is not permitted and gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">010_c</td>
+                            <td scope="row">use of duration() function as non literal is not permitted and gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">011</td>
+                            <td scope="row">named argument</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">012</td>
+                            <td scope="row">invalidly named argument gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">013_a</td>
+                            <td scope="row">too many arguments gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">013_b</td>
+                            <td scope="row">too few arguments gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">014</td>
+                            <td scope="row">invalid argument type gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">015_a</td>
+                            <td scope="row">empty string gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">015_b</td>
+                            <td scope="row">whitespace only gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">016</td>
+                            <td scope="row">non-literal argument providing invalid range string gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">017</td>
+                            <td scope="row">a unary range is not a valid literal range string and gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">018</td>
+                            <td scope="row">mismatching endpoint types gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">019_a</td>
+                            <td scope="row">date and date and time end points are not equivalent and gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">019_b</td>
+                            <td scope="row">date and date and time end points are not equivalent and gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">020</td>
+                            <td scope="row">descending numeric range gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">021</td>
+                            <td scope="row">descending date range gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">022</td>
+                            <td scope="row">descending date time range gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">023</td>
+                            <td scope="row">descending string range gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">024</td>
+                            <td scope="row">descending date duration range gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">025</td>
+                            <td scope="row">descending year duration range gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">026</td>
+                            <td scope="row">descending time range gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">027</td>
+                            <td scope="row">both null endpoints gives null</td>
+                        </tr>
                         </tbody>
                     </table>
                 </div>
@@ -14564,7 +14797,7 @@
 <!-- pre-footer -->
 <div class="pre-footer">
     <div class="last-updated">
-        <p>Last updated:</strong> Aug 1, 2024, 12:45:42 AM</p>
+        <p>Last updated:</strong> Sep 1, 2024, 12:53:15 AM</p>
     </div>
 </div>
 <div class="footer">
