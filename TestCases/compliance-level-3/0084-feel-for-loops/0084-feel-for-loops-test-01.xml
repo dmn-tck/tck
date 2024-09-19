@@ -192,4 +192,136 @@
         </resultNode>
     </testCase>
 
+    <testCase id="decision_017">
+        <description>date range increment upwards</description>
+        <resultNode name="decision_017" type="decision">
+            <expected>
+                <list>
+                    <item><value xsi:type="xsd:date">1980-01-01</value></item>
+                    <item><value xsi:type="xsd:date">1980-01-02</value></item>
+                    <item><value xsi:type="xsd:date">1980-01-03</value></item>
+                </list>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="decision_018">
+        <description>date range increment downwards</description>
+        <resultNode name="decision_018" type="decision">
+            <expected>
+                <list>
+                    <item><value xsi:type="xsd:date">1980-01-03</value></item>
+                    <item><value xsi:type="xsd:date">1980-01-02</value></item>
+                    <item><value xsi:type="xsd:date">1980-01-01</value></item>
+                </list>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="decision_019">
+        <description>string iteration context gives null</description>
+        <resultNode name="decision_019" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="decision_019_a">
+        <description>string range iteration context gives null</description>
+        <resultNode name="decision_019_a" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="decision_020">
+        <description>datetime iteration context gives null</description>
+        <resultNode name="decision_020" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="decision_020_a">
+        <description>datetime range iteration context gives null</description>
+        <resultNode name="decision_020_a" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="decision_021">
+        <description>time iteration context gives null</description>
+        <resultNode name="decision_021" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="decision_021_a">
+        <description>time range iteration context gives null</description>
+        <resultNode name="decision_021_a" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="decision_022">
+        <description>duration iteration context gives null</description>
+        <resultNode name="decision_022" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="decision_022_a">
+        <description>duration range iteration context gives null</description>
+        <resultNode name="decision_022_a" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="decision_023">
+        <description>a valid numeric range is permitted as iteration context</description>
+        <resultNode name="decision_023" type="decision">
+            <expected>
+                <list>
+                    <item><value xsi:type="xsd:decimal">1</value></item>
+                    <item><value xsi:type="xsd:decimal">2</value></item>
+                </list>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="decision_024">
+        <description>a valid date range is permitted as iteration context</description>
+        <resultNode name="decision_024" type="decision">
+            <expected>
+                <list>
+                    <item><value xsi:type="xsd:date">1980-01-01</value></item>
+                    <item><value xsi:type="xsd:date">1980-01-02</value></item>
+                    <item><value xsi:type="xsd:date">1980-01-03</value></item>
+                </list>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="decision_025">
+        <description>invalid (descending) range gives null</description>
+        <resultNode name="decision_025" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
 </testCases>
