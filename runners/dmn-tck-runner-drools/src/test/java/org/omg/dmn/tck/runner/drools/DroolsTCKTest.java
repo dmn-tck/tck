@@ -30,7 +30,6 @@ import org.kie.dmn.core.impl.SimpleTypeImpl;
 import org.kie.dmn.feel.lang.Type;
 import org.kie.dmn.feel.lang.types.BuiltInType;
 import org.kie.dmn.feel.lang.types.impl.ComparablePeriod;
-import org.kie.dmn.feel.util.NumberEvalHelper;
 import org.kie.dmn.model.api.Definitions;
 import org.kie.internal.utils.KieHelper;
 import org.omg.dmn.tck.marshaller._20160719.TestCaseType;
@@ -52,7 +51,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.lang.reflect.Method;
-import java.math.BigDecimal;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.LocalDate;
@@ -74,7 +72,6 @@ import java.util.stream.Collectors;
 public class DroolsTCKTest implements DmnTckVendorTestSuite {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DroolsTCKTest.class);
-    public static final BigDecimal NUMBER_COMPARISON_PRECISION = new BigDecimal("0.00000001");
 
     private static final DMNTypeRegistryV12 REGISTRY = new DMNTypeRegistryV12();
 
@@ -176,7 +173,7 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
                         }
                     }
                 }
-                if (!areEqual(expectedResult, actualResult)) {
+                if (!CompareValuesUtil.areEqual(expectedResult, actualResult)) {
                     failures.add("FAILURE: '" + decisionName + "' expected='" + expectedResult + "' but found='" + actualResult + "'");
                 }
             } catch (Throwable t) {
@@ -206,52 +203,6 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
             }
         });
         return dmnContext;
-    }
-
-    private boolean areEqual(Object object1, Object object2) {
-        // This includes both being null.
-        if (object1 == object2) {
-            return true;
-        // If one of those is null.
-        } else if ((object1 == null) || (object2 == null)) {
-            return false;
-        } else if (!object1.getClass().isAssignableFrom(object2.getClass())) {
-            return false;
-        } else if (object1 instanceof Number && object2 instanceof Number) {
-            BigDecimal expectedBD = NumberEvalHelper.getBigDecimalOrNull(object1);
-            BigDecimal actualBD = NumberEvalHelper.getBigDecimalOrNull(object2);
-            return expectedBD.subtract(actualBD).abs().compareTo(NUMBER_COMPARISON_PRECISION) < 0;
-        } else if (object1 instanceof List && object2 instanceof List) {
-            return areEqualLists((List<Object>) object1, (List<Object>) object2);
-        } else if (object1 instanceof Map && object2 instanceof Map) {
-            return areEqualMaps((Map<Object, Object>) object1, (Map<Object, Object>) object2);
-        } else {
-            return object1.equals(object2);
-        }
-    }
-
-    private boolean areEqualLists(List<Object> list1, List<Object> list2) {
-        if (list1.size() != list2.size()) {
-            return false;
-        }
-        for (int i = 0; i < list1.size(); i++) {
-            if (!areEqual(list1.get(i), list2.get(i))) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    private boolean areEqualMaps(Map<Object, Object> map1, Map<Object, Object> map2) {
-        if (map1.size() != map2.size()) {
-            return false;
-        }
-        for (Map.Entry<Object, Object> entry : map1.entrySet()) {
-            if (!areEqual(entry.getValue(), map2.get(entry.getKey()))) {
-                return false;
-            }
-        }
-        return true;
     }
 
     @Override
