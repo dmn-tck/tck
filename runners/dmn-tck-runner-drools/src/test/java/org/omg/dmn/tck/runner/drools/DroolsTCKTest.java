@@ -18,7 +18,6 @@ import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieRuntimeFactory;
 import org.kie.dmn.api.core.DMNContext;
 import org.kie.dmn.api.core.DMNMessage;
-import org.kie.dmn.api.core.DMNModel;
 import org.kie.dmn.api.core.DMNResult;
 import org.kie.dmn.api.core.DMNRuntime;
 import org.kie.dmn.api.core.DMNType;
@@ -51,9 +50,7 @@ import javax.xml.datatype.Duration;
 import javax.xml.datatype.XMLGregorianCalendar;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
-import java.io.IOException;
 import java.lang.reflect.Method;
 import java.math.BigDecimal;
 import java.net.MalformedURLException;
@@ -63,7 +60,6 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.OffsetTime;
 import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -89,7 +85,7 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
 
     @Override
     public List<URL> getTestCases() {
-        List<URL> testCases = new ArrayList<>();
+        final List<URL> testCases = new ArrayList<>();
         addTestCasesFolders(new File("../../TestCases/compliance-level-2"), testCases);
         addTestCasesFolders(new File("../../TestCases/compliance-level-3"), testCases);
         testCases.sort(Comparator.comparing(URL::toString));
@@ -116,16 +112,13 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
     }
 
     @Override
-    public void beforeTestCases(TestSuiteContext context, TestCases testCases, URL modelURL, Collection<? extends URL> additionalModels) {
-        LOGGER.info("Creating runtime for model: {} and additional models {}\n", modelURL, additionalModels);
-        DroolsContext ctx = (DroolsContext) context;
-        ctx.runtime = createRuntime(modelURL, additionalModels);
-        if (ctx.runtime.getModels().isEmpty()) {
-            throw new RuntimeException("Unable to load model for URL '" + modelURL + "'");
-        }
+    public void beforeTestCases(final TestSuiteContext context, final TestCases testCases, final URL modelURL, final Collection<? extends URL> additionalModels) {
+        LOGGER.info("Creating DMN runtime for model: {} and additional models {}\n", modelURL, additionalModels);
+        final DroolsContext testSuiteContext = (DroolsContext) context;
+        testSuiteContext.setDMNRuntime(createRuntime(modelURL, additionalModels));
         try {
-            Definitions mainModelXML = DMNMarshallerFactory.newDefaultMarshaller().unmarshal(new FileReader(modelURL.getFile()));
-            ctx.dmnmodel = ctx.runtime.getModel(mainModelXML.getNamespace(), mainModelXML.getName());
+            final Definitions mainModelXML = DMNMarshallerFactory.newDefaultMarshaller().unmarshal(new FileReader(modelURL.getFile()));
+            testSuiteContext.setDMNModel(testSuiteContext.getDMNRuntime().getModel(mainModelXML.getNamespace(), mainModelXML.getName()));
         } catch (FileNotFoundException e) {
             throw new RuntimeException("Unable to locate file for model for URL '" + modelURL + "'");
         }
@@ -133,13 +126,10 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
 
     @Override
     public void beforeTestCases(TestSuiteContext context, TestCases testCases, URL modelURL) {
-        LOGGER.info("Creating runtime for model: {}\n", modelURL);
-        DroolsContext ctx = (DroolsContext) context;
-        ctx.runtime = createRuntime(modelURL, Collections.emptyList());
-        if (ctx.runtime.getModels().isEmpty()) {
-            throw new RuntimeException("Unable to load model for URL '" + modelURL + "'");
-        }
-        ctx.dmnmodel = ctx.runtime.getModels().get(0);
+        LOGGER.info("Creating DMN runtime for model: {}\n", modelURL);
+        DroolsContext testSuiteContext = (DroolsContext) context;
+        testSuiteContext.setDMNRuntime(createRuntime(modelURL, Collections.emptyList()));
+        testSuiteContext.setDMNModel(testSuiteContext.getDMNRuntime().getModels().get(0));
     }
 
     @Override
@@ -149,47 +139,33 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
 
     @Override
     public TestResult executeTest(Description description, TestSuiteContext context, TestCases.TestCase testCase) {
-        DroolsContext ctx = (DroolsContext) context;
+        DroolsContext testSuiteContext = (DroolsContext) context;
         LOGGER.info("Executing test '{} / {}'\n", description.getClassName(), description.getMethodName());
 
-        DMNContext dmnctx = ctx.runtime.newContext();
-        testCase.getInputNode().forEach(in -> {
-            InputDataNode input = ctx.dmnmodel.getInputByName(in.getName());
-            DecisionNode decision = ctx.dmnmodel.getDecisionByName(in.getName());
-            if (input != null) {
-                dmnctx.set(in.getName(), parseValue(in, input)); // normally data input from file, should be pointing at a InputData in the model
-            } else if (decision != null) {
-                dmnctx.set(in.getName(), parseValue(in, decision)); // the test case offers a pre-evaluated Decision
-            } else {
-                LOGGER.warn("Override input name {} with value {}", in.getName(), in);
-                dmnctx.set(in.getName(), parseType(in, REGISTRY.unknown()));
-            }
-        });
-
-        DMNContext resultctx = dmnctx;
+        DMNContext executionResultContext = getNewDMNContextWithFilledInputsFromTestCase(testSuiteContext, testCase);
         List<String> failures = new ArrayList<>();
-        for (TestCases.TestCase.ResultNode rn : testCase.getResultNode()) {
+        for (TestCases.TestCase.ResultNode testCaseResultNode : testCase.getResultNode()) {
             try {
-                String name = rn.getName();
+                String decisionName = testCaseResultNode.getName();
                 DMNResult dmnResult;
                 if (testCase.getType() == TestCaseType.DECISION_SERVICE) {
-                    dmnResult = ctx.runtime.evaluateDecisionService(ctx.dmnmodel, resultctx, testCase.getInvocableName());
+                    dmnResult = testSuiteContext.getDMNRuntime().evaluateDecisionService(testSuiteContext.getDMNModel(), executionResultContext, testCase.getInvocableName());
                 } else {
-                    dmnResult = ctx.runtime.evaluateByName(ctx.dmnmodel, resultctx, name);
+                    dmnResult = testSuiteContext.getDMNRuntime().evaluateByName(testSuiteContext.getDMNModel(), executionResultContext, decisionName);
                 }
                 if (!dmnResult.getMessages().isEmpty()) {
                     LOGGER.info("Messages: \n-----\n{}\n-----\n", dmnResult.getMessages().stream().map(Object::toString).collect(Collectors.joining("\n")));
                 }
-                resultctx = dmnResult.getContext();
-                Object expected = parseValue(rn, ctx.dmnmodel.getDecisionByName(name));
-                Object actual = resultctx.get(name);
-                if (rn.isErrorResult()) {
+                executionResultContext = dmnResult.getContext();
+                Object expectedResult = parseValue(testCaseResultNode, testSuiteContext.getDMNModel().getDecisionByName(decisionName));
+                Object actualResult = executionResultContext.get(decisionName);
+                if (testCaseResultNode.isErrorResult()) {
                     for (DMNMessage msg : dmnResult.getMessages(DMNMessage.Severity.ERROR)) {
                         LOGGER.info("TEST CASE is error Result, message reported is to be expected: {}", msg);
                     }
                 } else {
-                    if (expected == null && actual == null) {
-                        LOGGER.warn("TCK value comparison is correct, but TCK test case '{}' might be missing errorResult flag?", name);
+                    if (expectedResult == null && actualResult == null) {
+                        LOGGER.warn("TCK value comparison is correct, but TCK test case '{}' might be missing errorResult flag?", decisionName);
                         LOGGER.warn("Here is a list of reported error messages:");
                         for (DMNMessage msg : dmnResult.getMessages(DMNMessage.Severity.ERROR)) {
                             LOGGER.warn(msg.getText());
@@ -200,8 +176,8 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
                         }
                     }
                 }
-                if (!isEquals(expected, actual)) {
-                    failures.add("FAILURE: '" + name + "' expected='" + expected + "' but found='" + actual + "'");
+                if (!areEqual(expectedResult, actualResult)) {
+                    failures.add("FAILURE: '" + decisionName + "' expected='" + expectedResult + "' but found='" + actualResult + "'");
                 }
             } catch (Throwable t) {
                 final String failureString = String.format("FAILURE: unexpected exception executing test case '%s / %s'", description.getClassName(), description.getMethodName());
@@ -209,56 +185,73 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
                 LOGGER.error(failureString, t);
             }
         }
-        LOGGER.info("Result context: {}\n", resultctx);
+        LOGGER.info("Result context: {}\n", executionResultContext);
 
         TestResult.Result r = !failures.isEmpty() ? TestResult.Result.ERROR : TestResult.Result.SUCCESS;
         return new TestResult(r, String.join("\n", failures));
     }
 
-    private boolean isEquals(Object expected, Object actual) {
+    private DMNContext getNewDMNContextWithFilledInputsFromTestCase(final DroolsContext testSuiteContext, TestCases.TestCase testCase) {
+        DMNContext dmnContext = testSuiteContext.getDMNRuntime().newContext();
+        testCase.getInputNode().forEach(in -> {
+            InputDataNode input = testSuiteContext.getDMNModel().getInputByName(in.getName());
+            DecisionNode decision = testSuiteContext.getDMNModel().getDecisionByName(in.getName());
+            if (input != null) {
+                dmnContext.set(in.getName(), parseValue(in, input)); // normally data input from file, should be pointing at a InputData in the model
+            } else if (decision != null) {
+                dmnContext.set(in.getName(), parseValue(in, decision)); // the test case offers a pre-evaluated Decision
+            } else {
+                LOGGER.warn("Override input name {} with value {}", in.getName(), in);
+                dmnContext.set(in.getName(), parseType(in, REGISTRY.unknown()));
+            }
+        });
+        return dmnContext;
+    }
+
+    private boolean areEqual(Object object1, Object object2) {
         // This includes both being null.
-        if (expected == actual) {
+        if (object1 == object2) {
             return true;
-        }
         // If one of those is null.
-        if ((expected == null) || (actual == null)) {
+        } else if ((object1 == null) || (object2 == null)) {
             return false;
-        }
-        if (expected instanceof Number && actual instanceof Number) {
-            BigDecimal expectedBD = NumberEvalHelper.getBigDecimalOrNull(expected);
-            BigDecimal actualBD = NumberEvalHelper.getBigDecimalOrNull(actual);
+        } else if (!object1.getClass().isAssignableFrom(object2.getClass())) {
+            return false;
+        } else if (object1 instanceof Number && object2 instanceof Number) {
+            BigDecimal expectedBD = NumberEvalHelper.getBigDecimalOrNull(object1);
+            BigDecimal actualBD = NumberEvalHelper.getBigDecimalOrNull(object2);
             return expectedBD.subtract(actualBD).abs().compareTo(NUMBER_COMPARISON_PRECISION) < 0;
+        } else if (object1 instanceof List && object2 instanceof List) {
+            return areEqualLists((List<Object>) object1, (List<Object>) object2);
+        } else if (object1 instanceof Map && object2 instanceof Map) {
+            return areEqualMaps((Map<Object, Object>) object1, (Map<Object, Object>) object2);
+        } else {
+            return object1.equals(object2);
         }
-        if (expected instanceof List && actual instanceof List) {
-            List e = (List) expected;
-            List a = (List) actual;
-            if (e.size() != a.size()) {
-                return false;
-            }
-            for (int i = 0; i < e.size(); i++) {
-                if (!isEquals(e.get(i), a.get(i))) {
-                    return false;
-                }
-            }
-            return true;
-        }
-        if (expected instanceof Map && actual instanceof Map) {
-            Map<Object, Object> e = (Map<Object, Object>) expected;
-            Map<Object, Object> a = (Map<Object, Object>) actual;
-            if (e.size() != a.size()) {
-                return false;
-            }
-            for (Map.Entry entry : e.entrySet()) {
-                if (!isEquals(entry.getValue(), a.get(entry.getKey()))) {
-                    return false;
-                }
-            }
-            return true;
-        }
-        if (!expected.getClass().isAssignableFrom(actual.getClass())) {
+    }
+
+    private boolean areEqualLists(List<Object> list1, List<Object> list2) {
+        if (list1.size() != list2.size()) {
             return false;
         }
-        return expected.equals(actual);
+        for (int i = 0; i < list1.size(); i++) {
+            if (!areEqual(list1.get(i), list2.get(i))) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean areEqualMaps(Map<Object, Object> map1, Map<Object, Object> map2) {
+        if (map1.size() != map2.size()) {
+            return false;
+        }
+        for (Map.Entry<Object, Object> entry : map1.entrySet()) {
+            if (!areEqual(entry.getValue(), map2.get(entry.getKey()))) {
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override
@@ -276,7 +269,7 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
         return TestResultsUtil.getTestResultsFilePath();
     }
 
-    protected DMNRuntime createRuntime(URL modelUrl, Collection<? extends URL> additionalModels) {
+    private DMNRuntime createRuntime(URL modelUrl, Collection<? extends URL> additionalModels) {
         KieServices ks = KieServices.Factory.get();
         KieHelper kieHelper = new KieHelper().addResource(ks.getResources().newFileSystemResource(modelUrl.getFile()));
         for (URL a : additionalModels) {
@@ -287,6 +280,10 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
 
         if (runtime == null) {
             throw new RuntimeException("Unable to create DMN Runtime");
+        }
+
+        if (runtime.getModels().isEmpty()) {
+            throw new RuntimeException("Unable to load DMN model for URL '" + modelUrl + "'");
         }
         return runtime;
     }
@@ -452,10 +449,5 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
 
     private boolean isDateTimeOrDuration(Object value) {
         return value instanceof Duration || value instanceof XMLGregorianCalendar;
-    }
-
-    public static class DroolsContext implements TestSuiteContext {
-        public DMNRuntime runtime;
-        public DMNModel dmnmodel;
     }
 }
