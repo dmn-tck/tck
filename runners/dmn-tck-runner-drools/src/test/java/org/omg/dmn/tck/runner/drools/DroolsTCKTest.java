@@ -53,9 +53,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
-import java.io.FilenameFilter;
 import java.io.IOException;
-import java.io.UncheckedIOException;
 import java.lang.reflect.Method;
 import java.math.BigDecimal;
 import java.net.MalformedURLException;
@@ -63,7 +61,6 @@ import java.net.URL;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.time.LocalDate;
@@ -74,7 +71,6 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
@@ -105,72 +101,63 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
 
     private static final DMNTypeRegistryV12 REGISTRY = new DMNTypeRegistryV12();
 
-    File propsFile;
-    Properties props;
+    private File testResultsProperties;
+    private Properties props;
+    private String droolsVersion;
 
     {
-        File dir = new File("../../TestResults/Drools");
-        String[] versions = dir.list((f, s) -> f.isDirectory());
-        assert versions != null;
-        Arrays.sort(versions);
-        propsFile = new File("../../TestResults/Drools/" + versions[versions.length - 1] + "/tck_results.properties");
-        if (!propsFile.exists()) {
-            try {
-                propsFile.createNewFile();
-            } catch (IOException e) {
-                throw new UncheckedIOException(e);
-            }
+        // TODO - this needs to be broken into some init() method or similar.
+        try {
+            droolsVersion = getDroolsVersion();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
-        if (versions.length > 1) {
-            for (int i = 0; i < versions.length - 1; i++) {
-                Path toRemove = Paths.get("../../TestResults/Drools/" + versions[i]);
-                try {
-                    Files.walkFileTree(toRemove, rmrf);
-                } catch (IOException e) {
-                    LOGGER.warn("Exception while removing old test results", e);
+
+        final File testResultsDirectory = new File("../../TestResults/Drools");
+        // Delete everything in results.
+        deleteAllFilesFromFolder(testResultsDirectory);
+
+        // Create required files.
+        testResultsProperties = new File("../../TestResults/Drools/" + droolsVersion + "/tck_results.properties");
+        try {
+            testResultsProperties.createNewFile();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private String getDroolsVersion() throws IOException {
+        final Properties ps = new Properties();
+        ps.load(this.getClass().getResourceAsStream("/drools.properties"));
+        final String droolsVersionFromProperties = ps.getProperty("drools.version");
+        return droolsVersionFromProperties != null ? droolsVersionFromProperties : "";
+    }
+
+    private void deleteAllFilesFromFolder(final File folder) {
+        final File[] filesInFolder = folder.listFiles(File::isDirectory);
+        if (filesInFolder != null) {
+            for (File file : filesInFolder) {
+                final boolean deleted = file.delete();
+                if (!deleted) {
+                    LOGGER.warn("There was a problem deleting file: " + file.getAbsolutePath());
                 }
             }
-        }
-        props = new Properties();
-        try {
-            props.load(new FileReader(propsFile));
-        } catch (IOException e) {
-            throw new UncheckedIOException(e);
-        }
-        // update Drools version.
-        try {
-            Properties ps = new Properties();
-            ps.load(this.getClass().getResourceAsStream("/drools.properties"));
-            String curVersion = ps.getProperty("drools.version");
-            if (curVersion != null && !curVersion.equals(props.getProperty("product.version"))) {
-                props.setProperty("product.version", curVersion);
-                try {
-                    Path toMove = Paths.get("../../TestResults/Drools/" + versions[versions.length - 1]);
-                    toMove.toFile().renameTo(Paths.get("../../TestResults/Drools/" + curVersion).toFile());
-                    propsFile = new File("../../TestResults/Drools/" + curVersion + "/tck_results.properties");
-                } catch (Throwable e) {
-                    LOGGER.warn("Exception while moving to new version", e);
-                }
-            }
-        } catch (IOException e) {
-            LOGGER.warn("Exception while trying to update Drools version to a new version. ", e);
         }
     }
 
     @Override
     public List<URL> getTestCases() {
         List<URL> testCases = new ArrayList<>();
-        FilenameFilter filenameFilter = (dir, name) -> name.matches("\\d\\d\\d\\d-.*");
-        addTestCasesFromFolder(new File("../../TestCases/compliance-level-2"), filenameFilter, testCases);
-        addTestCasesFromFolder(new File("../../TestCases/compliance-level-3"), filenameFilter, testCases);
+        addTestCasesFolders(new File("../../TestCases/compliance-level-2"), testCases);
+        addTestCasesFolders(new File("../../TestCases/compliance-level-3"), testCases);
         testCases.sort(Comparator.comparing(URL::toString));
         return testCases;
     }
 
-    private void addTestCasesFromFolder(final File folder, final FilenameFilter filenameFilter, final List<URL> testCases) {
-        final File[] filesFromFolder = folder.listFiles(filenameFilter);
-        if (filesFromFolder != null) {
-            for (File file : filesFromFolder) {
+    private void addTestCasesFolders(final File folder, final List<URL> testCases) {
+        final File[] testCasesFolders = folder.listFiles(File::isDirectory);
+        if (testCasesFolders != null) {
+            for (File file : testCasesFolders) {
                 try {
                     testCases.add(file.toURI().toURL());
                 } catch (MalformedURLException e) {
@@ -341,7 +328,7 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
     public void afterTestCase(TestSuiteContext context, TestCases testCases) {
         props.setProperty("last.update", ZonedDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE));
         try {
-            props.store(new FileOutputStream(propsFile), null);
+            props.store(new FileOutputStream(testResultsProperties), null);
         } catch (IOException e) {
             LOGGER.warn("Exception while updating last update date", e);
         }
@@ -349,7 +336,7 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
 
     @Override
     public String getResultFileName() {
-        return "../../TestResults/Drools/" + props.getProperty("product.version") + "/tck_results.csv";
+        return "../../TestResults/Drools/" + droolsVersion + "/tck_results.csv";
     }
 
     protected DMNRuntime createRuntime(URL modelUrl, Collection<? extends URL> additionalModels) {
