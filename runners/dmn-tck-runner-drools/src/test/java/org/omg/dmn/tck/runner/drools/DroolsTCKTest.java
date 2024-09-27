@@ -58,11 +58,6 @@ import java.lang.reflect.Method;
 import java.math.BigDecimal;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.nio.file.FileVisitResult;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.SimpleFileVisitor;
-import java.nio.file.attribute.BasicFileAttributes;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -77,72 +72,19 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Properties;
 import java.util.stream.Collectors;
 
 @RunWith(DmnTckSuite.class)
 public class DroolsTCKTest implements DmnTckVendorTestSuite {
 
-    private static final SimpleFileVisitor<Path> rmrf = new SimpleFileVisitor<>() {
-        @Override
-        public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-            Files.delete(file);
-            return FileVisitResult.CONTINUE;
-        }
-
-        @Override
-        public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
-            Files.delete(dir);
-            return FileVisitResult.CONTINUE;
-        }
-    };
     private static final Logger LOGGER = LoggerFactory.getLogger(DroolsTCKTest.class);
     public static final BigDecimal NUMBER_COMPARISON_PRECISION = new BigDecimal("0.00000001");
 
     private static final DMNTypeRegistryV12 REGISTRY = new DMNTypeRegistryV12();
 
-    private File testResultsProperties;
-    private Properties props;
-    private String droolsVersion;
-
-    {
-        // TODO - this needs to be broken into some init() method or similar.
-        try {
-            droolsVersion = getDroolsVersion();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-        final File testResultsDirectory = new File("../../TestResults/Drools");
-        // Delete everything in results.
-        deleteAllFilesFromFolder(testResultsDirectory);
-
-        // Create required files.
-        testResultsProperties = new File("../../TestResults/Drools/" + droolsVersion + "/tck_results.properties");
-        try {
-            testResultsProperties.createNewFile();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    private String getDroolsVersion() throws IOException {
-        final Properties ps = new Properties();
-        ps.load(this.getClass().getResourceAsStream("/drools.properties"));
-        final String droolsVersionFromProperties = ps.getProperty("drools.version");
-        return droolsVersionFromProperties != null ? droolsVersionFromProperties : "";
-    }
-
-    private void deleteAllFilesFromFolder(final File folder) {
-        final File[] filesInFolder = folder.listFiles(File::isDirectory);
-        if (filesInFolder != null) {
-            for (File file : filesInFolder) {
-                final boolean deleted = file.delete();
-                if (!deleted) {
-                    LOGGER.warn("There was a problem deleting file: " + file.getAbsolutePath());
-                }
-            }
-        }
+    static {
+        TestResultsUtil.deleteEverythingFromTestResultsFolder();
+        TestResultsUtil.createTestResultsProperties();
     }
 
     @Override
@@ -321,22 +263,17 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
 
     @Override
     public void afterTest(Description description, TestSuiteContext context, TestCases.TestCase testCase) {
-        // nothing to do
+        // Nothing to do.
     }
 
     @Override
     public void afterTestCase(TestSuiteContext context, TestCases testCases) {
-        props.setProperty("last.update", ZonedDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE));
-        try {
-            props.store(new FileOutputStream(testResultsProperties), null);
-        } catch (IOException e) {
-            LOGGER.warn("Exception while updating last update date", e);
-        }
+        // Nothing to do.
     }
 
     @Override
     public String getResultFileName() {
-        return "../../TestResults/Drools/" + droolsVersion + "/tck_results.csv";
+        return TestResultsUtil.getTestResultsFilePath();
     }
 
     protected DMNRuntime createRuntime(URL modelUrl, Collection<? extends URL> additionalModels) {
