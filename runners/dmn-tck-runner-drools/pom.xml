@@ -12,6 +12,7 @@
     <junit.version>4.13.2</junit.version>
 
     <maven.compiler.release>11</maven.compiler.release>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <repositories>
     <repository>
@@ -85,6 +86,13 @@
           <systemPropertyVariables>
             <org.kie.dmn.runtime.typecheck>true</org.kie.dmn.runtime.typecheck>
           </systemPropertyVariables>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <configuration>
+          <propertiesEncoding>UTF-8</propertiesEncoding>
         </configuration>
       </plugin>
     </plugins>
