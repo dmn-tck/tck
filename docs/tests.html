@@ -78,7 +78,7 @@
                 <div class="row">
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Tests:</strong> 3306</p>
+                            <p><strong>Tests:</strong> 3329</p>
                         </small>
                     </div>
                     <div class="col-md-2">
@@ -871,7 +871,7 @@
                             <td scope="row"></td>
                         </tr>
                         <tr>
-                                <td class="text-nowrap" scope="row" rowspan="3190" style="vertical-align:middle">compliance-level-3</td>
+                                <td class="text-nowrap" scope="row" rowspan="3213" style="vertical-align:middle">compliance-level-3</td>
                                 <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0001-filter-test-01</td>
                                 <td align="center" rowspan="1" style="vertical-align:middle">
                                     <a target="_blank" href="https://github.com/dmn-tck/tck/blob/master/TestCases/compliance-level-3/0001-filter/0001-filter.pdf">
@@ -2879,11 +2879,11 @@
                             <td scope="row">Assert with null params</td>
                         </tr>
                         <tr>
-                                <td class="text-nowrap" scope="row" rowspan="108" style="vertical-align:middle">0068-feel-equality-test-01</td>
-                                <td align="center" rowspan="108" style="vertical-align:middle">
+                                <td class="text-nowrap" scope="row" rowspan="114" style="vertical-align:middle">0068-feel-equality-test-01</td>
+                                <td align="center" rowspan="114" style="vertical-align:middle">
                                     <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
                                 </td>
-                                <td align="center" rowspan="108" style="vertical-align:middle">
+                                <td align="center" rowspan="114" style="vertical-align:middle">
                                     <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/0068-feel-equality">
                                         <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
                                     </a>
@@ -2958,6 +2958,18 @@
                         <tr>
                             <td class="text-nowrap" scope="row">number_007</td>
                             <td scope="row">number equals another type</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">number_008</td>
+                            <td scope="row">number equals literal 'e' exponent number with default sign</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">number_009</td>
+                            <td scope="row">number equals literal 'e' exponent number with '+' sign</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">number_010</td>
+                            <td scope="row">number equals literal 'e' exponent number with '-' sign</td>
                         </tr>
                         <tr>
                             <td class="text-nowrap" scope="row">string_001</td>
@@ -3118,10 +3130,6 @@
                         <tr>
                             <td class="text-nowrap" scope="row">time_006</td>
                             <td scope="row">same times in same zone are equal</td>
-                        </tr>
-                        <tr>
-                            <td class="text-nowrap" scope="row">time_009</td>
-                            <td scope="row">same times = one with offset, the other with zone are equal if offsets are equal</td>
                         </tr>
                         <tr>
                             <td class="text-nowrap" scope="row">time_010</td>
@@ -3305,19 +3313,35 @@
                         </tr>
                         <tr>
                             <td class="text-nowrap" scope="row">range_006</td>
-                            <td scope="row">equal ranges though syntactically different: LT </td>
+                            <td scope="row">equal ranges though syntactically different are not equal: LT </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">range_006_a</td>
+                            <td scope="row">unary syntax comparison range LT</td>
                         </tr>
                         <tr>
                             <td class="text-nowrap" scope="row">range_007</td>
-                            <td scope="row">equal ranges though syntactically different: LE </td>
+                            <td scope="row">equal ranges though syntactically different are not equal: LE </td>
                         </tr>
                         <tr>
                             <td class="text-nowrap" scope="row">range_008</td>
-                            <td scope="row">equal ranges though syntactically different: GT </td>
+                            <td scope="row">equal ranges though syntactically different are not equal: GT </td>
                         </tr>
                         <tr>
                             <td class="text-nowrap" scope="row">range_009</td>
-                            <td scope="row">equal ranges though syntactically different: GE </td>
+                            <td scope="row">equal ranges though syntactically different are not equal: GE </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">range_010</td>
+                            <td scope="row">equal ranges though syntactically different are not equal: EQ </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">range_011</td>
+                            <td scope="row">unary syntax comparison range EQ</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">range_012</td>
+                            <td scope="row">unary syntax comparison range NE</td>
                         </tr>
                         <tr>
                                 <td class="text-nowrap" scope="row" rowspan="35" style="vertical-align:middle">0069-feel-list-test-01</td>
@@ -6114,11 +6138,11 @@
                             <td scope="row">escape 6 digit unicode substring</td>
                         </tr>
                         <tr>
-                                <td class="text-nowrap" scope="row" rowspan="13" style="vertical-align:middle">0084-feel-for-loops-test-01</td>
-                                <td align="center" rowspan="13" style="vertical-align:middle">
+                                <td class="text-nowrap" scope="row" rowspan="26" style="vertical-align:middle">0084-feel-for-loops-test-01</td>
+                                <td align="center" rowspan="26" style="vertical-align:middle">
                                     <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
                                 </td>
-                                <td align="center" rowspan="13" style="vertical-align:middle">
+                                <td align="center" rowspan="26" style="vertical-align:middle">
                                     <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/0084-feel-for-loops">
                                         <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
                                     </a>
@@ -6173,6 +6197,58 @@
                         <tr>
                             <td class="text-nowrap" scope="row">decision_016</td>
                             <td scope="row">nested loops</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">decision_017</td>
+                            <td scope="row">date range increment upwards</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">decision_018</td>
+                            <td scope="row">date range increment downwards</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">decision_019</td>
+                            <td scope="row">string iteration context gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">decision_019_a</td>
+                            <td scope="row">string range iteration context gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">decision_020</td>
+                            <td scope="row">datetime iteration context gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">decision_020_a</td>
+                            <td scope="row">datetime range iteration context gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">decision_021</td>
+                            <td scope="row">time iteration context gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">decision_021_a</td>
+                            <td scope="row">time range iteration context gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">decision_022</td>
+                            <td scope="row">duration iteration context gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">decision_022_a</td>
+                            <td scope="row">duration range iteration context gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">decision_023</td>
+                            <td scope="row">a valid numeric range is permitted as iteration context</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">decision_024</td>
+                            <td scope="row">a valid date range is permitted as iteration context</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">decision_025</td>
+                            <td scope="row">invalid (descending) range gives null</td>
                         </tr>
                         <tr>
                                 <td class="text-nowrap" scope="row" rowspan="17" style="vertical-align:middle">0085-decision-services-test-01</td>
@@ -6885,11 +6961,11 @@
                             <td scope="row">too many params gives null result</td>
                         </tr>
                         <tr>
-                                <td class="text-nowrap" scope="row" rowspan="10" style="vertical-align:middle">0099-arithmetic-negation-test-01</td>
-                                <td align="center" rowspan="10" style="vertical-align:middle">
+                                <td class="text-nowrap" scope="row" rowspan="14" style="vertical-align:middle">0099-arithmetic-negation-test-01</td>
+                                <td align="center" rowspan="14" style="vertical-align:middle">
                                     <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
                                 </td>
-                                <td align="center" rowspan="10" style="vertical-align:middle">
+                                <td align="center" rowspan="14" style="vertical-align:middle">
                                     <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/0099-arithmetic-negation">
                                         <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
                                     </a>
@@ -6900,6 +6976,22 @@
                         <tr>
                             <td class="text-nowrap" scope="row">decision_002</td>
                             <td scope="row">negate negative number</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">decision_003</td>
+                            <td scope="row">negate days and time duration</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">decision_003_a</td>
+                            <td scope="row">negate a negative days and time duration</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">decision_004</td>
+                            <td scope="row">negate years and months duration</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">decision_004_a</td>
+                            <td scope="row">negate a negative years and months duration</td>
                         </tr>
                         <tr>
                             <td class="text-nowrap" scope="row">decision_005</td>
@@ -14797,7 +14889,7 @@
 <!-- pre-footer -->
 <div class="pre-footer">
     <div class="last-updated">
-        <p>Last updated:</strong> Sep 1, 2024, 12:53:15 AM</p>
+        <p>Last updated:</strong> Oct 1, 2024, 12:53:11 AM</p>
     </div>
 </div>
 <div class="footer">
