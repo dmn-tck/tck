@@ -87,10 +87,18 @@
     </decision>
 
     <decision name="decision011" id="_decision011">
-        <!-- position must be an integer number-->
+        <!-- decimal position is truncated to integer number -->
         <variable name="decision011"/>
         <literalExpression>
             <text>list replace([1,2,3], 2.5, 4)</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="decision011_a" id="_decision011_a">
+        <!-- negative decimal position is truncated to integer number -->
+        <variable name="decision011_a"/>
+        <literalExpression>
+            <text>list replace([1,2,3], -1.5, 4)</text>
         </literalExpression>
     </decision>
 

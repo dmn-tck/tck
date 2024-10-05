@@ -114,10 +114,27 @@
     </testCase>
 
     <testCase id="011">
-        <description>position must be an integer number</description>
-        <resultNode name="decision011" type="decision" errorResult="true">
+        <description>position will be truncated to integer</description>
+        <resultNode name="decision011" type="decision">
             <expected>
-                <value xsi:nil="true"/>
+                <list>
+                    <item><value xsi:type="xsd:decimal">1</value></item>
+                    <item><value xsi:type="xsd:decimal">4</value></item>
+                    <item><value xsi:type="xsd:decimal">3</value></item>
+                </list>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="011_a">
+        <description>negative position will be truncated to integer</description>
+        <resultNode name="decision011_a" type="decision">
+            <expected>
+                <list>
+                    <item><value xsi:type="xsd:decimal">1</value></item>
+                    <item><value xsi:type="xsd:decimal">2</value></item>
+                    <item><value xsi:type="xsd:decimal">4</value></item>
+                </list>
             </expected>
         </resultNode>
     </testCase>
