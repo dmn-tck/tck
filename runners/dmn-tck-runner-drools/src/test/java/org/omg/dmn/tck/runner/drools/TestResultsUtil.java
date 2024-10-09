@@ -37,7 +37,10 @@ public final class TestResultsUtil {
     public static void createTestResultsProperties() {
         final File testResultsPropertiesFile = new File(getTestResultsFolderPath() + "tck_results.properties");
         try {
-            testResultsPropertiesFile.getParentFile().mkdirs();
+            final boolean directoryCreated = testResultsPropertiesFile.getParentFile().mkdirs();
+            if (!directoryCreated) {
+                LOGGER.info("Directory " + testResultsPropertiesFile.getParentFile() + " already exists, continuing with properties creation.");
+            }
             final boolean fileAlreadyExists = !testResultsPropertiesFile.createNewFile();
             if (fileAlreadyExists) {
                 LOGGER.warn("tck_results.properties already exists!");
