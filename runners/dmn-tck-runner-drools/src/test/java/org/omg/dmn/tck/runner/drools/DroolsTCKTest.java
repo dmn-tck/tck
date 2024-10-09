@@ -113,6 +113,9 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
         LOGGER.info("Creating DMN runtime for model: {} and additional models {}\n", modelURL, additionalModels);
         final DroolsContext testSuiteContext = (DroolsContext) context;
         testSuiteContext.setDMNRuntime(createRuntime(modelURL, additionalModels));
+        if (testSuiteContext.getDMNRuntime().getModels().isEmpty()) {
+            throw new RuntimeException("Unable to load model for URL '" + modelURL + "'");
+        }
         try {
             final Definitions mainModelXML = DMNMarshallerFactory.newDefaultMarshaller().unmarshal(new FileReader(modelURL.getFile()));
             testSuiteContext.setDMNModel(testSuiteContext.getDMNRuntime().getModel(mainModelXML.getNamespace(), mainModelXML.getName()));
@@ -126,6 +129,9 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
         LOGGER.info("Creating DMN runtime for model: {}\n", modelURL);
         DroolsContext testSuiteContext = (DroolsContext) context;
         testSuiteContext.setDMNRuntime(createRuntime(modelURL, Collections.emptyList()));
+        if (testSuiteContext.getDMNRuntime().getModels().isEmpty()) {
+            throw new RuntimeException("Unable to load model for URL '" + modelURL + "'");
+        }
         testSuiteContext.setDMNModel(testSuiteContext.getDMNRuntime().getModels().get(0));
     }
 
