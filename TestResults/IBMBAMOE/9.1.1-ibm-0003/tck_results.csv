@@ -2725,21 +2725,11 @@
 "compliance-level-3/1111-feel-matches-function","1111-feel-matches-function-test-01","K2-MatchesFunc-14","SUCCESS",""
 "compliance-level-3/1111-feel-matches-function","1111-feel-matches-function-test-01","K2-MatchesFunc-15","SUCCESS",""
 "compliance-level-3/1111-feel-matches-function","1111-feel-matches-function-test-01","K2-MatchesFunc-17","SUCCESS",""
-"compliance-level-3/1111-feel-matches-function","1111-feel-matches-function-test-01","K2-MatchesFunc-2","ERROR","Message [id=0, level=ERROR, path=/Users/tiborzimanyi/IdeaProjects/tck/runners/dmn-tck-runner-drools/../../TestCases/compliance-level-3/1111-feel-matches-function/1111-feel-matches-function.dmn, line=243, column=-1
-   text=DMN: FEEL ERROR while evaluating literal expression 'matches("hello world", " hello[ ]world", "x")': The parameter 'pattern', in function matches(), is invalid and can not be compiled. (FEEL expression evaluation error) ]
-FAILURE: 'K2-MatchesFunc-2' expected='true' but found='null'"
-"compliance-level-3/1111-feel-matches-function","1111-feel-matches-function-test-01","K2-MatchesFunc-3","ERROR","Message [id=0, level=ERROR, path=/Users/tiborzimanyi/IdeaProjects/tck/runners/dmn-tck-runner-drools/../../TestCases/compliance-level-3/1111-feel-matches-function/1111-feel-matches-function.dmn, line=251, column=-1
-   text=DMN: FEEL ERROR while evaluating literal expression 'matches("hello world", "hello[ ]world ", "x")': The parameter 'pattern', in function matches(), is invalid and can not be compiled. (FEEL expression evaluation error) ]
-FAILURE: 'K2-MatchesFunc-3' expected='true' but found='null'"
-"compliance-level-3/1111-feel-matches-function","1111-feel-matches-function-test-01","K2-MatchesFunc-4","ERROR","Message [id=0, level=ERROR, path=/Users/tiborzimanyi/IdeaProjects/tck/runners/dmn-tck-runner-drools/../../TestCases/compliance-level-3/1111-feel-matches-function/1111-feel-matches-function.dmn, line=259, column=-1
-   text=DMN: FEEL ERROR while evaluating literal expression 'matches("hello world", "he ll o[ ]worl d", "x")': The parameter 'pattern', in function matches(), is invalid and can not be compiled. (FEEL expression evaluation error) ]
-FAILURE: 'K2-MatchesFunc-4' expected='true' but found='null'"
-"compliance-level-3/1111-feel-matches-function","1111-feel-matches-function-test-01","K2-MatchesFunc-5","ERROR","Message [id=0, level=ERROR, path=/Users/tiborzimanyi/IdeaProjects/tck/runners/dmn-tck-runner-drools/../../TestCases/compliance-level-3/1111-feel-matches-function/1111-feel-matches-function.dmn, line=267, column=-1
-   text=DMN: FEEL ERROR while evaluating literal expression 'matches("hello world", "\p{ IsBasicLatin}+", "x")': The parameter 'pattern', in function matches(), is invalid and can not be compiled. (FEEL expression evaluation error) ]
-FAILURE: 'K2-MatchesFunc-5' expected='true' but found='null'"
-"compliance-level-3/1111-feel-matches-function","1111-feel-matches-function-test-01","K2-MatchesFunc-6","ERROR","Message [id=0, level=ERROR, path=/Users/tiborzimanyi/IdeaProjects/tck/runners/dmn-tck-runner-drools/../../TestCases/compliance-level-3/1111-feel-matches-function/1111-feel-matches-function.dmn, line=275, column=-1
-   text=DMN: FEEL ERROR while evaluating literal expression 'matches("hello world", "\p{ I s B a s i c L a t i ... [string clipped after 50 chars, total length is 61]': The parameter 'pattern', in function matches(), is invalid and can not be compiled. (FEEL expression evaluation error) ]
-FAILURE: 'K2-MatchesFunc-6' expected='true' but found='null'"
+"compliance-level-3/1111-feel-matches-function","1111-feel-matches-function-test-01","K2-MatchesFunc-2","ERROR","FAILURE: 'K2-MatchesFunc-2' expected='true' but found='null'"
+"compliance-level-3/1111-feel-matches-function","1111-feel-matches-function-test-01","K2-MatchesFunc-3","ERROR","FAILURE: 'K2-MatchesFunc-3' expected='true' but found='null'"
+"compliance-level-3/1111-feel-matches-function","1111-feel-matches-function-test-01","K2-MatchesFunc-4","ERROR","FAILURE: 'K2-MatchesFunc-4' expected='true' but found='null'"
+"compliance-level-3/1111-feel-matches-function","1111-feel-matches-function-test-01","K2-MatchesFunc-5","ERROR","FAILURE: 'K2-MatchesFunc-5' expected='true' but found='null'"
+"compliance-level-3/1111-feel-matches-function","1111-feel-matches-function-test-01","K2-MatchesFunc-6","ERROR","FAILURE: 'K2-MatchesFunc-6' expected='true' but found='null'"
 "compliance-level-3/1111-feel-matches-function","1111-feel-matches-function-test-01","K2-MatchesFunc-7","SUCCESS",""
 "compliance-level-3/1111-feel-matches-function","1111-feel-matches-function-test-01","K2-MatchesFunc-8","ERROR","FAILURE: 'K2-MatchesFunc-8' expected='null' but found='false'"
 "compliance-level-3/1111-feel-matches-function","1111-feel-matches-function-test-01","K2-MatchesFunc-9","ERROR","FAILURE: 'K2-MatchesFunc-9' expected='null' but found='false'"

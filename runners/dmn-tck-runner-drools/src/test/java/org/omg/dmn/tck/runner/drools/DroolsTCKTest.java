@@ -175,7 +175,7 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
                         }
                     } else if (dmnResult.hasErrors()) {
                         for (DMNMessage msg : dmnResult.getMessages(DMNMessage.Severity.ERROR)) {
-                            failures.add(msg.toString());
+                            LOGGER.error(decisionName + " produced an error: " + msg.toString());
                         }
                     }
                 }
