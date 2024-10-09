@@ -82,6 +82,17 @@
         <module>dmn-tck-runner-camunda-dmn-scala</module>
       </modules>
     </profile>
+    <profile>
+      <id>ibmbamoe</id>
+      <activation>
+        <file>
+          <exists>enable-ibmbamoe.flag</exists>
+        </file>
+      </activation>
+      <modules>
+        <module>dmn-tck-runner-drools</module>
+      </modules>
+    </profile>
   </profiles>
 
   <build>
