@@ -524,12 +524,7 @@ public class Reporter {
                     try (Stream<String> lines = Files.lines( resultsFile[0].toPath() ) ) {
                         // skip the file header and load the rest
                         lines.forEach( l -> {
-                            System.out.println(l);
                             String[] fields = l.split( ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
-                            System.out.println("Fields are: ");
-                            for (String field : fields) {
-                                System.out.println(field);
-                            }
                             String comment = fields.length > 4 ? fields[4] : "";
                             String testFolder = ReportHelper.removeQuotes( fields[0] );
                             String testSuit = ReportHelper.removeQuotes( fields[1] );
