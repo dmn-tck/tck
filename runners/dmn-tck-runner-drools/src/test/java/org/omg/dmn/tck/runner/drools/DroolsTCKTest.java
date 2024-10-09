@@ -305,40 +305,36 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
             } else if (val != null && !(val.getValue() instanceof Node) && !isDateTimeOrDuration(val.getValue())) {
                 return ((JAXBElement<?>) val).getValue();
             } else {
-                try {
-                    Object dateTimeOrDurationValue = (val != null) ? val.getValue() : null;
-                    if (dateTimeOrDurationValue instanceof Duration || dateTimeOrDurationValue instanceof XMLGregorianCalendar) {
-                        if (!isDMNAny(dmnType)) {
-                            // need to convert to java.time.* equivalent
-                            text = dateTimeOrDurationValue.toString();
-                            return text != null ? recurseSimpleDMNTypeToFindBuiltInFEELType((BaseDMNTypeImpl) dmnType).fromString(text) : null;
-                        } else {
-                            // no DMN type information from the DMN model
-                            if (dateTimeOrDurationValue instanceof Duration) {
-                                try {
-                                    return java.time.Duration.parse(dateTimeOrDurationValue.toString());
-                                } catch (DateTimeParseException e) {
-                                    return ComparablePeriod.parse(dateTimeOrDurationValue.toString());
-                                }
-                            } else {
-                                XMLGregorianCalendar xmlCal = (XMLGregorianCalendar) dateTimeOrDurationValue;
-                                if (xmlCal.getTimezone() != DatatypeConstants.FIELD_UNDEFINED && xmlCal.getXMLSchemaType() == DatatypeConstants.DATETIME) {
-                                    return ZonedDateTime.parse(xmlCal.toXMLFormat());
-                                } else if (xmlCal.getTimezone() != DatatypeConstants.FIELD_UNDEFINED && xmlCal.getXMLSchemaType() == DatatypeConstants.TIME) {
-                                    return OffsetTime.parse(xmlCal.toXMLFormat());
-                                } else if (xmlCal.getXMLSchemaType() == DatatypeConstants.DATETIME) {
-                                    return LocalDateTime.of(LocalDate.of(xmlCal.getYear(), xmlCal.getMonth(), xmlCal.getDay()), LocalTime.of(xmlCal.getHour(), xmlCal.getMinute(), xmlCal.getSecond()));
-                                } else if (xmlCal.getXMLSchemaType() == DatatypeConstants.DATE) {
-                                    return LocalDate.of(xmlCal.getYear(), xmlCal.getMonth(), xmlCal.getDay());
-                                } else if (xmlCal.getXMLSchemaType() == DatatypeConstants.TIME) {
-                                    return LocalTime.parse(xmlCal.toXMLFormat());
-                                }
-                                return xmlCal.toGregorianCalendar();
+                Object dateTimeOrDurationValue = (val != null) ? val.getValue() : null;
+                if (dateTimeOrDurationValue instanceof Duration || dateTimeOrDurationValue instanceof XMLGregorianCalendar) {
+                    if (!isDMNAny(dmnType)) {
+                        // need to convert to java.time.* equivalent
+                        text = dateTimeOrDurationValue.toString();
+                        return text != null ? recurseSimpleDMNTypeToFindBuiltInFEELType((BaseDMNTypeImpl) dmnType).fromString(text) : null;
+                    } else {
+                        // no DMN type information from the DMN model
+                        if (dateTimeOrDurationValue instanceof Duration) {
+                            try {
+                                return java.time.Duration.parse(dateTimeOrDurationValue.toString());
+                            } catch (DateTimeParseException e) {
+                                return ComparablePeriod.parse(dateTimeOrDurationValue.toString());
                             }
+                        } else {
+                            XMLGregorianCalendar xmlCal = (XMLGregorianCalendar) dateTimeOrDurationValue;
+                            if (xmlCal.getTimezone() != DatatypeConstants.FIELD_UNDEFINED && xmlCal.getXMLSchemaType() == DatatypeConstants.DATETIME) {
+                                return ZonedDateTime.parse(xmlCal.toXMLFormat());
+                            } else if (xmlCal.getTimezone() != DatatypeConstants.FIELD_UNDEFINED && xmlCal.getXMLSchemaType() == DatatypeConstants.TIME) {
+                                return OffsetTime.parse(xmlCal.toXMLFormat());
+                            } else if (xmlCal.getXMLSchemaType() == DatatypeConstants.DATETIME) {
+                                return LocalDateTime.of(LocalDate.of(xmlCal.getYear(), xmlCal.getMonth(), xmlCal.getDay()), LocalTime.of(xmlCal.getHour(), xmlCal.getMinute(), xmlCal.getSecond()));
+                            } else if (xmlCal.getXMLSchemaType() == DatatypeConstants.DATE) {
+                                return LocalDate.of(xmlCal.getYear(), xmlCal.getMonth(), xmlCal.getDay());
+                            } else if (xmlCal.getXMLSchemaType() == DatatypeConstants.TIME) {
+                                return LocalTime.parse(xmlCal.toXMLFormat());
+                            }
+                            return xmlCal.toGregorianCalendar();
                         }
                     }
-                } catch (Exception e) {
-                    LOGGER.error("Error trying to coerce JAXB type {} with value '{}': {}", val.getClass().getName(), val, e.getMessage());
                 }
                 return val;
             }
