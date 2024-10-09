@@ -24,7 +24,7 @@ import org.kie.dmn.api.core.DMNType;
 import org.kie.dmn.api.core.ast.DecisionNode;
 import org.kie.dmn.api.core.ast.InputDataNode;
 import org.kie.dmn.backend.marshalling.v1x.DMNMarshallerFactory;
-import org.kie.dmn.core.compiler.DMNTypeRegistryV12;
+import org.kie.dmn.core.compiler.DMNTypeRegistryV15;
 import org.kie.dmn.core.impl.BaseDMNTypeImpl;
 import org.kie.dmn.core.impl.SimpleTypeImpl;
 import org.kie.dmn.feel.lang.Type;
@@ -73,7 +73,7 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DroolsTCKTest.class);
 
-    private static final DMNTypeRegistryV12 REGISTRY = new DMNTypeRegistryV12();
+    private static final DMNTypeRegistryV15 REGISTRY = new DMNTypeRegistryV15(Collections.emptyMap());
 
     static {
         TestResultsUtil.deleteEverythingFromTestResultsFolder();
