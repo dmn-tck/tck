@@ -78,7 +78,7 @@
                 <div class="row">
                     <div class="col-md-2">
                         <small>
-                            <p><strong>Tests:</strong> 3329</p>
+                            <p><strong>Tests:</strong> 3351</p>
                         </small>
                     </div>
                     <div class="col-md-2">
@@ -871,7 +871,7 @@
                             <td scope="row"></td>
                         </tr>
                         <tr>
-                                <td class="text-nowrap" scope="row" rowspan="3213" style="vertical-align:middle">compliance-level-3</td>
+                                <td class="text-nowrap" scope="row" rowspan="3235" style="vertical-align:middle">compliance-level-3</td>
                                 <td class="text-nowrap" scope="row" rowspan="1" style="vertical-align:middle">0001-filter-test-01</td>
                                 <td align="center" rowspan="1" style="vertical-align:middle">
                                     <a target="_blank" href="https://github.com/dmn-tck/tck/blob/master/TestCases/compliance-level-3/0001-filter/0001-filter.pdf">
@@ -14647,6 +14647,103 @@
                             <td scope="row">Will return true for empty list</td>
                         </tr>
                         <tr>
+                                <td class="text-nowrap" scope="row" rowspan="22" style="vertical-align:middle">1155-list-replace-function-test-01</td>
+                                <td align="center" rowspan="22" style="vertical-align:middle">
+                                    <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
+                                </td>
+                                <td align="center" rowspan="22" style="vertical-align:middle">
+                                    <a target="_blank" href="https://github.com/dmn-tck/tck/tree/master/TestCases/compliance-level-3/1155-list-replace-function">
+                                        <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            <td class="text-nowrap" scope="row">001</td>
+                            <td scope="row">Replace element in list at 1-based position</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">002</td>
+                            <td scope="row">Replace last element in list using negative position</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">003</td>
+                            <td scope="row">A position of zero gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">004</td>
+                            <td scope="row">A positive position outside the list bounds gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">005</td>
+                            <td scope="row">A negative position outside the list bounds gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">006</td>
+                            <td scope="row">list value may not be null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">007</td>
+                            <td scope="row">position value may not be null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">008</td>
+                            <td scope="row">newItem value may be null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">009</td>
+                            <td scope="row">match function returning true will replace items</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">010</td>
+                            <td scope="row">position must be a number</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">011</td>
+                            <td scope="row">position will be truncated to integer</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">011_a</td>
+                            <td scope="row">negative position will be truncated to integer</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">012</td>
+                            <td scope="row">named arguments ('position') </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">013</td>
+                            <td scope="row">named arguments ('match') </td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">014</td>
+                            <td scope="row">too many arguments gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">015</td>
+                            <td scope="row">too few arguments gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">016</td>
+                            <td scope="row">unknown named argument gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">017</td>
+                            <td scope="row">invalid match function signature (too many arguments) gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">018</td>
+                            <td scope="row">invalid match function signature (too few arguments) gives null</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">019</td>
+                            <td scope="row">match function must return boolean value</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">020</td>
+                            <td scope="row">match function will be called for every list item</td>
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap" scope="row">021</td>
+                            <td scope="row">will coerce to singleton list</td>
+                        </tr>
+                        <tr>
                                 <td class="text-nowrap" scope="row" rowspan="56" style="vertical-align:middle">1156-range-function-test-01</td>
                                 <td align="center" rowspan="56" style="vertical-align:middle">
                                     <span class="glyphicon glyphicon-book text-muted" aria-hidden="true"></span>
@@ -14889,7 +14986,7 @@
 <!-- pre-footer -->
 <div class="pre-footer">
     <div class="last-updated">
-        <p>Last updated:</strong> Oct 11, 2024, 7:09:17 AM</p>
+        <p>Last updated:</strong> Nov 1, 2024, 12:53:20 AM</p>
     </div>
 </div>
 <div class="footer">
