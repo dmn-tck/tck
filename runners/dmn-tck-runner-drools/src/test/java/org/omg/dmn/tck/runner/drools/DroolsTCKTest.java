@@ -13,9 +13,7 @@ package org.omg.dmn.tck.runner.drools;
 
 import org.junit.runner.Description;
 import org.junit.runner.RunWith;
-import org.kie.api.KieServices;
-import org.kie.api.runtime.KieContainer;
-import org.kie.api.runtime.KieRuntimeFactory;
+import org.kie.api.io.Resource;
 import org.kie.dmn.api.core.DMNContext;
 import org.kie.dmn.api.core.DMNMessage;
 import org.kie.dmn.api.core.DMNResult;
@@ -27,11 +25,12 @@ import org.kie.dmn.backend.marshalling.v1x.DMNMarshallerFactory;
 import org.kie.dmn.core.compiler.DMNTypeRegistryV15;
 import org.kie.dmn.core.impl.BaseDMNTypeImpl;
 import org.kie.dmn.core.impl.SimpleTypeImpl;
+import org.kie.dmn.core.internal.utils.DMNRuntimeBuilder;
 import org.kie.dmn.feel.lang.Type;
 import org.kie.dmn.feel.lang.types.BuiltInType;
 import org.kie.dmn.feel.lang.types.impl.ComparablePeriod;
 import org.kie.dmn.model.api.Definitions;
-import org.kie.internal.utils.KieHelper;
+import org.kie.internal.io.ResourceFactory;
 import org.omg.dmn.tck.marshaller._20160719.TestCaseType;
 import org.omg.dmn.tck.marshaller._20160719.TestCases;
 import org.omg.dmn.tck.marshaller._20160719.ValueType;
@@ -227,22 +226,32 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
     }
 
     private DMNRuntime createRuntime(URL modelUrl, Collection<? extends URL> additionalModels) {
-        KieServices ks = KieServices.Factory.get();
-        KieHelper kieHelper = new KieHelper().addResource(ks.getResources().newFileSystemResource(modelUrl.getFile()));
-        for (URL a : additionalModels) {
-            kieHelper.addResource(ks.getResources().newFileSystemResource(a.getFile()));
-        }
-        KieContainer kieContainer = kieHelper.getKieContainer();
-        DMNRuntime runtime = KieRuntimeFactory.of(kieContainer.getKieBase()).get(DMNRuntime.class);
+        try {
+            List<Resource> resources = new ArrayList<>();
+            resources.add(ResourceFactory.newReaderResource(new FileReader(modelUrl.getFile()), "UTF-8"));
 
-        if (runtime == null) {
-            throw new RuntimeException("Unable to create DMN Runtime");
-        }
+            for (URL additionalModel : additionalModels) {
+                resources.add(ResourceFactory.newReaderResource(
+                        new FileReader(additionalModel.getFile()), "UTF-8"));
+            }
 
-        if (runtime.getModels().isEmpty()) {
-            throw new RuntimeException("Unable to load DMN model for URL '" + modelUrl + "'");
+            DMNRuntime dmnRuntime = DMNRuntimeBuilder
+                    .usingStrict()
+                    .fromResources(resources)
+                    .getOrElseThrow(RuntimeException::new);
+
+            if (dmnRuntime == null) {
+                throw new RuntimeException("Unable to create DMN Runtime");
+            }
+
+            if (dmnRuntime.getModels().isEmpty()) {
+                throw new RuntimeException("Unable to load DMN model for URL '" + modelUrl + "'");
+            }
+
+            return dmnRuntime;
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
         }
-        return runtime;
     }
 
     private Object parseValue(TestCases.TestCase.InputNode in, InputDataNode input) {
