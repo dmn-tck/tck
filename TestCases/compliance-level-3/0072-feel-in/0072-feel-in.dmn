@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<definitions namespace="http://www.montera.com.au/spec/DMN/0072-feel-in" name="0072-feel-in" id="_i9fboPUUEeesLuP4RHs4vA" xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<definitions namespace="http://www.montera.com.au/spec/DMN/0072-feel-in" name="0072-feel-in"
+             id="_i9fboPUUEeesLuP4RHs4vA" xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/"
+>
     <description>FEEL in</description>
 
     <decision name="number_001" id="_number_001">
@@ -269,6 +271,47 @@
         </literalExpression>
     </decision>
 
+    <decision name="number_015_a" id="_number_015_a">
+        <variable name="number_015_a"/>
+        <literalExpression>
+            <text>10 in =10</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="number_015_b" id="_number_015_b">
+        <variable name="number_015_b"/>
+        <literalExpression>
+            <text>10 in (=10)</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="number_015_c" id="_number_015_c">
+        <variable name="number_015_c"/>
+        <literalExpression>
+            <text>10 in =11</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="number_016_a" id="_number_016_a">
+        <variable name="number_016_a"/>
+        <literalExpression>
+            <text>10 in !=10</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="number_016_b" id="_number_016_b">
+        <variable name="number_016_b"/>
+        <literalExpression>
+            <text>10 in (!=10)</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="number_016_c" id="_number_016_c">
+        <variable name="number_016_c"/>
+        <literalExpression>
+            <text>10 in !=11</text>
+        </literalExpression>
+    </decision>
 
     <decision name="string_001" id="_string_001">
         <variable name="string_001"/>
@@ -536,6 +579,47 @@
         </literalExpression>
     </decision>
 
+    <decision name="string_015_a" id="_string_015_a">
+        <variable name="string_015_a"/>
+        <literalExpression>
+            <text>"a" in ="a"</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="string_015_b" id="_string_015_b">
+        <variable name="string_015_b"/>
+        <literalExpression>
+            <text>"a" in (="a")</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="string_015_c" id="_string_015_c">
+        <variable name="string_015_c"/>
+        <literalExpression>
+            <text>"a" in ="b"</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="string_016_a" id="_string_016_a">
+        <variable name="string_016_a"/>
+        <literalExpression>
+            <text>"a" in !="a"</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="string_016_b" id="_string_016_b">
+        <variable name="string_016_b"/>
+        <literalExpression>
+            <text>"a" in (!="a")</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="string_016_c" id="_string_016_c">
+        <variable name="string_016_c"/>
+        <literalExpression>
+            <text>"a" in !="b"</text>
+        </literalExpression>
+    </decision>
 
     <decision name="boolean_001" id="_boolean_001">
         <variable name="boolean_001"/>
@@ -577,6 +661,48 @@
         <variable name="boolean_014_a"/>
         <literalExpression>
             <text>true in (false, false)</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="boolean_015_a" id="_boolean_015_a">
+        <variable name="boolean_015_a"/>
+        <literalExpression>
+            <text>true in =true</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="boolean_015_b" id="_boolean_015_b">
+        <variable name="boolean_015_b"/>
+        <literalExpression>
+            <text>true in (=true)</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="boolean_015_c" id="_boolean_015_c">
+        <variable name="boolean_015_c"/>
+        <literalExpression>
+            <text>true in =false</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="boolean_016_a" id="_boolean_016_a">
+        <variable name="boolean_016_a"/>
+        <literalExpression>
+            <text>true in !=true</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="boolean_016_b" id="_boolean_016_b">
+        <variable name="boolean_016_b"/>
+        <literalExpression>
+            <text>true in (!=true)</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="boolean_016_c" id="_boolean_016_c">
+        <variable name="boolean_016_c"/>
+        <literalExpression>
+            <text>true in !=false</text>
         </literalExpression>
     </decision>
 
@@ -843,6 +969,48 @@
         <variable name="date_014_a"/>
         <literalExpression>
             <text>date("2018-12-05") in (date("2018-12-04"), >=date("2018-12-06"))</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="date_015_a" id="_date_015_a">
+        <variable name="date_015_a"/>
+        <literalExpression>
+            <text>@"2018-12-05" in =@"2018-12-05"</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="date_015_b" id="_date_015_b">
+        <variable name="date_015_b"/>
+        <literalExpression>
+            <text>@"2018-12-05" in (=@"2018-12-05")</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="date_015_c" id="_date_015_c">
+        <variable name="date_015_c"/>
+        <literalExpression>
+            <text>@"2018-12-05" in =@"2018-12-06"</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="date_016_a" id="_date_016_a">
+        <variable name="date_016_a"/>
+        <literalExpression>
+            <text>@"2018-12-05" in !=@"2018-12-05"</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="date_016_b" id="_date_016_b">
+        <variable name="date_016_b"/>
+        <literalExpression>
+            <text>@"2018-12-05" in (!=@"2018-12-05")</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="date_016_c" id="_date_016_c">
+        <variable name="date_016_c"/>
+        <literalExpression>
+            <text>@"2018-12-05" in !=@"2018-12-06"</text>
         </literalExpression>
     </decision>
 
@@ -1113,6 +1281,48 @@
         </literalExpression>
     </decision>
 
+    <decision name="time_015_a" id="_time_015_a">
+        <variable name="time_015_a"/>
+        <literalExpression>
+            <text>@"10:30:05" in =@"10:30:05"</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="time_015_b" id="_time_015_b">
+        <variable name="time_015_b"/>
+        <literalExpression>
+            <text>@"10:30:05" in (=@"10:30:05")</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="time_015_c" id="_time_015_c">
+        <variable name="time_015_c"/>
+        <literalExpression>
+            <text>@"10:30:05" in =@"10:30:06"</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="time_016_a" id="_time_016_a">
+        <variable name="time_016_a"/>
+        <literalExpression>
+            <text>@"10:30:05" in !=@"10:30:05"</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="time_016_b" id="_time_016_b">
+        <variable name="time_016_b"/>
+        <literalExpression>
+            <text>@"10:30:05" in (!=@"10:30:05")</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="time_016_c" id="_time_016_c">
+        <variable name="time_016_c"/>
+        <literalExpression>
+            <text>@"10:30:05" in !=@"10:30:06"</text>
+        </literalExpression>
+    </decision>
+
 
     <decision name="dateTime_001" id="_dateTime_001">
         <variable name="dateTime_001"/>
@@ -1380,6 +1590,48 @@
         </literalExpression>
     </decision>
 
+    <decision name="datetime_015_a" id="_datetime_015_a">
+        <variable name="datetime_015_a"/>
+        <literalExpression>
+            <text>@"2018-12-08T10:30:05" in =@"2018-12-08T10:30:05"</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="datetime_015_b" id="_datetime_015_b">
+        <variable name="datetime_015_b"/>
+        <literalExpression>
+            <text>@"2018-12-08T10:30:05" in (=@"2018-12-08T10:30:05")</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="datetime_015_c" id="_datetime_015_c">
+        <variable name="datetime_015_c"/>
+        <literalExpression>
+            <text>@"2018-12-08T10:30:05" in =@"2018-12-08T10:30:06"</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="datetime_016_a" id="_datetime_016_a">
+        <variable name="datetime_016_a"/>
+        <literalExpression>
+            <text>@"2018-12-08T10:30:05" in !=@"2018-12-08T10:30:05"</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="datetime_016_b" id="_datetime_016_b">
+        <variable name="datetime_016_b"/>
+        <literalExpression>
+            <text>@"2018-12-08T10:30:05" in (!=@"2018-12-08T10:30:05")</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="datetime_016_c" id="_datetime_016_c">
+        <variable name="datetime_016_c"/>
+        <literalExpression>
+            <text>@"2018-12-08T10:30:05" in !=@"2018-12-08T10:30:06"</text>
+        </literalExpression>
+    </decision>
+
     <decision name="list_001" id="_list_001">
         <variable name="list_001"/>
         <literalExpression>
@@ -1447,6 +1699,48 @@
         </literalExpression>
     </decision>-->
 
+    <decision name="list_015_a" id="_list_015_a">
+        <variable name="list_015_a"/>
+        <literalExpression>
+            <text>[1,2,3] in =[1,2,3]</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="list_015_b" id="_list_015_b">
+        <variable name="list_015_b"/>
+        <literalExpression>
+            <text>[1,2,3] in (=[1,2,3])</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="list_015_c" id="_list_015_c">
+        <variable name="list_015_c"/>
+        <literalExpression>
+            <text>[1,2,3] in =[1,2,3,4]</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="list_016_a" id="_list_016_a">
+        <variable name="list_016_a"/>
+        <literalExpression>
+            <text>[1,2,3] in !=[1,2,3]</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="list_016_b" id="_list_016_b">
+        <variable name="list_016_b"/>
+        <literalExpression>
+            <text>[1,2,3] in (!=[1,2,3])</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="list_016_c" id="_list_016_c">
+        <variable name="list_016_c"/>
+        <literalExpression>
+            <text>[1,2,3] in !=[1,2,3,4]</text>
+        </literalExpression>
+    </decision>
+
     <decision name="context_001" id="_context_001">
         <variable name="context_001"/>
         <literalExpression>
@@ -1489,8 +1783,48 @@
         </literalExpression>
     </decision>
 
+    <decision name="context_015_a" id="_context_015_a">
+        <variable name="context_015_a"/>
+        <literalExpression>
+            <text>{a: "foo"} in ={a: "foo"}</text>
+        </literalExpression>
+    </decision>
 
+    <decision name="context_015_b" id="_context_015_b">
+        <variable name="context_015_b"/>
+        <literalExpression>
+            <text>{a: "foo"} in (={a: "foo"})</text>
+        </literalExpression>
+    </decision>
 
+    <decision name="context_015_c" id="_context_015_c">
+        <variable name="context_015_c"/>
+        <literalExpression>
+            <text>{a: "foo"} in ={a: "bar"}</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="context_016_a" id="_context_016_a">
+        <variable name="context_016_a"/>
+        <literalExpression>
+            <text>{a: "foo"} in !={a: "foo"}</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="context_016_b" id="_context_016_b">
+        <variable name="context_016_b"/>
+        <literalExpression>
+            <text>{a: "foo"} in (!={a: "foo"})</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="context_016_c" id="_context_016_c">
+        <variable name="context_016_c"/>
+        <literalExpression>
+            <text>{a: "foo"} in !={a: "bar"}</text>
+        </literalExpression>
+    </decision>
+    
     <decision name="ym_duration_001" id="_ym_duration_001">
         <variable name="ym_duration_001"/>
         <literalExpression>
@@ -1757,6 +2091,47 @@
         </literalExpression>
     </decision>
 
+    <decision name="ym_duration_015_a" id="_ym_duration_015_a">
+        <variable name="ym_duration_015_a"/>
+        <literalExpression>
+            <text>@"P5Y" in =@"P5Y"</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="ym_duration_015_b" id="_ym_duration_015_b">
+        <variable name="ym_duration_015_b"/>
+        <literalExpression>
+            <text>@"P5Y" in (=@"P5Y")</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="ym_duration_015_c" id="_ym_duration_015_c">
+        <variable name="ym_duration_015_c"/>
+        <literalExpression>
+            <text>@"P5Y" in =@"P6Y"</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="ym_duration_016_a" id="_ym_duration_016_a">
+        <variable name="ym_duration_016_a"/>
+        <literalExpression>
+            <text>@"P5Y" in !=@"P5Y"</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="ym_duration_016_b" id="_ym_duration_016_b">
+        <variable name="ym_duration_016_b"/>
+        <literalExpression>
+            <text>@"P5Y" in (!=@"P5Y")</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="ym_duration_016_c" id="_ym_duration_016_c">
+        <variable name="ym_duration_016_c"/>
+        <literalExpression>
+            <text>@"P5Y" in !=@"P6Y"</text>
+        </literalExpression>
+    </decision>
 
     <decision name="dt_duration_001" id="_dt_duration_001">
         <variable name="dt_duration_001"/>
@@ -2024,89 +2399,83 @@
         </literalExpression>
     </decision>
 
-    <inputData name="input_for_null_tests" id="_input_for_null_tests">
-        <variable name="input_for_null_tests" typeRef="number"/>
-    </inputData>
-
-    <!--
-        <decision name="null_001" id="_null_001">
-            <variable name="null_001"/>
-            <literalExpression>
-                <text>null in [1..10]</text>
-            </literalExpression>
-        </decision>
-
-        <decision name="null_001_a" id="_null_001_a">
-            <variable name="null_001_a"/>
-            <literalExpression>
-                <text>5 in (null..10]</text>
-            </literalExpression>
-        </decision>
-
-        <decision name="null_001_b" id="_null_001_b">
-            <variable name="null_001_b"/>
-            <literalExpression>
-                <text>5 in [1..null)</text>
-            </literalExpression>
-        </decision>
-
-        <decision name="null_001_c" id="_null_001_c">
-            <variable name="null_001_c"/>
-            <literalExpression>
-                <text>5 in [1..null]</text>
-            </literalExpression>
-        </decision>
-
-        <decision name="null_001_d" id="_null_001_d">
-            <variable name="null_001_d"/>
-            <literalExpression>
-                <text>5 in [null..10]</text>
-            </literalExpression>
-        </decision>
-    -->
-
-<!--
-    <decision name="null_002" id="_null_002">
-        <variable name="null_002"/>
-        <informationRequirement>
-            <requiredInput href="#_input_for_null_tests"/>
-        </informationRequirement>
+    <decision name="dt_duration_015_a" id="_dt_duration_015_a">
+        <variable name="dt_duration_015_a"/>
         <literalExpression>
-            <text>5 in [input_for_null_tests..10]</text>
+            <text>@"P5D" in =@"P5D"</text>
         </literalExpression>
     </decision>
 
-    <decision name="null_003" id="_null_003">
-        <variable name="null_003"/>
-        <informationRequirement>
-            <requiredInput href="#_input_for_null_tests"/>
-        </informationRequirement>
+    <decision name="dt_duration_015_b" id="_dt_duration_015_b">
+        <variable name="dt_duration_015_b"/>
         <literalExpression>
-            <text>5 in (input_for_null_tests..10]</text>
+            <text>@"P5D" in (=@"P5D")</text>
         </literalExpression>
     </decision>
 
-    <decision name="null_004" id="_null_004">
-        <variable name="null_004"/>
-        <informationRequirement>
-            <requiredInput href="#_input_for_null_tests"/>
-        </informationRequirement>
+    <decision name="dt_duration_015_c" id="_dt_duration_015_c">
+        <variable name="dt_duration_015_c"/>
         <literalExpression>
-            <text>5 in [1..input_for_null_tests]</text>
+            <text>@"P5D" in =@"P6D"</text>
         </literalExpression>
     </decision>
 
-    <decision name="null_005" id="_null_005">
-        <variable name="null_005"/>
-        <informationRequirement>
-            <requiredInput href="#_input_for_null_tests"/>
-        </informationRequirement>
+    <decision name="dt_duration_016_a" id="_dt_duration_016_a">
+        <variable name="dt_duration_016_a"/>
         <literalExpression>
-            <text>5 in [1..input_for_null_tests)</text>
+            <text>@"P5D" in !=@"P5D"</text>
         </literalExpression>
     </decision>
 
--->
+    <decision name="dt_duration_016_b" id="_dt_duration_016_b">
+        <variable name="dt_duration_016_b"/>
+        <literalExpression>
+            <text>@"P5D" in (!=@"P5D")</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="dt_duration_016_c" id="_dt_duration_016_c">
+        <variable name="dt_duration_016_c"/>
+        <literalExpression>
+            <text>@"P5D" in !=@"P6D"</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="null_001" id="_null_001">
+        <variable name="null_001"/>
+        <literalExpression>
+            <text>null in [1..10]</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="null_001_a" id="_null_001_a">
+        <variable name="null_001_a"/>
+        <literalExpression>
+            <text>5 in (null..10]</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="null_001_b" id="_null_001_b">
+        <variable name="null_001_b"/>
+        <literalExpression>
+            <text>5 in [1..null)</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="null_001_c" id="_null_001_c">
+        <variable name="null_001_c"/>
+        <literalExpression>
+            <text>5 in [1..null]</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="null_001_d" id="_null_001_d">
+        <variable name="null_001_d"/>
+        <literalExpression>
+            <text>5 in [null..10]</text>
+        </literalExpression>
+    </decision>
+
 
 </definitions>
 
