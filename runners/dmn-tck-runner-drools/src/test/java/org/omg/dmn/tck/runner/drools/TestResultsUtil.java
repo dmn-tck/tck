@@ -28,7 +28,7 @@ public final class TestResultsUtil {
     private static final String INSTRUCTIONS_URL_KEY = "instructions.url";
 
     private static final String PRODUCT_NAME_VALUE = "Apache KIE Drools";
-    private static final String PRODUCT_URL_VALUE = "https://www.kie.apache.org";
+    private static final String PRODUCT_URL_VALUE = "https://kie.apache.org";
     private static final String PRODUCT_COMMENT_VALUE = "Apache KIE (includes Drools) provides full compliance level 3 authoring and runtime execution.";
     private static final String VENDOR_NAME_VALUE = "The Apache Software Foundation";
     private static final String VENDOR_URL_VALUE = "https://apache.org/";
