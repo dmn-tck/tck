@@ -14,10 +14,10 @@
                       xmlns:trisodmn="http://www.trisotech.com/2016/triso/dmn"  
                       xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase"  
                       xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/"
-                      id="_2a1d771a-a899-4fef-abd6-fc894332337c" name="Model B" 
+                      id="_2a1d771a-a899-4fef-abd6-fc894332337c" name="Model_B"
                       namespace="http://www.trisotech.com/definitions/_2a1d771a-a899-4fef-abd6-fc894332337c" exporter="DMN Modeler" exporterVersion="6.2.4.2" triso:logoChoice="Default">
     <import namespace="http://www.trisotech.com/definitions/_ae5b3c17-1ac3-4e1d-b4f9-2cf861aec6d9" 
-                     name="modelA" 
+                     name="modelA"
                      importType="https://www.omg.org/spec/DMN/20230324/MODEL/" />
     <decision id="_96df766e-23e1-4aa6-9d5d-545fbe2f1e23" name="Evaluating Say Hello" triso:useOutputTypeAsAnswer="false">
         <variable name="Evaluating Say Hello" id="_0a5ade68-3746-4022-99e3-e15e42216725" typeRef="string"/>
