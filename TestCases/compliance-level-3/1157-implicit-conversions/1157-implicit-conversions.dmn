@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="https://kie.org/dmn/extensions/1.0" expressionLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/" namespace="https://kie.org/dmn/_F9BB5760-8BCA-4216-AAD9-8BD4FB70802D" id="_B6EF67C0-8376-4854-8D71-79484E1DBF39" name="DMN_5FA401E6-188D-4C5E-A0DE-A95A021784FD">
+<definitions xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="https://kie.org/dmn/extensions/1.0" expressionLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/" namespace="https://kie.org/dmn/_F9BB5760-8BCA-4216-AAD9-8BD4FB70802D" id="_B6EF67C0-8376-4854-8D71-79484E1DBF39" name="1157-implicit-conversions">
   <!-- BKM types -->
   <itemDefinition id="_7546A1B0-00DF-40AB-B2CD-6ED845798BAB" name="functionReturningNumberList" typeLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/">
     <functionItem outputTypeRef="numberList" id="_F4EA43DE-6211-4BC7-B687-230C8FBE6296" />
