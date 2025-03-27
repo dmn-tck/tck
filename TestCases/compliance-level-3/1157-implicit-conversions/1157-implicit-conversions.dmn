@@ -20,7 +20,7 @@
   </itemDefinition>
 
   <itemDefinition id="_7546A1B0-00DF-40AB-B2CD-6ED845798BAA" name="dateList" isCollection="true" typeLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/">
-    <typeRef>Any</typeRef>
+    <typeRef>date</typeRef>
   </itemDefinition>
   <itemDefinition id="_B0265B36-6C95-4941-8991-42F0066528FC" name="numberList" isCollection="true" typeLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/">
     <typeRef>number</typeRef>
@@ -44,6 +44,12 @@
     <variable name="From Date To Date and Time" id="_4110D8EC-9B5C-4233-BF58-BF0C8961BF8D" typeRef="date and time" />
     <literalExpression id="_69125618-E4D4-41A3-8AD7-225BC81B591A" typeRef="date and time" label="From Date To Date and Time">
       <text>date(2000, 01, 02)</text>
+    </literalExpression>
+  </decision>
+  <decision name="From Singleton List Error" id="_D9834124-4E36-4167-B605-028F093F7FFD">
+    <variable name="From Singleton List Error" id="_8D1EFD62-FC3A-4058-83A0-C146DCEC7C63" typeRef="string" />
+    <literalExpression id="_A5266FFC-6596-4955-9BE3-BBAEC1F4A11F" typeRef="string" label="From Singleton List Error">
+      <text>[&quot;abc&quot;, &quot;bcd&quot;]</text>
     </literalExpression>
   </decision>
   <businessKnowledgeModel name="To Singleton List BKM" id="_6476F970-C1FE-46E5-8DC3-D6241FAA8CA7">
@@ -199,6 +205,9 @@
           <kie:ComponentWidths dmnElementRef="_363B48FD-4E56-4176-BA21-0B619143EEE7">
             <kie:width>190</kie:width>
           </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_A5266FFC-6596-4955-9BE3-BBAEC1F4A11F">
+            <kie:width>190</kie:width>
+          </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_2A28C28B-5BA7-48D0-BDB2-2B870B23B548">
             <kie:width>120</kie:width>
           </kie:ComponentWidths>
@@ -278,6 +287,9 @@
       </dmndi:DMNShape>
       <dmndi:DMNShape id="_12BE23AE-E7BE-471D-89D9-D6BEA0E66CFA" dmnElementRef="_9B10A67E-B994-492A-BB53-089F22A8B9D4" isCollapsed="false" isListedInputData="false">
         <dc:Bounds x="1020" y="500" width="160" height="80" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="_643D5EF5-4C75-4B77-85B7-81FF2CB032C7" dmnElementRef="_D9834124-4E36-4167-B605-028F093F7FFD" isCollapsed="false" isListedInputData="false">
+        <dc:Bounds x="820" y="80" width="160" height="80" />
       </dmndi:DMNShape>
       <dmndi:DMNShape id="_88617B55-042B-4CAD-B0F2-3B192DD67A24" dmnElementRef="_1DE77D02-F541-4853-B405-041FC704228C" isCollapsed="false" isListedInputData="false">
         <dc:Bounds x="480" y="840" width="160" height="80" />

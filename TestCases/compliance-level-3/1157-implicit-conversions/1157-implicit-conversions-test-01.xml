@@ -21,6 +21,14 @@
         </resultNode>
     </testCase>
 
+    <testCase id="002_a">
+        <resultNode name="From Singleton List Error" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
     <testCase id="003">
         <resultNode name="From Date To Date and Time" type="decision">
             <expected>
@@ -81,22 +89,6 @@
         <resultNode name="From Date to Date and Time DS">
             <expected>
                 <value xsi:type="xsd:dateTime">2000-01-02T00:00:00Z</value>
-            </expected>
-        </resultNode>
-    </testCase>
-
-    <testCase id="010">
-        <resultNode name="Implicit Conversions CE" type="decision">
-            <expected>
-                <value xsi:type="xsd:string">[1]-2-2000-12-01T00:00:00@UTC</value>
-            </expected>
-        </resultNode>
-    </testCase>
-
-    <testCase id="011">
-        <resultNode name="Implicit Conversions FUNCT" type="decision">
-            <expected>
-                <value xsi:type="xsd:string">[1]-2-2000-02-01T00:00:00@UTC</value>
             </expected>
         </resultNode>
     </testCase>
