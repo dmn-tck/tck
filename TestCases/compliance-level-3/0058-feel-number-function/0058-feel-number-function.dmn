@@ -190,5 +190,59 @@
             <text>number("1.000.000,01", ".", ",", ",")</text>
         </literalExpression>
     </decision>
+    <decision name="decision018" id="_decision018">
+            <description>Tests FEEL expression: 'number("1234"))' and expects result: '1234 (number)'</description>
+            <question>Result of FEEL expression 'number("1234"))'?</question>
+            <allowedAnswers>1234 (number)</allowedAnswers>
+            <variable name="decision018" typeRef="number" />
+            <literalExpression>
+                 <text>number("1234")</text>
+            </literalExpression>
+        </decision>
+        <decision name="decision019" id="_decision019">
+            <description>Tests FEEL expression: 'number("00123"))' and expects result: '123 (number)'</description>
+            <question>Result of FEEL expression 'number("00123"))'?</question>
+            <allowedAnswers>123 (number)</allowedAnswers>
+            <variable typeRef="number" name="decision019"/>
+            <literalExpression>
+                <text>number("00123")</text>
+            </literalExpression>
+        </decision>
+         <decision name="decision020" id="_decision020">
+            <description>Tests FEEL expression: 'number(11.11))' and expects result: '11.11 (number)'</description>
+            <question>Result of FEEL expression 'number(11.11))'?</question>
+            <allowedAnswers>11.11 (number)</allowedAnswers>
+            <variable typeRef="number" name="decision020"/>
+            <literalExpression>
+                <text>number(11.11)</text>
+            </literalExpression>
+        </decision>
+        <decision name="decision021" id="_decision021">
+            <description>Tests FEEL expression: 'number("test"))' and expects result: 'null'</description>
+            <question>Result of FEEL expression 'number("test"))'?</question>
+            <allowedAnswers>null</allowedAnswers>
+            <variable typeRef="number" name="decision021"/>
+            <literalExpression>
+                <text>number("test")</text>
+            </literalExpression>
+        </decision>
+        <decision name="decision022" id="_decision022">
+            <description>Tests FEEL expression: 'number("1 2 3"))' and expects result: 'null'</description>
+            <question>Result of FEEL expression 'number("1 2 3"))'?</question>
+            <allowedAnswers>null</allowedAnswers>
+            <variable typeRef="number" name="decision022"/>
+            <literalExpression>
+                <text>number("1 2 3")</text>
+            </literalExpression>
+        </decision>
+         <decision name="decision023" id="_decision023">
+            <description>Tests FEEL expression: 'number(null))' and expects result: 'null'</description>
+            <question>Result of FEEL expression 'number(null))'?</question>
+            <allowedAnswers>null</allowedAnswers>
+            <variable typeRef="number" name="decision023"/>
+            <literalExpression>
+                <text>number(null)</text>
+            </literalExpression>
+        </decision>
 </definitions>
 
