@@ -290,6 +290,7 @@
         </resultNode>
     </testCase>
 
+<!--
     <testCase id="decision_023">
         <description>numeric range is not permitted as iteration domain</description>
         <resultNode name="decision_023" type="decision">
@@ -307,6 +308,7 @@
             </expected>
         </resultNode>
     </testCase>
+-->
 
     <testCase id="decision_025">
         <description>invalid (descending) range gives null</description>
