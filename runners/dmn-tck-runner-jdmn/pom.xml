@@ -65,7 +65,7 @@
         <dependency>
             <groupId>com.goldmansachs.jdmn</groupId>
             <artifactId>jdmn-core</artifactId>
-            <version>8.2.1</version>
+            <version>9.0.0</version>
         </dependency>
     </dependencies>
 

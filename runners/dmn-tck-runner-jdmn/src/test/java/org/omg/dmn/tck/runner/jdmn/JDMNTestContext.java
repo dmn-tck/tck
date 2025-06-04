@@ -36,6 +36,16 @@ import java.net.URL;
 import java.util.*;
 
 public class JDMNTestContext<NUMBER, DATE, TIME, DATE_TIME, DURATION> implements TestSuiteContext {
+    private static final Map<String, String> INPUT_PARAMETERS_MAP = new LinkedHashMap<>() {{
+        put("xsdValidation", "true");
+        put("singletonInputData", "true");
+        put("strongTyping", "false");
+    }};
+    private static InputParameters INPUT_PARAMETERS = new InputParameters(INPUT_PARAMETERS_MAP);
+    public static InputParameters getInputParameters() {
+        return INPUT_PARAMETERS;
+    }
+
     private static final boolean DEBUG_TRANSFORMER = false;
 
     private final DMNSerializer dmnSerializer;
@@ -51,7 +61,7 @@ public class JDMNTestContext<NUMBER, DATE, TIME, DATE_TIME, DURATION> implements
 
     public JDMNTestContext(DMNSerializer dmnSerializer, DMNTransformer<TestCases> dmnTransformer, DMNDialectDefinition<NUMBER, DATE, TIME, DATE_TIME, DURATION, TestCases> dialectDefinition) {
         this.dmnSerializer = dmnSerializer;
-        this.tckSerializer = new XMLTCKSerializer(new NopBuildLogger(), true);
+        this.tckSerializer = new XMLTCKSerializer(new NopBuildLogger(), getInputParameters());
         this.dmnTransformer = dmnTransformer;
         this.dialectDefinition = dialectDefinition;
         this.lib = (StandardFEELLib<NUMBER, DATE, TIME, DATE_TIME, DURATION>) dialectDefinition.createFEELLib();
@@ -78,12 +88,14 @@ public class JDMNTestContext<NUMBER, DATE, TIME, DATE_TIME, DURATION> implements
         Map<URL, TDefinitions> modelMap = new LinkedHashMap<>();
         List<TDefinitions> pairs = new ArrayList<>();
         if (modelURL != null) {
-            TDefinitions definitions = dmnSerializer.readModel(modelURL);
+            File input = new File(modelURL.getPath());
+            TDefinitions definitions = dmnSerializer.readModel(input);
             modelMap.put(modelURL, definitions);
             pairs.add(definitions);
         }
         for (URL url: additionalModelURLs) {
-            TDefinitions definitions = dmnSerializer.readModel(url);
+            File input = new File(url.getPath());
+            TDefinitions definitions = dmnSerializer.readModel(input);
             modelMap.put(modelURL, definitions);
             pairs.add(definitions);
         }
@@ -97,13 +109,6 @@ public class JDMNTestContext<NUMBER, DATE, TIME, DATE_TIME, DURATION> implements
         InputParameters inputParameters = getInputParameters();
         this.interpreter = dialectDefinition.createDMNInterpreter(repository, inputParameters);
         this.basicToJavaTransformer = dialectDefinition.createBasicTransformer(repository, new NopLazyEvaluationDetector(), inputParameters);
-    }
-
-    private InputParameters getInputParameters() {
-        LinkedHashMap<String, String> map = new LinkedHashMap<>();
-        map.put("singletonInputData", "false");
-        map.put("strongTyping", "false");
-        return new InputParameters(map);
     }
 
     public void clean(TestCases testCases) {
