@@ -32,7 +32,11 @@ import com.gs.dmn.transformation.lazy.NopLazyEvaluationDetector;
 import org.omg.dmn.tck.runner.junit4.TestSuiteContext;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.*;
 
 public class JDMNTestContext<NUMBER, DATE, TIME, DATE_TIME, DURATION> implements TestSuiteContext {
@@ -51,7 +55,7 @@ public class JDMNTestContext<NUMBER, DATE, TIME, DATE_TIME, DURATION> implements
 
     public JDMNTestContext(DMNSerializer dmnSerializer, DMNTransformer<TestCases> dmnTransformer, DMNDialectDefinition<NUMBER, DATE, TIME, DATE_TIME, DURATION, TestCases> dialectDefinition) {
         this.dmnSerializer = dmnSerializer;
-        this.tckSerializer = new XMLTCKSerializer(new NopBuildLogger(), true);
+        this.tckSerializer = new XMLTCKSerializer(new NopBuildLogger(), getInputParameters());
         this.dmnTransformer = dmnTransformer;
         this.dialectDefinition = dialectDefinition;
         this.lib = (StandardFEELLib<NUMBER, DATE, TIME, DATE_TIME, DURATION>) dialectDefinition.createFEELLib();
@@ -78,14 +82,24 @@ public class JDMNTestContext<NUMBER, DATE, TIME, DATE_TIME, DURATION> implements
         Map<URL, TDefinitions> modelMap = new LinkedHashMap<>();
         List<TDefinitions> pairs = new ArrayList<>();
         if (modelURL != null) {
-            TDefinitions definitions = dmnSerializer.readModel(modelURL);
+            File input = new File(modelURL.getPath());
+            TDefinitions definitions = dmnSerializer.readModel(input);
             modelMap.put(modelURL, definitions);
             pairs.add(definitions);
+            fixModelName(definitions, input.getName());
         }
         for (URL url: additionalModelURLs) {
-            TDefinitions definitions = dmnSerializer.readModel(url);
+            File input = new File(url.getPath());
+            TDefinitions definitions = dmnSerializer.readModel(input);
             modelMap.put(modelURL, definitions);
             pairs.add(definitions);
+            fixModelName(definitions, input.getName());
+        }
+        // Check file name and model name
+        for (Map.Entry<URL, TDefinitions> entry: modelMap.entrySet()) {
+            String modelFileName = new File(entry.getKey().getPath()).getName();
+            String modelName = entry.getValue().getName();
+            checkDMNFile(modelFileName, modelName, "Invalid name in DMN file %s, found name '%s'\n");
         }
         DMNModelRepository repository = new DMNModelRepository(pairs);
         this.dmnTransformer.transform(repository);
@@ -97,6 +111,22 @@ public class JDMNTestContext<NUMBER, DATE, TIME, DATE_TIME, DURATION> implements
         InputParameters inputParameters = getInputParameters();
         this.interpreter = dialectDefinition.createDMNInterpreter(repository, inputParameters);
         this.basicToJavaTransformer = dialectDefinition.createBasicTransformer(repository, new NopLazyEvaluationDetector(), inputParameters);
+    }
+
+    private void fixModelName(TDefinitions definitions, String fileName) {
+        int index = fileName.indexOf(".");
+        String modelName = index == -1 ? fileName : fileName.substring(0, index);
+        definitions.setName(modelName);
+    }
+
+    private void checkDMNFile(String modelFileName, String modelName, String errorFormat) {
+        if (!modelFileName.equals(modelName + ".dmn")) {
+            try {
+                String message = String.format(errorFormat, modelFileName, modelName);
+                Files.write(Paths.get("dmn-errors.txt"), message.getBytes(), StandardOpenOption.APPEND);
+            } catch (IOException e) {
+            }
+        }
     }
 
     private InputParameters getInputParameters() {

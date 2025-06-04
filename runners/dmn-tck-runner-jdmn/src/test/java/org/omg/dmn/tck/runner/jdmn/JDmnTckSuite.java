@@ -18,8 +18,6 @@ import org.junit.runner.Description;
 import org.junit.runner.Runner;
 import org.junit.runners.Suite;
 import org.junit.runners.model.InitializationError;
-import org.omg.dmn.tck.runner.junit4.DmnTckRunner;
-import org.omg.dmn.tck.runner.junit4.DmnTckVendorTestSuite;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

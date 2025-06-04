@@ -18,9 +18,8 @@ import com.gs.dmn.log.Slf4jBuildLogger;
 import com.gs.dmn.tck.TCKSerializer;
 import com.gs.dmn.tck.ast.TestCase;
 import com.gs.dmn.tck.ast.TestCases;
-import com.gs.dmn.tck.serialization.TCKMarshaller;
-import com.gs.dmn.tck.serialization.xstream.TCKMarshallerFactory;
 import com.gs.dmn.tck.serialization.xstream.XMLTCKSerializer;
+import com.gs.dmn.transformation.InputParameters;
 import org.junit.runner.Description;
 import org.junit.runner.notification.Failure;
 import org.junit.runner.notification.RunNotifier;
@@ -31,16 +30,15 @@ import org.omg.dmn.tck.runner.junit4.TestSuiteContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.stream.Collectors;
@@ -58,7 +56,11 @@ public class JDmnTckRunner extends ParentRunner<TestCase> {
     private Collection<URL> additionalModels = new ArrayList<>();
     private FileWriter resultFile;
     private String folder = "<unknown>";
-    private TCKSerializer serializer = new XMLTCKSerializer(new Slf4jBuildLogger(logger), true);
+    private Map<String, String> inputParametersMap = new LinkedHashMap<>() {{
+        put("xsdValidation", "true");
+    }};
+    private InputParameters inputParameters = new InputParameters(inputParametersMap);
+    private TCKSerializer serializer = new XMLTCKSerializer(new Slf4jBuildLogger(logger), inputParameters);
     public JDmnTckRunner(JDmnTckVendorTestSuite vendorSuite, File tcfile)
             throws InitializationError {
         super(vendorSuite.getClass());

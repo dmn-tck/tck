@@ -11,7 +11,7 @@
 
 package org.omg.dmn.tck.runner.jdmn;
 
-import com.gs.dmn.dialect.PureJavaTimeDMNDialectDefinition;
+import com.gs.dmn.dialect.JavaTimeDMNDialectDefinition;
 import com.gs.dmn.feel.lib.StandardFEELLib;
 import com.gs.dmn.log.BuildLogger;
 import com.gs.dmn.log.Slf4jBuildLogger;
@@ -19,6 +19,9 @@ import com.gs.dmn.runtime.interpreter.DMNInterpreter;
 import com.gs.dmn.runtime.interpreter.Result;
 import com.gs.dmn.serialization.DMNSerializer;
 import com.gs.dmn.tck.TCKUtil;
+import com.gs.dmn.tck.ast.ResultNode;
+import com.gs.dmn.tck.ast.TestCase;
+import com.gs.dmn.tck.ast.TestCases;
 import com.gs.dmn.transformation.DMNTransformer;
 import com.gs.dmn.transformation.InputParameters;
 import com.gs.dmn.transformation.ToQuotedNameTransformer;
@@ -26,16 +29,17 @@ import com.gs.dmn.transformation.basic.BasicDMNToJavaTransformer;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.junit.runner.Description;
 import org.junit.runner.RunWith;
-import com.gs.dmn.tck.ast.TestCases;
-import com.gs.dmn.tck.ast.TestCase;
-import com.gs.dmn.tck.ast.ResultNode;
 import org.omg.dmn.tck.runner.junit4.TestResult;
 import org.omg.dmn.tck.runner.junit4.TestSuiteContext;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.*;
 
 @RunWith(JDmnTckSuite.class)
@@ -72,7 +76,7 @@ public class JDMNTckTest implements JDmnTckVendorTestSuite {
 
     @Override
     public TestSuiteContext createContext() {
-        PureJavaTimeDMNDialectDefinition dialectDefinition = new PureJavaTimeDMNDialectDefinition();
+        JavaTimeDMNDialectDefinition dialectDefinition = new JavaTimeDMNDialectDefinition();
         DMNSerializer dmnSerializer = dialectDefinition.createDMNSerializer(LOGGER, makeInputParameters());
         DMNTransformer<TestCases> dmnTransformer = new ToQuotedNameTransformer(LOGGER);
         return new JDMNTestContext<>(dmnSerializer, dmnTransformer, dialectDefinition);
@@ -89,6 +93,21 @@ public class JDMNTckTest implements JDmnTckVendorTestSuite {
         ((JDMNTestContext<?, ?, ?, ?, ?>) context).prepareModel(modelURL, additionalModels, LOGGER);
         ((JDMNTestContext<?, ?, ?, ?, ?>) context).clean(testCases);
         ((JDMNTestContext<?, ?, ?, ?, ?>) context).setTestCases(testCases);
+        // Check model name
+        String modelName = testCases.getModelName();
+        File file = new File(modelURL.getPath());
+        String modelFileName = file.getName();
+        checkTCKFile(modelFileName, modelName, "Invalid modelName in TCK file %s, found name '%s'\n");
+    }
+
+    private void checkTCKFile(String modelFileName, String modelName, String errorFormat) {
+        if (!modelFileName.equals(modelName)) {
+            try {
+                String message = String.format(errorFormat, modelFileName, modelName);
+                Files.write(Paths.get("tck-errors.txt"), message.getBytes(), StandardOpenOption.APPEND);
+            } catch (IOException e) {
+            }
+        }
     }
 
     @Override
