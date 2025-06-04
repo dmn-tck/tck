@@ -11,7 +11,7 @@
 
 package org.omg.dmn.tck.runner.jdmn;
 
-import com.gs.dmn.dialect.PureJavaTimeDMNDialectDefinition;
+import com.gs.dmn.dialect.JavaTimeDMNDialectDefinition;
 import com.gs.dmn.feel.lib.StandardFEELLib;
 import com.gs.dmn.log.BuildLogger;
 import com.gs.dmn.log.Slf4jBuildLogger;
@@ -19,16 +19,15 @@ import com.gs.dmn.runtime.interpreter.DMNInterpreter;
 import com.gs.dmn.runtime.interpreter.Result;
 import com.gs.dmn.serialization.DMNSerializer;
 import com.gs.dmn.tck.TCKUtil;
+import com.gs.dmn.tck.ast.ResultNode;
+import com.gs.dmn.tck.ast.TestCase;
+import com.gs.dmn.tck.ast.TestCases;
 import com.gs.dmn.transformation.DMNTransformer;
-import com.gs.dmn.transformation.InputParameters;
 import com.gs.dmn.transformation.ToQuotedNameTransformer;
 import com.gs.dmn.transformation.basic.BasicDMNToJavaTransformer;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.junit.runner.Description;
 import org.junit.runner.RunWith;
-import com.gs.dmn.tck.ast.TestCases;
-import com.gs.dmn.tck.ast.TestCase;
-import com.gs.dmn.tck.ast.ResultNode;
 import org.omg.dmn.tck.runner.junit4.TestResult;
 import org.omg.dmn.tck.runner.junit4.TestSuiteContext;
 import org.slf4j.LoggerFactory;
@@ -36,7 +35,12 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
+import static org.omg.dmn.tck.runner.jdmn.JDMNTestContext.getInputParameters;
 
 @RunWith(JDmnTckSuite.class)
 public class JDMNTckTest implements JDmnTckVendorTestSuite {
@@ -72,16 +76,10 @@ public class JDMNTckTest implements JDmnTckVendorTestSuite {
 
     @Override
     public TestSuiteContext createContext() {
-        PureJavaTimeDMNDialectDefinition dialectDefinition = new PureJavaTimeDMNDialectDefinition();
-        DMNSerializer dmnSerializer = dialectDefinition.createDMNSerializer(LOGGER, makeInputParameters());
+        JavaTimeDMNDialectDefinition dialectDefinition = new JavaTimeDMNDialectDefinition();
+        DMNSerializer dmnSerializer = dialectDefinition.createDMNSerializer(LOGGER, getInputParameters());
         DMNTransformer<TestCases> dmnTransformer = new ToQuotedNameTransformer(LOGGER);
         return new JDMNTestContext<>(dmnSerializer, dmnTransformer, dialectDefinition);
-    }
-
-    private InputParameters makeInputParameters() {
-        HashMap<String, String> map = new HashMap<>();
-        map.put("schemaValidation", "true");
-        return new InputParameters(map);
     }
 
     @Override
