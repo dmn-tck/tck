@@ -60,16 +60,8 @@ public class JDmnTckSuite extends Suite {
             }
             final String tcName = tcFolder.getName();
 
-            final File model = new File(tcFolder + "/" + tcName + ".dmn");
-            if (!model.exists()) {
-                continue;
-            }
-
-            File[] tcfiles = tcFolder.listFiles(new FilenameFilter() {
-                public boolean accept(File dir, String name) {
-                    return name.matches(tcName + "-test-\\d\\d.xml");
-                }
-            });
+            // Find test files
+            File[] tcfiles = tcFolder.listFiles((dir, name) -> name.matches(tcName + "-test-\\d\\d.xml"));
             Arrays.sort(tcfiles);
             for (File tcfile : tcfiles) {
                 JDmnTckRunner runner = new JDmnTckRunner(ntsuite, tcfile);

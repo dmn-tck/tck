@@ -86,20 +86,12 @@ public class JDMNTestContext<NUMBER, DATE, TIME, DATE_TIME, DURATION> implements
             TDefinitions definitions = dmnSerializer.readModel(input);
             modelMap.put(modelURL, definitions);
             pairs.add(definitions);
-            fixModelName(definitions, input.getName());
         }
         for (URL url: additionalModelURLs) {
             File input = new File(url.getPath());
             TDefinitions definitions = dmnSerializer.readModel(input);
             modelMap.put(modelURL, definitions);
             pairs.add(definitions);
-            fixModelName(definitions, input.getName());
-        }
-        // Check file name and model name
-        for (Map.Entry<URL, TDefinitions> entry: modelMap.entrySet()) {
-            String modelFileName = new File(entry.getKey().getPath()).getName();
-            String modelName = entry.getValue().getName();
-            checkDMNFile(modelFileName, modelName, "Invalid name in DMN file %s, found name '%s'\n");
         }
         DMNModelRepository repository = new DMNModelRepository(pairs);
         this.dmnTransformer.transform(repository);
@@ -111,22 +103,6 @@ public class JDMNTestContext<NUMBER, DATE, TIME, DATE_TIME, DURATION> implements
         InputParameters inputParameters = getInputParameters();
         this.interpreter = dialectDefinition.createDMNInterpreter(repository, inputParameters);
         this.basicToJavaTransformer = dialectDefinition.createBasicTransformer(repository, new NopLazyEvaluationDetector(), inputParameters);
-    }
-
-    private void fixModelName(TDefinitions definitions, String fileName) {
-        int index = fileName.indexOf(".");
-        String modelName = index == -1 ? fileName : fileName.substring(0, index);
-        definitions.setName(modelName);
-    }
-
-    private void checkDMNFile(String modelFileName, String modelName, String errorFormat) {
-        if (!modelFileName.equals(modelName + ".dmn")) {
-            try {
-                String message = String.format(errorFormat, modelFileName, modelName);
-                Files.write(Paths.get("dmn-errors.txt"), message.getBytes(), StandardOpenOption.APPEND);
-            } catch (IOException e) {
-            }
-        }
     }
 
     private InputParameters getInputParameters() {
