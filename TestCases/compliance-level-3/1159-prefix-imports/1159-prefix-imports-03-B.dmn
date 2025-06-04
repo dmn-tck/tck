@@ -20,7 +20,7 @@
     </decision>
 
     <businessKnowledgeModel name="bkm001" id="_model_b_bkm001">
-        <variable name="model_b_bkm001"/>
+        <variable name="bkm001"/>
         <encapsulatedLogic>
             <literalExpression typeRef="string">
                 <text>"model_b_bkm001"</text>
