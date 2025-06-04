@@ -32,14 +32,20 @@ import com.gs.dmn.transformation.lazy.NopLazyEvaluationDetector;
 import org.omg.dmn.tck.runner.junit4.TestSuiteContext;
 
 import java.io.File;
-import java.io.IOException;
 import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
 import java.util.*;
 
 public class JDMNTestContext<NUMBER, DATE, TIME, DATE_TIME, DURATION> implements TestSuiteContext {
+    private static final Map<String, String> INPUT_PARAMETERS_MAP = new LinkedHashMap<>() {{
+        put("xsdValidation", "true");
+        put("singletonInputData", "true");
+        put("strongTyping", "false");
+    }};
+    private static InputParameters INPUT_PARAMETERS = new InputParameters(INPUT_PARAMETERS_MAP);
+    public static InputParameters getInputParameters() {
+        return INPUT_PARAMETERS;
+    }
+
     private static final boolean DEBUG_TRANSFORMER = false;
 
     private final DMNSerializer dmnSerializer;
@@ -103,13 +109,6 @@ public class JDMNTestContext<NUMBER, DATE, TIME, DATE_TIME, DURATION> implements
         InputParameters inputParameters = getInputParameters();
         this.interpreter = dialectDefinition.createDMNInterpreter(repository, inputParameters);
         this.basicToJavaTransformer = dialectDefinition.createBasicTransformer(repository, new NopLazyEvaluationDetector(), inputParameters);
-    }
-
-    private InputParameters getInputParameters() {
-        LinkedHashMap<String, String> map = new LinkedHashMap<>();
-        map.put("singletonInputData", "false");
-        map.put("strongTyping", "false");
-        return new InputParameters(map);
     }
 
     public void clean(TestCases testCases) {

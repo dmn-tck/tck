@@ -22,7 +22,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
-import java.io.FilenameFilter;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -60,7 +59,7 @@ public class JDmnTckSuite extends Suite {
             }
             final String tcName = tcFolder.getName();
 
-            // Find test files
+            // Find and execute test files
             File[] tcfiles = tcFolder.listFiles((dir, name) -> name.matches(tcName + "-test-\\d\\d.xml"));
             Arrays.sort(tcfiles);
             for (File tcfile : tcfiles) {

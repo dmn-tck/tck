@@ -19,7 +19,6 @@ import com.gs.dmn.tck.TCKSerializer;
 import com.gs.dmn.tck.ast.TestCase;
 import com.gs.dmn.tck.ast.TestCases;
 import com.gs.dmn.tck.serialization.xstream.XMLTCKSerializer;
-import com.gs.dmn.transformation.InputParameters;
 import org.junit.runner.Description;
 import org.junit.runner.notification.Failure;
 import org.junit.runner.notification.RunNotifier;
@@ -38,10 +37,15 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.stream.Collectors;
+
+import static org.omg.dmn.tck.runner.jdmn.JDMNTestContext.getInputParameters;
 
 public class JDmnTckRunner extends ParentRunner<TestCase> {
     private static final Logger logger = LoggerFactory.getLogger(JDmnTckRunner.class);
@@ -56,11 +60,7 @@ public class JDmnTckRunner extends ParentRunner<TestCase> {
     private Collection<URL> additionalModels = new ArrayList<>();
     private FileWriter resultFile;
     private String folder = "<unknown>";
-    private Map<String, String> inputParametersMap = new LinkedHashMap<>() {{
-        put("xsdValidation", "true");
-    }};
-    private InputParameters inputParameters = new InputParameters(inputParametersMap);
-    private TCKSerializer serializer = new XMLTCKSerializer(new Slf4jBuildLogger(logger), inputParameters);
+    private TCKSerializer serializer = new XMLTCKSerializer(new Slf4jBuildLogger(logger), getInputParameters());
     public JDmnTckRunner(JDmnTckVendorTestSuite vendorSuite, File tcfile)
             throws InitializationError {
         super(vendorSuite.getClass());
