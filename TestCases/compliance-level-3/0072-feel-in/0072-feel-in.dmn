@@ -2448,19 +2448,33 @@
         </literalExpression>
     </decision>
 
+    <!-- comment out as per conv in https://github.com/dmn-tck/tck/pull/668 -->
+<!--
     <decision name="null_001_a" id="_null_001_a">
         <variable name="null_001_a"/>
         <literalExpression>
             <text>5 in (null..10]</text>
         </literalExpression>
     </decision>
+-->
 
+    <!-- comment out as per conv in https://github.com/dmn-tck/tck/pull/668 -->
+<!--
     <decision name="null_001_b" id="_null_001_b">
         <variable name="null_001_b"/>
         <literalExpression>
             <text>5 in [1..null)</text>
         </literalExpression>
     </decision>
+-->
+<!--
+    <decision name="null_001_b" id="_null_001_b">
+        <variable name="null_001_b"/>
+        <literalExpression>
+            <text>5 in [1..null)</text>
+        </literalExpression>
+    </decision>
+-->
 
     <decision name="null_001_c" id="_null_001_c">
         <variable name="null_001_c"/>
