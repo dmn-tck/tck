@@ -506,6 +506,8 @@
         </resultNode>
     </testCase>
 
+    <!-- commented out as per https://github.com/dmn-tck/tck/pull/671 -->
+<!--
     <testCase id="range_012">
         <description>range - start: GE unary syntax</description>
         <resultNode name="range_012" type="decision">
@@ -514,6 +516,7 @@
             </expected>
         </resultNode>
     </testCase>
+-->
 
 <!--
     https://github.com/dmn-tck/tck/pull/394#issuecomment-858583811

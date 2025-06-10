@@ -415,12 +415,15 @@
         </literalExpression>
     </decision>
 
+    <!-- commented out as per https://github.com/dmn-tck/tck/pull/671 -->
+<!--
     <decision name="range_012" id="_range_012">
         <variable name="range_012"/>
         <literalExpression>
             <text>(&gt;= 10).start</text>
         </literalExpression>
     </decision>
+-->
 
 <!--
     https://github.com/dmn-tck/tck/pull/394#issuecomment-858583811
