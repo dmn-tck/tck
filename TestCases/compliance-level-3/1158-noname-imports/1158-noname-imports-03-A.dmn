@@ -34,7 +34,7 @@
     </businessKnowledgeModel>
 
     <decision name="decision002" id="_decision002">
-        <variable name="decision002"/>
+        <variable name="decision002" typeRef="string"/>
         <knowledgeRequirement>
             <requiredKnowledge href="#_model_a_bkm001"/>
         </knowledgeRequirement>
