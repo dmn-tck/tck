@@ -18,13 +18,13 @@
       <requiredInput href="#_E51045E4-CA2E-4204-B602-0B07590F3829" />
     </informationRequirement>
     <list id="_D20690B7-C133-41B0-81A1-50532E5EE167" typeRef="stringList" label="BList">
-      <literalExpression id="_E5AD114C-D0B5-495C-B959-9B650E08A0B4" typeRef="stringList" label="Expression Name">
+      <literalExpression id="_E5AD114C-D0B5-495C-B959-9B650E08A0B4" typeRef="string" label="Expression Name">
         <text>string(A)</text>
       </literalExpression>
-      <literalExpression id="_C74A1449-E8EA-4EB3-B192-D87FBA7FEBA8" typeRef="stringList" label="Expression Name">
+      <literalExpression id="_C74A1449-E8EA-4EB3-B192-D87FBA7FEBA8" typeRef="string" label="Expression Name">
         <text>string(B)</text>
       </literalExpression>
-      <literalExpression id="_63CFEB4E-546A-425B-8FDF-2D0EFAD8CE4A" typeRef="stringList" label="Expression Name">
+      <literalExpression id="_63CFEB4E-546A-425B-8FDF-2D0EFAD8CE4A" typeRef="string" label="Expression Name">
         <text>C</text>
       </literalExpression>
     </list>
