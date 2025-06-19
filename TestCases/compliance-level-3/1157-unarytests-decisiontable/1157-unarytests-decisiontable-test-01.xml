@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Contributed to DMN TCK by StrayAlien -->
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation=""
+           xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <modelName>1157-unarytests-decisiontable.dmn</modelName>
+
+    <testCase id="001">
+        <description>input values: input expression is valid against input values - positive unary tests</description>
+        <resultNode name="decision001" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">success</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="002">
+        <description>input values: input expression is valid against input values - range</description>
+        <resultNode name="decision002" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">success</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="003">
+        <description>input values: input expression is valid against input values - '-' char</description>
+        <resultNode name="decision003" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">success</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="004">
+        <description>input values: input expression is valid against input values - negate using not()</description>
+        <resultNode name="decision004" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">success</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="005">
+        <description>input values: input expression is not valid against input values and will become null</description>
+        <resultNode name="decision005" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">success</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="006">
+        <description>input values: input expression is valid against input values - '?' symbol with built-in function</description>
+        <!-- also shows input values unary tests can call built-in functions -->
+        <resultNode name="decision006" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">success</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="006_a">
+        <description>input values: input expression is valid against input values - '?' inside literal string</description>
+        <resultNode name="decision006_a" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">success</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="006_b">
+        <description>input values: "?" symbol alone is not satisfied</description>
+        <resultNode name="decision006_b" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">success</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="006_c">
+        <description>input values: "?" symbol alone will be satisfied a true value</description>
+        <resultNode name="decision006_c" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">success</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="007">
+        <description>input values: input expression is valid against input values - input values has no text</description>
+        <resultNode name="decision007" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">success</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="008">
+        <!-- "One of the expressions in the UnaryTests evaluates to true when the implicit value
+        is applied to it." -->
+        <!-- this test is to exercise the vagueness of 'applied to'.  One of the expressions is simply
+        "true".  Which, as an expression always evaluates to true.  So ... should satisfy.  But, in practice,
+        the value of "false" applied against unary tests "("123", true)" should not satisfy any of them.  My
+        interpretation is that "applied to" is meant for unary comparisons. -->
+        <description>input values: boolean expression is weird</description>
+        <resultNode name="decision008" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">success</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="008_a">
+        <!-- further to 008, an input expression of boolean "false" will not be satisfied against a rule
+         unary test of boolean constant "true"-->
+        <description>input values: boolean expression is weird</description>
+        <resultNode name="decision008_a" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">success</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="008_b">
+        <!-- further to 008, an input expression of boolean "false" will not be satisfied against a rule
+         unary test of that evaluates to true -->
+        <description>input values: boolean expression is weird</description>
+        <resultNode name="decision008_b" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">success</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="009">
+        <description>output values: result satisfies output values</description>
+        <resultNode name="decision009" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">success</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="010">
+        <description>output values: result does not satisfy output values</description>
+        <resultNode name="decision010" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="011">
+        <description>output values: output values text may be empty</description>
+        <resultNode name="decision011" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">success</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="012">
+        <description>output values: output values text may be "-" char</description>
+        <resultNode name="decision012" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">success</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="013">
+        <description>output values: multiple columns - all satisfied</description>
+        <resultNode name="decision013" type="decision">
+            <expected>
+                <component name="col1">
+                    <value xsi:type="xsd:string">foo</value>
+                </component>
+                <component name="col2">
+                    <value xsi:type="xsd:string">bar</value>
+                </component>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="014">
+        <description>output values: multiple columns - column not satisfied</description>
+        <resultNode name="decision014" type="decision">
+            <expected>
+                <component name="col1">
+                    <value xsi:type="xsd:string">foo</value>
+                </component>
+                <component name="col2">
+                    <value xsi:nil="true"/>
+                </component>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="015">
+        <description>output values: ? used in tests - satisfied</description>
+        <resultNode name="decision015" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">foo</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="016">
+        <description>output values: ? used in tests - not satisfied</description>
+        <resultNode name="decision016" type="decision">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="017">
+        <description>input values: ? used in expression outside of unary tests expressions</description>
+        <resultNode name="decision017" type="decision">
+            <expected>
+                <value xsi:type="xsd:string">success</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+</testCases>
