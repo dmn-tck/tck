@@ -2982,29 +2982,23 @@
         </resultNode>
     </testCase>
 
-    <!-- comment out as per conv in https://github.com/dmn-tck/tck/pull/668 -->
-<!--
     <testCase id="null_001_a">
         <description>range null start value with non-inclusive start</description>
         <resultNode name="null_001_a" type="decision">
             <expected>
-                <value xsi:type="xsd:boolean">true</value>
+                <value xsi:nil="true"/>
             </expected>
         </resultNode>
     </testCase>
--->
 
-    <!-- comment out as per conv in https://github.com/dmn-tck/tck/pull/668 -->
-<!--
     <testCase id="null_001_b">
         <description>range null end value with non-inclusive end</description>
         <resultNode name="null_001_b" type="decision">
             <expected>
-                <value xsi:type="xsd:boolean">true</value>
+                <value xsi:nil="true"/>
             </expected>
         </resultNode>
     </testCase>
--->
 
     <testCase id="null_001_c">
         <description>range null start value with inclusive start</description>
