@@ -616,6 +616,8 @@
         </resultNode>
     </testCase>
 
+<!-- commented out as per https://github.com/dmn-tck/tck/pull/671 -->
+<!--
     <testCase id="range_012">
         <description>range - (!=10)</description>
         <resultNode name="range_012" type="decision">
@@ -635,6 +637,7 @@
             </expected>
         </resultNode>
     </testCase>
+-->
 
 
 </testCases>

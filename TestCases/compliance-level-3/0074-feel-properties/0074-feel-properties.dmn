@@ -627,8 +627,10 @@
         </context>
     </decision>
 
+<!-- commented out as per https://github.com/dmn-tck/tck/pull/671 -->
+<!--
     <decision name="range_012" id="_range_012">
-        <!-- range - (!=10) -->
+        &lt;!&ndash; range - (!=10) &ndash;&gt;
         <variable name="range_012"/>
         <context>
             <contextEntry>
@@ -657,5 +659,6 @@
             </contextEntry>
         </context>
     </decision>
+-->
 
 </definitions>
