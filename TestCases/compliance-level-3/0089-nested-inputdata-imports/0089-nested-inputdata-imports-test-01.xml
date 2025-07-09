@@ -11,23 +11,12 @@
 
   <testCase id="001" invocableName="Evaluation DS" type="decision">
     <description>Nested imports of InputData following GITHUB DMN TCK 274</description>
-    <inputNode name="Model B">
-      <component name="modelA">
-        <component name="Person name">
+    <inputNode name="Person name" namespace="http://www.trisotech.com/definitions/_ae5b3c17-1ac3-4e1d-b4f9-2cf861aec6d9">
           <value xsi:type="xsd:string">B.A.John</value>
-        </component>
-      </component>
-    </inputNode>
-    <inputNode name="Model B2">
-      <component name="modelA">
-        <component name="Person name">
-          <value xsi:type="xsd:string">B2.A.John2</value>
-        </component>
-      </component>
     </inputNode>
     <resultNode name="Model C Decision based on Bs">
       <expected>
-        <value xsi:type="xsd:string">B: Evaluating Say Hello to: Hello, B.A.John; B2: Evaluating Say Hello to: Hello, B2.A.John2</value>
+        <value xsi:type="xsd:string">B: Evaluating Say Hello to: Hello, B.A.John; B2: Evaluating Say Hello to: Hello, B.A.John</value>
       </expected>
     </resultNode>
   </testCase>
