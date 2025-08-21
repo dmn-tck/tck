@@ -65,7 +65,7 @@ public class TestCasesFiles {
     public static Iterable<Object[]> data() {
         List<Object[]> testCases = new ArrayList<>();
         File cl2parent = new File("../../TestCases/compliance-level-2");
-        FileFilter filenameFilter = pathname -> pathname.isDirectory();
+        FileFilter filenameFilter = File::isDirectory;
         for (File file : cl2parent.listFiles(filenameFilter)) {
             testCases.add(new Object[]{file.getName(), file});
         }
@@ -103,30 +103,32 @@ public class TestCasesFiles {
         return value;
     }
 
-    private String testCaseID;
+    private final String testCaseID;
 
-    private File basedir;
-    private XPath xPath = XPathFactory.newInstance().newXPath();
+    private final File basedir;
+    private final XPath xPath = XPathFactory.newInstance().newXPath();
 
-    private XPathExpression input;
-    private XPathExpression decision;
-    private XPathExpression bkm;
-    private XPathExpression ds;
+    private final XPathExpression definitions;
+    private final XPathExpression input;
+    private final XPathExpression decision;
+    private final XPathExpression bkm;
+    private final XPathExpression ds;
 
-    private XPathExpression inputDataVarMissingTypeRef;
-    private XPathExpression bkmVariable;
-    private XPathExpression bkmEncapsulatedLogic;
+    private final XPathExpression inputDataVarMissingTypeRef;
+    private final XPathExpression bkmVariable;
+    private final XPathExpression bkmEncapsulatedLogic;
     /**
      * Spec 7.3.3 ItemDefinition metamodel, except `Any`.
      */
     private static final List<String> BUILTIN_NAMES_EXCEPT_ANY = Arrays.asList("number", "string", "boolean",
             "days and time duration", "years and months duration", "date", "time", "date and time");
-    private DocumentBuilder builder;
+    private final DocumentBuilder builder;
 
     public TestCasesFiles(String testCaseID, File basedir) {
         this.testCaseID = testCaseID;
         this.basedir = basedir;
         try {
+            definitions = xPath.compile("/*[local-name()='definitions']");
             input = xPath.compile("/*[local-name()='definitions']/*[local-name()='inputData']");
             decision = xPath.compile("/*[local-name()='definitions']/*[local-name()='decision']");
             bkm = xPath.compile("/*[local-name()='definitions']/*[local-name()='businessKnowledgeModel']");
@@ -148,9 +150,31 @@ public class TestCasesFiles {
             validator.setProperty(XMLConstants.ACCESS_EXTERNAL_DTD, "");
             validator.setProperty(XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");
             validator.validate(new StreamSource(dmnFile));
+            checkModelName(dmnFile);
             checkDRGElementVariable(dmnFile);
             checkInputDataHasTypeRef(dmnFile);
             checkBKMTypeRef(dmnFile);
+        }
+    }
+
+    private void checkModelName(File dmnFile) throws Exception {
+        Document xmlDocument = builder.parse(dmnFile);
+        NodeList xpathResults = (NodeList) definitions.evaluate(xmlDocument, XPathConstants.NODESET);
+        List<String> problems = new ArrayList<>();
+        if (xpathResults.getLength() > 0) {
+            for(int i = 0; i< xpathResults.getLength(); i++) {
+                Node item = xpathResults.item(i);
+                String modelName = item.getAttributes().getNamedItem("name").getNodeValue();
+                String fileName = dmnFile.getName().replaceAll(".dmn", "");
+                if (!modelName.equals(fileName)) {
+                    String problem = String.format("%s: Definitions node '%s' must have same name with file name excluding extension. Found '%s'", dmnFile.getName(), item, modelName);
+                    System.err.println(problem);
+                    problems.add(problem);
+                }
+            }
+        }
+        if (!problems.isEmpty()) {
+            throw new RuntimeException(String.join(", ", problems));
         }
     }
 
@@ -160,7 +184,7 @@ public class TestCasesFiles {
         problems.addAll(checkBKMXPathTypeRef(dmnFile, xmlDocument, bkmVariable, "variable", "name"));
         problems.addAll(checkBKMXPathTypeRef(dmnFile, xmlDocument, bkmEncapsulatedLogic, "encapsulatedLogic", "id"));
         if (!problems.isEmpty()) {
-            throw new RuntimeException(problems.stream().collect(Collectors.joining(", ")));
+            throw new RuntimeException(String.join(", ", problems));
         }
     }
 
@@ -202,7 +226,7 @@ public class TestCasesFiles {
             }
         }
         if (!problems.isEmpty()) {
-            throw new RuntimeException(problems.stream().collect(Collectors.joining(", "))+". Consider explicity typeRef for the specific test case value or typeRef='Any' if necessary.");
+            throw new RuntimeException(String.join(", ", problems) +". Consider explicity typeRef for the specific test case value or typeRef='Any' if necessary.");
         }
     }
 
@@ -215,7 +239,7 @@ public class TestCasesFiles {
         problems.addAll(checkDRGElementVariable(dmnFile, xmlDocument, bkm, "businessKnowledgeModel"));
         problems.addAll(checkDRGElementVariable(dmnFile, xmlDocument, ds, "decisionService"));
         if (!problems.isEmpty()) {
-            throw new RuntimeException(problems.stream().collect(Collectors.joining(", ")));
+            throw new RuntimeException(String.join(", ", problems));
         }
     }
 
