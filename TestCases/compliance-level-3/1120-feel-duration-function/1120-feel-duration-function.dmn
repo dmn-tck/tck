@@ -4,118 +4,118 @@
     <itemDefinition name="tfeel-duration-function_001_f2c6cd6866_Result" id="_jG2L8vUUEeesLuP4RHs4vA"/>
     <itemDefinition name="tfeel-duration-function_002_ddca5756ca_Result" id="_jG2L9vUUEeesLuP4RHs4vA"/>
     <itemDefinition name="tfeel-duration-function_003_951e1d1c31_Result" id="_jG2zAPUUEeesLuP4RHs4vA">
-        <typeRef>dayTimeDuration</typeRef>
+        <typeRef>days and time duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_004_6b31e7cde7_Result" id="_jG2zBPUUEeesLuP4RHs4vA">
-        <typeRef>dayTimeDuration</typeRef>
+        <typeRef>days and time duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_005_202d863d07_Result" id="_jG2zCPUUEeesLuP4RHs4vA">
-        <typeRef>dayTimeDuration</typeRef>
+        <typeRef>days and time duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_006_a885f926d9_Result" id="_jG2zDPUUEeesLuP4RHs4vA">
-        <typeRef>dayTimeDuration</typeRef>
+        <typeRef>days and time duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_007_2f0ad399f3_Result" id="_jG2zEPUUEeesLuP4RHs4vA">
-        <typeRef>dayTimeDuration</typeRef>
+        <typeRef>days and time duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_008_747f56743d_Result" id="_jG3aEfUUEeesLuP4RHs4vA">
-        <typeRef>dayTimeDuration</typeRef>
+        <typeRef>days and time duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_009_cef3c1ed26_Result" id="_jG3aFfUUEeesLuP4RHs4vA">
-        <typeRef>dayTimeDuration</typeRef>
+        <typeRef>days and time duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_010_5b452a4975_Result" id="_jG3aGfUUEeesLuP4RHs4vA">
-        <typeRef>dayTimeDuration</typeRef>
+        <typeRef>days and time duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_011_2169615b94_Result" id="_jG3aHfUUEeesLuP4RHs4vA">
-        <typeRef>dayTimeDuration</typeRef>
+        <typeRef>days and time duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_012_2affe6d169_Result" id="_jG3aIfUUEeesLuP4RHs4vA">
-        <typeRef>dayTimeDuration</typeRef>
+        <typeRef>days and time duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_013_0e8e26513c_Result" id="_jG4BI_UUEeesLuP4RHs4vA">
-        <typeRef>dayTimeDuration</typeRef>
+        <typeRef>days and time duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_014_598ba6fabd_Result" id="_jG4BJ_UUEeesLuP4RHs4vA">
-        <typeRef>dayTimeDuration</typeRef>
+        <typeRef>days and time duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_015_ce2cb09830_Result" id="_jG4BK_UUEeesLuP4RHs4vA">
-        <typeRef>dayTimeDuration</typeRef>
+        <typeRef>days and time duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_016_af3e37fdbd_Result" id="_jG4BL_UUEeesLuP4RHs4vA">
-        <typeRef>dayTimeDuration</typeRef>
+        <typeRef>days and time duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_017_4f4549fda4_Result" id="_jG4oM_UUEeesLuP4RHs4vA">
-        <typeRef>dayTimeDuration</typeRef>
+        <typeRef>days and time duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_018_f5ec776811_Result" id="_jG4oN_UUEeesLuP4RHs4vA">
-        <typeRef>dayTimeDuration</typeRef>
+        <typeRef>days and time duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_019_2e6885755a_Result" id="_jG4oO_UUEeesLuP4RHs4vA">
-        <typeRef>dayTimeDuration</typeRef>
+        <typeRef>days and time duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_020_af58b3766e_Result" id="_jG4oP_UUEeesLuP4RHs4vA">
-        <typeRef>dayTimeDuration</typeRef>
+        <typeRef>days and time duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_021_e48e70ad4e_Result" id="_jG4oQ_UUEeesLuP4RHs4vA">
-        <typeRef>dayTimeDuration</typeRef>
+        <typeRef>days and time duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_022_668f24bed7_Result" id="_jG5PQ_UUEeesLuP4RHs4vA">
-        <typeRef>dayTimeDuration</typeRef>
+        <typeRef>days and time duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_023_6fc32087db_Result" id="_jG5PR_UUEeesLuP4RHs4vA">
-        <typeRef>dayTimeDuration</typeRef>
+        <typeRef>days and time duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_024_fd7000d72f_Result" id="_jG5PS_UUEeesLuP4RHs4vA">
-        <typeRef>dayTimeDuration</typeRef>
+        <typeRef>days and time duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_025_f8ffbd8658_Result" id="_jG5PT_UUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_026_e6c47f0cae_Result" id="_jG5PU_UUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_027_33b7fb8704_Result" id="_jG52U_UUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_028_971b94f16d_Result" id="_jG52V_UUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_029_1a12a226cc_Result" id="_jG52W_UUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_030_afac0f2062_Result" id="_jG6dYPUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_031_1ddad718b9_Result" id="_jG6dZPUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_032_72c46a9ec9_Result" id="_jG6daPUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_033_5d1540abaf_Result" id="_jG6dbPUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_034_aa9cbb21a6_Result" id="_jG7Ec_UUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_035_93eef01ae7_Result" id="_jG7Ed_UUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_036_5f2775875e_Result" id="_jG7Ee_UUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_037_8c9ea9c0e6_Result" id="_jG7Ef_UUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_038_67dc4c254c_Result" id="_jG7rgfUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_039_4aa0b67804_Result" id="_jG7rhfUUEeesLuP4RHs4vA">
-        <typeRef>dayTimeDuration</typeRef>
+        <typeRef>days and time duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_040_7d8eae461f_Result" id="_jG7rifUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-duration-function_041_264bc9d682_Result" id="_jG7rjfUUEeesLuP4RHs4vA"/>
     <itemDefinition name="tfeel-duration-function_042_59a0000245_Result" id="_jG7rkfUUEeesLuP4RHs4vA"/>
