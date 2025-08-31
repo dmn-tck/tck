@@ -2,34 +2,34 @@
 <definitions namespace="http://www.actico.com/spec/DMN/1117-feel-date-and-time-function" name="1117-feel-date-and-time-function" id="_jFxN4PUUEeesLuP4RHs4vA" xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <description>FEEL built-in function 'date and time(from [string])' and 'date and time(date, time)' in category conversion functions</description>
     <itemDefinition name="tfeel-date-and-time-function_001_05fd7d6215_Result" id="_jFxN4vUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_002_8c66ed2d1a_Result" id="_jFxN5vUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_003_335cff371a_Result" id="_jFxN6vUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_004_28ef3e7882_Result" id="_jFxN7vUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_005_15df95b27a_Result" id="_jFxN8vUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_006_8c794da0bb_Result" id="_jFxN9vUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_007_59863d1b57_Result" id="_jFxN-vUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_008_83eb9a93ba_Result" id="_jFxN_vUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_009_1982fa549c_Result" id="_jFxOAvUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_010_59f5b47012_Result" id="_jFxOBvUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_011_eec2d5bdcd_Result" id="_jFxOCvUUEeesLuP4RHs4vA">
         <typeRef>string</typeRef>
@@ -38,34 +38,34 @@
         <typeRef>string</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_013_c4fd0a0e8d_Result" id="_jFxOEvUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_014_ded0e5fe2f_Result" id="_jFxOFvUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_015_9e27148afd_Result" id="_jFxOGvUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_016_c08e4d417a_Result" id="_jFxOHvUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_017_47816add0e_Result" id="_jFxOIvUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_018_0614e473e7_Result" id="_jFxOJvUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_019_c312e3dfe3_Result" id="_jFxOKvUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_020_29e0585b6f_Result" id="_jFxOLvUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_021_99f0215b60_Result" id="_jFxOMvUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_022_b8b20f0328_Result" id="_jFxONvUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_023_2e41497673_Result" id="_jFxOOvUUEeesLuP4RHs4vA">
         <typeRef>string</typeRef>
@@ -86,13 +86,13 @@
         <typeRef>string</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_029_e3a5e786a0_Result" id="_jFxOUvUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_030_2f97bff606_Result" id="_jFxOVvUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_031_61e70c285f_Result" id="_jFxOWvUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_032_1e95e8726e_Result" id="_jFxOXvUUEeesLuP4RHs4vA">
         <typeRef>string</typeRef>
@@ -101,169 +101,169 @@
         <typeRef>string</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_034_75580be3aa_Result" id="_jFxOZvUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_035_831b1ad0c5_Result" id="_jFxOavUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_036_189e1c3095_Result" id="_jFxObvUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_037_c7aec7ecf7_Result" id="_jFxOcvUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_038_1493e6d873_Result" id="_jFxOdvUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_039_593292b25c_Result" id="_jF6-4fUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_040_d9116e1daa_Result" id="_jF6-5fUUEeesLuP4RHs4vA">
         <typeRef>string</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_041_c6decfe6a3_Result" id="_jF6-6fUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_042_0cbcc3d1dc_Result" id="_jF6-7fUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_043_2e4177d00c_Result" id="_jF6-8fUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_044_9404547f9d_Result" id="_jF6-9fUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_045_5d93a541eb_Result" id="_jF6--fUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_046_89c1cd8daa_Result" id="_jF6-_fUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_047_60ea7838ce_Result" id="_jF6_AfUUEeesLuP4RHs4vA">
         <typeRef>string</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_048_e387922273_Result" id="_jF6_BfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_049_eb9cd1f777_Result" id="_jF6_CfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_050_2d960354af_Result" id="_jF6_DfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_051_46bdaa00b0_Result" id="_jF6_EfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_052_911dbd0a24_Result" id="_jF6_FfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_053_283c083df9_Result" id="_jF6_GfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_054_2561a406fc_Result" id="_jF6_HfUUEeesLuP4RHs4vA">
         <typeRef>string</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_055_6ce9202e17_Result" id="_jF6_IfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_056_e66397568e_Result" id="_jF6_JfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_057_0452ca8719_Result" id="_jF6_KfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_058_588040ceaa_Result" id="_jF6_LfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_059_dfc62a3ebc_Result" id="_jF6_MfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_060_890c302575_Result" id="_jF6_NfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_061_38ea1fc94d_Result" id="_jF6_OfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_062_528aa370a3_Result" id="_jF6_PfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_063_2c94303011_Result" id="_jF6_QfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_064_926a372666_Result" id="_jF6_RfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_065_a13de18ee4_Result" id="_jF6_SfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_066_e9f3d6d2c2_Result" id="_jF6_TfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_067_35fef99b53_Result" id="_jF6_UfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_068_abaa1c2774_Result" id="_jF6_VfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_069_ca84e9c806_Result" id="_jF6_WfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_070_889c75a0cf_Result" id="_jF6_XfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_071_e90b813dfe_Result" id="_jF6_YfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_072_9f3e9b9c21_Result" id="_jF6_ZfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_073_717548bec6_Result" id="_jF6_afUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_074_a15e7f8d29_Result" id="_jF6_bfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_075_4c3b8e7097_Result" id="_jF6_cfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_076_4d31fed18e_Result" id="_jF6_dfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_077_f83b3ac8bb_Result" id="_jF6_efUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_078_e113dabcdd_Result" id="_jF6_ffUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_079_2e6f80eb94_Result" id="_jF6_gfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_080_69de952053_Result" id="_jF6_hfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_081_e063215a7c_Result" id="_jF6_ifUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_082_5b6ed4e801_Result" id="_jF6_jfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_083_4f41731f2a_Result" id="_jF6_kfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_084_c633b01603_Result" id="_jF6_lfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_085_a604a1bc80_Result" id="_jF6_mfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_086_12ca8ac1d3_Result" id="_jF6_nfUUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_087_e9fd32063a_Result" id="_jGEI0_UUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-date-and-time-function_088_1db0287718_Result" id="_jGEI1_UUEeesLuP4RHs4vA">
-        <typeRef>dateTime</typeRef>
+        <typeRef>date and time</typeRef>
     </itemDefinition>
     <decision name="feel-date-and-time-function_ErrorCase_001_05fd7d6215" id="_jFxN5PUUEeesLuP4RHs4vA">
         <description>Tests FEEL expression: 'date and time(null)' and expects result: 'null (date and time)'</description>
