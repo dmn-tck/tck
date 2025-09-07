@@ -17,10 +17,10 @@
 			<typeRef>string</typeRef>
 		</itemComponent>
 		<itemComponent id="_tFlight_Dep" name="Departure">
-			<typeRef>dateTime</typeRef>
+			<typeRef>date and time</typeRef>
 		</itemComponent>
 		<itemComponent id="_tFlight_Arr" name="Arrival">
-			<typeRef>dateTime</typeRef>
+			<typeRef>date and time</typeRef>
 		</itemComponent>
 		<itemComponent id="_tFlight_Capacity" name="Capacity">
 			<typeRef>number</typeRef>
