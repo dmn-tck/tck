@@ -18,13 +18,13 @@
             <typeRef>time</typeRef>
         </itemComponent>
         <itemComponent name="aDateTime" id="_f305358d-dff6-4974-87a9-30f80ccfb7eb">
-            <typeRef>dateTime</typeRef>
+            <typeRef>date and time</typeRef>
         </itemComponent>
         <itemComponent name="aDaysAndTimeDuration" id="_5ae0f547-6fe6-46ea-a203-0c740e3753d6">
-            <typeRef>dayTimeDuration</typeRef>
+            <typeRef>days and time duration</typeRef>
         </itemComponent>
         <itemComponent name="aYearsAndMonthsDuration" id="_af3fccf6-8294-4a9d-bae7-dd74f8209cab">
-            <typeRef>yearMonthDuration</typeRef>
+            <typeRef>years and months duration</typeRef>
         </itemComponent>
     </itemDefinition>
     <decision name="Compare Boolean" id="_29fcbd74-791b-4700-b6b9-93654a21f492">

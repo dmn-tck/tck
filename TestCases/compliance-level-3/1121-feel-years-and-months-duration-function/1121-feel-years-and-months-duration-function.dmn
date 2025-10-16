@@ -2,112 +2,112 @@
 <definitions namespace="http://www.actico.com/spec/DMN/1121-feel-years-and-months-duration-function" name="1121-feel-years-and-months-duration-function" id="_jHaMoPUUEeesLuP4RHs4vA" xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <description>FEEL built-in function 'years and months duration(from [date and time], to [date and time])' in category conversion functions</description>
     <itemDefinition name="tfeel-years-and-months-duration-function_001_b24a0c91f2_Result" id="_jHaMovUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_002_4e7651ae0e_Result" id="_jHaMpvUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_003_0886738d31_Result" id="_jHaMqvUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_004_1bdfef922b_Result" id="_jHaMrvUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_005_d0a077da4e_Result" id="_jHaMsvUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_006_f20de28d3f_Result" id="_jHaMtvUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_007_0921c3d61a_Result" id="_jHaMuvUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_008_015d35b442_Result" id="_jHaMvvUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_009_635028a5d8_Result" id="_jHaMwvUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_010_caaa2e5002_Result" id="_jHaMxvUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_011_3fac022eb0_Result" id="_jHaMyvUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_012_331ef38ce0_Result" id="_jHaMzvUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_013_2f3cc46d9d_Result" id="_jHaM0vUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_014_1fadbba7cd_Result" id="_jHaM1vUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_015_0e496f94fc_Result" id="_jHaM2vUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_016_b38662aa93_Result" id="_jHaM3vUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_017_86744b9a54_Result" id="_jHaM4vUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_018_8a9ed1d66d_Result" id="_jHaM5vUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_019_90c2084588_Result" id="_jHaM6vUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_020_8ead9a0377_Result" id="_jHaM7vUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_021_8a7d311ae9_Result" id="_jHaM8vUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_022_87e369773b_Result" id="_jHaM9vUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_023_6385c7a83e_Result" id="_jHaM-vUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_024_e96d1bd93a_Result" id="_jHaM_vUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_025_161f6fca54_Result" id="_jHaNAvUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_026_fcc906b375_Result" id="_jHaNBvUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_027_3374dd86c6_Result" id="_jHaNCvUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_028_77600e7b35_Result" id="_jHaNDvUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_029_15a0d0d9c1_Result" id="_jHaNEvUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_030_ec16878596_Result" id="_jHaNFvUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_031_4fd9c09d89_Result" id="_jHaNGvUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_032_2a09ac80d0_Result" id="_jHaNHvUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_033_7333eca866_Result" id="_jHaNIvUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_034_c2cc06724c_Result" id="_jHaNJvUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_035_dc05f9555d_Result" id="_jHaNKvUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <itemDefinition name="tfeel-years-and-months-duration-function_036_f8c8b02ba3_Result" id="_jHaNLvUUEeesLuP4RHs4vA">
-        <typeRef>yearMonthDuration</typeRef>
+        <typeRef>years and months duration</typeRef>
     </itemDefinition>
     <decision name="feel-years-and-months-duration-function_ErrorCase_001_b24a0c91f2" id="_jHaMpPUUEeesLuP4RHs4vA">
         <description>Tests FEEL expression: 'years and months duration(null)' and expects result: 'null (years and months duration)'</description>
