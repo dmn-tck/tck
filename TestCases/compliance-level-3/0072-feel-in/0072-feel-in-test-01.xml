@@ -2152,7 +2152,7 @@
     </testCase>
 -->
 
-<!-- Disabling the below tests as the use case is not clear
+<!-- Disabling the below tests as the use case of comparing lists using in operator needs further clarification
 
     <testCase id="list_015_a">
         <description>list: e1 in =e2</description>
