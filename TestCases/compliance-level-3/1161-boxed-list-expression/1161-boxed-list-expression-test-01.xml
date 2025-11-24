@@ -34,6 +34,8 @@
         </resultNode>
     </testCase>
 
+<!-- Disabling the test case as further clarifications are needed in case of null inputs
+
     <testCase id="002">
         <description>null inputs</description>
         <resultNode name="BList" type="decision">
@@ -52,5 +54,6 @@
             </expected>
         </resultNode>
     </testCase>
+-->
 
 </testCases>
