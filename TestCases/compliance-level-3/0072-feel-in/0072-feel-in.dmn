@@ -1706,13 +1706,14 @@
         </literalExpression>
     </decision>
 
+<!-- Disabling the below as the use case of comparing lists using in operator needs further clarification.
     <decision name="list_015_b" id="_list_015_b">
         <variable name="list_015_b"/>
         <literalExpression>
             <text>[1,2,3] in (=[1,2,3])</text>
         </literalExpression>
     </decision>
-
+-->
     <decision name="list_015_c" id="_list_015_c">
         <variable name="list_015_c"/>
         <literalExpression>
@@ -1720,6 +1721,7 @@
         </literalExpression>
     </decision>
 
+<!--  Disabling the below as the use case of comparing lists using in operator needs further clarification.
     <decision name="list_016_a" id="_list_016_a">
         <variable name="list_016_a"/>
         <literalExpression>
@@ -1733,6 +1735,7 @@
             <text>[1,2,3] in (!=[1,2,3])</text>
         </literalExpression>
     </decision>
+-->
 
     <decision name="list_016_c" id="_list_016_c">
         <variable name="list_016_c"/>

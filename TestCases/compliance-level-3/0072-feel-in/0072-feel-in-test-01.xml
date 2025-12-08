@@ -2152,8 +2152,6 @@
     </testCase>
 -->
 
-<!-- Disabling the below tests as the use case of comparing lists using in operator needs further clarification
-
     <testCase id="list_015_a">
         <description>list: e1 in =e2</description>
         <resultNode name="list_015_a" type="decision">
@@ -2163,6 +2161,8 @@
         </resultNode>
     </testCase>
 
+<!-- Disabling the below test as the use case of comparing lists using in operator needs further clarification.
+
     <testCase id="list_015_b">
         <description>list: e1 in (=e2)</description>
         <resultNode name="list_015_b" type="decision">
@@ -2171,6 +2171,7 @@
             </expected>
         </resultNode>
     </testCase>
+-->
 
     <testCase id="list_015_c">
         <description>list: e1 in =e2</description>
@@ -2180,6 +2181,8 @@
             </expected>
         </resultNode>
     </testCase>
+
+<!-- Disabling the below tests as the use case of comparing lists using in operator needs further clarification.
 
     <testCase id="list_016_a">
         <description>list: e1 in !=e2</description>
