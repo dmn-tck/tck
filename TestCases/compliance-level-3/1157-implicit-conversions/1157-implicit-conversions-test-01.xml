@@ -96,7 +96,21 @@
     <testCase id="010">
         <resultNode name="Implicit Conversions CE" type="decision">
             <expected>
-                <value xsi:type="xsd:string">[1]-2-2000-12-01T00:00:00@UTC</value>
+                <list>
+                    <item>
+                        <list>
+                            <item>
+                                <value xsi:type="xsd:decimal">1</value>
+                            </item>
+                        </list>
+                    </item>
+                    <item>
+                        <value xsi:type="xsd:decimal">2</value>
+                    </item>
+                    <item>
+                        <value xsi:type="xsd:dateTime">2000-12-01T00:00:00Z</value>
+                    </item>
+                </list>
             </expected>
         </resultNode>
     </testCase>
@@ -104,7 +118,21 @@
     <testCase id="011">
         <resultNode name="Implicit Conversions FUNCT" type="decision">
             <expected>
-                <value xsi:type="xsd:string">[1]-2-2000-02-01T00:00:00@UTC</value>
+                <list>
+                    <item>
+                        <list>
+                            <item>
+                                <value xsi:type="xsd:decimal">1</value>
+                            </item>
+                        </list>
+                    </item>
+                    <item>
+                        <value xsi:type="xsd:decimal">2</value>
+                    </item>
+                    <item>
+                        <value xsi:type="xsd:dateTime">2000-02-01T00:00:00Z</value>
+                    </item>
+                </list>
             </expected>
         </resultNode>
     </testCase>
