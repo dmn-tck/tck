@@ -50,9 +50,6 @@
         <itemComponent name="metricsTable" id="_0ee333d1-03fc-4a77-8798-d0b351a19a36">
             <typeRef>tMetrics</typeRef>
         </itemComponent>
-        <itemComponent name="rankByRate" id="_f0790a52-d95d-466a-bc51-5766c046c717">
-            <typeRef>tMetrics</typeRef>
-        </itemComponent>
         <itemComponent name="rankByDownPmt" id="_d54127c6-8418-45df-89da-2f84bedae37c">
             <typeRef>tMetrics</typeRef>
         </itemComponent>
@@ -231,12 +228,6 @@
                 <variable typeRef="tMetrics" name="metricsTable"/>
                 <literalExpression>
                     <text>for i in Bankrates return FinancialMetrics(i,RequestedAmt)</text>
-                </literalExpression>
-            </contextEntry>
-            <contextEntry>
-                <variable typeRef="tMetrics" name="rankByRate"/>
-                <literalExpression>
-                    <text>sort(metricsTable, function(x,y) x.rate&lt;y.rate)</text>
                 </literalExpression>
             </contextEntry>
             <contextEntry>
