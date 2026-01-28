@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<modelName>1158-feel-descendant-operator.dmn</modelName>
+	<labels>
+		<label>Non Compliant</label>
+		<label>Literal Expression</label>
+		<label>FEEL Descendant Operator</label>
+		<label>Data Type: List&lt;Any&gt;</label>
+	</labels>
+	<testCase id="_9efddb84-3527-455f-973f-b2ef6ea98661" name="desc op 1">
+		<resultNode id="_db4978f1-80c3-416e-b4b4-d807a77b1cbb" name="Object not null and key not null">
+			<expected>
+				<list>
+					<item>
+						<value xsi:type="xsd:string">v1</value>
+					</item>
+					<item>
+						<value xsi:type="xsd:string">v2</value>
+					</item>
+				</list>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="_a97be8cb-2ded-45bd-8df0-1f4716b30d88" name="desc op 2">
+		<resultNode id="_1e4a838f-e86c-4ed4-b4cb-b9119f61fdec" name="Number and key not null">
+			<expected>
+				<list/>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="_049002d1-1eb5-48d2-9501-1951cae2b8ab" name="desc op 3">
+		<resultNode id="_88813886-a62a-406b-b566-21a8d3639fbf" name="String and key not null">
+			<expected>
+				<list/>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="_5071c7da-d0fd-47e6-b9ff-92940964a99f" name="desc op 4">
+		<resultNode id="_3116645b-c056-4120-a036-8332e54d9aa9" name="Array and key not null">
+			<expected>
+				<list/>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="_88778371-011f-4c7d-a7d9-4d3b467dd52c" name="desc op 5">
+		<resultNode id="_0cddd898-b7c1-4262-8407-4389ded21d1a" name="Null and key not null">
+			<expected>
+				<list/>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="_afd28956-7f7b-4fa4-9e31-174a9ac07222" name="desc op 6">
+		<resultNode id="_7d25edc5-f050-4f65-8386-bf354c69c0c4" name="Object and key not null with null found value">
+			<expected>
+				<list/>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="_c38081c3-9988-4c65-be3e-0b27b3b21366" name="desc op 7">
+		<resultNode id="_c1985530-f4c7-455c-b853-4b1f26eecbc9" name="Object with null key">
+			<expected>
+				<list/>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="_811e6ae6-53c9-45dd-880a-5e62cff15845" name="desc op 8">
+		<resultNode id="_fd13e7a2-21e8-4181-9ee4-dbef3e107133" name="Object with existing key">
+			<expected>
+				<list>
+					<item>
+						<value xsi:type="xsd:string">v1</value>
+					</item>
+					<item>
+						<value xsi:type="xsd:string">v2</value>
+					</item>
+				</list>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="_9eafbee5-082f-4e29-8c8a-617ac181bb61" name="desc op 9">
+		<resultNode id="_450e1c62-103e-420a-a847-285b48c0663d" name="Object with existing space separated key">
+			<expected>
+				<list>
+					<item>
+						<value xsi:type="xsd:string">v1</value>
+					</item>
+					<item>
+						<value xsi:type="xsd:string">v2</value>
+					</item>
+				</list>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="_4e0b2654-7fb8-4cec-a540-8b8ef0882d34" name="desc op 10">
+		<resultNode id="_74bf6d79-3af3-42b1-b787-151839b3481d" name="Object with existing key and list of object as result">
+			<expected>
+				<list>
+					<item>
+						<component name="x">
+							<value xsi:type="xsd:string">v1</value>
+						</component>
+					</item>
+				</list>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="_d9659476-ecdd-472e-bf2c-d328b3ac8eee" name="desc op 11">
+		<resultNode id="_0331d56d-84ab-4160-81d0-c5714cf5cd38" name="Object with existing key and result filtering null values">
+			<expected>
+				<list>
+					<item>
+						<value xsi:type="xsd:string">v1</value>
+					</item>
+				</list>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="_1c017ac3-9f88-40ed-9bea-d3daa2678011" name="desc op 12">
+		<resultNode id="_58ee54d0-5153-4b44-9e46-581008383863" name="Object with existing key and result containing an object with null value">
+			<expected>
+				<list>
+					<item>
+						<component name="x">
+							<value xsi:type="xsd:string">v1</value>
+						</component>
+						<component name="b">
+							<component name="c">
+								<value xsi:nil="true"/>
+							</component>
+						</component>
+					</item>
+				</list>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="_0eb6a9bc-3bd8-4ed7-bbac-73a8e4c9ceb1" name="desc op 13">
+		<resultNode id="_65b703b3-3702-47e9-b99d-7717a37761d9" name="Object with mutliple filtering 1" xsi:type="Object with mutliple filtering 1">
+			<expected>
+				<value xsi:type="xsd:string">g</value>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="_93d03d76-e48c-4011-acfc-659a9cd6d33b" name="desc op 14">
+		<resultNode id="_ba827753-d888-4165-a199-9039b00e77da" name="Object with multiple filtering 2" xsi:type="Object with multiple filtering 2">
+			<expected>
+				<list>
+					<item>
+						<value xsi:type="xsd:string">g</value>
+					</item>
+					<item>
+						<value xsi:type="xsd:string">c</value>
+					</item>
+				</list>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="_8c2fbbbb-21d7-47af-b95a-11d634825183" name="desc op 15">
+		<resultNode id="_41e0a628-0e3d-4883-b9a3-f8f20e96e854" name="Object with multiple filtering 3" xsi:type="Object with multiple filtering 3">
+			<expected>
+				<list>
+					<item>
+						<component name="partyRoleType">
+							<value xsi:type="xsd:string">appraiser</value>
+						</component>
+						<component name="name">
+							<value xsi:type="xsd:string">g</value>
+						</component>
+					</item>
+					<item>
+						<component name="partyRoleType">
+							<value xsi:type="xsd:string">appraiser</value>
+						</component>
+						<component name="name">
+							<value xsi:type="xsd:string">c</value>
+						</component>
+					</item>
+				</list>
+			</expected>
+		</resultNode>
+	</testCase>
+	<testCase id="_6bda9e25-daf3-4d0f-97a8-35293bae11ed" name="desc op 16">
+		<resultNode id="_7ff48872-0ce6-41ee-b18f-a90842c5fb0c" name="Object with existing key 2" xsi:type="Object with existing key 2">
+			<expected>
+				<list>
+					<item>
+						<component name="partyRoleType">
+							<value xsi:type="xsd:string">appraiser</value>
+						</component>
+						<component name="name">
+							<value xsi:type="xsd:string">g</value>
+						</component>
+					</item>
+					<item>
+						<component name="partyRoleType">
+							<value xsi:type="xsd:string">funder</value>
+						</component>
+						<component name="name">
+							<value xsi:type="xsd:string">a</value>
+						</component>
+					</item>
+					<item>
+						<component name="partyRoleType">
+							<value xsi:type="xsd:string">appraiser</value>
+						</component>
+						<component name="name">
+							<value xsi:type="xsd:string">c</value>
+						</component>
+					</item>
+				</list>
+			</expected>
+		</resultNode>
+	</testCase>
+</testCases>
