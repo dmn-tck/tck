@@ -93,6 +93,17 @@
         <module>dmn-tck-runner-drools</module>
       </modules>
     </profile>
+    <profile>
+      <id>quantumdmn</id>
+      <activation>
+        <file>
+          <exists>enable-quantumdmn.flag</exists>
+        </file>
+      </activation>
+      <modules>
+        <module>dmn-tck-runner-quantumdmn</module>
+      </modules>
+    </profile>
   </profiles>
 
   <build>
