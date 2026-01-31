@@ -38,4 +38,4 @@ You can also use environment variables:
 
 - Java 17+
 - QuantumDMN API access
-- `dmn-java-client` SDK installed locally (`mvn install` in `dmn-java-sdk/dmn-java-client`)
+- `dmn-java-client` https://central.sonatype.com/artifact/com.quantumdmn/dmn-java-client

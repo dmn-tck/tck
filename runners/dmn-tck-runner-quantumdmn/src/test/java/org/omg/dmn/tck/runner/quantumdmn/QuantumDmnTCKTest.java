@@ -81,12 +81,12 @@ public class QuantumDmnTCKTest implements DmnTckVendorTestSuite {
         IGNORED_TESTS.add("1111-feel-matches-function.xml:caselessmatch08"); // regex backreferences not supported
         IGNORED_TESTS.add("1111-feel-matches-function.xml:caselessmatch09"); // regex backreferences not supported
         IGNORED_TESTS.add("1111-feel-matches-function.xml:K2-MatchesFunc-17"); // regex backreferences not supported
-        IGNORED_TESTS.add("1115-feel-date-function.xml:feel-date-function_015_1dd66594cf"); // unresonable year
-        IGNORED_TESTS.add("1115-feel-date-function.xml:feel-date-function_016_31f3fef4a0"); // unresonable year
-        IGNORED_TESTS.add("1117-feel-date-and-time-function.xml:feel-date-and-time-function_011_eec2d5bdcd"); // unresonable year
-        IGNORED_TESTS.add("1117-feel-date-and-time-function.xml:feel-date-and-time-function_012_225a105eef"); // unresonable year
-        IGNORED_TESTS.add("1117-feel-date-and-time-function.xml:feel-date-and-time-function_027_ae365197dd"); // unresonable year
-        IGNORED_TESTS.add("1117-feel-date-and-time-function.xml:feel-date-and-time-function_028_1c3d56275f"); // unresonable year
+        IGNORED_TESTS.add("1115-feel-date-function.xml:feel-date-function_015_1dd66594cf"); // unreasonable year
+        IGNORED_TESTS.add("1115-feel-date-function.xml:feel-date-function_016_31f3fef4a0"); // unreasonable year
+        IGNORED_TESTS.add("1117-feel-date-and-time-function.xml:feel-date-and-time-function_011_eec2d5bdcd"); // unreasonable year
+        IGNORED_TESTS.add("1117-feel-date-and-time-function.xml:feel-date-and-time-function_012_225a105eef"); // unreasonable year
+        IGNORED_TESTS.add("1117-feel-date-and-time-function.xml:feel-date-and-time-function_027_ae365197dd"); // unreasonable year
+        IGNORED_TESTS.add("1117-feel-date-and-time-function.xml:feel-date-and-time-function_028_1c3d56275f"); // unreasonable year
     }
 
     private void initializeApi() throws IOException {
