@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions namespace="http://www.trisotech.com/dmn/definitions/_a76ecb13-8ecb-4eb4-b590-41f33e8d5108" name="1159-data-time-value" id="_i9fboPUUEeesLuP4RHs4vA" xmlns="https://www.omg.org/spec/DMN/20211108/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <description>FEEL built-in accessor 'value' in date, time, date and time, years and months durations, days and time duration</description>
+
+    <decision name="date_001" id="_date_001">
+        <description>Tests FEEL date value accessor: 'date( 2016, 8, 2 ).value' and expects result: '1470096000'</description>
+        <question>Result of FEEL expression 'date( 2016, 8, 2 ).value'?</question>
+        <allowedAnswers>1470096000</allowedAnswers>
+        <variable typeRef="number" name="date_001"/>
+        <literalExpression>
+            <text>date( 2016, 8, 2 ).value</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="time_001" id="_time_001">
+        <description>Tests FEEL expression: 'time("01:01:01").value' and expects result: '3661'</description>
+        <question>Result of FEEL expression 'time("01:01:01").value'?</question>
+        <allowedAnswers>3661</allowedAnswers>
+        <variable typeRef="number" name="time_001"/>
+        <literalExpression>
+            <text>time("01:01:01").value</text>
+        </literalExpression>
+    </decision>
+	
+	<decision name="time_002" id="_time_002">
+        <description>Tests FEEL expression: 'time("00:00:00").value' and expects result: '0'</description>
+        <question>Result of FEEL expression 'time("00:00:00").value'?</question>
+        <allowedAnswers>0</allowedAnswers>
+        <variable typeRef="number" name="time_002"/>
+        <literalExpression>
+            <text>time("00:00:00").value</text>
+        </literalExpression>
+    </decision>
+	
+	<decision name="time_003" id="_time_003">
+        <description>Tests FEEL expression: 'time("23:59:59").value' and expects result: '86399'</description>
+        <question>Result of FEEL expression 'time("23:59:59").value'?</question>
+        <allowedAnswers>86399</allowedAnswers>
+        <variable typeRef="number" name="time_003"/>
+        <literalExpression>
+            <text>time("23:59:59").value</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="date_time_001" id="_date_time_001">
+        <description>Tests FEEL expression: 'date and time("2016-07-29T05:48:23-05:00").value' and expects result: '1469789303'</description>
+        <question>Result of FEEL expression 'date and time("2016-07-29T05:48:23-05:00").value'?</question>
+        <allowedAnswers>1469789303</allowedAnswers>
+        <variable typeRef="number" name="date_time_001"/>
+        <literalExpression>
+            <text>date and time("2016-07-29T05:48:23-05:00").value</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="days_time_duration_001" id="_days_time_duration_001">
+        <description>Tests FEEL expression: 'duration("P1DT1H").value' and expects result: '90000'</description>
+        <question>Result of FEEL expression 'duration("P1DT1H").value'?</question>
+        <allowedAnswers>90000</allowedAnswers>
+        <variable typeRef="number" name="days_time_duration_001"/>
+        <literalExpression>
+            <text>duration("P1DT1H").value</text>
+        </literalExpression>
+    </decision>
+
+    <decision name="years_months_duration_001" id="_years_months_duration_001">
+        <description>Tests FEEL expression: 'years and months duration( date("2011-12-22"), date("2013-01-22") ).value' and expects result: '13'</description>
+        <question>Result of FEEL expression 'years and months duration( date("2011-12-22"), date("2013-01-22") ).value'?</question>
+        <allowedAnswers>13</allowedAnswers>
+        <variable typeRef="number" name="years_months_duration_001"/>
+        <literalExpression>
+            <text>years and months duration( date("2011-12-22"), date("2013-01-22") ).value</text>
+        </literalExpression>
+    </decision>
+</definitions>
