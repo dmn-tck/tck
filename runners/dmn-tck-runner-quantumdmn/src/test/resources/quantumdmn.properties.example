@@ -1,0 +1,6 @@
+# QuantumDMN API configuration
+# copy this file to quantumdmn.properties and fill in your values
+quantumdmn.base-url=${DMN_API_URL:https://api.quantumdmn.com}
+quantumdmn.auth.zitadel.issuer=${DMN_AUTH_URL:https://auth.quantumdmn.com}
+quantumdmn.auth.zitadel.key-file=${DMN_KEY_FILE:test_client.json}
+quantumdmn.auth.zitadel.project-id=${ZITADEL_PROJECT_ID:000000000000000001}
