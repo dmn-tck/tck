@@ -61,34 +61,6 @@ public class QuantumDmnTCKTest implements DmnTckVendorTestSuite {
         }
     }
 
-    private static final Set<String> IGNORED_TESTS = new HashSet<>();
-    static {
-        // Expected failures (backend bugs) that cannot be handled by loose comparison
-        IGNORED_TESTS.add("0076-feel-external-java.xml:boxed_001"); // external java not supported
-        IGNORED_TESTS.add("0076-feel-external-java.xml:incorrect_001"); // external java not supported
-        IGNORED_TESTS.add("0076-feel-external-java.xml:incorrect_002"); // external java not supported
-        IGNORED_TESTS.add("0076-feel-external-java.xml:incorrect_003"); // external java not supported
-        IGNORED_TESTS.add("0076-feel-external-java.xml:literal_001"); // external java not supported
-        IGNORED_TESTS.add("0076-feel-external-java.xml:literal_002"); // external java not supported
-        IGNORED_TESTS.add("0076-feel-external-java.xml:literal_005"); // external java not supported
-        IGNORED_TESTS.add("0076-feel-external-java.xml:literal_006"); // external java not supported
-        IGNORED_TESTS.add("0076-feel-external-java.xml:literal_007"); // external java not supported
-        IGNORED_TESTS.add("0076-feel-external-java.xml:literal_007_a"); // external java not supported
-        IGNORED_TESTS.add("0076-feel-external-java.xml:literal_010"); // external java not supported
-        IGNORED_TESTS.add("0076-feel-external-java.xml:literal_011"); // external java not supported
-        IGNORED_TESTS.add("0076-feel-external-java.xml:literal_012"); // external java not supported
-        IGNORED_TESTS.add("0076-feel-external-java.xml:varargs_001"); // external java not supported
-        IGNORED_TESTS.add("1111-feel-matches-function.xml:caselessmatch08"); // regex backreferences not supported
-        IGNORED_TESTS.add("1111-feel-matches-function.xml:caselessmatch09"); // regex backreferences not supported
-        IGNORED_TESTS.add("1111-feel-matches-function.xml:K2-MatchesFunc-17"); // regex backreferences not supported
-        IGNORED_TESTS.add("1115-feel-date-function.xml:feel-date-function_015_1dd66594cf"); // unreasonable year
-        IGNORED_TESTS.add("1115-feel-date-function.xml:feel-date-function_016_31f3fef4a0"); // unreasonable year
-        IGNORED_TESTS.add("1117-feel-date-and-time-function.xml:feel-date-and-time-function_011_eec2d5bdcd"); // unreasonable year
-        IGNORED_TESTS.add("1117-feel-date-and-time-function.xml:feel-date-and-time-function_012_225a105eef"); // unreasonable year
-        IGNORED_TESTS.add("1117-feel-date-and-time-function.xml:feel-date-and-time-function_027_ae365197dd"); // unreasonable year
-        IGNORED_TESTS.add("1117-feel-date-and-time-function.xml:feel-date-and-time-function_028_1c3d56275f"); // unreasonable year
-    }
-
     private void initializeApi() throws IOException {
         String baseUrl = ConfigHelper.getBaseUrl();
         String issuer = ConfigHelper.getAuthIssuer();
@@ -200,17 +172,6 @@ public class QuantumDmnTCKTest implements DmnTckVendorTestSuite {
         LOGGER.info("Executing test: {} / {}", description.getClassName(), description.getMethodName());
         QuantumDmnContext ctx = (QuantumDmnContext) context;
 
-        // check if any result node in this test case is in the ignored list
-        for (TestCases.TestCase.ResultNode resultNode : testCase.getResultNode()) {
-             String testKey = ctx.getDmnFileName() + ":" + resultNode.getName();
-             if (IGNORED_TESTS.contains(testKey)) {
-                 LOGGER.warn("Skipping expected failure: {}", testKey);
-                 // we ignore the expected failure
-                 return TestResult.ignore("Skipped expected failure");
-             }
-        }
-
-
         try {
             // build input context from test case
             Map<String, FeelValue> inputContext = new LinkedHashMap<>();
@@ -251,7 +212,7 @@ public class QuantumDmnTCKTest implements DmnTckVendorTestSuite {
             // compare results
             List<String> failures = new ArrayList<>();
             for (TestCases.TestCase.ResultNode resultNode : testCase.getResultNode()) {
-             String testKey = ctx.getDmnFileName() + ":" + resultNode.getName();
+                String testKey = ctx.getDmnFileName() + ":" + resultNode.getName();
                 String decisionName = resultNode.getName();
                 EvaluationResult actualResult = results.get(decisionName);
 
@@ -260,13 +221,20 @@ public class QuantumDmnTCKTest implements DmnTckVendorTestSuite {
                     continue;
                 }
 
-                // handle error result cases
+                // parse expected value early to check for null expectation
+                FeelValue expectedValue = TckValueParser.parse(resultNode.getExpected());
+                boolean expectsNull = expectedValue == null || expectedValue.isNull();
+
+                // handle errorResult cases
                 if (resultNode.isErrorResult()) {
                     // expect an error
                     String error = actualResult.getError();
                     if (error == null || error.isEmpty()) {
                         FeelValue actualValue = actualResult.getValue();
-                        if (actualValue != null && !actualValue.isNull()) {
+                        // if we got a value, but expected error
+                        if (actualValue == null || actualValue.isNull()) {
+                             // OK
+                        } else {
                             failures.add("Expected error for '" + testKey + "' but got value: " + actualValue);
                         }
                     }
@@ -276,9 +244,15 @@ public class QuantumDmnTCKTest implements DmnTckVendorTestSuite {
                 // api sends error even if the result is correct
                 String error = actualResult.getError();
                 if (error != null && !error.isEmpty()) {
-                    FeelValue expectedValue = TckValueParser.parse(resultNode.getExpected());
-                    FeelValue actualValue = actualResult.getValue();
+                    // if we have an error, but we EXPECT null, we can accept the error as "result is null" the engine provides error information for some null results
+                    if (expectsNull) {
+                        LOGGER.warn("Ignoring error for '{}' because expected value is null: error='{}'", testKey, error);
+                        continue;
+                    } else {
+                        LOGGER.warn("Unexpected error for '{}'. expectedValue='{}', expectsNull='{}', error='{}'", testKey, expectedValue, expectsNull, error);
+                    }
 
+                    FeelValue actualValue = actualResult.getValue();
                     if (FeelValueComparator.areEqual(expectedValue, actualValue)) {
                        LOGGER.warn("Ignoring unexpected error for '{}' because values match: error='{}', value='{}'", testKey, error, actualValue);
                        continue;
@@ -288,7 +262,6 @@ public class QuantumDmnTCKTest implements DmnTckVendorTestSuite {
                 }
 
                 // compare expected vs actual value
-                FeelValue expectedValue = TckValueParser.parse(resultNode.getExpected());
                 FeelValue actualValue = actualResult.getValue();
 
                 if (!FeelValueComparator.areEqual(expectedValue, actualValue)) {
