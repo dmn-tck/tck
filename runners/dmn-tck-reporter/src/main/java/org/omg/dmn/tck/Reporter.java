@@ -27,6 +27,7 @@ import org.slf4j.LoggerFactory;
 
 import javax.xml.bind.JAXBException;
 import java.io.*;
+import java.lang.ArrayIndexOutOfBoundsException;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -524,22 +525,26 @@ public class Reporter {
                     try (Stream<String> lines = Files.lines( resultsFile[0].toPath() ) ) {
                         // skip the file header and load the rest
                         lines.forEach( l -> {
-                            String[] fields = l.split( ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
-                            String comment = fields.length > 4 ? fields[4] : "";
-                            String testFolder = ReportHelper.removeQuotes( fields[0] );
-                            String testSuit = ReportHelper.removeQuotes( fields[1] );
-                            String testId = ReportHelper.removeQuotes( fields[2] );
-                            String testKey = createTestKey( testFolder, testSuit, testId );
-                            TestCasesData tcd = tests.get(createTestCaseKey(testFolder, testSuit));
-                            if( tcd != null && tcd.model.getTestCase().stream().anyMatch( tc -> tc.getId() != null && tc.getId().equals( testId ) ) ) {
-                                // only record results for which the test exist (i.e., was not removed from the test set)
-                                TestResult testResult = new TestResult(
-                                        testFolder,
-                                        testSuit,
-                                        testId,
-                                        TestResult.Result.fromString( ReportHelper.removeQuotes( fields[3] ) ),
-                                        ReportHelper.removeQuotes( comment ) );
-                                testResults.put( testKey, testResult );
+                            try {
+                                String[] fields = l.split( ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
+                                String comment = fields.length > 4 ? fields[4] : "";
+                                String testFolder = ReportHelper.removeQuotes( fields[0] );
+                                String testSuit = ReportHelper.removeQuotes( fields[1] );
+                                String testId = ReportHelper.removeQuotes( fields[2] );
+                                String testKey = createTestKey( testFolder, testSuit, testId );
+                                TestCasesData tcd = tests.get(createTestCaseKey(testFolder, testSuit));
+                                if( tcd != null && tcd.model.getTestCase().stream().anyMatch( tc -> tc.getId() != null && tc.getId().equals( testId ) ) ) {
+                                    // only record results for which the test exist (i.e., was not removed from the test set)
+                                    TestResult testResult = new TestResult(
+                                            testFolder,
+                                            testSuit,
+                                            testId,
+                                            TestResult.Result.fromString( ReportHelper.removeQuotes( fields[3] ) ),
+                                            ReportHelper.removeQuotes( comment ) );
+                                    testResults.put( testKey, testResult );
+                                }
+                            } catch (ArrayIndexOutOfBoundsException e) {
+                                logger.error("Vendor result file (" + resultsFile[0].toPath() +") error on line :" + l, e);
                             }
                         });
                     } catch (IOException e) {

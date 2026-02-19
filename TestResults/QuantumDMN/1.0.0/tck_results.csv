@@ -125,8 +125,7 @@
 "compliance-level-3/0005-literal-invocation","0005-literal-invocation-test-01","002","SUCCESS",""
 "compliance-level-3/0005-literal-invocation","0005-literal-invocation-test-01","003","SUCCESS",""
 "compliance-level-3/0006-join","0006-join-test-01","001","SUCCESS",""
-"compliance-level-3/0007-date-time","0007-date-time-test-01","001","ERROR","Unexpected error for 'Time3': failed to evaluate expression: time: offset must be a day-time duration
-Mismatch for 'ymDuration2': expected=FeelValue{type=STRING, value=P1Y0M}, actual=FeelValue{type=STRING, value=P1Y}"
+"compliance-level-3/0007-date-time","0007-date-time-test-01","001","ERROR","Unexpected error for 'Time3': failed to evaluate expression: time: offset must be a day-time duration Mismatch for 'ymDuration2': expected=FeelValue{type=STRING, value=P1Y0M}, actual=FeelValue{type=STRING, value=P1Y}"
 "compliance-level-3/0008-listGen","0008-listGen-test-01","001","SUCCESS",""
 "compliance-level-3/0008-listGen","0008-listGen-test-01","002","SUCCESS",""
 "compliance-level-3/0008-listGen","0008-listGen-test-01","003","SUCCESS",""
