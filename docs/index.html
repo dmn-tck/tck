@@ -185,7 +185,7 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    2850, 0, 385, 155
+                    3308, 82, 0, 0
                 ]
             }
         ]
@@ -210,7 +210,7 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    2741, 0, 494, 155
+                    2850, 0, 385, 155
                 ]
             }
         ]
@@ -235,7 +235,7 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    0, 0, 0, 3390
+                    2741, 0, 494, 155
                 ]
             }
         ]
@@ -266,6 +266,31 @@
         ]
     };
         var c_data9 = {
+        labels: [
+            "Succeeded", "Failed", "Not Supported", "Missing"
+        ],
+        datasets: [
+            {
+                backgroundColor: [
+                    color(window.chartColors.green).alpha(0.5).rgbString(),
+                    color(window.chartColors.red).alpha(0.5).rgbString(),
+                    color(window.chartColors.yellow).alpha(0.5).rgbString(),
+                    color(window.chartColors.purple).alpha(0.5).rgbString()
+                ],
+                borderColor: [
+                    window.chartColors.grey,
+                    window.chartColors.grey,
+                    window.chartColors.grey,
+                    window.chartColors.grey
+                ],
+                borderWidth: 1,
+                data: [
+                    0, 0, 0, 3390
+                ]
+            }
+        ]
+    };
+        var c_data10 = {
         labels: [
             "Succeeded", "Failed", "Not Supported", "Missing"
         ],
@@ -431,6 +456,21 @@
         window.chart9 = new Chart(ctx, {
             type: 'doughnut',
             data: c_data9,
+            options: {
+                responsive: true,
+                legend: {
+                    position: 'right',
+                },
+                title: {
+                    display: true,
+                    text: 'Submitted results'
+                }
+            }
+        });
+        var ctx = document.getElementById("chart10").getContext("2d");
+        window.chart10 = new Chart(ctx, {
+            type: 'doughnut',
+            data: c_data10,
             options: {
                 responsive: true,
                 legend: {
@@ -851,6 +891,78 @@
                         </div>
                     </div>
                 </div>
+                <!-- QuantumDMN Engine 1.0.0 -->
+                <div class="list-group-item">
+                    <div class="list-group-item-header">
+                        <div class="list-view-pf-actions">
+                            <a href="overview_QuantumDMN Engine_1.0.0.html" class="btn btn-default">Overview</a>
+                            <a href="detail_QuantumDMN Engine_1.0.0.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
+                            <!--div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight5" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="true">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight5">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div-->
+                        </div>
+                        <div class="list-view-pf-main-info">
+                            <div class="list-view-pf-left">
+                                <span class="fa fa-university list-view-pf-icon-sm"></span>
+                            </div>
+                            <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                    <div class="list-group-item-heading">
+                                        QuantumDMN
+                                    </div>
+                                    <div class="list-group-item-text">
+                                        QuantumDMN Engine 1.0.0
+                                    </div>
+                                </div>
+                                <div class="list-view-pf-additional-info">
+                                    <div class="list-view-pf-additional-info-item">
+                                        Succeeded:&nbsp;<b>3308/3390</b>
+                                    </div>
+                                    <div class="list-view-pf-additional-info-item">
+                                        Last Submission:&nbsp;<b>2026-01-10</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-group-item-container container-fluid hidden">
+                        <div class="close">
+                            <span class="pficon pficon-close"></span>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-2">
+                                <canvas id="chart5"></canvas>
+                            </div>
+
+                            <div class="col-md-10">
+                                <dl class="dl-horizontal">
+                                    <dt>Last Submission: </dt><dd>2026-01-10</dd>
+                                    <dt>Tests: </dt><dd>3390</dd>
+                                    <dt>Labels: </dt><dd>79</dd>
+                                    <dt>Succeeded: </dt><dd>3308</dd>
+                                    <dt>Failed: </dt><dd>82</dd>
+                                    <dt>Not Supported: </dt><dd>0</dd>
+                                    <dt>Missing: </dt><dd>0</dd>
+                                    <dt>Info: </dt><dd>QuantumDMN is a DMN engine written in Go with a FEEL interpreter. Results obtained via Java SDK against /evaluate/design API endpoint.</dd>
+                                    <dt>Instructions: </dt><dd>
+                                                                    to execute the tests and reproduce the results, please follow the vendor provided instructions <a href="https://github.com/dmn-tck/tck/blob/master/runners/dmn-tck-runner-quantumdmn/" target="_blank">at this link <span class="fa fa-external-link"></span></a>.
+                                                           </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- Camunda's DMN-Scala engine 1.9.0 -->
                 <div class="list-group-item">
                     <div class="list-group-item-header">
@@ -858,11 +970,11 @@
                             <a href="overview_Camunda's DMN-Scala engine_1.9.0.html" class="btn btn-default">Overview</a>
                             <a href="detail_Camunda's DMN-Scala engine_1.9.0.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
                             <!--div class="dropdown pull-right dropdown-kebab-pf">
-                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight5" data-toggle="dropdown" aria-haspopup="true"
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight6" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true">
                                     <span class="fa fa-ellipsis-v"></span>
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight5">
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight6">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li><a href="#">Something else here</a></li>
@@ -902,7 +1014,7 @@
                         <div class="row">
 
                             <div class="col-md-2">
-                                <canvas id="chart5"></canvas>
+                                <canvas id="chart6"></canvas>
                             </div>
 
                             <div class="col-md-10">
@@ -930,11 +1042,11 @@
                             <a href="overview_Camunda Platform_7.21.0.html" class="btn btn-default">Overview</a>
                             <a href="detail_Camunda Platform_7.21.0.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
                             <!--div class="dropdown pull-right dropdown-kebab-pf">
-                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight6" data-toggle="dropdown" aria-haspopup="true"
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight7" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true">
                                     <span class="fa fa-ellipsis-v"></span>
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight6">
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight7">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li><a href="#">Something else here</a></li>
@@ -974,7 +1086,7 @@
                         <div class="row">
 
                             <div class="col-md-2">
-                                <canvas id="chart6"></canvas>
+                                <canvas id="chart7"></canvas>
                             </div>
 
                             <div class="col-md-10">
@@ -1002,11 +1114,11 @@
                             <a href="overview_Digital Transformation Platform (DXP)_2.4.html" class="btn btn-default">Overview</a>
                             <a href="detail_Digital Transformation Platform (DXP)_2.4.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
                             <!--div class="dropdown pull-right dropdown-kebab-pf">
-                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight7" data-toggle="dropdown" aria-haspopup="true"
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight8" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true">
                                     <span class="fa fa-ellipsis-v"></span>
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight7">
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight8">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li><a href="#">Something else here</a></li>
@@ -1046,7 +1158,7 @@
                         <div class="row">
 
                             <div class="col-md-2">
-                                <canvas id="chart7"></canvas>
+                                <canvas id="chart8"></canvas>
                             </div>
 
                             <div class="col-md-10">
@@ -1074,11 +1186,11 @@
                             <a href="overview_OpenRules_7.0.0.html" class="btn btn-default">Overview</a>
                             <a href="detail_OpenRules_7.0.0.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
                             <!--div class="dropdown pull-right dropdown-kebab-pf">
-                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight8" data-toggle="dropdown" aria-haspopup="true"
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight9" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true">
                                     <span class="fa fa-ellipsis-v"></span>
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight8">
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li><a href="#">Something else here</a></li>
@@ -1118,7 +1230,7 @@
                         <div class="row">
 
                             <div class="col-md-2">
-                                <canvas id="chart8"></canvas>
+                                <canvas id="chart9"></canvas>
                             </div>
 
                             <div class="col-md-10">
@@ -1146,11 +1258,11 @@
                             <a href="overview_Oracle Process Cloud_17.3.3.html" class="btn btn-default">Overview</a>
                             <a href="detail_Oracle Process Cloud_17.3.3.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
                             <!--div class="dropdown pull-right dropdown-kebab-pf">
-                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight9" data-toggle="dropdown" aria-haspopup="true"
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight10" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true">
                                     <span class="fa fa-ellipsis-v"></span>
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight10">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li><a href="#">Something else here</a></li>
@@ -1190,7 +1302,7 @@
                         <div class="row">
 
                             <div class="col-md-2">
-                                <canvas id="chart9"></canvas>
+                                <canvas id="chart10"></canvas>
                             </div>
 
                             <div class="col-md-10">
@@ -1225,7 +1337,7 @@
 <!-- pre-footer -->
 <div class="pre-footer">
     <div class="last-updated">
-        <p>Last updated:</strong> Feb 1, 2026, 1:23:56 AM</p>
+        <p>Last updated:</strong> Feb 19, 2026, 1:50:00 PM</p>
     </div>
 </div>
 <div class="footer">
