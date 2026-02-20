@@ -235,7 +235,7 @@ public class QuantumDmnTCKTest implements DmnTckVendorTestSuite {
                         if (actualValue == null || actualValue.isNull()) {
                              // OK
                         } else {
-                            failures.add("Expected error for '" + testKey + "' but got value: " + actualValue);
+                            failures.add("Expected error for '" + testKey + "' but got value: " + String.valueOf(actualValue));
                         }
                     }
                     continue;
@@ -265,19 +265,20 @@ public class QuantumDmnTCKTest implements DmnTckVendorTestSuite {
                 FeelValue actualValue = actualResult.getValue();
 
                 if (!FeelValueComparator.areEqual(expectedValue, actualValue)) {
-                    failures.add("Mismatch for '" + testKey + "': expected=" + expectedValue + ", actual=" + actualValue);
+                    failures.add("Mismatch for '" + testKey + "': expected=" + String.valueOf(expectedValue) + ", actual=" + String.valueOf(actualValue));
                 }
             }
 
             if (!failures.isEmpty()) {
-                return TestResult.error(String.join("\n", failures));
+                String msg = String.join("; ", failures);
+                return TestResult.error(escapeCsv(msg));
             }
 
             return TestResult.success("");
 
         } catch (Exception e) {
             LOGGER.error("Error executing test: {} / {}", description.getClassName(), description.getMethodName(), e);
-            return TestResult.error("Exception: " + e.getMessage());
+            return TestResult.error("Exception: " + escapeCsv(e.getMessage()));
         }
     }
 
@@ -294,5 +295,12 @@ public class QuantumDmnTCKTest implements DmnTckVendorTestSuite {
     @Override
     public String getResultFileName() {
         return "target/tck_results.csv";
+    }
+
+    private String escapeCsv(String text) {
+        if (text == null) {
+            return "null";
+        }
+        return text.replace("\"", "'").replace("\n", "").replace("\r", "");
     }
 }
