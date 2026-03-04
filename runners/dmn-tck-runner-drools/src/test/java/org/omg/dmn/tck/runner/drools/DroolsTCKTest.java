@@ -29,6 +29,7 @@ import org.kie.dmn.core.internal.utils.DMNRuntimeBuilder;
 import org.kie.dmn.feel.lang.Type;
 import org.kie.dmn.feel.lang.types.BuiltInType;
 import org.kie.dmn.feel.lang.types.impl.ComparablePeriod;
+import org.kie.dmn.feel.runtime.custom.CustomZonedDateTime;
 import org.kie.dmn.model.api.Definitions;
 import org.kie.internal.io.ResourceFactory;
 import org.omg.dmn.tck.marshaller._20160719.TestCaseType;
@@ -331,7 +332,7 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
                         } else {
                             XMLGregorianCalendar xmlCal = (XMLGregorianCalendar) dateTimeOrDurationValue;
                             if (xmlCal.getTimezone() != DatatypeConstants.FIELD_UNDEFINED && xmlCal.getXMLSchemaType() == DatatypeConstants.DATETIME) {
-                                return ZonedDateTime.parse(xmlCal.toXMLFormat());
+                                return CustomZonedDateTime.parse(xmlCal.toXMLFormat());
                             } else if (xmlCal.getTimezone() != DatatypeConstants.FIELD_UNDEFINED && xmlCal.getXMLSchemaType() == DatatypeConstants.TIME) {
                                 return OffsetTime.parse(xmlCal.toXMLFormat());
                             } else if (xmlCal.getXMLSchemaType() == DatatypeConstants.DATETIME) {
