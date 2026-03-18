@@ -22,7 +22,9 @@ import com.gs.dmn.tck.TCKUtil;
 import com.gs.dmn.tck.ast.ResultNode;
 import com.gs.dmn.tck.ast.TestCase;
 import com.gs.dmn.tck.ast.TestCases;
+import com.gs.dmn.transformation.CompositeDMNTransformer;
 import com.gs.dmn.transformation.DMNTransformer;
+import com.gs.dmn.transformation.TestCaseTransformer;
 import com.gs.dmn.transformation.ToQuotedNameTransformer;
 import com.gs.dmn.transformation.basic.BasicDMNToJavaTransformer;
 import org.apache.commons.lang3.exception.ExceptionUtils;
@@ -35,10 +37,7 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 import static org.omg.dmn.tck.runner.jdmn.JDMNTestContext.getInputParameters;
 
@@ -78,7 +77,12 @@ public class JDMNTckTest implements JDmnTckVendorTestSuite {
     public TestSuiteContext createContext() {
         JavaTimeDMNDialectDefinition dialectDefinition = new JavaTimeDMNDialectDefinition();
         DMNSerializer dmnSerializer = dialectDefinition.createDMNSerializer(LOGGER, getInputParameters());
-        DMNTransformer<TestCases> dmnTransformer = new ToQuotedNameTransformer(LOGGER);
+        DMNTransformer<TestCases> dmnTransformer = new CompositeDMNTransformer<>(
+                Arrays.asList(
+                        new ToQuotedNameTransformer(LOGGER),
+                        new TestCaseTransformer(LOGGER)
+                )
+        );
         return new JDMNTestContext<>(dmnSerializer, dmnTransformer, dialectDefinition);
     }
 
