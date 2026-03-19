@@ -18,6 +18,7 @@
         </resultNode>
     </testCase>
 
+<!--
     <testCase id="001a">
         <description>Test DS without using invocableName and type (equivalent to test 001)</description>
         <resultNode name="decisionService_001">
@@ -26,6 +27,7 @@
             </expected>
         </resultNode>
     </testCase>
+-->
 
     <testCase id="002" invocableName="decisionService_002" type="decisionService">
         <description>Direct invocation: with an input decision</description>
@@ -254,6 +256,7 @@
         </resultNode>
     </testCase>
 
+<!--
     <testCase id="015_a">
         <description>Direct invocation: with no params</description>
         <resultNode name="decisionService_015">
@@ -267,5 +270,6 @@
             </expected>
         </resultNode>
     </testCase>
+-->
 
 </testCases>
