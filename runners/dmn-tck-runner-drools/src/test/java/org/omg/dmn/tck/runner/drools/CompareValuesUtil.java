@@ -25,6 +25,8 @@ public final class CompareValuesUtil {
             return areEqualLists((List<Object>) object1, (List<Object>) object2);
         } else if (object1 instanceof Map && object2 instanceof Map) {
             return areEqualMaps((Map<Object, Object>) object1, (Map<Object, Object>) object2);
+        } else if (object1 instanceof String || object2 instanceof String) {
+            return object1.toString().equals(object2.toString());
         } else if (!object1.getClass().isAssignableFrom(object2.getClass())) {
             return false;
         } else {
