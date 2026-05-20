@@ -13,7 +13,7 @@
 
     <testCase id="001">
         <description>imported decision and inputData are also "exported"</description>
-        <inputNode name="input001">
+        <inputNode name="input001" namespace="http://www.montera.com.au/spec/DMN/1158-noname-imports-19-B">
             <value xsi:type="xsd:string">Foo</value>
         </inputNode>
         <resultNode name="decision001" type="decision" namespace="http://www.montera.com.au/spec/DMN/1158-noname-imports-19-B">
