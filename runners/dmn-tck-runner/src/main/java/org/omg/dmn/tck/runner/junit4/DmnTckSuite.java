@@ -43,7 +43,7 @@ public class DmnTckSuite
 
     public DmnTckSuite(Class<?> clazz)
             throws InitializationError {
-        super( clazz, Collections.<Runner>emptyList() );
+        super( clazz, Collections.emptyList() );
 
         runners = new ArrayList<Runner>();
 
@@ -64,17 +64,17 @@ public class DmnTckSuite
                 throw new InitializationError( e );
             }
             final String tcName = tcFolder.getName();
-            logger.info("Processing test case folder: {}", tcName);
+            logger.debug("Processing test case folder: {}", tcName);
 
             File[] tcfiles = tcFolder.listFiles( (dir, name) -> name.matches( ".*-test-\\d\\d.xml" ) );
             if (tcfiles == null || tcfiles.length == 0) {
-                logger.info("No test XML files found in {}", tcName);
+                logger.debug("No test XML files found in {}", tcName);
                 continue;
             }
-            logger.info("Found {} test files in {}", tcfiles.length, tcName);
+            logger.debug("Found {} test files in {}", tcfiles.length, tcName);
             Arrays.sort( tcfiles );
             for ( File tcfile : tcfiles ) {
-                logger.info("Adding runner for: {}", tcfile.getName());
+                logger.debug("Adding runner for: {}", tcfile.getName());
                 DmnTckRunner runner = new DmnTckRunner( ntsuite, tcfile );
                 runners.add( runner );
             }

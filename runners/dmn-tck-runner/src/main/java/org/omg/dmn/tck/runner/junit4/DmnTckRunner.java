@@ -93,9 +93,9 @@ public class DmnTckRunner
             this.descr = Description.createSuiteDescription( tcdname );
             
             // Log test configuration
-            logger.info("=== Test Configuration ===");
-            logger.info("Test XML file: {}", tcfile.getName());
-            logger.info("Primary DMN model: {}", tcd.getModelName());
+            logger.debug("=== Test Configuration ===");
+            logger.debug("Test XML file: {}", tcfile.getName());
+            logger.debug("Primary DMN model: {}", tcd.getModelName());
             if (!additionalModels.isEmpty()) {
                 logger.info("Additional DMN models ({}):", additionalModels.size());
                 for (URL url : additionalModels) {
