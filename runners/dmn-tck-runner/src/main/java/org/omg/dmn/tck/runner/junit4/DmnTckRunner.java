@@ -97,16 +97,16 @@ public class DmnTckRunner
             logger.debug("Test XML file: {}", tcfile.getName());
             logger.debug("Primary DMN model: {}", tcd.getModelName());
             if (!additionalModels.isEmpty()) {
-                logger.info("Additional DMN models ({}):", additionalModels.size());
+                logger.debug("Additional DMN models ({}):", additionalModels.size());
                 for (URL url : additionalModels) {
                     String fileName = new File(url.getPath()).getName();
-                    logger.info("  - {}", fileName);
+                    logger.debug("  - {}", fileName);
                 }
             } else {
-                logger.info("Additional DMN models: none");
+                logger.debug("Additional DMN models: none");
             }
-            logger.info("Test cases in file: {}", tcd.getTestCase().size());
-            logger.info("==========================");
+            logger.debug("Test cases in file: {}", tcd.getTestCase().size());
+            logger.debug("==========================");
             
             for ( TestCases.TestCase test : tcd.getTestCase() ) {
                 Description testDescr = Description.createTestDescription( tcdname, test.getId() );
