@@ -91,6 +91,23 @@ public class DmnTckRunner
             String tcdname = tcfile.getName();
             tcdname = tcdname.substring( 0, tcdname.lastIndexOf( '.' ) ).replaceAll( "\\.", "/" );
             this.descr = Description.createSuiteDescription( tcdname );
+            
+            // Log test configuration
+            logger.info("=== Test Configuration ===");
+            logger.info("Test XML file: {}", tcfile.getName());
+            logger.info("Primary DMN model: {}", tcd.getModelName());
+            if (!additionalModels.isEmpty()) {
+                logger.info("Additional DMN models ({}):", additionalModels.size());
+                for (URL url : additionalModels) {
+                    String fileName = new File(url.getPath()).getName();
+                    logger.info("  - {}", fileName);
+                }
+            } else {
+                logger.info("Additional DMN models: none");
+            }
+            logger.info("Test cases in file: {}", tcd.getTestCase().size());
+            logger.info("==========================");
+            
             for ( TestCases.TestCase test : tcd.getTestCase() ) {
                 Description testDescr = Description.createTestDescription( tcdname, test.getId() );
                 children.put( test, testDescr );
