@@ -257,7 +257,7 @@ public class TestCasesFiles {
                 // Check name
                 if (name != null && variableName != null) {
                     if (!name.equals(variableName)) {
-                        String problem = String.format("%s: DRGElement node %s name '%s' is the same with the variable name '%s'",
+                        String problem = String.format("%s: DRGElement node %s name '%s' must be the same with the variable name '%s'",
                                 dmnFile.getName(),
                                 elementName,
                                 name,
