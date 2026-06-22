@@ -66,7 +66,7 @@
     </testCase>
 
     <testCase id="007" invocableName="To Singleton List DS" type="decisionService">
-        <resultNode name="To Singleton List DS">
+        <resultNode name="Body 1">
             <expected>
                 <list>
                     <item>
@@ -78,7 +78,7 @@
     </testCase>
 
     <testCase id="008" invocableName="From Singleton List DS" type="decisionService">
-        <resultNode name="From Singleton List DS">
+        <resultNode name="Body 2">
             <expected>
                 <value xsi:type="xsd:date">2000-01-02</value>
             </expected>
@@ -86,7 +86,7 @@
     </testCase>
 
     <testCase id="009" invocableName="From Date to Date and Time DS" type="decisionService">
-        <resultNode name="From Date to Date and Time DS">
+        <resultNode name="Body 3">
             <expected>
                 <value xsi:type="xsd:dateTime">2000-01-02T00:00:00Z</value>
             </expected>
