@@ -19,14 +19,13 @@ import com.gs.dmn.feel.analysis.semantics.environment.StandardEnvironmentFactory
 import com.gs.dmn.feel.lib.StandardFEELLib;
 import com.gs.dmn.log.BuildLogger;
 import com.gs.dmn.log.NopBuildLogger;
+import com.gs.dmn.runtime.Pair;
 import com.gs.dmn.runtime.interpreter.DMNInterpreter;
 import com.gs.dmn.serialization.DMNSerializer;
 import com.gs.dmn.tck.TCKSerializer;
 import com.gs.dmn.tck.ast.TestCases;
 import com.gs.dmn.tck.serialization.xstream.XMLTCKSerializer;
-import com.gs.dmn.transformation.DMNTransformer;
-import com.gs.dmn.transformation.InputParameters;
-import com.gs.dmn.transformation.ToQuotedNameTransformer;
+import com.gs.dmn.transformation.*;
 import com.gs.dmn.transformation.basic.BasicDMNToJavaTransformer;
 import com.gs.dmn.transformation.lazy.NopLazyEvaluationDetector;
 import org.omg.dmn.tck.runner.junit4.TestSuiteContext;
@@ -100,12 +99,6 @@ public class JDMNTestContext<NUMBER, DATE, TIME, DATE_TIME, DURATION> implements
             pairs.add(definitions);
         }
         DMNModelRepository repository = new DMNModelRepository(pairs);
-        this.dmnTransformer.transform(repository);
-        if (DEBUG_TRANSFORMER) {
-            for (Map.Entry<URL, TDefinitions> entry: modelMap.entrySet()) {
-                save(entry.getKey(), entry.getValue());
-            }
-        }
         InputParameters inputParameters = getInputParameters();
         this.interpreter = dialectDefinition.createDMNInterpreter(repository, inputParameters);
         this.basicToJavaTransformer = dialectDefinition.createBasicTransformer(repository, new NopLazyEvaluationDetector(), inputParameters);
@@ -113,20 +106,24 @@ public class JDMNTestContext<NUMBER, DATE, TIME, DATE_TIME, DURATION> implements
 
     public void clean(TestCases testCases) {
         DMNModelRepository repository = basicToJavaTransformer.getDMNModelRepository();
-        this.dmnTransformer.transform(repository, Arrays.asList(testCases));
+        Pair<DMNModelRepository, List<TestCases>> pair = this.dmnTransformer.transform(repository, List.of(testCases));
+        repository = pair.getLeft();
+        testCases = pair.getRight().get(0);
         if (DEBUG_TRANSFORMER) {
+            for (TDefinitions definitions: repository.getAllDefinitions()) {
+                save(definitions);
+            }
             save(testCases);
         }
     }
 
     private static Map<Object, String> TEMP_FOLDER = new LinkedHashMap<>();
     static {
-        TEMP_FOLDER.put(ToQuotedNameTransformer.class, "target/to-quoted-name/");
+        TEMP_FOLDER.put(CompositeDMNTransformer.class, "target/composite/");
     }
 
-    private void save(URL modelURL, TDefinitions definitions) {
-        String[] parts = modelURL.toString().split("/");
-        String modelName = parts[parts.length-1];
+    private void save(TDefinitions definitions) {
+        String modelName = definitions.getName() + ".dmn";
         String tempFolder = TEMP_FOLDER.get(dmnTransformer.getClass());
         new File(tempFolder).mkdirs();
         File dmnFile = new File(tempFolder + modelName);
