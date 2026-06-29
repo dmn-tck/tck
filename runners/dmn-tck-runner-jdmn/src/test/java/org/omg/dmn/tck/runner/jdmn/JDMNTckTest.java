@@ -45,8 +45,8 @@ import static org.omg.dmn.tck.runner.jdmn.JDMNTestContext.getInputParameters;
 public class JDMNTckTest implements JDmnTckVendorTestSuite {
     private static final BuildLogger LOGGER = new Slf4jBuildLogger(LoggerFactory.getLogger(JDMNTckTest.class));
 
-    private static final File CL2_FOLDER = new File("TestCases/compliance-level-2");
-    private static final File CL3_FOLDER = new File("TestCases/compliance-level-3");
+    static final File CL2_FOLDER = new File("TestCases/compliance-level-2");
+    static final File CL3_FOLDER = new File("TestCases/compliance-level-3");
     private static final File NON_COMPLIANT_FOLDER = new File("TestCases/non-compliant");
     private static final boolean IGNORE_ERROR_FLAG = true;
 
@@ -77,12 +77,10 @@ public class JDMNTckTest implements JDmnTckVendorTestSuite {
     public TestSuiteContext createContext() {
         JavaTimeDMNDialectDefinition dialectDefinition = new JavaTimeDMNDialectDefinition();
         DMNSerializer dmnSerializer = dialectDefinition.createDMNSerializer(LOGGER, getInputParameters());
-        DMNTransformer<TestCases> dmnTransformer = new CompositeDMNTransformer<>(
-                Arrays.asList(
-                        new ToQuotedNameTransformer(LOGGER),
-                        new TestCaseTransformer(LOGGER)
-                )
-        );
+        DMNTransformer<TestCases> dmnTransformer = new CompositeDMNTransformer<>(List.of(
+                new ToQuotedNameTransformer(LOGGER),
+                new TestCaseTransformer(LOGGER)
+        ));
         return new JDMNTestContext<>(dmnSerializer, dmnTransformer, dialectDefinition);
     }
 

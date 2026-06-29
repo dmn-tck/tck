@@ -38,6 +38,10 @@
                     <groupId>org.omg.dmn</groupId>
                     <artifactId>tck-marshaller</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>org.freemarker</groupId>
+                    <artifactId>freemarker</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
 
@@ -65,7 +69,7 @@
         <dependency>
             <groupId>com.goldmansachs.jdmn</groupId>
             <artifactId>jdmn-core</artifactId>
-            <version>10.0.0</version>
+            <version>10.1.0</version>
         </dependency>
     </dependencies>
 
