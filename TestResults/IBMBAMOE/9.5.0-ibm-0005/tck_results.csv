@@ -1351,6 +1351,7 @@
 "compliance-level-3/0085-decision-services","0085-decision-services-test-01","012","SUCCESS",""
 "compliance-level-3/0085-decision-services","0085-decision-services-test-01","013","SUCCESS",""
 "compliance-level-3/0085-decision-services","0085-decision-services-test-01","014","SUCCESS",""
+"compliance-level-3/0085-decision-services","0085-decision-services-test-01","015","ERROR","FAILURE: 'decision_015_2' expected='15_2' but found='null'"
 "compliance-level-3/0086-import","0086-import-test-01","test_001","SUCCESS",""
 "compliance-level-3/0086-import","0086-import-test-01","test_002","SUCCESS",""
 "compliance-level-3/0087-chapter-11-example","0087-chapter-11-example-test-01","001","SUCCESS",""
