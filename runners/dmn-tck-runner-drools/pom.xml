@@ -84,7 +84,7 @@
         </file>
       </activation>
       <properties>
-        <drools.version>9.4.0-ibm-0006</drools.version>
+        <drools.version>9.5.0-ibm-0005</drools.version>
       </properties>
     </profile>
   </profiles>
