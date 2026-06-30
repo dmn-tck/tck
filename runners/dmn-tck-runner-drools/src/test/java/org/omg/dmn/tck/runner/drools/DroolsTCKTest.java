@@ -151,35 +151,28 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
             try {
                 String decisionName = testCaseResultNode.getName();
                 DMNResult dmnResult;
+                DMNType expectedType;
+                Object expectedResult;
                 if (testCase.getType() == TestCaseType.DECISION_SERVICE) {
                     dmnResult = testSuiteContext.getDMNRuntime().evaluateDecisionService(testSuiteContext.getDMNModel(), executionResultContext, testCase.getInvocableName());
+
+                    // For Decision Services, check if implicit type conversion applies
+                    DecisionServiceNode decisionService = getDecisionServiceByName(testSuiteContext, testCase.getInvocableName());
+                    DecisionNode decisionNode = testSuiteContext.getDMNModel().getDecisionByName(decisionName);
+
+                    expectedType = isTypeCompatibleForImplicitConversion(decisionService.getResultType(), decisionNode.getResultType())
+                            ? decisionService.getResultType() : decisionNode.getResultType();
+                    expectedResult = parseType(testCaseResultNode.getExpected(), expectedType);
                 } else {
                     dmnResult = testSuiteContext.getDMNRuntime().evaluateByName(testSuiteContext.getDMNModel(), executionResultContext, decisionName);
+                    expectedResult = parseValue(testCaseResultNode, testSuiteContext.getDMNModel().getDecisionByName(decisionName));
                 }
                 if (!dmnResult.getMessages().isEmpty()) {
                     LOGGER.info("Messages: \n-----\n{}\n-----\n", dmnResult.getMessages().stream().map(Object::toString).collect(Collectors.joining("\n")));
                 }
                 executionResultContext = dmnResult.getContext();
                 Object actualResult = executionResultContext.get(decisionName);
-                
-                // Get the type to use for parsing expected value
-                DMNType expectedType;
-                Object expectedResult;
-                
-                // For Decision Services, check if implicit type conversion applies
-                if (testCase.getType() == TestCaseType.DECISION_SERVICE) {
-                    DecisionServiceNode decisionService = testSuiteContext.getDMNModel().getDecisionServices().stream()
-                            .filter(ds -> ds.getName().equals(testCase.getInvocableName()))
-                            .findFirst().orElse(null);
-                    DecisionNode decisionNode = testSuiteContext.getDMNModel().getDecisionByName(decisionName);
 
-                    expectedType = isTypeCompatibleForImplicitConversion(decisionService.getResultType(), decisionNode.getResultType())
-                            ? decisionService.getResultType()
-                            : decisionNode.getResultType();
-                    expectedResult = parseType(testCaseResultNode.getExpected(), expectedType);
-                } else {
-                    expectedResult = parseValue(testCaseResultNode, testSuiteContext.getDMNModel().getDecisionByName(decisionName));
-                }
                 if (testCaseResultNode.isErrorResult()) {
                     for (DMNMessage msg : dmnResult.getMessages(DMNMessage.Severity.ERROR)) {
                         LOGGER.info("TEST CASE is error Result, message reported is to be expected: {}", msg);
@@ -427,6 +420,12 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
             throw new RuntimeException("Unable to recurse to determine BuiltInType");
         }
     }
+    private DecisionServiceNode getDecisionServiceByName(DroolsContext ctx, String name) {
+        return ctx.getDMNModel().getDecisionServices().stream()
+                .filter(ds -> ds.getName().equals(name))
+                .findFirst().orElse(null);
+    }
+
     /**
      * Check if Decision Service output type and Decision output type are compatible for implicit conversion.
      * Returns true if DS type is DATE_TIME and Decision type is DATE (implicit conversion scenario).
