@@ -173,4 +173,52 @@
             </expected>
         </resultNode>
     </testCase>
+    <testCase id="018">
+        <description>Assert on a valid string parameter</description>
+        <resultNode name="decision018" type="decision">
+            <expected>
+                <value xsi:type="xsd:decimal">1234</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="019">
+        <description>Assert on a valid string with trailing zeros</description>
+        <resultNode name="decision019" type="decision">
+            <expected>
+                <value xsi:type="xsd:decimal">123</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="020">
+        <description>Assert on a valid integer number</description>
+        <resultNode name="decision020" type="decision">
+            <expected>
+                <value xsi:type="xsd:decimal">11.11</value>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="021">
+        <description>Assert on an invalid string parameter</description>
+        <resultNode name="decision021" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="022">
+        <description>Assert on an invalid string parameter</description>
+        <resultNode name="decision022" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
+    <testCase id="023">
+        <description>Assert on passing a null value</description>
+        <resultNode name="decision023" type="decision" errorResult="true">
+            <expected>
+                <value xsi:nil="true"/>
+            </expected>
+        </resultNode>
+    </testCase>
 </testCases>
