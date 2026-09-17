@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<semantic:definitions xmlns:semantic="https://www.omg.org/spec/DMN/20230324/MODEL/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:trisodmn="http://www.trisotech.com/2016/triso/dmn" xmlns:feel="https://www.omg.org/spec/DMN/20230324/FEEL/" xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:drools="http://www.drools.org/kie/dmn/1.1" xmlns:openapi="https://openapis.org/omg/extension/1.0" xmlns:boxedext="https://www.trisotech.com/spec/DMN/20191111/EXT/" xmlns:i18n="http://www.omg.org/spec/BPMN/non-normative/extensions/i18n/1.0" xmlns:rss="http://purl.org/rss/2.0/" xmlns:trisofeed="http://trisotech.com/feed" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"                 xmlns:xsd="http://www.w3.org/2001/XMLSchema"  xmlns="http://www.trisotech.com/definitions/_a1c7d171-db26-41e6-b727-d30f8fd1c20b" id="_a1c7d171-db26-41e6-b727-d30f8fd1c20b" name="1158-feel-descendant-operator" namespace="http://www.trisotech.com/definitions/_a1c7d171-db26-41e6-b727-d30f8fd1c20b" exporter="Decision Modeler" exporterVersion="8.11.1-pre.89.0ab1a77" xml:lang="en" triso:translationLanguages="" triso:logoChoice="Default">
+    <semantic:extensionElements/>
+    <semantic:itemDefinition name="tCollection" label="tCollection" isCollection="true">
+        <semantic:typeRef>Any</semantic:typeRef>
+    </semantic:itemDefinition>
+    <semantic:decisionService id="_a1c7d171-db26-41e6-b727-d30f8fd1c20b_DS" name="Whole Model Decision Service" triso:dynamicDecisionService="true" triso:wholeModelService="true">
+        <semantic:variable name="Whole Model Decision Service" id="_a1c7d171-db26-41e6-b727-d30f8fd1c20b_DS_VAR" typeRef="Any"/>
+        <semantic:outputDecision href="#_3a68c99b-6642-470e-84a5-fc7c8ea8fb01"/>
+        <semantic:outputDecision href="#_43144753-6474-4e13-b439-fd2bee565544"/>
+        <semantic:outputDecision href="#_4f67bcfb-312d-4168-b3d1-f84a307faff1"/>
+        <semantic:outputDecision href="#_2ef55a80-fe5a-4b88-8e05-dfded46ce484"/>
+        <semantic:outputDecision href="#_620b58ec-3a62-4d9e-a3b9-b6e44bca8efa"/>
+        <semantic:outputDecision href="#_f05ed1d0-64be-4a2f-940a-61091d6784fd"/>
+        <semantic:outputDecision href="#_2cfcfd73-7c3d-418f-9ba1-ce3d0c5602f1"/>
+        <semantic:outputDecision href="#_017cbd98-55d3-4df5-a670-de8e3d57829d"/>
+        <semantic:outputDecision href="#_3283dd99-6e01-4179-97d5-61bdee8f0f16"/>
+        <semantic:outputDecision href="#_a0ca8989-5c00-48a8-b05c-37d7ff160bfa"/>
+        <semantic:outputDecision href="#_aa983758-79c6-4988-af00-6e0d4b6d0ca6"/>
+        <semantic:outputDecision href="#_4b4e5631-3ec9-45f3-91bb-27ff4cca2db2"/>
+        <semantic:outputDecision href="#_edf9560d-a3c7-465a-892f-b9b56021f651"/>
+        <semantic:outputDecision href="#_d2bfe52d-ae79-4ef8-93f7-aa5e9e6f1c6a"/>
+        <semantic:outputDecision href="#_0b8ec292-a216-4d66-81ce-8e6723138490"/>
+        <semantic:outputDecision href="#_5bcf8d45-599a-4ed7-88f0-cf6ad1062241"/>
+    </semantic:decisionService>
+    <semantic:decisionService id="_ea9bf262-374b-42fc-aaf5-240e8170ef6c_DS" name="Diagram Descendant Operator" triso:dynamicDecisionService="true">
+        <semantic:variable name="Diagram Descendant Operator" id="_ea9bf262-374b-42fc-aaf5-240e8170ef6c_DS_VAR" typeRef="Any"/>
+        <semantic:outputDecision href="#_3a68c99b-6642-470e-84a5-fc7c8ea8fb01"/>
+        <semantic:outputDecision href="#_43144753-6474-4e13-b439-fd2bee565544"/>
+        <semantic:outputDecision href="#_4f67bcfb-312d-4168-b3d1-f84a307faff1"/>
+        <semantic:outputDecision href="#_2ef55a80-fe5a-4b88-8e05-dfded46ce484"/>
+        <semantic:outputDecision href="#_620b58ec-3a62-4d9e-a3b9-b6e44bca8efa"/>
+        <semantic:outputDecision href="#_f05ed1d0-64be-4a2f-940a-61091d6784fd"/>
+        <semantic:outputDecision href="#_2cfcfd73-7c3d-418f-9ba1-ce3d0c5602f1"/>
+        <semantic:outputDecision href="#_017cbd98-55d3-4df5-a670-de8e3d57829d"/>
+        <semantic:outputDecision href="#_3283dd99-6e01-4179-97d5-61bdee8f0f16"/>
+        <semantic:outputDecision href="#_a0ca8989-5c00-48a8-b05c-37d7ff160bfa"/>
+        <semantic:outputDecision href="#_aa983758-79c6-4988-af00-6e0d4b6d0ca6"/>
+        <semantic:outputDecision href="#_4b4e5631-3ec9-45f3-91bb-27ff4cca2db2"/>
+        <semantic:outputDecision href="#_edf9560d-a3c7-465a-892f-b9b56021f651"/>
+        <semantic:outputDecision href="#_d2bfe52d-ae79-4ef8-93f7-aa5e9e6f1c6a"/>
+        <semantic:outputDecision href="#_0b8ec292-a216-4d66-81ce-8e6723138490"/>
+        <semantic:outputDecision href="#_5bcf8d45-599a-4ed7-88f0-cf6ad1062241"/>
+    </semantic:decisionService>
+    <semantic:decision id="_3a68c99b-6642-470e-84a5-fc7c8ea8fb01" name="Object not null and key not null" triso:readOnly="false" triso:useOutputTypeAsAnswer="false">
+        <semantic:variable name="Object not null and key not null" id="_9ded600c-8afc-4291-bca5-7c14a85cd972" typeRef="tCollection"/>
+        <semantic:literalExpression typeRef="tCollection" id="_24afb3fd-3aa8-4106-b1e6-762642b2f384" triso:expressionId="_e8dd80b6-07da-44e4-aed6-fb60c35bf604" triso:descriptionVisible="false">
+            <semantic:text>{"a":{"b":{"c":{"x":"v1"},"x":"v2"}}}...x</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision id="_43144753-6474-4e13-b439-fd2bee565544" name="Number and key not null" triso:readOnly="false">
+        <semantic:variable name="Number and key not null" id="_b9b6c3f3-7be5-4fe1-9405-333a11c11d74" typeRef="tCollection"/>
+        <semantic:literalExpression id="_dd85cb31-41b6-4f62-972f-24b3935301a2" triso:descriptionVisible="false" typeRef="tCollection" triso:expressionId="_2ed239cd-fdc9-4c14-a325-ee40b9c00e38">
+            <semantic:text>1...a</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision id="_4f67bcfb-312d-4168-b3d1-f84a307faff1" name="String and key not null" triso:readOnly="false">
+        <semantic:variable name="String and key not null" id="_8bd55ac6-8eb7-473c-8dc9-866ea4a45a5a" typeRef="tCollection"/>
+        <semantic:literalExpression id="_534c13d1-e26b-46ef-8a87-0e9fb4a2ca83" triso:descriptionVisible="false" typeRef="tCollection" triso:expressionId="_a5cb3e5b-9d6c-4d4a-bfc1-8f94e80846a6">
+            <semantic:text>"a"...a</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision id="_2ef55a80-fe5a-4b88-8e05-dfded46ce484" name="Array and key not null" triso:readOnly="false">
+        <semantic:variable name="Array and key not null" id="_ae53a5f2-79e0-4698-b4ec-be31379f9ba5" typeRef="tCollection"/>
+        <semantic:literalExpression id="_040aadc0-4271-4f0c-af55-65186fcd0a15" triso:descriptionVisible="false" typeRef="tCollection" triso:expressionId="_b85d2dc0-8079-4f6e-895b-7ebbbb836582">
+            <semantic:text>["a"]...a</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision id="_620b58ec-3a62-4d9e-a3b9-b6e44bca8efa" name="Null and key not null" triso:readOnly="false">
+        <semantic:variable name="Null and key not null" id="_3b22f57e-2c5b-4366-9a93-fad92428f201" typeRef="tCollection"/>
+        <semantic:literalExpression id="_e7cc427a-08d4-4c3a-ae75-0e774ba608fa" triso:descriptionVisible="false" typeRef="tCollection" triso:expressionId="_9daef31d-e15c-4675-b851-4c1a32b29637">
+            <semantic:text>null...x</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision id="_f05ed1d0-64be-4a2f-940a-61091d6784fd" name="Object and key not null with null found value" triso:readOnly="false">
+        <semantic:variable name="Object and key not null with null found value" id="_b105c608-8b79-4cf1-acc4-d0e99621895d" typeRef="tCollection"/>
+        <semantic:literalExpression id="_49189418-5cfd-4c3d-9baa-1dbe1103a6af" triso:descriptionVisible="false" typeRef="tCollection" triso:expressionId="_78c558ec-442a-46ea-a549-62bdb1596b0a">
+            <semantic:text>{"x": null}...x</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision id="_2cfcfd73-7c3d-418f-9ba1-ce3d0c5602f1" name="Object with null key" triso:readOnly="false">
+        <semantic:variable name="Object with null key" id="_96aad263-8e34-4dba-84e1-2a6e389ae34a" typeRef="tCollection"/>
+        <semantic:literalExpression id="_30aaa689-7f17-4bc1-984f-d644d2079a59" triso:descriptionVisible="false" typeRef="tCollection" triso:expressionId="_416ab057-02b8-4c21-b974-fc66888c166e">
+            <semantic:text>{"a": {"b": {"c": {"x": "v1"}, "x": "v2"}}}...null</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision id="_017cbd98-55d3-4df5-a670-de8e3d57829d" name="Object with existing key" triso:readOnly="false">
+        <semantic:variable name="Object with existing key" id="_796231c5-b499-45bf-8876-adb293dbb84c" typeRef="tCollection"/>
+        <semantic:literalExpression id="_88765b71-faa2-4c46-9010-6015fc0dc82d" triso:descriptionVisible="false" typeRef="tCollection" triso:expressionId="_3987a096-5d48-40e6-92af-ed88856582b9">
+            <semantic:text>{"a": {"b": {"c": {"x": "v1"}, "x": "v2"}}}...x</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision id="_3283dd99-6e01-4179-97d5-61bdee8f0f16" name="Object with existing space separated key" triso:readOnly="false">
+        <semantic:variable name="Object with existing space separated key" id="_c4247526-21b7-4fd9-810c-1a350232163f" typeRef="tCollection"/>
+        <semantic:literalExpression id="_fb0bf071-c786-4881-aa46-548d11a2c685" triso:descriptionVisible="false" typeRef="tCollection" triso:expressionId="_0138529c-b9fe-4a66-8c1b-848c6bcda226">
+            <semantic:text>{"a": {"b": {"c": {"x y": "v1"}, "x y": "v2"}}}...x y</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision id="_a0ca8989-5c00-48a8-b05c-37d7ff160bfa" name="Object with existing key and list of object as result" triso:readOnly="false">
+        <semantic:variable name="Object with existing key and list of object as result" id="_c2edbcd4-36d7-4523-aeff-f4ec1f67637c" typeRef="tCollection"/>
+        <semantic:literalExpression id="_23a8d906-8442-4f74-b811-881df35a5c25" triso:descriptionVisible="false" typeRef="tCollection" triso:expressionId="_d135ee02-c0de-4658-b546-a9564265b82a">
+            <semantic:text>{"a": {"b": {"c": {"x": "v1"}, "x": "v2"}}}...c</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision id="_aa983758-79c6-4988-af00-6e0d4b6d0ca6" name="Object with existing key and result filtering null values" triso:readOnly="false">
+        <semantic:variable name="Object with existing key and result filtering null values" id="_bea6fb0d-0a34-4210-aa13-4b9e5c4b835a" typeRef="tCollection"/>
+        <semantic:literalExpression id="_ec3f89b6-72f5-4642-9feb-cbbe5e9f8a7c" triso:descriptionVisible="false" typeRef="tCollection" triso:expressionId="_6350a03b-ff89-4b0f-a669-0ac3e5b16211">
+            <semantic:text>{"a": {"b": {"c": {"x": "v1", "b": {"x": null}}}}}...x</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision id="_4b4e5631-3ec9-45f3-91bb-27ff4cca2db2" name="Object with existing key and result containing an object with null value" triso:readOnly="false">
+        <semantic:variable name="Object with existing key and result containing an object with null value" id="_62d33ff0-910e-42fb-93fc-fd923ec1fedd" typeRef="tCollection"/>
+        <semantic:literalExpression id="_663fe9a2-1c8a-44ce-b7ac-e877b940246e" triso:descriptionVisible="false" typeRef="tCollection" triso:expressionId="_6f3eb291-9c38-4a76-b8ca-c238f7c00a1a">
+            <semantic:text>{"a": {"b": {"c": {"x": "v1", "b": {"c": null}}}}}...c</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision id="_edf9560d-a3c7-465a-892f-b9b56021f651" name="Object with mutliple filtering 1" triso:readOnly="false">
+        <semantic:variable name="Object with mutliple filtering 1" id="_0dead243-8328-4170-8093-3d78fd1904a8" typeRef="Any"/>
+        <semantic:literalExpression id="_dd2937f6-0549-4522-98bc-1d1666598d21" triso:descriptionVisible="false" typeRef="Any" triso:expressionId="_79385ccf-c7c2-4fe9-a118-dc45fc6cb23b">
+            <semantic:text>{"organization": {"party": {"partyRoleType": "appraiser", "name": "g"}}, "abc": {"party": {"partyRoleType": "funder", "name": "a"}}, "party": {"partyRoleType": "appraiser", "name": "c"}}...party[partyRoleType="appraiser"]...name[1]</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision id="_d2bfe52d-ae79-4ef8-93f7-aa5e9e6f1c6a" name="Object with multiple filtering 2" triso:readOnly="false">
+        <semantic:variable name="Object with multiple filtering 2" id="_9db4b149-10df-4fc8-a1b2-0fde179939b9" typeRef="Any"/>
+        <semantic:literalExpression id="_1071c533-b33c-413e-83a5-21646a63268e" triso:descriptionVisible="false" typeRef="Any" triso:expressionId="_b9427768-8b4d-41e3-99b5-035c8ae5d7e0">
+            <semantic:text>{"organization": {"party": {"partyRoleType": "appraiser", "name": "g"}}, "abc": {"party": {"partyRoleType": "funder", "name": "a"}}, "party": {"partyRoleType": "appraiser", "name": "c"}}...party[partyRoleType="appraiser"]...name</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision id="_0b8ec292-a216-4d66-81ce-8e6723138490" name="Object with multiple filtering 3" triso:readOnly="false">
+        <semantic:variable name="Object with multiple filtering 3" id="_d68e8428-73f9-4892-b0bc-9998eaf8c218" typeRef="Any"/>
+        <semantic:literalExpression id="_77837f33-6341-4e35-aee5-3189906b5d6e" triso:descriptionVisible="false" typeRef="Any" triso:expressionId="_909480b4-be30-4b15-a34a-a3bf47ce9869">
+            <semantic:text>{"organization": {"party": {"partyRoleType": "appraiser", "name": "g"}}, "abc": {"party": {"partyRoleType": "funder", "name": "a"}}, "party": {"partyRoleType": "appraiser", "name": "c"}}...party[partyRoleType="appraiser"]</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision id="_5bcf8d45-599a-4ed7-88f0-cf6ad1062241" name="Object with existing key 2" triso:readOnly="false">
+        <semantic:variable name="Object with existing key 2" id="_72287002-972b-45a9-b996-cde2c39ac8ab" typeRef="Any"/>
+        <semantic:literalExpression id="_8741e52a-dfc4-4a26-9bd7-58bcc4a31fbc" triso:descriptionVisible="false" typeRef="Any" triso:expressionId="_c0c3dd0c-2f04-42c4-8836-b515045a6ce3">
+            <semantic:text>{"organization": {"party": {"partyRoleType": "appraiser", "name": "g"}}, "abc": {"party": {"partyRoleType": "funder", "name": "a"}}, "party": {"partyRoleType": "appraiser", "name": "c"}}...party</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="_ea9bf262-374b-42fc-aaf5-240e8170ef6c" triso:modelElementRef="_5edb9218-48c9-474b-9316-cd0426ae0f7d" name="Descendant Operator">
+            <di:extension/>
+            <dmndi:Size height="1050" width="1485"/>
+            <dmndi:DMNShape id="_a085a39a-0fcb-49ad-86bb-429c78367313" dmnElementRef="_3a68c99b-6642-470e-84a5-fc7c8ea8fb01">
+                <dc:Bounds x="132.6818283258395" y="99.18182930877407" width="153" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_a1c7d171-db26-41e6-b727-d30f8fd1c20b_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_e439c1da-2762-4bbf-a10f-95cd9091a325" dmnElementRef="_43144753-6474-4e13-b439-fd2bee565544">
+                <dc:Bounds x="132.6818283258395" y="201" width="153" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_a1c7d171-db26-41e6-b727-d30f8fd1c20b_1" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_271cf6c2-2df3-42b7-bbe9-c5482abea437" dmnElementRef="_4f67bcfb-312d-4168-b3d1-f84a307faff1">
+                <dc:Bounds x="132.6818283258395" y="308" width="153" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_a1c7d171-db26-41e6-b727-d30f8fd1c20b_1" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_36b64cf0-bb23-4e3a-a00e-45eed2503d64" dmnElementRef="_2ef55a80-fe5a-4b88-8e05-dfded46ce484">
+                <dc:Bounds x="132.6818283258395" y="402" width="153" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_a1c7d171-db26-41e6-b727-d30f8fd1c20b_1" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_aa3c3c4e-7369-4c07-af4e-cab4aa76fc87" dmnElementRef="_620b58ec-3a62-4d9e-a3b9-b6e44bca8efa">
+                <dc:Bounds x="132.6818283258395" y="503" width="153" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_a1c7d171-db26-41e6-b727-d30f8fd1c20b_1" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_ee81fe75-515e-49a3-891d-c417d021c4ec" dmnElementRef="_f05ed1d0-64be-4a2f-940a-61091d6784fd">
+                <dc:Bounds x="132.6818283258395" y="601" width="153" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_a1c7d171-db26-41e6-b727-d30f8fd1c20b_1" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_b9c81381-d5c1-449f-84b8-9e533f4db36d" dmnElementRef="_2cfcfd73-7c3d-418f-9ba1-ce3d0c5602f1">
+                <dc:Bounds x="132.6818283258395" y="696" width="153" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_a1c7d171-db26-41e6-b727-d30f8fd1c20b_1" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_8d3e4ab8-2218-47c3-bd84-ccbbb1fe7bd5" dmnElementRef="_017cbd98-55d3-4df5-a670-de8e3d57829d">
+                <dc:Bounds x="132.6818283258395" y="788" width="153" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_a1c7d171-db26-41e6-b727-d30f8fd1c20b_1" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_1e280ea0-9c21-477a-a083-8e68e0672510" dmnElementRef="_3283dd99-6e01-4179-97d5-61bdee8f0f16">
+                <dc:Bounds x="330.5" y="99.18182930877407" width="153" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_a1c7d171-db26-41e6-b727-d30f8fd1c20b_1" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_2f3d4025-fb58-4692-be8e-e2190accfe28" dmnElementRef="_a0ca8989-5c00-48a8-b05c-37d7ff160bfa">
+                <dc:Bounds x="330.5" y="201" width="153" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_a1c7d171-db26-41e6-b727-d30f8fd1c20b_1" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_642fd670-c409-4fae-8035-19d5ce4f5045" dmnElementRef="_aa983758-79c6-4988-af00-6e0d4b6d0ca6">
+                <dc:Bounds x="330.5" y="308" width="153" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_a1c7d171-db26-41e6-b727-d30f8fd1c20b_1" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_73b9fa08-eb4d-4f1f-9606-c9cbc8ceaefd" dmnElementRef="_4b4e5631-3ec9-45f3-91bb-27ff4cca2db2">
+                <dc:Bounds x="330.5" y="402" width="153" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_a1c7d171-db26-41e6-b727-d30f8fd1c20b_1" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_83975107-d4c3-4b2a-b837-9ae7dabb326d" dmnElementRef="_edf9560d-a3c7-465a-892f-b9b56021f651">
+                <dc:Bounds x="330.5" y="503" width="153" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_a1c7d171-db26-41e6-b727-d30f8fd1c20b_1" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_70323702-899e-4d71-9670-5ac580e3e76d" dmnElementRef="_d2bfe52d-ae79-4ef8-93f7-aa5e9e6f1c6a">
+                <dc:Bounds x="330.5" y="601" width="153" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_a1c7d171-db26-41e6-b727-d30f8fd1c20b_1" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_4a43a058-55c3-4254-915b-85b70c75e510" dmnElementRef="_0b8ec292-a216-4d66-81ce-8e6723138490">
+                <dc:Bounds x="330.5" y="696" width="153" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_a1c7d171-db26-41e6-b727-d30f8fd1c20b_1" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_662acd17-1359-45cc-bbac-10f7fbc066e1" dmnElementRef="_5bcf8d45-599a-4ed7-88f0-cf6ad1062241">
+                <dc:Bounds x="330.5" y="788" width="153" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_a1c7d171-db26-41e6-b727-d30f8fd1c20b_1" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+        </dmndi:DMNDiagram>
+        <dmndi:DMNStyle id="LS_a1c7d171-db26-41e6-b727-d30f8fd1c20b_0" fontFamily="arial,helvetica,sans-serif" fontSize="11" fontBold="false" fontItalic="false" fontUnderline="false" fontStrikeThrough="false"/>
+        <dmndi:DMNStyle id="LS_a1c7d171-db26-41e6-b727-d30f8fd1c20b_1" fontFamily="arial,helvetica,sans-serif" fontSize="11" fontBold="false" fontItalic="false" fontUnderline="false" fontStrikeThrough="false"/>
+    </dmndi:DMNDI>
+</semantic:definitions>
