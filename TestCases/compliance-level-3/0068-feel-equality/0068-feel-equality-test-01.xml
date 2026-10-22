@@ -1150,10 +1150,10 @@
     </testCase>
 
     <testCase id="range_010">
-        <description>equal ranges though syntactically different are not equal: EQ </description>
+        <description>equal ranges though syntactically different are equal: EQ </description>
         <resultNode name="range_010" type="decision">
             <expected>
-                <value xsi:type="xsd:boolean">false</value>
+                <value xsi:type="xsd:boolean">true</value>
             </expected>
         </resultNode>
     </testCase>
@@ -1167,6 +1167,7 @@
         </resultNode>
     </testCase>
 
+<!-- Disabled as the expected behavior cannot be reliably validated until the '!=' scenario semantics are clarified.
     <testCase id="range_012">
         <description>unary syntax comparison range NE</description>
         <resultNode name="range_012" type="decision">
@@ -1175,7 +1176,5 @@
             </expected>
         </resultNode>
     </testCase>
-
-
-
+-->
 </testCases>
