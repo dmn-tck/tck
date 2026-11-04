@@ -1,4 +1,3 @@
-"Test Folder","Test Suite","Test Case","Result","Comment"
 TestCases/compliance-level-2/0001-input-data-string,0001-input-data-string-test-01,001,SUCCESS,""
 TestCases/compliance-level-2/0002-input-data-number,0002-input-data-number-test-01,001,SUCCESS,""
 TestCases/compliance-level-2/0003-input-data-string-allowed-values,0003-input-data-string-allowed-values-test-01,001,SUCCESS,""
