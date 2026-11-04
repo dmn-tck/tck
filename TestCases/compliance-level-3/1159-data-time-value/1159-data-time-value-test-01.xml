@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Contributed to DMN TCK by StrayAlien -->
+<testCases xmlns="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=""  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <modelName>1159-data-time-value.dmn</modelName>
+    <labels>
+        <label>Compliance level 3</label>
+    </labels>
+
+    <testCase id="date_001">
+        <description>no param</description>
+        <resultNode name="date_001" type="decision">
+            <expected>
+                <value xsi:type="xsd:number">1470096000</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="time_001">
+        <description>no param</description>
+        <resultNode name="time_001" type="decision">
+            <expected>
+                <value xsi:type="xsd:number">3661</value>
+            </expected>
+        </resultNode>
+    </testCase>
+	
+	<testCase id="time_002">
+        <description>no param</description>
+        <resultNode name="time_002" type="decision">
+            <expected>
+                <value xsi:type="xsd:number">0</value>
+            </expected>
+        </resultNode>
+    </testCase>
+	
+	<testCase id="time_003">
+        <description>no param</description>
+        <resultNode name="time_003" type="decision">
+            <expected>
+                <value xsi:type="xsd:number">86399</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="date_time_001">
+        <description>no param</description>
+        <resultNode name="date_time_001" type="decision">
+            <expected>
+                <value xsi:type="xsd:number">1469789303</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+    <testCase id="days_time_duration_001">
+        <description>no param</description>
+        <resultNode name="days_time_duration_001" type="decision">
+            <expected>
+                <value xsi:type="xsd:number">90000</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+	<testCase id="years_months_duration_001">
+        <description>no param</description>
+        <resultNode name="years_months_duration_001" type="decision">
+            <expected>
+                <value xsi:type="xsd:number">13</value>
+            </expected>
+        </resultNode>
+    </testCase>
+</testCases>
