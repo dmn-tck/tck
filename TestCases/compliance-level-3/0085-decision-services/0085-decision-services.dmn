@@ -7,6 +7,10 @@
              xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <description>Decision Services</description>
 
+    <import name="modelA" namespace="http://www.montera.com.au/spec/DMN/model-a" importType="https://www.omg.org/spec/DMN/20230324/MODEL/"/>
+    <import name="" namespace="http://www.montera.com.au/spec/DMN/model-b" importType="https://www.omg.org/spec/DMN/20230324/MODEL/"/>
+    <import name="modelC" namespace="http://www.montera.com.au/spec/DMN/model-c" importType="https://www.omg.org/spec/DMN/20230324/MODEL/"/>
+
     <!-- Direct invocation: no params -->
 
     <decisionService name="decisionService_001" id="_decisionService_001">
@@ -611,6 +615,35 @@
         <variable name="decision_015_2"/>
         <literalExpression>
             <text>"15_2"</text>
+        </literalExpression>
+    </decision>
+
+    <!-- DS with multiple output decisions: imported with params -->
+    <!-- 10.4 Execution Semantics of Decision Services -->
+    <decisionService name="decisionService_016" id="_decisionService_016">
+        <variable name="decisionService_016"/>
+        <outputDecision href="http://www.montera.com.au/spec/DMN/model-a#_decision_a"/>
+        <outputDecision href="http://www.montera.com.au/spec/DMN/model-b#_decision_a"/>
+        <inputData href="http://www.montera.com.au/spec/DMN/model-a#_input_a"/>
+        <inputData href="http://www.montera.com.au/spec/DMN/model-b#_input_a"/>
+        <inputData href="http://www.montera.com.au/spec/DMN/model-c#_input_c"/>
+    </decisionService>
+
+    <decisionService name="decisionService_017" id="_decisionService_017">
+        <variable name="decisionService_017"/>
+        <outputDecision href="http://www.montera.com.au/spec/DMN/model-a#_decision_a"/>
+        <outputDecision href="#_decision_017"/>
+        <inputDecision href="http://www.montera.com.au/spec/DMN/model-b#_decision_a"/>
+        <inputData href="http://www.montera.com.au/spec/DMN/model-a#_input_a"/>
+    </decisionService>
+
+    <decision name="decision_017" id="_decision_017">
+        <variable name="decision_017" typeRef="number"/>
+        <informationRequirement>
+            <requiredDecision href="http://www.montera.com.au/spec/DMN/model-b#_decision_a"/>
+        </informationRequirement>
+        <literalExpression>
+            <text>DecisionA</text>
         </literalExpression>
     </decision>
 

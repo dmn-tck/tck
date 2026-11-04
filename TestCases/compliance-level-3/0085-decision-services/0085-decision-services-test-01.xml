@@ -272,4 +272,90 @@
     </testCase>
 -->
 
+    <!-- DS with multiple output decisions: with params and imported -->
+    <testCase id="016" invocableName="decisionService_016" type="decisionService">
+        <inputNode name="InputA" namespace="http://www.montera.com.au/spec/DMN/model-a">
+            <value xsi:type="xsd:decimal">3</value>
+        </inputNode>
+        <inputNode name="InputA" namespace="http://www.montera.com.au/spec/DMN/model-b">
+            <value xsi:type="xsd:decimal">4</value>
+        </inputNode>
+        <inputNode name="InputC" namespace="http://www.montera.com.au/spec/DMN/model-c">
+            <value xsi:type="xsd:decimal">5</value>
+        </inputNode>
+        <resultNode name="modelA.DecisionA">
+            <expected>
+                <value xsi:type="xsd:decimal">6</value>
+            </expected>
+        </resultNode>
+        <resultNode name="DecisionA">
+            <expected>
+                <value xsi:type="xsd:decimal">13</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+<!--
+    <testCase id="016_a">
+        <inputNode name="InputA" namespace="http://www.montera.com.au/spec/DMN/model-a">
+            <value xsi:type="xsd:decimal">3</value>
+        </inputNode>
+        <inputNode name="InputA" namespace="http://www.montera.com.au/spec/DMN/model-b">
+            <value xsi:type="xsd:decimal">4</value>
+        </inputNode>
+        <inputNode name="InputC" namespace="http://www.montera.com.au/spec/DMN/model-c">
+            <value xsi:type="xsd:decimal">5</value>
+        </inputNode>
+        <resultNode name="decisionService_016">
+            <expected>
+                <component name="modelA.DecisionA">
+                    <value xsi:type="xsd:decimal">6</value>
+                </component>
+                <component name="DecisionA">
+                    <value xsi:type="xsd:decimal">13</value>
+                </component>
+            </expected>
+        </resultNode>
+    </testCase>
+-->
+
+    <testCase id="017" invocableName="decisionService_017" type="decisionService">
+        <inputNode name="InputA" namespace="http://www.montera.com.au/spec/DMN/model-a">
+            <value xsi:type="xsd:decimal">3</value>
+        </inputNode>
+        <inputNode name="DecisionA" namespace="http://www.montera.com.au/spec/DMN/model-b">
+            <value xsi:type="xsd:decimal">23</value>
+        </inputNode>
+        <resultNode name="modelA.DecisionA">
+            <expected>
+                <value xsi:type="xsd:decimal">6</value>
+            </expected>
+        </resultNode>
+        <resultNode name="decision_017">
+            <expected>
+                <value xsi:type="xsd:decimal">23</value>
+            </expected>
+        </resultNode>
+    </testCase>
+
+<!--
+    <testCase id="017_a">
+        <inputNode name="InputA" namespace="http://www.montera.com.au/spec/DMN/model-a">
+            <value xsi:type="xsd:decimal">3</value>
+        </inputNode>
+        <inputNode name="DecisionA" namespace="http://www.montera.com.au/spec/DMN/model-b">
+            <value xsi:type="xsd:decimal">23</value>
+        </inputNode>
+        <resultNode name="decisionService_017">
+            <expected>
+                <component name="modelA.DecisionA">
+                    <value xsi:type="xsd:decimal">6</value>
+                </component>
+                <component name="decision_017">
+                    <value xsi:type="xsd:decimal">23</value>
+                </component>
+            </expected>
+        </resultNode>
+    </testCase>
+-->
 </testCases>
