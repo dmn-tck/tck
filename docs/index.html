@@ -60,7 +60,7 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    3391, 0, 0, 0
+                    3407, 0, 0, 0
                 ]
             }
         ]
@@ -85,7 +85,7 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    3390, 0, 0, 1
+                    3391, 0, 0, 16
                 ]
             }
         ]
@@ -110,7 +110,7 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    3388, 3, 0, 0
+                    3388, 3, 0, 16
                 ]
             }
         ]
@@ -135,7 +135,7 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    3388, 3, 0, 0
+                    3388, 3, 0, 16
                 ]
             }
         ]
@@ -160,7 +160,7 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    3374, 0, 16, 1
+                    3381, 10, 0, 16
                 ]
             }
         ]
@@ -185,7 +185,7 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    3367, 23, 0, 1
+                    3374, 0, 16, 17
                 ]
             }
         ]
@@ -210,7 +210,7 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    2850, 0, 385, 156
+                    3367, 23, 0, 17
                 ]
             }
         ]
@@ -235,7 +235,7 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    2741, 0, 494, 156
+                    2850, 0, 385, 172
                 ]
             }
         ]
@@ -260,7 +260,7 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    0, 0, 0, 3391
+                    2741, 0, 494, 172
                 ]
             }
         ]
@@ -285,7 +285,7 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    0, 0, 0, 3391
+                    0, 0, 0, 3407
                 ]
             }
         ]
@@ -310,7 +310,32 @@
                 ],
                 borderWidth: 1,
                 data: [
-                    0, 0, 0, 3391
+                    0, 0, 0, 3407
+                ]
+            }
+        ]
+    };
+        var c_data11 = {
+        labels: [
+            "Succeeded", "Failed", "Not Supported", "Missing"
+        ],
+        datasets: [
+            {
+                backgroundColor: [
+                    color(window.chartColors.green).alpha(0.5).rgbString(),
+                    color(window.chartColors.red).alpha(0.5).rgbString(),
+                    color(window.chartColors.yellow).alpha(0.5).rgbString(),
+                    color(window.chartColors.purple).alpha(0.5).rgbString()
+                ],
+                borderColor: [
+                    window.chartColors.grey,
+                    window.chartColors.grey,
+                    window.chartColors.grey,
+                    window.chartColors.grey
+                ],
+                borderWidth: 1,
+                data: [
+                    0, 0, 0, 3407
                 ]
             }
         ]
@@ -482,6 +507,21 @@
                 }
             }
         });
+        var ctx = document.getElementById("chart11").getContext("2d");
+        window.chart11 = new Chart(ctx, {
+            type: 'doughnut',
+            data: c_data11,
+            options: {
+                responsive: true,
+                legend: {
+                    position: 'right',
+                },
+                title: {
+                    display: true,
+                    text: 'Submitted results'
+                }
+            }
+        });
     };
 
 </script>
@@ -531,6 +571,78 @@
 
             <div class="list-group list-view-pf list-view-pf-view">
 
+                <!-- Trisotech Digital Enterprise Suite 13.2.0 -->
+                <div class="list-group-item">
+                    <div class="list-group-item-header">
+                        <div class="list-view-pf-actions">
+                            <a href="overview_Trisotech Digital Enterprise Suite_13.2.0.html" class="btn btn-default">Overview</a>
+                            <a href="detail_Trisotech Digital Enterprise Suite_13.2.0.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
+                            <!--div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight0" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="true">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight0">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div-->
+                        </div>
+                        <div class="list-view-pf-main-info">
+                            <div class="list-view-pf-left">
+                                <span class="fa fa-university list-view-pf-icon-sm"></span>
+                            </div>
+                            <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                    <div class="list-group-item-heading">
+                                        Trisotech
+                                    </div>
+                                    <div class="list-group-item-text">
+                                        Trisotech Digital Enterprise Suite 13.2.0
+                                    </div>
+                                </div>
+                                <div class="list-view-pf-additional-info">
+                                    <div class="list-view-pf-additional-info-item">
+                                        Succeeded:&nbsp;<b>3407/3407</b>
+                                    </div>
+                                    <div class="list-view-pf-additional-info-item">
+                                        Last Submission:&nbsp;<b>2026-11-03</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-group-item-container container-fluid hidden">
+                        <div class="close">
+                            <span class="pficon pficon-close"></span>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-2">
+                                <canvas id="chart0"></canvas>
+                            </div>
+
+                            <div class="col-md-10">
+                                <dl class="dl-horizontal">
+                                    <dt>Last Submission: </dt><dd>2026-11-03</dd>
+                                    <dt>Tests: </dt><dd>3407</dd>
+                                    <dt>Labels: </dt><dd>79</dd>
+                                    <dt>Succeeded: </dt><dd>3407</dd>
+                                    <dt>Failed: </dt><dd>0</dd>
+                                    <dt>Not Supported: </dt><dd>0</dd>
+                                    <dt>Missing: </dt><dd>0</dd>
+                                    <dt>Info: </dt><dd>A full compliance level 3 DMN authoring and execution environment</dd>
+                                    <dt>Instructions: </dt><dd>
+                                                                    to execute the tests and reproduce the results, please follow the vendor provided instructions <a href="https://github.com/dmn-tck/tck/blob/master/runners/dmn-tck-runner-trisotech/README.md" target="_blank">at this link <span class="fa fa-external-link"></span></a>.
+                                                           </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- jDMN 10.0.0 -->
                 <div class="list-group-item">
                     <div class="list-group-item-header">
@@ -538,11 +650,11 @@
                             <a href="overview_jDMN_10.0.0.html" class="btn btn-default">Overview</a>
                             <a href="detail_jDMN_10.0.0.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
                             <!--div class="dropdown pull-right dropdown-kebab-pf">
-                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight0" data-toggle="dropdown" aria-haspopup="true"
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight1" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true">
                                     <span class="fa fa-ellipsis-v"></span>
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight0">
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight1">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li><a href="#">Something else here</a></li>
@@ -566,82 +678,10 @@
                                 </div>
                                 <div class="list-view-pf-additional-info">
                                     <div class="list-view-pf-additional-info-item">
-                                        Succeeded:&nbsp;<b>3391/3391</b>
+                                        Succeeded:&nbsp;<b>3391/3407</b>
                                     </div>
                                     <div class="list-view-pf-additional-info-item">
                                         Last Submission:&nbsp;<b>2026-04-27</b>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list-group-item-container container-fluid hidden">
-                        <div class="close">
-                            <span class="pficon pficon-close"></span>
-                        </div>
-                        <div class="row">
-
-                            <div class="col-md-2">
-                                <canvas id="chart0"></canvas>
-                            </div>
-
-                            <div class="col-md-10">
-                                <dl class="dl-horizontal">
-                                    <dt>Last Submission: </dt><dd>2026-04-27</dd>
-                                    <dt>Tests: </dt><dd>3391</dd>
-                                    <dt>Labels: </dt><dd>79</dd>
-                                    <dt>Succeeded: </dt><dd>3391</dd>
-                                    <dt>Failed: </dt><dd>0</dd>
-                                    <dt>Not Supported: </dt><dd>0</dd>
-                                    <dt>Missing: </dt><dd>0</dd>
-                                    <dt>Info: </dt><dd>jDMN provides a runtime compliance level 3 engine (interpreter and translator to Java)</dd>
-                                    <dt>Instructions: </dt><dd>
-                                                                    to execute the tests and reproduce the results, please follow the vendor provided instructions <a href="https://github.com/dmn-tck/tck/tree/master/runners/dmn-tck-runner-jdmn/README.md" target="_blank">at this link <span class="fa fa-external-link"></span></a>.
-                                                           </dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Trisotech Digital Enterprise Suite 12.12.4 -->
-                <div class="list-group-item">
-                    <div class="list-group-item-header">
-                        <div class="list-view-pf-actions">
-                            <a href="overview_Trisotech Digital Enterprise Suite_12.12.4.html" class="btn btn-default">Overview</a>
-                            <a href="detail_Trisotech Digital Enterprise Suite_12.12.4.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
-                            <!--div class="dropdown pull-right dropdown-kebab-pf">
-                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight1" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="true">
-                                    <span class="fa fa-ellipsis-v"></span>
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight1">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#">Separated link</a></li>
-                                </ul>
-                            </div-->
-                        </div>
-                        <div class="list-view-pf-main-info">
-                            <div class="list-view-pf-left">
-                                <span class="fa fa-university list-view-pf-icon-sm"></span>
-                            </div>
-                            <div class="list-view-pf-body">
-                                <div class="list-view-pf-description">
-                                    <div class="list-group-item-heading">
-                                        Trisotech
-                                    </div>
-                                    <div class="list-group-item-text">
-                                        Trisotech Digital Enterprise Suite 12.12.4
-                                    </div>
-                                </div>
-                                <div class="list-view-pf-additional-info">
-                                    <div class="list-view-pf-additional-info-item">
-                                        Succeeded:&nbsp;<b>3390/3391</b>
-                                    </div>
-                                    <div class="list-view-pf-additional-info-item">
-                                        Last Submission:&nbsp;<b>2026-01-29</b>
                                     </div>
                                 </div>
                             </div>
@@ -659,16 +699,16 @@
 
                             <div class="col-md-10">
                                 <dl class="dl-horizontal">
-                                    <dt>Last Submission: </dt><dd>2026-01-29</dd>
-                                    <dt>Tests: </dt><dd>3391</dd>
+                                    <dt>Last Submission: </dt><dd>2026-04-27</dd>
+                                    <dt>Tests: </dt><dd>3407</dd>
                                     <dt>Labels: </dt><dd>79</dd>
-                                    <dt>Succeeded: </dt><dd>3390</dd>
+                                    <dt>Succeeded: </dt><dd>3391</dd>
                                     <dt>Failed: </dt><dd>0</dd>
                                     <dt>Not Supported: </dt><dd>0</dd>
-                                    <dt>Missing: </dt><dd>1</dd>
-                                    <dt>Info: </dt><dd>A full compliance level 3 DMN authoring and execution environment</dd>
+                                    <dt>Missing: </dt><dd>16</dd>
+                                    <dt>Info: </dt><dd>jDMN provides a runtime compliance level 3 engine (interpreter and translator to Java)</dd>
                                     <dt>Instructions: </dt><dd>
-                                                                    to execute the tests and reproduce the results, please follow the vendor provided instructions <a href="https://github.com/dmn-tck/tck/blob/master/runners/dmn-tck-runner-trisotech/README.md" target="_blank">at this link <span class="fa fa-external-link"></span></a>.
+                                                                    to execute the tests and reproduce the results, please follow the vendor provided instructions <a href="https://github.com/dmn-tck/tck/tree/master/runners/dmn-tck-runner-jdmn/README.md" target="_blank">at this link <span class="fa fa-external-link"></span></a>.
                                                            </dd>
                                 </dl>
                             </div>
@@ -710,7 +750,7 @@
                                 </div>
                                 <div class="list-view-pf-additional-info">
                                     <div class="list-view-pf-additional-info-item">
-                                        Succeeded:&nbsp;<b>3388/3391</b>
+                                        Succeeded:&nbsp;<b>3388/3407</b>
                                     </div>
                                     <div class="list-view-pf-additional-info-item">
                                         Last Submission:&nbsp;<b>2026-06-30</b>
@@ -732,12 +772,12 @@
                             <div class="col-md-10">
                                 <dl class="dl-horizontal">
                                     <dt>Last Submission: </dt><dd>2026-06-30</dd>
-                                    <dt>Tests: </dt><dd>3391</dd>
+                                    <dt>Tests: </dt><dd>3407</dd>
                                     <dt>Labels: </dt><dd>79</dd>
                                     <dt>Succeeded: </dt><dd>3388</dd>
                                     <dt>Failed: </dt><dd>3</dd>
                                     <dt>Not Supported: </dt><dd>0</dd>
-                                    <dt>Missing: </dt><dd>0</dd>
+                                    <dt>Missing: </dt><dd>16</dd>
                                     <dt>Info: </dt><dd>IBM BAMOE provides full compliance level 3 authoring and runtime execution.</dd>
                                     <dt>Instructions: </dt><dd>
                                                                     to execute the tests and reproduce the results, please follow the vendor provided instructions <a href="https://github.com/dmn-tck/tck/tree/master/runners/dmn-tck-runner-drools/README.md" target="_blank">at this link <span class="fa fa-external-link"></span></a>.
@@ -782,7 +822,7 @@
                                 </div>
                                 <div class="list-view-pf-additional-info">
                                     <div class="list-view-pf-additional-info-item">
-                                        Succeeded:&nbsp;<b>3388/3391</b>
+                                        Succeeded:&nbsp;<b>3388/3407</b>
                                     </div>
                                     <div class="list-view-pf-additional-info-item">
                                         Last Submission:&nbsp;<b>2026-04-27</b>
@@ -804,15 +844,87 @@
                             <div class="col-md-10">
                                 <dl class="dl-horizontal">
                                     <dt>Last Submission: </dt><dd>2026-04-27</dd>
-                                    <dt>Tests: </dt><dd>3391</dd>
+                                    <dt>Tests: </dt><dd>3407</dd>
                                     <dt>Labels: </dt><dd>79</dd>
                                     <dt>Succeeded: </dt><dd>3388</dd>
                                     <dt>Failed: </dt><dd>3</dd>
                                     <dt>Not Supported: </dt><dd>0</dd>
-                                    <dt>Missing: </dt><dd>0</dd>
+                                    <dt>Missing: </dt><dd>16</dd>
                                     <dt>Info: </dt><dd>Apache KIE (includes Drools) provides full compliance level 3 authoring and runtime execution.</dd>
                                     <dt>Instructions: </dt><dd>
                                                                     to execute the tests and reproduce the results, please follow the vendor provided instructions <a href="https://github.com/dmn-tck/tck/tree/master/runners/dmn-tck-runner-drools/README.md" target="_blank">at this link <span class="fa fa-external-link"></span></a>.
+                                                           </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- openwerk/dmn 1.0.0 -->
+                <div class="list-group-item">
+                    <div class="list-group-item-header">
+                        <div class="list-view-pf-actions">
+                            <a href="overview_openwerk/dmn_1.0.0.html" class="btn btn-default">Overview</a>
+                            <a href="detail_openwerk/dmn_1.0.0.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
+                            <!--div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight4" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="true">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight4">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div-->
+                        </div>
+                        <div class="list-view-pf-main-info">
+                            <div class="list-view-pf-left">
+                                <span class="fa fa-university list-view-pf-icon-sm"></span>
+                            </div>
+                            <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                    <div class="list-group-item-heading">
+                                        OpenWerk
+                                    </div>
+                                    <div class="list-group-item-text">
+                                        openwerk/dmn 1.0.0
+                                    </div>
+                                </div>
+                                <div class="list-view-pf-additional-info">
+                                    <div class="list-view-pf-additional-info-item">
+                                        Succeeded:&nbsp;<b>3381/3407</b>
+                                    </div>
+                                    <div class="list-view-pf-additional-info-item">
+                                        Last Submission:&nbsp;<b>2026-07-21</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-group-item-container container-fluid hidden">
+                        <div class="close">
+                            <span class="pficon pficon-close"></span>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-2">
+                                <canvas id="chart4"></canvas>
+                            </div>
+
+                            <div class="col-md-10">
+                                <dl class="dl-horizontal">
+                                    <dt>Last Submission: </dt><dd>2026-07-21</dd>
+                                    <dt>Tests: </dt><dd>3407</dd>
+                                    <dt>Labels: </dt><dd>79</dd>
+                                    <dt>Succeeded: </dt><dd>3381</dd>
+                                    <dt>Failed: </dt><dd>10</dd>
+                                    <dt>Not Supported: </dt><dd>0</dd>
+                                    <dt>Missing: </dt><dd>16</dd>
+                                    <dt>Info: </dt><dd>Pure PHP framework-agnostic DMN decision engine.</dd>
+                                    <dt>Instructions: </dt><dd>
+                                                                    to execute the tests and reproduce the results, please follow the vendor provided instructions <a href="https://github.com/OpenWerk/dmn#conformance-check-it-yourself" target="_blank">at this link <span class="fa fa-external-link"></span></a>.
                                                            </dd>
                                 </dl>
                             </div>
@@ -826,11 +938,11 @@
                             <a href="overview_ÐecisionToolkit_0.3.0.html" class="btn btn-default">Overview</a>
                             <a href="detail_ÐecisionToolkit_0.3.0.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
                             <!--div class="dropdown pull-right dropdown-kebab-pf">
-                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight4" data-toggle="dropdown" aria-haspopup="true"
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight5" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true">
                                     <span class="fa fa-ellipsis-v"></span>
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight4">
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight5">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li><a href="#">Something else here</a></li>
@@ -854,7 +966,7 @@
                                 </div>
                                 <div class="list-view-pf-additional-info">
                                     <div class="list-view-pf-additional-info-item">
-                                        Succeeded:&nbsp;<b>3374/3391</b>
+                                        Succeeded:&nbsp;<b>3374/3407</b>
                                     </div>
                                     <div class="list-view-pf-additional-info-item">
                                         Last Submission:&nbsp;<b>2026-04-29</b>
@@ -870,18 +982,18 @@
                         <div class="row">
 
                             <div class="col-md-2">
-                                <canvas id="chart4"></canvas>
+                                <canvas id="chart5"></canvas>
                             </div>
 
                             <div class="col-md-10">
                                 <dl class="dl-horizontal">
                                     <dt>Last Submission: </dt><dd>2026-04-29</dd>
-                                    <dt>Tests: </dt><dd>3391</dd>
+                                    <dt>Tests: </dt><dd>3407</dd>
                                     <dt>Labels: </dt><dd>79</dd>
                                     <dt>Succeeded: </dt><dd>3374</dd>
                                     <dt>Failed: </dt><dd>0</dd>
                                     <dt>Not Supported: </dt><dd>16</dd>
-                                    <dt>Missing: </dt><dd>1</dd>
+                                    <dt>Missing: </dt><dd>17</dd>
                                     <dt>Info: </dt><dd>Open source DMN runtime implemented in Rust</dd>
                                     <dt>Instructions: </dt><dd>
                                                                     to execute the tests and reproduce the results, please follow the vendor provided instructions <a href="https://github.com/DecisionToolkit/dsntk-test-runner" target="_blank">at this link <span class="fa fa-external-link"></span></a>.
@@ -898,11 +1010,11 @@
                             <a href="overview_QuantumDMN Engine_1.0.0.html" class="btn btn-default">Overview</a>
                             <a href="detail_QuantumDMN Engine_1.0.0.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
                             <!--div class="dropdown pull-right dropdown-kebab-pf">
-                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight5" data-toggle="dropdown" aria-haspopup="true"
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight6" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true">
                                     <span class="fa fa-ellipsis-v"></span>
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight5">
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight6">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li><a href="#">Something else here</a></li>
@@ -926,82 +1038,10 @@
                                 </div>
                                 <div class="list-view-pf-additional-info">
                                     <div class="list-view-pf-additional-info-item">
-                                        Succeeded:&nbsp;<b>3367/3391</b>
+                                        Succeeded:&nbsp;<b>3367/3407</b>
                                     </div>
                                     <div class="list-view-pf-additional-info-item">
                                         Last Submission:&nbsp;<b>2026-02-20</b>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list-group-item-container container-fluid hidden">
-                        <div class="close">
-                            <span class="pficon pficon-close"></span>
-                        </div>
-                        <div class="row">
-
-                            <div class="col-md-2">
-                                <canvas id="chart5"></canvas>
-                            </div>
-
-                            <div class="col-md-10">
-                                <dl class="dl-horizontal">
-                                    <dt>Last Submission: </dt><dd>2026-02-20</dd>
-                                    <dt>Tests: </dt><dd>3391</dd>
-                                    <dt>Labels: </dt><dd>79</dd>
-                                    <dt>Succeeded: </dt><dd>3367</dd>
-                                    <dt>Failed: </dt><dd>23</dd>
-                                    <dt>Not Supported: </dt><dd>0</dd>
-                                    <dt>Missing: </dt><dd>1</dd>
-                                    <dt>Info: </dt><dd>QuantumDMN is a DMN engine written in Go with a FEEL interpreter. Results obtained via Java SDK against /evaluate/design API endpoint.</dd>
-                                    <dt>Instructions: </dt><dd>
-                                                                    to execute the tests and reproduce the results, please follow the vendor provided instructions <a href="https://github.com/dmn-tck/tck/blob/master/runners/dmn-tck-runner-quantumdmn/" target="_blank">at this link <span class="fa fa-external-link"></span></a>.
-                                                           </dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Camunda's DMN-Scala engine 1.9.0 -->
-                <div class="list-group-item">
-                    <div class="list-group-item-header">
-                        <div class="list-view-pf-actions">
-                            <a href="overview_Camunda's DMN-Scala engine_1.9.0.html" class="btn btn-default">Overview</a>
-                            <a href="detail_Camunda's DMN-Scala engine_1.9.0.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
-                            <!--div class="dropdown pull-right dropdown-kebab-pf">
-                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight6" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="true">
-                                    <span class="fa fa-ellipsis-v"></span>
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight6">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#">Separated link</a></li>
-                                </ul>
-                            </div-->
-                        </div>
-                        <div class="list-view-pf-main-info">
-                            <div class="list-view-pf-left">
-                                <span class="fa fa-university list-view-pf-icon-sm"></span>
-                            </div>
-                            <div class="list-view-pf-body">
-                                <div class="list-view-pf-description">
-                                    <div class="list-group-item-heading">
-                                        Camunda
-                                    </div>
-                                    <div class="list-group-item-text">
-                                        Camunda's DMN-Scala engine 1.9.0
-                                    </div>
-                                </div>
-                                <div class="list-view-pf-additional-info">
-                                    <div class="list-view-pf-additional-info-item">
-                                        Succeeded:&nbsp;<b>2850/3391</b>
-                                    </div>
-                                    <div class="list-view-pf-additional-info-item">
-                                        Last Submission:&nbsp;<b>2024-07-02</b>
                                     </div>
                                 </div>
                             </div>
@@ -1019,28 +1059,28 @@
 
                             <div class="col-md-10">
                                 <dl class="dl-horizontal">
-                                    <dt>Last Submission: </dt><dd>2024-07-02</dd>
-                                    <dt>Tests: </dt><dd>3391</dd>
+                                    <dt>Last Submission: </dt><dd>2026-02-20</dd>
+                                    <dt>Tests: </dt><dd>3407</dd>
                                     <dt>Labels: </dt><dd>79</dd>
-                                    <dt>Succeeded: </dt><dd>2850</dd>
-                                    <dt>Failed: </dt><dd>0</dd>
-                                    <dt>Not Supported: </dt><dd>385</dd>
-                                    <dt>Missing: </dt><dd>156</dd>
-                                    <dt>Info: </dt><dd>The DMN engine that is used by Camunda 8's automation platform for business processes based on BPMN and DMN.</dd>
+                                    <dt>Succeeded: </dt><dd>3367</dd>
+                                    <dt>Failed: </dt><dd>23</dd>
+                                    <dt>Not Supported: </dt><dd>0</dd>
+                                    <dt>Missing: </dt><dd>17</dd>
+                                    <dt>Info: </dt><dd>QuantumDMN is a DMN engine written in Go with a FEEL interpreter. Results obtained via Java SDK against /evaluate/design API endpoint.</dd>
                                     <dt>Instructions: </dt><dd>
-                                                                    to execute the tests and reproduce the results, please follow the vendor provided instructions <a href="https://github.com/dmn-tck/tck/blob/master/runners/dmn-tck-runner-camunda-dmn-scala/" target="_blank">at this link <span class="fa fa-external-link"></span></a>.
+                                                                    to execute the tests and reproduce the results, please follow the vendor provided instructions <a href="https://github.com/dmn-tck/tck/blob/master/runners/dmn-tck-runner-quantumdmn/" target="_blank">at this link <span class="fa fa-external-link"></span></a>.
                                                            </dd>
                                 </dl>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Camunda Platform 7.21.0 -->
+                <!-- Camunda's DMN-Scala engine 1.9.0 -->
                 <div class="list-group-item">
                     <div class="list-group-item-header">
                         <div class="list-view-pf-actions">
-                            <a href="overview_Camunda Platform_7.21.0.html" class="btn btn-default">Overview</a>
-                            <a href="detail_Camunda Platform_7.21.0.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
+                            <a href="overview_Camunda's DMN-Scala engine_1.9.0.html" class="btn btn-default">Overview</a>
+                            <a href="detail_Camunda's DMN-Scala engine_1.9.0.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
                             <!--div class="dropdown pull-right dropdown-kebab-pf">
                                 <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight7" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true">
@@ -1065,15 +1105,15 @@
                                         Camunda
                                     </div>
                                     <div class="list-group-item-text">
-                                        Camunda Platform 7.21.0
+                                        Camunda's DMN-Scala engine 1.9.0
                                     </div>
                                 </div>
                                 <div class="list-view-pf-additional-info">
                                     <div class="list-view-pf-additional-info-item">
-                                        Succeeded:&nbsp;<b>2741/3391</b>
+                                        Succeeded:&nbsp;<b>2850/3407</b>
                                     </div>
                                     <div class="list-view-pf-additional-info-item">
-                                        Last Submission:&nbsp;<b>2024-07-04</b>
+                                        Last Submission:&nbsp;<b>2024-07-02</b>
                                     </div>
                                 </div>
                             </div>
@@ -1091,13 +1131,85 @@
 
                             <div class="col-md-10">
                                 <dl class="dl-horizontal">
+                                    <dt>Last Submission: </dt><dd>2024-07-02</dd>
+                                    <dt>Tests: </dt><dd>3407</dd>
+                                    <dt>Labels: </dt><dd>79</dd>
+                                    <dt>Succeeded: </dt><dd>2850</dd>
+                                    <dt>Failed: </dt><dd>0</dd>
+                                    <dt>Not Supported: </dt><dd>385</dd>
+                                    <dt>Missing: </dt><dd>172</dd>
+                                    <dt>Info: </dt><dd>The DMN engine that is used by Camunda 8's automation platform for business processes based on BPMN and DMN.</dd>
+                                    <dt>Instructions: </dt><dd>
+                                                                    to execute the tests and reproduce the results, please follow the vendor provided instructions <a href="https://github.com/dmn-tck/tck/blob/master/runners/dmn-tck-runner-camunda-dmn-scala/" target="_blank">at this link <span class="fa fa-external-link"></span></a>.
+                                                           </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Camunda Platform 7.21.0 -->
+                <div class="list-group-item">
+                    <div class="list-group-item-header">
+                        <div class="list-view-pf-actions">
+                            <a href="overview_Camunda Platform_7.21.0.html" class="btn btn-default">Overview</a>
+                            <a href="detail_Camunda Platform_7.21.0.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
+                            <!--div class="dropdown pull-right dropdown-kebab-pf">
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight8" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="true">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight8">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div-->
+                        </div>
+                        <div class="list-view-pf-main-info">
+                            <div class="list-view-pf-left">
+                                <span class="fa fa-university list-view-pf-icon-sm"></span>
+                            </div>
+                            <div class="list-view-pf-body">
+                                <div class="list-view-pf-description">
+                                    <div class="list-group-item-heading">
+                                        Camunda
+                                    </div>
+                                    <div class="list-group-item-text">
+                                        Camunda Platform 7.21.0
+                                    </div>
+                                </div>
+                                <div class="list-view-pf-additional-info">
+                                    <div class="list-view-pf-additional-info-item">
+                                        Succeeded:&nbsp;<b>2741/3407</b>
+                                    </div>
+                                    <div class="list-view-pf-additional-info-item">
+                                        Last Submission:&nbsp;<b>2024-07-04</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-group-item-container container-fluid hidden">
+                        <div class="close">
+                            <span class="pficon pficon-close"></span>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-2">
+                                <canvas id="chart8"></canvas>
+                            </div>
+
+                            <div class="col-md-10">
+                                <dl class="dl-horizontal">
                                     <dt>Last Submission: </dt><dd>2024-07-04</dd>
-                                    <dt>Tests: </dt><dd>3391</dd>
+                                    <dt>Tests: </dt><dd>3407</dd>
                                     <dt>Labels: </dt><dd>79</dd>
                                     <dt>Succeeded: </dt><dd>2741</dd>
                                     <dt>Failed: </dt><dd>0</dd>
                                     <dt>Not Supported: </dt><dd>494</dd>
-                                    <dt>Missing: </dt><dd>156</dd>
+                                    <dt>Missing: </dt><dd>172</dd>
                                     <dt>Info: </dt><dd>Camunda Platform provides an Open Source engine that integrates DMN with BPMN & CMMN.</dd>
                                     <dt>Instructions: </dt><dd>
                                                                     to execute the tests and reproduce the results, please follow the vendor provided instructions <a href="https://github.com/dmn-tck/tck/blob/master/runners/dmn-tck-runner-camunda/" target="_blank">at this link <span class="fa fa-external-link"></span></a>.
@@ -1114,11 +1226,11 @@
                             <a href="overview_Digital Transformation Platform (DXP)_2.4.html" class="btn btn-default">Overview</a>
                             <a href="detail_Digital Transformation Platform (DXP)_2.4.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
                             <!--div class="dropdown pull-right dropdown-kebab-pf">
-                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight8" data-toggle="dropdown" aria-haspopup="true"
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight9" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true">
                                     <span class="fa fa-ellipsis-v"></span>
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight8">
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li><a href="#">Something else here</a></li>
@@ -1142,7 +1254,7 @@
                                 </div>
                                 <div class="list-view-pf-additional-info">
                                     <div class="list-view-pf-additional-info-item">
-                                        Succeeded:&nbsp;<b>0/3391</b>
+                                        Succeeded:&nbsp;<b>0/3407</b>
                                     </div>
                                     <div class="list-view-pf-additional-info-item">
                                         Last Submission:&nbsp;<b>2019-07-22</b>
@@ -1158,18 +1270,18 @@
                         <div class="row">
 
                             <div class="col-md-2">
-                                <canvas id="chart8"></canvas>
+                                <canvas id="chart9"></canvas>
                             </div>
 
                             <div class="col-md-10">
                                 <dl class="dl-horizontal">
                                     <dt>Last Submission: </dt><dd>2019-07-22</dd>
-                                    <dt>Tests: </dt><dd>3391</dd>
+                                    <dt>Tests: </dt><dd>3407</dd>
                                     <dt>Labels: </dt><dd>79</dd>
                                     <dt>Succeeded: </dt><dd>0</dd>
                                     <dt>Failed: </dt><dd>0</dd>
                                     <dt>Not Supported: </dt><dd>0</dd>
-                                    <dt>Missing: </dt><dd>3391</dd>
+                                    <dt>Missing: </dt><dd>3407</dd>
                                     <dt>Info: </dt><dd>Fujitsu DXP includes REST API for DMN using DROOLS for execution of DMN models included in applications</dd>
                                     <dt>Instructions: </dt><dd>
                                                                     to execute the tests and reproduce the results, please follow the vendor provided instructions <a href="http://dist.interstagebpm.com/tck/" target="_blank">at this link <span class="fa fa-external-link"></span></a>.
@@ -1186,11 +1298,11 @@
                             <a href="overview_OpenRules_7.0.0.html" class="btn btn-default">Overview</a>
                             <a href="detail_OpenRules_7.0.0.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
                             <!--div class="dropdown pull-right dropdown-kebab-pf">
-                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight9" data-toggle="dropdown" aria-haspopup="true"
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight10" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true">
                                     <span class="fa fa-ellipsis-v"></span>
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight9">
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight10">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li><a href="#">Something else here</a></li>
@@ -1214,7 +1326,7 @@
                                 </div>
                                 <div class="list-view-pf-additional-info">
                                     <div class="list-view-pf-additional-info-item">
-                                        Succeeded:&nbsp;<b>0/3391</b>
+                                        Succeeded:&nbsp;<b>0/3407</b>
                                     </div>
                                     <div class="list-view-pf-additional-info-item">
                                         Last Submission:&nbsp;<b>2017-07-05</b>
@@ -1230,18 +1342,18 @@
                         <div class="row">
 
                             <div class="col-md-2">
-                                <canvas id="chart9"></canvas>
+                                <canvas id="chart10"></canvas>
                             </div>
 
                             <div class="col-md-10">
                                 <dl class="dl-horizontal">
                                     <dt>Last Submission: </dt><dd>2017-07-05</dd>
-                                    <dt>Tests: </dt><dd>3391</dd>
+                                    <dt>Tests: </dt><dd>3407</dd>
                                     <dt>Labels: </dt><dd>79</dd>
                                     <dt>Succeeded: </dt><dd>0</dd>
                                     <dt>Failed: </dt><dd>0</dd>
                                     <dt>Not Supported: </dt><dd>0</dd>
-                                    <dt>Missing: </dt><dd>3391</dd>
+                                    <dt>Missing: </dt><dd>3407</dd>
                                     <dt>Info: </dt><dd>OpenRules provides a runtime compliance level 2 engine</dd>
                                     <dt>Instructions: </dt><dd>
                                                                     this vendor did not provide instructions to execute the tests and reproduce the results. Please contact the vendor directly.
@@ -1258,11 +1370,11 @@
                             <a href="overview_Oracle Process Cloud_17.3.3.html" class="btn btn-default">Overview</a>
                             <a href="detail_Oracle Process Cloud_17.3.3.html?label_id=all-tests&breadcrumb_label=All%20Tests" class="btn btn-default">All Tests</a>
                             <!--div class="dropdown pull-right dropdown-kebab-pf">
-                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight10" data-toggle="dropdown" aria-haspopup="true"
+                                <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight11" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true">
                                     <span class="fa fa-ellipsis-v"></span>
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight10">
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownKebabRight11">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
                                     <li><a href="#">Something else here</a></li>
@@ -1286,7 +1398,7 @@
                                 </div>
                                 <div class="list-view-pf-additional-info">
                                     <div class="list-view-pf-additional-info-item">
-                                        Succeeded:&nbsp;<b>0/3391</b>
+                                        Succeeded:&nbsp;<b>0/3407</b>
                                     </div>
                                     <div class="list-view-pf-additional-info-item">
                                         Last Submission:&nbsp;<b>2017-07-21</b>
@@ -1302,18 +1414,18 @@
                         <div class="row">
 
                             <div class="col-md-2">
-                                <canvas id="chart10"></canvas>
+                                <canvas id="chart11"></canvas>
                             </div>
 
                             <div class="col-md-10">
                                 <dl class="dl-horizontal">
                                     <dt>Last Submission: </dt><dd>2017-07-21</dd>
-                                    <dt>Tests: </dt><dd>3391</dd>
+                                    <dt>Tests: </dt><dd>3407</dd>
                                     <dt>Labels: </dt><dd>79</dd>
                                     <dt>Succeeded: </dt><dd>0</dd>
                                     <dt>Failed: </dt><dd>0</dd>
                                     <dt>Not Supported: </dt><dd>0</dd>
-                                    <dt>Missing: </dt><dd>3391</dd>
+                                    <dt>Missing: </dt><dd>3407</dd>
                                     <dt>Info: </dt><dd>Oracle Process Cloud provides BPMN, DMN, and Workflow modeling and execution.</dd>
                                     <dt>Instructions: </dt><dd>
                                                                     this vendor did not provide instructions to execute the tests and reproduce the results. Please contact the vendor directly.
@@ -1337,7 +1449,7 @@
 <!-- pre-footer -->
 <div class="pre-footer">
     <div class="last-updated">
-        <p>Last updated:</strong> Aug 1, 2026, 1:55:06 AM</p>
+        <p>Last updated:</strong> Nov 4, 2026, 2:46:53 AM</p>
     </div>
 </div>
 <div class="footer">
