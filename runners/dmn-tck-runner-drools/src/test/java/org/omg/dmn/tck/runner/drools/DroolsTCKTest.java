@@ -146,12 +146,16 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
 
         DMNContext executionResultContext = getNewDMNContextWithFilledInputsFromTestCase(testSuiteContext, testCase);
         List<String> failures = new ArrayList<>();
+        DMNResult decisionServiceResult = null; // a Decision Service test case is a single invocation, all its resultNodes are checked against the same result
         for (TestCases.TestCase.ResultNode testCaseResultNode : testCase.getResultNode()) {
             try {
                 String decisionName = testCaseResultNode.getName();
                 DMNResult dmnResult;
                 if (testCase.getType() == TestCaseType.DECISION_SERVICE) {
-                    dmnResult = testSuiteContext.getDMNRuntime().evaluateDecisionService(testSuiteContext.getDMNModel(), executionResultContext, testCase.getInvocableName());
+                    if (decisionServiceResult == null) {
+                        decisionServiceResult = testSuiteContext.getDMNRuntime().evaluateDecisionService(testSuiteContext.getDMNModel(), executionResultContext, testCase.getInvocableName());
+                    }
+                    dmnResult = decisionServiceResult;
                 } else {
                     dmnResult = testSuiteContext.getDMNRuntime().evaluateByName(testSuiteContext.getDMNModel(), executionResultContext, decisionName);
                 }
