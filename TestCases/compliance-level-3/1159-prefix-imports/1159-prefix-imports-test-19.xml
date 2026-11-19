@@ -12,7 +12,6 @@
     -->
 
     <testCase id="001">
-        <description>imported decision and inputData are also "exported"</description>
         <inputNode name="input001" namespace="http://www.montera.com.au/spec/DMN/1159-prefix-imports-19-B">
             <value xsi:type="xsd:string">Foo</value>
         </inputNode>
