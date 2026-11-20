@@ -17,6 +17,7 @@ import org.kie.api.io.Resource;
 import org.kie.dmn.api.core.DMNContext;
 import org.kie.dmn.api.core.DMNMessage;
 import org.kie.dmn.api.core.DMNResult;
+import org.kie.dmn.api.core.DMNModel;
 import org.kie.dmn.api.core.DMNRuntime;
 import org.kie.dmn.api.core.DMNType;
 import org.kie.dmn.api.core.ast.DecisionNode;
@@ -31,6 +32,7 @@ import org.kie.dmn.feel.lang.types.BuiltInType;
 import org.kie.dmn.feel.lang.types.impl.ComparablePeriod;
 import org.kie.dmn.feel.runtime.custom.FormattedZonedDateTime;
 import org.kie.dmn.model.api.Definitions;
+import org.kie.dmn.model.api.NamedElement;
 import org.kie.internal.io.ResourceFactory;
 import org.omg.dmn.tck.marshaller._20160719.TestCaseType;
 import org.omg.dmn.tck.marshaller._20160719.TestCases;
@@ -144,12 +146,17 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
         DroolsContext testSuiteContext = (DroolsContext) context;
         LOGGER.info("Executing test '{} / {}'\n", description.getClassName(), description.getMethodName());
 
-        DMNContext executionResultContext = getNewDMNContextWithFilledInputsFromTestCase(testSuiteContext, testCase);
+        DMNContext executionResultContext = getNewDMNContextWithFilledInputsFromTestCase(testSuiteContext, testCase, testSuiteContext.getDMNModel());
         List<String> failures = new ArrayList<>();
         DMNResult decisionServiceResult = null; // a Decision Service test case is a single invocation, all its resultNodes are checked against the same result
         for (TestCases.TestCase.ResultNode testCaseResultNode : testCase.getResultNode()) {
             try {
                 String decisionName = testCaseResultNode.getName();
+                // a resultNode can live in another model (namespace attribute); in that case it is evaluated against that model
+                DMNModel targetModel = resolveModel(testSuiteContext, testCaseResultNode.getNamespace());
+                if (targetModel != testSuiteContext.getDMNModel()) {
+                    executionResultContext = getNewDMNContextWithFilledInputsFromTestCase(testSuiteContext, testCase, targetModel);
+                }
                 DMNResult dmnResult;
                 if (testCase.getType() == TestCaseType.DECISION_SERVICE) {
                     if (decisionServiceResult == null) {
@@ -157,13 +164,13 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
                     }
                     dmnResult = decisionServiceResult;
                 } else {
-                    dmnResult = testSuiteContext.getDMNRuntime().evaluateByName(testSuiteContext.getDMNModel(), executionResultContext, decisionName);
+                    dmnResult = testSuiteContext.getDMNRuntime().evaluateByName(targetModel, executionResultContext, decisionName);
                 }
                 if (!dmnResult.getMessages().isEmpty()) {
                     LOGGER.info("Messages: \n-----\n{}\n-----\n", dmnResult.getMessages().stream().map(Object::toString).collect(Collectors.joining("\n")));
                 }
                 executionResultContext = dmnResult.getContext();
-                Object expectedResult = parseValue(testCaseResultNode, testSuiteContext.getDMNModel().getDecisionByName(decisionName));
+                Object expectedResult = parseValue(testCaseResultNode, targetModel.getDecisionByName(decisionName));
                 Object actualResult = executionResultContext.get(decisionName);
                 if (testCaseResultNode.isErrorResult()) {
                     for (DMNMessage msg : dmnResult.getMessages(DMNMessage.Severity.ERROR)) {
@@ -197,11 +204,55 @@ public class DroolsTCKTest implements DmnTckVendorTestSuite {
         return new TestResult(r, String.join("\n", failures));
     }
 
-    private DMNContext getNewDMNContextWithFilledInputsFromTestCase(final DroolsContext testSuiteContext, TestCases.TestCase testCase) {
+    /**
+     * Returns the model identified by the (optional) TCK namespace attribute, or the main model under test if the
+     * namespace is absent, equal to the main model namespace, or not known by the runtime.
+     */
+    private DMNModel resolveModel(final DroolsContext testSuiteContext, final String namespace) {
+        final DMNModel mainModel = testSuiteContext.getDMNModel();
+        if (namespace == null || namespace.equals(mainModel.getNamespace())) {
+            return mainModel;
+        }
+        return testSuiteContext.getDMNRuntime().getModels().stream()
+                .filter(m -> namespace.equals(m.getNamespace()))
+                .findFirst()
+                .orElse(mainModel);
+    }
+
+    /**
+     * Name given by the model to its direct import of the given namespace, or null if it does not import it directly
+     * or if the import has no name (no-name imports are merged in the importing model scope, so no prefix applies).
+     */
+    private String findImportName(final DMNModel model, final String namespace) {
+        return model.getDefinitions().getImport().stream()
+                .filter(i -> namespace.equals(i.getNamespace()))
+                .map(NamedElement::getName)
+                .filter(n -> n != null && !n.isEmpty())
+                .findFirst()
+                .orElse(null);
+    }
+
+    @SuppressWarnings("unchecked")
+    private DMNContext getNewDMNContextWithFilledInputsFromTestCase(final DroolsContext testSuiteContext, TestCases.TestCase testCase, final DMNModel targetModel) {
         DMNContext dmnContext = testSuiteContext.getDMNRuntime().newContext();
         testCase.getInputNode().forEach(in -> {
-            InputDataNode input = testSuiteContext.getDMNModel().getInputByName(in.getName());
-            DecisionNode decision = testSuiteContext.getDMNModel().getDecisionByName(in.getName());
+            final String ns = in.getNamespace();
+            final DMNModel inputModel = resolveModel(testSuiteContext, ns);
+            final String importName = (ns != null && inputModel != targetModel) ? findImportName(targetModel, ns) : null;
+            final InputDataNode importedInput = inputModel.getInputByName(in.getName());
+            final DecisionNode importedDecision = inputModel.getDecisionByName(in.getName());
+            if (importName != null && (importedInput != null || importedDecision != null)) {
+                // inputData (or pre-evaluated Decision) defined in a model directly imported by the target model: it must be provided under the import name
+                Object imported = dmnContext.get(importName);
+                if (!(imported instanceof Map)) {
+                    imported = new HashMap<String, Object>();
+                    dmnContext.set(importName, imported);
+                }
+                ((Map<String, Object>) imported).put(in.getName(), importedInput != null ? parseValue(in, importedInput) : parseValue(in, importedDecision));
+                return;
+            }
+            InputDataNode input = targetModel.getInputByName(in.getName());
+            DecisionNode decision = targetModel.getDecisionByName(in.getName());
             if (input != null) {
                 dmnContext.set(in.getName(), parseValue(in, input)); // normally data input from file, should be pointing at a InputData in the model
             } else if (decision != null) {
