@@ -7,15 +7,17 @@
     <modelName>1158-noname-imports-14-A.dmn</modelName>
 
     <!--
-    Model A has decision001 and decision003.  Model B has decision002 and decision003
-    Decision001 requires decision002 (in model B).  decision002 requires decision003 (in model B).
+    Model A contains decision001 and decision003. Model B contains decision002 and another decision003.
+    These decisions are connected by hrefs as follows:
+        - decision001 requires decision002 defined in model B.
+        - decision002 requires decision003 defined in model B.
+    (see section 13.3.2 References within the DMN XSD)
 
-    decision003 already exists in model A so, we expect the decision003 requirement in model B
-    to be resolved to the decision in model B
+    Based of the above href links we expect the execution of decision001 in model A to return the value of
+    decision003 defined in model B.
     -->
 
     <testCase id="001">
-        <description>requirement of imported decision will be resolved locally when there is a name conflict</description>
         <resultNode name="decision001" type="decision">
             <expected>
                 <value xsi:type="xsd:string">model_b_decision003</value>
